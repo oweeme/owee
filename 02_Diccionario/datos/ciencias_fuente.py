@@ -159,3 +159,40 @@ COMPUESTOS += [
  ("rela-sura","red inalámbrica (conexión del aire)",UI,"Equipo"),("beka-meka","impresora (máquina de escritura)",UI,"Equipo"),
  ("pe-telo","deshacer (cambio al pasado)",UI,"Acciones"),("pu-telo","rehacer (cambio al futuro)",UI,"Acciones"),("tera-sena","fecha y hora (signo de tiempo)",UI,"Acciones"),
 ]
+
+# --- Lote 1: cuerpo, naturaleza concreta y posturas (cierra el hueco de Swadesh). 0 raices nuevas. PROPUESTA -> VERIFICADA
+CN = "Cuerpo y naturaleza"
+CU, NA, AC = "Cuerpo humano y animal", "Naturaleza concreta", "Posturas y acciones"
+COMPUESTOS += [
+ # cuerpo: piel, fluidos, tejidos
+ ("bora-lobe","piel (cubierta del cuerpo)",CN,CU),("suma-suna","sangre (agua de la vida)",CN,CU),("bora-kefe","hueso (soporte del cuerpo)",CN,CU),
+ ("bora-gume","carne (materia del cuerpo)",CN,CU),("bora-mase","grasa (recurso del cuerpo)",CN,CU),("bora-suna","sudor (agua del cuerpo)",CN,CU),
+ # cabeza
+ ("tume-nelo","cabello (planta de la cabeza)",CN,CU),("sone-loke","oreja (ojo del sonido)",CN,CU),("sabe-faro","diente (fuerza de la boca)",CN,CU),
+ ("sabe-duma","lengua (movimiento de la boca)",CN,CU),("loke-sabe","cara (ojo y boca)",CN,CU),("tume-rela","cuello (unión de la cabeza)",CN,CU),
+ ("tume-rena","cerebro (cabeza que piensa)",CN,CU),
+ # tronco y miembros
+ ("bora-kopa","vientre (contenedor del cuerpo)",CN,CU),("doma-kopa","pecho (contenedor del corazón)",CN,CU),("sura-kopa","pulmón (contenedor de aire)",CN,CU),
+ ("fame-kopa","estómago (contenedor de comida)",CN,CU),("bora-gase","hígado (limpieza del cuerpo)",CN,CU),("maku-bora","brazo (cuerpo de la mano)",CN,CU),
+ ("maku-palo","dedo (parte de la mano)",CN,CU),("maku-fese","uña (límite de la mano)",CN,CU),("kalu-gune","pie (fin de la pierna)",CN,CU),("kalu-telo","rodilla (cambio de la pierna)",CN,CU),
+ # animales
+ ("bora-gune","cola (fin del cuerpo)",CN,CU),("tume-faro","cuerno (fuerza de la cabeza)",CN,CU),("ruma-kuna-nelo","pluma (planta del pájaro)",CN,CU),
+ ("pado-kopa","huevo (contenedor del comienzo)",CN,CU),("naku-nobe","leche (bebida del hijo)",CN,CU),("ruma-galo","perro (animal que ayuda)",CN,CU),("ruma-lore","mascota (animal de afecto)",CN,CU),
+ # tierra, agua, fuego, aire
+ ("taro-goda","piedra (tierra sólida)",CN,NA),("taro-gore-po","arena (tierra pequeña)",CN,NA),("taro-suna","barro (tierra y agua)",CN,NA),("taro-sura","polvo (tierra en el aire)",CN,NA),
+ ("pore-sura","humo (aire de fuego)",CN,NA),("pore-taro","ceniza (tierra de fuego)",CN,NA),("pore-salo","llama (luz de fuego)",CN,NA),
+ ("suna-goda","hielo (agua sólida)",CN,NA),("kuna-suna-goda","nieve (hielo del cielo)",CN,NA),("suna-boga","vapor (agua gaseosa)",CN,NA),
+ ("kuna-sone","trueno (sonido del cielo)",CN,NA),("kuna-faro","rayo (fuerza del cielo)",CN,NA),("suna-taro","isla (tierra del agua)",CN,NA),("suna-kopa","lago (contenedor de agua)",CN,NA),
+ ("taro-nuse","cueva (tierra vacía)",CN,NA),("suna-nuse","seco (agua vacía)",CN,NA),("suna-mude","húmedo (lleno de agua)",CN,NA),("selo-dore","redondo (forma de círculo)",CN,NA),
+ # plantas
+ ("nelo-saro","bosque (comunidad de plantas)",CN,NA),("nelo-fame","fruta (comida de planta)",CN,NA),("nelo-maku","hoja (mano de la planta)",CN,NA),("nelo-taro","raíz de planta (planta de tierra)",CN,NA),
+ ("nelo-lobe","corteza (cubierta de planta)",CN,NA),("pado-nelo","semilla (comienzo de planta)",CN,NA),("nelo-palo","rama (parte de planta)",CN,NA),("nelo-bora","tronco (cuerpo de planta)",CN,NA),
+ # posturas y acciones del cuerpo
+ ("go-pose","estar de pie (postura arriba)",CN,AC),("gu-pose","acostarse (postura abajo)",CN,AC),("sede-pose","sentarse (postura de asiento)",CN,AC),("sabe-bosa","morder (romper con la boca)",CN,AC),
+]
+# --- Interfaz del sitio (para el modo inmersion): PROPUESTA -> VERIFICADA
+SI = "Sitio"
+COMPUESTOS += [
+ ("sena-seta","diccionario (conjunto de signos)",SI,"Navegación"),("lodu-lena","literatura (lectura agradable)",SI,"Navegación"),("tase-palo","lección (parte del aprender)",SI,"Navegación"),
+ ("tase-daro","ejercicio (trabajo de aprender)",SI,"Navegación"),("tase-kelo","curso (ciclo de aprendizaje)",SI,"Navegación"),("reka-seta","vocabulario (conjunto de palabras)",SI,"Navegación"),
+]

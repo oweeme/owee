@@ -79,6 +79,27 @@ c = correr([PY, "-I", "02_Diccionario/datos/cobertura.py"]).stdout
 m = re.search(r"TOTAL (\d+): con raíz (\d+) \((\d+)%\), componible (\d+) \((\d+)%\), falta (\d+) \((\d+)%\)", c)
 ok("Cobertura de vocabulario basico", bool(m), f"{m.group(2)} con raiz, {m.group(4)} componibles, {m.group(6)} faltan de {m.group(1)}" if m else "")
 
+# 7b. cada bloque Owee lleva su traduccion; cobertura Swadesh
+falt = []
+for f in mds:
+    L = pathlib.Path(f).read_text(encoding="utf8").splitlines(); n = len(L); i = 0
+    while i < n:
+        if L[i].strip() == "```owee":
+            j = i + 1
+            while j < n and L[j].strip() != "```": j += 1
+            k = j + 1
+            while k < n and not L[k].strip(): k += 1
+            nx = L[k].strip() if k < n else ""
+            if not (nx.startswith("*") or nx.startswith("|") or nx.startswith("<!--")): falt.append(f"{pathlib.Path(f).name}:{i+1}")
+            i = j
+        i += 1
+ok("Cada bloque Owee tiene su traduccion", not falt, ", ".join(falt[:5]))
+sw = correr([PY, "-I", "02_Diccionario/datos/swadesh100.py"]).stdout.splitlines()[0]
+mm = re.search(r"con forma (\d+) \((\d+)%\), componible (\d+) \((\d+)%\), faltan (\d+)", sw)
+ok("Cobertura Swadesh-100 >= 90%", bool(mm) and int(mm.group(2)) + int(mm.group(4)) >= 90, sw.split("->")[1].strip() if "->" in sw else sw)
+nlec = len(list((RAIZ / "03_Material_Ensenanza/Curso").glob("Owee_Curso_Nivel_*.md")))
+ok(f"Curso por niveles ({nlec} niveles + indice)", nlec == 4)
+
 # 8. git
 g = correr(["git", "status", "--porcelain"]).stdout.strip().splitlines()
 ok("Git: sin cambios sin guardar", not g, f"{len(g)} archivos con cambios" if g else "")

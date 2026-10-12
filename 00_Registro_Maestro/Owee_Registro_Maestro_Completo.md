@@ -1564,4 +1564,10 @@ El idioma se integra por tres vías, todas generadas desde `08_Integracion/datos
 
 ------------------------------------------------------------------------
 
+## 82. Lote 1 y curso por niveles (2026-10-12)
+
+**Lote 1:** 60 términos de cuerpo, animales, naturaleza concreta y posturas, **sin raíces nuevas** (por ejemplo `bora-lobe` piel, `suma-suna` sangre, `sabe-faro` diente, `taro-goda` piedra, `nelo-maku` hoja, `go-pose` estar de pie); con ellos la cobertura de la lista Swadesh-100 pasa del 56 % al 91 %. **Curso:** 4 niveles (0 Ver y oír, 1 Primeras frases A1, 2 Conversar A2, 3 Leer y crear B1) en `03_Material_Ensenanza/Curso/`, con glifos, romano, pronunciación, traducción, ejercicios y lecturas. Todo texto Owee del curso pasa el validador.
+
+------------------------------------------------------------------------
+
 **Fin del registro maestro consolidado.**

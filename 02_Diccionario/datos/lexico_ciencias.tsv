@@ -353,3 +353,69 @@ beka-meka	beka-meka	construcción	impresora (máquina de escritura)	VERIFICADA	E
 pe-telo	pe-telo	construcción	deshacer (cambio al pasado)	VERIFICADA	Acciones	Interfaz	
 pu-telo	pu-telo	construcción	rehacer (cambio al futuro)	VERIFICADA	Acciones	Interfaz	
 tera-sena	tera-sena	construcción	fecha y hora (signo de tiempo)	VERIFICADA	Acciones	Interfaz	
+bora-lobe	bora-lobe	construcción	piel (cubierta del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+suma-suna	suma-suna	construcción	sangre (agua de la vida)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-kefe	bora-kefe	construcción	hueso (soporte del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-gume	bora-gume	construcción	carne (materia del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-mase	bora-mase	construcción	grasa (recurso del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-suna	bora-suna	construcción	sudor (agua del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+tume-nelo	tume-nelo	construcción	cabello (planta de la cabeza)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+sone-loke	sone-loke	construcción	oreja (ojo del sonido)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+sabe-faro	sabe-faro	construcción	diente (fuerza de la boca)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+sabe-duma	sabe-duma	construcción	lengua (movimiento de la boca)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+loke-sabe	loke-sabe	construcción	cara (ojo y boca)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+tume-rela	tume-rela	construcción	cuello (unión de la cabeza)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+tume-rena	tume-rena	construcción	cerebro (cabeza que piensa)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-kopa	bora-kopa	construcción	vientre (contenedor del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+doma-kopa	doma-kopa	construcción	pecho (contenedor del corazón)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+sura-kopa	sura-kopa	construcción	pulmón (contenedor de aire)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+fame-kopa	fame-kopa	construcción	estómago (contenedor de comida)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-gase	bora-gase	construcción	hígado (limpieza del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+maku-bora	maku-bora	construcción	brazo (cuerpo de la mano)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+maku-palo	maku-palo	construcción	dedo (parte de la mano)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+maku-fese	maku-fese	construcción	uña (límite de la mano)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+kalu-gune	kalu-gune	construcción	pie (fin de la pierna)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+kalu-telo	kalu-telo	construcción	rodilla (cambio de la pierna)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-gune	bora-gune	construcción	cola (fin del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+tume-faro	tume-faro	construcción	cuerno (fuerza de la cabeza)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+ruma-kuna-nelo	ruma-kuna-nelo	construcción	pluma (planta del pájaro)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+pado-kopa	pado-kopa	construcción	huevo (contenedor del comienzo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+naku-nobe	naku-nobe	construcción	leche (bebida del hijo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+ruma-galo	ruma-galo	construcción	perro (animal que ayuda)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+ruma-lore	ruma-lore	construcción	mascota (animal de afecto)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+taro-goda	taro-goda	construcción	piedra (tierra sólida)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+taro-gore-po	taro-gore-po	construcción	arena (tierra pequeña)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+taro-suna	taro-suna	construcción	barro (tierra y agua)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+taro-sura	taro-sura	construcción	polvo (tierra en el aire)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+pore-sura	pore-sura	construcción	humo (aire de fuego)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+pore-taro	pore-taro	construcción	ceniza (tierra de fuego)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+pore-salo	pore-salo	construcción	llama (luz de fuego)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-goda	suna-goda	construcción	hielo (agua sólida)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+kuna-suna-goda	kuna-suna-goda	construcción	nieve (hielo del cielo)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-boga	suna-boga	construcción	vapor (agua gaseosa)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+kuna-sone	kuna-sone	construcción	trueno (sonido del cielo)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+kuna-faro	kuna-faro	construcción	rayo (fuerza del cielo)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-taro	suna-taro	construcción	isla (tierra del agua)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-kopa	suna-kopa	construcción	lago (contenedor de agua)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+taro-nuse	taro-nuse	construcción	cueva (tierra vacía)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-nuse	suna-nuse	construcción	seco (agua vacía)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-mude	suna-mude	construcción	húmedo (lleno de agua)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+selo-dore	selo-dore	construcción	redondo (forma de círculo)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-saro	nelo-saro	construcción	bosque (comunidad de plantas)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-fame	nelo-fame	construcción	fruta (comida de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-maku	nelo-maku	construcción	hoja (mano de la planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-taro	nelo-taro	construcción	raíz de planta (planta de tierra)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-lobe	nelo-lobe	construcción	corteza (cubierta de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+pado-nelo	pado-nelo	construcción	semilla (comienzo de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-palo	nelo-palo	construcción	rama (parte de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-bora	nelo-bora	construcción	tronco (cuerpo de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
+go-pose	go-pose	construcción	estar de pie (postura arriba)	VERIFICADA	Posturas y acciones	Cuerpo y naturaleza	
+gu-pose	gu-pose	construcción	acostarse (postura abajo)	VERIFICADA	Posturas y acciones	Cuerpo y naturaleza	
+sede-pose	sede-pose	construcción	sentarse (postura de asiento)	VERIFICADA	Posturas y acciones	Cuerpo y naturaleza	
+sabe-bosa	sabe-bosa	construcción	morder (romper con la boca)	VERIFICADA	Posturas y acciones	Cuerpo y naturaleza	
+sena-seta	sena-seta	construcción	diccionario (conjunto de signos)	VERIFICADA	Navegación	Sitio	
+lodu-lena	lodu-lena	construcción	literatura (lectura agradable)	VERIFICADA	Navegación	Sitio	
+tase-palo	tase-palo	construcción	lección (parte del aprender)	VERIFICADA	Navegación	Sitio	
+tase-daro	tase-daro	construcción	ejercicio (trabajo de aprender)	VERIFICADA	Navegación	Sitio	
+tase-kelo	tase-kelo	construcción	curso (ciclo de aprendizaje)	VERIFICADA	Navegación	Sitio	
+reka-seta	reka-seta	construcción	vocabulario (conjunto de palabras)	VERIFICADA	Navegación	Sitio	

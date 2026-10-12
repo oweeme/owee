@@ -47,6 +47,24 @@ def is_owee(text):
     ok = lambda p: p in LEXSET or re.fullmatch(r"(?:(?:sh|ch|[pbtdkgfsmnlr])?[aeou])+", p) is not None
     return bool(toks) and all(ok(p) for t in toks for p in t.split("-")) and bool(re.fullmatch(r"[a-z ,.\-¿?¡!]+", text.lower()))
 
+def _glosario():
+    m = {}
+    for e in ALL:
+        r = pron(e["w"])
+        m.setdefault(e["w"], (e["mean"], (f"{r[1]} /{r[0]}/" if r else "")))
+    return m
+def glosa(word):
+    """Traduccion y pronunciacion de una palabra (o de un compuesto por partes) para el lector."""
+    w = word.lower()
+    if w in ALLMAP:
+        mean, pr = ALLMAP[w]
+        return f"{mean} · {pr}" if pr else mean
+    if "-" in w:
+        partes = [ALLMAP.get(p) for p in w.split("-")]
+        if all(partes):
+            return " + ".join(x[0].split(" / ")[0].split(" (")[0] for x in partes) + " · " + (pron(w)[1] if pron(w) else "")
+    return None
+
 def _prs(w):
     r = pron(w)
     return f"{r[1]} · /{r[0]}/" if r else ""
@@ -66,6 +84,15 @@ def expand(text):
         out = ["| Owee | Pronunciación | Significado | Estado |", "|---|---|---|---|"]
         out += [f"| {e['w']} | {_prs(e['w'])} | {e['mean']} | {e['est']}{(' — ' + e['nota']) if e['nota'] else ''} |" for e in rows]
         return "\n".join(out)
+    def vocabulario(m):
+        palabras = m.group(1).split()
+        malas = [w for w in palabras if w not in ALLMAP]
+        if malas: raise ValueError("vocabulario: palabras fuera del lexico: " + ", ".join(malas))
+        out = ["| Owee | Pronunciación | Significado |", "|---|---|---|"]
+        for w in palabras:
+            out.append(f"| {w} | {_prs(w)} | {ALLMAP[w][0]} |")
+        return "\n".join(out)
+    text = re.sub(r"<!--vocabulario ([^>]+?)-->", vocabulario, text)
     text = text.replace("<!--digitos-->", tabla_digitos())
     text = text.replace("<!--pronunciacion-->", tabla_pron()).replace("<!--silabas-->", tabla_silabas())
     text = re.sub(r"<!--vocab ([^|>]+)\|([^>]+?)-->", vocab, text)
@@ -185,6 +212,8 @@ def tabla_silabas():
         rows.append(f"| **{c}** /{_IC[c]}/ | " + " | ".join(f"`{c+v}` /{_IC[c]}{v}/" for v in "aeou") + " |")
     return "\n".join(rows)
 
+ALLMAP = _glosario()
+
 # ---------------------------------------------------------------- markdown minimo
 def slug(s):
     s = unicodedata.normalize("NFD", s.lower())
@@ -195,6 +224,9 @@ def esc(s):
     return html.escape(s, quote=False)
 
 def oweespan(text, cls="o"):
+    g = glosa(text) if re.fullmatch(r"[a-z]+(?:-[a-z]+)*", text) else None
+    if g:   # palabra conocida: tooltip con traduccion y pronunciacion (cursor o toque)
+        return f'<span class="{cls} ow" tabindex="0" data-o="{esc(text)}" data-g="{esc(g)}" title="{esc(text)}">{esc(text)}</span>'
     return f'<span class="{cls}" data-o="{esc(text)}" title="{esc(text)}">{esc(text)}</span>'
 
 def inline(s, convert=True):
@@ -218,6 +250,17 @@ def inline(s, convert=True):
     s = re.sub(r"\x00(\d+)\x00", lambda m: codes[int(m.group(1))], s)
     return s
 
+def verso_html(linea):
+    """Una linea Owee: cada palabra es un span con glifos y, al pasar el cursor o tocar, su traduccion y pronunciacion."""
+    sp = ""
+    for t in re.findall(r"[A-Za-z]+(?:-[A-Za-z]+)*|[^A-Za-z]+", linea):
+        if re.match(r"[A-Za-z]", t):
+            g = glosa(t)
+            sp += f'<span class="ow" tabindex="0" data-o="{esc(t)}"' + (f' data-g="{esc(g)}"' if g else "") + f'>{esc(t)}</span>'
+        else:
+            sp += esc(t)
+    return f'<div class="v"><span class="o">{sp}</span><small class="r">{esc(linea)}</small></div>'
+
 def md(text, convert=True):
     """Devuelve (html, toc[(nivel, texto, id)], poems[(id, titulo, [lineas])])"""
     lines = text.splitlines()
@@ -239,13 +282,15 @@ def md(text, convert=True):
             while i < len(lines) and not lines[i].strip().startswith("```"):
                 body.append(lines[i]); i += 1
             if lang == "owee":
-                ls = [b for b in body if b.strip()]
+                ls = [b for b in body if b.strip() and not b.lstrip().startswith("#")]
                 if h3: poems.append((h3[0], h3[1], ls))
-                out.append('<div class="poema">' + "".join(
-                    f'<div class="v"><span class="o" data-o="{esc(b.strip())}">{esc(b.strip())}</span>'
-                    f'<small class="r">{esc(b.strip())}</small></div>' for b in ls) + "</div>")
+                out.append('<div class="poema">' + "".join(verso_html(b.strip()) for b in ls) + "</div>")
             else:
                 out.append("<pre>" + esc("\n".join(body)) + "</pre>")
+        elif s == "<!--resp-->":
+            flush(); out.append('<details class="resp"><summary>Ver respuestas</summary>')
+        elif s == "<!--/resp-->":
+            flush(); out.append("</details>")
         elif re.match(r"^#{1,6} ", s):
             flush()
             n = len(s.split()[0]); t = s[n + 1:].strip()
@@ -300,10 +345,14 @@ def md(text, convert=True):
     return "\n".join(out), toc, poems
 
 # ---------------------------------------------------------------- plantilla
-NAV = [("index.html", "Inicio"), ("escritura.html", "Escritura"), ("pronunciacion.html", "Pronunciación"), ("gramatica.html", "Gramática"), ("diccionario.html", "Diccionario"),
-       ("literatura.html", "Literatura"),
-       ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"), ("informatica.html", "Informática")]),
-       ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y pendientes"), ("auditoria.html", "Auditoría inicial"), ("plan.html", "Plan de ampliación"), ("integracion.html", "Integración (oweelinux, web)"), ("descargas.html", "Descargas")])]
+NAV = [("index.html", "Inicio", "pado"),
+       ("Aprender", [("curso.html", "Curso por niveles", "tase-kelo"), ("escritura.html", "Escritura", "beka"), ("pronunciacion.html", "Pronunciación", "sone"),
+                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "sena-seta")], "tase"),
+       ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
+       ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"),
+                     ("informatica.html", "Informática")], "lare"),
+       ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y pendientes"), ("auditoria.html", "Auditoría inicial"), ("plan.html", "Plan de ampliación"),
+                     ("integracion.html", "Integración (oweelinux, web)"), ("descargas.html", "Descargas", "gura")], "dare")]
 
 CSS = r"""
 :root{--bg:#fbfaf7;--surface:#fff;--ink:#1c2430;--ink2:#566170;--rule:#e2dfd7;--accent:#2F6FB0;--accent-ink:#fff;--soft:#eaf1f9;--warn:#a65f00;--ok:#2d7a4b;--owee-size:1.6rem}
@@ -366,6 +415,12 @@ footer{max-width:1100px;margin:0 auto;padding:0 16px 40px;color:var(--ink2);font
 .dd .dm{position:absolute;top:100%;left:0;z-index:9;min-width:220px;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:6px;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(0,0,0,.12)}
 .dd .dm a{white-space:nowrap}
 .rm{color:var(--ink2);font-size:.78rem}.chip.ver{border:1px solid var(--accent);background:transparent;color:var(--accent)}
+.ow{position:relative}.ow[data-g]{cursor:help;border-bottom:1px dotted transparent}.ow[data-g]:hover,.ow[data-g]:focus{border-bottom-color:var(--accent);outline:none}
+.ow[data-g]:hover::after,.ow[data-g]:focus::after{content:attr(data-g);position:absolute;z-index:20;left:0;bottom:calc(100% + 6px);width:max-content;max-width:17rem;background:var(--ink);color:var(--bg);font:.8rem/1.35 system-ui,sans-serif;padding:5px 9px;border-radius:7px;white-space:normal;pointer-events:none}
+details.resp{margin:1em 0;border:1px solid var(--rule);border-radius:10px;padding:.2em 1em;background:var(--surface)}details.resp summary{cursor:pointer;font-weight:600;padding:.5em 0;color:var(--accent)}
+.uimode{margin-left:auto}.uimode button{padding:5px 9px!important;font-size:.82rem!important}.uimode .o{font-size:1.15rem;line-height:1}
+.ruta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}.nivel{border-left:5px solid var(--accent)}.nivel .n{font-size:2rem;font-weight:700;color:var(--accent);line-height:1}
+.fdd{background:var(--soft);border:1px solid var(--rule);border-radius:14px;padding:14px 20px;margin:18px 0}.fdd .o{font-size:2rem;display:block}.fdd small{color:var(--ink2)}
 .hide{display:none!important}
 @media print{header.top,.controls,.toc,footer,.noprint{display:none!important}body{background:#fff;color:#000}.layout{display:block}main{max-width:none;padding:0}
 .poema,.entry,.card{break-inside:avoid;border-color:#bbb;background:#fff}h2{break-before:auto}}
@@ -390,8 +445,20 @@ JS_COMMON = r"""
     });
   }
   document.addEventListener('click',function(e){document.querySelectorAll('details.dd[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+  function uiMode(m){
+    try{localStorage.setItem('owee-ui',m)}catch(e){}
+    document.querySelectorAll('[data-ow]').forEach(function(el){
+      if(!el.dataset.esOrig)el.dataset.esOrig=el.textContent;
+      if(m==='es'){el.textContent=el.dataset.esOrig;el.classList.remove('o');el.removeAttribute('title');return}
+      if(m==='owee'){el.textContent=el.dataset.ow;el.classList.remove('o');el.title=el.dataset.esOrig;return}
+      el.textContent=window.Owee?Owee.toScript(el.dataset.ow):el.dataset.ow;el.classList.add('o');el.title=el.dataset.ow+' — '+el.dataset.esOrig;
+    });
+    document.querySelectorAll('[data-ui]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.ui===m)});
+  }
   window.oweeConv=conv;
   document.addEventListener('DOMContentLoaded',function(){conv();numconv();
+    document.querySelectorAll('[data-ui]').forEach(function(b){b.onclick=function(){uiMode(b.dataset.ui)}});
+    var um;try{um=localStorage.getItem('owee-ui')}catch(e){}if(um&&um!=='es')uiMode(um);
     var m;try{m=localStorage.getItem('owee-mode')}catch(e){}
     document.body.dataset.mode=document.body.dataset.forcemode||m||'ambos';
     document.querySelectorAll('[data-setmode]').forEach(function(b){
@@ -405,16 +472,17 @@ JS_COMMON = r"""
 """
 
 def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=True, extra_js=""):
+    def lab(txt, ow=None):
+        return f'<span data-ow="{ow}">{txt}</span>' if ow else txt
     def navitem(it):
         if isinstance(it[1], list):
-            on = any(h == active for h, _ in it[1])
-            kids = "".join(f'<a href="{h}"{" aria-current=page" if h == active else ""}>{t}</a>' for h, t in it[1])
-            return f'<details class="dd"{" data-on=1" if on else ""}><summary>{it[0]} ▾</summary><div class="dm">{kids}</div></details>'
-        h, t = it
-        return f'<a href="{h}"{" aria-current=page" if h == active else ""}>{t}</a>'
+            on = any(k[0] == active for k in it[1])
+            kids = "".join(f'<a href="{k[0]}"{" aria-current=page" if k[0] == active else ""}>{lab(k[1], k[2] if len(k) > 2 else None)}</a>' for k in it[1])
+            return f'<details class="dd"{" data-on=1" if on else ""}><summary>{lab(it[0], it[2] if len(it) > 2 else None)} ▾</summary><div class="dm">{kids}</div></details>'
+        return f'<a href="{it[0]}"{" aria-current=page" if it[0] == active else ""}>{lab(it[1], it[2] if len(it) > 2 else None)}</a>'
     nav = "".join(navitem(it) for it in NAV)
     top = (f'<header class="top"><div class="in"><a class="brand" href="index.html"><span class="mark o" data-o="owee">owee</span><b>Owee</b></a>'
-           f'<nav>{nav}</nav><button id="theme" class="noprint" style="margin-left:auto;font:inherit;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer" aria-label="Cambiar tema">◐</button></div></header>') if chrome else ""
+           f'<nav>{nav}</nav><span class="seg uimode noprint" role="group" aria-label="Idioma de la interfaz"><button data-ui="es" aria-pressed="true">ES</button><button data-ui="owee">Owee</button><button data-ui="script" class="o">owee</button></span><button id="theme" class="noprint" style="font:inherit;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer" aria-label="Cambiar tema">◐</button></div></header>') if chrome else ""
     foot = f'<footer><p>Owee · sitio generado desde el Registro Maestro y el Diccionario Base · Owee Script/Sans {VERSION}. La romanización es la forma oficial; los glifos requieren la fuente Owee (incluida en esta página). Licencias: texto y datos CC BY-SA 4.0 · fuentes SIL OFL 1.1 · código MIT.</p></footer>' if chrome else ""
     doc = f"""<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -426,29 +494,43 @@ def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=T
     (OUT / fname).write_text(doc, encoding="utf8")
 
 # ---------------------------------------------------------------- paginas
+def frases_html():
+    filas = [l.split("\t") for l in (Path(__file__).resolve().parent / "frases.tsv").read_text(encoding="utf8").splitlines() if l.strip()]
+    for o, _ in filas:
+        for t in re.findall(r"[a-z]+(?:-[a-z]+)*", o.lower()):
+            if t not in ALLMAP and not all(p in ALLMAP for p in t.split("-")):
+                raise ValueError(f"frases.tsv: palabra fuera del lexico: {t}")
+    datos = json.dumps([[o, es] for o, es in filas], ensure_ascii=False)
+    return f"""<div class="fdd"><small>Frase del día</small><span class="o" id="fo"></span><span id="fr" style="color:var(--ink2)"></span><div id="fes"></div>
+<script>(function(){{var F={datos},d=new Date(),k=(d.getFullYear()*372+d.getMonth()*31+d.getDate())%F.length,f=F[k];
+window.addEventListener('DOMContentLoaded',function(){{document.getElementById('fo').textContent=Owee.toScript(f[0],{{digits:true}});
+document.getElementById('fr').textContent=f[0];document.getElementById('fes').textContent=f[1]}})}})()</script></div>"""
+
 def build_index(stats):
     body = f"""
 <div class="hero"><div class="big o" data-o="owee suma">owee suma</div>
-<h1>Owee — un idioma construido, su escritura y sus herramientas</h1>
-<p>Idioma práctico, regular y expresivo: 4 vocales, 14 consonantes, 60 sílabas, gramática analítica sin género ni conjugaciones,
-y una escritura propia donde <strong>1 sílaba = 1 bloque</strong>. Este sitio reúne todo lo definido hasta ahora.</p></div>
-<div class="stats"><div><b>{stats['n']}</b>entradas del léxico</div><div><b>{stats['sci']}</b>términos de ciencias</div><div><b>60</b>sílabas básicas</div>
-<div><b>{stats['poems']}</b>poemas y textos</div><div><b>{stats['pdfs']}</b>documentos PDF</div></div>
+<h1>Owee — aprende un idioma construido, fácil y completo</h1>
+<p>4 vocales, 14 consonantes, 60 sílabas, gramática sin género ni conjugaciones y una escritura propia donde <strong>1 sílaba = 1 bloque</strong>.
+Empieza aquí: sumérgete en el idioma con glifos, romanización, pronunciación y traducción en cada frase.</p></div>
+{frases_html()}
+<h2>Tu ruta de aprendizaje</h2>
+<div class="ruta">
+<a class="card nivel" href="nivel-0.html"><div class="n">0</div><h3>Ver y oír</h3><p>Vocales, sílabas, glifos, números. 1–2 h.</p></a>
+<a class="card nivel" href="nivel-1.html"><div class="n">1</div><h3>Primeras frases</h3><p>Tú y yo, casa, lugar, tiempo, cuerpo, naturaleza. A1.</p></a>
+<a class="card nivel" href="nivel-2.html"><div class="n">2</div><h3>Conversar</h3><p>Negar, comparar, pedir, verbos, diálogos. A2.</p></a>
+<a class="card nivel" href="nivel-3.html"><div class="n">3</div><h3>Leer y crear</h3><p>Compuestos, historias, ciencia, poesía, tu texto. B1.</p></a></div>
+<div class="stats"><div><b>{stats['n']}</b>léxico base</div><div><b>{stats['sci']}</b>términos ampliados</div><div><b>60</b>sílabas</div>
+<div><b>{stats['poems']}</b>textos y canciones</div><div><b>{stats['pdfs']}</b>PDF</div></div>
+<h2>Explora</h2>
 <div class="grid">
-<a class="card" href="escritura.html"><h3>Escritura</h3><p>La matriz silábica y los dígitos con los glifos de Owee Script.</p></a>
-<a class="card" href="idioma.html"><h3>El idioma</h3><p>Fonología, gramática, vocabulario, matemáticas, escritura e IME: el Registro Maestro completo.</p></a>
-<a class="card" href="diccionario.html"><h3>Diccionario</h3><p>Todas las raíces con glifos, estado, uso en textos y raíces aún sin usar. Buscador Owee ↔ español.</p></a>
-<a class="card" href="literatura.html"><h3>Literatura y poesía</h3><p>Poemas de vida, filiales, de amor, de guerra y de filosofía; relato, dichos y reglas métricas.</p></a>
-<a class="card" href="matematicas.html"><h3>Matemáticas 2.0</h3><p>Numeración, álgebra, geometría, cálculo, estadística y vectores, con la notación internacional.</p></a>
-<a class="card" href="fisica.html"><h3>Física 2.0</h3><p>De la cinemática a la relatividad: vocabulario auditado y fórmulas.</p></a>
-<a class="card" href="quimica.html"><h3>Química 0.1 (borrador)</h3><p>Propuesta nueva: 7 raíces y construcciones para materia, reacciones, ácidos y redox.</p></a>
-<a class="card" href="gramatica.html"><h3>Gramática 1.1</h3><p>Propuesta: «sí», imperativo, demostrativos, compuestos y su acento, relativas, nombres propios.</p></a>
-<a class="card" href="astronomia.html"><h3>Astronomía y astrología</h3><p>Borrador sin raíces nuevas: planetas por ordinal, zodiaco como elemento × modalidad.</p></a>
-<a class="card" href="plan.html"><h3>Plan de ampliación</h3><p>Qué más agregar para que Owee sea rico y práctico en el mundo.</p></a>
-<a class="card" href="estado.html"><h3>Estado y pendientes</h3><p>Verificación completa, qué hay hecho, qué falta y qué áreas cubrir para un idioma de todos los campos.</p></a>
-<a class="card" href="descargas.html"><h3>Descargas</h3><p>Fuentes, teclado Fcitx5, cuadernos, guías y especificaciones en PDF.</p></a>
-<a class="card" href="pad/index.html"><h3>Owee Pad</h3><p>Escribe en romano y obtén Owee Script al instante; funciona sin conexión.</p></a>
-</div>
+<a class="card" href="escritura.html"><h3>Escritura</h3><p>Los 60 bloques silábicos, los dígitos y las marcas de compuesto y nombre propio.</p></a>
+<a class="card" href="pronunciacion.html"><h3>Pronunciación</h3><p>Cómo suena cada letra, con AFI y notas escritas en Owee.</p></a>
+<a class="card" href="gramatica.html"><h3>Gramática</h3><p>Las reglas con ejemplos: sí, imperativo, demostrativos, compuestos, relativas.</p></a>
+<a class="card" href="diccionario.html"><h3>Diccionario</h3><p>Todas las palabras con glifo, romano, pronunciación y traducción; buscador Owee ↔ español.</p></a>
+<a class="card" href="literatura.html"><h3>Literatura y canciones</h3><p>Poemas, mitos, cuentos y canciones con ritmo y acordes.</p></a>
+<a class="card" href="matematicas.html"><h3>Ciencias</h3><p>Matemáticas, física, química, astronomía e informática con ejemplos verificados.</p></a>
+<a class="card" href="estado.html"><h3>Proyecto</h3><p>Estado, pendientes, plan de ampliación, integración con Linux y la web, descargas.</p></a>
+<a class="card" href="pad/index.html"><h3>Owee Pad</h3><p>Escribe en romano y obtén Owee Script al instante.</p></a></div>
 <h2>Probar la escritura</h2>
 <div class="controls"><input id="t" type="search" value="me suna nume" aria-label="Texto en romano Owee"></div>
 <div class="poema"><div class="v"><span class="o" id="tr" style="font-size:2.2rem">me suna nume</span></div></div>
@@ -538,7 +620,7 @@ def build_dic(use):
         html_secs.append(f'<section data-secbox><h2 class="sec">{esc(sec)}</h2><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(330px,1fr))">{"".join(cards)}</div></section>')
     n_used = sum(1 for e in LEX if e["w"] in use)
     unused = [e["w"] for e in LEX if e["w"] not in use and not e["parts"] and e["sec"] != "Sistema numérico"]
-    doms = ["General", "Matemáticas", "Física", "Química", "Gramática 1.1", "Cotidiano 0.1", "Astronomía", "Astrología", "Mitología", "Informática", "Interfaz"]
+    doms = ["General", "Matemáticas", "Física", "Química", "Gramática 1.1", "Cotidiano 0.1", "Astronomía", "Astrología", "Mitología", "Informática", "Interfaz", "Cuerpo y naturaleza", "Sitio"]
     dopts = "".join(f"<option>{d}</option>" for d in doms)
     opts = "".join(f'<option>{esc(s)}</option>' for s in secs)
     body = f"""<h1>Diccionario Owee</h1>
@@ -608,6 +690,11 @@ GUIAS = [
      "Material nuevo, sin raíces nuevas. Los términos están verificados automáticamente; ninguno aprobado todavía.", True),
     ("astronomia.html", "Astronomía y astrología", ROOT / "03_Material_Ensenanza/Astronomia/Owee_Astronomia_0.1_Borrador.md",
      "Material nuevo, sin raíces nuevas. Todos los términos están VERIFICADOS automáticamente; faltan tu aprobación.", False),
+    ("curso.html", "Curso por niveles", ROOT / "03_Material_Ensenanza/Curso/Owee_Curso_Indice.md", None, False),
+    ("nivel-0.html", "Nivel 0 — Ver y oír", ROOT / "03_Material_Ensenanza/Curso/Owee_Curso_Nivel_0.md", None, False),
+    ("nivel-1.html", "Nivel 1 — Primeras frases (A1)", ROOT / "03_Material_Ensenanza/Curso/Owee_Curso_Nivel_1.md", None, False),
+    ("nivel-2.html", "Nivel 2 — Conversar (A2)", ROOT / "03_Material_Ensenanza/Curso/Owee_Curso_Nivel_2.md", None, False),
+    ("nivel-3.html", "Nivel 3 — Leer y crear (B1)", ROOT / "03_Material_Ensenanza/Curso/Owee_Curso_Nivel_3.md", None, False),
     ("informatica.html", "Informática", ROOT / "03_Material_Ensenanza/Informatica/Owee_Informatica_0.1_Borrador.md",
      "Material nuevo con una sola raíz nueva (bomo, «bug»); el resto son compuestos. Términos aprobados.", False),
     ("pronunciacion.html", "Pronunciación", ROOT / "03_Material_Ensenanza/Pronunciacion/Owee_Pronunciacion_1.0.md", None, True),
@@ -622,7 +709,7 @@ def build_ciencias():
         aviso = f'<blockquote><p><strong>Borrador propuesto.</strong> {borrador}</p></blockquote>' if borrador else ""
         extra = f'<p class="noprint"><a href="documentos/{path.with_suffix(".pdf").name}">Descargar PDF imprimible</a></p>' if pdf else ""
         body = f'<div class="layout"><aside class="toc">{t}</aside><article>{aviso}{h}{extra}</article></div>'
-        page(fname, nombre, body, fname)
+        page(fname, nombre, body, "curso.html" if fname.startswith("nivel-") else fname)
         if pdf:
             css = "<style>@page{size:A4;margin:16mm 15mm}body{font-size:11pt}.o{font-size:14pt}td .o{font-size:13pt}</style>"
             page(fname.replace(".html", "-imprimir.html"), nombre + " (impresión)", aviso + h, extra_head=css, chrome=False)
