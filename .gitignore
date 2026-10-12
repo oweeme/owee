@@ -1,0 +1,15 @@
+# salidas generadas (se regeneran con los scripts)
+07_Sitio_Web/docs/
+08_Integracion/linux/dist/
+**/audio/*.wav
+__pycache__/
+*.pyc
+**/build/
+*.orig
+.pydeps/
+# material con procedencia o derechos no definidos / duplicados (se conserva local, no se publica)
+06_Imagenes_Referencia/
+99_Archivo/
+# sistema
+.DS_Store
+Thumbs.db

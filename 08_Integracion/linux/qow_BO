@@ -1,0 +1,69 @@
+comment_char %
+escape_char /
+% Locale de Owee para Bolivia (propuesta). Idioma: Owee (codigo de uso privado "qow"). Territorio: Bolivia.
+% Reutiliza formatos (fecha, moneda, numeros) de es_BO; lo propio de Owee son los catalogos de traduccion (qow.po).
+LC_IDENTIFICATION
+title      "Owee locale for Bolivia"
+source     "Proyecto Owee"
+address    "https://oweeme.com"
+language   "Owee"
+territory  "Bolivia"
+revision   "0.1"
+date       "2026-10-12"
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+category "i18n:2012";LC_MEASUREMENT
+END LC_IDENTIFICATION
+
+LC_CTYPE
+copy "es_BO"
+END LC_CTYPE
+
+LC_COLLATE
+copy "es_BO"
+END LC_COLLATE
+
+LC_TIME
+copy "es_BO"
+END LC_TIME
+
+LC_NUMERIC
+copy "es_BO"
+END LC_NUMERIC
+
+LC_MONETARY
+copy "es_BO"
+END LC_MONETARY
+
+LC_MESSAGES
+copy "es_BO"
+END LC_MESSAGES
+
+LC_PAPER
+copy "es_BO"
+END LC_PAPER
+
+LC_NAME
+name_fmt    "%d%t%g%t%m%t%f"
+END LC_NAME
+
+LC_ADDRESS
+copy "es_BO"
+END LC_ADDRESS
+
+LC_TELEPHONE
+copy "es_BO"
+END LC_TELEPHONE
+
+LC_MEASUREMENT
+copy "es_BO"
+END LC_MEASUREMENT

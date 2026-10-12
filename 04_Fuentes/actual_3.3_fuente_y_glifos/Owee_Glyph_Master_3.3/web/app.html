@@ -1,0 +1,276 @@
+<title>Owee Pad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+@font-face { font-family: "Owee Sans"; src: url("fonts/OweeSans-Regular.woff2") format("woff2"), url("fonts/OweeSans-Regular.woff") format("woff"), url("fonts/OweeSans-Regular.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "Owee School"; src: url("fonts/OweeSchool-Regular.woff2") format("woff2"), url("fonts/OweeSchool-Regular.woff") format("woff"), url("fonts/OweeSchool-Regular.ttf") format("truetype"); font-display: block; }
+
+:root {
+  --paper: #F3F5F7;
+  --surface: #FFFFFF;
+  --sunk: #E8EDF2;
+  --ink: #1B2A3A;
+  --ink-2: #4A5A6C;
+  --rule: #D5DCE3;
+  --accent: #2F6FB0;
+  --accent-ink: #FFFFFF;
+  --digit: #2E8C7E;
+  --warn: #9A5B12;
+  --warn-bg: #FBF0E0;
+  --owee: "Owee Sans";
+  --owee-size: 34px;
+  --ui: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "DejaVu Sans Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0F1720; --surface: #17212C; --sunk: #1E2A37; --ink: #E4EAF0; --ink-2: #9FB0C2;
+    --rule: #2A3847; --accent: #79AEE6; --accent-ink: #0F1720; --digit: #5CC2B1; --warn: #F0B866; --warn-bg: #2E2416;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0F1720; --surface: #17212C; --sunk: #1E2A37; --ink: #E4EAF0; --ink-2: #9FB0C2;
+  --rule: #2A3847; --accent: #79AEE6; --accent-ink: #0F1720; --digit: #5CC2B1; --warn: #F0B866; --warn-bg: #2E2416;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--ui); font-size: 16px; line-height: 1.5; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 16px; padding-block: 16px 48px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.wrap > * { min-width: 0; }
+
+header.bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; padding-block: 8px; border-bottom: 1px solid var(--rule); }
+.brand { display: flex; align-items: baseline; gap: 12px; }
+.brand h1 { margin: 0; font-size: 1.5rem; letter-spacing: 0.01em; }
+.brand .mark { font-family: var(--owee); font-size: 1.9rem; color: var(--accent); line-height: 1; }
+.brand small { color: var(--ink-2); font-size: .85rem; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { font: inherit; font-size: .9rem; border: 0; background: transparent; color: var(--ink); padding: 6px 12px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+label.ctl { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; color: var(--ink-2); }
+input[type=range] { width: 120px; accent-color: var(--accent); }
+input[type=checkbox] { accent-color: var(--accent); width: 18px; height: 18px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.panes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 760px) { .panes { grid-template-columns: 1fr; } }
+.pane { display: grid; grid-template-rows: auto 1fr auto; gap: 8px; min-width: 0; }
+.pane h2 { margin: 0; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+textarea#roman { width: 100%; min-height: 180px; resize: vertical; font: 1.15rem/1.6 var(--ui); color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 14px; }
+#script { min-height: 180px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 14px; font-family: var(--owee); font-size: var(--owee-size); line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere; }
+#script .d { color: var(--digit); }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { font: inherit; font-size: .92rem; border: 1px solid var(--rule); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 7px 14px; cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.status { font-size: .85rem; color: var(--ink-2); min-height: 1.3em; }
+.warn { font-size: .85rem; color: var(--warn); background: var(--warn-bg); border-radius: 6px; padding: 4px 8px; }
+
+section h2.sec { margin: 0 0 4px; font-size: 1.15rem; text-wrap: balance; }
+section p.lede { margin: 0 0 12px; color: var(--ink-2); max-width: 65ch; font-size: .95rem; }
+
+.keys { display: grid; grid-template-columns: 3.2rem repeat(4, minmax(0, 1fr)); gap: 6px; max-width: 560px; }
+.keys .lab { display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; font-weight: 700; font-size: .85rem; color: var(--ink-2); }
+.keys .head { text-align: center; font-weight: 700; font-size: .85rem; color: var(--ink-2); }
+.key { font: inherit; display: grid; justify-items: center; gap: 0; padding: 6px 2px 4px; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); color: var(--ink); cursor: pointer; touch-action: manipulation; }
+.key:active { background: var(--sunk); }
+.key .g { font-family: var(--owee); font-size: 2.1rem; line-height: 1.1; }
+.key .r { font-size: .72rem; color: var(--ink-2); }
+.key.dig .g { color: var(--digit); }
+.digits { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; max-width: 560px; margin-top: 10px; }
+.keyrow { display: flex; gap: 6px; max-width: 560px; margin-top: 10px; }
+.keyrow .key { flex: 1; padding-block: 10px; font-size: .9rem; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+th, td { padding: 6px 12px; border-bottom: 1px solid var(--rule); text-align: left; white-space: nowrap; }
+th { font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); background: var(--sunk); position: sticky; top: 0; }
+td.g { font-family: var(--owee); font-size: 1.8rem; line-height: 1.2; }
+td.m { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--ink-2); }
+tr:last-child td { border-bottom: 0; }
+footer { color: var(--ink-2); font-size: .85rem; max-width: 70ch; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">&#xE009;&#xE014;</span>
+      <h1>Owee Pad</h1>
+      <small>Glyph Master 3.3</small>
+    </div>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Estilo de escritura">
+        <button type="button" id="st-sans" aria-pressed="true">Sans · pantalla</button>
+        <button type="button" id="st-school" aria-pressed="false">School · a mano</button>
+      </div>
+      <label class="ctl" for="size">Tamaño <input type="range" id="size" min="18" max="64" value="34"> <span id="size-v">34</span></label>
+      <label class="ctl" for="digits"><input type="checkbox" id="digits" checked> Cifras Owee</label>
+    </div>
+  </header>
+
+  <div class="panes">
+    <div class="pane">
+      <h2>Roman Owee</h2>
+      <textarea id="roman" spellcheck="false" autocapitalize="none" autocomplete="off" aria-label="Texto en Roman Owee">me suna nume
+me kuma bo · me doke lodu
+tu suna nume ka?
+2026</textarea>
+      <div class="row">
+        <button class="btn" id="clear" type="button">Borrar</button>
+        <span id="bad" class="warn" hidden></span>
+      </div>
+    </div>
+    <div class="pane">
+      <h2>Owee Script</h2>
+      <div id="script" aria-live="polite"></div>
+      <div class="row">
+        <button class="btn primary" id="copy-owee" type="button">Copiar Owee</button>
+        <button class="btn" id="copy-roman" type="button">Copiar roman</button>
+        <span class="status" id="status"></span>
+      </div>
+    </div>
+  </div>
+
+  <section aria-labelledby="k-title">
+    <h2 class="sec" id="k-title">Teclado silábico</h2>
+    <p class="lede">Toca un bloque para escribir su sílaba. En el móvil es más rápido que teclear las letras. Si pegas texto Owee en el cuadro, se convierte a roman para que puedas editarlo.</p>
+    <div class="keys" id="keys"></div>
+    <div class="digits" id="digit-keys"></div>
+    <div class="keyrow">
+      <button class="key" type="button" id="k-space">espacio</button>
+      <button class="key" type="button" id="k-back" aria-label="Borrar la última letra">⌫ borrar</button>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-title">
+    <h2 class="sec" id="t-title">Mapa de glifos</h2>
+    <p class="lede">Los 60 bloques silábicos y los 10 dígitos con su ID estable y su código PUA. Toca una fila para copiar ese carácter.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Glifo</th><th>Roman</th><th>ID</th><th>Código</th><th>Lectura</th></tr></thead>
+        <tbody id="map"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    El texto copiado son caracteres de uso privado (PUA). Se ven como Owee donde esté instalada Owee Sans u Owee School; en otras apps aparecen como cuadros, y el roman sigue siendo la forma segura para compartir.
+  </footer>
+</div>
+
+<script src="owee.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var roman = $("roman"), script = $("script"), root = document.documentElement;
+  var store = {
+    get: function (k) { try { return localStorage.getItem("owee-pad:" + k); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem("owee-pad:" + k, v); } catch (e) {} }
+  };
+
+  function esc(s) { return s.replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); }
+
+  function render() {
+    var digits = $("digits").checked;
+    var out = Owee.toScript(roman.value, { digits: digits });
+    script.innerHTML = esc(out).replace(/[-]+/g, function (m) { return '<span class="d">' + m + "</span>"; });
+    var bad = Owee.invalidWords(roman.value);
+    $("bad").hidden = !bad.length;
+    $("bad").textContent = bad.length ? "Quedan en roman: " + bad.join(", ") : "";
+    store.set("text", roman.value);
+  }
+
+  function setStyle(s) {
+    root.style.setProperty("--owee", s === "school" ? '"Owee School"' : '"Owee Sans"');
+    $("st-sans").setAttribute("aria-pressed", String(s !== "school"));
+    $("st-school").setAttribute("aria-pressed", String(s === "school"));
+    store.set("style", s);
+  }
+  function setSize(v) { root.style.setProperty("--owee-size", v + "px"); $("size-v").textContent = v; $("size").value = v; store.set("size", v); }
+
+  function insert(text) {
+    var a = roman.selectionStart, b = roman.selectionEnd;
+    roman.value = roman.value.slice(0, a) + text + roman.value.slice(b);
+    roman.selectionStart = roman.selectionEnd = a + text.length;
+    render();
+  }
+
+  function flash(msg) { $("status").textContent = msg; clearTimeout(flash.t); flash.t = setTimeout(function () { $("status").textContent = ""; }, 2200); }
+  function copy(text, label) {
+    var done = function () { flash(label + " copiado"); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { fallback(text); });
+    } else fallback(text);
+    function fallback(t) {
+      var ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) { flash("Selecciona el texto y cópialo a mano"); }
+      ta.remove();
+    }
+  }
+
+  // teclado silábico
+  var keys = $("keys"), V = ["a", "e", "o", "u"], C = ["", "p", "b", "t", "d", "k", "g", "f", "s", "m", "n", "l", "r", "sh", "ch"];
+  keys.appendChild(document.createElement("span"));
+  V.forEach(function (v) { var h = document.createElement("span"); h.className = "head"; h.textContent = v.toUpperCase(); keys.appendChild(h); });
+  C.forEach(function (c) {
+    var lab = document.createElement("span"); lab.className = "lab"; lab.textContent = c ? c.toUpperCase() : "—"; keys.appendChild(lab);
+    V.forEach(function (v) {
+      var u = Owee.unit(c + v), b = document.createElement("button");
+      b.type = "button"; b.className = "key"; b.title = u.id;
+      b.innerHTML = '<span class="g">' + u.char + '</span><span class="r">' + u.roman + "</span>";
+      b.addEventListener("click", function () { insert(u.roman); });
+      keys.appendChild(b);
+    });
+  });
+  Owee.units.filter(function (u) { return u.kind === "digit"; }).forEach(function (u) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "key dig"; b.title = u.id + " · " + u.reading;
+    b.innerHTML = '<span class="g">' + u.char + '</span><span class="r">' + u.roman + " " + u.reading + "</span>";
+    b.addEventListener("click", function () { insert(u.roman); });
+    $("digit-keys").appendChild(b);
+  });
+  $("k-space").addEventListener("click", function () { insert(" "); });
+  $("k-back").addEventListener("click", function () {
+    var a = roman.selectionStart, b = roman.selectionEnd;
+    if (a === b && a > 0) a--;
+    roman.value = roman.value.slice(0, a) + roman.value.slice(b);
+    roman.selectionStart = roman.selectionEnd = a; render();
+  });
+
+  // mapa
+  var tb = $("map");
+  Owee.units.forEach(function (u) {
+    var tr = document.createElement("tr"); tr.tabIndex = 0; tr.style.cursor = "pointer";
+    tr.innerHTML = '<td class="g">' + u.char + "</td><td>" + u.roman + '</td><td class="m">' + u.id +
+      '</td><td class="m">U+' + u.cp.toString(16).toUpperCase() + "</td><td>" + (u.reading || "") + "</td>";
+    var act = function () { copy(u.char, u.id); };
+    tr.addEventListener("click", act);
+    tr.addEventListener("keydown", function (e) { if (e.key === "Enter") act(); });
+    tb.appendChild(tr);
+  });
+
+  // pegar texto Owee: pasa a roman
+  roman.addEventListener("paste", function (e) {
+    var t = (e.clipboardData || window.clipboardData).getData("text");
+    if (/[-]/.test(t)) { e.preventDefault(); insert(Owee.toRoman(t)); }
+  });
+  roman.addEventListener("input", render);
+  $("digits").addEventListener("change", function () { store.set("digits", this.checked ? "1" : "0"); render(); });
+  $("size").addEventListener("input", function () { setSize(this.value); });
+  $("st-sans").addEventListener("click", function () { setStyle("sans"); });
+  $("st-school").addEventListener("click", function () { setStyle("school"); });
+  $("clear").addEventListener("click", function () { roman.value = ""; render(); roman.focus(); });
+  $("copy-owee").addEventListener("click", function () { copy(Owee.toScript(roman.value, { digits: $("digits").checked }), "Texto Owee"); });
+  $("copy-roman").addEventListener("click", function () { copy(roman.value, "Roman"); });
+
+  var t = store.get("text"); if (t !== null && t !== "") roman.value = t;
+  if (store.get("digits") === "0") $("digits").checked = false;
+  setStyle(store.get("style") || "sans");
+  setSize(store.get("size") || 34);
+  render();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
+})();
+</script>

@@ -1,0 +1,8 @@
+[Addon]
+Name=Owee
+Category=InputMethod
+Version=@PROJECT_VERSION@
+Library=owee
+Type=SharedLibrary
+OnDemand=True
+Configurable=False

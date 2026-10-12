@@ -1,0 +1,275 @@
+# Traduccion de oweelinux al Owee (Owee Script)
+# Generado por 08_Integracion/herramientas/generar_traducciones.py el 2026-10-12. No editar a mano: edita datos/ui_glosario.tsv.
+msgid ""
+msgstr ""
+"Project-Id-Version: oweelinux 0.1\n"
+"Language: qow\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Archivo
+msgid "File"
+msgstr ""
+
+#. Editar
+msgid "Edit"
+msgstr ""
+
+#. Ver
+msgid "View"
+msgstr ""
+
+#. Herramientas
+msgid "Tools"
+msgstr ""
+
+#. Ayuda
+msgid "Help"
+msgstr ""
+
+#. Nuevo
+msgid "New"
+msgstr ""
+
+#. Abrir
+msgid "Open"
+msgstr ""
+
+#. Guardar
+msgid "Save"
+msgstr ""
+
+#. Cerrar
+msgid "Close"
+msgstr ""
+
+#. Salir
+msgid "Exit"
+msgstr ""
+
+#. Deshacer
+msgid "Undo"
+msgstr ""
+
+#. Rehacer
+msgid "Redo"
+msgstr ""
+
+#. Copiar
+msgid "Copy"
+msgstr ""
+
+#. Pegar
+msgid "Paste"
+msgstr ""
+
+#. Borrar
+msgid "Delete"
+msgstr ""
+
+#. Seleccionar
+msgid "Select"
+msgstr ""
+
+#. Seleccionar todo
+msgid "Select all"
+msgstr ""
+
+#. Añadir
+msgid "Add"
+msgstr ""
+
+#. Quitar
+msgid "Remove"
+msgstr ""
+
+#. Buscar
+msgid "Search"
+msgstr ""
+
+#. Configuración
+msgid "Settings"
+msgstr ""
+
+#. Menú
+msgid "Menu"
+msgstr ""
+
+#. Ventana
+msgid "Window"
+msgstr ""
+
+#. Botón
+msgid "Button"
+msgstr ""
+
+#. Carpeta
+msgid "Folder"
+msgstr ""
+
+#. Papelera
+msgid "Trash"
+msgstr ""
+
+#. Escritorio
+msgid "Desktop"
+msgstr ""
+
+#. Equipo
+msgid "Computer"
+msgstr ""
+
+#. Sistema
+msgid "System"
+msgstr ""
+
+#. Red
+msgid "Network"
+msgstr ""
+
+#. Internet
+msgid "Internet"
+msgstr ""
+
+#. Red inalámbrica
+msgid "Wireless network"
+msgstr ""
+
+#. Impresora
+msgid "Printer"
+msgstr ""
+
+#. Batería
+msgid "Battery"
+msgstr ""
+
+#. Volumen
+msgid "Volume"
+msgstr ""
+
+#. Brillo
+msgid "Brightness"
+msgstr ""
+
+#. Usuario
+msgid "User"
+msgstr ""
+
+#. Nombre
+msgid "Name"
+msgstr ""
+
+#. Contraseña
+msgid "Password"
+msgstr ""
+
+#. Seguridad
+msgid "Security"
+msgstr ""
+
+#. Iniciar sesión
+msgid "Log in"
+msgstr ""
+
+#. Cerrar sesión
+msgid "Log out"
+msgstr ""
+
+#. Apagar
+msgid "Shut down"
+msgstr ""
+
+#. Reiniciar
+msgid "Restart"
+msgstr ""
+
+#. Suspender
+msgid "Sleep"
+msgstr ""
+
+#. Instalar
+msgid "Install"
+msgstr ""
+
+#. Actualizar
+msgid "Update"
+msgstr ""
+
+#. Descargar
+msgid "Download"
+msgstr ""
+
+#. Subir
+msgid "Upload"
+msgstr ""
+
+#. Enviar
+msgid "Send"
+msgstr ""
+
+#. Recibir
+msgid "Receive"
+msgstr ""
+
+#. Mensaje
+msgid "Message"
+msgstr ""
+
+#. Fecha y hora
+msgid "Date and time"
+msgstr ""
+
+#. Tiempo
+msgid "Time"
+msgstr ""
+
+#. Idioma
+msgid "Language"
+msgstr ""
+
+#. Aceptar
+msgid "OK"
+msgstr ""
+
+#. Cancelar
+msgid "Cancel"
+msgstr ""
+
+#. Sí
+msgid "Yes"
+msgstr ""
+
+#. No
+msgid "No"
+msgstr ""
+
+#. Error
+msgid "Error"
+msgstr ""
+
+#. Advertencia
+msgid "Warning"
+msgstr ""
+
+#. Listo
+msgid "Done"
+msgstr ""
+
+#. Cargando
+msgid "Loading"
+msgstr ""
+
+#. Siguiente
+msgid "Next"
+msgstr ""
+
+#. Atrás
+msgid "Back"
+msgstr ""
+
+#. Bienvenida
+msgid "Welcome"
+msgstr ""
+

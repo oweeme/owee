@@ -1,0 +1,721 @@
+#!/usr/bin/env python3
+"""Genera el sitio web de Owee (HTML estatico, sin dependencias) en ./docs
+
+Fuentes de verdad (no se duplican, se leen):
+  00_Registro_Maestro/Owee_Registro_Maestro_Completo.md
+  02_Diccionario/datos/lexico.tsv
+  03_Material_Ensenanza/Literatura_Poesia/Owee_Literatura_y_Poesia_*.md
+  04_Fuentes/actual_3.3_fuente_y_glifos/Owee_Glyph_Master_3.3  (fuentes web, owee.js, Owee Pad)
+
+Uso:  python3 07_Sitio_Web/build_site.py
+Despues, para el PDF imprimible:  python3 07_Sitio_Web/make_pdf.py
+"""
+import html, json, re, shutil, sys, unicodedata
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = Path(__file__).resolve().parent / "docs"
+GM = ROOT / "04_Fuentes/actual_3.3_fuente_y_glifos/Owee_Glyph_Master_3.3"
+LIT = sorted((ROOT / "03_Material_Ensenanza/Literatura_Poesia").glob("Owee_Literatura_y_Poesia_*.md"))[-1]
+REG = ROOT / "00_Registro_Maestro/Owee_Registro_Maestro_Completo.md"
+VERSION = "3.3"
+
+# ---------------------------------------------------------------- lexico
+def load_lex():
+    rows = []
+    for l in (ROOT / "02_Diccionario/datos/lexico.tsv").read_text(encoding="utf8").splitlines()[1:]:
+        w, sil, cls, mean, est, sec = l.split("\t")
+        rows.append(dict(w=w, sil=sil, cls=cls, mean=mean, est=est, sec=sec))
+    return rows
+
+LEX = load_lex()
+for e in LEX: e["dom"] = "General"; e["nota"] = ""
+
+def load_sci():
+    rows = []
+    for l in (ROOT / "02_Diccionario/datos/lexico_ciencias.tsv").read_text(encoding="utf8").splitlines()[1:]:
+        w, sil, cls, mean, est, sec, dom, nota = (l.split("\t") + [""] * 8)[:8]
+        rows.append(dict(w=w, sil=sil, cls=cls, mean=mean, est=est, sec=sec, dom=dom, nota=nota))
+    return rows
+
+SCI = load_sci()
+LEXSET = {e["w"] for e in LEX} | {p for e in SCI for p in e["w"].split("-")}
+ALL = LEX + SCI
+
+def is_owee(text):
+    toks = re.findall(r"[a-z]+", text.lower())
+    ok = lambda p: p in LEXSET or re.fullmatch(r"(?:(?:sh|ch|[pbtdkgfsmnlr])?[aeou])+", p) is not None
+    return bool(toks) and all(ok(p) for t in toks for p in t.split("-")) and bool(re.fullmatch(r"[a-z ,.\-¿?¡!]+", text.lower()))
+
+def _prs(w):
+    r = pron(w)
+    return f"{r[1]} · /{r[0]}/" if r else ""
+
+def expand(text):
+    """Sustituye <!--vocab Dominio|Seccion--> y <!--construcciones Dominio--> por tablas."""
+    def vocab(m):
+        dom, sec = m.group(1), m.group(2)
+        rows = [e for e in SCI if e["dom"] == dom and e["cls"] == "raíz técnica" and (sec == "*" or e["sec"] == sec)]
+        out = ["| Owee | Pronunciación | Concepto | Estado |", "|---|---|---|---|"]
+        for e in rows:
+            est = e["est"] + (" — " + e["nota"] if e["nota"] else "")
+            out.append(f"| {e['w']} | {_prs(e['w'])} | {e['mean']} | {est} |")
+        return "\n".join(out)
+    def cons(m):
+        rows = [e for e in SCI if e["dom"] == m.group(1) and e["cls"] == "construcción" and (not m.group(2) or e["sec"] == m.group(2))]
+        out = ["| Owee | Pronunciación | Significado | Estado |", "|---|---|---|---|"]
+        out += [f"| {e['w']} | {_prs(e['w'])} | {e['mean']} | {e['est']}{(' — ' + e['nota']) if e['nota'] else ''} |" for e in rows]
+        return "\n".join(out)
+    text = text.replace("<!--digitos-->", tabla_digitos())
+    text = text.replace("<!--pronunciacion-->", tabla_pron()).replace("<!--silabas-->", tabla_silabas())
+    text = re.sub(r"<!--vocab ([^|>]+)\|([^>]+?)-->", vocab, text)
+    return re.sub(r"<!--construcciones ([^|>]+?)(?:\|([^>]+?))?-->", cons, text)
+
+
+# ---------------------------------------------------------------- numerales Owee (Matematicas 1.0)
+def leer3(n):
+    """0-999 -> palabras Owee. Se omiten las posiciones con 0 (909 = she gabu she)."""
+    h, t, u = n // 100, (n // 10) % 10, n % 10
+    w = []
+    if h: w.append(f"{NOMBRES[h]} gabu")
+    if t: w.append(f"{NOMBRES[t]} tanu")
+    if u: w.append(NOMBRES[u])
+    return " ".join(w)
+
+NOMBRES = "cho be du ga fo sa ku mu na she".split()
+
+def leer_num(txt):
+    ent, _, dec = txt.partition(".")
+    n = int(ent)
+    if n == 0:
+        w = ["cho"]
+    else:
+        w = []
+        m, k, r = n // 1_000_000, (n // 1000) % 1000, n % 1000
+        if n >= 1_000_000_000: raise ValueError(f"numero demasiado grande: {txt}")
+        if m: w.append(leer3(m) + " benu")
+        if k: w.append(leer3(k) + " soku")
+        if r: w.append(leer3(r))
+    if dec:
+        w.append("doto " + " ".join(NOMBRES[int(d)] for d in dec))
+    return " ".join(w)
+
+OPS = {"+": "dapa", "-": "dopo", "−": "dopo", "×": "kebu", "*": "kebu", "÷": "faku", "=": "se", "<": "po", ">": "pa",
+       "≥": "pa-lo-se", "≤": "po-lo-se", "%": "gabu-palo", "^": "telu", "√": "raku", "/": "palo"}
+
+def leer_expr(expr):
+    toks = re.findall(r"\d+(?:\.\d+)?|[+\-−×*÷=<>≥≤%^√/]", expr.replace(" ", ""))
+    if "".join(toks) != expr.replace(" ", ""): raise ValueError(f"expresion no soportada: {expr}")
+    out, prev = [], None
+    for t in toks:
+        if t[0].isdigit(): out.append(leer_num(t))
+        elif t in "-−" and (prev is None or not prev[0].isdigit() and prev != "%"):
+            out.append("po")          # signo negativo: po (menos escalar); la resta es dopo
+        elif t == "+" and (prev is None or not prev[0].isdigit() and prev != "%"):
+            out.append("pa")          # signo positivo explicito
+        else: out.append(OPS[t])
+        prev = t
+    return " ".join(out)
+
+def comprobar(expr):
+    """Si la expresion es una igualdad/desigualdad entera, verifica que sea cierta (evita ejemplos erroneos)."""
+    if "%" in expr: return
+    from fractions import Fraction
+    import math
+    e = expr.replace("−", "-").replace("×", "*").replace("÷", "/").replace("^", "**").replace("≥", ">=").replace("≤", "<=")
+    e = re.sub(r"√(\d+)", lambda m: f"_r({m.group(1)})", e)
+    e = re.sub(r"(?<![<>=!])=(?!=)", "==", e)
+    e = re.sub(r"(\d+(?:\.\d+)?)", lambda m: f"_F('{m.group(1)}')", e)
+    def _r(x):
+        x = int(x); r = math.isqrt(x)
+        return Fraction(r) if r * r == x else Fraction(math.sqrt(x)).limit_denominator(10**9)
+    if not eval(e, {"__builtins__": {}}, {"_F": Fraction, "_r": lambda x: _r(x.numerator if hasattr(x, "numerator") else x)}):
+        raise ValueError(f"ejemplo numerico FALSO: {expr}")
+
+def numhtml(expr, leer=True):
+    if leer and any(c in expr for c in "=<>≥≤"): comprobar(expr)
+    num = f'<span class="n" data-n="{esc(expr)}">{esc(expr)}</span>'
+    if not leer: return num
+    w = leer_expr(expr)
+    return (f'<span class="nx">{num}<span class="rd"><span class="o" data-o="{w}" title="{w}">{w}</span>'
+            f'<small>{w}</small></span></span>')
+
+def tabla_digitos():
+    rows = ["| Número | Nombre | Escritura fonética | Glifo numérico |", "|---|---|---|---|"]
+    for i, n in enumerate(NOMBRES):
+        rows.append(f"| {i} | **{n}** (romano) | `{n}` | `#{i}` |")
+    return "\n".join(rows)
+
+
+# ---------------------------------------------------------------- pronunciacion
+_IC = {"p": "p", "b": "b", "t": "t", "d": "d", "k": "k", "g": "ɡ", "f": "f", "s": "s", "m": "m", "n": "n", "l": "l", "r": "ɾ", "sh": "ʃ", "ch": "tʃ"}
+_SIL = re.compile(r"(sh|ch|[pbtdkgfsmnlr])?([aeou])")
+
+def _sylls(part):
+    out = [(m.group(1) or "", m.group(2)) for m in _SIL.finditer(part)]
+    return out if "".join(c + v for c, v in out) == part else None
+
+def pron(word):
+    """(AFI, transcripcion para hispanohablantes) de una palabra o compuesto; None si no es Owee valido."""
+    ipa, resp = [], []
+    for pi, part in enumerate(word.lower().split("-")):
+        ss = _sylls(part)
+        if not ss: return None
+        for si, (c, v) in enumerate(ss):
+            mark = "ˈ" if (pi == 0 and si == 0) else ("ˌ" if (si == 0 and len(ss) >= 2) else "")
+            ipa.append((mark, _IC.get(c, "") + v))
+            resp.append((c + v).upper() if mark else c + v)
+    a = ""
+    for i, (mark, sy) in enumerate(ipa):
+        a += (mark if mark else ("." if i else "")) + sy
+    return a, "-".join(resp)
+
+def tabla_pron():
+    ej = ["me", "tu", "suna", "nara", "kuma", "sade", "shome", "choma", "tare", "tera", "ganu", "kuna-bore", "sade-kelo", "suna-gore-pa", "gura-lena"]
+    allm = {e["w"]: e["mean"] for e in ALL}
+    rows = ["| Owee | Romano | AFI | Pronunciación | Significado |", "|---|---|---|---|---|"]
+    for w in ej:
+        a, r = pron(w)
+        rows.append(f"| {w} | {w} | /{a}/ | {r} | {allm.get(w, '')} |")
+    return "\n".join(rows)
+
+def tabla_silabas():
+    rows = ["| | A | E | O | U |", "|---|---|---|---|---|", "| *vocal sola* | " + " | ".join(f"`{v}` /{v}/" for v in "aeou") + " |"]
+    for c in ["p", "b", "t", "d", "k", "g", "f", "s", "m", "n", "l", "r", "sh", "ch"]:
+        rows.append(f"| **{c}** /{_IC[c]}/ | " + " | ".join(f"`{c+v}` /{_IC[c]}{v}/" for v in "aeou") + " |")
+    return "\n".join(rows)
+
+# ---------------------------------------------------------------- markdown minimo
+def slug(s):
+    s = unicodedata.normalize("NFD", s.lower())
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+
+def esc(s):
+    return html.escape(s, quote=False)
+
+def oweespan(text, cls="o"):
+    return f'<span class="{cls}" data-o="{esc(text)}" title="{esc(text)}">{esc(text)}</span>'
+
+def inline(s, convert=True):
+    codes = []
+    def keep(m):
+        t = m.group(1)
+        if t.startswith("#"):
+            codes.append(numhtml(t[1:].strip(), leer=False))
+        else:
+            codes.append(oweespan(t) if convert and is_owee(t) else f"<code>{esc(t)}</code>")
+        return f"\x00{len(codes)-1}\x00"
+    def keepnum(m):
+        codes.append(numhtml(m.group(1).strip()))
+        return f"\x00{len(codes)-1}\x00"
+    s = re.sub(r"`([^`]+)`", keep, s)
+    s = re.sub(r"\[\[(.+?)\]\]", keepnum, s)
+    s = esc(s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
+    s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", s)
+    s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', s)
+    s = re.sub(r"\x00(\d+)\x00", lambda m: codes[int(m.group(1))], s)
+    return s
+
+def md(text, convert=True):
+    """Devuelve (html, toc[(nivel, texto, id)], poems[(id, titulo, [lineas])])"""
+    lines = text.splitlines()
+    out, toc, poems = [], [], []
+    i, para, h3 = 0, [], None
+    def flush():
+        nonlocal para
+        if para:
+            out.append("<p>" + inline(" ".join(para), convert) + "</p>")
+            para = []
+    while i < len(lines):
+        l = lines[i]
+        s = l.strip()
+        if s.startswith("```"):
+            flush()
+            lang = s.strip("`").strip()
+            body = []
+            i += 1
+            while i < len(lines) and not lines[i].strip().startswith("```"):
+                body.append(lines[i]); i += 1
+            if lang == "owee":
+                ls = [b for b in body if b.strip()]
+                if h3: poems.append((h3[0], h3[1], ls))
+                out.append('<div class="poema">' + "".join(
+                    f'<div class="v"><span class="o" data-o="{esc(b.strip())}">{esc(b.strip())}</span>'
+                    f'<small class="r">{esc(b.strip())}</small></div>' for b in ls) + "</div>")
+            else:
+                out.append("<pre>" + esc("\n".join(body)) + "</pre>")
+        elif re.match(r"^#{1,6} ", s):
+            flush()
+            n = len(s.split()[0]); t = s[n + 1:].strip()
+            hid = slug(re.sub(r"[`*]", "", t))
+            toc.append((n, re.sub(r"[`*]", "", t), hid))
+            if n == 3: h3 = (hid, re.sub(r"[`*]", "", t))
+            out.append(f'<h{n} id="{hid}">{inline(t, convert)}</h{n}>')
+        elif re.fullmatch(r"-{3,}|\*{3,}", s):
+            flush(); out.append("<hr>")
+        elif s.startswith(">"):
+            flush(); q = []
+            while i < len(lines) and lines[i].strip().startswith(">"):
+                q.append(lines[i].strip()[1:].strip()); i += 1
+            i -= 1
+            out.append("<blockquote><p>" + inline(" ".join(q), convert) + "</p></blockquote>")
+        elif s.startswith("|") and i + 1 < len(lines) and re.match(r"^\|[\s:|-]+\|$", lines[i + 1].strip()):
+            flush()
+            cells = lambda r: [c.strip() for c in r.strip().strip("|").split("|")]
+            head = cells(s); i += 2; rows = []
+            while i < len(lines) and lines[i].strip().startswith("|"):
+                rows.append(cells(lines[i])); i += 1
+            i -= 1
+            owee_cols = {j for j, h in enumerate(head) if h.strip().lower() in ("owee", "forma owee")}
+            def cell(c, j):
+                if j in owee_cols:
+                    t = c.strip().strip("`")
+                    if is_owee(t): return oweespan(t) + f'<br><small class="rm">{esc(t)}</small>'
+                return inline(c, convert)
+            out.append('<div class="tw"><table><thead><tr>' + "".join(f"<th>{inline(h, False)}</th>" for h in head) +
+                       "</tr></thead><tbody>" + "".join("<tr>" + "".join(f"<td>{cell(c, j)}</td>" for j, c in enumerate(r)) + "</tr>" for r in rows) +
+                       "</tbody></table></div>")
+        elif re.match(r"^(\d+\.|-|\*)\s+", s):
+            flush()
+            ordered = bool(re.match(r"^\d+\.", s)); items = []
+            while i < len(lines):
+                m = re.match(r"^(\d+\.|-|\*)\s+(.*)$", lines[i].strip())
+                if m:
+                    items.append([m.group(2)]); i += 1
+                elif lines[i].startswith("  ") and lines[i].strip() and items:
+                    items[-1].append(lines[i].strip()); i += 1
+                else:
+                    break
+            i -= 1
+            tag = "ol" if ordered else "ul"
+            out.append(f"<{tag}>" + "".join("<li>" + inline(" ".join(it), convert) + "</li>" for it in items) + f"</{tag}>")
+        elif not s:
+            flush()
+        else:
+            para.append(s.rstrip("\\").strip())
+        i += 1
+    flush()
+    return "\n".join(out), toc, poems
+
+# ---------------------------------------------------------------- plantilla
+NAV = [("index.html", "Inicio"), ("escritura.html", "Escritura"), ("pronunciacion.html", "Pronunciación"), ("gramatica.html", "Gramática"), ("diccionario.html", "Diccionario"),
+       ("literatura.html", "Literatura"),
+       ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"), ("informatica.html", "Informática")]),
+       ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y mejoras"), ("plan.html", "Plan de ampliación"), ("integracion.html", "Integración (oweelinux, web)"), ("descargas.html", "Descargas")])]
+
+CSS = r"""
+:root{--bg:#fbfaf7;--surface:#fff;--ink:#1c2430;--ink2:#566170;--rule:#e2dfd7;--accent:#2F6FB0;--accent-ink:#fff;--soft:#eaf1f9;--warn:#a65f00;--ok:#2d7a4b;--owee-size:1.6rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14181e;--surface:#1b2129;--ink:#e8ebef;--ink2:#9aa6b4;--rule:#2b3440;--accent:#6aa8e6;--accent-ink:#0c1620;--soft:#1e2a38;--warn:#e0a24a;--ok:#6ccf93}}
+:root[data-theme=dark]{--bg:#14181e;--surface:#1b2129;--ink:#e8ebef;--ink2:#9aa6b4;--rule:#2b3440;--accent:#6aa8e6;--accent-ink:#0c1620;--soft:#1e2a38;--warn:#e0a24a;--ok:#6ccf93}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header.top{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--rule)}
+header.top .in{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
+.brand b{font-size:1.25rem}.brand .mark{font-family:'Owee Sans';font-size:1.7rem;color:var(--accent);line-height:1}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+nav a{padding:6px 12px;border-radius:8px;text-decoration:none;color:var(--ink2);font-size:.95rem}
+nav a:hover{background:var(--soft)}nav a[aria-current=page]{background:var(--accent);color:var(--accent-ink)}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:2rem;line-height:1.2;margin:.2em 0 .5em}h2{margin:2em 0 .5em;padding-top:.3em;border-top:1px solid var(--rule)}h3{margin:1.6em 0 .4em}
+.o{font-family:'Owee Sans',system-ui;font-size:var(--owee-size);line-height:1.5;color:var(--ink)}
+code{font:.9em ui-monospace,"IBM Plex Mono",Menlo,monospace;background:var(--soft);padding:1px 5px;border-radius:5px}
+pre{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:12px 14px;overflow:auto;font:.88rem/1.5 ui-monospace,Menlo,monospace}
+blockquote{margin:1em 0;padding:.2em 1em;border-left:4px solid var(--accent);background:var(--soft);border-radius:0 8px 8px 0}
+.tw{overflow-x:auto;margin:1em 0}table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--soft)}
+.o{white-space:pre-wrap}td .o{font-size:1.3rem}
+.hero{display:grid;gap:12px;padding:28px 0 8px}.hero .big{font-family:'Owee Sans';font-size:clamp(3rem,10vw,5.5rem);line-height:1.1;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px;text-decoration:none;color:var(--ink);display:block}
+a.card:hover{border-color:var(--accent)}.card h3{margin:0 0 .3em;border:0}.card p{margin:.2em 0;color:var(--ink2);font-size:.93rem}
+.chip{display:inline-block;font-size:.72rem;letter-spacing:.04em;border-radius:99px;padding:1px 9px;background:var(--soft);color:var(--ink2);margin-right:4px}
+.chip.prov{background:transparent;border:1px solid var(--warn);color:var(--warn)}.chip.st{border:1px solid var(--ok);background:transparent;color:var(--ok)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.stats div{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:10px 16px}.stats b{font-size:1.5rem;display:block}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}
+.controls input[type=search],.controls select{font:inherit;padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink)}
+.controls input[type=search]{flex:1 1 220px;min-width:0}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:8px;overflow:hidden}.seg button{font:inherit;font-size:.9rem;border:0;background:var(--surface);color:var(--ink);padding:7px 12px;cursor:pointer}.seg button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
+.entry{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center;scroll-margin-top:80px}
+.entry:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--soft)}
+.entry{align-content:center}.entry .g{grid-row:1/5;font-size:2.4rem;min-width:3.2rem;text-align:center}
+.entry .w{font-weight:700;font-size:1.15rem}.entry .w small{font-weight:400;color:var(--ink2);font-size:.85rem;margin-left:6px}
+.entry .m{color:var(--ink)}.entry .u{font-size:.82rem;color:var(--ink2)}
+.sec{margin:28px 0 8px;font-size:1.1rem;color:var(--ink2);border:0;padding:0}
+.matrix{display:grid;grid-template-columns:70px repeat(4,1fr);gap:6px;max-width:640px;margin:14px 0}
+.matrix div{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:8px 4px;text-align:center}
+.matrix .h{background:var(--soft);font-weight:700}.matrix .o{font-size:2.1rem;display:block;line-height:1.2}.matrix small{color:var(--ink2)}
+.poema{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px 22px;margin:14px 0;max-width:640px}
+.poema .v{padding:2px 0}.poema .v .o{font-size:1.9rem;display:block}.poema .v .r{display:block;color:var(--ink2);font-size:.85rem;margin-top:-6px}
+body[data-mode=glifos] .poema .r{display:none}body[data-mode=romano] .poema .o{display:none}
+body[data-mode=romano] .poema .r{font-size:1.2rem;color:var(--ink);margin:0}
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px}
+@media(max-width:860px){.layout{grid-template-columns:1fr}.toc{position:static!important;max-height:none!important}}
+.toc{position:sticky;top:70px;align-self:start;max-height:calc(100vh - 90px);overflow:auto;font-size:.88rem;border-right:1px solid var(--rule);padding-right:12px}
+.toc a{display:block;padding:3px 0;color:var(--ink2);text-decoration:none}.toc a:hover{color:var(--accent)}.toc .l3{padding-left:14px;font-size:.84rem}
+.dl{display:flex;flex-direction:column;gap:6px}.dl a{display:flex;justify-content:space-between;gap:12px;padding:8px 12px;background:var(--surface);border:1px solid var(--rule);border-radius:8px;text-decoration:none}
+.dl a span{color:var(--ink2);font-size:.85rem}
+footer{max-width:1100px;margin:0 auto;padding:0 16px 40px;color:var(--ink2);font-size:.85rem}
+.n .o{font-size:1.2em;line-height:1}.n{white-space:nowrap}
+.nx{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px}.nx .rd{display:inline-flex;flex-direction:column;line-height:1.25}.nx .rd .o{font-size:1.25rem}.nx .rd small{color:var(--ink2);font-size:.78rem}
+.dd{position:relative}.dd summary{list-style:none;cursor:pointer;padding:6px 12px;border-radius:8px;color:var(--ink2);font-size:.95rem}.dd summary::-webkit-details-marker{display:none}
+.dd summary:hover,.dd[open] summary{background:var(--soft)}.dd[data-on] summary{background:var(--accent);color:var(--accent-ink)}
+.dd .dm{position:absolute;top:100%;left:0;z-index:9;min-width:220px;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:6px;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.dd .dm a{white-space:nowrap}
+.rm{color:var(--ink2);font-size:.78rem}.chip.ver{border:1px solid var(--accent);background:transparent;color:var(--accent)}
+.hide{display:none!important}
+@media print{header.top,.controls,.toc,footer,.noprint{display:none!important}body{background:#fff;color:#000}.layout{display:block}main{max-width:none;padding:0}
+.poema,.entry,.card{break-inside:avoid;border-color:#bbb;background:#fff}h2{break-before:auto}}
+"""
+
+JS_COMMON = r"""
+(function(){
+  try{var t=localStorage.getItem('owee-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}
+  function conv(root){
+    if(!window.Owee)return;
+    (root||document).querySelectorAll('[data-o]').forEach(function(n){n.textContent=Owee.toScript(n.dataset.o,{digits:true});});
+  }
+  function numconv(root){
+    (root||document).querySelectorAll('[data-n]').forEach(function(n){
+      n.textContent='';
+      n.dataset.n.split(/([0-9]+)/).forEach(function(part){
+        if(!part)return;
+        if(/^[0-9]+$/.test(part)){var sp=document.createElement('span');sp.className='o';
+          sp.textContent=part.split('').map(function(d){return String.fromCharCode(0xE040+Number(d))}).join('');n.appendChild(sp)}
+        else n.appendChild(document.createTextNode(part));
+      });
+    });
+  }
+  document.addEventListener('click',function(e){document.querySelectorAll('details.dd[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})});
+  window.oweeConv=conv;
+  document.addEventListener('DOMContentLoaded',function(){conv();numconv();
+    var m;try{m=localStorage.getItem('owee-mode')}catch(e){}
+    document.body.dataset.mode=document.body.dataset.forcemode||m||'ambos';
+    document.querySelectorAll('[data-setmode]').forEach(function(b){
+      b.setAttribute('aria-pressed',b.dataset.setmode===document.body.dataset.mode);
+      b.onclick=function(){document.body.dataset.mode=b.dataset.setmode;try{localStorage.setItem('owee-mode',b.dataset.setmode)}catch(e){}
+        document.querySelectorAll('[data-setmode]').forEach(function(x){x.setAttribute('aria-pressed',x===b)})}});
+    var tb=document.getElementById('theme');if(tb)tb.onclick=function(){var d=document.documentElement.dataset.theme;
+      var n=d==='dark'?'light':'dark';document.documentElement.dataset.theme=n;try{localStorage.setItem('owee-theme',n)}catch(e){}};
+  });
+})();
+"""
+
+def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=True, extra_js=""):
+    def navitem(it):
+        if isinstance(it[1], list):
+            on = any(h == active for h, _ in it[1])
+            kids = "".join(f'<a href="{h}"{" aria-current=page" if h == active else ""}>{t}</a>' for h, t in it[1])
+            return f'<details class="dd"{" data-on=1" if on else ""}><summary>{it[0]} ▾</summary><div class="dm">{kids}</div></details>'
+        h, t = it
+        return f'<a href="{h}"{" aria-current=page" if h == active else ""}>{t}</a>'
+    nav = "".join(navitem(it) for it in NAV)
+    top = (f'<header class="top"><div class="in"><a class="brand" href="index.html"><span class="mark o" data-o="owee">owee</span><b>Owee</b></a>'
+           f'<nav>{nav}</nav><button id="theme" class="noprint" style="margin-left:auto;font:inherit;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer" aria-label="Cambiar tema">◐</button></div></header>') if chrome else ""
+    foot = f'<footer><p>Owee · sitio generado desde el Registro Maestro y el Diccionario Base · Owee Script/Sans {VERSION}. La romanización es la forma oficial; los glifos requieren la fuente Owee (incluida en esta página). Licencias: texto y datos CC BY-SA 4.0 · fuentes SIL OFL 1.1 · código MIT.</p></footer>' if chrome else ""
+    doc = f"""<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{esc(title)} · Owee</title>
+<link rel="icon" href="pad/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/owee.css"><style>{CSS}</style>{extra_head}</head>
+<body {body_attrs}>{top}<main>{body}</main>{foot}
+<script src="assets/owee.js"></script><script>{JS_COMMON}</script>{extra_js}</body></html>"""
+    (OUT / fname).write_text(doc, encoding="utf8")
+
+# ---------------------------------------------------------------- paginas
+def build_index(stats):
+    body = f"""
+<div class="hero"><div class="big o" data-o="owee suma">owee suma</div>
+<h1>Owee — un idioma construido, su escritura y sus herramientas</h1>
+<p>Idioma práctico, regular y expresivo: 4 vocales, 14 consonantes, 60 sílabas, gramática analítica sin género ni conjugaciones,
+y una escritura propia donde <strong>1 sílaba = 1 bloque</strong>. Este sitio reúne todo lo definido hasta ahora.</p></div>
+<div class="stats"><div><b>{stats['n']}</b>entradas del léxico</div><div><b>{stats['sci']}</b>términos de ciencias</div><div><b>60</b>sílabas básicas</div>
+<div><b>{stats['poems']}</b>poemas y textos</div><div><b>{stats['pdfs']}</b>documentos PDF</div></div>
+<div class="grid">
+<a class="card" href="escritura.html"><h3>Escritura</h3><p>La matriz silábica y los dígitos con los glifos de Owee Script.</p></a>
+<a class="card" href="idioma.html"><h3>El idioma</h3><p>Fonología, gramática, vocabulario, matemáticas, escritura e IME: el Registro Maestro completo.</p></a>
+<a class="card" href="diccionario.html"><h3>Diccionario</h3><p>Todas las raíces con glifos, estado, uso en textos y raíces aún sin usar. Buscador Owee ↔ español.</p></a>
+<a class="card" href="literatura.html"><h3>Literatura y poesía</h3><p>Poemas de vida, filiales, de amor, de guerra y de filosofía; relato, dichos y reglas métricas.</p></a>
+<a class="card" href="matematicas.html"><h3>Matemáticas 2.0</h3><p>Numeración, álgebra, geometría, cálculo, estadística y vectores, con la notación internacional.</p></a>
+<a class="card" href="fisica.html"><h3>Física 2.0</h3><p>De la cinemática a la relatividad: vocabulario auditado y fórmulas.</p></a>
+<a class="card" href="quimica.html"><h3>Química 0.1 (borrador)</h3><p>Propuesta nueva: 7 raíces y construcciones para materia, reacciones, ácidos y redox.</p></a>
+<a class="card" href="gramatica.html"><h3>Gramática 1.1</h3><p>Propuesta: «sí», imperativo, demostrativos, compuestos y su acento, relativas, nombres propios.</p></a>
+<a class="card" href="astronomia.html"><h3>Astronomía y astrología</h3><p>Borrador sin raíces nuevas: planetas por ordinal, zodiaco como elemento × modalidad.</p></a>
+<a class="card" href="plan.html"><h3>Plan de ampliación</h3><p>Qué más agregar para que Owee sea rico y práctico en el mundo.</p></a>
+<a class="card" href="estado.html"><h3>Estado y mejoras</h3><p>Auditoría del proyecto: qué falta y en qué orden conviene mejorarlo.</p></a>
+<a class="card" href="descargas.html"><h3>Descargas</h3><p>Fuentes, teclado Fcitx5, cuadernos, guías y especificaciones en PDF.</p></a>
+<a class="card" href="pad/index.html"><h3>Owee Pad</h3><p>Escribe en romano y obtén Owee Script al instante; funciona sin conexión.</p></a>
+</div>
+<h2>Probar la escritura</h2>
+<div class="controls"><input id="t" type="search" value="me suna nume" aria-label="Texto en romano Owee"></div>
+<div class="poema"><div class="v"><span class="o" id="tr" style="font-size:2.2rem">me suna nume</span></div></div>
+<script>document.getElementById('t').addEventListener('input',function(e){{document.getElementById('tr').textContent=Owee.toScript(e.target.value,{{digits:true}})}});
+window.addEventListener('DOMContentLoaded',function(){{document.getElementById('tr').textContent=Owee.toScript(document.getElementById('t').value,{{digits:true}})}});</script>
+"""
+    page("index.html", "Owee", body, "index.html")
+
+def build_escritura():
+    cons = "p b t d k g f s m n l r sh ch".split()
+    cells = '<div class="h"></div>' + "".join(f'<div class="h">{v.upper()}</div>' for v in "aeou")
+    for c in cons:
+        cells += f'<div class="h">{c.upper()}</div>'
+        for v in "aeou":
+            cells += f'<div>{oweespan(c+v)}<small>{c+v}</small></div>'
+    vow = "".join(f'<div>{oweespan(v)}<small>{v}</small></div>' for v in "aeou")
+    dig = "".join(f'<div>{oweespan(str(i))}<small>{n} · {i}</small></div>' for i, n in enumerate("cho be du ga fo sa ku mu na she".split()))
+    body = f"""<h1>Escritura: Owee Script</h1>
+<p>Cada sílaba es un bloque visual, escrito de izquierda a derecha. La consonante es el esqueleto y la vocal es una <em>dirección</em>:
+<strong>A</strong> arriba, <strong>E</strong> izquierda, <strong>O</strong> derecha, <strong>U</strong> abajo. Siete familias consonánticas agrupan las 14 consonantes.</p>
+<div class="controls"><div class="seg" role="group" aria-label="Fuente"><button data-fam="sans" aria-pressed="true">Owee Sans</button><button data-fam="school" aria-pressed="false">Owee School</button></div></div>
+<h2>Vocales</h2><div class="matrix" style="grid-template-columns:repeat(4,1fr)">{vow}</div>
+<h2>Matriz de 56 sílabas CV</h2><div class="matrix" id="mx">{cells}</div>
+<h2>Marcas de escritura</h2>
+<p>Dos glifos permiten <strong>demostrar en la escritura nativa</strong> la estructura de las palabras (principio de una forma = un significado):</p>
+<div class="matrix" style="grid-template-columns:repeat(3,1fr);max-width:720px">
+<div>{oweespan("sade-kelo")}<small>sade-kelo · compuesto «año» (nexo U+E03C)</small></div>
+<div>{oweespan("sade kelo")}<small>sade kelo · frase libre «sol, ciclo» (sin nexo)</small></div>
+<div>{oweespan("Ana")}<small>Ana · nombre propio (marca U+E03D)</small></div></div>
+<p>Pronunciación de todo lo anterior en la <a href="pronunciacion.html">guía de pronunciación</a>.</p>
+<h2>Dígitos</h2><div class="matrix" style="grid-template-columns:repeat(5,1fr)">{dig}</div>
+<p>Escalas: <code>tanu</code> 10 · <code>gabu</code> 100 · <code>soku</code> 1 000 · <code>benu</code> 1 000 000. Detalles completos en <a href="idioma.html#parte-v-owee-script">Parte V del Registro Maestro</a>.</p>
+<script>document.querySelectorAll('[data-fam]').forEach(function(b){{b.onclick=function(){{
+document.querySelectorAll('[data-fam]').forEach(function(x){{x.setAttribute('aria-pressed',x===b)}});
+document.querySelectorAll('.matrix .o').forEach(function(n){{n.style.fontFamily=b.dataset.fam==='school'?"'Owee School'":"'Owee Sans'"}})}}}});</script>"""
+    page("escritura.html", "Escritura", body, "escritura.html")
+
+def build_idioma():
+    h, toc, _ = md(REG.read_text(encoding="utf8"), convert=False)
+    t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n in (1, 2))
+    # el primer h1 del registro es el titulo: lo dejamos como esta
+    body = f'<div class="layout"><aside class="toc">{t}</aside><article>{h}</article></div>'
+    page("idioma.html", "El idioma (Registro Maestro)", body, "idioma.html")
+
+def usage_index(poems):
+    use = {}
+    for pid, title, lines in poems:
+        for ln in lines:
+            for tok in re.findall(r"[a-z]+(?:-[a-z]+)*", ln.lower()):
+                for root in [tok] + tok.split("-"):
+                    use.setdefault(root, {})[pid] = title
+    return use
+
+def chipcls(est):
+    return {"ESTABLE": "st", "AUDITADO 2.0": "st", "APROBADA": "st", "VERIFICADA": "ver", "PROVISIONAL": "prov", "PROPUESTA": "prov", "REVISAR": "prov"}.get(est, "")
+
+def build_dic(use):
+    secs, order = {}, []
+    for e in ALL:
+        e["label"] = e["sec"] if e["dom"] == "General" else f'{e["dom"]} · {e["sec"]}'
+        secs.setdefault(e["label"], []).append(e)
+    for e in ALL:
+        parts = e["w"].split("-")
+        e["parts"] = parts if len(parts) > 1 else []
+    meanings = {}
+    html_secs = []
+    for sec, es in secs.items():
+        cards = []
+        for e in es:
+            w = e["w"]; u = use.get(w, {})
+            links = "".join(f'<a href="literatura.html#{pid}">{esc(t)}</a>, ' for pid, t in u.items()).rstrip(", ")
+            comp = ""
+            if e["parts"]:
+                comp = " · " + " + ".join(f'<a href="#w-{p}">{p}</a>' if p in LEXSET else p for p in e["parts"])
+            used = f'<div class="u">Usado en: {links}</div>' if u else '<div class="u">Sin uso aún en los textos</div>'
+            pr = pron(w)
+            prstr = f'/{pr[0]}/ · {pr[1]}' if pr else ""
+            search = (w + " " + e["mean"] + " " + e["cls"]).lower()
+            search = "".join(c for c in unicodedata.normalize("NFD", search) if unicodedata.category(c) != "Mn")
+            cards.append(
+                f'<article class="entry" id="w-{w}" data-s="{esc(search)}" data-est="{e["est"].lower()}" data-used="{1 if u else 0}" data-sec="{esc(sec)}" data-dom="{e["dom"]}" data-w="{w}" data-m="{esc(e["mean"].lower())}">'
+                f'<div class="g">{oweespan(w)}</div><div class="w">{w}<small>{prstr}{comp}</small></div>'
+                f'<div class="m">{esc(e["mean"])} <span class="chip">{esc(e["cls"])}</span>'
+                f'<span class="chip {chipcls(e["est"])}">{esc(e["est"].lower())}</span>'
+                f'{"<span class=chip>"+e["dom"]+"</span>" if e["dom"]!="General" else ""}'
+                f'{"<div class=u>"+esc(e["nota"])+"</div>" if e["nota"] else ""}</div>{used}</article>')
+        html_secs.append(f'<section data-secbox><h2 class="sec">{esc(sec)}</h2><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(330px,1fr))">{"".join(cards)}</div></section>')
+    n_used = sum(1 for e in LEX if e["w"] in use)
+    unused = [e["w"] for e in LEX if e["w"] not in use and not e["parts"] and e["sec"] != "Sistema numérico"]
+    doms = ["General", "Matemáticas", "Física", "Química", "Gramática 1.1", "Cotidiano 0.1", "Astronomía", "Astrología", "Mitología", "Informática", "Interfaz"]
+    dopts = "".join(f"<option>{d}</option>" for d in doms)
+    opts = "".join(f'<option>{esc(s)}</option>' for s in secs)
+    body = f"""<h1>Diccionario Owee</h1>
+<p>Owee no se traduce palabra por palabra: cada raíz es un <strong>concepto</strong> y su sentido concreto depende de la estructura y del contexto. Incluye el léxico general (Base 1.0), Matemáticas y Física 2.0 y las propuestas de Química, Gramática, Astronomía, Astrología, Mitología, vida diaria e Informática.
+<br><strong>Estados:</strong> <em>estable / auditado</em> = ya en el idioma; <em>aprobada</em> = confirmada por el autor; <em>verificada</em> = pasó la verificación automática (fonología V/CV sin i, partes existentes, ≤ 3 elementos, forma y significado únicos) y espera aprobación; <em>por revisar</em> = falló una comprobación.
+Las formas con guion se construyen con raíces y operadores existentes (<code>bema-pa</code> = más cantidad).</p>
+<div class="stats"><div><b>{len(LEX)}</b>léxico general</div><div><b>{sum(1 for e in SCI if e['dom'] in ('Matemáticas','Física'))}</b>matemática y física</div>
+<div><b>{sum(1 for e in SCI if e['est'] == 'VERIFICADA')}</b>verificadas</div><div><b>{sum(1 for e in SCI if e['est'] == 'APROBADA')}</b>aprobadas</div><div><b>{n_used}</b>usadas en textos</div></div>
+<div class="controls"><input id="q" type="search" placeholder="Buscar en Owee o en español (sin acentos)…" aria-label="Buscar">
+<select id="fd"><option value="">Todas las áreas</option>{dopts}</select>
+<select id="fs"><option value="">Todas las secciones</option>{opts}</select>
+<select id="fe"><option value="">Todo estado</option><option value="estable">Estables</option><option value="auditado 2.0">Auditado 2.0 (ciencias)</option><option value="aprobada">Aprobadas</option><option value="verificada">Verificadas (esperan aprobación)</option><option value="provisional">Provisionales</option><option value="propuesta">Propuestas</option><option value="revisar">Por revisar</option></select>
+<select id="fu"><option value="">Uso: todas</option><option value="1">Usadas en textos</option><option value="0">Sin usar</option></select>
+<div class="seg"><button data-sort="sec" aria-pressed="true">Por tema</button><button data-sort="owee" aria-pressed="false">A–Z Owee</button><button data-sort="es" aria-pressed="false">A–Z español</button></div></div>
+<p id="cnt" class="u" style="color:var(--ink2)"></p>
+<div id="list">{"".join(html_secs)}</div>
+<h2>Formas rechazadas o no establecidas</h2>
+<div class="tw"><table><thead><tr><th>Forma</th><th>Estado</th><th>Motivo</th></tr></thead><tbody>
+<tr><td><code>sume</code></td><td>rechazada</td><td>No usar como azul; conflicto/proximidad con <code>suma</code>.</td></tr>
+<tr><td><code>nare</code></td><td>rechazada</td><td>No usar como atención; <code>paku</code> es la raíz vigente.</td></tr>
+<tr><td><code>bure</code> (miedo)</td><td>rechazada</td><td><code>bure</code> ya significa abrir.</td></tr>
+<tr><td><code>por</code></td><td>no establecida</td><td>No adoptar como porcentaje sin decisión explícita.</td></tr></tbody></table></div>
+<h2>Raíces todavía sin uso en los textos</h2>
+<p>Útil para el siguiente poema: estas raíces del léxico aún no aparecen en ningún verso.</p>
+<p>{" ".join(f'<a href="#w-{w}">{w}</a>' for w in unused)}</p>"""
+    js = """<script>(function(){
+var q=document.getElementById('q'),fs=document.getElementById('fs'),fd=document.getElementById('fd'),fe=document.getElementById('fe'),fu=document.getElementById('fu'),list=document.getElementById('list');
+var entries=[].slice.call(document.querySelectorAll('.entry')),boxes=[].slice.call(document.querySelectorAll('[data-secbox]'));
+var origin=boxes.map(function(b){return b});var flat=null,mode='sec';
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'')}
+function apply(){var t=norm(q.value.trim()),n=0;
+ entries.forEach(function(e){var ok=(!t||e.dataset.s.indexOf(t)>=0)&&(!fd.value||e.dataset.dom===fd.value)&&(!fs.value||e.dataset.sec===fs.value)&&(!fe.value||e.dataset.est===fe.value)&&(!fu.value||e.dataset.used===fu.value);
+  e.classList.toggle('hide',!ok);if(ok)n++});
+ boxes.forEach(function(b){b.classList.toggle('hide',!b.querySelector('.entry:not(.hide)'))});
+ document.getElementById('cnt').textContent=n+' entrada'+(n==1?'':'s')}
+function sort(m){mode=m;
+ if(m==='sec'){if(flat){flat.remove();flat=null}boxes.forEach(function(b){list.appendChild(b);b.querySelector('.grid').append.apply(b.querySelector('.grid'),entries.filter(function(e){return e.dataset.sec===b.querySelector('h2').textContent}))})}
+ else{if(!flat){flat=document.createElement('section');flat.innerHTML='<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(330px,1fr))"></div>';list.appendChild(flat)}
+  boxes.forEach(function(b){b.classList.add('hide')});var g=flat.firstChild;
+  entries.slice().sort(function(a,b){var k=m==='owee'?'w':'m';return a.dataset[k].localeCompare(b.dataset[k],'es')}).forEach(function(e){g.appendChild(e)})}
+ apply()}
+document.querySelectorAll('[data-sort]').forEach(function(b){b.onclick=function(){document.querySelectorAll('[data-sort]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});sort(b.dataset.sort)}});
+[q,fd,fs,fe,fu].forEach(function(c){c.addEventListener('input',function(){if(mode!=='sec')boxes.forEach(function(b){b.classList.add('hide')});apply()})});
+apply()})();</script>"""
+    page("diccionario.html", "Diccionario", body, "diccionario.html", extra_js=js)
+
+def build_lit(html_body, toc, imprimir=False):
+    t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n in (2, 3))
+    ctrl = ('<div class="controls"><span style="color:var(--ink2)">Ver versos como:</span><div class="seg" role="group">'
+            '<button data-setmode="ambos">Glifos + romano</button><button data-setmode="glifos">Solo glifos</button><button data-setmode="romano">Solo romano</button></div>'
+            '<button class="seg" style="font:inherit;padding:7px 12px;cursor:pointer;background:var(--surface);color:var(--ink)" onclick="print()">Imprimir / PDF</button></div>')
+    if imprimir:
+        cover = ('<section class="cover"><div class="o" data-o="owee" style="font-size:5rem;color:#2F6FB0">owee</div><h1>Literatura y Poesía</h1>'
+                 '<p>Poemas, canciones, mitos, dioses y cuentos, con reglas métricas y musicales.</p><p>Versión 0.4 · Owee Sans / Owee School</p></section>')
+        css = """<style>@page{size:A4;margin:16mm 15mm}body{font-size:11pt}.cover{min-height:240mm;display:flex;flex-direction:column;justify-content:center;gap:6mm;break-after:page}
+.poema{max-width:none}.poema .v .o{font-size:21pt}h2{break-after:avoid}h3{break-after:avoid}.o{font-size:15pt}td .o{font-size:14pt}</style>"""
+        page("literatura-imprimir.html", "Literatura y Poesía (impresión)", cover + html_body, extra_head=css, chrome=False, body_attrs='data-forcemode="ambos"')
+        return
+    body = f'{ctrl}<div class="layout"><aside class="toc">{t}</aside><article>{html_body}</article></div>'
+    page("literatura.html", "Literatura y poesía", body, "literatura.html")
+
+GUIAS = [
+    # (archivo, titulo, md, aviso_borrador, pdf_imprimible, activo_nav)
+    ("matematicas.html", "Matemáticas", ROOT / "03_Material_Ensenanza/Matematicas/Owee_Matematicas_2.0_Web.md", None, False),
+    ("fisica.html", "Física", ROOT / "03_Material_Ensenanza/Fisica/Owee_Fisica_2.0_Web.md", None, False),
+    ("quimica.html", "Química", ROOT / "03_Material_Ensenanza/Quimica/Owee_Quimica_0.1_Borrador.md",
+     "Material nuevo, sin raíces nuevas. Los términos están verificados automáticamente; ninguno aprobado todavía.", True),
+    ("astronomia.html", "Astronomía y astrología", ROOT / "03_Material_Ensenanza/Astronomia/Owee_Astronomia_0.1_Borrador.md",
+     "Material nuevo, sin raíces nuevas. Todos los términos están VERIFICADOS automáticamente; faltan tu aprobación.", False),
+    ("informatica.html", "Informática", ROOT / "03_Material_Ensenanza/Informatica/Owee_Informatica_0.1_Borrador.md",
+     "Material nuevo con una sola raíz nueva (bomo, «bug»); el resto son compuestos. Términos aprobados.", False),
+    ("pronunciacion.html", "Pronunciación", ROOT / "03_Material_Ensenanza/Pronunciacion/Owee_Pronunciacion_1.0.md", None, True),
+    ("gramatica.html", "Gramática 1.1", ROOT / "03_Material_Ensenanza/Gramatica/Owee_Gramatica_1.1_Propuesta.md",
+     "Propuesta que completa el Registro Maestro; nada está aprobado hasta que lo confirmes.", False),
+]
+
+def build_ciencias():
+    for fname, nombre, path, borrador, pdf in GUIAS:
+        h, toc, _ = md(expand(path.read_text(encoding="utf8")))
+        t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n == 2)
+        aviso = f'<blockquote><p><strong>Borrador propuesto.</strong> {borrador}</p></blockquote>' if borrador else ""
+        extra = f'<p class="noprint"><a href="documentos/{path.with_suffix(".pdf").name}">Descargar PDF imprimible</a></p>' if pdf else ""
+        body = f'<div class="layout"><aside class="toc">{t}</aside><article>{aviso}{h}{extra}</article></div>'
+        page(fname, nombre, body, fname)
+        if pdf:
+            css = "<style>@page{size:A4;margin:16mm 15mm}body{font-size:11pt}.o{font-size:14pt}td .o{font-size:13pt}</style>"
+            page(fname.replace(".html", "-imprimir.html"), nombre + " (impresión)", aviso + h, extra_head=css, chrome=False)
+
+def build_plan():
+    h, toc, _ = md((ROOT / "00_Registro_Maestro/Owee_Plan_de_Ampliacion.md").read_text(encoding="utf8"), convert=False)
+    t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n == 2)
+    page("plan.html", "Plan de ampliación", f'<div class="layout"><aside class="toc">{t}</aside><article>{h}</article></div>', "plan.html")
+
+def build_integracion():
+    h, toc, _ = md((ROOT / "08_Integracion/README.md").read_text(encoding="utf8"), convert=False)
+    t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n == 2)
+    page("integracion.html", "Integración (oweelinux y web)", f'<div class="layout"><aside class="toc">{t}</aside><article>{h}</article></div>', "integracion.html")
+
+def build_estado():
+    h, toc, _ = md((ROOT / "00_Registro_Maestro/Owee_Auditoria_y_Hoja_de_Ruta.md").read_text(encoding="utf8"), convert=False)
+    t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n == 2)
+    page("estado.html", "Estado y mejoras", f'<div class="layout"><aside class="toc">{t}</aside><article>{h}</article></div>', "estado.html")
+
+def build_descargas():
+    D = OUT / "documentos"; D.mkdir(exist_ok=True)
+    def sz(p): return f"{p.stat().st_size/1024:.0f} KB"
+    groups = [
+        ("Especificación", ROOT / "01_Especificacion", "*.pdf"),
+        ("Diccionario", ROOT / "02_Diccionario", "*.pdf"),
+        ("Lectura y escritura", ROOT / "03_Material_Ensenanza/Lectura_Escritura", "*.pdf"),
+        ("Matemáticas", ROOT / "03_Material_Ensenanza/Matematicas", "*.pdf"),
+        ("Física", ROOT / "03_Material_Ensenanza/Fisica", "*.pdf"),
+    ]
+    sections, npdf = [], 0
+    for name, d, pat in groups:
+        links = []
+        for f in sorted(d.glob(pat)):
+            shutil.copy2(f, D / f.name); npdf += 1
+            links.append(f'<a href="documentos/{f.name}">{esc(f.stem.replace("_", " "))}<span>PDF · {sz(f)}</span></a>')
+        sections.append(f"<h3>{name}</h3><div class='dl'>{''.join(links)}</div>")
+    pro = ROOT / "03_Material_Ensenanza/Pronunciacion/Owee_Pronunciacion_1.0.pdf"
+    if pro.exists():
+        shutil.copy2(pro, D / pro.name); npdf += 1
+        sections.insert(0, f"<h3>Pronunciación</h3><div class='dl'><a href='documentos/{pro.name}'>Owee — guía de pronunciación<span>PDF · {sz(pro)}</span></a></div>")
+    qui = ROOT / "03_Material_Ensenanza/Quimica/Owee_Quimica_0.1_Borrador.pdf"
+    if qui.exists():
+        shutil.copy2(qui, D / qui.name); npdf += 1
+        sections.append(f"<h3>Química (borrador propuesto)</h3><div class='dl'><a href='documentos/{qui.name}'>Owee Química 0.1 — borrador<span>PDF · {sz(qui)}</span></a></div>")
+    lit = LIT.with_suffix(".pdf")
+    if lit.exists():
+        shutil.copy2(lit, D / lit.name)
+        sections.insert(0, f"<h3>Literatura y poesía</h3><div class='dl'><a href='documentos/{lit.name}'>Owee Literatura y Poesía<span>PDF · {sz(lit)}</span></a></div>"); npdf += 1
+    aud = ROOT / "03_Material_Ensenanza/Literatura_Poesia/audio"
+    if aud.exists():
+        (D / "audio").mkdir(exist_ok=True)
+        al = []
+        for f in sorted(aud.glob("*")):
+            shutil.copy2(f, D / "audio" / f.name)
+            al.append(f"<a href='documentos/audio/{f.name}'>{f.stem.replace('_', ' ')} ({f.suffix[1:].upper()})<span>{sz(f)}</span></a>")
+        sections.insert(0, "<h3>Canciones: bocetos de ritmo y acento (sin voz)</h3><p>Compara <em>doma bo romance</em> con <em>doma bo marcha</em>: misma letra, distinto acento musical.</p><div class='dl'>" + "".join(al) + "</div>")
+    debs = ROOT / "08_Integracion/linux/dist"
+    if debs.exists() and list(debs.glob("*.deb")):
+        (D / "linux").mkdir(exist_ok=True)
+        dl = []
+        for f in sorted(debs.glob("*.deb")):
+            shutil.copy2(f, D / "linux" / f.name); dl.append(f"<a href='documentos/linux/{f.name}'>{f.name}<span>DEB · {sz(f)}</span></a>")
+        sections.insert(0, "<h3>oweelinux: paquetes .deb (fuentes, teclado y locale)</h3><p>Ver la página de <a href='integracion.html'>integración</a>.</p><div class='dl'>" + "".join(dl) + "</div>")
+    F = OUT / "fuentes"; F.mkdir(exist_ok=True)
+    fl = []
+    for f in sorted((GM / "fonts/ttf").glob("*.ttf")) + sorted((GM / "fonts/otf").glob("*.otf")) + sorted((GM / "fonts/woff2").glob("*.woff2")):
+        shutil.copy2(f, F / f.name); fl.append(f'<a href="fuentes/{f.name}">{f.name}<span>{sz(f)}</span></a>')
+    ime = ROOT / "99_Archivo/zips_originales/fcitx5-owee-1.1-digits.zip"
+    shutil.copy2(ime, D / ime.name)
+    body = f"""<h1>Descargas</h1>
+<h2>Fuentes</h2><p><strong>Owee Sans</strong> (pantalla y documentos) y <strong>Owee School</strong> (escritura a mano). Linux: copiar los <code>.ttf</code> a <code>~/.local/share/fonts/Owee/</code> y ejecutar <code>fc-cache -f</code>.</p>
+<div class="dl">{''.join(fl)}</div>
+<h2>Teclado</h2><div class="dl"><a href="documentos/{ime.name}">fcitx5-owee 1.1 (con dígitos) — Fcitx5 / Deepin<span>ZIP · {sz(ime)}</span></a></div>
+<p>Instrucciones en el Registro Maestro, Parte IX. Alternativa sin instalar nada: <a href="pad/index.html">Owee Pad</a>.</p>
+<h2>Documentos</h2>{''.join(sections)}"""
+    page("descargas.html", "Descargas", body, "descargas.html")
+    return npdf
+
+# ---------------------------------------------------------------- main
+def main():
+    if OUT.exists(): shutil.rmtree(OUT)
+    (OUT / "assets/fonts").mkdir(parents=True)
+    for f in (GM / "package/fonts").iterdir(): shutil.copy2(f, OUT / "assets/fonts" / f.name)
+    for n in ("owee.css", "owee.js", "owee-glyph-map.json"): shutil.copy2(GM / "package" / n, OUT / "assets" / n)
+    shutil.copytree(GM / "web", OUT / "pad")
+    lit_html, lit_toc, poems = md(LIT.read_text(encoding="utf8"))
+    use = usage_index(poems)
+    npdf = build_descargas()
+    build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
+    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion()
+    build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
+    (OUT / ".nojekyll").write_text("")
+    print(f"OK {OUT}: {len(LEX)} entradas, {len(poems)} textos poeticos, {npdf} PDFs, fuente literatura: {LIT.name}")
+
+if __name__ == "__main__":
+    main()

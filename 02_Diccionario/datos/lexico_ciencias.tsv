@@ -1,0 +1,355 @@
+owee	silabas	clase	significado	estado	seccion	dominio	nota
+banu	ba-nu	raíz técnica	número	AUDITADO 2.0	Álgebra	Matemáticas	
+kedo	ke-do	raíz técnica	unidad	AUDITADO 2.0	Álgebra	Matemáticas	
+bara	ba-ra	raíz técnica	variable	AUDITADO 2.0	Álgebra	Matemáticas	
+kenu	ke-nu	raíz técnica	constante	AUDITADO 2.0	Álgebra	Matemáticas	
+reda	re-da	raíz técnica	resultado	AUDITADO 2.0	Álgebra	Matemáticas	
+telu	te-lu	raíz técnica	potencia (exponente)	AUDITADO 2.0	Álgebra	Matemáticas	
+raku	ra-ku	raíz técnica	raíz matemática	AUDITADO 2.0	Álgebra	Matemáticas	
+seka	se-ka	raíz técnica	ecuación	AUDITADO 2.0	Álgebra	Matemáticas	
+rebo	re-bo	raíz técnica	expresión matemática	AUDITADO 2.0	Álgebra	Matemáticas	
+teda	te-da	raíz técnica	término matemático	AUDITADO 2.0	Álgebra	Matemáticas	
+kofa	ko-fa	raíz técnica	coeficiente	AUDITADO 2.0	Álgebra	Matemáticas	
+daku	da-ku	raíz técnica	incógnita	AUDITADO 2.0	Álgebra	Matemáticas	
+funa	fu-na	raíz técnica	función	AUDITADO 2.0	Álgebra	Matemáticas	
+duno	du-no	raíz técnica	dominio	AUDITADO 2.0	Álgebra	Matemáticas	
+remu	re-mu	raíz técnica	rango / imagen	AUDITADO 2.0	Álgebra	Matemáticas	
+loge	lo-ge	raíz técnica	logaritmo	AUDITADO 2.0	Álgebra	Matemáticas	
+seta	se-ta	raíz técnica	conjunto matemático	AUDITADO 2.0	Álgebra	Matemáticas	
+pota	po-ta	raíz técnica	punto geométrico	AUDITADO 2.0	Geometría	Matemáticas	
+loka	lo-ka	raíz técnica	línea	AUDITADO 2.0	Geometría	Matemáticas	
+pana	pa-na	raíz técnica	plano geométrico	AUDITADO 2.0	Geometría	Matemáticas	
+dora	do-ra	raíz técnica	dimensión	AUDITADO 2.0	Geometría	Matemáticas	
+selo	se-lo	raíz técnica	círculo	AUDITADO 2.0	Geometría	Matemáticas	
+kado	ka-do	raíz técnica	lado geométrico	AUDITADO 2.0	Geometría	Matemáticas	
+sufa	su-fa	raíz técnica	superficie	AUDITADO 2.0	Geometría	Matemáticas	
+bola	bo-la	raíz técnica	volumen	AUDITADO 2.0	Geometría	Matemáticas	
+shenu	she-nu	raíz técnica	seno trigonométrico	AUDITADO 2.0	Trigonometría	Matemáticas	
+kosu	ko-su	raíz técnica	coseno	AUDITADO 2.0	Trigonometría	Matemáticas	
+taga	ta-ga	raíz técnica	tangente	AUDITADO 2.0	Trigonometría	Matemáticas	
+nufa	nu-fa	raíz técnica	infinito	AUDITADO 2.0	Cálculo	Matemáticas	
+rata	ra-ta	raíz técnica	razón / tasa	AUDITADO 2.0	Cálculo	Matemáticas	
+dera	de-ra	raíz técnica	derivada	AUDITADO 2.0	Cálculo	Matemáticas	
+koma	ko-ma	raíz técnica	acumulación	AUDITADO 2.0	Cálculo	Matemáticas	
+tega	te-ga	raíz técnica	integral	AUDITADO 2.0	Cálculo	Matemáticas	
+sora	so-ra	raíz técnica	secuencia / sucesión	AUDITADO 2.0	Cálculo	Matemáticas	
+geda	ge-da	raíz técnica	serie matemática	AUDITADO 2.0	Cálculo	Matemáticas	
+poba	po-ba	raíz técnica	población estadística	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+musa	mu-sa	raíz técnica	muestra	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+fere	fe-re	raíz técnica	frecuencia	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+baga	ba-ga	raíz técnica	media / promedio	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+neda	ne-da	raíz técnica	mediana	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+foda	fo-da	raíz técnica	moda estadística	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+desa	de-sa	raíz técnica	dispersión	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+laku	la-ku	raíz técnica	probabilidad matemática	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+ranu	ra-nu	raíz técnica	azar / aleatorio	AUDITADO 2.0	Estadística y probabilidad	Matemáticas	
+dufa	du-fa	raíz técnica	vector	AUDITADO 2.0	Vectores y matrices	Matemáticas	
+tora	to-ra	raíz técnica	dirección / orientación	AUDITADO 2.0	Vectores y matrices	Matemáticas	
+mata	ma-ta	raíz técnica	matriz	AUDITADO 2.0	Vectores y matrices	Matemáticas	
+raga	ra-ga	raíz técnica	fila	AUDITADO 2.0	Vectores y matrices	Matemáticas	
+kola	ko-la	raíz técnica	columna	AUDITADO 2.0	Vectores y matrices	Matemáticas	
+akela	a-ke-la	raíz técnica	aceleración	AUDITADO 2.0	Cinemática	Física	
+gama	ga-ma	raíz técnica	masa	AUDITADO 2.0	Dinámica	Física	
+fasa	fa-sa	raíz técnica	fuerza física	AUDITADO 2.0	Dinámica	Física	
+shaku	sha-ku	raíz técnica	inercia	AUDITADO 2.0	Dinámica	Física	
+mota	mo-ta	raíz técnica	momento lineal	AUDITADO 2.0	Dinámica	Física	
+dafu	da-fu	raíz técnica	trabajo físico	AUDITADO 2.0	Dinámica	Física	
+enu	e-nu	raíz técnica	energía	AUDITADO 2.0	Dinámica	Física	
+panu	pa-nu	raíz técnica	potencia física	AUDITADO 2.0	Dinámica	Física	
+gadu	ga-du	raíz técnica	gravedad	AUDITADO 2.0	Gravedad y rotación	Física	
+kapa	ka-pa	raíz técnica	campo físico	AUDITADO 2.0	Gravedad y rotación	Física	
+sata	sa-ta	raíz técnica	fricción	AUDITADO 2.0	Gravedad y rotación	Física	
+lema	le-ma	raíz técnica	elasticidad	AUDITADO 2.0	Gravedad y rotación	Física	
+loda	lo-da	raíz técnica	rotación	AUDITADO 2.0	Gravedad y rotación	Física	
+choma	cho-ma	raíz técnica	centro / región central	AUDITADO 2.0	Gravedad y rotación	Física	
+dena	de-na	raíz técnica	densidad	AUDITADO 2.0	Fluidos	Física	
+pesa	pe-sa	raíz técnica	presión	AUDITADO 2.0	Fluidos	Física	
+fuda	fu-da	raíz técnica	fluido	AUDITADO 2.0	Fluidos	Física	
+nosa	no-sa	raíz técnica	viscosidad	AUDITADO 2.0	Fluidos	Física	
+shome	sho-me	raíz técnica	calor (transferencia térmica)	AUDITADO 2.0	Termodinámica	Física	
+tupa	tu-pa	raíz técnica	entropía	AUDITADO 2.0	Termodinámica	Física	
+goda	go-da	raíz técnica	estado sólido	AUDITADO 2.0	Estados de la materia	Física	
+luda	lu-da	raíz técnica	estado líquido	AUDITADO 2.0	Estados de la materia	Física	
+boga	bo-ga	raíz técnica	estado gaseoso	AUDITADO 2.0	Estados de la materia	Física	
+pura	pu-ra	raíz técnica	plasma	AUDITADO 2.0	Estados de la materia	Física	
+shola	sho-la	raíz técnica	onda	AUDITADO 2.0	Ondas y óptica	Física	
+falo	fa-lo	raíz técnica	reflexión	AUDITADO 2.0	Ondas y óptica	Física	
+kuda	ku-da	raíz técnica	refracción	AUDITADO 2.0	Ondas y óptica	Física	
+chaga	cha-ga	raíz técnica	carga eléctrica	AUDITADO 2.0	Electricidad	Física	
+eleka	e-le-ka	raíz técnica	electricidad	AUDITADO 2.0	Electricidad	Física	
+kura	ku-ra	raíz técnica	corriente eléctrica	AUDITADO 2.0	Electricidad	Física	
+shelu	she-lu	raíz técnica	potencial eléctrico	AUDITADO 2.0	Electricidad	Física	
+kesa	ke-sa	raíz técnica	resistencia eléctrica	AUDITADO 2.0	Electricidad	Física	
+reku	re-ku	raíz técnica	circuito / red conectada	AUDITADO 2.0	Electricidad	Física	
+magu	ma-gu	raíz técnica	magnetismo	AUDITADO 2.0	Magnetismo	Física	
+ganu	ga-nu	raíz técnica	átomo	AUDITADO 2.0	Física atómica	Física	
+elenu	e-le-nu	raíz técnica	electrón	AUDITADO 2.0	Física atómica	Física	
+poru	po-ru	raíz técnica	protón	AUDITADO 2.0	Física atómica	Física	
+netu	ne-tu	raíz técnica	neutrón	AUDITADO 2.0	Física atómica	Física	
+shara	sha-ra	raíz técnica	radiación	AUDITADO 2.0	Física atómica	Física	
+sapa	sa-pa	raíz técnica	espacio físico	AUDITADO 2.0	Espacio-tiempo	Física	
+bomo	bo-mo	raíz técnica	bug (defecto del programa)	APROBADA	Calidad y depuración	Informática	raíz nueva (mezcla recortada de bo-sa + m-ado)
+ga-kado	ga-kado	construcción	triángulo	AUDITADO 2.0	Construcciones	Matemáticas	
+fo-kado	fo-kado	construcción	cuadrilátero	AUDITADO 2.0	Construcciones	Matemáticas	
+sa-kado	sa-kado	construcción	pentágono	AUDITADO 2.0	Construcciones	Matemáticas	
+ku-kado	ku-kado	construcción	hexágono	AUDITADO 2.0	Construcciones	Matemáticas	
+du-dora	du-dora	construcción	2D	AUDITADO 2.0	Construcciones	Matemáticas	
+ga-dora	ga-dora	construcción	3D	AUDITADO 2.0	Construcciones	Matemáticas	
+seka-rela	seka-rela	construcción	sistema de ecuaciones	AUDITADO 2.0	Construcciones	Matemáticas	
+gabu-palo	gabu-palo	construcción	porcentaje	AUDITADO 2.0	Construcciones	Matemáticas	
+pa-lo-se	pa-lo-se	construcción	mayor o igual	AUDITADO 2.0	Construcciones	Matemáticas	
+po-lo-se	po-lo-se	construcción	menor o igual	AUDITADO 2.0	Construcciones	Matemáticas	
+pose-mede	pose-mede	construcción	coordenada	AUDITADO 2.0	Construcciones	Matemáticas	
+duma-loka	duma-loka	construcción	trayectoria	AUDITADO 2.0	Construcciones	Física	
+gadu-fasa	gadu-fasa	construcción	peso / fuerza gravitatoria	AUDITADO 2.0	Construcciones	Física	
+gadu-kapa	gadu-kapa	construcción	campo gravitatorio	AUDITADO 2.0	Construcciones	Física	
+fasa-dure	fasa-dure	construcción	impulso	AUDITADO 2.0	Construcciones	Física	
+gama-choma	gama-choma	construcción	centro de masa	AUDITADO 2.0	Construcciones	Física	
+loda-rata	loda-rata	construcción	velocidad angular	AUDITADO 2.0	Construcciones	Física	
+loda-akela	loda-akela	construcción	aceleración angular	AUDITADO 2.0	Construcciones	Física	
+loda-fasa	loda-fasa	construcción	torque	AUDITADO 2.0	Construcciones	Física	
+dore-telo	dore-telo	construcción	deformación	AUDITADO 2.0	Construcciones	Física	
+fuda-duma	fuda-duma	construcción	flujo de fluido	AUDITADO 2.0	Construcciones	Física	
+fuda-go-fasa	fuda-go-fasa	construcción	empuje	AUDITADO 2.0	Construcciones	Física	
+fure-enu	fure-enu	construcción	energía térmica	AUDITADO 2.0	Construcciones	Física	
+fure-telo	fure-telo	construcción	cambio de temperatura	AUDITADO 2.0	Construcciones	Física	
+fure-se	fure-se	construcción	equilibrio térmico	AUDITADO 2.0	Construcciones	Física	
+shola-dase	shola-dase	construcción	longitud de onda	AUDITADO 2.0	Construcciones	Física	
+shola-gore	shola-gore	construcción	amplitud	AUDITADO 2.0	Construcciones	Física	
+kelo-dure	kelo-dure	construcción	periodo	AUDITADO 2.0	Construcciones	Física	
+sone-shola	sone-shola	construcción	onda sonora	AUDITADO 2.0	Construcciones	Física	
+salo-shola	salo-shola	construcción	onda luminosa	AUDITADO 2.0	Construcciones	Física	
+eleka-kapa	eleka-kapa	construcción	campo eléctrico	AUDITADO 2.0	Construcciones	Física	
+eleka-fasa	eleka-fasa	construcción	fuerza eléctrica	AUDITADO 2.0	Construcciones	Física	
+shelu-telo	shelu-telo	construcción	voltaje	AUDITADO 2.0	Construcciones	Física	
+eleka-enu	eleka-enu	construcción	energía eléctrica	AUDITADO 2.0	Construcciones	Física	
+eleka-panu	eleka-panu	construcción	potencia eléctrica	AUDITADO 2.0	Construcciones	Física	
+eleka-reku	eleka-reku	construcción	circuito eléctrico	AUDITADO 2.0	Construcciones	Física	
+chaga-pa	chaga-pa	construcción	carga positiva	AUDITADO 2.0	Construcciones	Física	
+chaga-po	chaga-po	construcción	carga negativa	AUDITADO 2.0	Construcciones	Física	
+magu-kapa	magu-kapa	construcción	campo magnético	AUDITADO 2.0	Construcciones	Física	
+magu-fasa	magu-fasa	construcción	fuerza magnética	AUDITADO 2.0	Construcciones	Física	
+eleka-magu	eleka-magu	construcción	electromagnetismo	AUDITADO 2.0	Construcciones	Física	
+eleka-magu-shola	eleka-magu-shola	construcción	onda electromagnética	AUDITADO 2.0	Construcciones	Física	
+ganu-choma	ganu-choma	construcción	núcleo atómico	AUDITADO 2.0	Construcciones	Física	
+sapa-tera	sapa-tera	construcción	espacio-tiempo	AUDITADO 2.0	Construcciones	Física	
+dase-rata	dase-rata	construcción	rapidez (distancia por tiempo)	AUDITADO 2.0	Construcciones	Física	
+faro-enu	faro-enu	construcción	fuerza energética	AUDITADO 2.0	Construcciones	Física	
+tora-telo	tora-telo	construcción	ángulo (cambio de dirección)	APROBADA	Construcciones	Matemáticas	sustituye a «ango» (fonología inválida)
+loka-mede	loka-mede	construcción	eje (línea de medida)	APROBADA	Construcciones	Matemáticas	sustituye a «akso» (fonología inválida)
+loda-loka	loda-loka	construcción	eje de rotación	AUDITADO 2.0	Construcciones	Física	
+ganu-rela	ganu-rela	construcción	enlace químico	APROBADA	Construcciones	Química	
+ganu-chaga	ganu-chaga	construcción	ion	APROBADA	Construcciones	Química	
+ganu-chaga-pa	ganu-chaga-pa	construcción	catión	APROBADA	Construcciones	Química	
+ganu-chaga-po	ganu-chaga-po	construcción	anión	APROBADA	Construcciones	Química	
+ganu-dore	ganu-dore	construcción	elemento químico (forma de átomo)	APROBADA	Construcciones	Química	
+ganu-dore-seta	ganu-dore-seta	construcción	conjunto de elementos	APROBADA	Construcciones	Química	
+ganu-banu	ganu-banu	construcción	número atómico	APROBADA	Construcciones	Química	
+ganu-gama	ganu-gama	construcción	masa atómica	APROBADA	Construcciones	Química	
+ganu-kema	ganu-kema	construcción	molécula (objeto de átomos)	APROBADA	Construcciones	Química	
+ganu-kema-gama	ganu-kema-gama	construcción	masa molecular	APROBADA	Construcciones	Química	
+gume-ko	gume-ko	construcción	mezcla (materia con materia)	APROBADA	Construcciones	Química	
+gume-rela	gume-rela	construcción	compuesto químico (materia unida)	APROBADA	Construcciones	Química	
+luda-ko	luda-ko	construcción	disolución (líquido con algo)	APROBADA	Construcciones	Química	
+suna-ko	suna-ko	construcción	disolución acuosa	APROBADA	Construcciones	Química	
+luda-ko-bema	luda-ko-bema	construcción	concentración	APROBADA	Construcciones	Química	
+poru-pema	poru-pema	construcción	ácido (dador de protones)	APROBADA	Construcciones	Química	
+poru-gura	poru-gura	construcción	base (receptor de protones)	APROBADA	Construcciones	Química	
+chaga-rela	chaga-rela	construcción	sal (unión de cargas)	APROBADA	Construcciones	Química	
+poru-telo	poru-telo	construcción	reacción ácido-base (transferencia de protones)	APROBADA	Construcciones	Química	
+poru-mede	poru-mede	construcción	escala de pH (medida de protones)	APROBADA	Construcciones	Química	
+gume-telo	gume-telo	construcción	reacción química	APROBADA	Construcciones	Química	
+gume-telo-galo	gume-telo-galo	construcción	catalizador	APROBADA	Construcciones	Química	
+gume-telo-se	gume-telo-se	construcción	equilibrio químico	APROBADA	Construcciones	Química	
+gume-telo-sape	gume-telo-sape	construcción	velocidad de reacción	APROBADA	Construcciones	Química	
+pore-gume-telo	pore-gume-telo	construcción	combustión	APROBADA	Construcciones	Química	
+elenu-pema	elenu-pema	construcción	oxidación (ceder electrones)	APROBADA	Construcciones	Química	
+elenu-gura	elenu-gura	construcción	reducción (ganar electrones)	APROBADA	Construcciones	Química	
+suma-gume	suma-gume	construcción	química orgánica (materia de la vida)	APROBADA	Construcciones	Química	
+shome-pema	shome-pema	construcción	dar calor (exotérmico)	APROBADA	Construcciones	Química	
+shome-gura	shome-gura	construcción	recibir calor (endotérmico)	APROBADA	Construcciones	Química	
+ka-kema	ka-kema	construcción	qué / cuál	APROBADA	Construcciones	Gramática 1.1	
+tera-fese	tera-fese	construcción	siempre	APROBADA	Construcciones	Gramática 1.1	
+tera-no	tera-no	construcción	nunca	APROBADA	Construcciones	Gramática 1.1	
+kema-no	kema-no	construcción	nada	APROBADA	Construcciones	Gramática 1.1	
+nara-no	nara-no	construcción	nadie	APROBADA	Construcciones	Gramática 1.1	
+nara-fese	nara-fese	construcción	todos (las personas)	APROBADA	Construcciones	Gramática 1.1	
+kema-fese	kema-fese	construcción	todo	APROBADA	Construcciones	Gramática 1.1	
+kema-le	kema-le	construcción	esto	APROBADA	Construcciones	Gramática 1.1	
+kema-lu	kema-lu	construcción	aquello	APROBADA	Construcciones	Gramática 1.1	
+kore-le	kore-le	construcción	aquí	APROBADA	Construcciones	Gramática 1.1	
+kore-lu	kore-lu	construcción	allí	APROBADA	Construcciones	Gramática 1.1	
+gore-pa-pa	gore-pa-pa	construcción	muy grande	APROBADA	Construcciones	Gramática 1.1	
+gore-po-po	gore-po-po	construcción	muy pequeño	APROBADA	Construcciones	Gramática 1.1	
+re-se	re-se	construcción	también	APROBADA	Construcciones	Gramática 1.1	
+gura-lena	gura-lena	construcción	gracias	APROBADA	Construcciones	Gramática 1.1	
+bosa-rude	bosa-rude	construcción	perdón	APROBADA	Construcciones	Gramática 1.1	
+pu-reme	pu-reme	construcción	adiós / hasta la próxima	APROBADA	Construcciones	Gramática 1.1	
+pu-kelo	pu-kelo	construcción	otra vez (otro ciclo)	APROBADA	Construcciones	Gramática 1.1	
+be-pose	be-pose	construcción	primero	APROBADA	Construcciones	Gramática 1.1	
+ga-pose	ga-pose	construcción	tercero	APROBADA	Construcciones	Gramática 1.1	
+loke-luma	loke-luma	construcción	ver	APROBADA	Construcciones	Cotidiano 0.1	
+sone-luma	sone-luma	construcción	oír	APROBADA	Construcciones	Cotidiano 0.1	
+maku-tada	maku-tada	construcción	tocar	APROBADA	Construcciones	Cotidiano 0.1	
+noke-luma	noke-luma	construcción	oler	APROBADA	Construcciones	Cotidiano 0.1	
+sabe-luma	sabe-luma	construcción	saborear	APROBADA	Construcciones	Cotidiano 0.1	
+kalu-duma	kalu-duma	construcción	caminar	APROBADA	Construcciones	Cotidiano 0.1	
+loke-suna	loke-suna	construcción	llorar	APROBADA	Construcciones	Cotidiano 0.1	
+sabe-lena	sabe-lena	construcción	reír	APROBADA	Construcciones	Cotidiano 0.1	
+sabe-sone	sabe-sone	construcción	cantar	APROBADA	Construcciones	Cotidiano 0.1	
+lena-duma	lena-duma	construcción	jugar	APROBADA	Construcciones	Cotidiano 0.1	
+nume-reka	nume-reka	construcción	pedir	APROBADA	Construcciones	Cotidiano 0.1	
+kera-nume	kera-nume	construcción	buscar	APROBADA	Construcciones	Cotidiano 0.1	
+reka-pema	reka-pema	construcción	responder	APROBADA	Construcciones	Cotidiano 0.1	
+pu-dure	pu-dure	construcción	esperar	APROBADA	Construcciones	Cotidiano 0.1	
+reka-tera	reka-tera	construcción	cuento / narración	APROBADA	Construcciones	Cotidiano 0.1	
+sena-nara	sena-nara	construcción	nombre (signo de persona)	APROBADA	Construcciones	Cotidiano 0.1	
+ruma-kuna	ruma-kuna	construcción	pájaro	APROBADA	Construcciones	Cotidiano 0.1	
+ruma-suna	ruma-suna	construcción	pez	APROBADA	Construcciones	Cotidiano 0.1	
+nelo-lena	nelo-lena	construcción	flor	APROBADA	Construcciones	Cotidiano 0.1	
+saro-kore	saro-kore	construcción	país	APROBADA	Construcciones	Cotidiano 0.1	
+sade-kelo	sade-kelo	construcción	año (ciclo del sol)	APROBADA	Construcciones	Cotidiano 0.1	
+mune-kelo	mune-kelo	construcción	mes (ciclo de la luna)	APROBADA	Construcciones	Cotidiano 0.1	
+loda-kelo	loda-kelo	construcción	día (ciclo de rotación)	APROBADA	Construcciones	Cotidiano 0.1	
+suna-duma	suna-duma	construcción	río	APROBADA	Construcciones	Cotidiano 0.1	
+suna-gore-pa	suna-gore-pa	construcción	mar	APROBADA	Construcciones	Cotidiano 0.1	
+taro-go	taro-go	construcción	montaña	APROBADA	Construcciones	Cotidiano 0.1	
+nelo-gore-pa	nelo-gore-pa	construcción	árbol	APROBADA	Construcciones	Cotidiano 0.1	
+sura-duma	sura-duma	construcción	viento	APROBADA	Construcciones	Cotidiano 0.1	
+sura-suna	sura-suna	construcción	nube	APROBADA	Construcciones	Cotidiano 0.1	
+kuna-suna	kuna-suna	construcción	lluvia	APROBADA	Construcciones	Cotidiano 0.1	
+kuna-bore	kuna-bore	construcción	noche	APROBADA	Construcciones	Cotidiano 0.1	
+kuna-salo	kuna-salo	construcción	luz del día (poético)	APROBADA	Construcciones	Cotidiano 0.1	
+mune-salo	mune-salo	construcción	luz de luna	APROBADA	Construcciones	Cotidiano 0.1	
+suma-pado	suma-pado	construcción	nacimiento	APROBADA	Construcciones	Cotidiano 0.1	
+suma-gune	suma-gune	construcción	muerte	APROBADA	Construcciones	Cotidiano 0.1	
+doma-duma	doma-duma	construcción	emoción	APROBADA	Construcciones	Cotidiano 0.1	
+doma-salo	doma-salo	construcción	alegría	APROBADA	Construcciones	Cotidiano 0.1	
+doma-bosa	doma-bosa	construcción	tristeza	APROBADA	Construcciones	Cotidiano 0.1	
+dase-pa	dase-pa	construcción	largo	APROBADA	Construcciones	Cotidiano 0.1	
+dase-po	dase-po	construcción	corto	APROBADA	Construcciones	Cotidiano 0.1	
+gora-fese	gora-fese	construcción	universo	APROBADA	Construcciones	Astronomía	
+sade-lu	sade-lu	construcción	estrella (sol lejano)	APROBADA	Construcciones	Astronomía	
+taro-duma	taro-duma	construcción	planeta (tierra que se mueve)	APROBADA	Construcciones	Astronomía	
+sade-lu-seta	sade-lu-seta	construcción	galaxia	APROBADA	Construcciones	Astronomía	
+sade-lu-sena	sade-lu-sena	construcción	constelación	APROBADA	Construcciones	Astronomía	
+sade-rela	sade-rela	construcción	sistema solar	APROBADA	Construcciones	Astronomía	
+duma-selo	duma-selo	construcción	órbita	APROBADA	Construcciones	Astronomía	
+sade-kose	sade-kose	construcción	eclipse solar	APROBADA	Construcciones	Astronomía	
+mune-kose	mune-kose	construcción	eclipse lunar	APROBADA	Construcciones	Astronomía	
+suna-goda-duma	suna-goda-duma	construcción	cometa (hielo móvil)	APROBADA	Construcciones	Astronomía	
+kuna-pore	kuna-pore	construcción	meteoro (fuego del cielo)	APROBADA	Construcciones	Astronomía	
+loke-lu	loke-lu	construcción	telescopio	APROBADA	Construcciones	Astronomía	
+loke-le	loke-le	construcción	microscopio	APROBADA	Construcciones	Astronomía	
+gadu-bore	gadu-bore	construcción	agujero negro	APROBADA	Construcciones	Astronomía	
+boga-kuna	boga-kuna	construcción	nebulosa (gas del cielo)	APROBADA	Construcciones	Astronomía	
+sura-taro	sura-taro	construcción	atmósfera	APROBADA	Construcciones	Astronomía	
+gora-pado	gora-pado	construcción	Big Bang (comienzo del universo)	APROBADA	Construcciones	Astronomía	
+pore-pado	pore-pado	construcción	Aries (fuego cardinal)	APROBADA	Construcciones	Astrología	
+taro-dure	taro-dure	construcción	Tauro (tierra fija)	APROBADA	Construcciones	Astrología	
+sura-telo	sura-telo	construcción	Géminis (aire mutable)	APROBADA	Construcciones	Astrología	
+suna-pado	suna-pado	construcción	Cáncer (agua cardinal)	APROBADA	Construcciones	Astrología	
+pore-dure	pore-dure	construcción	Leo (fuego fijo)	APROBADA	Construcciones	Astrología	
+taro-telo	taro-telo	construcción	Virgo (tierra mutable)	APROBADA	Construcciones	Astrología	
+sura-pado	sura-pado	construcción	Libra (aire cardinal)	APROBADA	Construcciones	Astrología	
+suna-dure	suna-dure	construcción	Escorpio (agua fija)	APROBADA	Construcciones	Astrología	
+pore-telo	pore-telo	construcción	Sagitario (fuego mutable)	APROBADA	Construcciones	Astrología	
+taro-pado	taro-pado	construcción	Capricornio (tierra cardinal)	APROBADA	Construcciones	Astrología	
+sura-dure	sura-dure	construcción	Acuario (aire fijo)	APROBADA	Construcciones	Astrología	
+suna-telo	suna-telo	construcción	Piscis (agua mutable)	APROBADA	Construcciones	Astrología	
+kuna-nara	kuna-nara	construcción	deidad (persona del cielo)	APROBADA	Construcciones	Mitología	
+pore-nara	pore-nara	construcción	deidad del fuego	APROBADA	Construcciones	Mitología	
+suna-nara	suna-nara	construcción	deidad del agua	APROBADA	Construcciones	Mitología	
+taro-nara	taro-nara	construcción	deidad de la tierra	APROBADA	Construcciones	Mitología	
+sura-nara	sura-nara	construcción	deidad del aire	APROBADA	Construcciones	Mitología	
+suma-nara	suma-nara	construcción	deidad de la vida	APROBADA	Construcciones	Mitología	
+sade-nara	sade-nara	construcción	deidad del sol	APROBADA	Construcciones	Mitología	
+mune-nara	mune-nara	construcción	deidad de la luna	APROBADA	Construcciones	Mitología	
+suma-gune-nara	suma-gune-nara	construcción	deidad de la muerte	APROBADA	Construcciones	Mitología	
+du-pose	du-pose	construcción	segundo	APROBADA	Construcciones	Gramática 1.1	
+fo-pose	fo-pose	construcción	cuarto	APROBADA	Construcciones	Gramática 1.1	
+sa-pose	sa-pose	construcción	quinto	APROBADA	Construcciones	Gramática 1.1	
+ku-pose	ku-pose	construcción	sexto	APROBADA	Construcciones	Gramática 1.1	
+mu-pose	mu-pose	construcción	séptimo	APROBADA	Construcciones	Gramática 1.1	
+na-pose	na-pose	construcción	octavo	APROBADA	Construcciones	Gramática 1.1	
+she-pose	she-pose	construcción	noveno	APROBADA	Construcciones	Gramática 1.1	
+sade-pado	sade-pado	construcción	este (donde nace el sol)	APROBADA	Construcciones	Astronomía	
+sade-gune	sade-gune	construcción	oeste (donde acaba el sol)	APROBADA	Construcciones	Astronomía	
+kore-go	kore-go	construcción	norte (lugar arriba)	APROBADA	Construcciones	Astronomía	
+kore-gu	kore-gu	construcción	sur (lugar abajo)	APROBADA	Construcciones	Astronomía	
+meka-mado	meka-mado	construcción	computadora (máquina de cálculo)	APROBADA	Equipos y sistema	Informática	
+meka-gume	meka-gume	construcción	hardware (materia de la máquina)	APROBADA	Equipos y sistema	Informática	
+meka-gora	meka-gora	construcción	sistema operativo (entorno de la máquina)	APROBADA	Equipos y sistema	Informática	
+loke-tabe	loke-tabe	construcción	pantalla (superficie para el ojo)	APROBADA	Equipos y sistema	Informática	
+maku-tabe	maku-tabe	construcción	teclado (superficie de la mano)	APROBADA	Equipos y sistema	Informática	
+kuna-meka	kuna-meka	construcción	nube informática (máquina del cielo)	APROBADA	Equipos y sistema	Informática	
+meka-bosa	meka-bosa	construcción	fallo del equipo (máquina rota)	APROBADA	Equipos y sistema	Informática	
+pado-telo	pado-telo	construcción	reiniciar (cambio al comienzo)	APROBADA	Equipos y sistema	Informática	
+tame-telo	tame-telo	construcción	actualizar (cambio a nuevo)	APROBADA	Equipos y sistema	Informática	
+cho-be	cho-be	construcción	bit (0-1)	APROBADA	Equipos y sistema	Informática	
+du-banu	du-banu	construcción	binario (número dos)	APROBADA	Equipos y sistema	Informática	
+mado-foma	mado-foma	construcción	programa / software (reglas de cálculo)	APROBADA	Programación	Informática	
+mode-mado	mode-mado	construcción	algoritmo (método de cálculo)	APROBADA	Programación	Informática	
+foma-beka	foma-beka	construcción	código (regla escrita)	APROBADA	Programación	Informática	
+foma-reka	foma-reka	construcción	lenguaje de programación (comunicación de reglas)	APROBADA	Programación	Informática	
+mado-nara	mado-nara	construcción	programador (persona del cálculo)	APROBADA	Programación	Informática	
+nara-kade	nara-kade	construcción	usuario (persona que usa)	APROBADA	Programación	Informática	
+kema-dore	kema-dore	construcción	clase (forma de objeto)	APROBADA	Programación	Informática	
+funa-kema	funa-kema	construcción	método de objeto (función de objeto)	APROBADA	Programación	Informática	
+doke-dore	doke-dore	construcción	tipo de dato (forma de datos)	APROBADA	Programación	Informática	
+mado-seta	mado-seta	construcción	biblioteca (conjunto de código)	APROBADA	Programación	Informática	
+mado-dare	mado-dare	construcción	ejecutar (hacer el cálculo)	APROBADA	Programación	Informática	
+beka-telo	beka-telo	construcción	compilar (cambiar la escritura)	APROBADA	Programación	Informática	
+ke-no	ke-no	construcción	si no (else)	APROBADA	Programación	Informática	
+tare-no	tare-no	construcción	falso (no verdad)	APROBADA	Programación	Informática	
+telo-tera	telo-tera	construcción	evento (cambio en el tiempo)	APROBADA	Programación	Informática	
+sape-mado	sape-mado	construcción	rendimiento (velocidad de cálculo)	APROBADA	Programación	Informática	
+doke-kopa	doke-kopa	construcción	archivo (contenedor de datos)	APROBADA	Datos	Informática	
+doke-mena	doke-mena	construcción	base de datos (memoria de datos)	APROBADA	Datos	Informática	
+mena-fena	mena-fena	construcción	guardar (poner en la memoria)	APROBADA	Datos	Informática	
+sena-rela	sena-rela	construcción	cadena de texto (signos unidos)	APROBADA	Datos	Informática	
+doke-raga	doke-raga	construcción	lista (datos en fila)	APROBADA	Datos	Informática	
+doke-mata	doke-mata	construcción	arreglo / array (datos en matriz)	APROBADA	Datos	Informática	
+nelo-doke	nelo-doke	construcción	árbol de datos (planta de datos)	APROBADA	Datos	Informática	
+rela-seta	rela-seta	construcción	grafo (conjunto de conexiones)	APROBADA	Datos	Informática	
+doke-gura	doke-gura	construcción	entrada de datos (datos que entran)	APROBADA	Datos	Informática	
+doke-pema	doke-pema	construcción	salida de datos (datos que salen)	APROBADA	Datos	Informática	
+nuse-dare	nuse-dare	construcción	borrar (hacer vacío)	APROBADA	Datos	Informática	
+dare-se	dare-se	construcción	copiar (hacer igual)	APROBADA	Datos	Informática	
+tera-dore	tera-dore	construcción	versión (forma en el tiempo)	APROBADA	Datos	Informática	
+tera-dore-mena	tera-dore-mena	construcción	control de versiones (memoria de versiones)	APROBADA	Datos	Informática	
+rela-gora	rela-gora	construcción	internet (conexión del mundo)	APROBADA	Redes y web	Informática	
+rela-kuma	rela-kuma	construcción	sitio web (hogar de conexión)	APROBADA	Redes y web	Informática	
+rela-foma	rela-foma	construcción	protocolo (reglas de conexión)	APROBADA	Redes y web	Informática	
+nado-foma	nado-foma	construcción	API (acceso con reglas)	APROBADA	Redes y web	Informática	
+meka-pema	meka-pema	construcción	servidor (máquina que da)	APROBADA	Redes y web	Informática	
+meka-gura	meka-gura	construcción	cliente (máquina que recibe)	APROBADA	Redes y web	Informática	
+reka-rela	reka-rela	construcción	correo electrónico (mensaje por conexión)	APROBADA	Redes y web	Informática	
+sena-fadu	sena-fadu	construcción	contraseña (signo de seguridad)	APROBADA	Seguridad	Informática	
+doke-kose	doke-kose	construcción	cifrar (datos cerrados)	APROBADA	Seguridad	Informática	
+doke-bure	doke-bure	construcción	descifrar (datos abiertos)	APROBADA	Seguridad	Informática	
+kare-no	kare-no	construcción	error (no corrección)	APROBADA	Calidad y depuración	Informática	
+bomo-kera	bomo-kera	construcción	depurar (obtener el bug)	APROBADA	Calidad y depuración	Informática	
+kare-mede	kare-mede	construcción	prueba / test (medir la corrección)	APROBADA	Calidad y depuración	Informática	
+meka-rena	meka-rena	construcción	inteligencia artificial (máquina que piensa)	APROBADA	Inteligencia artificial	Informática	
+meka-tase	meka-tase	construcción	aprendizaje automático (máquina que aprende)	APROBADA	Inteligencia artificial	Informática	
+doke-fela	doke-fela	construcción	datos de entrenamiento (datos que enseñan)	APROBADA	Inteligencia artificial	Informática	
+foma-fena	foma-fena	construcción	configuración (poner reglas)	VERIFICADA	Menús y sistema	Interfaz	
+meka-gune	meka-gune	construcción	apagar (fin de la máquina)	VERIFICADA	Menús y sistema	Interfaz	
+meka-sule	meka-sule	construcción	suspender (la máquina duerme)	VERIFICADA	Menús y sistema	Interfaz	
+nado-bure	nado-bure	construcción	iniciar sesión (abrir acceso)	VERIFICADA	Menús y sistema	Interfaz	
+nado-kose	nado-kose	construcción	cerrar sesión (cerrar acceso)	VERIFICADA	Menús y sistema	Interfaz	
+saku-reka	saku-reka	construcción	advertencia (mensaje de alerta)	VERIFICADA	Menús y sistema	Interfaz	
+seta-nado	seta-nado	construcción	menú (conjunto de accesos)	VERIFICADA	Elementos	Interfaz	
+loke-kopa	loke-kopa	construcción	ventana (contenedor para el ojo)	VERIFICADA	Elementos	Interfaz	
+tada-sena	tada-sena	construcción	botón (signo de contacto)	VERIFICADA	Elementos	Interfaz	
+dabo-kopa	dabo-kopa	construcción	papelera (contenedor de suciedad)	VERIFICADA	Elementos	Interfaz	
+meka-tabe	meka-tabe	construcción	escritorio (superficie de la máquina)	VERIFICADA	Elementos	Interfaz	
+enu-kopa	enu-kopa	construcción	batería (contenedor de energía)	VERIFICADA	Equipo	Interfaz	
+sone-gore	sone-gore	construcción	volumen de sonido (tamaño del sonido)	VERIFICADA	Equipo	Interfaz	
+salo-gore	salo-gore	construcción	brillo (tamaño de la luz)	VERIFICADA	Equipo	Interfaz	
+rela-sura	rela-sura	construcción	red inalámbrica (conexión del aire)	VERIFICADA	Equipo	Interfaz	
+beka-meka	beka-meka	construcción	impresora (máquina de escritura)	VERIFICADA	Equipo	Interfaz	
+pe-telo	pe-telo	construcción	deshacer (cambio al pasado)	VERIFICADA	Acciones	Interfaz	
+pu-telo	pu-telo	construcción	rehacer (cambio al futuro)	VERIFICADA	Acciones	Interfaz	
+tera-sena	tera-sena	construcción	fecha y hora (signo de tiempo)	VERIFICADA	Acciones	Interfaz	

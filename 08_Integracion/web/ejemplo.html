@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Owee i18n — ejemplo</title>
+<!-- 1) Fuentes y parser: copia la carpeta package/ del Glyph Master 3.3 como ./owee-script/ -->
+<link rel="stylesheet" href="owee-script/owee.css">
+<style>body{font:16px/1.6 system-ui;margin:2rem;max-width:42rem}button{font:inherit;padding:.4rem .9rem;margin:.2rem}
+button[aria-pressed=true]{background:#2F6FB0;color:#fff}.owee{font-size:1.5em}</style></head>
+<body>
+<p><button data-owee-set="es">Español</button><button data-owee-set="owee">Owee</button><button data-owee-set="script">Owee Script</button></p>
+<h1 data-i18n="Settings">Configuración</h1>
+<p><button data-i18n="Open">Abrir</button><button data-i18n="Save">Guardar</button><button data-i18n="Close">Cerrar</button>
+<button data-i18n="Cancel">Cancelar</button><button data-i18n="OK">Aceptar</button></p>
+<p><span data-i18n="User">Usuario</span> · <span data-i18n="Password">Contraseña</span> · <span data-i18n="Network">Red</span></p>
+<!-- 2) Orden de carga: diccionario, parser, modulo -->
+<script src="qow.js"></script><script src="owee-script/owee.js"></script><script src="owee-i18n.js"></script>
+<script>OweeI18n.init({ default: "es" })</script>
+</body></html>

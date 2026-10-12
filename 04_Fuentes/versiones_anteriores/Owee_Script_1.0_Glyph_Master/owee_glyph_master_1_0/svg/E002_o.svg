@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <title>OWEE_SYL_O U+E002</title>
+  <g fill="none" stroke="black" stroke-width="58" stroke-linecap="round" stroke-linejoin="round">
+<path d="M500,400 L600,500" />
+<path d="M600,500 L500,600" />
+<path d="M500,600 L400,500" />
+<path d="M400,500 L500,400" />
+<path d="M600,500 L750,500" />
+<path d="M715,470 L750,500" />
+<path d="M715,530 L750,500" />
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+# Rellena una nota por silaba (C4 D4 F#4 Bb3 ...). Opcional: duracion en tiempos (negras), p. ej. D4:1.5
+# ▲ = silaba acentuada (cae en la primera silaba de cada palabra). No borres ni agregues lineas.
+# pado, mune pe mora
+# ▲pa do ▲mu ne pe ▲mo ra
+? ? ? ? ? ? ?
+# mune kuma kuna bo
+# ▲mu ne ▲ku ma ▲ku na bo
+? ? ? ? ? ? ?
+# mune naku, sade-lu
+# ▲mu ne ▲na ku ▲sa de lu
+? ? ? ? ? ? ?
+# sade-lu salo lena
+# ▲sa de lu ▲sa lo ▲le na
+? ? ? ? ? ? ?
+# kuna-bore, ruma-kuna duma
+# ▲ku na ▲bo re ▲ru ma ▲ku na ▲du ma
+? ? ? ? ? ? ? ? ? ?
+# ruma-kuna sule pema
+# ▲ru ma ▲ku na ▲su le ▲pe ma
+? ? ? ? ? ? ? ?
+# naku sule
+# ▲na ku ▲su le
+? ? ? ?
+# mune malo
+# ▲mu ne ▲ma lo
+? ? ? ?
+# naku, sule, sule
+# ▲na ku ▲su le ▲su le
+? ? ? ? ? ?
+# mune lore
+# ▲mu ne ▲lo re
+? ? ? ?
+# kuma bo, kuma bo
+# ▲ku ma bo ▲ku ma bo
+? ? ? ? ? ?
+# fadu mora
+# ▲fa du ▲mo ra
+? ? ? ?

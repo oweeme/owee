@@ -1,0 +1,27 @@
+/* owee.css — añade Owee Script a cualquier página web.
+   <link rel="stylesheet" href="owee.css">  y  <span class="owee">…</span>  */
+@font-face {
+  font-family: 'Owee Sans';
+  src:
+    url('fonts/OweeSans-Regular.woff2') format('woff2'),
+    url('fonts/OweeSans-Regular.woff') format('woff'),
+    url('fonts/OweeSans-Regular.ttf') format('truetype');
+  font-display: swap;
+  unicode-range: U+0020, U+00A0, U+E000-E049;
+}
+@font-face {
+  font-family: 'Owee School';
+  src:
+    url('fonts/OweeSchool-Regular.woff2') format('woff2'),
+    url('fonts/OweeSchool-Regular.woff') format('woff'),
+    url('fonts/OweeSchool-Regular.ttf') format('truetype');
+  font-display: swap;
+  unicode-range: U+0020, U+00A0, U+E000-E049;
+}
+.owee,
+.owee-sans {
+  font-family: 'Owee Sans', system-ui, sans-serif;
+}
+.owee-school {
+  font-family: 'Owee School', system-ui, sans-serif;
+}

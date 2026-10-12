@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<title>Owee fe</title>
+<g fill="none" stroke="black" stroke-width="82" stroke-linecap="round" stroke-linejoin="round">
+<line x1="300" y1="650" x2="700" y2="650" />
+<line x1="350" y1="650" x2="350" y2="300" />
+<line x1="350" y1="480" x2="620" y2="480" />
+<line x1="300" y1="500" x2="130" y2="500" />
+<line x1="130" y1="500" x2="220" y2="570" />
+<line x1="130" y1="500" x2="220" y2="430" />
+</g></svg>

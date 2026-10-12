@@ -1,0 +1,4 @@
+# Dependencias para reconstruir las fuentes (04_Fuentes/.../build_glyph_master.py)
+fonttools>=4.50
+skia-pathops>=0.8
+brotli>=1.1

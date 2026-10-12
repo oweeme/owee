@@ -1,0 +1,19 @@
+{
+  "name": "@oweeme/owee-script",
+  "version": "3.3.0",
+  "private": true,
+  "description": "Owee Script para la web: fuentes Owee Sans / Owee School y parser Roman <-> Owee.",
+  "type": "module",
+  "main": "owee.ts",
+  "types": "owee.ts",
+  "exports": {
+    ".": "./owee.ts",
+    "./owee.css": "./owee.css",
+    "./owee.js": "./owee.js",
+    "./owee-glyph-map.json": "./owee-glyph-map.json",
+    "./fonts/*": "./fonts/*"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

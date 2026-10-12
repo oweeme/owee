@@ -1,0 +1,428 @@
+{
+  "name": "Owee Script 1.0 Glyph Master",
+  "version": "1.0",
+  "pua_start": "U+E000",
+  "pua_end": "U+E03B",
+  "units": [
+    {
+      "index": 0,
+      "syllable": "a",
+      "id": "OWEE_SYL_A",
+      "codepoint": "U+E000",
+      "hex": "E000"
+    },
+    {
+      "index": 1,
+      "syllable": "e",
+      "id": "OWEE_SYL_E",
+      "codepoint": "U+E001",
+      "hex": "E001"
+    },
+    {
+      "index": 2,
+      "syllable": "o",
+      "id": "OWEE_SYL_O",
+      "codepoint": "U+E002",
+      "hex": "E002"
+    },
+    {
+      "index": 3,
+      "syllable": "u",
+      "id": "OWEE_SYL_U",
+      "codepoint": "U+E003",
+      "hex": "E003"
+    },
+    {
+      "index": 4,
+      "syllable": "pa",
+      "id": "OWEE_SYL_PA",
+      "codepoint": "U+E004",
+      "hex": "E004"
+    },
+    {
+      "index": 5,
+      "syllable": "pe",
+      "id": "OWEE_SYL_PE",
+      "codepoint": "U+E005",
+      "hex": "E005"
+    },
+    {
+      "index": 6,
+      "syllable": "po",
+      "id": "OWEE_SYL_PO",
+      "codepoint": "U+E006",
+      "hex": "E006"
+    },
+    {
+      "index": 7,
+      "syllable": "pu",
+      "id": "OWEE_SYL_PU",
+      "codepoint": "U+E007",
+      "hex": "E007"
+    },
+    {
+      "index": 8,
+      "syllable": "ba",
+      "id": "OWEE_SYL_BA",
+      "codepoint": "U+E008",
+      "hex": "E008"
+    },
+    {
+      "index": 9,
+      "syllable": "be",
+      "id": "OWEE_SYL_BE",
+      "codepoint": "U+E009",
+      "hex": "E009"
+    },
+    {
+      "index": 10,
+      "syllable": "bo",
+      "id": "OWEE_SYL_BO",
+      "codepoint": "U+E00A",
+      "hex": "E00A"
+    },
+    {
+      "index": 11,
+      "syllable": "bu",
+      "id": "OWEE_SYL_BU",
+      "codepoint": "U+E00B",
+      "hex": "E00B"
+    },
+    {
+      "index": 12,
+      "syllable": "ta",
+      "id": "OWEE_SYL_TA",
+      "codepoint": "U+E00C",
+      "hex": "E00C"
+    },
+    {
+      "index": 13,
+      "syllable": "te",
+      "id": "OWEE_SYL_TE",
+      "codepoint": "U+E00D",
+      "hex": "E00D"
+    },
+    {
+      "index": 14,
+      "syllable": "to",
+      "id": "OWEE_SYL_TO",
+      "codepoint": "U+E00E",
+      "hex": "E00E"
+    },
+    {
+      "index": 15,
+      "syllable": "tu",
+      "id": "OWEE_SYL_TU",
+      "codepoint": "U+E00F",
+      "hex": "E00F"
+    },
+    {
+      "index": 16,
+      "syllable": "da",
+      "id": "OWEE_SYL_DA",
+      "codepoint": "U+E010",
+      "hex": "E010"
+    },
+    {
+      "index": 17,
+      "syllable": "de",
+      "id": "OWEE_SYL_DE",
+      "codepoint": "U+E011",
+      "hex": "E011"
+    },
+    {
+      "index": 18,
+      "syllable": "do",
+      "id": "OWEE_SYL_DO",
+      "codepoint": "U+E012",
+      "hex": "E012"
+    },
+    {
+      "index": 19,
+      "syllable": "du",
+      "id": "OWEE_SYL_DU",
+      "codepoint": "U+E013",
+      "hex": "E013"
+    },
+    {
+      "index": 20,
+      "syllable": "ka",
+      "id": "OWEE_SYL_KA",
+      "codepoint": "U+E014",
+      "hex": "E014"
+    },
+    {
+      "index": 21,
+      "syllable": "ke",
+      "id": "OWEE_SYL_KE",
+      "codepoint": "U+E015",
+      "hex": "E015"
+    },
+    {
+      "index": 22,
+      "syllable": "ko",
+      "id": "OWEE_SYL_KO",
+      "codepoint": "U+E016",
+      "hex": "E016"
+    },
+    {
+      "index": 23,
+      "syllable": "ku",
+      "id": "OWEE_SYL_KU",
+      "codepoint": "U+E017",
+      "hex": "E017"
+    },
+    {
+      "index": 24,
+      "syllable": "ga",
+      "id": "OWEE_SYL_GA",
+      "codepoint": "U+E018",
+      "hex": "E018"
+    },
+    {
+      "index": 25,
+      "syllable": "ge",
+      "id": "OWEE_SYL_GE",
+      "codepoint": "U+E019",
+      "hex": "E019"
+    },
+    {
+      "index": 26,
+      "syllable": "go",
+      "id": "OWEE_SYL_GO",
+      "codepoint": "U+E01A",
+      "hex": "E01A"
+    },
+    {
+      "index": 27,
+      "syllable": "gu",
+      "id": "OWEE_SYL_GU",
+      "codepoint": "U+E01B",
+      "hex": "E01B"
+    },
+    {
+      "index": 28,
+      "syllable": "fa",
+      "id": "OWEE_SYL_FA",
+      "codepoint": "U+E01C",
+      "hex": "E01C"
+    },
+    {
+      "index": 29,
+      "syllable": "fe",
+      "id": "OWEE_SYL_FE",
+      "codepoint": "U+E01D",
+      "hex": "E01D"
+    },
+    {
+      "index": 30,
+      "syllable": "fo",
+      "id": "OWEE_SYL_FO",
+      "codepoint": "U+E01E",
+      "hex": "E01E"
+    },
+    {
+      "index": 31,
+      "syllable": "fu",
+      "id": "OWEE_SYL_FU",
+      "codepoint": "U+E01F",
+      "hex": "E01F"
+    },
+    {
+      "index": 32,
+      "syllable": "sa",
+      "id": "OWEE_SYL_SA",
+      "codepoint": "U+E020",
+      "hex": "E020"
+    },
+    {
+      "index": 33,
+      "syllable": "se",
+      "id": "OWEE_SYL_SE",
+      "codepoint": "U+E021",
+      "hex": "E021"
+    },
+    {
+      "index": 34,
+      "syllable": "so",
+      "id": "OWEE_SYL_SO",
+      "codepoint": "U+E022",
+      "hex": "E022"
+    },
+    {
+      "index": 35,
+      "syllable": "su",
+      "id": "OWEE_SYL_SU",
+      "codepoint": "U+E023",
+      "hex": "E023"
+    },
+    {
+      "index": 36,
+      "syllable": "ma",
+      "id": "OWEE_SYL_MA",
+      "codepoint": "U+E024",
+      "hex": "E024"
+    },
+    {
+      "index": 37,
+      "syllable": "me",
+      "id": "OWEE_SYL_ME",
+      "codepoint": "U+E025",
+      "hex": "E025"
+    },
+    {
+      "index": 38,
+      "syllable": "mo",
+      "id": "OWEE_SYL_MO",
+      "codepoint": "U+E026",
+      "hex": "E026"
+    },
+    {
+      "index": 39,
+      "syllable": "mu",
+      "id": "OWEE_SYL_MU",
+      "codepoint": "U+E027",
+      "hex": "E027"
+    },
+    {
+      "index": 40,
+      "syllable": "na",
+      "id": "OWEE_SYL_NA",
+      "codepoint": "U+E028",
+      "hex": "E028"
+    },
+    {
+      "index": 41,
+      "syllable": "ne",
+      "id": "OWEE_SYL_NE",
+      "codepoint": "U+E029",
+      "hex": "E029"
+    },
+    {
+      "index": 42,
+      "syllable": "no",
+      "id": "OWEE_SYL_NO",
+      "codepoint": "U+E02A",
+      "hex": "E02A"
+    },
+    {
+      "index": 43,
+      "syllable": "nu",
+      "id": "OWEE_SYL_NU",
+      "codepoint": "U+E02B",
+      "hex": "E02B"
+    },
+    {
+      "index": 44,
+      "syllable": "la",
+      "id": "OWEE_SYL_LA",
+      "codepoint": "U+E02C",
+      "hex": "E02C"
+    },
+    {
+      "index": 45,
+      "syllable": "le",
+      "id": "OWEE_SYL_LE",
+      "codepoint": "U+E02D",
+      "hex": "E02D"
+    },
+    {
+      "index": 46,
+      "syllable": "lo",
+      "id": "OWEE_SYL_LO",
+      "codepoint": "U+E02E",
+      "hex": "E02E"
+    },
+    {
+      "index": 47,
+      "syllable": "lu",
+      "id": "OWEE_SYL_LU",
+      "codepoint": "U+E02F",
+      "hex": "E02F"
+    },
+    {
+      "index": 48,
+      "syllable": "ra",
+      "id": "OWEE_SYL_RA",
+      "codepoint": "U+E030",
+      "hex": "E030"
+    },
+    {
+      "index": 49,
+      "syllable": "re",
+      "id": "OWEE_SYL_RE",
+      "codepoint": "U+E031",
+      "hex": "E031"
+    },
+    {
+      "index": 50,
+      "syllable": "ro",
+      "id": "OWEE_SYL_RO",
+      "codepoint": "U+E032",
+      "hex": "E032"
+    },
+    {
+      "index": 51,
+      "syllable": "ru",
+      "id": "OWEE_SYL_RU",
+      "codepoint": "U+E033",
+      "hex": "E033"
+    },
+    {
+      "index": 52,
+      "syllable": "sha",
+      "id": "OWEE_SYL_SHA",
+      "codepoint": "U+E034",
+      "hex": "E034"
+    },
+    {
+      "index": 53,
+      "syllable": "she",
+      "id": "OWEE_SYL_SHE",
+      "codepoint": "U+E035",
+      "hex": "E035"
+    },
+    {
+      "index": 54,
+      "syllable": "sho",
+      "id": "OWEE_SYL_SHO",
+      "codepoint": "U+E036",
+      "hex": "E036"
+    },
+    {
+      "index": 55,
+      "syllable": "shu",
+      "id": "OWEE_SYL_SHU",
+      "codepoint": "U+E037",
+      "hex": "E037"
+    },
+    {
+      "index": 56,
+      "syllable": "cha",
+      "id": "OWEE_SYL_CHA",
+      "codepoint": "U+E038",
+      "hex": "E038"
+    },
+    {
+      "index": 57,
+      "syllable": "che",
+      "id": "OWEE_SYL_CHE",
+      "codepoint": "U+E039",
+      "hex": "E039"
+    },
+    {
+      "index": 58,
+      "syllable": "cho",
+      "id": "OWEE_SYL_CHO",
+      "codepoint": "U+E03A",
+      "hex": "E03A"
+    },
+    {
+      "index": 59,
+      "syllable": "chu",
+      "id": "OWEE_SYL_CHU",
+      "codepoint": "U+E03B",
+      "hex": "E03B"
+    }
+  ]
+}

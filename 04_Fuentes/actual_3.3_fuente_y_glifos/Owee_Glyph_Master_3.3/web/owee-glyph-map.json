@@ -1,0 +1,456 @@
+{
+ "name": "Owee Glyph Master",
+ "version": "3.3",
+ "ranges": {
+  "syllables": "U+E000..U+E03B",
+  "marks": "U+E03C..U+E03D",
+  "reserved": "U+E03E..U+E03F",
+  "digits": "U+E040..U+E049"
+ },
+ "units": [
+  {
+   "roman": "a",
+   "id": "OWEE_SYL_A",
+   "codepoint": "U+E000",
+   "kind": "vowel"
+  },
+  {
+   "roman": "e",
+   "id": "OWEE_SYL_E",
+   "codepoint": "U+E001",
+   "kind": "vowel"
+  },
+  {
+   "roman": "o",
+   "id": "OWEE_SYL_O",
+   "codepoint": "U+E002",
+   "kind": "vowel"
+  },
+  {
+   "roman": "u",
+   "id": "OWEE_SYL_U",
+   "codepoint": "U+E003",
+   "kind": "vowel"
+  },
+  {
+   "roman": "pa",
+   "id": "OWEE_SYL_PA",
+   "codepoint": "U+E004",
+   "kind": "syllable"
+  },
+  {
+   "roman": "pe",
+   "id": "OWEE_SYL_PE",
+   "codepoint": "U+E005",
+   "kind": "syllable"
+  },
+  {
+   "roman": "po",
+   "id": "OWEE_SYL_PO",
+   "codepoint": "U+E006",
+   "kind": "syllable"
+  },
+  {
+   "roman": "pu",
+   "id": "OWEE_SYL_PU",
+   "codepoint": "U+E007",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ba",
+   "id": "OWEE_SYL_BA",
+   "codepoint": "U+E008",
+   "kind": "syllable"
+  },
+  {
+   "roman": "be",
+   "id": "OWEE_SYL_BE",
+   "codepoint": "U+E009",
+   "kind": "syllable"
+  },
+  {
+   "roman": "bo",
+   "id": "OWEE_SYL_BO",
+   "codepoint": "U+E00A",
+   "kind": "syllable"
+  },
+  {
+   "roman": "bu",
+   "id": "OWEE_SYL_BU",
+   "codepoint": "U+E00B",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ta",
+   "id": "OWEE_SYL_TA",
+   "codepoint": "U+E00C",
+   "kind": "syllable"
+  },
+  {
+   "roman": "te",
+   "id": "OWEE_SYL_TE",
+   "codepoint": "U+E00D",
+   "kind": "syllable"
+  },
+  {
+   "roman": "to",
+   "id": "OWEE_SYL_TO",
+   "codepoint": "U+E00E",
+   "kind": "syllable"
+  },
+  {
+   "roman": "tu",
+   "id": "OWEE_SYL_TU",
+   "codepoint": "U+E00F",
+   "kind": "syllable"
+  },
+  {
+   "roman": "da",
+   "id": "OWEE_SYL_DA",
+   "codepoint": "U+E010",
+   "kind": "syllable"
+  },
+  {
+   "roman": "de",
+   "id": "OWEE_SYL_DE",
+   "codepoint": "U+E011",
+   "kind": "syllable"
+  },
+  {
+   "roman": "do",
+   "id": "OWEE_SYL_DO",
+   "codepoint": "U+E012",
+   "kind": "syllable"
+  },
+  {
+   "roman": "du",
+   "id": "OWEE_SYL_DU",
+   "codepoint": "U+E013",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ka",
+   "id": "OWEE_SYL_KA",
+   "codepoint": "U+E014",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ke",
+   "id": "OWEE_SYL_KE",
+   "codepoint": "U+E015",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ko",
+   "id": "OWEE_SYL_KO",
+   "codepoint": "U+E016",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ku",
+   "id": "OWEE_SYL_KU",
+   "codepoint": "U+E017",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ga",
+   "id": "OWEE_SYL_GA",
+   "codepoint": "U+E018",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ge",
+   "id": "OWEE_SYL_GE",
+   "codepoint": "U+E019",
+   "kind": "syllable"
+  },
+  {
+   "roman": "go",
+   "id": "OWEE_SYL_GO",
+   "codepoint": "U+E01A",
+   "kind": "syllable"
+  },
+  {
+   "roman": "gu",
+   "id": "OWEE_SYL_GU",
+   "codepoint": "U+E01B",
+   "kind": "syllable"
+  },
+  {
+   "roman": "fa",
+   "id": "OWEE_SYL_FA",
+   "codepoint": "U+E01C",
+   "kind": "syllable"
+  },
+  {
+   "roman": "fe",
+   "id": "OWEE_SYL_FE",
+   "codepoint": "U+E01D",
+   "kind": "syllable"
+  },
+  {
+   "roman": "fo",
+   "id": "OWEE_SYL_FO",
+   "codepoint": "U+E01E",
+   "kind": "syllable"
+  },
+  {
+   "roman": "fu",
+   "id": "OWEE_SYL_FU",
+   "codepoint": "U+E01F",
+   "kind": "syllable"
+  },
+  {
+   "roman": "sa",
+   "id": "OWEE_SYL_SA",
+   "codepoint": "U+E020",
+   "kind": "syllable"
+  },
+  {
+   "roman": "se",
+   "id": "OWEE_SYL_SE",
+   "codepoint": "U+E021",
+   "kind": "syllable"
+  },
+  {
+   "roman": "so",
+   "id": "OWEE_SYL_SO",
+   "codepoint": "U+E022",
+   "kind": "syllable"
+  },
+  {
+   "roman": "su",
+   "id": "OWEE_SYL_SU",
+   "codepoint": "U+E023",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ma",
+   "id": "OWEE_SYL_MA",
+   "codepoint": "U+E024",
+   "kind": "syllable"
+  },
+  {
+   "roman": "me",
+   "id": "OWEE_SYL_ME",
+   "codepoint": "U+E025",
+   "kind": "syllable"
+  },
+  {
+   "roman": "mo",
+   "id": "OWEE_SYL_MO",
+   "codepoint": "U+E026",
+   "kind": "syllable"
+  },
+  {
+   "roman": "mu",
+   "id": "OWEE_SYL_MU",
+   "codepoint": "U+E027",
+   "kind": "syllable"
+  },
+  {
+   "roman": "na",
+   "id": "OWEE_SYL_NA",
+   "codepoint": "U+E028",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ne",
+   "id": "OWEE_SYL_NE",
+   "codepoint": "U+E029",
+   "kind": "syllable"
+  },
+  {
+   "roman": "no",
+   "id": "OWEE_SYL_NO",
+   "codepoint": "U+E02A",
+   "kind": "syllable"
+  },
+  {
+   "roman": "nu",
+   "id": "OWEE_SYL_NU",
+   "codepoint": "U+E02B",
+   "kind": "syllable"
+  },
+  {
+   "roman": "la",
+   "id": "OWEE_SYL_LA",
+   "codepoint": "U+E02C",
+   "kind": "syllable"
+  },
+  {
+   "roman": "le",
+   "id": "OWEE_SYL_LE",
+   "codepoint": "U+E02D",
+   "kind": "syllable"
+  },
+  {
+   "roman": "lo",
+   "id": "OWEE_SYL_LO",
+   "codepoint": "U+E02E",
+   "kind": "syllable"
+  },
+  {
+   "roman": "lu",
+   "id": "OWEE_SYL_LU",
+   "codepoint": "U+E02F",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ra",
+   "id": "OWEE_SYL_RA",
+   "codepoint": "U+E030",
+   "kind": "syllable"
+  },
+  {
+   "roman": "re",
+   "id": "OWEE_SYL_RE",
+   "codepoint": "U+E031",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ro",
+   "id": "OWEE_SYL_RO",
+   "codepoint": "U+E032",
+   "kind": "syllable"
+  },
+  {
+   "roman": "ru",
+   "id": "OWEE_SYL_RU",
+   "codepoint": "U+E033",
+   "kind": "syllable"
+  },
+  {
+   "roman": "sha",
+   "id": "OWEE_SYL_SHA",
+   "codepoint": "U+E034",
+   "kind": "syllable"
+  },
+  {
+   "roman": "she",
+   "id": "OWEE_SYL_SHE",
+   "codepoint": "U+E035",
+   "kind": "syllable"
+  },
+  {
+   "roman": "sho",
+   "id": "OWEE_SYL_SHO",
+   "codepoint": "U+E036",
+   "kind": "syllable"
+  },
+  {
+   "roman": "shu",
+   "id": "OWEE_SYL_SHU",
+   "codepoint": "U+E037",
+   "kind": "syllable"
+  },
+  {
+   "roman": "cha",
+   "id": "OWEE_SYL_CHA",
+   "codepoint": "U+E038",
+   "kind": "syllable"
+  },
+  {
+   "roman": "che",
+   "id": "OWEE_SYL_CHE",
+   "codepoint": "U+E039",
+   "kind": "syllable"
+  },
+  {
+   "roman": "cho",
+   "id": "OWEE_SYL_CHO",
+   "codepoint": "U+E03A",
+   "kind": "syllable"
+  },
+  {
+   "roman": "chu",
+   "id": "OWEE_SYL_CHU",
+   "codepoint": "U+E03B",
+   "kind": "syllable"
+  },
+  {
+   "roman": "-",
+   "id": "OWEE_MARK_JOIN",
+   "codepoint": "U+E03C",
+   "kind": "mark",
+   "note": "nexo de compuesto: el guion de sade-kelo"
+  },
+  {
+   "roman": "^",
+   "id": "OWEE_MARK_NAME",
+   "codepoint": "U+E03D",
+   "kind": "mark",
+   "note": "marca de nombre propio; en romano, la inicial mayúscula (Ana)"
+  },
+  {
+   "roman": "0",
+   "id": "OWEE_DIGIT_0",
+   "codepoint": "U+E040",
+   "kind": "digit",
+   "reading": "cho"
+  },
+  {
+   "roman": "1",
+   "id": "OWEE_DIGIT_1",
+   "codepoint": "U+E041",
+   "kind": "digit",
+   "reading": "be"
+  },
+  {
+   "roman": "2",
+   "id": "OWEE_DIGIT_2",
+   "codepoint": "U+E042",
+   "kind": "digit",
+   "reading": "du"
+  },
+  {
+   "roman": "3",
+   "id": "OWEE_DIGIT_3",
+   "codepoint": "U+E043",
+   "kind": "digit",
+   "reading": "ga"
+  },
+  {
+   "roman": "4",
+   "id": "OWEE_DIGIT_4",
+   "codepoint": "U+E044",
+   "kind": "digit",
+   "reading": "fo"
+  },
+  {
+   "roman": "5",
+   "id": "OWEE_DIGIT_5",
+   "codepoint": "U+E045",
+   "kind": "digit",
+   "reading": "sa"
+  },
+  {
+   "roman": "6",
+   "id": "OWEE_DIGIT_6",
+   "codepoint": "U+E046",
+   "kind": "digit",
+   "reading": "ku"
+  },
+  {
+   "roman": "7",
+   "id": "OWEE_DIGIT_7",
+   "codepoint": "U+E047",
+   "kind": "digit",
+   "reading": "mu"
+  },
+  {
+   "roman": "8",
+   "id": "OWEE_DIGIT_8",
+   "codepoint": "U+E048",
+   "kind": "digit",
+   "reading": "na"
+  },
+  {
+   "roman": "9",
+   "id": "OWEE_DIGIT_9",
+   "codepoint": "U+E049",
+   "kind": "digit",
+   "reading": "she"
+  }
+ ]
+}

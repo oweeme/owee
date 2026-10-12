@@ -1,0 +1,14 @@
+{
+  "name": "Owee Pad",
+  "short_name": "Owee",
+  "description": "Escribe Roman Owee y obtén Owee Script (Owee Sans / Owee School).",
+  "lang": "es",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F3F5F7",
+  "theme_color": "#2F6FB0",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "version": "2.0",
+  "syllables": {
+    "a": "U+E000",
+    "e": "U+E001",
+    "o": "U+E002",
+    "u": "U+E003",
+    "pa": "U+E004",
+    "pe": "U+E005",
+    "po": "U+E006",
+    "pu": "U+E007",
+    "ba": "U+E008",
+    "be": "U+E009",
+    "bo": "U+E00A",
+    "bu": "U+E00B",
+    "ta": "U+E00C",
+    "te": "U+E00D",
+    "to": "U+E00E",
+    "tu": "U+E00F",
+    "da": "U+E010",
+    "de": "U+E011",
+    "do": "U+E012",
+    "du": "U+E013",
+    "ka": "U+E014",
+    "ke": "U+E015",
+    "ko": "U+E016",
+    "ku": "U+E017",
+    "ga": "U+E018",
+    "ge": "U+E019",
+    "go": "U+E01A",
+    "gu": "U+E01B",
+    "fa": "U+E01C",
+    "fe": "U+E01D",
+    "fo": "U+E01E",
+    "fu": "U+E01F",
+    "sa": "U+E020",
+    "se": "U+E021",
+    "so": "U+E022",
+    "su": "U+E023",
+    "ma": "U+E024",
+    "me": "U+E025",
+    "mo": "U+E026",
+    "mu": "U+E027",
+    "na": "U+E028",
+    "ne": "U+E029",
+    "no": "U+E02A",
+    "nu": "U+E02B",
+    "la": "U+E02C",
+    "le": "U+E02D",
+    "lo": "U+E02E",
+    "lu": "U+E02F",
+    "ra": "U+E030",
+    "re": "U+E031",
+    "ro": "U+E032",
+    "ru": "U+E033",
+    "sha": "U+E034",
+    "she": "U+E035",
+    "sho": "U+E036",
+    "shu": "U+E037",
+    "cha": "U+E038",
+    "che": "U+E039",
+    "cho": "U+E03A",
+    "chu": "U+E03B"
+  },
+  "digits": {
+    "0": {
+      "reading": "cho",
+      "codepoint": "U+E040"
+    },
+    "1": {
+      "reading": "be",
+      "codepoint": "U+E041"
+    },
+    "2": {
+      "reading": "du",
+      "codepoint": "U+E042"
+    },
+    "3": {
+      "reading": "ga",
+      "codepoint": "U+E043"
+    },
+    "4": {
+      "reading": "fo",
+      "codepoint": "U+E044"
+    },
+    "5": {
+      "reading": "sa",
+      "codepoint": "U+E045"
+    },
+    "6": {
+      "reading": "ku",
+      "codepoint": "U+E046"
+    },
+    "7": {
+      "reading": "mu",
+      "codepoint": "U+E047"
+    },
+    "8": {
+      "reading": "na",
+      "codepoint": "U+E048"
+    },
+    "9": {
+      "reading": "she",
+      "codepoint": "U+E049"
+    }
+  }
+}

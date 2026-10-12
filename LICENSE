@@ -1,0 +1,29 @@
+Owee — licencias del proyecto
+=============================
+
+Este repositorio mezcla tres tipos de material y cada uno usa la licencia que mejor
+le corresponde. Copyright (c) 2026 Hector Martinez (https://oweeme.com).
+
+1) IDIOMA, DOCUMENTACION Y DATOS  ->  Creative Commons Atribucion-CompartirIgual 4.0 (CC BY-SA 4.0)
+   Gramatica, fonologia, diccionario y lexico (.tsv), guias de ciencias e informatica, literatura,
+   poemas, canciones y mitos, cuadernos y PDFs, textos del sitio web.
+   Texto completo: LICENSES/CC-BY-SA-4.0.txt
+
+2) FUENTES Y GLIFOS  ->  SIL Open Font License 1.1 (OFL)
+   Owee Sans y Owee School (TTF, OTF, WOFF, WOFF2) y los SVG de los glifos.
+   Texto completo: LICENSES/OFL-1.1.txt
+
+3) CODIGO  ->  MIT
+   Scripts de Python, JavaScript/TypeScript, el teclado Fcitx5 (C++), herramientas de generacion
+   y validacion, scripts de empaquetado.
+   Texto completo: LICENSES/MIT.txt
+
+Resumen: puedes usar, copiar, modificar y compartir todo, incluso con fines comerciales.
+Debes dar credito al autor y, en el caso de la documentacion/datos (CC BY-SA), compartir
+las obras derivadas con la misma licencia, para que el idioma siga siendo abierto.
+
+El idioma Owee en si (su fonologia, gramatica y vocabulario) es una creacion abierta: cualquiera
+puede hablarlo, escribirlo y construir sobre el. El nombre "Owee" no esta registrado como marca.
+
+Fuera de la licencia (no se publican en este repositorio): imagenes de referencia generadas con IA
+y copias de archivo.

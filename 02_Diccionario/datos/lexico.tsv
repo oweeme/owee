@@ -1,0 +1,201 @@
+owee	silabas	clase	significado	estado	seccion
+me	me	pronombre	yo	ESTABLE	Gramática y operadores
+tu	tu	pronombre	tú	ESTABLE	Gramática y operadores
+ra	ra	pronombre	él / ella	ESTABLE	Gramática y operadores
+ne	ne	operador	grupo / plural humano	ESTABLE	Gramática y operadores
+no	no	operador	negación	ESTABLE	Gramática y operadores
+ka	ka	operador	pregunta	ESTABLE	Gramática y operadores
+re	re	conector	y	ESTABLE	Gramática y operadores
+lo	lo	conector	o	ESTABLE	Gramática y operadores
+ke	ke	conector	si / condición	ESTABLE	Gramática y operadores
+pe	pe	operador temporal	anterior / pasado	ESTABLE	Gramática y operadores
+te	te	operador temporal	ahora / presente explícito	ESTABLE	Gramática y operadores
+pu	pu	operador temporal	posterior / futuro	ESTABLE	Gramática y operadores
+bo	bo	operador espacial	interior / en	ESTABLE	Gramática y operadores
+ba	ba	operador espacial	exterior / fuera	ESTABLE	Gramática y operadores
+to	to	operador espacial	hacia	ESTABLE	Gramática y operadores
+de	de	operador espacial	desde	ESTABLE	Gramática y operadores
+go	go	operador espacial	arriba	ESTABLE	Gramática y operadores
+gu	gu	operador espacial	abajo	ESTABLE	Gramática y operadores
+le	le	operador espacial	cerca	ESTABLE	Gramática y operadores
+lu	lu	operador espacial	lejos	ESTABLE	Gramática y operadores
+ko	ko	relación	con	ESTABLE	Gramática y operadores
+so	so	relación	sin	ESTABLE	Gramática y operadores
+pa	pa	operador escalar	más / incremento	ESTABLE	Gramática y operadores
+po	po	operador escalar	menos / reducción	ESTABLE	Gramática y operadores
+se	se	operador lógico	igualdad / similitud	ESTABLE	Gramática y operadores
+mene	me-ne	pronombre	nosotros	PROVISIONAL	Gramática y operadores
+tune	tu-ne	pronombre	ustedes	PROVISIONAL	Gramática y operadores
+rane	ra-ne	pronombre	ellos / ellas	PROVISIONAL	Gramática y operadores
+nara	na-ra	sustantivo conceptual	persona / individuo	ESTABLE	Conceptos fundamentales
+suma	su-ma	sustantivo conceptual	vida	ESTABLE	Conceptos fundamentales
+gora	go-ra	sustantivo conceptual	mundo / entorno	ESTABLE	Conceptos fundamentales
+kore	ko-re	sustantivo conceptual	lugar	ESTABLE	Conceptos fundamentales
+duma	du-ma	concepto	movimiento	ESTABLE	Conceptos fundamentales
+dare	da-re	acción	hacer / producir	ESTABLE	Conceptos fundamentales
+rela	re-la	concepto	unión / conexión	ESTABLE	Conceptos fundamentales
+faro	fa-ro	concepto	fuerza (vigor)	ESTABLE	Conceptos fundamentales
+salo	sa-lo	concepto	luz	ESTABLE	Conceptos fundamentales
+suna	su-na	concepto	agua	ESTABLE	Conceptos fundamentales
+gume	gu-me	concepto	materia	ESTABLE	Conceptos fundamentales
+sura	su-ra	concepto	aire	ESTABLE	Conceptos fundamentales
+fure	fu-re	concepto escalar	temperatura	ESTABLE	Conceptos fundamentales
+bema	be-ma	concepto	cantidad	ESTABLE	Conceptos fundamentales
+lare	la-re	acción mental	saber / conocer	ESTABLE	Conceptos fundamentales
+rena	re-na	acción mental	pensar	ESTABLE	Conceptos fundamentales
+sone	so-ne	concepto	sonido	ESTABLE	Conceptos fundamentales
+reka	re-ka	concepto	comunicación	ESTABLE	Conceptos fundamentales
+luma	lu-ma	concepto	percepción	ESTABLE	Conceptos fundamentales
+nume	nu-me	modalidad	deseo	ESTABLE	Conceptos fundamentales
+kuma	ku-ma	concepto	hogar / casa	ESTABLE	Conceptos fundamentales
+mora	mo-ra	concepto	existencia / presencia	ESTABLE	Ontología y abstracción
+gade	ga-de	concepto	identidad	ESTABLE	Ontología y abstracción
+kema	ke-ma	concepto	objeto	ESTABLE	Ontología y abstracción
+palo	pa-lo	concepto	parte / fracción	ESTABLE	Ontología y abstracción
+dore	do-re	concepto	forma	ESTABLE	Ontología y abstracción
+pode	po-de	modalidad	posibilidad / capacidad	ESTABLE	Ontología y abstracción
+tare	ta-re	concepto	realidad / verdad	ESTABLE	Ontología y abstracción
+taro	ta-ro	concepto	tierra	ESTABLE	Naturaleza
+kuna	ku-na	concepto	cielo	ESTABLE	Naturaleza
+pore	po-re	concepto	fuego	ESTABLE	Naturaleza
+nelo	ne-lo	concepto	planta	ESTABLE	Naturaleza
+ruma	ru-ma	concepto	animal	ESTABLE	Naturaleza
+sade	sa-de	concepto	sol	ESTABLE	Naturaleza
+mune	mu-ne	concepto	luna	ESTABLE	Naturaleza
+bora	bo-ra	concepto	cuerpo	ESTABLE	Cuerpo y funciones
+maku	ma-ku	concepto	mano	ESTABLE	Cuerpo y funciones
+tume	tu-me	concepto	cabeza	ESTABLE	Cuerpo y funciones
+loke	lo-ke	concepto	ojo	ESTABLE	Cuerpo y funciones
+sabe	sa-be	concepto	boca	ESTABLE	Cuerpo y funciones
+noke	no-ke	concepto	nariz	ESTABLE	Cuerpo y funciones
+kalu	ka-lu	concepto	pierna	ESTABLE	Cuerpo y funciones
+doma	do-ma	concepto	corazón / centro corporal	ESTABLE	Cuerpo y funciones
+pume	pu-me	acción	comer	ESTABLE	Cuerpo y funciones
+sule	su-le	acción	dormir	ESTABLE	Cuerpo y funciones
+sado	sa-do	concepto	salud	ESTABLE	Cuerpo y funciones
+mena	me-na	concepto	memoria	ESTABLE	Mente y emociones
+karo	ka-ro	acción mental	entender	ESTABLE	Mente y emociones
+dune	du-ne	concepto	sentir / estado interno	ESTABLE	Mente y emociones
+soma	so-ma	concepto	idea	ESTABLE	Mente y emociones
+paku	pa-ku	concepto	atención	ESTABLE	Mente y emociones
+lena	le-na	emoción	agrado / sensación agradable	ESTABLE	Mente y emociones
+saku	sa-ku	emoción	alerta / miedo	ESTABLE	Mente y emociones
+malo	ma-lo	emoción	calma	ESTABLE	Mente y emociones
+fada	fa-da	emoción	enojo	ESTABLE	Mente y emociones
+lore	lo-re	emoción / relación	afecto	ESTABLE	Mente y emociones
+kade	ka-de	acción	usar	ESTABLE	Acciones y cambio
+pema	pe-ma	acción	dar	ESTABLE	Acciones y cambio
+gura	gu-ra	acción	recibir	ESTABLE	Acciones y cambio
+telo	te-lo	acción	cambiar	ESTABLE	Acciones y cambio
+bure	bu-re	acción	abrir	ESTABLE	Acciones y cambio
+kose	ko-se	acción	cerrar	ESTABLE	Acciones y cambio
+delo	de-lo	acción	tomar	ESTABLE	Acciones y cambio
+fena	fe-na	acción	poner	ESTABLE	Acciones y cambio
+kera	ke-ra	acción	obtener	ESTABLE	Acciones y cambio
+bosa	bo-sa	concepto / acción	rotura / romper	ESTABLE	Acciones y cambio
+rude	ru-de	concepto / acción	reparación / reparar	ESTABLE	Acciones y cambio
+naro	na-ro	concepto	grupo humano	ESTABLE	Personas, familia y sociedad
+mela	me-la	concepto	familia	ESTABLE	Personas, familia y sociedad
+reme	re-me	concepto	amistad	ESTABLE	Personas, familia y sociedad
+pade	pa-de	relación	progenitor / padre-madre	ESTABLE	Personas, familia y sociedad
+naku	na-ku	relación	descendiente / hijo-a	ESTABLE	Personas, familia y sociedad
+sare	sa-re	relación	hermano-a	PROVISIONAL	Personas, familia y sociedad
+saro	sa-ro	concepto	comunidad	ESTABLE	Personas, familia y sociedad
+bade	ba-de	concepto	autoridad	ESTABLE	Personas, familia y sociedad
+foma	fo-ma	concepto	regla	ESTABLE	Personas, familia y sociedad
+dese	de-se	concepto	decisión	ESTABLE	Personas, familia y sociedad
+pelo	pe-lo	modalidad	responsabilidad / deber	ESTABLE	Personas, familia y sociedad
+galo	ga-lo	acción / relación	ayuda / ayudar	ESTABLE	Personas, familia y sociedad
+tera	te-ra	concepto	tiempo	ESTABLE	Tiempo
+pado	pa-do	concepto	comienzo	ESTABLE	Tiempo
+gune	gu-ne	concepto	fin	ESTABLE	Tiempo
+dure	du-re	concepto	duración	ESTABLE	Tiempo
+kelo	ke-lo	concepto	ciclo	ESTABLE	Tiempo
+fame	fa-me	concepto	comida	ESTABLE	Hogar y necesidades
+nobe	no-be	concepto	bebida	ESTABLE	Hogar y necesidades
+kopa	ko-pa	concepto	contenedor	ESTABLE	Hogar y necesidades
+tabe	ta-be	concepto	superficie de apoyo	ESTABLE	Hogar y necesidades
+sede	se-de	concepto	asiento	ESTABLE	Hogar y necesidades
+bume	bu-me	concepto	ropa / vestimenta	ESTABLE	Hogar y necesidades
+gase	ga-se	concepto	limpieza	ESTABLE	Hogar y necesidades
+dabo	da-bo	concepto	suciedad	ESTABLE	Hogar y necesidades
+moke	mo-ke	modalidad	necesidad	ESTABLE	Hogar y necesidades
+fadu	fa-du	concepto	seguridad	ESTABLE	Hogar y necesidades
+lobe	lo-be	concepto	cubierta / techo	ESTABLE	Hogar y necesidades
+feke	fe-ke	concepto	herramienta	ESTABLE	Hogar y necesidades
+nado	na-do	concepto	acceso / paso	ESTABLE	Hogar y necesidades
+gore	go-re	escala	tamaño	ESTABLE	Cualidades y escalas
+lafe	la-fe	escala	calidad / valoración	PROVISIONAL	Cualidades y escalas
+sape	sa-pe	escala	velocidad	ESTABLE	Cualidades y escalas
+dema	de-ma	escala	dificultad	ESTABLE	Cualidades y escalas
+kare	ka-re	escala	corrección	ESTABLE	Cualidades y escalas
+mude	mu-de	estado	lleno	ESTABLE	Cualidades y escalas
+nuse	nu-se	estado	vacío	ESTABLE	Cualidades y escalas
+tame	ta-me	cualidad	nuevo	ESTABLE	Cualidades y escalas
+gule	gu-le	cualidad	viejo	ESTABLE	Cualidades y escalas
+fese	fe-se	concepto	límite / completitud	ESTABLE	Cualidades y escalas
+rale	ra-le	color	rojo	ESTABLE	Colores
+nede	ne-de	color	verde	ESTABLE	Colores
+kulo	ku-lo	color	azul	PROVISIONAL	Colores
+kale	ka-le	color	amarillo	PROVISIONAL	Colores
+bore	bo-re	color	negro	ESTABLE	Colores
+fale	fa-le	color	blanco	ESTABLE	Colores
+tase	ta-se	acción	aprender	ESTABLE	Conocimiento, información y tecnología
+fela	fe-la	acción	enseñar	ESTABLE	Conocimiento, información y tecnología
+doke	do-ke	concepto	información / datos	ESTABLE	Conocimiento, información y tecnología
+sena	se-na	concepto	signo	ESTABLE	Conocimiento, información y tecnología
+beka	be-ka	concepto	escritura	ESTABLE	Conocimiento, información y tecnología
+lodu	lo-du	concepto	lectura	ESTABLE	Conocimiento, información y tecnología
+meka	me-ka	concepto	máquina	ESTABLE	Conocimiento, información y tecnología
+mado	ma-do	concepto	cálculo / procesamiento	ESTABLE	Conocimiento, información y tecnología
+daro	da-ro	concepto / acción	trabajo / trabajar	ESTABLE	Trabajo, comercio y valor
+kume	ku-me	concepto	intercambio	ESTABLE	Trabajo, comercio y valor
+bado	ba-do	concepto	valor	ESTABLE	Trabajo, comercio y valor
+mase	ma-se	concepto	recurso	ESTABLE	Trabajo, comercio y valor
+fedo	fe-do	concepto / acción	pago / pagar	ESTABLE	Trabajo, comercio y valor
+pose	po-se	concepto	posición / postura	ESTABLE	Estado físico y medición
+tada	ta-da	concepto	contacto	ESTABLE	Estado físico y medición
+kefe	ke-fe	acción / concepto	sostener / soporte	ESTABLE	Estado físico y medición
+mede	me-de	acción	medir	ESTABLE	Estado físico y medición
+dase	da-se	concepto	distancia	ESTABLE	Estado físico y medición
+balo	ba-lo	conector	contraste / pero	ESTABLE	Lógica ampliada
+kasu	ka-su	concepto	causa / razón	ESTABLE	Lógica ampliada
+mode	mo-de	concepto	manera / método	ESTABLE	Lógica ampliada
+pase	pa-se	concepto	posesión / pertenencia	ESTABLE	Lógica ampliada
+bema-pa	bema-pa	derivado (bema + pa)	más cantidad	ESTABLE	Derivaciones y formas compuestas
+bema-po	bema-po	derivado (bema + po)	menos cantidad	ESTABLE	Derivaciones y formas compuestas
+fure-pa	fure-pa	derivado (fure + pa)	caliente	ESTABLE	Derivaciones y formas compuestas
+fure-po	fure-po	derivado (fure + po)	frío	ESTABLE	Derivaciones y formas compuestas
+faro-pa	faro-pa	derivado (faro + pa)	fuerte	ESTABLE	Derivaciones y formas compuestas
+faro-po	faro-po	derivado (faro + po)	débil	ESTABLE	Derivaciones y formas compuestas
+gore-pa	gore-pa	derivado (gore + pa)	grande	ESTABLE	Derivaciones y formas compuestas
+gore-po	gore-po	derivado (gore + po)	pequeño	ESTABLE	Derivaciones y formas compuestas
+sape-pa	sape-pa	derivado (sape + pa)	rápido	ESTABLE	Derivaciones y formas compuestas
+sape-po	sape-po	derivado (sape + po)	lento	ESTABLE	Derivaciones y formas compuestas
+dema-pa	dema-pa	derivado (dema + pa)	difícil	ESTABLE	Derivaciones y formas compuestas
+dema-po	dema-po	derivado (dema + po)	fácil	ESTABLE	Derivaciones y formas compuestas
+ka-nara	ka-nara	derivado (ka + nara)	quién	ESTABLE	Derivaciones y formas compuestas
+ka-kore	ka-kore	derivado (ka + kore)	dónde	ESTABLE	Derivaciones y formas compuestas
+ka-bema	ka-bema	derivado (ka + bema)	cuánto / cuántos	ESTABLE	Derivaciones y formas compuestas
+ka-kasu	ka-kasu	derivado (ka + kasu)	por qué	ESTABLE	Derivaciones y formas compuestas
+ka-mode	ka-mode	derivado (ka + mode)	cómo	ESTABLE	Derivaciones y formas compuestas
+ka-tera	ka-tera	derivado (ka + tera)	cuándo	ESTABLE	Derivaciones y formas compuestas
+cho	cho	dígito	0	ESTABLE	Sistema numérico
+be	be	dígito	1	ESTABLE	Sistema numérico
+du	du	dígito	2	ESTABLE	Sistema numérico
+ga	ga	dígito	3	ESTABLE	Sistema numérico
+fo	fo	dígito	4	ESTABLE	Sistema numérico
+sa	sa	dígito	5	ESTABLE	Sistema numérico
+ku	ku	dígito	6	ESTABLE	Sistema numérico
+mu	mu	dígito	7	ESTABLE	Sistema numérico
+na	na	dígito	8	ESTABLE	Sistema numérico
+she	she	dígito	9	ESTABLE	Sistema numérico
+tanu	tanu	escala numérica	10	ESTABLE	Sistema numérico
+gabu	gabu	escala numérica	100	ESTABLE	Sistema numérico
+soku	soku	escala numérica	1 000	ESTABLE	Sistema numérico
+benu	benu	escala numérica	1 000 000	ESTABLE	Sistema numérico
+dapa	dapa	operación matemática	suma	ESTABLE	Sistema numérico
+dopo	dopo	operación matemática	resta	ESTABLE	Sistema numérico
+kebu	kebu	operación matemática	multiplicación	ESTABLE	Sistema numérico
+faku	faku	operación matemática	división	ESTABLE	Sistema numérico
+doto	doto	operación matemática	separador decimal	ESTABLE	Sistema numérico

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<title>Owee me</title>
+<g fill="none" stroke="black" stroke-width="82" stroke-linecap="round" stroke-linejoin="round">
+<line x1="300" y1="350" x2="300" y2="650" />
+<line x1="300" y1="350" x2="500" y2="500" />
+<line x1="500" y1="500" x2="700" y2="350" />
+<line x1="700" y1="350" x2="700" y2="650" />
+<line x1="300" y1="500" x2="130" y2="500" />
+<line x1="130" y1="500" x2="220" y2="570" />
+<line x1="130" y1="500" x2="220" y2="430" />
+</g></svg>

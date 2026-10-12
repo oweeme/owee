@@ -1,0 +1,275 @@
+# Traduccion de oweelinux al Owee (romano)
+# Generado por 08_Integracion/herramientas/generar_traducciones.py el 2026-10-12. No editar a mano: edita datos/ui_glosario.tsv.
+msgid ""
+msgstr ""
+"Project-Id-Version: oweelinux 0.1\n"
+"Language: qow\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Archivo
+msgid "File"
+msgstr "doke-kopa"
+
+#. Editar
+msgid "Edit"
+msgstr "telo"
+
+#. Ver
+msgid "View"
+msgstr "loke-luma"
+
+#. Herramientas
+msgid "Tools"
+msgstr "feke"
+
+#. Ayuda
+msgid "Help"
+msgstr "galo"
+
+#. Nuevo
+msgid "New"
+msgstr "tame"
+
+#. Abrir
+msgid "Open"
+msgstr "bure"
+
+#. Guardar
+msgid "Save"
+msgstr "mena-fena"
+
+#. Cerrar
+msgid "Close"
+msgstr "kose"
+
+#. Salir
+msgid "Exit"
+msgstr "gune"
+
+#. Deshacer
+msgid "Undo"
+msgstr "pe-telo"
+
+#. Rehacer
+msgid "Redo"
+msgstr "pu-telo"
+
+#. Copiar
+msgid "Copy"
+msgstr "dare-se"
+
+#. Pegar
+msgid "Paste"
+msgstr "fena"
+
+#. Borrar
+msgid "Delete"
+msgstr "nuse-dare"
+
+#. Seleccionar
+msgid "Select"
+msgstr "delo"
+
+#. Seleccionar todo
+msgid "Select all"
+msgstr "kema-fese"
+
+#. Añadir
+msgid "Add"
+msgstr "dapa"
+
+#. Quitar
+msgid "Remove"
+msgstr "dopo"
+
+#. Buscar
+msgid "Search"
+msgstr "kera-nume"
+
+#. Configuración
+msgid "Settings"
+msgstr "foma-fena"
+
+#. Menú
+msgid "Menu"
+msgstr "seta-nado"
+
+#. Ventana
+msgid "Window"
+msgstr "loke-kopa"
+
+#. Botón
+msgid "Button"
+msgstr "tada-sena"
+
+#. Carpeta
+msgid "Folder"
+msgstr "kopa"
+
+#. Papelera
+msgid "Trash"
+msgstr "dabo-kopa"
+
+#. Escritorio
+msgid "Desktop"
+msgstr "meka-tabe"
+
+#. Equipo
+msgid "Computer"
+msgstr "meka-mado"
+
+#. Sistema
+msgid "System"
+msgstr "meka-gora"
+
+#. Red
+msgid "Network"
+msgstr "rela"
+
+#. Internet
+msgid "Internet"
+msgstr "rela-gora"
+
+#. Red inalámbrica
+msgid "Wireless network"
+msgstr "rela-sura"
+
+#. Impresora
+msgid "Printer"
+msgstr "beka-meka"
+
+#. Batería
+msgid "Battery"
+msgstr "enu-kopa"
+
+#. Volumen
+msgid "Volume"
+msgstr "sone-gore"
+
+#. Brillo
+msgid "Brightness"
+msgstr "salo-gore"
+
+#. Usuario
+msgid "User"
+msgstr "nara-kade"
+
+#. Nombre
+msgid "Name"
+msgstr "sena-nara"
+
+#. Contraseña
+msgid "Password"
+msgstr "sena-fadu"
+
+#. Seguridad
+msgid "Security"
+msgstr "fadu"
+
+#. Iniciar sesión
+msgid "Log in"
+msgstr "nado-bure"
+
+#. Cerrar sesión
+msgid "Log out"
+msgstr "nado-kose"
+
+#. Apagar
+msgid "Shut down"
+msgstr "meka-gune"
+
+#. Reiniciar
+msgid "Restart"
+msgstr "pado-telo"
+
+#. Suspender
+msgid "Sleep"
+msgstr "meka-sule"
+
+#. Instalar
+msgid "Install"
+msgstr "fena"
+
+#. Actualizar
+msgid "Update"
+msgstr "tame-telo"
+
+#. Descargar
+msgid "Download"
+msgstr "gura"
+
+#. Subir
+msgid "Upload"
+msgstr "pema"
+
+#. Enviar
+msgid "Send"
+msgstr "pema"
+
+#. Recibir
+msgid "Receive"
+msgstr "gura"
+
+#. Mensaje
+msgid "Message"
+msgstr "reka"
+
+#. Fecha y hora
+msgid "Date and time"
+msgstr "tera-sena"
+
+#. Tiempo
+msgid "Time"
+msgstr "tera"
+
+#. Idioma
+msgid "Language"
+msgstr "reka"
+
+#. Aceptar
+msgid "OK"
+msgstr "tare"
+
+#. Cancelar
+msgid "Cancel"
+msgstr "no"
+
+#. Sí
+msgid "Yes"
+msgstr "tare"
+
+#. No
+msgid "No"
+msgstr "no"
+
+#. Error
+msgid "Error"
+msgstr "kare-no"
+
+#. Advertencia
+msgid "Warning"
+msgstr "saku-reka"
+
+#. Listo
+msgid "Done"
+msgstr "fese"
+
+#. Cargando
+msgid "Loading"
+msgstr "pu-dure"
+
+#. Siguiente
+msgid "Next"
+msgstr "pu"
+
+#. Atrás
+msgid "Back"
+msgstr "pe"
+
+#. Bienvenida
+msgid "Welcome"
+msgstr "reme"
+
