@@ -11,8 +11,8 @@
  },
  "View": {
   "es": "Ver",
-  "owee": "loke-luma",
-  "script": ""
+  "owee": "luma-salo",
+  "script": ""
  },
  "Tools": {
   "es": "Herramientas",
@@ -151,8 +151,8 @@
  },
  "Internet": {
   "es": "Internet",
-  "owee": "rela-gora",
-  "script": ""
+  "owee": "gora-rela",
+  "script": ""
  },
  "Wireless network": {
   "es": "Red inalámbrica",
@@ -161,8 +161,8 @@
  },
  "Printer": {
   "es": "Impresora",
-  "owee": "beka-meka",
-  "script": ""
+  "owee": "meka-beka",
+  "script": ""
  },
  "Battery": {
   "es": "Batería",

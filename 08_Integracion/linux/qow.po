@@ -19,7 +19,7 @@ msgstr "telo"
 
 #. Ver
 msgid "View"
-msgstr "loke-luma"
+msgstr "luma-salo"
 
 #. Herramientas
 msgid "Tools"
@@ -131,7 +131,7 @@ msgstr "rela"
 
 #. Internet
 msgid "Internet"
-msgstr "rela-gora"
+msgstr "gora-rela"
 
 #. Red inalámbrica
 msgid "Wireless network"
@@ -139,7 +139,7 @@ msgstr "rela-sura"
 
 #. Impresora
 msgid "Printer"
-msgstr "beka-meka"
+msgstr "meka-beka"
 
 #. Batería
 msgid "Battery"

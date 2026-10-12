@@ -1548,7 +1548,7 @@ La verificación (en `generar_ciencias.py`) comprueba: fonología V/CV sin `i`, 
 
 ## 79. Informática
 
-Dominio nuevo con **58 términos y una sola raíz nueva**, `bomo` («bug», mezcla recortada de **bo**sa + **m**ado, 2 sílabas, sin vecinos acústicos); el resto son compuestos (`meka-mado` computadora, `mado-foma` programa, `doke-kopa` archivo, `rela-gora` internet, `sena-fadu` contraseña…). Ver la guía *Owee Informática* y la tabla de recomendaciones para desarrolladores.
+Dominio nuevo con **58 términos y una sola raíz nueva**, `bomo` («bug», mezcla recortada de **bo**sa + **m**ado, 2 sílabas, sin vecinos acústicos); el resto son compuestos (`meka-mado` computadora, `mado-foma` programa, `doke-kopa` archivo, `gora-rela` internet, `sena-fadu` contraseña…). Ver la guía *Owee Informática* y la tabla de recomendaciones para desarrolladores.
 
 ------------------------------------------------------------------------
 
@@ -1566,7 +1566,18 @@ El idioma se integra por tres vías, todas generadas desde `08_Integracion/datos
 
 ## 82. Lote 1 y curso por niveles (2026-10-12)
 
-**Lote 1:** 60 términos de cuerpo, animales, naturaleza concreta y posturas, **sin raíces nuevas** (por ejemplo `bora-lobe` piel, `suma-suna` sangre, `sabe-faro` diente, `taro-goda` piedra, `nelo-maku` hoja, `go-pose` estar de pie); con ellos la cobertura de la lista Swadesh-100 pasa del 56 % al 91 %. **Curso:** 4 niveles (0 Ver y oír, 1 Primeras frases A1, 2 Conversar A2, 3 Leer y crear B1) en `03_Material_Ensenanza/Curso/`, con glifos, romano, pronunciación, traducción, ejercicios y lecturas. Todo texto Owee del curso pasa el validador.
+**Lote 1:** 60 términos de cuerpo, animales, naturaleza concreta y posturas, **sin raíces nuevas** (por ejemplo `bora-lobe` piel, `suma-suna` sangre, `sabe-faro` diente, `taro-goda` piedra, `nelo-maku` hoja, `kalu-kefe` estar de pie); con ellos la cobertura de la lista Swadesh-100 pasa del 56 % al 91 %. **Curso:** 4 niveles (0 Ver y oír, 1 Primeras frases A1, 2 Conversar A2, 3 Leer y crear B1) en `03_Material_Ensenanza/Curso/`, con glifos, romano, pronunciación, traducción, ejercicios y lecturas. Todo texto Owee del curso pasa el validador.
+
+------------------------------------------------------------------------
+
+## 83. Reconciliación con el Primer Diccionario y revisión semántica (2026-10-12)
+
+**Regla confirmada:** una forma nueva no puede existir ya en ningún otro lugar del proyecto, ninguna otra forma puede tener su significado, y las raíces que la componen deben tener un significado adecuado a su creación.
+
+- Se incorporaron al léxico los **29 compuestos del *Primer Diccionario Conceptual 1.0*** que no estaban en los datos (`luma-salo` ver, `luma-sone` oír, `reka-sone` hablar, `duma-bo` entrar, `duma-ba` salir, `gora-rela` internet, `nara-daro` trabajador, `dune-lena` alegría, `bado-bema` precio, `mede-tera`…). **Sus formas mandan:** se retiraron los duplicados propios (`loke-luma`, `sone-luma`, `rela-gora`, `suna-kopa`, `doma-salo`…); `nado-bure`/`nado-kose` conservan su sentido («acceso abierto/cerrado») y sirven también para iniciar y cerrar sesión.
+- **Sentidos con el patrón percepción + estímulo:** `luma-salo` (ver), `luma-sone` (oír), `luma-sura` (oler), `luma-fame` (saborear), `luma-tada` (tocar).
+- **Aprobados 84 términos** tras la revisión (`02_Diccionario/datos/revision_semantica.md`); ajustados 15 por significado de raíces o confusión acústica (p. ej. `go-pose` ≈ `ga-pose`).
+- **Lote 2** (92 términos de vida diaria) verificado y en espera de aprobación. `loda` es «rotación» y el día es `loda-kelo`: hoy, ayer y mañana son `te-/pe-/pu-loda-kelo`.
 
 ------------------------------------------------------------------------
 

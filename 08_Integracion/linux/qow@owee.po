@@ -19,7 +19,7 @@ msgstr ""
 
 #. Ver
 msgid "View"
-msgstr ""
+msgstr ""
 
 #. Herramientas
 msgid "Tools"
@@ -131,7 +131,7 @@ msgstr ""
 
 #. Internet
 msgid "Internet"
-msgstr ""
+msgstr ""
 
 #. Red inalámbrica
 msgid "Wireless network"
@@ -139,7 +139,7 @@ msgstr ""
 
 #. Impresora
 msgid "Printer"
-msgstr ""
+msgstr ""
 
 #. Batería
 msgid "Battery"

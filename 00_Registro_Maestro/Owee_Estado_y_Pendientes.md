@@ -1,15 +1,16 @@
 # Owee — estado actual, pendientes y áreas por cubrir
 
-**Fecha:** 2026-10-12 (actualizado tras el lote 1 y el curso). Resultado de una verificación completa con `verificar_todo.py` (se ejecuta con un solo comando y termina con código de error si algo falla).
+**Fecha:** 2026-10-12 (actualizado tras la revisión semántica, la aprobación y el lote 2). Resultado de una verificación completa con `verificar_todo.py` (se ejecuta con un solo comando y termina con código de error si algo falla).
 
 ## 1. Verificación: todo en orden
 
 | Comprobación | Resultado |
 |---|---|
 | Textos Owee (9 archivos): fonología V/CV sin `i` y vocabulario existente | ✅ válidos |
-| Léxico ampliado: 420 formas | ✅ 136 auditadas · 199 aprobadas · **85 verificadas (esperan aprobación: 19 de interfaz, 60 del lote 1, 6 del sitio)** · 0 por revisar |
+| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 509 formas | ✅ 142 auditadas · **273 aprobadas** · **94 verificadas (92 del lote 2, `lu-meka` y `ruma-galo` en espera)** · 0 por revisar |
 | Colisiones exactas, fonología inválida, partes inexistentes | ✅ ninguna |
-| Sitio web: 25 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
+| Sitio web: 26 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
+| **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 159 OK · 15 ajustados · 1 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
 | Traducciones de interfaz (66 textos) | ✅ generan; 19 avisos por términos aún sin aprobar |
 | Python (compila) y JavaScript (sintaxis) | ✅ |
 | Repositorio público en GitHub (licencias CC BY-SA / OFL / MIT) | ✅ |
@@ -33,8 +34,9 @@
 | **Astronomía / astrología / mitología** | Planetas por ordinal, zodiaco elemento × modalidad, panteón elemental | aprobado |
 | **Informática** | 58 términos y 1 raíz nueva (`bomo`, bug); guía para desarrolladores | aprobado |
 | **Interfaz (UI)** | 19 términos y 66 textos de menú (archivo, guardar, configuración…) | **verificado, falta aprobar** |
-| **Cuerpo y naturaleza (lote 1)** | 60 términos: piel, sangre, hueso, oreja, diente, lengua, piedra, arena, humo, hoja, semilla…; verbos de postura | **verificado, falta aprobar** |
-| **Curso por niveles** | 4 niveles (0–3), 29 lecciones con glifos, romano, pronunciación, traducción, ejercicios y lecturas; lector con glosa en cada palabra; modo inmersión de la interfaz | **nuevo** |
+| **Cuerpo y naturaleza (lote 1)** | 60 términos: piel, sangre, hueso, oreja, diente, lengua, piedra, arena, humo, hoja, semilla…; posturas | **aprobado** |
+| **Vida diaria (lote 2)** | 92 términos: hoy/ayer/mañana, semana, comidas, ciudad y geografía, familia ampliada, cocina, casa y ropa, salud, dinero y compras, transporte y viaje | **verificado, falta aprobar** |
+| **Curso por niveles** | 4 niveles (0–3), 34 lecciones con glifos, romano, pronunciación, traducción, ejercicios y lecturas; lector con glosa en cada palabra; modo inmersión de la interfaz | **nuevo** |
 | **Literatura y música** | 34 textos: poemas, canciones, mitos, cuentos; herramienta de ritmo y acento con melodía automática o propia | 0.5 |
 | **Integración** | Paquetes `.deb`, traducciones gettext y Qt, módulo web, locale `qow_BO` | kit listo |
 | **Infraestructura** | Sitio web de 19 páginas, validadores, verificación completa, repositorio público | operativo |
@@ -43,7 +45,7 @@
 
 ### 3.1 Decisiones tuyas (por prioridad)
 
-1. **Aprobar los 85 términos verificados**: 19 de interfaz (`foma-fena` configuración, `loke-kopa` ventana…), **60 del lote 1** (`bora-lobe` piel, `suma-suna` sangre, `sabe-faro` diente…) y 6 de la navegación del sitio (`tase-kelo` curso…). Añádelos a `02_Diccionario/datos/aprobadas.txt` o dime cuáles.
+1. **Aprobar los 94 términos verificados**: sobre todo los **92 del lote 2** (`te-loda-kelo` hoy, `kuma-seta` ciudad, `bado-feke` dinero…); `lu-meka` (nube informática, reemplaza a `kuna-meka`) y `ruma-galo` (perro) esperan una decisión. Ya se **aprobaron 84** tras la revisión semántica del 2026-10-12.
 2. **Confirmar lo de la Gramática 1.1 que aún no respondiste:**
    - `le`/`lu` como demostrativos;
    - imperativo como verbo desnudo;
@@ -107,11 +109,12 @@ Medicina · Ingeniería, construcción y electrónica · Telecomunicaciones · A
 
 ## 5. Siguiente paso recomendado
 
-1. ~~Lote 1: cuerpo y naturaleza~~ **hecho** (Swadesh 91 %).
-2. **Lote 2 (≈ 90 términos):** calendario, geografía básica, familia ampliada, comida, casa y ropa, salud y emergencias, dinero y transporte.
-3. **Sesión de aprobación** de los 85 términos verificados y las decisiones de Gramática 1.1.
-4. **Ampliar el curso:** audio de pronunciación, más lecturas por nivel y ejercicios autocorregibles.
-5. **Regenerar el Registro Maestro** y los PDF antiguos desde los datos actuales.
-6. **Prueba auditiva** de pares mínimos antes de congelar más vocabulario.
+1. ~~Lote 1: cuerpo y naturaleza~~ **hecho y aprobado**. ~~Lote 2: vida diaria~~ **hecho (esperando aprobación)**.
+2. **Sesión de aprobación** del lote 2 y de las decisiones de Gramática 1.1.
+3. **Norma para nombrar especies** (perro, gato, caballo…) y **direcciones** izquierda/derecha.
+4. **Lote 3 (≈ 100 términos):** biología, geología y clima, educación, derecho y política, economía, lingüística y metalenguaje, artes y teoría musical.
+5. **Audio de pronunciación**, más lecturas y ejercicios autocorregibles en el curso.
+6. **Regenerar el Registro Maestro** y los PDF antiguos desde los datos actuales.
+7. **Prueba auditiva** de pares mínimos antes de congelar más vocabulario.
 
 > Para comprobar el estado en cualquier momento: `python3 verificar_todo.py`.

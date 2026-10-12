@@ -27,8 +27,16 @@ while i < len(L):
 for w, n in zip("cho be du ga fo sa ku mu na she".split(), range(10)): add(w, w, "dígito", str(n), "ESTABLE", "Sistema numérico")
 for w, n in [("tanu", "10"), ("gabu", "100"), ("soku", "1 000"), ("benu", "1 000 000")]: add(w, w, "escala numérica", n, "ESTABLE", "Sistema numérico")
 for w, n in [("dapa", "suma"), ("dopo", "resta"), ("kebu", "multiplicación"), ("faku", "división"), ("doto", "separador decimal")]: add(w, w, "operación matemática", n, "ESTABLE", "Sistema numérico")
+# Primer Diccionario Conceptual 1.0 (PDF): sus compuestos ya forman parte del idioma
+pdf2 = raiz / "02_Diccionario/Owee_1.0_Primer_Diccionario_Conceptual.pdf"
+txt2 = subprocess.run(["pdftotext", "-layout", str(pdf2), "-"], capture_output=True, text=True, check=True).stdout
+for l in txt2.splitlines():
+    l = re.sub(r"[\ue000-\uf8ff\x0c]", "", l).rstrip()
+    m = re.match(r"^\s{1,6}([a-z]+(?:-[a-z]+)+)\s{2,}(.+?)\s{2,}([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ +/-]+)\s*$", l)
+    if m: add(m.group(1), m.group(1), "derivado (" + m.group(3).lower() + ")", m.group(2).strip(), "ESTABLE", "Derivaciones (Primer Diccionario 1.0)")
+
 # decisiones posteriores al PDF (se reaplican al regenerar)
-OVERRIDES = {"faro": "fuerza (vigor)"}   # 2026-10-12: la energia es `enu`; faro-enu = fuerza energetica
+OVERRIDES = {"faro": "fuerza (vigor)", "nado-bure": "acceso abierto (iniciar sesión)", "nado-kose": "acceso cerrado (cerrar sesión)", "suna-duma": "flujo de agua (río)"}   # 2026-10-12: la energia es `enu`; faro-enu = fuerza energetica
 for w, m in OVERRIDES.items():
     if w in rows: rows[w][3] = m
 out = raiz / "02_Diccionario/datos/lexico.tsv"

@@ -292,7 +292,7 @@ como las derivaciones del diccionario, pero **no** se añaden al léxico mientra
 | `suma-pado` | vida + comienzo | nacimiento |
 | `suma-gune` | vida + fin | muerte |
 | `doma-duma` | corazón + movimiento | emoción, latido |
-| `doma-salo` | corazón + luz | alegría |
+| `dune-lena` | sentir + agrado | alegría (forma establecida en el Primer Diccionario) |
 
 ## 7. Lo que falta para una literatura más rica (decisiones tuyas)
 

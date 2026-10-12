@@ -214,7 +214,7 @@ me kalu-telo sado no
 
 ## Lección 1.9 — La naturaleza
 
-<!--vocabulario sade mune kuna taro suna pore sura nelo taro-goda pore-sura nelo-saro suna-kopa suna-goda kuna-suna-->
+<!--vocabulario sade mune kuna taro suna pore sura nelo taro-goda pore-sura nelo-saro suna-kore suna-goda kuna-suna-->
 
 ```owee
 sade go duma
@@ -222,7 +222,7 @@ kuna-suna te mora
 taro-goda fure-po
 pore-sura go duma
 nelo-saro gore-pa
-suna-kopa mude
+suna-kore mude
 suna-goda fure-po
 ```
 

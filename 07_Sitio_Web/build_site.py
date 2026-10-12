@@ -347,11 +347,11 @@ def md(text, convert=True):
 # ---------------------------------------------------------------- plantilla
 NAV = [("index.html", "Inicio", "pado"),
        ("Aprender", [("curso.html", "Curso por niveles", "tase-kelo"), ("escritura.html", "Escritura", "beka"), ("pronunciacion.html", "Pronunciación", "sone"),
-                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "sena-seta")], "tase"),
+                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke")], "tase"),
        ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
        ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"),
                      ("informatica.html", "Informática")], "lare"),
-       ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y pendientes"), ("auditoria.html", "Auditoría inicial"), ("plan.html", "Plan de ampliación"),
+       ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y pendientes"), ("revision.html", "Revisión semántica"), ("auditoria.html", "Auditoría inicial"), ("plan.html", "Plan de ampliación"),
                      ("integracion.html", "Integración (oweelinux, web)"), ("descargas.html", "Descargas", "gura")], "dare")]
 
 CSS = r"""
@@ -620,7 +620,7 @@ def build_dic(use):
         html_secs.append(f'<section data-secbox><h2 class="sec">{esc(sec)}</h2><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(330px,1fr))">{"".join(cards)}</div></section>')
     n_used = sum(1 for e in LEX if e["w"] in use)
     unused = [e["w"] for e in LEX if e["w"] not in use and not e["parts"] and e["sec"] != "Sistema numérico"]
-    doms = ["General", "Matemáticas", "Física", "Química", "Gramática 1.1", "Cotidiano 0.1", "Astronomía", "Astrología", "Mitología", "Informática", "Interfaz", "Cuerpo y naturaleza", "Sitio"]
+    doms = ["General", "Matemáticas", "Física", "Química", "Gramática 1.1", "Cotidiano 0.1", "Astronomía", "Astrología", "Mitología", "Informática", "Interfaz", "Cuerpo y naturaleza", "Vida diaria (lote 2)", "Sitio"]
     dopts = "".join(f"<option>{d}</option>" for d in doms)
     opts = "".join(f'<option>{esc(s)}</option>' for s in secs)
     body = f"""<h1>Diccionario Owee</h1>
@@ -724,6 +724,10 @@ def build_integracion():
     t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n == 2)
     page("integracion.html", "Integración (oweelinux y web)", f'<div class="layout"><aside class="toc">{t}</aside><article>{h}</article></div>', "integracion.html")
 
+def build_revision():
+    h, toc, _ = md((ROOT / "02_Diccionario/datos/revision_semantica.md").read_text(encoding="utf8"), convert=True)
+    page("revision.html", "Revisión semántica de términos", f'<article>{h}</article>', "revision.html")
+
 def build_estado():
     for doc, fname, titulo in (("Owee_Estado_y_Pendientes.md", "estado.html", "Estado y pendientes"),
                                ("Owee_Auditoria_y_Hoja_de_Ruta.md", "auditoria.html", "Auditoría inicial (histórica)")):
@@ -801,7 +805,7 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion()
+    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion(); build_revision()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     (OUT / ".nojekyll").write_text("")
     print(f"OK {OUT}: {len(LEX)} entradas, {len(poems)} textos poeticos, {npdf} PDFs, fuente literatura: {LIT.name}")

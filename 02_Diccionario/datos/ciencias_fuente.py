@@ -8,7 +8,7 @@ RAICES = [
  ("banu","número",MAT,"Álgebra"),("kedo","unidad",MAT,"Álgebra"),("bara","variable",MAT,"Álgebra"),("kenu","constante",MAT,"Álgebra"),
  ("reda","resultado",MAT,"Álgebra"),("telu","potencia (exponente)",MAT,"Álgebra"),("raku","raíz matemática",MAT,"Álgebra"),("seka","ecuación",MAT,"Álgebra"),
  ("rebo","expresión matemática",MAT,"Álgebra"),("teda","término matemático",MAT,"Álgebra"),("kofa","coeficiente",MAT,"Álgebra"),("daku","incógnita",MAT,"Álgebra"),
- ("funa","función",MAT,"Álgebra"),("duno","dominio",MAT,"Álgebra"),("remu","rango / imagen",MAT,"Álgebra"),("loge","logaritmo",MAT,"Álgebra"),("seta","conjunto matemático",MAT,"Álgebra"),
+ ("funa","función",MAT,"Álgebra"),("duno","dominio",MAT,"Álgebra"),("remu","rango / imagen",MAT,"Álgebra"),("loge","logaritmo",MAT,"Álgebra"),("seta","conjunto / colección (en matemáticas: conjunto)",MAT,"Álgebra"),
  # geometria
  ("pota","punto geométrico",MAT,"Geometría"),("loka","línea",MAT,"Geometría"),("pana","plano geométrico",MAT,"Geometría"),("dora","dimensión",MAT,"Geometría"),
 ("selo","círculo",MAT,"Geometría"),("kado","lado geométrico",MAT,"Geometría"),("sufa","superficie",MAT,"Geometría"),("bola","volumen",MAT,"Geometría"),
@@ -83,14 +83,14 @@ COMPUESTOS += [
  ("kore-lu","allí",GRA),("gore-pa-pa","muy grande",GRA),("gore-po-po","muy pequeño",GRA),("re-se","también",GRA),("gura-lena","gracias",GRA),
  ("bosa-rude","perdón",GRA),("pu-reme","adiós / hasta la próxima",GRA),("pu-kelo","otra vez (otro ciclo)",GRA),("be-pose","primero",GRA),("ga-pose","tercero",GRA),
  # verbos y nombres cotidianos
- ("loke-luma","ver",COT),("sone-luma","oír",COT),("maku-tada","tocar",COT),("noke-luma","oler",COT),("sabe-luma","saborear",COT),
+ 
  ("kalu-duma","caminar",COT),("loke-suna","llorar",COT),("sabe-lena","reír",COT),("sabe-sone","cantar",COT),("lena-duma","jugar",COT),
  ("nume-reka","pedir",COT),("kera-nume","buscar",COT),("reka-pema","responder",COT),("pu-dure","esperar",COT),("reka-tera","cuento / narración",COT),
  ("sena-nara","nombre (signo de persona)",COT),("ruma-kuna","pájaro",COT),("ruma-suna","pez",COT),("nelo-lena","flor",COT),("saro-kore","país",COT),
  ("sade-kelo","año (ciclo del sol)",COT),("mune-kelo","mes (ciclo de la luna)",COT),("loda-kelo","día (ciclo de rotación)",COT),
- ("suna-duma","río",COT),("suna-gore-pa","mar",COT),("taro-go","montaña",COT),("nelo-gore-pa","árbol",COT),("sura-duma","viento",COT),
+ ("suna-gore-pa","mar",COT),("taro-go","montaña",COT),("nelo-gore-pa","árbol",COT),("sura-duma","viento",COT),
  ("sura-suna","nube",COT),("kuna-suna","lluvia",COT),("kuna-bore","noche",COT),("kuna-salo","luz del día (poético)",COT),("mune-salo","luz de luna",COT),
- ("suma-pado","nacimiento",COT),("suma-gune","muerte",COT),("doma-duma","emoción",COT),("doma-salo","alegría",COT),("doma-bosa","tristeza",COT),
+ ("suma-pado","nacimiento",COT),("suma-gune","muerte",COT),("doma-duma","emoción",COT),("doma-bosa","tristeza",COT),
  ("dase-pa","largo",COT),("dase-po","corto",COT),
  # astronomia
  ("gora-fese","universo",AST),("sade-lu","estrella (sol lejano)",AST),("taro-duma","planeta (tierra que se mueve)",AST),("sade-lu-seta","galaxia",AST),
@@ -117,8 +117,8 @@ INF = "Informática"
 HW, PR, DA, RE, SE, DE, IA = ("Equipos y sistema", "Programación", "Datos", "Redes y web", "Seguridad", "Calidad y depuración", "Inteligencia artificial")
 COMPUESTOS += [
  # equipos y sistema
- ("meka-mado","computadora (máquina de cálculo)",INF,HW),("meka-gume","hardware (materia de la máquina)",INF,HW),("meka-gora","sistema operativo (entorno de la máquina)",INF,HW),
- ("loke-tabe","pantalla (superficie para el ojo)",INF,HW),("maku-tabe","teclado (superficie de la mano)",INF,HW),("kuna-meka","nube informática (máquina del cielo)",INF,HW),
+ ("meka-gume","hardware (materia de la máquina)",INF,HW),("meka-gora","sistema operativo (entorno de la máquina)",INF,HW),
+ ("loke-tabe","pantalla (superficie para el ojo)",INF,HW),("maku-tabe","teclado (superficie de la mano)",INF,HW),("lu-meka","nube informática (máquina lejana)",INF,HW),
  ("meka-bosa","fallo del equipo (máquina rota)",INF,HW),("pado-telo","reiniciar (cambio al comienzo)",INF,HW),("tame-telo","actualizar (cambio a nuevo)",INF,HW),
  ("cho-be","bit (0-1)",INF,HW),("du-banu","binario (número dos)",INF,HW),
  # programacion
@@ -133,7 +133,7 @@ COMPUESTOS += [
  ("rela-seta","grafo (conjunto de conexiones)",INF,DA),("doke-gura","entrada de datos (datos que entran)",INF,DA),("doke-pema","salida de datos (datos que salen)",INF,DA),
  ("nuse-dare","borrar (hacer vacío)",INF,DA),("dare-se","copiar (hacer igual)",INF,DA),("tera-dore","versión (forma en el tiempo)",INF,DA),("tera-dore-mena","control de versiones (memoria de versiones)",INF,DA),
  # redes y web
- ("rela-gora","internet (conexión del mundo)",INF,RE),("rela-kuma","sitio web (hogar de conexión)",INF,RE),("rela-foma","protocolo (reglas de conexión)",INF,RE),
+ ("rela-kuma","sitio web (hogar de conexión)",INF,RE),("rela-foma","protocolo (reglas de conexión)",INF,RE),
  ("nado-foma","API (acceso con reglas)",INF,RE),("meka-pema","servidor (máquina que da)",INF,RE),("meka-gura","cliente (máquina que recibe)",INF,RE),
  ("reka-rela","correo electrónico (mensaje por conexión)",INF,RE),
  # seguridad
@@ -152,11 +152,11 @@ RAICES += [("bomo","bug (defecto del programa)",INF,DE)]
 UI = "Interfaz"
 COMPUESTOS += [
  ("foma-fena","configuración (poner reglas)",UI,"Menús y sistema"),("meka-gune","apagar (fin de la máquina)",UI,"Menús y sistema"),("meka-sule","suspender (la máquina duerme)",UI,"Menús y sistema"),
- ("nado-bure","iniciar sesión (abrir acceso)",UI,"Menús y sistema"),("nado-kose","cerrar sesión (cerrar acceso)",UI,"Menús y sistema"),("saku-reka","advertencia (mensaje de alerta)",UI,"Menús y sistema"),
- ("seta-nado","menú (conjunto de accesos)",UI,"Elementos"),("loke-kopa","ventana (contenedor para el ojo)",UI,"Elementos"),("tada-sena","botón (signo de contacto)",UI,"Elementos"),
+ ("saku-reka","advertencia (mensaje de alerta)",UI,"Menús y sistema"),
+ ("seta-nado","menú (conjunto de accesos)",UI,"Elementos"),("loke-kopa","ventana de programa (contenedor para el ojo)",UI,"Elementos"),("tada-sena","botón (signo de contacto)",UI,"Elementos"),
  ("dabo-kopa","papelera (contenedor de suciedad)",UI,"Elementos"),("meka-tabe","escritorio (superficie de la máquina)",UI,"Elementos"),
  ("enu-kopa","batería (contenedor de energía)",UI,"Equipo"),("sone-gore","volumen de sonido (tamaño del sonido)",UI,"Equipo"),("salo-gore","brillo (tamaño de la luz)",UI,"Equipo"),
- ("rela-sura","red inalámbrica (conexión del aire)",UI,"Equipo"),("beka-meka","impresora (máquina de escritura)",UI,"Equipo"),
+ ("rela-sura","red inalámbrica (conexión del aire)",UI,"Equipo"),("meka-beka","impresora (máquina de escritura)",UI,"Equipo"),
  ("pe-telo","deshacer (cambio al pasado)",UI,"Acciones"),("pu-telo","rehacer (cambio al futuro)",UI,"Acciones"),("tera-sena","fecha y hora (signo de tiempo)",UI,"Acciones"),
 ]
 
@@ -172,27 +172,76 @@ COMPUESTOS += [
  ("sabe-duma","lengua (movimiento de la boca)",CN,CU),("loke-sabe","cara (ojo y boca)",CN,CU),("tume-rela","cuello (unión de la cabeza)",CN,CU),
  ("tume-rena","cerebro (cabeza que piensa)",CN,CU),
  # tronco y miembros
- ("bora-kopa","vientre (contenedor del cuerpo)",CN,CU),("doma-kopa","pecho (contenedor del corazón)",CN,CU),("sura-kopa","pulmón (contenedor de aire)",CN,CU),
- ("fame-kopa","estómago (contenedor de comida)",CN,CU),("bora-gase","hígado (limpieza del cuerpo)",CN,CU),("maku-bora","brazo (cuerpo de la mano)",CN,CU),
+ ("bora-kopa","vientre / abdomen (contenedor del cuerpo)",CN,CU),("doma-kopa","pecho (contenedor del corazón)",CN,CU),("sura-kopa","pulmón (contenedor de aire)",CN,CU),
+ ("fame-kopa","estómago (contenedor de comida)",CN,CU),("bora-gase","hígado (limpieza del cuerpo)",CN,CU),("maku-rela","brazo (unión de la mano)",CN,CU),
  ("maku-palo","dedo (parte de la mano)",CN,CU),("maku-fese","uña (límite de la mano)",CN,CU),("kalu-gune","pie (fin de la pierna)",CN,CU),("kalu-telo","rodilla (cambio de la pierna)",CN,CU),
  # animales
- ("bora-gune","cola (fin del cuerpo)",CN,CU),("tume-faro","cuerno (fuerza de la cabeza)",CN,CU),("ruma-kuna-nelo","pluma (planta del pájaro)",CN,CU),
+ ("bora-gune","cola (fin del cuerpo)",CN,CU),("tume-faro","cuerno (fuerza de la cabeza)",CN,CU),("ruma-kuna-lobe","pluma (cubierta del pájaro)",CN,CU),
  ("pado-kopa","huevo (contenedor del comienzo)",CN,CU),("naku-nobe","leche (bebida del hijo)",CN,CU),("ruma-galo","perro (animal que ayuda)",CN,CU),("ruma-lore","mascota (animal de afecto)",CN,CU),
  # tierra, agua, fuego, aire
  ("taro-goda","piedra (tierra sólida)",CN,NA),("taro-gore-po","arena (tierra pequeña)",CN,NA),("taro-suna","barro (tierra y agua)",CN,NA),("taro-sura","polvo (tierra en el aire)",CN,NA),
  ("pore-sura","humo (aire de fuego)",CN,NA),("pore-taro","ceniza (tierra de fuego)",CN,NA),("pore-salo","llama (luz de fuego)",CN,NA),
  ("suna-goda","hielo (agua sólida)",CN,NA),("kuna-suna-goda","nieve (hielo del cielo)",CN,NA),("suna-boga","vapor (agua gaseosa)",CN,NA),
- ("kuna-sone","trueno (sonido del cielo)",CN,NA),("kuna-faro","rayo (fuerza del cielo)",CN,NA),("suna-taro","isla (tierra del agua)",CN,NA),("suna-kopa","lago (contenedor de agua)",CN,NA),
+ ("kuna-sone","trueno (sonido del cielo)",CN,NA),("kuna-faro","rayo (fuerza del cielo)",CN,NA),("suna-taro","isla (tierra del agua)",CN,NA),
  ("taro-nuse","cueva (tierra vacía)",CN,NA),("suna-nuse","seco (agua vacía)",CN,NA),("suna-mude","húmedo (lleno de agua)",CN,NA),("selo-dore","redondo (forma de círculo)",CN,NA),
  # plantas
- ("nelo-saro","bosque (comunidad de plantas)",CN,NA),("nelo-fame","fruta (comida de planta)",CN,NA),("nelo-maku","hoja (mano de la planta)",CN,NA),("nelo-taro","raíz de planta (planta de tierra)",CN,NA),
- ("nelo-lobe","corteza (cubierta de planta)",CN,NA),("pado-nelo","semilla (comienzo de planta)",CN,NA),("nelo-palo","rama (parte de planta)",CN,NA),("nelo-bora","tronco (cuerpo de planta)",CN,NA),
+ ("nelo-saro","bosque (comunidad de plantas)",CN,NA),("nelo-fame","fruta / alimento vegetal (comida de planta)",CN,NA),("nelo-maku","hoja (mano de la planta)",CN,NA),("nelo-taro","raíz de planta (planta de tierra)",CN,NA),
+ ("nelo-lobe","corteza (cubierta de planta)",CN,NA),("pado-nelo","semilla (comienzo de planta)",CN,NA),("nelo-rela","rama (unión de la planta)",CN,NA),("nelo-bora","tronco (cuerpo de planta)",CN,NA),
  # posturas y acciones del cuerpo
- ("go-pose","estar de pie (postura arriba)",CN,AC),("gu-pose","acostarse (postura abajo)",CN,AC),("sede-pose","sentarse (postura de asiento)",CN,AC),("sabe-bosa","morder (romper con la boca)",CN,AC),
+ ("kalu-kefe","estar de pie (la pierna sostiene)",CN,AC),("bora-gu","acostarse (cuerpo abajo)",CN,AC),("sede-pose","sentarse (postura de asiento)",CN,AC),("sabe-bosa","morder (romper con la boca)",CN,AC),
 ]
 # --- Interfaz del sitio (para el modo inmersion): PROPUESTA -> VERIFICADA
 SI = "Sitio"
 COMPUESTOS += [
- ("sena-seta","diccionario (conjunto de signos)",SI,"Navegación"),("lodu-lena","literatura (lectura agradable)",SI,"Navegación"),("tase-palo","lección (parte del aprender)",SI,"Navegación"),
+ ("reka-doke","diccionario (información de la comunicación)",SI,"Navegación"),("lodu-lena","literatura (lectura agradable)",SI,"Navegación"),("tase-palo","lección (parte del aprender)",SI,"Navegación"),
  ("tase-daro","ejercicio (trabajo de aprender)",SI,"Navegación"),("tase-kelo","curso (ciclo de aprendizaje)",SI,"Navegación"),("reka-seta","vocabulario (conjunto de palabras)",SI,"Navegación"),
+]
+
+# --- Reconciliacion con el Primer Diccionario Conceptual 1.0 (2026-10-12): las formas ya existentes mandan.
+# Sentidos con el patron percepcion + estimulo (luma-salo ver, luma-sone oir ya existen en el Primer Diccionario)
+COMPUESTOS += [
+ ("luma-sura","oler (percibir el aire)",COT),("luma-fame","saborear (percibir la comida)",COT),("luma-tada","tocar (percibir el contacto)",COT),
+ # fisica: formas usadas en la guia 2.0 que faltaban en el lexico
+ ("no-duma","reposo (no movimiento)",FIS),("no-telo","conservación (ausencia de cambio)",FIS),("pema-enu","emisión de energía",FIS),
+ ("gura-enu","absorción de energía",FIS),("fuda-duma-rata","caudal (tasa de flujo de fluido)",FIS),("dore-fese","contorno (límite de la forma)",MAT),
+]
+
+# --- Lote 2: vida diaria (calendario, geografia, familia, comida, casa y ropa, salud, dinero, transporte). 0 raices nuevas.
+V2 = "Vida diaria (lote 2)"
+CT, GE, FA, CC, CR, SA, DI, TR = ("Calendario y tiempo", "Geografía", "Familia y personas", "Comida y cocina", "Casa y ropa", "Salud", "Dinero y comercio", "Transporte y viaje")
+COMPUESTOS += [
+ ("te-loda-kelo","hoy (el día de ahora)",V2,CT),("pe-loda-kelo","ayer (el día anterior)",V2,CT),("pu-loda-kelo","mañana, el día siguiente (el día posterior)",V2,CT),
+ ("loda-kelo-pado","amanecer (comienzo del día)",V2,CT),("loda-kelo-gune","tarde (fin del día)",V2,CT),("loda-kelo-fame","almuerzo (comida del día)",V2,CT),
+ ("pado-fame","desayuno (comida del comienzo)",V2,CT),("kuna-bore-fame","cena (comida de la noche)",V2,CT),("mu-loda-kelo","semana (siete días)",V2,CT),
+ ("sade-kelo-palo","estación del año (parte del año)",V2,CT),("fure-pa-tera","verano (tiempo caliente)",V2,CT),("fure-po-tera","invierno (tiempo frío)",V2,CT),
+ ("suna-tera","época de lluvias (tiempo de agua)",V2,CT),("suna-nuse-tera","época seca (tiempo sin agua)",V2,CT),
+ ("taro-gore-pa","continente (gran tierra)",V2,GE),("kuma-seta","ciudad / pueblo (conjunto de casas)",V2,GE),("bade-kore","capital (lugar de autoridad)",V2,GE),
+ ("saro-fese","frontera (límite de la comunidad)",V2,GE),("kore-sena","mapa (signo de lugar)",V2,GE),("duma-kore","camino / ruta (lugar de movimiento)",V2,GE),
+ ("suna-go-kore","puente (lugar sobre el agua)",V2,GE),("taro-gu","valle (tierra abajo)",V2,GE),("suna-taro-fese","costa (límite del agua y la tierra)",V2,GE),
+ ("taro-suna-nuse","desierto (tierra sin agua)",V2,GE),("taro-pore","volcán (tierra de fuego)",V2,GE),
+ ("pade-pade","abuelo/a (progenitor del progenitor)",V2,FA),("naku-naku","nieto/a (descendiente del descendiente)",V2,FA),("pade-sare","tío/a (hermano/a del progenitor)",V2,FA),
+ ("sare-naku","sobrino/a (hijo/a del hermano/a)",V2,FA),("pade-sare-naku","primo/a (hijo/a del tío/a)",V2,FA),("lore-rela","pareja / cónyuge (unión de afecto)",V2,FA),
+ ("kuma-le-nara","vecino/a (persona de la casa cercana)",V2,FA),("naku-tame","bebé (descendiente nuevo)",V2,FA),("nara-tame","joven (persona nueva)",V2,FA),
+ ("nara-gore-pa","adulto/a (persona grande)",V2,FA),("nara-gule","anciano/a (persona vieja)",V2,FA),
+ ("pore-dare","cocinar (hacer con fuego)",V2,CC),("fame-kore","cocina (lugar de comida)",V2,CC),("fame-tabe","plato (superficie de comida)",V2,CC),
+ ("nobe-kopa","vaso (contenedor de bebida)",V2,CC),("pore-kopa","olla (contenedor de fuego)",V2,CC),("fame-feke","cubierto (herramienta de comida)",V2,CC),
+ ("bosa-feke","cuchillo (herramienta de romper)",V2,CC),("fame-moke","hambre (necesidad de comida)",V2,CC),("nobe-moke","sed (necesidad de bebida)",V2,CC),
+ ("lena-sabe","sabroso (agrado de la boca)",V2,CC),
+ ("kuma-palo","habitación (parte de la casa)",V2,CR),("sule-kore","dormitorio (lugar de dormir)",V2,CR),("gase-kore","baño (lugar de limpieza)",V2,CR),
+ ("reme-kore","sala (lugar de amistad)",V2,CR),("nelo-kore","jardín (lugar de plantas)",V2,CR),("loke-nado","ventana de la casa (acceso del ojo)",V2,CR),
+ ("kuma-fese","pared (límite de la casa)",V2,CR),("kuma-tabe","suelo (superficie de la casa)",V2,CR),("go-nado","escalera (acceso hacia arriba)",V2,CR),
+ ("nado-feke","llave (herramienta de acceso)",V2,CR),("sule-tabe","cama (superficie de dormir)",V2,CR),("salo-feke","lámpara (herramienta de luz)",V2,CR),
+ ("tume-bume","sombrero (ropa de la cabeza)",V2,CR),("doma-bume","camisa (ropa del pecho)",V2,CR),("kalu-bume","pantalón (ropa de la pierna)",V2,CR),
+ ("kalu-gune-bume","zapato (ropa del pie)",V2,CR),("maku-bume","guante (ropa de la mano)",V2,CR),
+ ("sado-bosa","enfermedad (rotura de la salud)",V2,SA),("bosa-dune","dolor (sentir rotura)",V2,SA),("sado-feke","medicina (herramienta de salud)",V2,SA),
+ ("sado-nara","médico (persona de salud)",V2,SA),("sado-kuma","hospital (casa de salud)",V2,SA),("bora-fure-pa","fiebre (cuerpo caliente)",V2,SA),
+ ("bora-bosa","herida (rotura del cuerpo)",V2,SA),("sado-rude","curar (reparar la salud)",V2,SA),
+ ("bado-feke","dinero (herramienta de valor)",V2,DI),("kera-fedo","comprar (obtener con pago)",V2,DI),("pema-fedo","vender (dar con pago)",V2,DI),
+ ("kume-kuma","tienda (casa de intercambio)",V2,DI),("kume-kore","mercado (lugar de intercambio)",V2,DI),("bado-kopa","banco (contenedor de valor)",V2,DI),
+ ("bado-bema-pa","caro (precio más)",V2,DI),("bado-bema-po","barato (precio menos)",V2,DI),("fedo-no","gratis (sin pago)",V2,DI),("fedo-pu","deuda (pago futuro)",V2,DI),
+ ("daro-fedo","salario (pago del trabajo)",V2,DI),
+ ("meka-duma","vehículo (máquina de movimiento)",V2,TR),("taro-meka","coche (máquina de tierra)",V2,TR),("suna-meka","barco (máquina de agua)",V2,TR),
+ ("sura-meka","avión (máquina de aire)",V2,TR),("duma-lu","viaje (movimiento lejano)",V2,TR),("duma-nara","viajero (persona que se mueve)",V2,TR),
+ ("suna-meka-kuma","puerto (casa de barcos)",V2,TR),("sura-meka-kuma","aeropuerto (casa de aviones)",V2,TR),("nado-sena","boleto (signo de acceso)",V2,TR),
+ ("bume-kopa","maleta (contenedor de ropa)",V2,TR),
 ]

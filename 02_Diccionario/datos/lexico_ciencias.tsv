@@ -15,7 +15,7 @@ funa	fu-na	raíz técnica	función	AUDITADO 2.0	Álgebra	Matemáticas
 duno	du-no	raíz técnica	dominio	AUDITADO 2.0	Álgebra	Matemáticas	
 remu	re-mu	raíz técnica	rango / imagen	AUDITADO 2.0	Álgebra	Matemáticas	
 loge	lo-ge	raíz técnica	logaritmo	AUDITADO 2.0	Álgebra	Matemáticas	
-seta	se-ta	raíz técnica	conjunto matemático	AUDITADO 2.0	Álgebra	Matemáticas	
+seta	se-ta	raíz técnica	conjunto / colección (en matemáticas: conjunto)	AUDITADO 2.0	Álgebra	Matemáticas	
 pota	po-ta	raíz técnica	punto geométrico	AUDITADO 2.0	Geometría	Matemáticas	
 loka	lo-ka	raíz técnica	línea	AUDITADO 2.0	Geometría	Matemáticas	
 pana	pa-na	raíz técnica	plano geométrico	AUDITADO 2.0	Geometría	Matemáticas	
@@ -188,11 +188,6 @@ pu-reme	pu-reme	construcción	adiós / hasta la próxima	APROBADA	Construcciones
 pu-kelo	pu-kelo	construcción	otra vez (otro ciclo)	APROBADA	Construcciones	Gramática 1.1	
 be-pose	be-pose	construcción	primero	APROBADA	Construcciones	Gramática 1.1	
 ga-pose	ga-pose	construcción	tercero	APROBADA	Construcciones	Gramática 1.1	
-loke-luma	loke-luma	construcción	ver	APROBADA	Construcciones	Cotidiano 0.1	
-sone-luma	sone-luma	construcción	oír	APROBADA	Construcciones	Cotidiano 0.1	
-maku-tada	maku-tada	construcción	tocar	APROBADA	Construcciones	Cotidiano 0.1	
-noke-luma	noke-luma	construcción	oler	APROBADA	Construcciones	Cotidiano 0.1	
-sabe-luma	sabe-luma	construcción	saborear	APROBADA	Construcciones	Cotidiano 0.1	
 kalu-duma	kalu-duma	construcción	caminar	APROBADA	Construcciones	Cotidiano 0.1	
 loke-suna	loke-suna	construcción	llorar	APROBADA	Construcciones	Cotidiano 0.1	
 sabe-lena	sabe-lena	construcción	reír	APROBADA	Construcciones	Cotidiano 0.1	
@@ -211,7 +206,6 @@ saro-kore	saro-kore	construcción	país	APROBADA	Construcciones	Cotidiano 0.1
 sade-kelo	sade-kelo	construcción	año (ciclo del sol)	APROBADA	Construcciones	Cotidiano 0.1	
 mune-kelo	mune-kelo	construcción	mes (ciclo de la luna)	APROBADA	Construcciones	Cotidiano 0.1	
 loda-kelo	loda-kelo	construcción	día (ciclo de rotación)	APROBADA	Construcciones	Cotidiano 0.1	
-suna-duma	suna-duma	construcción	río	APROBADA	Construcciones	Cotidiano 0.1	
 suna-gore-pa	suna-gore-pa	construcción	mar	APROBADA	Construcciones	Cotidiano 0.1	
 taro-go	taro-go	construcción	montaña	APROBADA	Construcciones	Cotidiano 0.1	
 nelo-gore-pa	nelo-gore-pa	construcción	árbol	APROBADA	Construcciones	Cotidiano 0.1	
@@ -224,7 +218,6 @@ mune-salo	mune-salo	construcción	luz de luna	APROBADA	Construcciones	Cotidiano 
 suma-pado	suma-pado	construcción	nacimiento	APROBADA	Construcciones	Cotidiano 0.1	
 suma-gune	suma-gune	construcción	muerte	APROBADA	Construcciones	Cotidiano 0.1	
 doma-duma	doma-duma	construcción	emoción	APROBADA	Construcciones	Cotidiano 0.1	
-doma-salo	doma-salo	construcción	alegría	APROBADA	Construcciones	Cotidiano 0.1	
 doma-bosa	doma-bosa	construcción	tristeza	APROBADA	Construcciones	Cotidiano 0.1	
 dase-pa	dase-pa	construcción	largo	APROBADA	Construcciones	Cotidiano 0.1	
 dase-po	dase-po	construcción	corto	APROBADA	Construcciones	Cotidiano 0.1	
@@ -277,12 +270,11 @@ sade-pado	sade-pado	construcción	este (donde nace el sol)	APROBADA	Construccion
 sade-gune	sade-gune	construcción	oeste (donde acaba el sol)	APROBADA	Construcciones	Astronomía	
 kore-go	kore-go	construcción	norte (lugar arriba)	APROBADA	Construcciones	Astronomía	
 kore-gu	kore-gu	construcción	sur (lugar abajo)	APROBADA	Construcciones	Astronomía	
-meka-mado	meka-mado	construcción	computadora (máquina de cálculo)	APROBADA	Equipos y sistema	Informática	
 meka-gume	meka-gume	construcción	hardware (materia de la máquina)	APROBADA	Equipos y sistema	Informática	
 meka-gora	meka-gora	construcción	sistema operativo (entorno de la máquina)	APROBADA	Equipos y sistema	Informática	
 loke-tabe	loke-tabe	construcción	pantalla (superficie para el ojo)	APROBADA	Equipos y sistema	Informática	
 maku-tabe	maku-tabe	construcción	teclado (superficie de la mano)	APROBADA	Equipos y sistema	Informática	
-kuna-meka	kuna-meka	construcción	nube informática (máquina del cielo)	APROBADA	Equipos y sistema	Informática	
+lu-meka	lu-meka	construcción	nube informática (máquina lejana)	VERIFICADA	Equipos y sistema	Informática	
 meka-bosa	meka-bosa	construcción	fallo del equipo (máquina rota)	APROBADA	Equipos y sistema	Informática	
 pado-telo	pado-telo	construcción	reiniciar (cambio al comienzo)	APROBADA	Equipos y sistema	Informática	
 tame-telo	tame-telo	construcción	actualizar (cambio a nuevo)	APROBADA	Equipos y sistema	Informática	
@@ -318,7 +310,6 @@ nuse-dare	nuse-dare	construcción	borrar (hacer vacío)	APROBADA	Datos	Informát
 dare-se	dare-se	construcción	copiar (hacer igual)	APROBADA	Datos	Informática	
 tera-dore	tera-dore	construcción	versión (forma en el tiempo)	APROBADA	Datos	Informática	
 tera-dore-mena	tera-dore-mena	construcción	control de versiones (memoria de versiones)	APROBADA	Datos	Informática	
-rela-gora	rela-gora	construcción	internet (conexión del mundo)	APROBADA	Redes y web	Informática	
 rela-kuma	rela-kuma	construcción	sitio web (hogar de conexión)	APROBADA	Redes y web	Informática	
 rela-foma	rela-foma	construcción	protocolo (reglas de conexión)	APROBADA	Redes y web	Informática	
 nado-foma	nado-foma	construcción	API (acceso con reglas)	APROBADA	Redes y web	Informática	
@@ -334,88 +325,186 @@ kare-mede	kare-mede	construcción	prueba / test (medir la corrección)	APROBADA	
 meka-rena	meka-rena	construcción	inteligencia artificial (máquina que piensa)	APROBADA	Inteligencia artificial	Informática	
 meka-tase	meka-tase	construcción	aprendizaje automático (máquina que aprende)	APROBADA	Inteligencia artificial	Informática	
 doke-fela	doke-fela	construcción	datos de entrenamiento (datos que enseñan)	APROBADA	Inteligencia artificial	Informática	
-foma-fena	foma-fena	construcción	configuración (poner reglas)	VERIFICADA	Menús y sistema	Interfaz	
-meka-gune	meka-gune	construcción	apagar (fin de la máquina)	VERIFICADA	Menús y sistema	Interfaz	
-meka-sule	meka-sule	construcción	suspender (la máquina duerme)	VERIFICADA	Menús y sistema	Interfaz	
-nado-bure	nado-bure	construcción	iniciar sesión (abrir acceso)	VERIFICADA	Menús y sistema	Interfaz	
-nado-kose	nado-kose	construcción	cerrar sesión (cerrar acceso)	VERIFICADA	Menús y sistema	Interfaz	
-saku-reka	saku-reka	construcción	advertencia (mensaje de alerta)	VERIFICADA	Menús y sistema	Interfaz	
-seta-nado	seta-nado	construcción	menú (conjunto de accesos)	VERIFICADA	Elementos	Interfaz	
-loke-kopa	loke-kopa	construcción	ventana (contenedor para el ojo)	VERIFICADA	Elementos	Interfaz	
-tada-sena	tada-sena	construcción	botón (signo de contacto)	VERIFICADA	Elementos	Interfaz	
-dabo-kopa	dabo-kopa	construcción	papelera (contenedor de suciedad)	VERIFICADA	Elementos	Interfaz	
-meka-tabe	meka-tabe	construcción	escritorio (superficie de la máquina)	VERIFICADA	Elementos	Interfaz	
-enu-kopa	enu-kopa	construcción	batería (contenedor de energía)	VERIFICADA	Equipo	Interfaz	
-sone-gore	sone-gore	construcción	volumen de sonido (tamaño del sonido)	VERIFICADA	Equipo	Interfaz	
-salo-gore	salo-gore	construcción	brillo (tamaño de la luz)	VERIFICADA	Equipo	Interfaz	
-rela-sura	rela-sura	construcción	red inalámbrica (conexión del aire)	VERIFICADA	Equipo	Interfaz	
-beka-meka	beka-meka	construcción	impresora (máquina de escritura)	VERIFICADA	Equipo	Interfaz	
-pe-telo	pe-telo	construcción	deshacer (cambio al pasado)	VERIFICADA	Acciones	Interfaz	
-pu-telo	pu-telo	construcción	rehacer (cambio al futuro)	VERIFICADA	Acciones	Interfaz	
-tera-sena	tera-sena	construcción	fecha y hora (signo de tiempo)	VERIFICADA	Acciones	Interfaz	
-bora-lobe	bora-lobe	construcción	piel (cubierta del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-suma-suna	suma-suna	construcción	sangre (agua de la vida)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-bora-kefe	bora-kefe	construcción	hueso (soporte del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-bora-gume	bora-gume	construcción	carne (materia del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-bora-mase	bora-mase	construcción	grasa (recurso del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-bora-suna	bora-suna	construcción	sudor (agua del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-tume-nelo	tume-nelo	construcción	cabello (planta de la cabeza)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-sone-loke	sone-loke	construcción	oreja (ojo del sonido)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-sabe-faro	sabe-faro	construcción	diente (fuerza de la boca)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-sabe-duma	sabe-duma	construcción	lengua (movimiento de la boca)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-loke-sabe	loke-sabe	construcción	cara (ojo y boca)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-tume-rela	tume-rela	construcción	cuello (unión de la cabeza)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-tume-rena	tume-rena	construcción	cerebro (cabeza que piensa)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-bora-kopa	bora-kopa	construcción	vientre (contenedor del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-doma-kopa	doma-kopa	construcción	pecho (contenedor del corazón)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-sura-kopa	sura-kopa	construcción	pulmón (contenedor de aire)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-fame-kopa	fame-kopa	construcción	estómago (contenedor de comida)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-bora-gase	bora-gase	construcción	hígado (limpieza del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-maku-bora	maku-bora	construcción	brazo (cuerpo de la mano)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-maku-palo	maku-palo	construcción	dedo (parte de la mano)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-maku-fese	maku-fese	construcción	uña (límite de la mano)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-kalu-gune	kalu-gune	construcción	pie (fin de la pierna)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-kalu-telo	kalu-telo	construcción	rodilla (cambio de la pierna)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-bora-gune	bora-gune	construcción	cola (fin del cuerpo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-tume-faro	tume-faro	construcción	cuerno (fuerza de la cabeza)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-ruma-kuna-nelo	ruma-kuna-nelo	construcción	pluma (planta del pájaro)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-pado-kopa	pado-kopa	construcción	huevo (contenedor del comienzo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-naku-nobe	naku-nobe	construcción	leche (bebida del hijo)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+foma-fena	foma-fena	construcción	configuración (poner reglas)	APROBADA	Menús y sistema	Interfaz	
+meka-gune	meka-gune	construcción	apagar (fin de la máquina)	APROBADA	Menús y sistema	Interfaz	
+meka-sule	meka-sule	construcción	suspender (la máquina duerme)	APROBADA	Menús y sistema	Interfaz	
+saku-reka	saku-reka	construcción	advertencia (mensaje de alerta)	APROBADA	Menús y sistema	Interfaz	
+seta-nado	seta-nado	construcción	menú (conjunto de accesos)	APROBADA	Elementos	Interfaz	
+loke-kopa	loke-kopa	construcción	ventana de programa (contenedor para el ojo)	APROBADA	Elementos	Interfaz	
+tada-sena	tada-sena	construcción	botón (signo de contacto)	APROBADA	Elementos	Interfaz	
+dabo-kopa	dabo-kopa	construcción	papelera (contenedor de suciedad)	APROBADA	Elementos	Interfaz	
+meka-tabe	meka-tabe	construcción	escritorio (superficie de la máquina)	APROBADA	Elementos	Interfaz	
+enu-kopa	enu-kopa	construcción	batería (contenedor de energía)	APROBADA	Equipo	Interfaz	
+sone-gore	sone-gore	construcción	volumen de sonido (tamaño del sonido)	APROBADA	Equipo	Interfaz	
+salo-gore	salo-gore	construcción	brillo (tamaño de la luz)	APROBADA	Equipo	Interfaz	
+rela-sura	rela-sura	construcción	red inalámbrica (conexión del aire)	APROBADA	Equipo	Interfaz	
+meka-beka	meka-beka	construcción	impresora (máquina de escritura)	APROBADA	Equipo	Interfaz	
+pe-telo	pe-telo	construcción	deshacer (cambio al pasado)	APROBADA	Acciones	Interfaz	
+pu-telo	pu-telo	construcción	rehacer (cambio al futuro)	APROBADA	Acciones	Interfaz	
+tera-sena	tera-sena	construcción	fecha y hora (signo de tiempo)	APROBADA	Acciones	Interfaz	
+bora-lobe	bora-lobe	construcción	piel (cubierta del cuerpo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+suma-suna	suma-suna	construcción	sangre (agua de la vida)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-kefe	bora-kefe	construcción	hueso (soporte del cuerpo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-gume	bora-gume	construcción	carne (materia del cuerpo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-mase	bora-mase	construcción	grasa (recurso del cuerpo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-suna	bora-suna	construcción	sudor (agua del cuerpo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+tume-nelo	tume-nelo	construcción	cabello (planta de la cabeza)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+sone-loke	sone-loke	construcción	oreja (ojo del sonido)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+sabe-faro	sabe-faro	construcción	diente (fuerza de la boca)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+sabe-duma	sabe-duma	construcción	lengua (movimiento de la boca)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+loke-sabe	loke-sabe	construcción	cara (ojo y boca)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+tume-rela	tume-rela	construcción	cuello (unión de la cabeza)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+tume-rena	tume-rena	construcción	cerebro (cabeza que piensa)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-kopa	bora-kopa	construcción	vientre / abdomen (contenedor del cuerpo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+doma-kopa	doma-kopa	construcción	pecho (contenedor del corazón)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+sura-kopa	sura-kopa	construcción	pulmón (contenedor de aire)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+fame-kopa	fame-kopa	construcción	estómago (contenedor de comida)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-gase	bora-gase	construcción	hígado (limpieza del cuerpo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+maku-rela	maku-rela	construcción	brazo (unión de la mano)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+maku-palo	maku-palo	construcción	dedo (parte de la mano)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+maku-fese	maku-fese	construcción	uña (límite de la mano)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+kalu-gune	kalu-gune	construcción	pie (fin de la pierna)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+kalu-telo	kalu-telo	construcción	rodilla (cambio de la pierna)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+bora-gune	bora-gune	construcción	cola (fin del cuerpo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+tume-faro	tume-faro	construcción	cuerno (fuerza de la cabeza)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+ruma-kuna-lobe	ruma-kuna-lobe	construcción	pluma (cubierta del pájaro)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+pado-kopa	pado-kopa	construcción	huevo (contenedor del comienzo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+naku-nobe	naku-nobe	construcción	leche (bebida del hijo)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
 ruma-galo	ruma-galo	construcción	perro (animal que ayuda)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-ruma-lore	ruma-lore	construcción	mascota (animal de afecto)	VERIFICADA	Cuerpo humano y animal	Cuerpo y naturaleza	
-taro-goda	taro-goda	construcción	piedra (tierra sólida)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-taro-gore-po	taro-gore-po	construcción	arena (tierra pequeña)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-taro-suna	taro-suna	construcción	barro (tierra y agua)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-taro-sura	taro-sura	construcción	polvo (tierra en el aire)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-pore-sura	pore-sura	construcción	humo (aire de fuego)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-pore-taro	pore-taro	construcción	ceniza (tierra de fuego)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-pore-salo	pore-salo	construcción	llama (luz de fuego)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-suna-goda	suna-goda	construcción	hielo (agua sólida)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-kuna-suna-goda	kuna-suna-goda	construcción	nieve (hielo del cielo)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-suna-boga	suna-boga	construcción	vapor (agua gaseosa)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-kuna-sone	kuna-sone	construcción	trueno (sonido del cielo)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-kuna-faro	kuna-faro	construcción	rayo (fuerza del cielo)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-suna-taro	suna-taro	construcción	isla (tierra del agua)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-suna-kopa	suna-kopa	construcción	lago (contenedor de agua)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-taro-nuse	taro-nuse	construcción	cueva (tierra vacía)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-suna-nuse	suna-nuse	construcción	seco (agua vacía)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-suna-mude	suna-mude	construcción	húmedo (lleno de agua)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-selo-dore	selo-dore	construcción	redondo (forma de círculo)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-nelo-saro	nelo-saro	construcción	bosque (comunidad de plantas)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-nelo-fame	nelo-fame	construcción	fruta (comida de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-nelo-maku	nelo-maku	construcción	hoja (mano de la planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-nelo-taro	nelo-taro	construcción	raíz de planta (planta de tierra)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-nelo-lobe	nelo-lobe	construcción	corteza (cubierta de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-pado-nelo	pado-nelo	construcción	semilla (comienzo de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-nelo-palo	nelo-palo	construcción	rama (parte de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-nelo-bora	nelo-bora	construcción	tronco (cuerpo de planta)	VERIFICADA	Naturaleza concreta	Cuerpo y naturaleza	
-go-pose	go-pose	construcción	estar de pie (postura arriba)	VERIFICADA	Posturas y acciones	Cuerpo y naturaleza	
-gu-pose	gu-pose	construcción	acostarse (postura abajo)	VERIFICADA	Posturas y acciones	Cuerpo y naturaleza	
-sede-pose	sede-pose	construcción	sentarse (postura de asiento)	VERIFICADA	Posturas y acciones	Cuerpo y naturaleza	
-sabe-bosa	sabe-bosa	construcción	morder (romper con la boca)	VERIFICADA	Posturas y acciones	Cuerpo y naturaleza	
-sena-seta	sena-seta	construcción	diccionario (conjunto de signos)	VERIFICADA	Navegación	Sitio	
-lodu-lena	lodu-lena	construcción	literatura (lectura agradable)	VERIFICADA	Navegación	Sitio	
-tase-palo	tase-palo	construcción	lección (parte del aprender)	VERIFICADA	Navegación	Sitio	
-tase-daro	tase-daro	construcción	ejercicio (trabajo de aprender)	VERIFICADA	Navegación	Sitio	
-tase-kelo	tase-kelo	construcción	curso (ciclo de aprendizaje)	VERIFICADA	Navegación	Sitio	
-reka-seta	reka-seta	construcción	vocabulario (conjunto de palabras)	VERIFICADA	Navegación	Sitio	
+ruma-lore	ruma-lore	construcción	mascota (animal de afecto)	APROBADA	Cuerpo humano y animal	Cuerpo y naturaleza	
+taro-goda	taro-goda	construcción	piedra (tierra sólida)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+taro-gore-po	taro-gore-po	construcción	arena (tierra pequeña)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+taro-suna	taro-suna	construcción	barro (tierra y agua)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+taro-sura	taro-sura	construcción	polvo (tierra en el aire)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+pore-sura	pore-sura	construcción	humo (aire de fuego)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+pore-taro	pore-taro	construcción	ceniza (tierra de fuego)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+pore-salo	pore-salo	construcción	llama (luz de fuego)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-goda	suna-goda	construcción	hielo (agua sólida)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+kuna-suna-goda	kuna-suna-goda	construcción	nieve (hielo del cielo)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-boga	suna-boga	construcción	vapor (agua gaseosa)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+kuna-sone	kuna-sone	construcción	trueno (sonido del cielo)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+kuna-faro	kuna-faro	construcción	rayo (fuerza del cielo)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-taro	suna-taro	construcción	isla (tierra del agua)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+taro-nuse	taro-nuse	construcción	cueva (tierra vacía)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-nuse	suna-nuse	construcción	seco (agua vacía)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+suna-mude	suna-mude	construcción	húmedo (lleno de agua)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+selo-dore	selo-dore	construcción	redondo (forma de círculo)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-saro	nelo-saro	construcción	bosque (comunidad de plantas)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-fame	nelo-fame	construcción	fruta / alimento vegetal (comida de planta)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-maku	nelo-maku	construcción	hoja (mano de la planta)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-taro	nelo-taro	construcción	raíz de planta (planta de tierra)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-lobe	nelo-lobe	construcción	corteza (cubierta de planta)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+pado-nelo	pado-nelo	construcción	semilla (comienzo de planta)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-rela	nelo-rela	construcción	rama (unión de la planta)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+nelo-bora	nelo-bora	construcción	tronco (cuerpo de planta)	APROBADA	Naturaleza concreta	Cuerpo y naturaleza	
+kalu-kefe	kalu-kefe	construcción	estar de pie (la pierna sostiene)	APROBADA	Posturas y acciones	Cuerpo y naturaleza	
+bora-gu	bora-gu	construcción	acostarse (cuerpo abajo)	APROBADA	Posturas y acciones	Cuerpo y naturaleza	
+sede-pose	sede-pose	construcción	sentarse (postura de asiento)	APROBADA	Posturas y acciones	Cuerpo y naturaleza	
+sabe-bosa	sabe-bosa	construcción	morder (romper con la boca)	APROBADA	Posturas y acciones	Cuerpo y naturaleza	
+reka-doke	reka-doke	construcción	diccionario (información de la comunicación)	APROBADA	Navegación	Sitio	
+lodu-lena	lodu-lena	construcción	literatura (lectura agradable)	APROBADA	Navegación	Sitio	
+tase-palo	tase-palo	construcción	lección (parte del aprender)	APROBADA	Navegación	Sitio	
+tase-daro	tase-daro	construcción	ejercicio (trabajo de aprender)	APROBADA	Navegación	Sitio	
+tase-kelo	tase-kelo	construcción	curso (ciclo de aprendizaje)	APROBADA	Navegación	Sitio	
+reka-seta	reka-seta	construcción	vocabulario (conjunto de palabras)	APROBADA	Navegación	Sitio	
+luma-sura	luma-sura	construcción	oler (percibir el aire)	APROBADA	Construcciones	Cotidiano 0.1	
+luma-fame	luma-fame	construcción	saborear (percibir la comida)	APROBADA	Construcciones	Cotidiano 0.1	
+luma-tada	luma-tada	construcción	tocar (percibir el contacto)	APROBADA	Construcciones	Cotidiano 0.1	
+no-duma	no-duma	construcción	reposo (no movimiento)	AUDITADO 2.0	Construcciones	Física	
+no-telo	no-telo	construcción	conservación (ausencia de cambio)	AUDITADO 2.0	Construcciones	Física	
+pema-enu	pema-enu	construcción	emisión de energía	AUDITADO 2.0	Construcciones	Física	
+gura-enu	gura-enu	construcción	absorción de energía	AUDITADO 2.0	Construcciones	Física	
+fuda-duma-rata	fuda-duma-rata	construcción	caudal (tasa de flujo de fluido)	AUDITADO 2.0	Construcciones	Física	
+dore-fese	dore-fese	construcción	contorno (límite de la forma)	AUDITADO 2.0	Construcciones	Matemáticas	
+te-loda-kelo	te-loda-kelo	construcción	hoy (el día de ahora)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+pe-loda-kelo	pe-loda-kelo	construcción	ayer (el día anterior)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+pu-loda-kelo	pu-loda-kelo	construcción	mañana, el día siguiente (el día posterior)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+loda-kelo-pado	loda-kelo-pado	construcción	amanecer (comienzo del día)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+loda-kelo-gune	loda-kelo-gune	construcción	tarde (fin del día)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+loda-kelo-fame	loda-kelo-fame	construcción	almuerzo (comida del día)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+pado-fame	pado-fame	construcción	desayuno (comida del comienzo)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+kuna-bore-fame	kuna-bore-fame	construcción	cena (comida de la noche)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+mu-loda-kelo	mu-loda-kelo	construcción	semana (siete días)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+sade-kelo-palo	sade-kelo-palo	construcción	estación del año (parte del año)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+fure-pa-tera	fure-pa-tera	construcción	verano (tiempo caliente)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+fure-po-tera	fure-po-tera	construcción	invierno (tiempo frío)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+suna-tera	suna-tera	construcción	época de lluvias (tiempo de agua)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+suna-nuse-tera	suna-nuse-tera	construcción	época seca (tiempo sin agua)	VERIFICADA	Calendario y tiempo	Vida diaria (lote 2)	
+taro-gore-pa	taro-gore-pa	construcción	continente (gran tierra)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+kuma-seta	kuma-seta	construcción	ciudad / pueblo (conjunto de casas)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+bade-kore	bade-kore	construcción	capital (lugar de autoridad)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+saro-fese	saro-fese	construcción	frontera (límite de la comunidad)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+kore-sena	kore-sena	construcción	mapa (signo de lugar)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+duma-kore	duma-kore	construcción	camino / ruta (lugar de movimiento)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+suna-go-kore	suna-go-kore	construcción	puente (lugar sobre el agua)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+taro-gu	taro-gu	construcción	valle (tierra abajo)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+suna-taro-fese	suna-taro-fese	construcción	costa (límite del agua y la tierra)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+taro-suna-nuse	taro-suna-nuse	construcción	desierto (tierra sin agua)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+taro-pore	taro-pore	construcción	volcán (tierra de fuego)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+pade-pade	pade-pade	construcción	abuelo/a (progenitor del progenitor)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+naku-naku	naku-naku	construcción	nieto/a (descendiente del descendiente)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+pade-sare	pade-sare	construcción	tío/a (hermano/a del progenitor)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+sare-naku	sare-naku	construcción	sobrino/a (hijo/a del hermano/a)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+pade-sare-naku	pade-sare-naku	construcción	primo/a (hijo/a del tío/a)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+lore-rela	lore-rela	construcción	pareja / cónyuge (unión de afecto)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+kuma-le-nara	kuma-le-nara	construcción	vecino/a (persona de la casa cercana)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+naku-tame	naku-tame	construcción	bebé (descendiente nuevo)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+nara-tame	nara-tame	construcción	joven (persona nueva)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+nara-gore-pa	nara-gore-pa	construcción	adulto/a (persona grande)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+nara-gule	nara-gule	construcción	anciano/a (persona vieja)	VERIFICADA	Familia y personas	Vida diaria (lote 2)	
+pore-dare	pore-dare	construcción	cocinar (hacer con fuego)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+fame-kore	fame-kore	construcción	cocina (lugar de comida)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+fame-tabe	fame-tabe	construcción	plato (superficie de comida)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+nobe-kopa	nobe-kopa	construcción	vaso (contenedor de bebida)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+pore-kopa	pore-kopa	construcción	olla (contenedor de fuego)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+fame-feke	fame-feke	construcción	cubierto (herramienta de comida)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+bosa-feke	bosa-feke	construcción	cuchillo (herramienta de romper)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+fame-moke	fame-moke	construcción	hambre (necesidad de comida)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+nobe-moke	nobe-moke	construcción	sed (necesidad de bebida)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+lena-sabe	lena-sabe	construcción	sabroso (agrado de la boca)	VERIFICADA	Comida y cocina	Vida diaria (lote 2)	
+kuma-palo	kuma-palo	construcción	habitación (parte de la casa)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+sule-kore	sule-kore	construcción	dormitorio (lugar de dormir)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+gase-kore	gase-kore	construcción	baño (lugar de limpieza)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+reme-kore	reme-kore	construcción	sala (lugar de amistad)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+nelo-kore	nelo-kore	construcción	jardín (lugar de plantas)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+loke-nado	loke-nado	construcción	ventana de la casa (acceso del ojo)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+kuma-fese	kuma-fese	construcción	pared (límite de la casa)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+kuma-tabe	kuma-tabe	construcción	suelo (superficie de la casa)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+go-nado	go-nado	construcción	escalera (acceso hacia arriba)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+nado-feke	nado-feke	construcción	llave (herramienta de acceso)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+sule-tabe	sule-tabe	construcción	cama (superficie de dormir)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+salo-feke	salo-feke	construcción	lámpara (herramienta de luz)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+tume-bume	tume-bume	construcción	sombrero (ropa de la cabeza)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+doma-bume	doma-bume	construcción	camisa (ropa del pecho)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+kalu-bume	kalu-bume	construcción	pantalón (ropa de la pierna)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+kalu-gune-bume	kalu-gune-bume	construcción	zapato (ropa del pie)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+maku-bume	maku-bume	construcción	guante (ropa de la mano)	VERIFICADA	Casa y ropa	Vida diaria (lote 2)	
+sado-bosa	sado-bosa	construcción	enfermedad (rotura de la salud)	VERIFICADA	Salud	Vida diaria (lote 2)	
+bosa-dune	bosa-dune	construcción	dolor (sentir rotura)	VERIFICADA	Salud	Vida diaria (lote 2)	
+sado-feke	sado-feke	construcción	medicina (herramienta de salud)	VERIFICADA	Salud	Vida diaria (lote 2)	
+sado-nara	sado-nara	construcción	médico (persona de salud)	VERIFICADA	Salud	Vida diaria (lote 2)	
+sado-kuma	sado-kuma	construcción	hospital (casa de salud)	VERIFICADA	Salud	Vida diaria (lote 2)	
+bora-fure-pa	bora-fure-pa	construcción	fiebre (cuerpo caliente)	VERIFICADA	Salud	Vida diaria (lote 2)	
+bora-bosa	bora-bosa	construcción	herida (rotura del cuerpo)	VERIFICADA	Salud	Vida diaria (lote 2)	
+sado-rude	sado-rude	construcción	curar (reparar la salud)	VERIFICADA	Salud	Vida diaria (lote 2)	
+bado-feke	bado-feke	construcción	dinero (herramienta de valor)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+kera-fedo	kera-fedo	construcción	comprar (obtener con pago)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+pema-fedo	pema-fedo	construcción	vender (dar con pago)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+kume-kuma	kume-kuma	construcción	tienda (casa de intercambio)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+kume-kore	kume-kore	construcción	mercado (lugar de intercambio)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+bado-kopa	bado-kopa	construcción	banco (contenedor de valor)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+bado-bema-pa	bado-bema-pa	construcción	caro (precio más)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+bado-bema-po	bado-bema-po	construcción	barato (precio menos)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+fedo-no	fedo-no	construcción	gratis (sin pago)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+fedo-pu	fedo-pu	construcción	deuda (pago futuro)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+daro-fedo	daro-fedo	construcción	salario (pago del trabajo)	VERIFICADA	Dinero y comercio	Vida diaria (lote 2)	
+meka-duma	meka-duma	construcción	vehículo (máquina de movimiento)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+taro-meka	taro-meka	construcción	coche (máquina de tierra)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+suna-meka	suna-meka	construcción	barco (máquina de agua)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+sura-meka	sura-meka	construcción	avión (máquina de aire)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+duma-lu	duma-lu	construcción	viaje (movimiento lejano)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+duma-nara	duma-nara	construcción	viajero (persona que se mueve)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+suna-meka-kuma	suna-meka-kuma	construcción	puerto (casa de barcos)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+sura-meka-kuma	sura-meka-kuma	construcción	aeropuerto (casa de aviones)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+nado-sena	nado-sena	construcción	boleto (signo de acceso)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	
+bume-kopa	bume-kopa	construcción	maleta (contenedor de ropa)	VERIFICADA	Transporte y viaje	Vida diaria (lote 2)	

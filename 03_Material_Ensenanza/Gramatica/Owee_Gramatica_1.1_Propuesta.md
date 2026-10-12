@@ -171,7 +171,7 @@ Owee ya tiene `ke` (si/condición), `kasu` (causa), `balo` (contraste), `re` (y)
 | Papel de `ra` | Español | Owee | Cómo se lee |
 |---|---|---|---|
 | **Sujeto** | La persona que desea agua es mi amiga | `nara, ra suna nume, me reme` | persona, *ella* agua desea, mi amiga |
-| **Objeto** | La casa que vi es grande | `kuma, me ra pe loke-luma, gore-pa` | casa, yo *la* vi, grande |
+| **Objeto** | La casa que vi es grande | `kuma, me ra pe luma-salo, gore-pa` | casa, yo *la* vi, grande |
 | **Poseedor** | La persona cuya casa es grande es mi amiga | `nara, ra kuma gore-pa, me reme` | persona, *su* casa grande, mi amiga (POSEEDOR + POSEÍDO: `ra kuma`) |
 | **Lugar** | La casa donde vivo es vieja | `kuma, me ra bo suma, gule` | casa, yo *en ella* vivo, vieja |
 | **Cosa** | El agua que bebí estaba fría | `suna, me ra pe nobe pume, fure-po` | agua, yo *la* bebí, fría |
@@ -179,7 +179,7 @@ Owee ya tiene `ke` (si/condición), `kasu` (causa), `balo` (contraste), `re` (y)
 
 ```owee
 nara, ra suna nume, me reme
-kuma, me ra pe loke-luma, gore-pa
+kuma, me ra pe luma-salo, gore-pa
 nara, ra kuma gore-pa, me reme
 kuma, me ra bo suma, gule
 suna, me ra pe nobe pume, fure-po
@@ -256,7 +256,7 @@ du soku du tanu ku
 
 ## 12. Verbos y nombres cotidianos
 
-Los verbos que faltaban se componen con **parte del cuerpo + función**, que es un patrón regular: `loke-luma` (ojo + percepción = ver), `sone-luma` (oír), `loke-suna` (ojo + agua = llorar), `sabe-sone` (boca + sonido = cantar), `kalu-duma` (pierna + movimiento = caminar).
+Los verbos que faltaban se componen con **parte del cuerpo + función**, que es un patrón regular: `luma-salo` (ojo + percepción = ver), `luma-sone` (oír), `loke-suna` (ojo + agua = llorar), `sabe-sone` (boca + sonido = cantar), `kalu-duma` (pierna + movimiento = caminar).
 <!--construcciones Cotidiano 0.1-->
 
 ## 13. Puntuación (provisional)

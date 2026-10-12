@@ -11,7 +11,7 @@ Todos siguen el patrón **raíz principal + modificador** (Gramática 1.1 §6), 
 - **Máquina** (`meka`): `meka-mado` computadora, `meka-gume` hardware, `meka-gora` sistema operativo.
 - **Regla** (`foma`) y **cálculo** (`mado`): `mado-foma` programa, `foma-beka` código, `mode-mado` algoritmo.
 - **Datos** (`doke`) y **memoria** (`mena`): `doke-kopa` archivo, `doke-mena` base de datos, `mena-fena` guardar.
-- **Conexión** (`rela`): `rela-gora` internet, `rela-foma` protocolo, `meka-pema` servidor, `meka-gura` cliente.
+- **Conexión** (`rela`): `gora-rela` internet, `rela-foma` protocolo, `meka-pema` servidor, `meka-gura` cliente.
 - **Corrección** (`kare`) y **rotura** (`bosa`): `kare-no` error, `bomo` bug (raíz corta), `bomo-kera` depurar, `kare-mede` prueba.
 
 Cada término cumple el principio de **una forma = un significado**.
