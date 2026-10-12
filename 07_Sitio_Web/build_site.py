@@ -303,7 +303,7 @@ def md(text, convert=True):
 NAV = [("index.html", "Inicio"), ("escritura.html", "Escritura"), ("pronunciacion.html", "Pronunciación"), ("gramatica.html", "Gramática"), ("diccionario.html", "Diccionario"),
        ("literatura.html", "Literatura"),
        ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"), ("informatica.html", "Informática")]),
-       ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y mejoras"), ("plan.html", "Plan de ampliación"), ("integracion.html", "Integración (oweelinux, web)"), ("descargas.html", "Descargas")])]
+       ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y pendientes"), ("auditoria.html", "Auditoría inicial"), ("plan.html", "Plan de ampliación"), ("integracion.html", "Integración (oweelinux, web)"), ("descargas.html", "Descargas")])]
 
 CSS = r"""
 :root{--bg:#fbfaf7;--surface:#fff;--ink:#1c2430;--ink2:#566170;--rule:#e2dfd7;--accent:#2F6FB0;--accent-ink:#fff;--soft:#eaf1f9;--warn:#a65f00;--ok:#2d7a4b;--owee-size:1.6rem}
@@ -445,7 +445,7 @@ y una escritura propia donde <strong>1 sílaba = 1 bloque</strong>. Este sitio r
 <a class="card" href="gramatica.html"><h3>Gramática 1.1</h3><p>Propuesta: «sí», imperativo, demostrativos, compuestos y su acento, relativas, nombres propios.</p></a>
 <a class="card" href="astronomia.html"><h3>Astronomía y astrología</h3><p>Borrador sin raíces nuevas: planetas por ordinal, zodiaco como elemento × modalidad.</p></a>
 <a class="card" href="plan.html"><h3>Plan de ampliación</h3><p>Qué más agregar para que Owee sea rico y práctico en el mundo.</p></a>
-<a class="card" href="estado.html"><h3>Estado y mejoras</h3><p>Auditoría del proyecto: qué falta y en qué orden conviene mejorarlo.</p></a>
+<a class="card" href="estado.html"><h3>Estado y pendientes</h3><p>Verificación completa, qué hay hecho, qué falta y qué áreas cubrir para un idioma de todos los campos.</p></a>
 <a class="card" href="descargas.html"><h3>Descargas</h3><p>Fuentes, teclado Fcitx5, cuadernos, guías y especificaciones en PDF.</p></a>
 <a class="card" href="pad/index.html"><h3>Owee Pad</h3><p>Escribe en romano y obtén Owee Script al instante; funciona sin conexión.</p></a>
 </div>
@@ -638,9 +638,11 @@ def build_integracion():
     page("integracion.html", "Integración (oweelinux y web)", f'<div class="layout"><aside class="toc">{t}</aside><article>{h}</article></div>', "integracion.html")
 
 def build_estado():
-    h, toc, _ = md((ROOT / "00_Registro_Maestro/Owee_Auditoria_y_Hoja_de_Ruta.md").read_text(encoding="utf8"), convert=False)
-    t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n == 2)
-    page("estado.html", "Estado y mejoras", f'<div class="layout"><aside class="toc">{t}</aside><article>{h}</article></div>', "estado.html")
+    for doc, fname, titulo in (("Owee_Estado_y_Pendientes.md", "estado.html", "Estado y pendientes"),
+                               ("Owee_Auditoria_y_Hoja_de_Ruta.md", "auditoria.html", "Auditoría inicial (histórica)")):
+        h, toc, _ = md((ROOT / "00_Registro_Maestro" / doc).read_text(encoding="utf8"), convert=False)
+        t = "".join(f'<a class="l{n}" href="#{i}">{esc(x)}</a>' for n, x, i in toc if n == 2)
+        page(fname, titulo, f'<div class="layout"><aside class="toc">{t}</aside><article>{h}</article></div>', fname)
 
 def build_descargas():
     D = OUT / "documentos"; D.mkdir(exist_ok=True)

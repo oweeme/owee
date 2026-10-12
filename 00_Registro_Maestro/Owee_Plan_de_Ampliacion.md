@@ -6,7 +6,7 @@
 
 ## 1. El cuello de botella: tamaño y consistencia del vocabulario
 
-**Dónde estás.** El léxico general tiene ~180 raíces; las ciencias aportan 89 raíces técnicas; hay ~190 compuestos propuestos. Eso ya permite poemas y frases sencillas, pero una conversación cotidiana pide unas **800–1 000 raíces** y la lectura de textos generales unas **2 000**.
+**Dónde estás (2026-10-12).** El léxico general tiene 200 formas; el léxico ampliado, 354 (90 raíces técnicas y 264 compuestos), con 335 ya aprobadas o auditadas. Eso permite poemas, canciones, ciencia y programación, pero una conversación cotidiana pide unas **800–1 000 raíces** y la lectura de textos generales unas **2 000**. La lista Swadesh de 100 palabras muestra que falta sobre todo **cuerpo y naturaleza concreta** (35 %). Ver «Estado y pendientes».
 
 **Un límite matemático que conviene conocer.** Con las reglas actuales hay 56 sílabas CV + 4 vocales = 60 sílabas, o sea **3 136 palabras de 2 sílabas** posibles. Con 1 500 raíces de 2 sílabas se ocuparía casi la mitad y habría centenares de pares casi iguales. **Recomendación:** raíces de **2 sílabas** para los ~800 conceptos básicos; **3 sílabas** para términos técnicos raros (ahí hay 175 000 combinaciones); y **componer** siempre que sea posible, como se ha hecho en Química, Astronomía y la Gramática 1.1.
 

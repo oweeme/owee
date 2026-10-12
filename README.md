@@ -45,6 +45,14 @@ python3 04_Fuentes/actual_3.3_fuente_y_glifos/Owee_Glyph_Master_3.3/build_glyph_
 
 Los PDF del sitio se generan con Chrome/Chromium: `python3 07_Sitio_Web/make_pdf.py`.
 
+## Estado y verificación
+
+El estado actual, los pendientes y las áreas por cubrir están en [`00_Registro_Maestro/Owee_Estado_y_Pendientes.md`](00_Registro_Maestro/Owee_Estado_y_Pendientes.md). Para verificar todo el proyecto (textos, léxico, sitio web, enlaces, herramientas y git):
+
+```bash
+python3 verificar_todo.py
+```
+
 ## Cómo contribuir
 
 Cada palabra nueva pasa por un flujo: **PROPUESTA → VERIFICADA → APROBADA** (ver `00_Registro_Maestro`, secciones 73–78). Una forma nueva debe cumplir V/CV sin `i`, usar partes que existan, tener como máximo 3 elementos y un significado único. Añade tus propuestas a `02_Diccionario/datos/ciencias_fuente.py` y ejecuta `generar_ciencias.py`; la aprobación final la da el autor en `aprobadas.txt`.
