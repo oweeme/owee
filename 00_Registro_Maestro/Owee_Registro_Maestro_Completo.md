@@ -1608,3 +1608,7 @@ El idioma se integra por tres vías, todas generadas desde `08_Integracion/datos
 ------------------------------------------------------------------------
 
 **Fin del registro maestro consolidado.**
+
+## 87. Lote 3 — Ciencia y sociedad (95 términos, aprobado)
+
+Biología, Tierra y clima, Educación, Derecho y política, Economía, Lengua, Artes y música, Cultura. Revisión por raíces: cada compuesto usa raíces existentes con significado adecuado, forma y significado únicos, máx. 3 elementos. Correcciones de la revisión: `alumno`=`tase-nara` y `juez`=`foma-nara` (el sufijo `po` significa «menos», no «persona»); `ciudadano`=`saro-nara`; eliminado «tiempo atmosférico» (casi sinónimo de `clima`); ~30 formas renombradas para evitar confusiones al oído (p. ej. terremoto `taro-faro-duma`, libro `beka-seta`, ciencia `lare-seta`).

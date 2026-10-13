@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 168 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 263 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -204,3 +204,98 @@ Criterios (2026-10-12):
 | `nara-fadu` | privacidad (seguridad de la persona) | `nara` (persona) + `fadu` (seguridad) | OK |
 | `mena-kopa` | almacenamiento (contenedor de memoria) | `mena` (memoria) + `kopa` (contenedor) | OK |
 | `loke-tabe-lobe` | fondo de pantalla (cubierta de la pantalla) | `loke` (ojo) + `tabe` (superficie de apoyo) + `lobe` (cubierta) | OK |
+| `suma-kedo` | célula (unidad de vida) | `suma` (vida) + `kedo` (unidad) | OK |
+| `suma-bora` | organismo (cuerpo de vida) | `suma` (vida) + `bora` (cuerpo) | OK |
+| `suma-seta` | especie (forma de vida) | `suma` (vida) + `seta` (conjunto) | OK |
+| `suma-doke` | gen (información de vida) | `suma` (vida) + `doke` (información) | OK |
+| `suma-telo-tera` | evolución (cambio de la vida en el tiempo) | `suma` (vida) + `telo` (cambiar) + `tera` (tiempo) | OK |
+| `suma-rela` | ecosistema (unión de vida) | `suma` (vida) + `rela` (unión) | OK |
+| `suma-kuma` | hábitat (lugar de vida) | `suma` (vida) + `kuma` (hogar) | OK |
+| `nelo-salo-dare` | fotosíntesis (la planta hace con luz) | `nelo` (planta) + `salo` (luz) + `dare` (hacer) | OK |
+| `sura-gura` | respiración (recibir aire) | `sura` (aire) + `gura` (recibir) | OK |
+| `fame-bora-telo` | digestión (cambio de la comida) | `fame` (comida) + `bora` (cuerpo) + `telo` (cambiar) | OK |
+| `suma-dare` | reproducción (hacer vida) | `suma` (vida) + `dare` (hacer) | OK |
+| `gore-pa-telo` | crecimiento (cambio de tamaño) | `gore` (tamaño) + `pa` (más) + `telo` (cambiar) | OK |
+| `suma-gore-po` | microbio (vida menor) | `suma` (vida) + `gore` (tamaño) + `po` (menos) | OK |
+| `ku-kalu` | insecto (animal pequeño) | `ku` (6) + `kalu` (pierna) | OK |
+| `luma-nado` | nervio (conexión de percepción) | `luma` (percepción) + `nado` (acceso) | OK |
+| `bora-faro` | músculo (fuerza del cuerpo) | `bora` (cuerpo) + `faro` (fuerza) | OK |
+| `taro-gume` | mineral (materia de la tierra) | `taro` (tierra) + `gume` (materia) | OK |
+| `taro-fame` | suelo fértil (tierra de vida) | `taro` (tierra) + `fame` (comida) | OK |
+| `taro-faro-duma` | terremoto (rotura de la tierra) | `taro` (tierra) + `faro` (fuerza) + `duma` (movimiento) | OK |
+| `sura-fure-tera` | clima (aire y temperatura) | `sura` (aire) + `fure` (temperatura) + `tera` (tiempo) | OK |
+| `kuna-faro-suna` | tormenta (fuerza y agua del cielo) | `kuna` (cielo) + `faro` (fuerza) + `suna` (agua) | OK |
+| `suna-taro-mude` | inundación (el agua llena la tierra) | `suna` (agua) + `taro` (tierra) + `mude` (lleno) | OK |
+| `suna-nuse-dure` | sequía (falta de agua prolongada) | `suna` (agua) + `nuse` (vacío) + `dure` (duración) | OK |
+| `suna-gora` | océano (agua del mundo) | `suna` (agua) + `gora` (mundo) | OK |
+| `taro-go-seta` | cordillera (conjunto de montañas) | `taro` (tierra) + `go` (arriba) + `seta` (conjunto) | OK |
+| `dabo-gora` | contaminación (suciedad del entorno) | `dabo` (suciedad) + `gora` (mundo) | OK |
+| `kade-pu-kelo` | reciclaje (usar en ciclo) | `kade` (usar) + `pu` (posterior) + `kelo` (ciclo) | OK |
+| `tase-kuma` | escuela (casa de aprender) | `tase` (aprender) + `kuma` (hogar) | OK |
+| `fela-nara` | maestro (persona que enseña) | `fela` (enseñar) + `nara` (persona) | OK |
+| `tase-nara` | alumno (persona que aprende) | `tase` (aprender) + `nara` (persona) | OK |
+| `beka-seta` | libro (objeto de escritura) | `beka` (escritura) + `seta` (conjunto) | OK |
+| `beka-feke` | bolígrafo / lápiz (herramienta de escritura) | `beka` (escritura) + `feke` (herramienta) | OK |
+| `tase-mede` | examen (medir el aprendizaje) | `tase` (aprender) + `mede` (medir) | OK |
+| `tase-bado` | calificación (valor del aprendizaje) | `tase` (aprender) + `bado` (valor) | OK |
+| `lare-kuma` | universidad (casa del saber) | `lare` (saber) + `kuma` (hogar) | OK |
+| `lodu-kuma` | biblioteca pública (casa de lectura) | `lodu` (lectura) + `kuma` (hogar) | OK |
+| `lare-seta` | ciencia (saber con reglas) | `lare` (saber) + `seta` (conjunto) | OK |
+| `lare-kera` | investigación (obtener saber) | `lare` (saber) + `kera` (obtener) | OK |
+| `soma-foma` | teoría (conjunto de ideas) | `soma` (idea) + `foma` (regla) | OK |
+| `lare-dare` | experimento (medir para saber) | `lare` (saber) + `dare` (hacer) | OK |
+| `foma-bade` | ley (regla de la autoridad) | `foma` (regla) + `bade` (autoridad) | OK |
+| `pase-pode` | derecho a algo (poseer la posibilidad) | `pase` (posesión) + `pode` (posibilidad) | OK |
+| `kare-foma` | justicia (regla correcta) | `kare` (corrección) + `foma` (regla) | OK |
+| `bade-saro` | gobierno (autoridad de la comunidad) | `bade` (autoridad) + `saro` (comunidad) | OK |
+| `dese-saro` | elección (decisión de la comunidad) | `dese` (decisión) + `saro` (comunidad) | OK |
+| `dese-pema` | voto (dar la decisión) | `dese` (decisión) + `pema` (dar) | OK |
+| `foma-bosa` | delito (rotura de la regla) | `foma` (regla) + `bosa` (rotura) | OK |
+| `foma-nara` | juez (persona de la ley) | `foma` (regla) + `nara` (persona) | OK |
+| `foma-fadu` | policía (seguridad de la regla) | `foma` (regla) + `fadu` (seguridad) | OK |
+| `foma-fadu-nara` | agente de policía (persona de la policía) | `foma` (regla) + `fadu` (seguridad) + `nara` (persona) | OK |
+| `foma-kume` | contrato (unión de reglas) | `foma` (regla) + `kume` (intercambio) | OK |
+| `malo-saro` | paz (calma de la comunidad) | `malo` (calma) + `saro` (comunidad) | OK |
+| `naro-bosa` | guerra (rotura entre grupos) | `naro` (grupo humano) + `bosa` (rotura) | OK |
+| `faro-naro` | ejército (grupo de fuerza) | `faro` (fuerza) + `naro` (grupo humano) | OK |
+| `suma-gune-feke` | arma (herramienta de muerte) | `suma` (vida) + `gune` (fin) + `feke` (herramienta) | OK |
+| `saro-nara` | ciudadano (persona de la comunidad) | `saro` (comunidad) + `nara` (persona) | OK |
+| `duma-pode` | libertad (poder moverse) | `duma` (movimiento) + `pode` (posibilidad) | OK |
+| `mase-kume` | economía (recursos e intercambio) | `mase` (recurso) + `kume` (intercambio) | OK |
+| `daro-saro` | empresa (comunidad de trabajo) | `daro` (trabajo) + `saro` (comunidad) | OK |
+| `daro-bade` | jefe (autoridad del trabajo) | `daro` (trabajo) + `bade` (autoridad) | OK |
+| `bade-fedo` | impuesto (pago a la autoridad) | `bade` (autoridad) + `fedo` (pago) | OK |
+| `bado-kera` | ganancia (obtener valor) | `bado` (valor) + `kera` (obtener) | OK |
+| `bado-gune` | pérdida (rotura del valor) | `bado` (valor) + `gune` (fin) | OK |
+| `mase-mude` | riqueza (recursos llenos) | `mase` (recurso) + `mude` (lleno) | OK |
+| `mase-nuse` | pobreza (recursos vacíos) | `mase` (recurso) + `nuse` (vacío) | OK |
+| `dare-kema` | producto (objeto hecho) | `dare` (hacer) + `kema` (objeto) | OK |
+| `saro-reka` | idioma (comunicación de una comunidad) | `saro` (comunidad) + `reka` (comunicación) | OK |
+| `reka-palo` | palabra (parte de la comunicación) | `reka` (comunicación) + `palo` (parte) | OK |
+| `reka-fese` | oración (comunicación completa) | `reka` (comunicación) + `fese` (límite) | OK |
+| `sone-palo` | sílaba (parte del sonido) | `sone` (sonido) + `palo` (parte) | OK |
+| `reka-duma` | verbo (palabra de acción) | `reka` (comunicación) + `duma` (movimiento) | OK |
+| `reka-kema` | sustantivo (palabra de objeto) | `reka` (comunicación) + `kema` (objeto) | OK |
+| `reka-lafe` | adjetivo (palabra de forma) | `reka` (comunicación) + `lafe` (calidad) | OK |
+| `reka-dore-foma` | gramática (reglas de la forma de comunicación) | `reka` (comunicación) + `dore` (forma) + `foma` (regla) | OK |
+| `telo-reka` | traducción (cambio de comunicación) | `telo` (cambiar) + `reka` (comunicación) | OK |
+| `telo-reka-nara` | traductor (persona que traduce) | `telo` (cambiar) + `reka` (comunicación) + `nara` (persona) | OK |
+| `soma-karo` | significado (idea de la comunicación) | `soma` (idea) + `karo` (entender) | OK |
+| `lena-dare` | arte (hacer lo agradable) | `lena` (agrado) + `dare` (hacer) | OK |
+| `lena-dare-nara` | artista (persona que hace arte) | `lena` (agrado) + `dare` (hacer) + `nara` (persona) | OK |
+| `lena-sone` | música (sonido agradable) | `lena` (agrado) + `sone` (sonido) | OK |
+| `lena-sone-feke` | instrumento musical (herramienta de sonido) | `lena` (agrado) + `sone` (sonido) + `feke` (herramienta) | OK |
+| `sone-sena` | nota musical (signo de sonido) | `sone` (sonido) + `sena` (signo) | OK |
+| `sone-kelo` | ritmo (ciclo de sonido) | `sone` (sonido) + `kelo` (ciclo) | OK |
+| `sone-duma` | melodía (movimiento del sonido) | `sone` (sonido) + `duma` (movimiento) | OK |
+| `sone-rela` | armonía (unión de sonidos) | `sone` (sonido) + `rela` (unión) | OK |
+| `sone-nuse` | silencio (sonido vacío) | `sone` (sonido) + `nuse` (vacío) | OK |
+| `sabe-sone-nara` | cantante (persona que canta) | `sabe` (boca) + `sone` (sonido) + `nara` (persona) | OK |
+| `lena-bora-duma` | danza (movimiento del cuerpo) | `lena` (agrado) + `bora` (cuerpo) + `duma` (movimiento) | OK |
+| `salo-sena-dare` | dibujo / pintura (hacer imagen) | `salo` (luz) + `sena` (signo) + `dare` (hacer) | OK |
+| `salo-sena-kera` | fotografía (obtener imagen) | `salo` (luz) + `sena` (signo) + `kera` (obtener) | OK |
+| `salo-sena-duma` | película (imagen en movimiento) | `salo` (luz) + `sena` (signo) + `duma` (movimiento) | OK |
+| `mena-tera` | historia (información del tiempo) | `mena` (memoria) + `tera` (tiempo) | OK |
+| `saro-mena` | cultura (memoria de la comunidad) | `saro` (comunidad) + `mena` (memoria) | OK |
+| `naro-lena` | fiesta (grupo agradable) | `naro` (grupo humano) + `lena` (agrado) | OK |
+| `feke-lare` | tecnología (saber de herramientas) | `feke` (herramienta) + `lare` (saber) | OK |

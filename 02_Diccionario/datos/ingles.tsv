@@ -781,7 +781,6 @@ taro-gume	mineral
 taro-fame	soil
 taro-faro-duma	earthquake
 sura-fure-tera	climate
-kuna-sura-tera	weather
 kuna-faro-suna	storm
 suna-taro-mude	flood
 suna-nuse-dure	drought
@@ -791,7 +790,7 @@ dabo-gora	pollution
 kade-pu-kelo	recycling
 tase-kuma	school
 fela-nara	teacher
-tase-kuma-po	student
+tase-nara	student
 beka-seta	book
 beka-feke	pen / pencil
 tase-mede	exam
@@ -809,7 +808,7 @@ bade-saro	government
 dese-saro	election
 dese-pema	vote
 foma-bosa	crime
-foma-kore-po	judge
+foma-nara	judge
 foma-fadu	police
 foma-fadu-nara	police officer
 foma-kume	contract
@@ -817,7 +816,7 @@ malo-saro	peace
 naro-bosa	war
 faro-naro	army
 suma-gune-feke	weapon
-saro-kore-nara	citizen
+saro-nara	citizen
 duma-pode	freedom
 mase-kume	economy
 daro-saro	company
