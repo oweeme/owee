@@ -368,3 +368,21 @@ COMPUESTOS += [
  ("naro-lena","fiesta (grupo agradable)",L3,"Cultura"),
  ("feke-lare","tecnología (saber de herramientas)",L3,"Cultura"),
 ]
+
+L4 = "Interfaz 2 (lote 4)"
+COMPUESTOS += [
+ ("dore-salo","apariencia (forma que se ve)",L4,"Interfaz"),
+ ("dore-seta","tema visual (conjunto de apariencia)",L4,"Interfaz"),
+ ("salo-pa","claro (con más luz)",L4,"Interfaz"),
+ ("salo-po","oscuro (con menos luz)",L4,"Interfaz"),
+ ("bore-fale","gris (negro y blanco)",L4,"Interfaz"),
+ ("meka-tabe-seta","escritorios virtuales (conjunto de escritorios)",L4,"Interfaz"),
+ ("luma-tada-tabe","panel táctil (superficie de tacto)",L4,"Interfaz"),
+ ("sape-nado","atajo (acceso rápido)",L4,"Interfaz"),
+ ("fadu-kose","bloquear (cerrar con seguridad)",L4,"Interfaz"),
+ ("nara-pase","personal (de la persona)",L4,"Interfaz"),
+ ("nara-meka-rela","interfaz (unión persona-máquina)",L4,"Interfaz"),
+ ("loke-tabe-kera","captura de pantalla (obtener la pantalla)",L4,"Interfaz"),
+ ("mado-foma-kume","tienda de aplicaciones (intercambio de programas)",L4,"Interfaz"),
+ ("gade-no","otro / diferente (no la misma identidad)",L4,"Interfaz"),
+]

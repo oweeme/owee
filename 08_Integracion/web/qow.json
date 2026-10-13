@@ -478,5 +478,100 @@
   "es": "Mañana",
   "owee": "pu-loda-kelo",
   "script": ""
+ },
+ "Appearance": {
+  "es": "Apariencia",
+  "owee": "dore-salo",
+  "script": ""
+ },
+ "Theme": {
+  "es": "Tema",
+  "owee": "dore-seta",
+  "script": ""
+ },
+ "Light": {
+  "es": "Claro",
+  "owee": "salo-pa",
+  "script": ""
+ },
+ "Dark": {
+  "es": "Oscuro",
+  "owee": "salo-po",
+  "script": ""
+ },
+ "Gray": {
+  "es": "Gris",
+  "owee": "bore-fale",
+  "script": ""
+ },
+ "Desktops": {
+  "es": "Escritorios",
+  "owee": "meka-tabe-seta",
+  "script": ""
+ },
+ "Touchpad": {
+  "es": "Panel táctil",
+  "owee": "luma-tada-tabe",
+  "script": ""
+ },
+ "Mouse and touchpad": {
+  "es": "Ratón y touchpad",
+  "owee": "pose-feke re luma-tada-tabe",
+  "script": "  "
+ },
+ "Keyboard shortcuts": {
+  "es": "Atajos de teclado",
+  "owee": "maku-tabe sape-nado",
+  "script": " "
+ },
+ "Updates": {
+  "es": "Actualizaciones",
+  "owee": "tame-telo",
+  "script": ""
+ },
+ "Lock screen": {
+  "es": "Bloquear pantalla",
+  "owee": "loke-tabe fadu-kose",
+  "script": " "
+ },
+ "Personal": {
+  "es": "Personal",
+  "owee": "nara-pase",
+  "script": ""
+ },
+ "Interface language": {
+  "es": "Idioma de la interfaz",
+  "owee": "nara-meka-rela reka",
+  "script": " "
+ },
+ "Search settings": {
+  "es": "Buscar ajustes",
+  "owee": "foma-fena kera-nume",
+  "script": " "
+ },
+ "Search application": {
+  "es": "Buscar aplicación",
+  "owee": "mado-foma kera-nume",
+  "script": " "
+ },
+ "Other languages": {
+  "es": "Otros idiomas",
+  "owee": "gade-no reka",
+  "script": " "
+ },
+ "Write in other languages": {
+  "es": "Escribir en otros idiomas",
+  "owee": "gade-no reka beka",
+  "script": "  "
+ },
+ "Screenshot": {
+  "es": "Captura de pantalla",
+  "owee": "loke-tabe-kera",
+  "script": ""
+ },
+ "App store": {
+  "es": "Tienda de aplicaciones",
+  "owee": "mado-foma-kume",
+  "script": ""
  }
 }

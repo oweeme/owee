@@ -393,3 +393,79 @@ msgstr "pe-loda-kelo"
 msgid "Tomorrow"
 msgstr "pu-loda-kelo"
 
+#. Apariencia
+msgid "Appearance"
+msgstr "dore-salo"
+
+#. Tema
+msgid "Theme"
+msgstr "dore-seta"
+
+#. Claro
+msgid "Light"
+msgstr "salo-pa"
+
+#. Oscuro
+msgid "Dark"
+msgstr "salo-po"
+
+#. Gris
+msgid "Gray"
+msgstr "bore-fale"
+
+#. Escritorios
+msgid "Desktops"
+msgstr "meka-tabe-seta"
+
+#. Panel táctil
+msgid "Touchpad"
+msgstr "luma-tada-tabe"
+
+#. Ratón y touchpad
+msgid "Mouse and touchpad"
+msgstr "pose-feke re luma-tada-tabe"
+
+#. Atajos de teclado
+msgid "Keyboard shortcuts"
+msgstr "maku-tabe sape-nado"
+
+#. Actualizaciones
+msgid "Updates"
+msgstr "tame-telo"
+
+#. Bloquear pantalla
+msgid "Lock screen"
+msgstr "loke-tabe fadu-kose"
+
+#. Personal
+msgid "Personal"
+msgstr "nara-pase"
+
+#. Idioma de la interfaz
+msgid "Interface language"
+msgstr "nara-meka-rela reka"
+
+#. Buscar ajustes
+msgid "Search settings"
+msgstr "foma-fena kera-nume"
+
+#. Buscar aplicación
+msgid "Search application"
+msgstr "mado-foma kera-nume"
+
+#. Otros idiomas
+msgid "Other languages"
+msgstr "gade-no reka"
+
+#. Escribir en otros idiomas
+msgid "Write in other languages"
+msgstr "gade-no reka beka"
+
+#. Captura de pantalla
+msgid "Screenshot"
+msgstr "loke-tabe-kera"
+
+#. Tienda de aplicaciones
+msgid "App store"
+msgstr "mado-foma-kume"
+

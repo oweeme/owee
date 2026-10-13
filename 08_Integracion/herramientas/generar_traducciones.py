@@ -22,7 +22,7 @@ for f in ("lexico.tsv", "lexico_ciencias.tsv"):
 filas, avisos = [], []
 for l in (raiz / "datos/ui_glosario.tsv").read_text(encoding="utf8").splitlines()[1:]:
     en, es, owee, *_ = l.split("\t") + [""]
-    for p in owee.split("-"):
+    for p in owee.replace(" ", "-").split("-"):
         if not valida(p):
             avisos.append(f"{en}: '{p}' no es Owee valido")
     for p in owee.split():

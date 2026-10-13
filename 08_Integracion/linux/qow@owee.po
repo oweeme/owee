@@ -393,3 +393,79 @@ msgstr ""
 msgid "Tomorrow"
 msgstr ""
 
+#. Apariencia
+msgid "Appearance"
+msgstr ""
+
+#. Tema
+msgid "Theme"
+msgstr ""
+
+#. Claro
+msgid "Light"
+msgstr ""
+
+#. Oscuro
+msgid "Dark"
+msgstr ""
+
+#. Gris
+msgid "Gray"
+msgstr ""
+
+#. Escritorios
+msgid "Desktops"
+msgstr ""
+
+#. Panel táctil
+msgid "Touchpad"
+msgstr ""
+
+#. Ratón y touchpad
+msgid "Mouse and touchpad"
+msgstr "  "
+
+#. Atajos de teclado
+msgid "Keyboard shortcuts"
+msgstr " "
+
+#. Actualizaciones
+msgid "Updates"
+msgstr ""
+
+#. Bloquear pantalla
+msgid "Lock screen"
+msgstr " "
+
+#. Personal
+msgid "Personal"
+msgstr ""
+
+#. Idioma de la interfaz
+msgid "Interface language"
+msgstr " "
+
+#. Buscar ajustes
+msgid "Search settings"
+msgstr " "
+
+#. Buscar aplicación
+msgid "Search application"
+msgstr " "
+
+#. Otros idiomas
+msgid "Other languages"
+msgstr " "
+
+#. Escribir en otros idiomas
+msgid "Write in other languages"
+msgstr "  "
+
+#. Captura de pantalla
+msgid "Screenshot"
+msgstr ""
+
+#. Tienda de aplicaciones
+msgid "App store"
+msgstr ""
+

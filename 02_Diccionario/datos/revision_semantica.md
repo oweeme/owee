@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 263 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 277 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -299,3 +299,17 @@ Criterios (2026-10-12):
 | `saro-mena` | cultura (memoria de la comunidad) | `saro` (comunidad) + `mena` (memoria) | OK |
 | `naro-lena` | fiesta (grupo agradable) | `naro` (grupo humano) + `lena` (agrado) | OK |
 | `feke-lare` | tecnología (saber de herramientas) | `feke` (herramienta) + `lare` (saber) | OK |
+| `dore-salo` | apariencia (forma que se ve) | `dore` (forma) + `salo` (luz) | OK |
+| `dore-seta` | tema visual (conjunto de apariencia) | `dore` (forma) + `seta` (conjunto) | OK |
+| `salo-pa` | claro (con más luz) | `salo` (luz) + `pa` (más) | OK |
+| `salo-po` | oscuro (con menos luz) | `salo` (luz) + `po` (menos) | OK |
+| `bore-fale` | gris (negro y blanco) | `bore` (negro) + `fale` (blanco) | OK |
+| `meka-tabe-seta` | escritorios virtuales (conjunto de escritorios) | `meka` (máquina) + `tabe` (superficie de apoyo) + `seta` (conjunto) | OK |
+| `luma-tada-tabe` | panel táctil (superficie de tacto) | `luma` (percepción) + `tada` (contacto) + `tabe` (superficie de apoyo) | OK |
+| `sape-nado` | atajo (acceso rápido) | `sape` (velocidad) + `nado` (acceso) | OK |
+| `fadu-kose` | bloquear (cerrar con seguridad) | `fadu` (seguridad) + `kose` (cerrar) | OK |
+| `nara-pase` | personal (de la persona) | `nara` (persona) + `pase` (posesión) | OK |
+| `nara-meka-rela` | interfaz (unión persona-máquina) | `nara` (persona) + `meka` (máquina) + `rela` (unión) | OK |
+| `loke-tabe-kera` | captura de pantalla (obtener la pantalla) | `loke` (ojo) + `tabe` (superficie de apoyo) + `kera` (obtener) | OK |
+| `mado-foma-kume` | tienda de aplicaciones (intercambio de programas) | `mado` (cálculo) + `foma` (regla) + `kume` (intercambio) | OK |
+| `gade-no` | otro / diferente (no la misma identidad) | `gade` (identidad) + `no` (negación) | OK |
