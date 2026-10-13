@@ -30,10 +30,12 @@ actualizar	to update
 acuario	Aquarius
 acumulación	accumulation
 adiós	goodbye
+adjetivo	adjective
 adulto	adult
 advertencia	warning
 aeropuerto	airport
 afecto	affection
+agente de policía	police officer
 agrado	pleasantness
 agua	water
 agujero negro	black hole
@@ -48,6 +50,7 @@ alimento vegetal	plant food
 allí	there
 almacenamiento	storage
 almuerzo	lunch
+alumno	student
 amanecer	dawn
 amarillo	yellow
 amistad	friendship
@@ -68,9 +71,13 @@ aquí	here
 archivo	file
 arena	sand
 aries	Aries
+arma	weapon
+armonía	harmony
 array	array
 arreglo	array
 arriba	up
+arte	art
+artista	artist
 asiento	seat
 atención	attention
 atmósfera	atmosphere
@@ -94,12 +101,15 @@ baño	bathroom
 bebida	drink
 bebé	baby
 biblioteca	library
+biblioteca de código	code library
+biblioteca pública	public library
 big bang	Big Bang
 binario	binary
 bit	bit
 blanco	white
 boca	mouth
 boleto	ticket
+bolígrafo	pen
 borrar	to delete
 bosque	forest
 botón	button
@@ -113,6 +123,7 @@ cadena de texto	text string
 calculadora	calculator
 calidad	quality
 caliente	hot
+calificación	grade
 calma	calm
 calma interna	inner calm
 calor	heat
@@ -126,6 +137,7 @@ campo eléctrico	electric field
 campo físico	physical field
 campo gravitatorio	gravitational field
 campo magnético	magnetic field
+cantante	singer
 cantar	to sing
 cantidad	quantity
 capacidad	ability
@@ -152,12 +164,15 @@ cerebro	brain
 cerrar	to close
 ciclo	cycle
 cielo	sky
+ciencia	science
 cifrar	to encrypt
 circuito	circuit
 circuito eléctrico	electric circuit
 ciudad	city
+ciudadano	citizen
 clase	class
 cliente	client
+clima	climate
 coche	car
 cocina	kitchen
 cocinar	to cook
@@ -193,15 +208,18 @@ conservación	conservation
 constante	constant
 constelación	constellation
 contacto	contact
+contaminación	pollution
 contenedor	container
 continente	continent
 contorno	outline
 contraseña	password
 contraste	contrast
+contrato	contract
 control de versiones	version control
 coordenada	coordinate
 copiar	to copy
 corazón	heart
+cordillera	mountain range
 corrección	correctness
 correo electrónico	email
 corriente eléctrica	electric current
@@ -209,6 +227,8 @@ corteza	bark
 corto	short
 coseno	cosine
 costa	coast
+costo	cost
+crecimiento	growth
 cuadrilátero	quadrilateral
 cuarto	fourth
 cubierta	cover
@@ -220,6 +240,7 @@ cuerno	horn
 cuerpo	body
 cuerpo de agua	body of water
 cueva	cave
+cultura	culture
 curar	to heal
 curso	course
 cuál	which
@@ -228,10 +249,12 @@ cuánto	how much
 cuántos	how many
 cálculo	calculation
 cáncer	Cancer
+célula	cell
 círculo	circle
 código	code
 cómo	how
 cónyuge	spouse
+danza	dance
 dar	to give
 dar calor	to give off heat
 datos	data
@@ -250,9 +273,11 @@ deidad del agua	water deity
 deidad del aire	air deity
 deidad del fuego	fire deity
 deidad del sol	sun deity
+delito	crime
 densidad	density
 depurar	to debug
 derecha	right
+derecho a algo	right to something
 derivada	derivative
 desayuno	breakfast
 descendiente	descendant
@@ -262,10 +287,12 @@ deseo	desire
 deshacer	to undo
 desierto	desert
 deuda	debt
+dibujo	drawing
 diccionario	dictionary
 diente	tooth
 dificultad	difficulty
 difícil	difficult
+digestión	digestion
 dimensión	dimension
 dinero	money
 dirección	direction
@@ -286,6 +313,8 @@ día	day
 dónde	where
 eclipse lunar	lunar eclipse
 eclipse solar	solar eclipse
+economía	economy
+ecosistema	ecosystem
 ecuación	equation
 editor	editor
 editor de código	code editor
@@ -295,7 +324,9 @@ eje	axis
 eje de rotación	rotation axis
 ejecutar	to run
 ejercicio	exercise
+ejército	army
 elasticidad	elasticity
+elección	election
 electricidad	electricity
 electromagnetismo	electromagnetism
 electrón	electron
@@ -305,6 +336,7 @@ ellas	they
 ellos	they
 emisión de energía	energy emission
 emoción	emotion
+empresa	company
 empuje	buoyancy
 en	in
 energía	energy
@@ -328,8 +360,10 @@ escalera	stairs
 escorpio	Scorpio
 escritorio	desktop
 escritura	writing
+escuela	school
 espacio físico	physical space
 espacio-tiempo	spacetime
+especie	species
 esperar	to wait
 estación	station
 estación del año	season
@@ -343,7 +377,10 @@ esto	this
 estrella	star
 estómago	stomach
 evento	event
+evolución	evolution
+examen	exam
 existencia	existence
+experimento	experiment
 expresión matemática	mathematical expression
 exterior	outside
 fallo del equipo	hardware failure
@@ -351,6 +388,7 @@ falso	false
 familia	family
 fecha y hora	date and time
 fiebre	fever
+fiesta	party
 fila	row
 fin	end
 flor	flower
@@ -359,6 +397,8 @@ flujo de agua	water flow
 flujo de fluido	fluid flow
 fondo de pantalla	wallpaper
 forma	shape
+fotografía	photograph
+fotosíntesis	photosynthesis
 fracción	fraction
 frecuencia	frequency
 fricción	friction
@@ -379,9 +419,13 @@ futuro	future
 fácil	easy
 galaxia	galaxy
 ganado	livestock
+ganancia	profit
+gen	gene
 gestor de archivos	file manager
+gobierno	government
 gracias	thank you
 grafo	graph
+gramática	grammar
 grande	big
 grasa	fat
 gratis	free
@@ -390,6 +434,7 @@ grupo	group
 grupo humano	human group
 guante	glove
 guardar	to save
+guerra	war
 géminis	Gemini
 habitación	room
 hablar	to speak
@@ -404,6 +449,7 @@ herramienta	tool
 hexágono	hexagon
 hielo	ice
 hijo-a	child
+historia	history
 hogar	home
 hoja	leaf
 hoja de cálculo	spreadsheet
@@ -412,14 +458,17 @@ hoy	today
 hueso	bone
 huevo	egg
 humo	smoke
+hábitat	habitat
 hígado	liver
 húmedo	wet
 idea	idea
 identidad	identity
 identidad personal	personal identity
+idioma	language
 igualdad	equality
 imagen	image
 impresora	printer
+impuesto	tax
 impulso	impulse
 incremento	increase
 incógnita	unknown
@@ -428,19 +477,26 @@ inercia	inertia
 infinito	infinity
 información	information
 información escrita	written information
+insecto	insect
+instrumento musical	musical instrument
 integral	integral
 inteligencia artificial	artificial intelligence
 intercambio	exchange
 intercambio con pago	paid exchange
 interior	inside
 internet según contexto	internet
+inundación	flood
+investigación	research
 invierno	winter
 ion	ion
 isla	island
 izquierda	left
 jardín	garden
+jefe	boss
 joven	young person
+juez	judge
 jugar	to play
+justicia	justice
 lado geométrico	side
 largo	long
 lección	lesson
@@ -452,7 +508,10 @@ lengua	tongue
 lenguaje de programación	programming language
 lento	slow
 leo	Leo
+ley	law
+libertad	freedom
 libra	Libra
+libro	book
 limpieza	cleanliness
 lista	list
 literatura	literature
@@ -464,15 +523,18 @@ lluvia	rain
 logaritmo	logarithm
 longitud de onda	wavelength
 lugar	place
+lugar/cuerpo de agua	body of water
 luna	moon
 luz	light
 luz de luna	moonlight
 luz del día	daylight
 luz solar	sunlight
 lámpara	lamp
+lápiz	pencil
 líder	leader
 límite	limit
 línea	line
+maestro	teacher
 magnetismo	magnetism
 maleta	suitcase
 manera	manner
@@ -494,6 +556,7 @@ medida de dimensión	measure of size
 medida de temperatura	measure of temperature
 medida de tiempo	measure of time
 medir	to measure
+melodía	melody
 memoria	memory
 menor o igual	less than or equal to
 menos	less
@@ -503,8 +566,10 @@ mercado	market
 mes	month
 meteoro	meteor
 mezcla	mixture
+microbio	microbe
 microscopio	microscope
 miedo	fear
+mineral	mineral
 moda estadística	mode
 molécula	molecule
 momento lineal	linear momentum
@@ -525,6 +590,8 @@ más cantidad	more quantity
 médico	doctor
 método	method
 método de objeto	object method
+músculo	muscle
+música	music
 nacimiento	birth
 nada	nothing
 nadie	nobody
@@ -535,6 +602,7 @@ nebulosa	nebula
 necesidad	need
 negación	negation
 negro	black
+nervio	nerve
 neutrón	neutron
 nieto	grandchild
 nieve	snow
@@ -543,6 +611,7 @@ nombre	name
 nombre contextual	contextual name
 norte	north
 nosotros	we
+nota musical	musical note
 noveno	ninth
 nube	cloud
 nube informática	cloud computing
@@ -555,6 +624,7 @@ o	or
 objeto	object
 obtener	to get
 octavo	eighth
+océano	ocean
 oeste	west
 ojo	eye
 oler	to smell
@@ -563,7 +633,9 @@ onda	wave
 onda electromagnética	electromagnetic wave
 onda luminosa	light wave
 onda sonora	sound wave
+oración	sentence
 oreja	ear
+organismo	organism
 orientación	direction
 otra vez	again
 oxidación	oxidation
@@ -571,6 +643,7 @@ oír	to hear
 padre-madre	parent
 pagar	to pay
 pago	payment
+palabra	word
 pantalla	screen
 pantalón	trousers
 papelera	trash
@@ -579,9 +652,11 @@ pareja	partner
 parte	part
 pasado	past
 paso	passage
+paz	peace
 país	country
 pecho	chest
 pedir	to ask for
+película	film
 pensar	to think
 pentágono	pentagon
 pequeño	small
@@ -598,6 +673,7 @@ pie	foot
 piedra	stone
 piel	skin
 pierna	leg
+pintura	painting
 piscis	Pisces
 planeta	planet
 plano geométrico	plane
@@ -607,6 +683,8 @@ plato	plate
 pluma	feather
 plural humano	human plural
 población estadística	population
+pobreza	poverty
+policía	police
 polvo	dust
 poner	to put
 por qué	why
@@ -633,6 +711,7 @@ procesador de texto	word processor
 procesamiento	processing
 proceso	process
 producir	to produce
+producto	product
 progenitor	parent
 programa	program
 programador	programmer
@@ -644,8 +723,10 @@ pueblo	town
 puente	bridge
 puerto	port
 pulmón	lung
+puntero	pointer
 punto geométrico	point
 pájaro	bird
+pérdida	loss
 quinto	fifth
 quién	who
 qué	what
@@ -664,6 +745,7 @@ reacción ácido-base	acid-base reaction
 realidad	reality
 recibir	to receive
 recibir calor	to absorb heat
+reciclaje	recycling
 recipiente de agua	water container
 recurso	resource
 red conectada	connected network
@@ -683,12 +765,16 @@ rendimiento	performance
 reparación	repair
 reparar	to repair
 reposo	rest
+reproducción	reproduction
 resistencia eléctrica	electrical resistance
+respiración	breathing
 responder	to answer
 responsabilidad	responsibility
 resta	subtraction
 resultado	result
 reír	to laugh
+riqueza	wealth
+ritmo	rhythm
 rodilla	knee
 rojo	red
 romper	to break
@@ -721,13 +807,16 @@ sentarse	to sit down
 sentimiento agradable	pleasant feeling
 sentir	to feel
 separador decimal	decimal separator
+sequía	drought
 serie matemática	series
 servidor	server
 sexto	sixth
 si	if
 si no	else
 siempre	always
+significado	meaning
 signo	sign
+silencio	silence
 similitud	similarity
 sin	without
 sistema de ecuaciones	system of equations
@@ -746,13 +835,16 @@ sucesión	sequence
 suciedad	dirt
 sudor	sweat
 suelo	floor
+suelo fértil	soil
 suite ofimática	office suite
 suma	addition
 superficie	surface
 superficie de apoyo	support surface
 sur	south
 suspender	to suspend
+sustantivo	noun
 séptimo	seventh
+sílaba	syllable
 tamaño	size
 también	also
 tangente	tangent
@@ -761,13 +853,17 @@ tasa	rate
 tauro	Taurus
 techo	roof
 teclado	keyboard
+tecnología	technology
 telescopio	telescope
 temperatura	temperature
+teoría	theory
 tercero	third
 terminal	terminal
+terremoto	earthquake
 test	test
 texto	text
 tiempo	time
+tiempo atmosférico	weather
 tienda	shop
 tierra	earth
 tipo de dato	data type
@@ -775,11 +871,14 @@ tocar	to touch
 todo	everything
 todos	everyone
 tomar	to take
+tormenta	storm
 torque	torque
 trabajador	worker
 trabajar	to work
 trabajo	work
 trabajo físico	physical work
+traducción	translation
+traductor	translator
 trayectoria	trajectory
 tristeza	sadness
 triángulo	triangle
@@ -789,6 +888,7 @@ término matemático	term
 tío	uncle or aunt
 tú	you
 unidad	unit
+universidad	university
 universo	universe
 unión	union
 usar	to use
@@ -814,6 +914,7 @@ ventana de la casa	window
 ventana de programa	window
 ver	to see
 verano	summer
+verbo	verb
 verdad	truth
 verde	green
 versión	version
@@ -832,6 +933,7 @@ volcán	volcano
 voltaje	voltage
 volumen	volume
 volumen de sonido	sound volume
+voto	vote
 y	and
 yo	I
 zapato	shoe
@@ -844,5 +946,3 @@ zapato	shoe
 época de lluvias	rainy season
 época seca	dry season
 órbita	orbit
-lugar/cuerpo de agua	body of water
-puntero	pointer
