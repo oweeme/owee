@@ -469,3 +469,303 @@ msgstr ""
 msgid "App store"
 msgstr ""
 
+#. Desconocido
+msgid "Unknown"
+msgstr ""
+
+#. Ninguno
+msgid "None"
+msgstr ""
+
+#. Predeterminado
+msgid "Default"
+msgstr ""
+
+#. Opciones
+msgid "Options"
+msgstr ""
+
+#. Comentario
+msgid "Comment"
+msgstr ""
+
+#. Éxito
+msgid "Success"
+msgstr ""
+
+#. Avanzado
+msgid "Advanced"
+msgstr ""
+
+#. Desactivado
+msgid "Disabled"
+msgstr ""
+
+#. Activado
+msgid "Enabled"
+msgstr ""
+
+#. Descripción
+msgid "Description"
+msgstr ""
+
+#. Ruta
+msgid "Path"
+msgstr ""
+
+#. Título
+msgid "Title"
+msgstr ""
+
+#. Reemplazar
+msgid "Replace"
+msgstr ""
+
+#. Fuente
+msgid "Font"
+msgstr ""
+
+#. Dirección
+msgid "Address"
+msgstr ""
+
+#. Normal
+msgid "Normal"
+msgstr ""
+
+#. Mover
+msgid "Move"
+msgstr ""
+
+#. Cambiar tamaño
+msgid "Resize"
+msgstr ""
+
+#. Estado
+msgid "Status"
+msgstr ""
+
+#. Conectar
+msgid "Connect"
+msgstr ""
+
+#. Preferencias
+msgid "Preferences"
+msgstr ""
+
+#. Prioridad
+msgid "Priority"
+msgstr ""
+
+#. Filtro
+msgid "Filter"
+msgstr ""
+
+#. Icono
+msgid "Icon"
+msgstr ""
+
+#. Automático
+msgid "Automatic"
+msgstr ""
+
+#. Cortar
+msgid "Cut"
+msgstr ""
+
+#. Origen
+msgid "Source"
+msgstr ""
+
+#. Autenticación
+msgid "Authentication"
+msgstr ""
+
+#. Puerto
+msgid "Port"
+msgstr ""
+
+#. Continuar
+msgid "Continue"
+msgstr ""
+
+#. Licencia
+msgid "License"
+msgstr ""
+
+#. Imprimir
+msgid "Print"
+msgstr ""
+
+#. Examinar
+msgid "Browse"
+msgstr ""
+
+#. Detalles
+msgid "Details"
+msgstr ""
+
+#. Nunca
+msgid "Never"
+msgstr ""
+
+#. Comando
+msgid "Command"
+msgstr ""
+
+#. Autor
+msgid "Author"
+msgstr ""
+
+#. Fecha
+msgid "Date"
+msgstr ""
+
+#. Fondo
+msgid "Background"
+msgstr ""
+
+#. Atributos
+msgid "Attributes"
+msgstr ""
+
+#. Etiqueta
+msgid "Label"
+msgstr ""
+
+#. Visible
+msgid "Visible"
+msgstr ""
+
+#. Encender
+msgid "Turn on"
+msgstr ""
+
+#. Detener
+msgid "Stop"
+msgstr ""
+
+#. Maximizar
+msgid "Maximize"
+msgstr ""
+
+#. Minimizar
+msgid "Minimize"
+msgstr ""
+
+#. Color
+msgid "Color"
+msgstr ""
+
+#. Centro
+msgid "Center"
+msgstr ""
+
+#. Tipo
+msgid "Type"
+msgstr ""
+
+#. Tamaño
+msgid "Size"
+msgstr ""
+
+#. Valor
+msgid "Value"
+msgstr ""
+
+#. Texto
+msgid "Text"
+msgstr ""
+
+#. Versión
+msgid "Version"
+msgstr ""
+
+#. Restablecer
+msgid "Reset"
+msgstr ""
+
+#. Aplicar
+msgid "Apply"
+msgstr ""
+
+#. Grupo
+msgid "Group"
+msgstr ""
+
+#. Rojo
+msgid "Red"
+msgstr ""
+
+#. Verde
+msgid "Green"
+msgstr ""
+
+#. Azul
+msgid "Blue"
+msgstr ""
+
+#. Amarillo
+msgid "Yellow"
+msgstr ""
+
+#. Negro
+msgid "Black"
+msgstr ""
+
+#. Blanco
+msgid "White"
+msgstr ""
+
+#. Arriba
+msgid "Top"
+msgstr ""
+
+#. Abajo
+msgid "Bottom"
+msgstr ""
+
+#. Enlace
+msgid "Link"
+msgstr ""
+
+#. Símbolo
+msgid "Symbol"
+msgstr ""
+
+#. Posición
+msgid "Position"
+msgstr ""
+
+#. Crear
+msgid "Create"
+msgstr ""
+
+#. Acción
+msgid "Action"
+msgstr ""
+
+#. Inicio
+msgid "Home"
+msgstr ""
+
+#. Descargas
+msgid "Downloads"
+msgstr ""
+
+#. Imágenes
+msgid "Pictures"
+msgstr ""
+
+#. Música
+msgid "Music"
+msgstr ""
+
+#. Vídeos
+msgid "Videos"
+msgstr ""
+
+#. Documentos
+msgid "Documents"
+msgstr ""
+

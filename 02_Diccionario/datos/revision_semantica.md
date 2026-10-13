@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 277 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 325 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -313,3 +313,51 @@ Criterios (2026-10-12):
 | `loke-tabe-kera` | captura de pantalla (obtener la pantalla) | `loke` (ojo) + `tabe` (superficie de apoyo) + `kera` (obtener) | OK |
 | `mado-foma-kume` | tienda de aplicaciones (intercambio de programas) | `mado` (cálculo) + `foma` (regla) + `kume` (intercambio) | OK |
 | `gade-no` | otro / diferente (no la misma identidad) | `gade` (identidad) + `no` (negación) | OK |
+| `lare-no` | desconocido (no saber) | `lare` (saber) + `no` (negación) | OK |
+| `bema-nuse` | ninguno (cantidad vacía) | `bema` (cantidad) + `nuse` (vacío) | OK |
+| `pado-foma` | predeterminado (regla inicial) | `pado` (comienzo) + `foma` (regla) | OK |
+| `dese-seta` | opciones (conjunto de decisiones) | `dese` (decisión) + `seta` (conjunto) | OK |
+| `doke-reka` | comentario (información comunicada) | `doke` (información) + `reka` (comunicación) | OK |
+| `kare-fese` | éxito (corrección completa) | `kare` (corrección) + `fese` (límite) | OK |
+| `pa-lare` | avanzado (más saber) | `pa` (más) + `lare` (saber) | OK |
+| `pode-no` | desactivado (sin posibilidad) | `pode` (posibilidad) + `no` (negación) | OK |
+| `pode-tare` | activado (con posibilidad) | `pode` (posibilidad) + `tare` (realidad) | OK |
+| `lafe-reka` | descripción (comunicar las cualidades) | `lafe` (calidad) + `reka` (comunicación) | OK |
+| `duma-nado` | ruta (camino de acceso) | `duma` (movimiento) + `nado` (acceso) | OK |
+| `go-sena` | título (signo de arriba) | `go` (arriba) + `sena` (signo) | OK |
+| `kume-dare` | reemplazar (hacer un intercambio) | `kume` (intercambio) + `dare` (hacer) | OK |
+| `sena-dore` | fuente tipográfica (forma de los signos) | `sena` (signo) + `dore` (forma) | OK |
+| `kore-doke` | dirección (signo de lugar) | `kore` (lugar) + `doke` (información) | OK |
+| `foma-ko` | normal (con la regla) | `foma` (regla) + `ko` (con) | OK |
+| `duma-dare` | mover (hacer movimiento) | `duma` (movimiento) + `dare` (hacer) | OK |
+| `gore-telo` | cambiar de tamaño (cambio de tamaño) | `gore` (tamaño) + `telo` (cambiar) | OK |
+| `te-dore` | estado (forma actual) | `te` (ahora) + `dore` (forma) | OK |
+| `rela-dare` | conectar (hacer unión) | `rela` (unión) + `dare` (hacer) | OK |
+| `nume-seta` | preferencias (conjunto de deseos) | `nume` (deseo) + `seta` (conjunto) | OK |
+| `go-bado` | prioridad (valor alto) | `go` (arriba) + `bado` (valor) | OK |
+| `delo-mado` | filtro (proceso de selección) | `delo` (tomar) + `mado` (cálculo) | OK |
+| `sena-gore-po` | icono (signo pequeño) | `sena` (signo) + `gore` (tamaño) + `po` (menos) | OK |
+| `meka-ko` | automático (hecho por la máquina) | `meka` (máquina) + `ko` (con) | OK |
+| `delo-nuse` | cortar (tomar y dejar vacío) | `delo` (tomar) + `nuse` (vacío) | OK |
+| `pado-kore` | origen (lugar de comienzo) | `pado` (comienzo) + `kore` (lugar) | OK |
+| `gade-kare` | autenticación (identidad correcta) | `gade` (identidad) + `kare` (corrección) | OK |
+| `rela-nado` | puerto de red (acceso de la red) | `rela` (unión) + `nado` (acceso) | OK |
+| `pu-duma` | continuar (hacer duración) | `pu` (posterior) + `duma` (movimiento) | OK |
+| `pode-beka` | licencia (permiso escrito) | `pode` (posibilidad) + `beka` (escritura) | OK |
+| `beka-dare` | imprimir (hacer escritura) | `beka` (escritura) + `dare` (hacer) | OK |
+| `luma-duma` | examinar (moverse mirando) | `luma` (percepción) + `duma` (movimiento) | OK |
+| `palo-doke` | detalles (partes de información) | `palo` (parte) + `doke` (información) | OK |
+| `dare-reka` | comando (comunicación de orden) | `dare` (hacer) + `reka` (comunicación) | OK |
+| `beka-nara` | autor (persona de escritura) | `beka` (escritura) + `nara` (persona) | OK |
+| `loda-sena` | fecha (signo del día) | `loda` (rotación) + `sena` (signo) | OK |
+| `gu-tabe` | fondo (superficie de abajo) | `gu` (abajo) + `tabe` (superficie de apoyo) | OK |
+| `lafe-seta` | atributos (conjunto de cualidades) | `lafe` (calidad) + `seta` (conjunto) | OK |
+| `sena-kema` | etiqueta (signo del objeto) | `sena` (signo) + `kema` (objeto) | OK |
+| `luma-pode` | visible (se puede percibir) | `luma` (percepción) + `pode` (posibilidad) | OK |
+| `meka-pado` | encender (comienzo de la máquina) | `meka` (máquina) + `pado` (comienzo) | OK |
+| `dure-gune` | detener (fin de la duración) | `dure` (duración) + `gune` (fin) | OK |
+| `gore-pa-dare` | maximizar (hacer grande) | `gore` (tamaño) + `pa` (más) + `dare` (hacer) | OK |
+| `gore-po-dare` | minimizar (hacer pequeño) | `gore` (tamaño) + `po` (menos) + `dare` (hacer) | OK |
+| `salo-lafe` | color (cualidad de la luz) | `salo` (luz) + `lafe` (calidad) | OK |
+| `kore-doma` | centro (lugar del medio) | `kore` (lugar) + `doma` (corazón) | OK |
+| `seta-dore` | tipo (forma del conjunto) | `seta` (conjunto) + `dore` (forma) | OK |

@@ -469,3 +469,303 @@ msgstr "loke-tabe-kera"
 msgid "App store"
 msgstr "mado-foma-kume"
 
+#. Desconocido
+msgid "Unknown"
+msgstr "lare-no"
+
+#. Ninguno
+msgid "None"
+msgstr "bema-nuse"
+
+#. Predeterminado
+msgid "Default"
+msgstr "pado-foma"
+
+#. Opciones
+msgid "Options"
+msgstr "dese-seta"
+
+#. Comentario
+msgid "Comment"
+msgstr "doke-reka"
+
+#. Éxito
+msgid "Success"
+msgstr "kare-fese"
+
+#. Avanzado
+msgid "Advanced"
+msgstr "pa-lare"
+
+#. Desactivado
+msgid "Disabled"
+msgstr "pode-no"
+
+#. Activado
+msgid "Enabled"
+msgstr "pode-tare"
+
+#. Descripción
+msgid "Description"
+msgstr "lafe-reka"
+
+#. Ruta
+msgid "Path"
+msgstr "duma-nado"
+
+#. Título
+msgid "Title"
+msgstr "go-sena"
+
+#. Reemplazar
+msgid "Replace"
+msgstr "kume-dare"
+
+#. Fuente
+msgid "Font"
+msgstr "sena-dore"
+
+#. Dirección
+msgid "Address"
+msgstr "kore-doke"
+
+#. Normal
+msgid "Normal"
+msgstr "foma-ko"
+
+#. Mover
+msgid "Move"
+msgstr "duma-dare"
+
+#. Cambiar tamaño
+msgid "Resize"
+msgstr "gore-telo"
+
+#. Estado
+msgid "Status"
+msgstr "te-dore"
+
+#. Conectar
+msgid "Connect"
+msgstr "rela-dare"
+
+#. Preferencias
+msgid "Preferences"
+msgstr "nume-seta"
+
+#. Prioridad
+msgid "Priority"
+msgstr "go-bado"
+
+#. Filtro
+msgid "Filter"
+msgstr "delo-mado"
+
+#. Icono
+msgid "Icon"
+msgstr "sena-gore-po"
+
+#. Automático
+msgid "Automatic"
+msgstr "meka-ko"
+
+#. Cortar
+msgid "Cut"
+msgstr "delo-nuse"
+
+#. Origen
+msgid "Source"
+msgstr "pado-kore"
+
+#. Autenticación
+msgid "Authentication"
+msgstr "gade-kare"
+
+#. Puerto
+msgid "Port"
+msgstr "rela-nado"
+
+#. Continuar
+msgid "Continue"
+msgstr "pu-duma"
+
+#. Licencia
+msgid "License"
+msgstr "pode-beka"
+
+#. Imprimir
+msgid "Print"
+msgstr "beka-dare"
+
+#. Examinar
+msgid "Browse"
+msgstr "luma-duma"
+
+#. Detalles
+msgid "Details"
+msgstr "palo-doke"
+
+#. Nunca
+msgid "Never"
+msgstr "tera-no"
+
+#. Comando
+msgid "Command"
+msgstr "dare-reka"
+
+#. Autor
+msgid "Author"
+msgstr "beka-nara"
+
+#. Fecha
+msgid "Date"
+msgstr "loda-sena"
+
+#. Fondo
+msgid "Background"
+msgstr "gu-tabe"
+
+#. Atributos
+msgid "Attributes"
+msgstr "lafe-seta"
+
+#. Etiqueta
+msgid "Label"
+msgstr "sena-kema"
+
+#. Visible
+msgid "Visible"
+msgstr "luma-pode"
+
+#. Encender
+msgid "Turn on"
+msgstr "meka-pado"
+
+#. Detener
+msgid "Stop"
+msgstr "dure-gune"
+
+#. Maximizar
+msgid "Maximize"
+msgstr "gore-pa-dare"
+
+#. Minimizar
+msgid "Minimize"
+msgstr "gore-po-dare"
+
+#. Color
+msgid "Color"
+msgstr "salo-lafe"
+
+#. Centro
+msgid "Center"
+msgstr "kore-doma"
+
+#. Tipo
+msgid "Type"
+msgstr "seta-dore"
+
+#. Tamaño
+msgid "Size"
+msgstr "gore"
+
+#. Valor
+msgid "Value"
+msgstr "bado"
+
+#. Texto
+msgid "Text"
+msgstr "doke-beka"
+
+#. Versión
+msgid "Version"
+msgstr "tera-dore"
+
+#. Restablecer
+msgid "Reset"
+msgstr "pado-telo"
+
+#. Aplicar
+msgid "Apply"
+msgstr "kade"
+
+#. Grupo
+msgid "Group"
+msgstr "seta"
+
+#. Rojo
+msgid "Red"
+msgstr "rale"
+
+#. Verde
+msgid "Green"
+msgstr "nede"
+
+#. Azul
+msgid "Blue"
+msgstr "kulo"
+
+#. Amarillo
+msgid "Yellow"
+msgstr "kale"
+
+#. Negro
+msgid "Black"
+msgstr "bore"
+
+#. Blanco
+msgid "White"
+msgstr "fale"
+
+#. Arriba
+msgid "Top"
+msgstr "go"
+
+#. Abajo
+msgid "Bottom"
+msgstr "gu"
+
+#. Enlace
+msgid "Link"
+msgstr "rela"
+
+#. Símbolo
+msgid "Symbol"
+msgstr "sena"
+
+#. Posición
+msgid "Position"
+msgstr "pose"
+
+#. Crear
+msgid "Create"
+msgstr "dare"
+
+#. Acción
+msgid "Action"
+msgstr "dare"
+
+#. Inicio
+msgid "Home"
+msgstr "kuma"
+
+#. Descargas
+msgid "Downloads"
+msgstr "gura"
+
+#. Imágenes
+msgid "Pictures"
+msgstr "salo-sena"
+
+#. Música
+msgid "Music"
+msgstr "lena-sone"
+
+#. Vídeos
+msgid "Videos"
+msgstr "salo-sena-duma"
+
+#. Documentos
+msgid "Documents"
+msgstr "doke-beka"
+

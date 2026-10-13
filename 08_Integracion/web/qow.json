@@ -573,5 +573,380 @@
   "es": "Tienda de aplicaciones",
   "owee": "mado-foma-kume",
   "script": ""
+ },
+ "Unknown": {
+  "es": "Desconocido",
+  "owee": "lare-no",
+  "script": ""
+ },
+ "None": {
+  "es": "Ninguno",
+  "owee": "bema-nuse",
+  "script": ""
+ },
+ "Default": {
+  "es": "Predeterminado",
+  "owee": "pado-foma",
+  "script": ""
+ },
+ "Options": {
+  "es": "Opciones",
+  "owee": "dese-seta",
+  "script": ""
+ },
+ "Comment": {
+  "es": "Comentario",
+  "owee": "doke-reka",
+  "script": ""
+ },
+ "Success": {
+  "es": "Éxito",
+  "owee": "kare-fese",
+  "script": ""
+ },
+ "Advanced": {
+  "es": "Avanzado",
+  "owee": "pa-lare",
+  "script": ""
+ },
+ "Disabled": {
+  "es": "Desactivado",
+  "owee": "pode-no",
+  "script": ""
+ },
+ "Enabled": {
+  "es": "Activado",
+  "owee": "pode-tare",
+  "script": ""
+ },
+ "Description": {
+  "es": "Descripción",
+  "owee": "lafe-reka",
+  "script": ""
+ },
+ "Path": {
+  "es": "Ruta",
+  "owee": "duma-nado",
+  "script": ""
+ },
+ "Title": {
+  "es": "Título",
+  "owee": "go-sena",
+  "script": ""
+ },
+ "Replace": {
+  "es": "Reemplazar",
+  "owee": "kume-dare",
+  "script": ""
+ },
+ "Font": {
+  "es": "Fuente",
+  "owee": "sena-dore",
+  "script": ""
+ },
+ "Address": {
+  "es": "Dirección",
+  "owee": "kore-doke",
+  "script": ""
+ },
+ "Normal": {
+  "es": "Normal",
+  "owee": "foma-ko",
+  "script": ""
+ },
+ "Move": {
+  "es": "Mover",
+  "owee": "duma-dare",
+  "script": ""
+ },
+ "Resize": {
+  "es": "Cambiar tamaño",
+  "owee": "gore-telo",
+  "script": ""
+ },
+ "Status": {
+  "es": "Estado",
+  "owee": "te-dore",
+  "script": ""
+ },
+ "Connect": {
+  "es": "Conectar",
+  "owee": "rela-dare",
+  "script": ""
+ },
+ "Preferences": {
+  "es": "Preferencias",
+  "owee": "nume-seta",
+  "script": ""
+ },
+ "Priority": {
+  "es": "Prioridad",
+  "owee": "go-bado",
+  "script": ""
+ },
+ "Filter": {
+  "es": "Filtro",
+  "owee": "delo-mado",
+  "script": ""
+ },
+ "Icon": {
+  "es": "Icono",
+  "owee": "sena-gore-po",
+  "script": ""
+ },
+ "Automatic": {
+  "es": "Automático",
+  "owee": "meka-ko",
+  "script": ""
+ },
+ "Cut": {
+  "es": "Cortar",
+  "owee": "delo-nuse",
+  "script": ""
+ },
+ "Source": {
+  "es": "Origen",
+  "owee": "pado-kore",
+  "script": ""
+ },
+ "Authentication": {
+  "es": "Autenticación",
+  "owee": "gade-kare",
+  "script": ""
+ },
+ "Port": {
+  "es": "Puerto",
+  "owee": "rela-nado",
+  "script": ""
+ },
+ "Continue": {
+  "es": "Continuar",
+  "owee": "pu-duma",
+  "script": ""
+ },
+ "License": {
+  "es": "Licencia",
+  "owee": "pode-beka",
+  "script": ""
+ },
+ "Print": {
+  "es": "Imprimir",
+  "owee": "beka-dare",
+  "script": ""
+ },
+ "Browse": {
+  "es": "Examinar",
+  "owee": "luma-duma",
+  "script": ""
+ },
+ "Details": {
+  "es": "Detalles",
+  "owee": "palo-doke",
+  "script": ""
+ },
+ "Never": {
+  "es": "Nunca",
+  "owee": "tera-no",
+  "script": ""
+ },
+ "Command": {
+  "es": "Comando",
+  "owee": "dare-reka",
+  "script": ""
+ },
+ "Author": {
+  "es": "Autor",
+  "owee": "beka-nara",
+  "script": ""
+ },
+ "Date": {
+  "es": "Fecha",
+  "owee": "loda-sena",
+  "script": ""
+ },
+ "Background": {
+  "es": "Fondo",
+  "owee": "gu-tabe",
+  "script": ""
+ },
+ "Attributes": {
+  "es": "Atributos",
+  "owee": "lafe-seta",
+  "script": ""
+ },
+ "Label": {
+  "es": "Etiqueta",
+  "owee": "sena-kema",
+  "script": ""
+ },
+ "Visible": {
+  "es": "Visible",
+  "owee": "luma-pode",
+  "script": ""
+ },
+ "Turn on": {
+  "es": "Encender",
+  "owee": "meka-pado",
+  "script": ""
+ },
+ "Stop": {
+  "es": "Detener",
+  "owee": "dure-gune",
+  "script": ""
+ },
+ "Maximize": {
+  "es": "Maximizar",
+  "owee": "gore-pa-dare",
+  "script": ""
+ },
+ "Minimize": {
+  "es": "Minimizar",
+  "owee": "gore-po-dare",
+  "script": ""
+ },
+ "Color": {
+  "es": "Color",
+  "owee": "salo-lafe",
+  "script": ""
+ },
+ "Center": {
+  "es": "Centro",
+  "owee": "kore-doma",
+  "script": ""
+ },
+ "Type": {
+  "es": "Tipo",
+  "owee": "seta-dore",
+  "script": ""
+ },
+ "Size": {
+  "es": "Tamaño",
+  "owee": "gore",
+  "script": ""
+ },
+ "Value": {
+  "es": "Valor",
+  "owee": "bado",
+  "script": ""
+ },
+ "Text": {
+  "es": "Texto",
+  "owee": "doke-beka",
+  "script": ""
+ },
+ "Version": {
+  "es": "Versión",
+  "owee": "tera-dore",
+  "script": ""
+ },
+ "Reset": {
+  "es": "Restablecer",
+  "owee": "pado-telo",
+  "script": ""
+ },
+ "Apply": {
+  "es": "Aplicar",
+  "owee": "kade",
+  "script": ""
+ },
+ "Group": {
+  "es": "Grupo",
+  "owee": "seta",
+  "script": ""
+ },
+ "Red": {
+  "es": "Rojo",
+  "owee": "rale",
+  "script": ""
+ },
+ "Green": {
+  "es": "Verde",
+  "owee": "nede",
+  "script": ""
+ },
+ "Blue": {
+  "es": "Azul",
+  "owee": "kulo",
+  "script": ""
+ },
+ "Yellow": {
+  "es": "Amarillo",
+  "owee": "kale",
+  "script": ""
+ },
+ "Black": {
+  "es": "Negro",
+  "owee": "bore",
+  "script": ""
+ },
+ "White": {
+  "es": "Blanco",
+  "owee": "fale",
+  "script": ""
+ },
+ "Top": {
+  "es": "Arriba",
+  "owee": "go",
+  "script": ""
+ },
+ "Bottom": {
+  "es": "Abajo",
+  "owee": "gu",
+  "script": ""
+ },
+ "Link": {
+  "es": "Enlace",
+  "owee": "rela",
+  "script": ""
+ },
+ "Symbol": {
+  "es": "Símbolo",
+  "owee": "sena",
+  "script": ""
+ },
+ "Position": {
+  "es": "Posición",
+  "owee": "pose",
+  "script": ""
+ },
+ "Create": {
+  "es": "Crear",
+  "owee": "dare",
+  "script": ""
+ },
+ "Action": {
+  "es": "Acción",
+  "owee": "dare",
+  "script": ""
+ },
+ "Home": {
+  "es": "Inicio",
+  "owee": "kuma",
+  "script": ""
+ },
+ "Downloads": {
+  "es": "Descargas",
+  "owee": "gura",
+  "script": ""
+ },
+ "Pictures": {
+  "es": "Imágenes",
+  "owee": "salo-sena",
+  "script": ""
+ },
+ "Music": {
+  "es": "Música",
+  "owee": "lena-sone",
+  "script": ""
+ },
+ "Videos": {
+  "es": "Vídeos",
+  "owee": "salo-sena-duma",
+  "script": ""
+ },
+ "Documents": {
+  "es": "Documentos",
+  "owee": "doke-beka",
+  "script": ""
  }
 }

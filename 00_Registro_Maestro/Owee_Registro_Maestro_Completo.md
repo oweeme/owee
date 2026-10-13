@@ -1612,3 +1612,9 @@ El idioma se integra por tres vías, todas generadas desde `08_Integracion/datos
 ## 87. Lote 3 — Ciencia y sociedad (95 términos, aprobado)
 
 Biología, Tierra y clima, Educación, Derecho y política, Economía, Lengua, Artes y música, Cultura. Revisión por raíces: cada compuesto usa raíces existentes con significado adecuado, forma y significado únicos, máx. 3 elementos. Correcciones de la revisión: `alumno`=`tase-nara` y `juez`=`foma-nara` (el sufijo `po` significa «menos», no «persona»); `ciudadano`=`saro-nara`; eliminado «tiempo atmosférico» (casi sinónimo de `clima`); ~30 formas renombradas para evitar confusiones al oído (p. ej. terremoto `taro-faro-duma`, libro `beka-seta`, ciencia `lare-seta`).
+
+## 88. Lotes 4 y 5 — Vocabulario de interfaz de oweelinux/KDE (62 términos, aprobados)
+
+Surgen de las capturas de oweelinux (cadenas sin traducir) y de las cadenas más frecuentes de los catálogos KDE/Deepin (`prioridad_cadenas.tsv`). Lote 4: `dore-salo` (apariencia), `dore-seta` (tema), `salo-pa`/`salo-po` (claro/oscuro), `bore-fale` (gris), `meka-tabe-seta` (escritorios), `luma-tada-tabe` (touchpad), `sape-nado` (atajo), `fadu-kose` (bloquear), `nara-pase` (personal), `nara-meka-rela` (interfaz), `loke-tabe-kera` (captura), `mado-foma-kume` (tienda de apps), `gade-no` (otro). Lote 5 (48): opciones, comentario, éxito, ruta, título, fuente, estado, icono, filtro, licencia, imprimir, comando, fecha, color, tipo, etc.
+
+Reglas aplicadas: un solo significado por forma (se descartaron `tera-no` y `nume-reka`, que ya existían; «dispositivo» sigue siendo `meka-gume`); fechas sin palabras nuevas (`loda-kelo` + número para los días, `mune-kelo` + número para los meses); el glosario `ui_glosario.tsv` (190 textos, una fila por texto en inglés, sin repetir) es la única fuente de las traducciones de interfaz y de él se generan `qow.po`, `qow@owee.po` y los JSON web.

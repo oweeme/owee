@@ -277,7 +277,7 @@ desa	dispersion
 laku	probability
 ranu	chance / random
 dufa	vector
-tora	direction
+tora	address / direction
 mata	matrix
 raga	row
 kola	column
@@ -667,7 +667,7 @@ kuma-seta	city / town
 bade-kore	capital
 saro-fese	border
 kore-sena	map
-duma-kore	path / route
+duma-kore	path
 suna-go-kore	bridge
 taro-gu	valley
 suna-taro-fese	coast
@@ -870,3 +870,51 @@ nara-meka-rela	interface
 loke-tabe-kera	screenshot
 mado-foma-kume	app store
 gade-no	other / different
+lare-no	unknown
+bema-nuse	none
+pado-foma	default
+dese-seta	options
+doke-reka	comment
+kare-fese	success
+pa-lare	advanced
+pode-no	disabled
+pode-tare	enabled
+lafe-reka	description
+duma-nado	path
+go-sena	title
+kume-dare	replace
+sena-dore	font
+kore-doke	address
+foma-ko	normal
+duma-dare	move
+gore-telo	resize
+te-dore	status
+rela-dare	connect
+nume-seta	preferences
+go-bado	priority
+delo-mado	filter
+sena-gore-po	icon
+meka-ko	automatic
+delo-nuse	cut
+pado-kore	source
+gade-kare	authentication
+rela-nado	port
+pu-duma	continue
+pode-beka	license
+beka-dare	print
+luma-duma	browse
+palo-doke	details
+dare-reka	command
+beka-nara	author
+loda-sena	date
+gu-tabe	background
+lafe-seta	attributes
+sena-kema	label
+luma-pode	visible
+meka-pado	turn on
+dure-gune	stop
+gore-pa-dare	maximize
+gore-po-dare	minimize
+salo-lafe	color
+kore-doma	center
+seta-dore	type
