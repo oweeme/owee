@@ -275,7 +275,7 @@ Para que el idioma sea **fácil**, no se crea una palabra nueva por cada especie
 
 Si hay que distinguir dos especies de la misma categoría, se añade **un rasgo**: tamaño (`gore-pa` / `gore-po`), color (`rale`, `fale`…), sonido (`sone`)… Ejemplo: `ruma-lore gore-pa` (animal de compañía grande). Las especies concretas se nombrarán después, con ejemplos reales, siguiendo esta misma regla.
 
-**Izquierda y derecha:** `doma-le` («el lado cercano al corazón») e `doma-lu` («el lado lejano»), con los operadores `le` / `lu` que ya existen.
+**Izquierda y derecha:** `doma-kado` («el lado del corazón») y `doma-kado-no` («el lado sin corazón»), con `kado` (lado) y `no` que ya existen. *(Se descartó `doma-le`/`doma-lu`: sonaba igual que la frase «corazón cerca/lejos».)*
 
 ## 13. Puntuación (provisional)
 

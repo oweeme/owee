@@ -186,6 +186,6 @@ Criterios (2026-10-12):
 | `ruma-daro` | animal de trabajo (animal + trabajo) | `ruma` (animal) + `daro` (trabajo) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
 | `ruma-fame` | animal de alimento / ganado (animal + comida) | `ruma` (animal) + `fame` (comida) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
 | `ruma-taro` | animal terrestre (animal + tierra) | `ruma` (animal) + `taro` (tierra) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
-| `doma-le` | izquierda (el lado cercano al corazón) | `doma` (corazón) + `le` (cerca) | EN ESPERA — nueva: izquierda = el lado del corazón; espera confirmación |
-| `doma-lu` | derecha (el lado lejano al corazón) | `doma` (corazón) + `lu` (lejos) | EN ESPERA — nueva: derecha = el lado lejano al corazón; espera confirmación |
+| `doma-kado` | izquierda (el lado del corazón) | `doma` (corazón) + `kado` (lado geométrico) | EN ESPERA — nueva: izquierda = el lado del corazón; antes doma-le, que sonaba igual que la frase «corazón cerca» |
+| `doma-kado-no` | derecha (el lado sin corazón) | `doma` (corazón) + `kado` (lado geométrico) + `no` (negación) | EN ESPERA — nueva: derecha = el lado sin corazón; antes doma-lu, mismo problema |
 | `duma-kuma` | estación / terminal (casa del movimiento) | `duma` (movimiento) + `kuma` (hogar) | EN ESPERA — nueva: estación / terminal; espera confirmación |

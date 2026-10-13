@@ -1,0 +1,19 @@
+desktop_id	nombre	generico_es	owee	nota
+com.microsoft.VSCode.desktop	Visual Studio Code	Editor de código	foma-beka-feke	el nombre de la marca se conserva
+gimp.desktop	GIMP	Editor de imágenes	loke-dore-feke	
+google-chrome.desktop	Google Chrome	Navegador web	gora-rela-duma	
+firefox.desktop	Firefox	Navegador web	gora-rela-duma	
+org.inkscape.Inkscape.desktop	Inkscape	Editor de gráficos vectoriales	loke-dore-feke	mismo genérico que GIMP; se distingue por el nombre de marca
+libreoffice-writer.desktop	LibreOffice Writer	Procesador de texto	beka-feke	
+libreoffice-calc.desktop	LibreOffice Calc	Hoja de cálculo	banu-feke	
+libreoffice-startcenter.desktop	LibreOffice	Suite ofimática	daro-feke	
+dde-file-manager.desktop	Administrador de archivos	Gestor de archivos	doke-kopa-feke	
+dde-computer.desktop	Equipo	Equipo	meka-mado	
+dde-trash.desktop	Papelera	Papelera	dabo-kopa	
+deepin-system-monitor.desktop	Monitor del sistema	Monitor del sistema	meka-mede	
+deepin-devicemanager.desktop	Administrador de dispositivos	Dispositivos	meka-seta	
+deepin-diskmanager.desktop	Administrador de discos	Almacenamiento	mena-kopa	
+fcitx5-configtool.desktop	Configuración de Fcitx 5	Teclado	maku-tabe	
+typora.desktop	Typora	Editor de texto	beka-feke	
+io.typora.desktop	Typora	Editor de texto	beka-feke	
+filezilla.desktop	FileZilla	Cliente de archivos	doke-kopa-feke	

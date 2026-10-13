@@ -100,6 +100,22 @@ ok("Cobertura Swadesh-100 >= 90%", bool(mm) and int(mm.group(2)) + int(mm.group(
 nlec = len(list((RAIZ / "03_Material_Ensenanza/Curso").glob("Owee_Curso_Nivel_*.md")))
 ok(f"Curso por niveles ({nlec} niveles + indice)", nlec == 4)
 
+# 7c. traductor: pruebas de humo en Node con el lexico generado
+if nodo:
+    prueba = """
+const fs=require('fs');globalThis.window=globalThis;
+eval(fs.readFileSync('07_Sitio_Web/docs/assets/lexico.js','utf8').replace('window.OWEE_LEX=','globalThis.OWEE_LEX='));
+eval(fs.readFileSync('07_Sitio_Web/traductor.js','utf8'));
+const T=globalThis.OweeTraductor, fallos=[];
+const oe={'me suna nume':'yo deseo agua','ra fame no pume':'él/ella no comer comida','me pe fame pume':'yo [pasado] comer comida'};
+for(const k in oe){ if(T.owee2es(k)[0].aproximada!==oe[k]) fallos.push(k+' => '+T.owee2es(k)[0].aproximada); }
+const eo={'Yo quiero agua':'me suna nume','Tu duermes en casa':'tu kuma bo sule','No quiero comer':'no nume pume'};
+for(const k in eo){ if(T.es2owee(k)[0].sugerencia!==eo[k]) fallos.push(k+' => '+T.es2owee(k)[0].sugerencia); }
+console.log(JSON.stringify(fallos));"""
+    r = subprocess.run(["node", "-e", prueba], cwd=RAIZ, capture_output=True, text=True)
+    fl = r.stdout.strip() if r.returncode == 0 else r.stderr[-200:]
+    ok("Traductor Owee <-> español: pruebas de humo", r.returncode == 0 and fl == "[]", "" if fl == "[]" else fl[:160])
+
 # 8. git
 g = correr(["git", "status", "--porcelain"]).stdout.strip().splitlines()
 ok("Git: sin cambios sin guardar", not g, f"{len(g)} archivos con cambios" if g else "")

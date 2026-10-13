@@ -1,5 +1,5 @@
 # Traduccion de oweelinux al Owee (Owee Script)
-# Generado por 08_Integracion/herramientas/generar_traducciones.py el 2026-10-12. No editar a mano: edita datos/ui_glosario.tsv.
+# Generado por 08_Integracion/herramientas/generar_traducciones.py el 2026-10-13. No editar a mano: edita datos/ui_glosario.tsv.
 msgid ""
 msgstr ""
 "Project-Id-Version: oweelinux 0.1\n"
@@ -272,4 +272,124 @@ msgstr ""
 #. Bienvenida
 msgid "Welcome"
 msgstr ""
+
+#. Ratón
+msgid "Mouse"
+msgstr ""
+
+#. Teclado
+msgid "Keyboard"
+msgstr ""
+
+#. Pantalla
+msgid "Display"
+msgstr ""
+
+#. Sonido
+msgid "Sound"
+msgstr ""
+
+#. Energía
+msgid "Power"
+msgstr ""
+
+#. Privacidad
+msgid "Privacy"
+msgstr ""
+
+#. Almacenamiento
+msgid "Storage"
+msgstr ""
+
+#. Dispositivos
+msgid "Devices"
+msgstr ""
+
+#. Fondo de pantalla
+msgid "Wallpaper"
+msgstr ""
+
+#. Cuentas
+msgid "Accounts"
+msgstr ""
+
+#. Aplicaciones
+msgid "Applications"
+msgstr ""
+
+#. Acerca de
+msgid "About"
+msgstr ""
+
+#. Notificaciones
+msgid "Notifications"
+msgstr ""
+
+#. Correo electrónico
+msgid "Email"
+msgstr ""
+
+#. Navegador web
+msgid "Web browser"
+msgstr ""
+
+#. Editor de texto
+msgid "Text editor"
+msgstr ""
+
+#. Editor de código
+msgid "Code editor"
+msgstr ""
+
+#. Gestor de archivos
+msgid "File manager"
+msgstr ""
+
+#. Imagen
+msgid "Image"
+msgstr ""
+
+#. Editor de imágenes
+msgid "Image editor"
+msgstr ""
+
+#. Hoja de cálculo
+msgid "Spreadsheet"
+msgstr ""
+
+#. Suite ofimática
+msgid "Office suite"
+msgstr ""
+
+#. Calculadora
+msgid "Calculator"
+msgstr ""
+
+#. Reloj
+msgid "Clock"
+msgstr ""
+
+#. Monitor del sistema
+msgid "System monitor"
+msgstr ""
+
+#. Izquierda
+msgid "Left"
+msgstr ""
+
+#. Derecha
+msgid "Right"
+msgstr ""
+
+#. Hoy
+msgid "Today"
+msgstr ""
+
+#. Ayer
+msgid "Yesterday"
+msgstr ""
+
+#. Mañana
+msgid "Tomorrow"
+msgstr ""
 

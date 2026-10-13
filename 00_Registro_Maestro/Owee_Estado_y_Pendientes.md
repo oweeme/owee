@@ -7,7 +7,7 @@
 | Comprobación | Resultado |
 |---|---|
 | Textos Owee (9 archivos): fonología V/CV sin `i` y vocabulario existente | ✅ válidos |
-| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 514 formas | ✅ 142 auditadas · **366 aprobadas** · **6 verificadas (esperan confirmación)** · 0 por revisar |
+| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 530 formas | ✅ 142 auditadas · **372 aprobadas** · **16 verificadas (esperan aprobación: los nombres genéricos de programas y ajustes del escritorio)** · 0 por revisar |
 | Colisiones exactas, fonología inválida, partes inexistentes | ✅ ninguna |
 | Sitio web: 26 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
 | **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 157 OK · 17 ajustados · 6 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
@@ -36,7 +36,7 @@
 | **Interfaz (UI)** | 19 términos y 66 textos de menú (archivo, guardar, configuración…) | **verificado, falta aprobar** |
 | **Cuerpo y naturaleza (lote 1)** | 60 términos: piel, sangre, hueso, oreja, diente, lengua, piedra, arena, humo, hoja, semilla…; posturas | **aprobado** |
 | **Vida diaria (lote 2)** | 92 términos: hoy/ayer/mañana, semana, comidas, ciudad y geografía, familia ampliada, cocina, casa y ropa, salud, dinero y compras, transporte y viaje; verificados por practicidad (máximo 6 sílabas) | **aprobado** |
-| **Animales y orientación** | norma de animales por categoría (`ruma-taro`, `ruma-daro`, `ruma-fame`), izquierda/derecha (`doma-le`, `doma-lu`) y terminal (`duma-kuma`) | verificado, falta confirmar |
+| **Animales y orientación** | norma de animales por categoría (`ruma-taro`, `ruma-daro`, `ruma-fame`), izquierda/derecha (`doma-kado`, `doma-kado-no`) y terminal (`duma-kuma`) | verificado, falta confirmar |
 | **Curso por niveles** | 4 niveles (0–3), 34 lecciones con glifos, romano, pronunciación, traducción, ejercicios y lecturas; lector con glosa en cada palabra; modo inmersión de la interfaz | **nuevo** |
 | **Literatura y música** | 34 textos: poemas, canciones, mitos, cuentos; herramienta de ritmo y acento con melodía automática o propia | 0.5 |
 | **Integración** | Paquetes `.deb`, traducciones gettext y Qt, módulo web, locale `qow_BO` | kit listo |
@@ -46,7 +46,7 @@
 
 ### 3.1 Decisiones tuyas (por prioridad)
 
-1. **Confirmar los 6 términos nuevos en espera:** `ruma-taro`, `ruma-daro`, `ruma-fame` (animales por categoría, en lugar de `ruma-galo`), `doma-le` / `doma-lu` (izquierda / derecha) y `duma-kuma` (estación / terminal). Ya están **aprobados** los 84 del lote 1 y del sitio, el **lote 2 completo (92)** y `lu-meka`.
+1. **Confirmar los 6 términos nuevos en espera:** `ruma-taro`, `ruma-daro`, `ruma-fame` (animales por categoría, en lugar de `ruma-galo`), `doma-kado` / `doma-kado-no` (izquierda / derecha) y `duma-kuma` (estación / terminal). Ya están **aprobados** los 84 del lote 1 y del sitio, el **lote 2 completo (92)** y `lu-meka`.
 2. **Confirmar lo de la Gramática 1.1 que aún no respondiste:**
    - `le`/`lu` como demostrativos;
    - imperativo como verbo desnudo;

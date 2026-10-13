@@ -328,5 +328,155 @@
   "es": "Bienvenida",
   "owee": "reme",
   "script": ""
+ },
+ "Mouse": {
+  "es": "Ratón",
+  "owee": "maku-feke",
+  "script": ""
+ },
+ "Keyboard": {
+  "es": "Teclado",
+  "owee": "maku-tabe",
+  "script": ""
+ },
+ "Display": {
+  "es": "Pantalla",
+  "owee": "loke-tabe",
+  "script": ""
+ },
+ "Sound": {
+  "es": "Sonido",
+  "owee": "sone",
+  "script": ""
+ },
+ "Power": {
+  "es": "Energía",
+  "owee": "enu",
+  "script": ""
+ },
+ "Privacy": {
+  "es": "Privacidad",
+  "owee": "nara-fadu",
+  "script": ""
+ },
+ "Storage": {
+  "es": "Almacenamiento",
+  "owee": "mena-kopa",
+  "script": ""
+ },
+ "Devices": {
+  "es": "Dispositivos",
+  "owee": "meka-seta",
+  "script": ""
+ },
+ "Wallpaper": {
+  "es": "Fondo de pantalla",
+  "owee": "loke-tabe-lobe",
+  "script": ""
+ },
+ "Accounts": {
+  "es": "Cuentas",
+  "owee": "nara-kade",
+  "script": ""
+ },
+ "Applications": {
+  "es": "Aplicaciones",
+  "owee": "mado-foma",
+  "script": ""
+ },
+ "About": {
+  "es": "Acerca de",
+  "owee": "doke",
+  "script": ""
+ },
+ "Notifications": {
+  "es": "Notificaciones",
+  "owee": "reka",
+  "script": ""
+ },
+ "Email": {
+  "es": "Correo electrónico",
+  "owee": "reka-rela",
+  "script": ""
+ },
+ "Web browser": {
+  "es": "Navegador web",
+  "owee": "gora-rela-duma",
+  "script": ""
+ },
+ "Text editor": {
+  "es": "Editor de texto",
+  "owee": "beka-feke",
+  "script": ""
+ },
+ "Code editor": {
+  "es": "Editor de código",
+  "owee": "foma-beka-feke",
+  "script": ""
+ },
+ "File manager": {
+  "es": "Gestor de archivos",
+  "owee": "doke-kopa-feke",
+  "script": ""
+ },
+ "Image": {
+  "es": "Imagen",
+  "owee": "loke-dore",
+  "script": ""
+ },
+ "Image editor": {
+  "es": "Editor de imágenes",
+  "owee": "loke-dore-feke",
+  "script": ""
+ },
+ "Spreadsheet": {
+  "es": "Hoja de cálculo",
+  "owee": "banu-feke",
+  "script": ""
+ },
+ "Office suite": {
+  "es": "Suite ofimática",
+  "owee": "daro-feke",
+  "script": ""
+ },
+ "Calculator": {
+  "es": "Calculadora",
+  "owee": "mado-feke",
+  "script": ""
+ },
+ "Clock": {
+  "es": "Reloj",
+  "owee": "tera-mede-meka",
+  "script": ""
+ },
+ "System monitor": {
+  "es": "Monitor del sistema",
+  "owee": "meka-mede",
+  "script": ""
+ },
+ "Left": {
+  "es": "Izquierda",
+  "owee": "doma-kado",
+  "script": ""
+ },
+ "Right": {
+  "es": "Derecha",
+  "owee": "doma-kado-no",
+  "script": ""
+ },
+ "Today": {
+  "es": "Hoy",
+  "owee": "te-loda-kelo",
+  "script": ""
+ },
+ "Yesterday": {
+  "es": "Ayer",
+  "owee": "pe-loda-kelo",
+  "script": ""
+ },
+ "Tomorrow": {
+  "es": "Mañana",
+  "owee": "pu-loda-kelo",
+  "script": ""
  }
 }

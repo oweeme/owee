@@ -1,0 +1,401 @@
+texto_original	programas	cubierto_por_glosario
+name	60	si
+cancel	43	si
+unknown	41	
+none	40	
+password	38	si
+file	36	si
+size	35	
+no	31	si
+type	29	
+yes	29	si
+close	27	si
+unknown error	26	
+default	26	
+memory exhausted	22	
+ok	22	si
+value	22	
+options	21	
+delete	20	si
+width	19	
+username	19	
+email of translatorsyour emails	18	
+name of translatorsyour names	18	
+text	18	
+warning	17	si
+height	17	
+comment	16	
+success	16	
+out of memory	16	
+color	16	
+location	16	
+advanced	16	
+search	16	si
+disabled	16	
+version	16	
+open	16	si
+description	16	
+path	16	
+quit	15	
+mode	15	
+orientation	15	
+preview	15	
+save	15	si
+rename	15	
+title	14	
+copy	14	si
+filename	14	
+id	14	
+too many arguments	14	
+custom	14	
+saturation	14	
+help	14	si
+general	14	
+select	14	si
+usage	14	
+error	14	si
+done	14	si
+directory	13	
+action	13	
+hue	13	
+replace	13	
+internal error	12	
+offset	12	
+font	12	
+image	12	
+address	12	
+domain	12	
+blue	12	
+green	12	
+high	12	
+normal	12	
+red	12	
+paste	12	si
+save as	12	
+move	12	
+reset	12	
+invalid content of \{\}	11	
+regular expression too big	11	
+pattern	11	
+resize	11	
+status	11	
+low	11	
+back	11	si
+select all	11	si
+edit	11	si
+(none)	11	
+format	11	
+connect	11	
+opacity	11	
+preferences	11	
+priority	11	
+left	11	
+right	11	
+invalid regular expression	10	
+no match	10	
+no previous regular expression	10	
+time	10	si
+n/a	10	
+filter	10	
+group	10	
+icon	10	
+view	10	si
+automatic	10	
+cut	10	
+undo	10	si
+device	10	
+remove	10	si
+source	10	
+user	10	si
+apply	10	
+authentication	10	
+other	10	
+scale	10	
+invalid back reference	9	
+invalid character class name	9	
+invalid collation character	9	
+invalid preceding regular expression	9	
+invalid range end	9	
+premature end of regular expression	9	
+trailing backslash	9	
+unknown system error	9	
+unmatched ( or \(	9	
+unmatched ) or \)	9	
+unmatched \{	9	
+port	9	
+write error	9	
+continue	9	
+state	9	
+angle	9	
+flags	9	
+language	9	si
+license	9	
+menu	9	si
+position	9	
+spacing	9	
+style	9	
+desktop	9	si
+print	9	
+zoom	9	
+browse	9	
+details	9	
+show password	9	
+never	9	
+command	9	
+author	9	
+date	9	
+background	9	
+black	9	
+attributes	8	
+subject	8	
+background color	8	
+foreground color	8	
+label	8	
+settings	8	si
+visible	8	
+window	8	si
+permission denied	8	
+auto	8	
+contrast	8	
+gamma	8	
+horizontal	8	
+off	8	
+vertical	8	
+center	8	
+redo	8	si
+refresh	8	
+enabled	8	
+add	8	si
+link	8	
+stop	8	
+gateway	8	
+maximize	8	
+about	8	
+pages	8	
+selection	8	
+bottom	8	
+create	8	
+top	8	
+cyan	8	
+magenta	8	
+yellow	8	
+download	8	si
+symbol	8	
+login	7	
+ascii	7	
+operation was cancelled	7	
+color scheme	7	
+page setup	7	
+parent	7	
+paused	7	
+brightness	7	si
+channel	7	
+information	7	
+paper size	7	
+all	7	
+dir	7	
+modified	7	
+new	7	si
+clear	7	
+zoom in	7	
+zoom out	7	
+application	7	
+encoding	7	
+owner	7	
+minimize	7	
+credits	7	
+files	7	
+layout	7	
+target	7	
+palette	7	
+reverse	7	
+output	7	
+string	7	
+keyboard	7	
+pixels	7	
+radius	7	
+gradient	7	
+(c)	6	
+exit	6	si
+pid	6	
+system error	6	
+valid arguments are	6	
+total	6	
+country	6	
+organization	6	
+serial number	6	
+unnamed	6	
+commands	6	
+video	6	
+no error	6	
+active	6	
+centered	6	
+direction	6	
+display	6	
+icon name	6	
+screen	6	
+toolbar style	6	
+uri	6	
+unit	6	
+wrap mode	6	
+access denied	6	
+not supported	6	
+mib	6	
+advanced options	6	
+medium	6	
+on	6	
+operation not supported	6	
+standard	6	
+(unknown)	6	
+running	6	
+undefined	6	
+invalid number	6	
+next	6	si
+unmatched [, [^, [:, [., or [=	6	
+destination	6	
+program	6	
+show hidden files	6	
+url	6	
+mali	6	
+nauru	6	
+tokelau	6	
+tuvalu	6	
+d-bus name to use for this instance	6	
+no vpn configuration options	6	
+unknown error creating editor instance	6	
+http proxy password	6	
+security	6	si
+attribute	6	
+list	6	
+hidden	6	
+connected	6	
+delaware	6	
+compression	6	
+key	6	
+copyright	6	
+syntax error	6	
+activate	6	
+alpha	6	
+billing info	6	
+command line	6	
+copies	6	
+data	6	
+manage custom sizes	6	
+no results found	6	
+page ordering	6	
+pages per sheet	6	
+after	6	
+or	6	
+number	6	
+installed	6	
+arabic	6	
+armenian	6	
+avestan	6	
+cherokee	6	
+coptic	6	
+czech	6	
+danish	6	
+esperanto	6	
+faroese	6	
+french	6	
+german	6	
+gujarati	6	
+hebrew	6	
+italian	6	
+javanese	6	
+kannada	6	
+lao	6	
+malayalam	6	
+mongolian	6	
+norwegian	6	
+polish	6	
+portuguese	6	
+russian	6	
+slovak	6	
+swedish	6	
+syriac	6	
+telugu	6	
+thai	6	
+tibetan	6	
+ukrainian	6	
+extension	6	
+duplicate	6	
+export	6	
+strength	6	
+colors	6	
+connecting	6	
+case sensitive	6	
+rotate	6	
+failed	5	
+other options	5	
+stopped	5	
+blocks	5	
+read error	5	
+connection failed	5	
+not enough memory	5	
+common name	5	
+email address	5	
+unlock	5	
+system	5	si
+<unknown>	5	
+archive	5	
+miscellaneous	5	
+output format	5	
+column spacing	5	
+columns	5	
+current page	5	
+fill	5	
+font name	5	
+group name	5	
+inverted	5	
+local only	5	
+model	5	
+padding	5	
+row spacing	5	
+show details	5	
+show text	5	
+sort order	5	
+tool	5	
+underline	5	
+use markup	5	
+wrap	5	
+invalid argument	5	
+print version information and exit	5	
+gib	5	
+kib	5	
+grid	5	
+highlight	5	
+threshold	5	
+execute	5	
+forward	5	
+home	5	
+searching	5	
+file exists	5	
+network	5	si
+not a directory	5	
+not a regular file	5	
+protocol error	5	
+try again	5	
+permissions	5	
+skip	5	
+all files	5	
+content	5	
+open file	5	
+properties	5	
+read	5	
+upload	5	si
+write	5	
+authenticate vpn	5	
+the networkmanager developers	5	
+misc	5	
+server	5	
+identifier	5	
+missing argument	5	
+output file	5	
+unmount	5	
+chap	5	
+mschap	5	
+mschapv2	5	
+pap	5	
+guarani	5	
+new password	5	

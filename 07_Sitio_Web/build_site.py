@@ -347,7 +347,7 @@ def md(text, convert=True):
 # ---------------------------------------------------------------- plantilla
 NAV = [("index.html", "Inicio", "pado"),
        ("Aprender", [("curso.html", "Curso por niveles", "tase-kelo"), ("escritura.html", "Escritura", "beka"), ("pronunciacion.html", "Pronunciación", "sone"),
-                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke")], "tase"),
+                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor")], "tase"),
        ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
        ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"),
                      ("informatica.html", "Informática")], "lare"),
@@ -728,6 +728,43 @@ def build_revision():
     h, toc, _ = md((ROOT / "02_Diccionario/datos/revision_semantica.md").read_text(encoding="utf8"), convert=True)
     page("revision.html", "Revisión semántica de términos", f'<article>{h}</article>', "revision.html")
 
+def build_traductor():
+    cl = {e["w"]: e["cls"] for e in ALL}
+    lex = {w: [m, (pron(w)[1] if pron(w) else ""), cl.get(w, "")] for w, (m, pr) in ALLMAP.items()}
+    (OUT / "assets" / "lexico.js").write_text("window.OWEE_LEX=" + json.dumps(lex, ensure_ascii=False) + ";", encoding="utf8")
+    shutil.copy2(Path(__file__).resolve().parent / "traductor.js", OUT / "assets/traductor.js")
+    body = """<h1>Traductor asistido Owee ⇄ español</h1>
+<p><strong>Prototipo.</strong> Traduce <em>palabra por palabra</em> con el diccionario (tiene {n} formas), separa los compuestos, reconoce <code>pe/te/pu</code>, <code>no</code> y <code>ka</code>, y propone una lectura aproximada. No conjuga ni resuelve ambigüedades: el contexto lo pones tú. Todo ocurre en tu navegador.</p>
+<div class="controls"><div class="seg" role="group"><button data-dir="oe" aria-pressed="true">Owee → español</button><button data-dir="eo" aria-pressed="false">Español → Owee</button></div></div>
+<textarea id="entrada" rows="4" style="width:100%;font:1.2rem/1.5 system-ui;padding:12px;border:1px solid var(--rule);border-radius:10px;background:var(--surface);color:var(--ink)" aria-label="Texto de entrada">me suna nume</textarea>
+<div id="resultado"></div>
+<h2>Ejemplos</h2><p class="noprint" id="ej"></p>
+<script src="assets/lexico.js"></script><script src="assets/traductor.js"></script>
+<script>(function(){{
+var dir='oe',ent=document.getElementById('entrada'),res=document.getElementById('resultado');
+function esc(s){{return String(s).replace(/[&<>]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;'}}[c]}})}}
+function fila(o,t,ok){{return '<tr><td><span class="o">'+(window.Owee?Owee.toScript(o):o)+'</span><br><small class="rm">'+esc(o)+'</small></td><td'+(ok?'':' style="color:var(--warn)"')+'>'+esc(t)+'</td></tr>'}}
+function pinta(){{var t=ent.value,h='';
+ if(dir==='oe'){{OweeTraductor.owee2es(t).forEach(function(f){{
+  h+='<div class="poema"><div class="v"><span class="o">'+(window.Owee?Owee.toScript(f.frase):f.frase)+'</span><small class="r">'+esc(f.frase)+'</small></div>'
+   +'<p><strong>Lectura aproximada:</strong> '+esc(f.aproximada)+'</p>'
+   +'<div class="tw"><table><thead><tr><th>Owee</th><th>Significado</th></tr></thead><tbody>'+f.palabras.map(function(p){{return fila(p.owee,p.es,p.ok)}}).join('')+'</tbody></table></div></div>'}})}}
+ else{{OweeTraductor.es2owee(t).forEach(function(f){{
+  h+='<div class="poema"><p><strong>«'+esc(f.frase)+'»</strong></p><div class="v"><span class="o">'+(window.Owee?Owee.toScript(f.sugerencia):f.sugerencia)+'</span><small class="r">'+esc(f.sugerencia)+'</small></div>'
+   +'<div class="tw"><table><thead><tr><th>Español</th><th>Owee (candidatas)</th></tr></thead><tbody>'+f.palabras.map(function(p){{return '<tr><td>'+esc(p.es)+'</td><td'+(p.ok?'':' style="color:var(--warn)"')+'>'+esc(p.owee)+'</td></tr>'}}).join('')+'</tbody></table></div>'
+   +'<p><small>Revisa la sugerencia: Owee no usa artículos ni conjugación; el tiempo se marca con <code>pe</code> / <code>pu</code>.</small></p></div>'}})}}
+ res.innerHTML=h}}
+ent.addEventListener('input',pinta);
+document.querySelectorAll('[data-dir]').forEach(function(b){{b.onclick=function(){{dir=b.dataset.dir;document.querySelectorAll('[data-dir]').forEach(function(x){{x.setAttribute('aria-pressed',x===b)}});
+ ent.value=dir==='oe'?'me suna nume':'Yo quiero agua';pinta()}}}});
+var EJ={{oe:['me pe fame pume','tu kuma bo mora ka','ra fame no pume','te-loda-kelo me daro'],eo:['Hoy trabajo','Ayer comí fruta','No quiero comer','Mañana voy a la ciudad']}};
+document.getElementById('ej').innerHTML=EJ.oe.map(function(x){{return '<button class="btn" data-x="oe|'+x+'">'+x+'</button>'}}).concat(EJ.eo.map(function(x){{return '<button class="btn" data-x="eo|'+x+'">'+x+'</button>'}})).join(' ');
+document.getElementById('ej').addEventListener('click',function(e){{var d=e.target.dataset.x;if(!d)return;var a=d.split('|');dir=a[0];ent.value=a[1];
+ document.querySelectorAll('[data-dir]').forEach(function(x){{x.setAttribute('aria-pressed',x.dataset.dir===dir)}});pinta()}});
+window.addEventListener('load',pinta);
+}})();</script>""".replace("{n}", str(len(ALLMAP))).replace("{{", "{").replace("}}", "}")
+    page("traductor.html", "Traductor asistido", body, "traductor.html")
+
 def build_estado():
     for doc, fname, titulo in (("Owee_Estado_y_Pendientes.md", "estado.html", "Estado y pendientes"),
                                ("Owee_Auditoria_y_Hoja_de_Ruta.md", "auditoria.html", "Auditoría inicial (histórica)")):
@@ -805,7 +842,7 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion(); build_revision()
+    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion(); build_revision(); build_traductor()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     (OUT / ".nojekyll").write_text("")
     print(f"OK {OUT}: {len(LEX)} entradas, {len(poems)} textos poeticos, {npdf} PDFs, fuente literatura: {LIT.name}")

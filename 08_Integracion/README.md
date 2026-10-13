@@ -1,6 +1,6 @@
 # Owee en tus proyectos: oweelinux, oweeme.com y mibolivia.online
 
-**Sí es posible**, y la parte de informática ayuda mucho. Este kit trae lo necesario para tres destinos. Todo se genera desde el mismo glosario (`datos/ui_glosario.tsv`) y el mismo léxico del idioma, así que **un cambio se propaga a la web y a Linux a la vez**.
+**Sí es posible**, y la parte de informática ayuda mucho. Este kit trae lo necesario para tres destinos. Todo se genera desde el mismo glosario (`datos/ui_glosario.tsv`, 96 textos) y el mismo léxico del idioma, así que **un cambio se propaga a la web y a Linux a la vez**.
 
 | Destino | Qué obtiene | Estado del kit |
 |---|---|---|
@@ -15,6 +15,7 @@ datos/ui_glosario.tsv              66 textos de interfaz: inglés, español y Ow
 herramientas/owee_script.py        romano <-> Owee Script en Python (compuestos y nombres propios)
 herramientas/generar_traducciones.py   glosario -> qow.po, qow@owee.po, qow.json, qow.js
 herramientas/ts_rellenar.py        rellena archivos Qt (.ts) de apps Deepin/DDE con el glosario
+escritorio/                        nombres genéricos de programas (.desktop), medición de cadenas y guía por capas (ver escritorio/README.md)
 web/owee-i18n.js, qow.js, ejemplo.html, owee-script/, nginx-owee.conf
 linux/build-debs.sh                construye fonts-owee, fcitx5-owee y owee-locale (dist/*.deb)
 linux/qow_BO                       definición del locale Owee para Bolivia

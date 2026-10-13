@@ -71,7 +71,7 @@ no
 
 ## Lección 1.3 — Comer y beber
 
-<!--vocabulario pume fame nobe suna mude nuse-->
+<!--vocabulario pume fame nobe kopa mude nuse-->
 
 ```owee
 me fame pume
@@ -89,14 +89,14 @@ ra fame no pume
 
 ```owee
 fame mude
-suna nuse
+kopa nuse
 ```
 
-*La comida (está) llena. El agua (está) vacía.*
+*La comida (está) llena. El recipiente (está) vacío.*
 
 <!--resp-->
-**Ejercicios.** 1) «Yo no bebo». 2) «¿Comes?». 3) «El agua está vacía».
-**Respuestas.** 1) `me nobe no pume`. 2) `tu fame pume ka`. 3) `suna nuse`.
+**Ejercicios.** 1) «Yo no bebo». 2) «¿Comes?». 3) «El recipiente está vacío».
+**Respuestas.** 1) `me nobe no pume`. 2) `tu fame pume ka`. 3) `kopa nuse`.
 <!--/resp-->
 
 ## Lección 1.4 — Casa y familia

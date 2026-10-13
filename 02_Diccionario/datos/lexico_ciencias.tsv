@@ -507,9 +507,25 @@ suna-meka-kuma	suna-meka-kuma	construcción	puerto (casa de barcos)	APROBADA	Tra
 sura-meka-kuma	sura-meka-kuma	construcción	aeropuerto (casa de aviones)	APROBADA	Transporte y viaje	Vida diaria (lote 2)	
 nado-sena	nado-sena	construcción	boleto (signo de acceso)	APROBADA	Transporte y viaje	Vida diaria (lote 2)	
 bume-kopa	bume-kopa	construcción	maleta (contenedor de ropa)	APROBADA	Transporte y viaje	Vida diaria (lote 2)	
-ruma-daro	ruma-daro	construcción	animal de trabajo (animal + trabajo)	VERIFICADA	Animales	Vida diaria (lote 2)	
-ruma-fame	ruma-fame	construcción	animal de alimento / ganado (animal + comida)	VERIFICADA	Animales	Vida diaria (lote 2)	
-ruma-taro	ruma-taro	construcción	animal terrestre (animal + tierra)	VERIFICADA	Animales	Vida diaria (lote 2)	
-doma-le	doma-le	construcción	izquierda (el lado cercano al corazón)	VERIFICADA	Orientación	Vida diaria (lote 2)	
-doma-lu	doma-lu	construcción	derecha (el lado lejano al corazón)	VERIFICADA	Orientación	Vida diaria (lote 2)	
-duma-kuma	duma-kuma	construcción	estación / terminal (casa del movimiento)	VERIFICADA	Geografía	Vida diaria (lote 2)	
+ruma-daro	ruma-daro	construcción	animal de trabajo (animal + trabajo)	APROBADA	Animales	Vida diaria (lote 2)	
+ruma-fame	ruma-fame	construcción	animal de alimento / ganado (animal + comida)	APROBADA	Animales	Vida diaria (lote 2)	
+ruma-taro	ruma-taro	construcción	animal terrestre (animal + tierra)	APROBADA	Animales	Vida diaria (lote 2)	
+doma-kado	doma-kado	construcción	izquierda (el lado del corazón)	APROBADA	Orientación	Vida diaria (lote 2)	
+doma-kado-no	doma-kado-no	construcción	derecha (el lado sin corazón)	APROBADA	Orientación	Vida diaria (lote 2)	
+duma-kuma	duma-kuma	construcción	estación / terminal (casa del movimiento)	APROBADA	Geografía	Vida diaria (lote 2)	
+beka-feke	beka-feke	construcción	editor / procesador de texto (herramienta de escritura)	VERIFICADA	Programas	Escritorio	
+foma-beka-feke	foma-beka-feke	construcción	editor de código (herramienta de código)	VERIFICADA	Programas	Escritorio	
+gora-rela-duma	gora-rela-duma	construcción	navegador web (moverse por internet)	VERIFICADA	Programas	Escritorio	
+doke-kopa-feke	doke-kopa-feke	construcción	gestor de archivos (herramienta de archivos)	VERIFICADA	Programas	Escritorio	
+loke-dore	loke-dore	construcción	imagen (forma para el ojo)	VERIFICADA	Programas	Escritorio	
+loke-dore-feke	loke-dore-feke	construcción	editor de imágenes (herramienta de imagen)	VERIFICADA	Programas	Escritorio	
+daro-feke	daro-feke	construcción	suite ofimática (herramienta de trabajo)	VERIFICADA	Programas	Escritorio	
+banu-feke	banu-feke	construcción	hoja de cálculo (herramienta de números)	VERIFICADA	Programas	Escritorio	
+mado-feke	mado-feke	construcción	calculadora (herramienta de cálculo)	VERIFICADA	Programas	Escritorio	
+meka-mede	meka-mede	construcción	monitor del sistema (medir la máquina)	VERIFICADA	Programas	Escritorio	
+tera-mede-meka	tera-mede-meka	construcción	reloj (máquina de medir el tiempo)	VERIFICADA	Programas	Escritorio	
+maku-feke	maku-feke	construcción	ratón (herramienta de la mano)	VERIFICADA	Ajustes y sistema	Escritorio	
+nara-fadu	nara-fadu	construcción	privacidad (seguridad de la persona)	VERIFICADA	Ajustes y sistema	Escritorio	
+mena-kopa	mena-kopa	construcción	almacenamiento (contenedor de memoria)	VERIFICADA	Ajustes y sistema	Escritorio	
+loke-tabe-lobe	loke-tabe-lobe	construcción	fondo de pantalla (cubierta de la pantalla)	VERIFICADA	Ajustes y sistema	Escritorio	
+meka-seta	meka-seta	construcción	dispositivos (conjunto de máquinas)	VERIFICADA	Ajustes y sistema	Escritorio	

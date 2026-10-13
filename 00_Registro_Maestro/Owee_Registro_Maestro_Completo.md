@@ -1587,7 +1587,15 @@ El idioma se integra por tres vías, todas generadas desde `08_Integracion/datos
 
 **Aprobados:** el lote 2 completo (92 términos) y `lu-meka` (nube informática). **Una forma = un significado:** se corrigió además `dune-fada` («enojo sentido») para que no duplique a `fada` («enojo»).
 
-**Animales:** no se crea una palabra por especie; se usa **categoría + rasgo** (`ruma-taro`, `ruma-daro`, `ruma-fame`, `ruma-lore`…). Se retiró `ruma-galo`. **Izquierda/derecha:** `doma-le` / `doma-lu`. En espera de confirmación.
+**Animales:** no se crea una palabra por especie; se usa **categoría + rasgo** (`ruma-taro`, `ruma-daro`, `ruma-fame`, `ruma-lore`…). Se retiró `ruma-galo`. **Izquierda/derecha:** `doma-kado` / `doma-kado-no`. En espera de confirmación.
+
+------------------------------------------------------------------------
+
+## 85. Aprobaciones del 2026-10-13, escritorio y traductor
+
+**Aprobados:** `ruma-taro`, `ruma-daro`, `ruma-fame`, `duma-kuma` y la pareja de orientación, que cambió a `doma-kado` (izquierda, «el lado del corazón») y `doma-kado-no` (derecha): `doma-le`/`doma-lu` se descartaron porque, hablados, **suenan igual que la frase «corazón cerca/lejos»** (principio de una forma = un significado). Se corrigió además la lección 1.3 del curso para que su frase no coincida con el compuesto `suna-nuse` («seco»).
+
+**Escritorio:** nombres genéricos de programas y ajustes (`loke-dore-feke` editor de imágenes, `gora-rela-duma` navegador web…) y guía por capas para localizar programas (`08_Integracion/escritorio/README.md`). Los **nombres de marca** (GIMP, Firefox, VS Code…) **no se traducen**; se les añade el nombre genérico en Owee. **Traductor asistido** Owee ⇄ español (prototipo) en la página «Traductor».
 
 ------------------------------------------------------------------------
 

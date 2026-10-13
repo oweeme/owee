@@ -381,3 +381,10 @@ suna-meka-kuma
 sura-meka-kuma
 nado-sena
 bume-kopa
+# Aprobadas por el autor (2026-10-13) tras comprobar facilidad de uso y coherencia: animales por categoría, izquierda/derecha, terminal
+ruma-daro
+ruma-fame
+ruma-taro
+doma-kado
+doma-kado-no
+duma-kuma

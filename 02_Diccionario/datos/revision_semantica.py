@@ -28,14 +28,7 @@ AJUSTADOS = {
     "lena-sabe": "en el diseño, «dulce» era demasiado específico; ahora «sabroso»",
     "seta": "raíz ampliada de «conjunto matemático» a «conjunto / colección» (menú, galaxia, vocabulario, grafo)",
 }
-ESPERA = {
-    "ruma-daro": "nueva (norma de animales por categorías); espera confirmación",
-    "ruma-fame": "nueva (norma de animales por categorías); espera confirmación",
-    "ruma-taro": "nueva (norma de animales por categorías); espera confirmación",
-    "doma-le": "nueva: izquierda = el lado del corazón; espera confirmación",
-    "doma-lu": "nueva: derecha = el lado lejano al corazón; espera confirmación",
-    "duma-kuma": "nueva: estación / terminal; espera confirmación",
-}
+ESPERA = {}   # (vacío: los términos en espera se aprobaron el 2026-10-13)
 base = {}
 for l in (aqui / "lexico.tsv").read_text(encoding="utf8").splitlines()[1:]:
     c = l.split("\t"); base[c[0]] = c[3]

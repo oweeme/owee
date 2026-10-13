@@ -1,5 +1,5 @@
 # Traduccion de oweelinux al Owee (romano)
-# Generado por 08_Integracion/herramientas/generar_traducciones.py el 2026-10-12. No editar a mano: edita datos/ui_glosario.tsv.
+# Generado por 08_Integracion/herramientas/generar_traducciones.py el 2026-10-13. No editar a mano: edita datos/ui_glosario.tsv.
 msgid ""
 msgstr ""
 "Project-Id-Version: oweelinux 0.1\n"
@@ -272,4 +272,124 @@ msgstr "pe"
 #. Bienvenida
 msgid "Welcome"
 msgstr "reme"
+
+#. Ratón
+msgid "Mouse"
+msgstr "maku-feke"
+
+#. Teclado
+msgid "Keyboard"
+msgstr "maku-tabe"
+
+#. Pantalla
+msgid "Display"
+msgstr "loke-tabe"
+
+#. Sonido
+msgid "Sound"
+msgstr "sone"
+
+#. Energía
+msgid "Power"
+msgstr "enu"
+
+#. Privacidad
+msgid "Privacy"
+msgstr "nara-fadu"
+
+#. Almacenamiento
+msgid "Storage"
+msgstr "mena-kopa"
+
+#. Dispositivos
+msgid "Devices"
+msgstr "meka-seta"
+
+#. Fondo de pantalla
+msgid "Wallpaper"
+msgstr "loke-tabe-lobe"
+
+#. Cuentas
+msgid "Accounts"
+msgstr "nara-kade"
+
+#. Aplicaciones
+msgid "Applications"
+msgstr "mado-foma"
+
+#. Acerca de
+msgid "About"
+msgstr "doke"
+
+#. Notificaciones
+msgid "Notifications"
+msgstr "reka"
+
+#. Correo electrónico
+msgid "Email"
+msgstr "reka-rela"
+
+#. Navegador web
+msgid "Web browser"
+msgstr "gora-rela-duma"
+
+#. Editor de texto
+msgid "Text editor"
+msgstr "beka-feke"
+
+#. Editor de código
+msgid "Code editor"
+msgstr "foma-beka-feke"
+
+#. Gestor de archivos
+msgid "File manager"
+msgstr "doke-kopa-feke"
+
+#. Imagen
+msgid "Image"
+msgstr "loke-dore"
+
+#. Editor de imágenes
+msgid "Image editor"
+msgstr "loke-dore-feke"
+
+#. Hoja de cálculo
+msgid "Spreadsheet"
+msgstr "banu-feke"
+
+#. Suite ofimática
+msgid "Office suite"
+msgstr "daro-feke"
+
+#. Calculadora
+msgid "Calculator"
+msgstr "mado-feke"
+
+#. Reloj
+msgid "Clock"
+msgstr "tera-mede-meka"
+
+#. Monitor del sistema
+msgid "System monitor"
+msgstr "meka-mede"
+
+#. Izquierda
+msgid "Left"
+msgstr "doma-kado"
+
+#. Derecha
+msgid "Right"
+msgstr "doma-kado-no"
+
+#. Hoy
+msgid "Today"
+msgstr "te-loda-kelo"
+
+#. Ayer
+msgid "Yesterday"
+msgstr "pe-loda-kelo"
+
+#. Mañana
+msgid "Tomorrow"
+msgstr "pu-loda-kelo"
 
