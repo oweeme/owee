@@ -100,6 +100,10 @@ ok("Cobertura Swadesh-100 >= 90%", bool(mm) and int(mm.group(2)) + int(mm.group(
 nlec = len(list((RAIZ / "03_Material_Ensenanza/Curso").glob("Owee_Curso_Nivel_*.md")))
 ok(f"Curso por niveles ({nlec} niveles + indice)", nlec == 4)
 
+# 7b2. ingles completo por pivote
+ri = correr([PY, "-I", "02_Diccionario/datos/generar_ingles.py"])
+ok("Ingles (pivote) para todas las formas", ri.returncode == 0, ri.stdout.strip().splitlines()[-1] if ri.returncode else ri.stdout.strip().splitlines()[0])
+
 # 7c. traductor: pruebas de humo en Node con el lexico generado
 if nodo:
     prueba = """
@@ -111,6 +115,10 @@ const oe={'me suna nume':'yo deseo agua','ra fame no pume':'él/ella no comer co
 for(const k in oe){ if(T.owee2es(k)[0].aproximada!==oe[k]) fallos.push(k+' => '+T.owee2es(k)[0].aproximada); }
 const eo={'Yo quiero agua':'me suna nume','Tu duermes en casa':'tu kuma bo sule','No quiero comer':'no nume pume'};
 for(const k in eo){ if(T.es2owee(k)[0].sugerencia!==eo[k]) fallos.push(k+' => '+T.es2owee(k)[0].sugerencia); }
+const oi={'me suna nume':'I want water','me pe fame pume':'I ate food','ra fame no pume':'he/she does not eat food','tu fame pume ka':'do you eat food?'};
+for(const k in oi){ if(T.owee2en(k)[0].aproximada!==oi[k]) fallos.push('EN '+k+' => '+T.owee2en(k)[0].aproximada); }
+const io={'I want water':'me suna nume','She does not eat food':'ra fame no pume','Tomorrow I will go to the city':'pu-loda-kelo me kuma-seta to duma'};
+for(const k in io){ if(T.en2owee(k)[0].sugerencia!==io[k]) fallos.push('EN '+k+' => '+T.en2owee(k)[0].sugerencia); }
 console.log(JSON.stringify(fallos));"""
     r = subprocess.run(["node", "-e", prueba], cwd=RAIZ, capture_output=True, text=True)
     fl = r.stdout.strip() if r.returncode == 0 else r.stderr[-200:]

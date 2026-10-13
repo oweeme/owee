@@ -730,12 +730,13 @@ def build_revision():
 
 def build_traductor():
     cl = {e["w"]: e["cls"] for e in ALL}
-    lex = {w: [m, (pron(w)[1] if pron(w) else ""), cl.get(w, "")] for w, (m, pr) in ALLMAP.items()}
+    en = {l.split("\t")[0]: l.split("\t")[1] for l in (ROOT / "02_Diccionario/datos/ingles.tsv").read_text(encoding="utf8").splitlines()[1:]}
+    lex = {w: [m, (pron(w)[1] if pron(w) else ""), cl.get(w, ""), en.get(w, "")] for w, (m, pr) in ALLMAP.items()}
     (OUT / "assets" / "lexico.js").write_text("window.OWEE_LEX=" + json.dumps(lex, ensure_ascii=False) + ";", encoding="utf8")
     shutil.copy2(Path(__file__).resolve().parent / "traductor.js", OUT / "assets/traductor.js")
     body = """<h1>Traductor asistido Owee ⇄ español</h1>
-<p><strong>Prototipo.</strong> Traduce <em>palabra por palabra</em> con el diccionario (tiene {n} formas), separa los compuestos, reconoce <code>pe/te/pu</code>, <code>no</code> y <code>ka</code>, y propone una lectura aproximada. No conjuga ni resuelve ambigüedades: el contexto lo pones tú. Todo ocurre en tu navegador.</p>
-<div class="controls"><div class="seg" role="group"><button data-dir="oe" aria-pressed="true">Owee → español</button><button data-dir="eo" aria-pressed="false">Español → Owee</button></div></div>
+<p><strong>Prototipo.</strong> Traduce <em>palabra por palabra</em> con el diccionario (tiene {n} formas), separa los compuestos, reconoce <code>pe/te/pu</code>, <code>no</code> y <code>ka</code>, y propone una lectura aproximada. El inglés se obtiene <strong>por pivote</strong>: cada forma Owee tiene su significado en español y de ahí su glosa en inglés (<code>ingles.tsv</code>). No resuelve ambigüedades: el contexto lo pones tú. Todo ocurre en tu navegador.</p>
+<div class="controls"><div class="seg" role="group"><button data-dir="oe" aria-pressed="true">Owee → español</button><button data-dir="eo" aria-pressed="false">Español → Owee</button><button data-dir="oi" aria-pressed="false">Owee → English</button><button data-dir="io" aria-pressed="false">English → Owee</button></div></div>
 <textarea id="entrada" rows="4" style="width:100%;font:1.2rem/1.5 system-ui;padding:12px;border:1px solid var(--rule);border-radius:10px;background:var(--surface);color:var(--ink)" aria-label="Texto de entrada">me suna nume</textarea>
 <div id="resultado"></div>
 <h2>Ejemplos</h2><p class="noprint" id="ej"></p>
@@ -745,20 +746,20 @@ var dir='oe',ent=document.getElementById('entrada'),res=document.getElementById(
 function esc(s){{return String(s).replace(/[&<>]/g,function(c){{return {{'&':'&amp;','<':'&lt;','>':'&gt;'}}[c]}})}}
 function fila(o,t,ok){{return '<tr><td><span class="o">'+(window.Owee?Owee.toScript(o):o)+'</span><br><small class="rm">'+esc(o)+'</small></td><td'+(ok?'':' style="color:var(--warn)"')+'>'+esc(t)+'</td></tr>'}}
 function pinta(){{var t=ent.value,h='';
- if(dir==='oe'){{OweeTraductor.owee2es(t).forEach(function(f){{
+ if(dir==='oe'||dir==='oi'){{(dir==='oe'?OweeTraductor.owee2es(t):OweeTraductor.owee2en(t)).forEach(function(f){{
   h+='<div class="poema"><div class="v"><span class="o">'+(window.Owee?Owee.toScript(f.frase):f.frase)+'</span><small class="r">'+esc(f.frase)+'</small></div>'
    +'<p><strong>Lectura aproximada:</strong> '+esc(f.aproximada)+'</p>'
-   +'<div class="tw"><table><thead><tr><th>Owee</th><th>Significado</th></tr></thead><tbody>'+f.palabras.map(function(p){{return fila(p.owee,p.es,p.ok)}}).join('')+'</tbody></table></div></div>'}})}}
- else{{OweeTraductor.es2owee(t).forEach(function(f){{
+   +'<div class="tw"><table><thead><tr><th>Owee</th><th>'+(dir==='oi'?'Meaning':'Significado')+'</th></tr></thead><tbody>'+f.palabras.map(function(p){{return fila(p.owee,p.es,p.ok)}}).join('')+'</tbody></table></div></div>'}})}}
+ else{{(dir==='eo'?OweeTraductor.es2owee(t):OweeTraductor.en2owee(t)).forEach(function(f){{
   h+='<div class="poema"><p><strong>«'+esc(f.frase)+'»</strong></p><div class="v"><span class="o">'+(window.Owee?Owee.toScript(f.sugerencia):f.sugerencia)+'</span><small class="r">'+esc(f.sugerencia)+'</small></div>'
    +'<div class="tw"><table><thead><tr><th>Español</th><th>Owee (candidatas)</th></tr></thead><tbody>'+f.palabras.map(function(p){{return '<tr><td>'+esc(p.es)+'</td><td'+(p.ok?'':' style="color:var(--warn)"')+'>'+esc(p.owee)+'</td></tr>'}}).join('')+'</tbody></table></div>'
    +'<p><small>Revisa la sugerencia: Owee no usa artículos ni conjugación; el tiempo se marca con <code>pe</code> / <code>pu</code>.</small></p></div>'}})}}
  res.innerHTML=h}}
 ent.addEventListener('input',pinta);
 document.querySelectorAll('[data-dir]').forEach(function(b){{b.onclick=function(){{dir=b.dataset.dir;document.querySelectorAll('[data-dir]').forEach(function(x){{x.setAttribute('aria-pressed',x===b)}});
- ent.value=dir==='oe'?'me suna nume':'Yo quiero agua';pinta()}}}});
-var EJ={{oe:['me pe fame pume','tu kuma bo mora ka','ra fame no pume','te-loda-kelo me daro'],eo:['Hoy trabajo','Ayer comí fruta','No quiero comer','Mañana voy a la ciudad']}};
-document.getElementById('ej').innerHTML=EJ.oe.map(function(x){{return '<button class="btn" data-x="oe|'+x+'">'+x+'</button>'}}).concat(EJ.eo.map(function(x){{return '<button class="btn" data-x="eo|'+x+'">'+x+'</button>'}})).join(' ');
+ ent.value={{oe:'me suna nume',eo:'Yo quiero agua',oi:'me pe fame pume',io:'I want water'}}[dir];pinta()}}}});
+var EJ={{oe:['me pe fame pume','tu kuma bo mora ka','ra fame no pume','te-loda-kelo me daro'],eo:['Hoy trabajo','Ayer comí fruta','No quiero comer','Mañana voy a la ciudad'],oi:['me suna nume','ra pe sule','tu fame pume ka'],io:['I want water','She does not eat food','Tomorrow I will go to the city']}};
+document.getElementById('ej').innerHTML=['oe','eo','oi','io'].map(function(k){{return EJ[k].map(function(x){{return '<button class="btn" data-x="'+k+'|'+x+'">'+x+'</button>'}}).join(' ')}}).join(' ');
 document.getElementById('ej').addEventListener('click',function(e){{var d=e.target.dataset.x;if(!d)return;var a=d.split('|');dir=a[0];ent.value=a[1];
  document.querySelectorAll('[data-dir]').forEach(function(x){{x.setAttribute('aria-pressed',x.dataset.dir===dir)}});pinta()}});
 window.addEventListener('load',pinta);

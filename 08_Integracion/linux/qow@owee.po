@@ -275,7 +275,7 @@ msgstr ""
 
 #. Ratón
 msgid "Mouse"
-msgstr ""
+msgstr ""
 
 #. Teclado
 msgid "Keyboard"
@@ -303,7 +303,7 @@ msgstr ""
 
 #. Dispositivos
 msgid "Devices"
-msgstr ""
+msgstr ""
 
 #. Fondo de pantalla
 msgid "Wallpaper"
@@ -335,35 +335,35 @@ msgstr ""
 
 #. Editor de texto
 msgid "Text editor"
-msgstr ""
+msgstr ""
 
 #. Editor de código
 msgid "Code editor"
-msgstr ""
+msgstr ""
 
 #. Gestor de archivos
 msgid "File manager"
-msgstr ""
+msgstr ""
 
 #. Imagen
 msgid "Image"
-msgstr ""
+msgstr ""
 
 #. Editor de imágenes
 msgid "Image editor"
-msgstr ""
+msgstr ""
 
 #. Hoja de cálculo
 msgid "Spreadsheet"
-msgstr ""
+msgstr ""
 
 #. Suite ofimática
 msgid "Office suite"
-msgstr ""
+msgstr ""
 
 #. Calculadora
 msgid "Calculator"
-msgstr ""
+msgstr ""
 
 #. Reloj
 msgid "Clock"
@@ -371,7 +371,7 @@ msgstr ""
 
 #. Monitor del sistema
 msgid "System monitor"
-msgstr ""
+msgstr ""
 
 #. Izquierda
 msgid "Left"

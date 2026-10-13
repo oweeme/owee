@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 157 OK · 17 ajustados · 6 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 168 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -183,9 +183,24 @@ Criterios (2026-10-12):
 | `sura-meka-kuma` | aeropuerto (casa de aviones) | `sura` (aire) + `meka` (máquina) + `kuma` (hogar) | OK |
 | `nado-sena` | boleto (signo de acceso) | `nado` (acceso) + `sena` (signo) | OK |
 | `bume-kopa` | maleta (contenedor de ropa) | `bume` (ropa) + `kopa` (contenedor) | OK |
-| `ruma-daro` | animal de trabajo (animal + trabajo) | `ruma` (animal) + `daro` (trabajo) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
-| `ruma-fame` | animal de alimento / ganado (animal + comida) | `ruma` (animal) + `fame` (comida) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
-| `ruma-taro` | animal terrestre (animal + tierra) | `ruma` (animal) + `taro` (tierra) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
-| `doma-kado` | izquierda (el lado del corazón) | `doma` (corazón) + `kado` (lado geométrico) | EN ESPERA — nueva: izquierda = el lado del corazón; antes doma-le, que sonaba igual que la frase «corazón cerca» |
-| `doma-kado-no` | derecha (el lado sin corazón) | `doma` (corazón) + `kado` (lado geométrico) + `no` (negación) | EN ESPERA — nueva: derecha = el lado sin corazón; antes doma-lu, mismo problema |
-| `duma-kuma` | estación / terminal (casa del movimiento) | `duma` (movimiento) + `kuma` (hogar) | EN ESPERA — nueva: estación / terminal; espera confirmación |
+| `ruma-daro` | animal de trabajo (animal + trabajo) | `ruma` (animal) + `daro` (trabajo) | OK |
+| `ruma-fame` | animal de alimento / ganado (animal + comida) | `ruma` (animal) + `fame` (comida) | OK |
+| `ruma-taro` | animal terrestre (animal + tierra) | `ruma` (animal) + `taro` (tierra) | OK |
+| `doma-kado` | izquierda (el lado del corazón) | `doma` (corazón) + `kado` (lado geométrico) | OK |
+| `doma-kado-no` | derecha (el lado sin corazón) | `doma` (corazón) + `kado` (lado geométrico) + `no` (negación) | OK |
+| `duma-kuma` | estación / terminal (casa del movimiento) | `duma` (movimiento) + `kuma` (hogar) | OK |
+| `lodu-beka` | editor / procesador de texto (lectura y escritura) | `lodu` (lectura) + `beka` (escritura) | AJUSTADO — escritorio: antes beka-feke, que también significaría «bolígrafo» (herramienta de escritura); «lectura y escritura» describe al editor |
+| `foma-lodu-beka` | editor de código (leer y escribir código) | `foma` (regla) + `lodu` (lectura) + `beka` (escritura) | AJUSTADO — escritorio: antes foma-beka-feke, mismo motivo |
+| `gora-rela-duma` | navegador web (moverse por internet) | `gora` (mundo) + `rela` (unión) + `duma` (movimiento) | OK |
+| `doke-kopa-mado` | gestor de archivos (procesar archivos) | `doke` (información) + `kopa` (contenedor) + `mado` (cálculo) | AJUSTADO — escritorio: antes doke-kopa-feke; el patrón -feke daba muchos vecinos (nado/mado/sado/bado-feke) |
+| `salo-sena` | imagen (signo de luz) | `salo` (luz) + `sena` (signo) | AJUSTADO — escritorio: antes loke-dore / loke-sena / loke-doke (sonaban como doke-dore, loke-suna «llorar» y lodu-doke); «signo de luz» no tiene vecinos |
+| `salo-sena-mado` | editor de imágenes (procesar imágenes) | `salo` (luz) + `sena` (signo) + `mado` (cálculo) | AJUSTADO — escritorio: antes loke-dore-feke; loke-dore sonaba casi igual que doke-dore (tipo de dato) |
+| `lodu-beka-seta` | suite ofimática (conjunto de programas de texto) | `lodu` (lectura) + `beka` (escritura) + `seta` (conjunto) | AJUSTADO — escritorio: antes daro-feke «herramienta de trabajo», demasiado genérico (también sería «martillo») |
+| `banu-mata` | hoja de cálculo (números en matriz) | `banu` (número) + `mata` (matriz) | AJUSTADO — escritorio: antes banu-feke, vecino de bado-feke (dinero); «números en matriz» = hoja de cálculo, como doke-mata (array) |
+| `banu-meka` | calculadora (máquina de números) | `banu` (número) + `meka` (máquina) | AJUSTADO — escritorio: antes mado-feke, vecino de nado-feke (llave), sado-feke y bado-feke; «máquina de números» |
+| `meka-paku` | monitor del sistema (atención a la máquina) | `meka` (máquina) + `paku` (atención) | AJUSTADO — escritorio: antes meka-mede, que sonaba casi igual que meka-mado (computadora) y loka-mede (eje); «atención a la máquina» |
+| `tera-mede-meka` | reloj (máquina de medir el tiempo) | `tera` (tiempo) + `mede` (medir) + `meka` (máquina) | OK |
+| `pose-feke` | ratón / puntero (herramienta de posición) | `pose` (posición) + `feke` (herramienta) | AJUSTADO — escritorio: antes maku-feke, vecino de maku-fese (uña); «herramienta de posición» cubre ratón, panel táctil y puntero |
+| `nara-fadu` | privacidad (seguridad de la persona) | `nara` (persona) + `fadu` (seguridad) | OK |
+| `mena-kopa` | almacenamiento (contenedor de memoria) | `mena` (memoria) + `kopa` (contenedor) | OK |
+| `loke-tabe-lobe` | fondo de pantalla (cubierta de la pantalla) | `loke` (ojo) + `tabe` (superficie de apoyo) + `lobe` (cubierta) | OK |

@@ -254,16 +254,17 @@ COMPUESTOS += [
  ("duma-kuma","estación / terminal (casa del movimiento)",V2,GE),
 ]
 
-# --- Escritorio (para oweelinux): nombres genericos de programas y ajustes. PROPUESTA -> VERIFICADA. 0 raices nuevas.
+# --- Escritorio (para oweelinux): nombres genericos de programas y ajustes. 0 raices nuevas.
+# Revision 2026-10-13: se evito el patron X-ado-feke (nado/mado/sado/bado-feke sonaban casi igual) y 'beka-feke' (= tambien "boligrafo").
 ES = "Escritorio"
 EA, EB = "Programas", "Ajustes y sistema"
 COMPUESTOS += [
- ("beka-feke","editor / procesador de texto (herramienta de escritura)",ES,EA),("foma-beka-feke","editor de código (herramienta de código)",ES,EA),
- ("gora-rela-duma","navegador web (moverse por internet)",ES,EA),("doke-kopa-feke","gestor de archivos (herramienta de archivos)",ES,EA),
- ("loke-dore","imagen (forma para el ojo)",ES,EA),("loke-dore-feke","editor de imágenes (herramienta de imagen)",ES,EA),
- ("daro-feke","suite ofimática (herramienta de trabajo)",ES,EA),("banu-feke","hoja de cálculo (herramienta de números)",ES,EA),
- ("mado-feke","calculadora (herramienta de cálculo)",ES,EA),("meka-mede","monitor del sistema (medir la máquina)",ES,EA),
+ ("lodu-beka","editor / procesador de texto (lectura y escritura)",ES,EA),("foma-lodu-beka","editor de código (leer y escribir código)",ES,EA),
+ ("gora-rela-duma","navegador web (moverse por internet)",ES,EA),("doke-kopa-mado","gestor de archivos (procesar archivos)",ES,EA),
+ ("salo-sena","imagen (signo de luz)",ES,EA),("salo-sena-mado","editor de imágenes (procesar imágenes)",ES,EA),
+ ("lodu-beka-seta","suite ofimática (conjunto de programas de texto)",ES,EA),("banu-mata","hoja de cálculo (números en matriz)",ES,EA),
+ ("banu-meka","calculadora (máquina de números)",ES,EA),("meka-paku","monitor del sistema (atención a la máquina)",ES,EA),
  ("tera-mede-meka","reloj (máquina de medir el tiempo)",ES,EA),
- ("maku-feke","ratón (herramienta de la mano)",ES,EB),("nara-fadu","privacidad (seguridad de la persona)",ES,EB),("mena-kopa","almacenamiento (contenedor de memoria)",ES,EB),
- ("loke-tabe-lobe","fondo de pantalla (cubierta de la pantalla)",ES,EB),("meka-seta","dispositivos (conjunto de máquinas)",ES,EB),
+ ("pose-feke","ratón / puntero (herramienta de posición)",ES,EB),("nara-fadu","privacidad (seguridad de la persona)",ES,EB),("mena-kopa","almacenamiento (contenedor de memoria)",ES,EB),
+ ("loke-tabe-lobe","fondo de pantalla (cubierta de la pantalla)",ES,EB),
 ]

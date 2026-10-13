@@ -331,8 +331,8 @@
  },
  "Mouse": {
   "es": "Ratón",
-  "owee": "maku-feke",
-  "script": ""
+  "owee": "pose-feke",
+  "script": ""
  },
  "Keyboard": {
   "es": "Teclado",
@@ -366,8 +366,8 @@
  },
  "Devices": {
   "es": "Dispositivos",
-  "owee": "meka-seta",
-  "script": ""
+  "owee": "meka-gume",
+  "script": ""
  },
  "Wallpaper": {
   "es": "Fondo de pantalla",
@@ -406,43 +406,43 @@
  },
  "Text editor": {
   "es": "Editor de texto",
-  "owee": "beka-feke",
-  "script": ""
+  "owee": "lodu-beka",
+  "script": ""
  },
  "Code editor": {
   "es": "Editor de código",
-  "owee": "foma-beka-feke",
-  "script": ""
+  "owee": "foma-lodu-beka",
+  "script": ""
  },
  "File manager": {
   "es": "Gestor de archivos",
-  "owee": "doke-kopa-feke",
-  "script": ""
+  "owee": "doke-kopa-mado",
+  "script": ""
  },
  "Image": {
   "es": "Imagen",
-  "owee": "loke-dore",
-  "script": ""
+  "owee": "salo-sena",
+  "script": ""
  },
  "Image editor": {
   "es": "Editor de imágenes",
-  "owee": "loke-dore-feke",
-  "script": ""
+  "owee": "salo-sena-mado",
+  "script": ""
  },
  "Spreadsheet": {
   "es": "Hoja de cálculo",
-  "owee": "banu-feke",
-  "script": ""
+  "owee": "banu-mata",
+  "script": ""
  },
  "Office suite": {
   "es": "Suite ofimática",
-  "owee": "daro-feke",
-  "script": ""
+  "owee": "lodu-beka-seta",
+  "script": ""
  },
  "Calculator": {
   "es": "Calculadora",
-  "owee": "mado-feke",
-  "script": ""
+  "owee": "banu-meka",
+  "script": ""
  },
  "Clock": {
   "es": "Reloj",
@@ -451,8 +451,8 @@
  },
  "System monitor": {
   "es": "Monitor del sistema",
-  "owee": "meka-mede",
-  "script": ""
+  "owee": "meka-paku",
+  "script": ""
  },
  "Left": {
   "es": "Izquierda",

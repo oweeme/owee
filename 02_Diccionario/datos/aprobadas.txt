@@ -388,3 +388,21 @@ ruma-taro
 doma-kado
 doma-kado-no
 duma-kuma
+# Escritorio aprobado por el autor (2026-10-13) tras la revisión de choques, pronunciación y matices
+lodu-beka
+foma-lodu-beka
+gora-rela-duma
+doke-kopa-mado
+loke-doke
+loke-doke-mado
+lodu-beka-seta
+banu-mata
+banu-meka
+meka-paku
+tera-mede-meka
+pose-feke
+nara-fadu
+mena-kopa
+loke-tabe-lobe
+salo-sena
+salo-sena-mado

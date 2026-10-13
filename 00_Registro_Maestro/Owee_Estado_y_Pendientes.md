@@ -7,10 +7,10 @@
 | Comprobación | Resultado |
 |---|---|
 | Textos Owee (9 archivos): fonología V/CV sin `i` y vocabulario existente | ✅ válidos |
-| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 530 formas | ✅ 142 auditadas · **372 aprobadas** · **16 verificadas (esperan aprobación: los nombres genéricos de programas y ajustes del escritorio)** · 0 por revisar |
+| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 529 formas | ✅ 142 auditadas · **387 aprobadas** · **0 verificadas pendientes** · 0 por revisar |
 | Colisiones exactas, fonología inválida, partes inexistentes | ✅ ninguna |
 | Sitio web: 26 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
-| **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 157 OK · 17 ajustados · 6 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
+| **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 168 OK · 27 ajustados · 0 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
 | Traducciones de interfaz (66 textos) | ✅ generan; 19 avisos por términos aún sin aprobar |
 | Python (compila) y JavaScript (sintaxis) | ✅ |
 | Repositorio público en GitHub (licencias CC BY-SA / OFL / MIT) | ✅ |

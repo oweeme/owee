@@ -1595,7 +1595,15 @@ El idioma se integra por tres vías, todas generadas desde `08_Integracion/datos
 
 **Aprobados:** `ruma-taro`, `ruma-daro`, `ruma-fame`, `duma-kuma` y la pareja de orientación, que cambió a `doma-kado` (izquierda, «el lado del corazón») y `doma-kado-no` (derecha): `doma-le`/`doma-lu` se descartaron porque, hablados, **suenan igual que la frase «corazón cerca/lejos»** (principio de una forma = un significado). Se corrigió además la lección 1.3 del curso para que su frase no coincida con el compuesto `suna-nuse` («seco»).
 
-**Escritorio:** nombres genéricos de programas y ajustes (`loke-dore-feke` editor de imágenes, `gora-rela-duma` navegador web…) y guía por capas para localizar programas (`08_Integracion/escritorio/README.md`). Los **nombres de marca** (GIMP, Firefox, VS Code…) **no se traducen**; se les añade el nombre genérico en Owee. **Traductor asistido** Owee ⇄ español (prototipo) en la página «Traductor».
+**Escritorio:** nombres genéricos de programas y ajustes (`salo-sena-mado` editor de imágenes, `gora-rela-duma` navegador web…) y guía por capas para localizar programas (`08_Integracion/escritorio/README.md`). Los **nombres de marca** (GIMP, Firefox, VS Code…) **no se traducen**; se les añade el nombre genérico en Owee. **Traductor asistido** Owee ⇄ español (prototipo) en la página «Traductor».
+
+------------------------------------------------------------------------
+
+## 86. Revisión del escritorio e inglés por pivote (2026-10-13)
+
+**Escritorio:** al revisar choques acústicos y matices se cambiaron 10 nombres: se evitó el patrón `X-ado-feke` (`nado-`, `mado-`, `sado-`, `bado-feke` sonaban casi igual) y `beka-feke` (que también sería «bolígrafo»). Quedan, por ejemplo, `lodu-beka` (editor de texto), `foma-lodu-beka` (editor de código), `doke-kopa-mado` (gestor de archivos), `salo-sena-mado` (editor de imágenes), `banu-mata` (hoja de cálculo), `banu-meka` (calculadora), `pose-feke` (ratón), `meka-paku` (monitor del sistema); «dispositivos» usa `meka-gume` (hardware). Los 15 se aprobaron.
+
+**Inglés:** cada forma tiene glosa en inglés **por pivote** (su significado en español → `diccionario_es_en.tsv` → `ingles.tsv`); toda forma nueva necesita su entrada (lo exige `verificar_todo.py`). Con ello el **traductor** ofrece Owee ⇄ español e Owee ⇄ inglés.
 
 ------------------------------------------------------------------------
 

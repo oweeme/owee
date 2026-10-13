@@ -45,6 +45,11 @@ python3 04_Fuentes/actual_3.3_fuente_y_glifos/Owee_Glyph_Master_3.3/build_glyph_
 
 Los PDF del sitio se generan con Chrome/Chromium: `python3 07_Sitio_Web/make_pdf.py`.
 
+## Usar Owee
+
+- **Traductor Owee ⇄ español / inglés** (prototipo, en el navegador): `07_Sitio_Web` → página «Traductor».
+- **oweelinux y otros ordenadores:** paquetes `.deb`, teclado, traducciones y menú en [`08_Integracion/INSTALAR_en_otro_ordenador.md`](08_Integracion/INSTALAR_en_otro_ordenador.md).
+
 ## Estado y verificación
 
 El estado actual, los pendientes y las áreas por cubrir están en [`00_Registro_Maestro/Owee_Estado_y_Pendientes.md`](00_Registro_Maestro/Owee_Estado_y_Pendientes.md). Para verificar todo el proyecto (textos, léxico, sitio web, enlaces, herramientas y git):

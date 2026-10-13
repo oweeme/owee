@@ -1,0 +1,763 @@
+forma	ingles
+me	I
+tu	you
+ra	he / she
+ne	group / human plural
+no	negation
+ka	question
+re	and
+lo	or
+ke	if / condition
+pe	previous / past
+te	now / present
+pu	next / future
+bo	inside / in
+ba	outside
+to	toward
+de	from
+go	up
+gu	down
+le	near
+lu	far
+ko	with
+so	without
+pa	more / increase
+po	less / reduction
+se	equality / similarity
+mene	we
+tune	you
+rane	they
+nara	person / individual
+suma	life
+gora	world / environment
+kore	place
+duma	movement
+dare	to make / to produce
+rela	union / connection
+faro	strength
+salo	light
+suna	water
+gume	matter
+sura	air
+fure	temperature
+bema	quantity
+lare	to know
+rena	to think
+sone	sound
+reka	communication
+luma	perception
+nume	desire
+kuma	home / house
+mora	existence / presence
+gade	identity
+kema	object
+palo	part / fraction
+dore	shape
+pode	possibility / ability
+tare	reality / truth
+taro	earth
+kuna	sky
+pore	fire
+nelo	plant
+ruma	animal
+sade	sun
+mune	moon
+bora	body
+maku	hand
+tume	head
+loke	eye
+sabe	mouth
+noke	nose
+kalu	leg
+doma	heart / body center
+pume	to eat
+sule	to sleep
+sado	health
+mena	memory
+karo	to understand
+dune	to feel / inner state
+soma	idea
+paku	attention
+lena	pleasantness / pleasant feeling
+saku	alert / fear
+malo	calm
+fada	anger
+lore	affection
+kade	to use
+pema	to give
+gura	to receive
+telo	to change
+bure	to open
+kose	to close
+delo	to take
+fena	to put
+kera	to get
+bosa	break / to break
+rude	repair / to repair
+naro	human group
+mela	family
+reme	friendship
+pade	parent
+naku	descendant / child
+sare	sibling
+saro	community
+bade	authority
+foma	rule
+dese	decision
+pelo	responsibility / duty
+galo	help / to help
+tera	time
+pado	beginning
+gune	end
+dure	duration
+kelo	cycle
+fame	food
+nobe	drink
+kopa	container
+tabe	support surface
+sede	seat
+bume	clothes / clothing
+gase	cleanliness
+dabo	dirt
+moke	need
+fadu	security
+lobe	cover / roof
+feke	tool
+nado	access / passage
+gore	size
+lafe	quality / assessment
+sape	velocity
+dema	difficulty
+kare	correctness
+mude	full
+nuse	empty
+tame	new
+gule	old
+fese	limit / completeness
+rale	red
+nede	green
+kulo	blue
+kale	yellow
+bore	black
+fale	white
+tase	to learn
+fela	to teach
+doke	information / data
+sena	sign
+beka	writing
+lodu	reading
+meka	machine
+mado	calculation / processing
+daro	work / to work
+kume	exchange
+bado	value
+mase	resource
+fedo	payment / to pay
+pose	position / posture
+tada	contact
+kefe	to hold / support
+mede	to measure
+dase	distance
+balo	contrast / but
+kasu	cause / ratio
+mode	manner / method
+pase	possession / belonging
+bema-pa	more quantity
+bema-po	less quantity
+fure-pa	hot
+fure-po	cold
+faro-pa	strong
+faro-po	weak
+gore-pa	big
+gore-po	small
+sape-pa	fast
+sape-po	slow
+dema-pa	difficult
+dema-po	easy
+ka-nara	who
+ka-kore	where
+ka-bema	how much / how many
+ka-kasu	why
+ka-mode	how
+ka-tera	when
+cho	0
+be	1
+du	2
+ga	3
+fo	4
+sa	5
+ku	6
+mu	7
+na	8
+she	9
+tanu	10
+gabu	100
+soku	1,000
+benu	1,000,000
+dapa	addition
+dopo	subtraction
+kebu	multiplication
+faku	division
+doto	decimal separator
+luma-salo	vision / to see
+luma-sone	to hear / hearing
+reka-sone	to speak / spoken communication
+reka-salo	visual communication
+duma-bo	to enter
+duma-ba	to leave
+gade-nara	personal identity / contextual name
+sade-salo	sunlight
+suna-duma	water flow
+suna-kore	body of water
+kopa-suna	water container
+nara-daro	worker
+nara-bade	leader / person in authority
+saro-foma	community rule
+doke-beka	text / written information
+sena-beka	writing system
+lodu-doke	reading information
+fela-tase	education / process
+meka-mado	computer / processing machine
+meka-reka	communication device
+rela-doke	data network
+gora-rela	global connection / internet
+nado-bure	open access
+nado-kose	closed access
+dune-lena	joy / pleasant feeling
+dune-saku	fear / inner alarm
+dune-malo	inner calm
+dune-fada	felt anger
+kume-fedo	trade / paid exchange
+bado-bema	price
+mede-gore	measure of size
+mede-tera	measure of time
+mede-fure	measure of temperature
+banu	number
+kedo	unit
+bara	variable
+kenu	constant
+reda	result
+telu	power
+raku	root
+seka	equation
+rebo	mathematical expression
+teda	term
+kofa	coefficient
+daku	unknown
+funa	function
+duno	domain
+remu	range / image
+loge	logarithm
+seta	set / collection
+pota	point
+loka	line
+pana	plane
+dora	dimension
+selo	circle
+kado	side
+sufa	surface
+bola	volume
+shenu	sine
+kosu	cosine
+taga	tangent
+nufa	infinity
+rata	ratio / rate
+dera	derivative
+koma	accumulation
+tega	integral
+sora	sequence
+geda	series
+poba	population
+musa	sample
+fere	frequency
+baga	mean / average
+neda	median
+foda	mode
+desa	dispersion
+laku	probability
+ranu	chance / random
+dufa	vector
+tora	direction
+mata	matrix
+raga	row
+kola	column
+akela	acceleration
+gama	mass
+fasa	force
+shaku	inertia
+mota	linear momentum
+dafu	physical work
+enu	energy
+panu	physical power
+gadu	gravity
+kapa	physical field
+sata	friction
+lema	elasticity
+loda	rotation
+choma	center / central region
+dena	density
+pesa	pressure
+fuda	fluid
+nosa	viscosity
+shome	heat
+tupa	entropy
+goda	solid state
+luda	liquid state
+boga	gaseous state
+pura	plasma
+shola	wave
+falo	reflection
+kuda	refraction
+chaga	electric charge
+eleka	electricity
+kura	electric current
+shelu	electric potential
+kesa	electrical resistance
+reku	circuit / connected network
+magu	magnetism
+ganu	atom
+elenu	electron
+poru	proton
+netu	neutron
+shara	radiation
+sapa	physical space
+bomo	bug
+ga-kado	triangle
+fo-kado	quadrilateral
+sa-kado	pentagon
+ku-kado	hexagon
+du-dora	2D
+ga-dora	3D
+seka-rela	system of equations
+gabu-palo	percentage
+pa-lo-se	greater than or equal to
+po-lo-se	less than or equal to
+pose-mede	coordinate
+duma-loka	trajectory
+gadu-fasa	weight / gravitational force
+gadu-kapa	gravitational field
+fasa-dure	impulse
+gama-choma	center of mass
+loda-rata	angular velocity
+loda-akela	angular acceleration
+loda-fasa	torque
+dore-telo	deformation
+fuda-duma	fluid flow
+fuda-go-fasa	buoyancy
+fure-enu	thermal energy
+fure-telo	temperature change
+fure-se	thermal equilibrium
+shola-dase	wavelength
+shola-gore	amplitude
+kelo-dure	period
+sone-shola	sound wave
+salo-shola	light wave
+eleka-kapa	electric field
+eleka-fasa	electric force
+shelu-telo	voltage
+eleka-enu	electrical energy
+eleka-panu	electric power
+eleka-reku	electric circuit
+chaga-pa	positive charge
+chaga-po	negative charge
+magu-kapa	magnetic field
+magu-fasa	magnetic force
+eleka-magu	electromagnetism
+eleka-magu-shola	electromagnetic wave
+ganu-choma	atomic nucleus
+sapa-tera	spacetime
+dase-rata	speed
+faro-enu	energetic force
+tora-telo	angle
+loka-mede	axis
+loda-loka	rotation axis
+ganu-rela	chemical bond
+ganu-chaga	ion
+ganu-chaga-pa	cation
+ganu-chaga-po	anion
+ganu-dore	chemical element
+ganu-dore-seta	set of elements
+ganu-banu	atomic number
+ganu-gama	atomic mass
+ganu-kema	molecule
+ganu-kema-gama	molecular mass
+gume-ko	mixture
+gume-rela	chemical compound
+luda-ko	solution
+suna-ko	aqueous solution
+luda-ko-bema	concentration
+poru-pema	acid
+poru-gura	base
+chaga-rela	salt
+poru-telo	acid-base reaction
+poru-mede	pH scale
+gume-telo	chemical reaction
+gume-telo-galo	catalyst
+gume-telo-se	chemical equilibrium
+gume-telo-sape	reaction rate
+pore-gume-telo	combustion
+elenu-pema	oxidation
+elenu-gura	reduction
+suma-gume	organic chemistry
+shome-pema	to give off heat
+shome-gura	to absorb heat
+ka-kema	what / which
+tera-fese	always
+tera-no	never
+kema-no	nothing
+nara-no	nobody
+nara-fese	everyone
+kema-fese	everything
+kema-le	this
+kema-lu	that
+kore-le	here
+kore-lu	there
+gore-pa-pa	very big
+gore-po-po	very small
+re-se	also
+gura-lena	thank you
+bosa-rude	sorry
+pu-reme	goodbye / see you next time
+pu-kelo	again
+be-pose	first
+ga-pose	third
+kalu-duma	to walk
+loke-suna	to cry
+sabe-lena	to laugh
+sabe-sone	to sing
+lena-duma	to play
+nume-reka	to ask for
+kera-nume	to search
+reka-pema	to answer
+pu-dure	to wait
+reka-tera	story / narration
+sena-nara	name
+ruma-kuna	bird
+ruma-suna	fish
+nelo-lena	flower
+saro-kore	country
+sade-kelo	year
+mune-kelo	month
+loda-kelo	day
+suna-gore-pa	sea
+taro-go	mountain
+nelo-gore-pa	tree
+sura-duma	wind
+sura-suna	cloud
+kuna-suna	rain
+kuna-bore	night
+kuna-salo	daylight
+mune-salo	moonlight
+suma-pado	birth
+suma-gune	death
+doma-duma	emotion
+doma-bosa	sadness
+dase-pa	long
+dase-po	short
+gora-fese	universe
+sade-lu	star
+taro-duma	planet
+sade-lu-seta	galaxy
+sade-lu-sena	constellation
+sade-rela	solar system
+duma-selo	orbit
+sade-kose	solar eclipse
+mune-kose	lunar eclipse
+suna-goda-duma	comet
+kuna-pore	meteor
+loke-lu	telescope
+loke-le	microscope
+gadu-bore	black hole
+boga-kuna	nebula
+sura-taro	atmosphere
+gora-pado	Big Bang
+pore-pado	Aries
+taro-dure	Taurus
+sura-telo	Gemini
+suna-pado	Cancer
+pore-dure	Leo
+taro-telo	Virgo
+sura-pado	Libra
+suna-dure	Scorpio
+pore-telo	Sagittarius
+taro-pado	Capricorn
+sura-dure	Aquarius
+suna-telo	Pisces
+kuna-nara	deity
+pore-nara	fire deity
+suna-nara	water deity
+taro-nara	earth deity
+sura-nara	air deity
+suma-nara	life deity
+sade-nara	sun deity
+mune-nara	moon deity
+suma-gune-nara	death deity
+du-pose	second
+fo-pose	fourth
+sa-pose	fifth
+ku-pose	sixth
+mu-pose	seventh
+na-pose	eighth
+she-pose	ninth
+sade-pado	east
+sade-gune	west
+kore-go	north
+kore-gu	south
+meka-gume	hardware
+meka-gora	operating system
+loke-tabe	screen
+maku-tabe	keyboard
+lu-meka	cloud computing
+meka-bosa	hardware failure
+pado-telo	to restart
+tame-telo	to update
+cho-be	bit
+du-banu	binary
+mado-foma	program / software
+mode-mado	algorithm
+foma-beka	code
+foma-reka	programming language
+mado-nara	programmer
+nara-kade	user
+kema-dore	class
+funa-kema	object method
+doke-dore	data type
+mado-seta	library
+mado-dare	to run
+beka-telo	to compile
+ke-no	else
+tare-no	false
+telo-tera	event
+sape-mado	performance
+doke-kopa	file
+doke-mena	database
+mena-fena	to save
+sena-rela	text string
+doke-raga	list
+doke-mata	array
+nelo-doke	data tree
+rela-seta	graph
+doke-gura	data input
+doke-pema	data output
+nuse-dare	to delete
+dare-se	to copy
+tera-dore	version
+tera-dore-mena	version control
+rela-kuma	website
+rela-foma	protocol
+nado-foma	API
+meka-pema	server
+meka-gura	client
+reka-rela	email
+sena-fadu	password
+doke-kose	to encrypt
+doke-bure	to decrypt
+kare-no	error
+bomo-kera	to debug
+kare-mede	test
+meka-rena	artificial intelligence
+meka-tase	machine learning
+doke-fela	training data
+foma-fena	settings
+meka-gune	to shut down
+meka-sule	to suspend
+saku-reka	warning
+seta-nado	menu
+loke-kopa	window
+tada-sena	button
+dabo-kopa	trash
+meka-tabe	desktop
+enu-kopa	battery
+sone-gore	sound volume
+salo-gore	brightness
+rela-sura	wireless network
+meka-beka	printer
+pe-telo	to undo
+pu-telo	to redo
+tera-sena	date and time
+bora-lobe	skin
+suma-suna	blood
+bora-kefe	bone
+bora-gume	meat
+bora-mase	fat
+bora-suna	sweat
+tume-nelo	hair
+sone-loke	ear
+sabe-faro	tooth
+sabe-duma	tongue
+loke-sabe	face
+tume-rela	neck
+tume-rena	brain
+bora-kopa	belly / abdomen
+doma-kopa	chest
+sura-kopa	lung
+fame-kopa	stomach
+bora-gase	liver
+maku-rela	arm
+maku-palo	finger
+maku-fese	nail
+kalu-gune	foot
+kalu-telo	knee
+bora-gune	tail
+tume-faro	horn
+ruma-kuna-lobe	feather
+pado-kopa	egg
+naku-nobe	milk
+ruma-lore	pet
+taro-goda	stone
+taro-gore-po	sand
+taro-suna	mud
+taro-sura	dust
+pore-sura	smoke
+pore-taro	ash
+pore-salo	flame
+suna-goda	ice
+kuna-suna-goda	snow
+suna-boga	steam
+kuna-sone	thunder
+kuna-faro	lightning
+suna-taro	island
+taro-nuse	cave
+suna-nuse	dry
+suna-mude	wet
+selo-dore	round
+nelo-saro	forest
+nelo-fame	fruit / plant food
+nelo-maku	leaf
+nelo-taro	root
+nelo-lobe	bark
+pado-nelo	seed
+nelo-rela	branch
+nelo-bora	trunk
+kalu-kefe	to stand
+bora-gu	to lie down
+sede-pose	to sit down
+sabe-bosa	to bite
+reka-doke	dictionary
+lodu-lena	literature
+tase-palo	lesson
+tase-daro	exercise
+tase-kelo	course
+reka-seta	vocabulary
+luma-sura	to smell
+luma-fame	to taste
+luma-tada	to touch
+no-duma	rest
+no-telo	conservation
+pema-enu	energy emission
+gura-enu	energy absorption
+fuda-duma-rata	flow rate
+dore-fese	outline
+te-loda-kelo	today
+pe-loda-kelo	yesterday
+pu-loda-kelo	tomorrow
+loda-kelo-pado	dawn
+loda-kelo-gune	afternoon
+fame-gore-pa	lunch
+pado-fame	breakfast
+gune-fame	dinner
+mu-loda-kelo	week
+sade-kelo-palo	season
+fure-pa-tera	summer
+fure-po-tera	winter
+suna-tera	rainy season
+suna-nuse-tera	dry season
+taro-gore-pa	continent
+kuma-seta	city / town
+bade-kore	capital
+saro-fese	border
+kore-sena	map
+duma-kore	path / route
+suna-go-kore	bridge
+taro-gu	valley
+suna-taro-fese	coast
+taro-suna-nuse	desert
+taro-pore	volcano
+pade-pade	grandparent
+naku-naku	grandchild
+pade-sare	uncle or aunt
+sare-naku	nephew or niece
+pade-sare-naku	cousin
+lore-rela	partner / spouse
+kuma-le-nara	neighbor
+naku-tame	baby
+nara-tame	young person
+nara-gore-pa	adult
+nara-gule	elder
+pore-dare	to cook
+fame-kore	kitchen
+fame-tabe	plate
+nobe-kopa	glass
+pore-kopa	pot
+fame-feke	cutlery
+bosa-feke	knife
+fame-moke	hunger
+nobe-moke	thirst
+lena-sabe	tasty
+kuma-palo	room
+sule-kore	bedroom
+gase-kore	bathroom
+reme-kore	living room
+nelo-kore	garden
+loke-nado	window
+kuma-fese	wall
+kuma-tabe	floor
+go-nado	stairs
+nado-feke	key
+sule-tabe	bed
+salo-feke	lamp
+tume-bume	hat
+doma-bume	shirt
+kalu-bume	trousers
+kalu-gune-bume	shoe
+maku-bume	glove
+sado-bosa	illness
+bosa-dune	pain
+sado-feke	medicine
+sado-nara	doctor
+sado-kuma	hospital
+bora-fure-pa	fever
+bora-bosa	wound
+sado-rude	to heal
+bado-feke	money
+kera-fedo	to buy
+pema-fedo	to sell
+kume-kuma	shop
+kume-kore	market
+bado-kopa	bank
+bado-pa	expensive / valuable
+bado-po	cheap / of little value
+fedo-no	free
+fedo-pu	debt
+daro-fedo	salary
+meka-duma	vehicle
+taro-meka	car
+suna-meka	ship
+sura-meka	airplane
+duma-lu	trip
+duma-nara	traveler
+suna-meka-kuma	port
+sura-meka-kuma	airport
+nado-sena	ticket
+bume-kopa	suitcase
+ruma-daro	working animal
+ruma-fame	livestock
+ruma-taro	land animal
+doma-kado	left
+doma-kado-no	right
+duma-kuma	station / terminal
+lodu-beka	editor / word processor
+foma-lodu-beka	code editor
+gora-rela-duma	web browser
+doke-kopa-mado	file manager
+salo-sena	image
+salo-sena-mado	image editor
+lodu-beka-seta	office suite
+banu-mata	spreadsheet
+banu-meka	calculator
+meka-paku	system monitor
+tera-mede-meka	clock
+pose-feke	mouse / pointer
+nara-fadu	privacy
+mena-kopa	storage
+loke-tabe-lobe	wallpaper

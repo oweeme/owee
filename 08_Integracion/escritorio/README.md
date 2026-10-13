@@ -32,7 +32,7 @@ Medido con `frecuencia_cadenas.py` sobre los catálogos del español ya instalad
 ## Plan por capas
 
 **Capa 0 — Menú y nombres (esfuerzo bajo, resultado inmediato).**
-Los nombres de marca (**GIMP, Inkscape, Firefox, VS Code**) **no se traducen**: son nombres propios y se conservan. Lo que sí tiene Owee es el **nombre genérico** («editor de imágenes» = `loke-dore-feke`, «navegador web» = `gora-rela-duma`). `generar_desktop.py` crea copias de los `.desktop` con `GenericName[qow]` (romano) y `GenericName[qow@owee]` (glifos). En este sistema ya genera **15 programas** (VS Code, GIMP, Chrome, LibreOffice, Administrador de archivos, Monitor del sistema…).
+Los nombres de marca (**GIMP, Inkscape, Firefox, VS Code**) **no se traducen**: son nombres propios y se conservan. Lo que sí tiene Owee es el **nombre genérico** («editor de imágenes» = `salo-sena-mado`, «navegador web» = `gora-rela-duma`). `generar_desktop.py` crea copias de los `.desktop` con `GenericName[qow]` (romano) y `GenericName[qow@owee]` (glifos). En este sistema ya genera **15 programas** (VS Code, GIMP, Chrome, LibreOffice, Administrador de archivos, Monitor del sistema…).
 
 **Capa 1 — Textos de interfaz más usados (≈ 500 cadenas).**
 Menús estándar (Archivo, Editar, Ver, Ayuda), botones (Aceptar, Cancelar, Guardar) y categorías de ajustes. El glosario de Owee (`../datos/ui_glosario.tsv`, 96 textos) ya los cubre en parte; con `generar_traducciones.py` se obtienen los catálogos `qow.po` y `qow@owee.po`. Con `LANGUAGE=qow:es` lo que falta **se ve en español**, así nada se rompe.
@@ -49,13 +49,13 @@ Para programas cuyo nombre es una marca, la **equivalencia** es lo práctico:
 
 | Programa | Genérico en Owee | En glifos |
 |---|---|---|
-| GIMP | editor de imágenes: `loke-dore-feke` | (se ve en el menú) |
-| Inkscape | editor de imágenes: `loke-dore-feke` | |
-| Visual Studio Code | editor de código: `foma-beka-feke` | |
+| GIMP | editor de imágenes: `salo-sena-mado` | (se ve en el menú) |
+| Inkscape | editor de imágenes: `salo-sena-mado` | |
+| Visual Studio Code | editor de código: `foma-lodu-beka` | |
 | Firefox / Chrome | navegador web: `gora-rela-duma` | |
-| LibreOffice Writer / Calc | procesador de texto `beka-feke` / hoja de cálculo `banu-feke` | |
-| Administrador de archivos | gestor de archivos: `doke-kopa-feke` | |
-| Papelera, Equipo, Teclado, Ratón | `dabo-kopa`, `meka-mado`, `maku-tabe`, `maku-feke` | |
+| LibreOffice Writer / Calc | procesador de texto `lodu-beka` / hoja de cálculo `banu-mata` | |
+| Administrador de archivos | gestor de archivos: `doke-kopa-mado` | |
+| Papelera, Equipo, Teclado, Ratón | `dabo-kopa`, `meka-mado`, `maku-tabe`, `pose-feke` | |
 
 La tabla completa y editable es `apps_escritorio.tsv`; los textos genéricos de ajustes están en `../datos/ui_glosario.tsv`.
 

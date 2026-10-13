@@ -513,19 +513,18 @@ ruma-taro	ruma-taro	construcción	animal terrestre (animal + tierra)	APROBADA	An
 doma-kado	doma-kado	construcción	izquierda (el lado del corazón)	APROBADA	Orientación	Vida diaria (lote 2)	
 doma-kado-no	doma-kado-no	construcción	derecha (el lado sin corazón)	APROBADA	Orientación	Vida diaria (lote 2)	
 duma-kuma	duma-kuma	construcción	estación / terminal (casa del movimiento)	APROBADA	Geografía	Vida diaria (lote 2)	
-beka-feke	beka-feke	construcción	editor / procesador de texto (herramienta de escritura)	VERIFICADA	Programas	Escritorio	
-foma-beka-feke	foma-beka-feke	construcción	editor de código (herramienta de código)	VERIFICADA	Programas	Escritorio	
-gora-rela-duma	gora-rela-duma	construcción	navegador web (moverse por internet)	VERIFICADA	Programas	Escritorio	
-doke-kopa-feke	doke-kopa-feke	construcción	gestor de archivos (herramienta de archivos)	VERIFICADA	Programas	Escritorio	
-loke-dore	loke-dore	construcción	imagen (forma para el ojo)	VERIFICADA	Programas	Escritorio	
-loke-dore-feke	loke-dore-feke	construcción	editor de imágenes (herramienta de imagen)	VERIFICADA	Programas	Escritorio	
-daro-feke	daro-feke	construcción	suite ofimática (herramienta de trabajo)	VERIFICADA	Programas	Escritorio	
-banu-feke	banu-feke	construcción	hoja de cálculo (herramienta de números)	VERIFICADA	Programas	Escritorio	
-mado-feke	mado-feke	construcción	calculadora (herramienta de cálculo)	VERIFICADA	Programas	Escritorio	
-meka-mede	meka-mede	construcción	monitor del sistema (medir la máquina)	VERIFICADA	Programas	Escritorio	
-tera-mede-meka	tera-mede-meka	construcción	reloj (máquina de medir el tiempo)	VERIFICADA	Programas	Escritorio	
-maku-feke	maku-feke	construcción	ratón (herramienta de la mano)	VERIFICADA	Ajustes y sistema	Escritorio	
-nara-fadu	nara-fadu	construcción	privacidad (seguridad de la persona)	VERIFICADA	Ajustes y sistema	Escritorio	
-mena-kopa	mena-kopa	construcción	almacenamiento (contenedor de memoria)	VERIFICADA	Ajustes y sistema	Escritorio	
-loke-tabe-lobe	loke-tabe-lobe	construcción	fondo de pantalla (cubierta de la pantalla)	VERIFICADA	Ajustes y sistema	Escritorio	
-meka-seta	meka-seta	construcción	dispositivos (conjunto de máquinas)	VERIFICADA	Ajustes y sistema	Escritorio	
+lodu-beka	lodu-beka	construcción	editor / procesador de texto (lectura y escritura)	APROBADA	Programas	Escritorio	
+foma-lodu-beka	foma-lodu-beka	construcción	editor de código (leer y escribir código)	APROBADA	Programas	Escritorio	
+gora-rela-duma	gora-rela-duma	construcción	navegador web (moverse por internet)	APROBADA	Programas	Escritorio	
+doke-kopa-mado	doke-kopa-mado	construcción	gestor de archivos (procesar archivos)	APROBADA	Programas	Escritorio	
+salo-sena	salo-sena	construcción	imagen (signo de luz)	APROBADA	Programas	Escritorio	
+salo-sena-mado	salo-sena-mado	construcción	editor de imágenes (procesar imágenes)	APROBADA	Programas	Escritorio	
+lodu-beka-seta	lodu-beka-seta	construcción	suite ofimática (conjunto de programas de texto)	APROBADA	Programas	Escritorio	
+banu-mata	banu-mata	construcción	hoja de cálculo (números en matriz)	APROBADA	Programas	Escritorio	
+banu-meka	banu-meka	construcción	calculadora (máquina de números)	APROBADA	Programas	Escritorio	
+meka-paku	meka-paku	construcción	monitor del sistema (atención a la máquina)	APROBADA	Programas	Escritorio	
+tera-mede-meka	tera-mede-meka	construcción	reloj (máquina de medir el tiempo)	APROBADA	Programas	Escritorio	
+pose-feke	pose-feke	construcción	ratón / puntero (herramienta de posición)	APROBADA	Ajustes y sistema	Escritorio	
+nara-fadu	nara-fadu	construcción	privacidad (seguridad de la persona)	APROBADA	Ajustes y sistema	Escritorio	
+mena-kopa	mena-kopa	construcción	almacenamiento (contenedor de memoria)	APROBADA	Ajustes y sistema	Escritorio	
+loke-tabe-lobe	loke-tabe-lobe	construcción	fondo de pantalla (cubierta de la pantalla)	APROBADA	Ajustes y sistema	Escritorio	

@@ -275,7 +275,7 @@ msgstr "reme"
 
 #. Ratón
 msgid "Mouse"
-msgstr "maku-feke"
+msgstr "pose-feke"
 
 #. Teclado
 msgid "Keyboard"
@@ -303,7 +303,7 @@ msgstr "mena-kopa"
 
 #. Dispositivos
 msgid "Devices"
-msgstr "meka-seta"
+msgstr "meka-gume"
 
 #. Fondo de pantalla
 msgid "Wallpaper"
@@ -335,35 +335,35 @@ msgstr "gora-rela-duma"
 
 #. Editor de texto
 msgid "Text editor"
-msgstr "beka-feke"
+msgstr "lodu-beka"
 
 #. Editor de código
 msgid "Code editor"
-msgstr "foma-beka-feke"
+msgstr "foma-lodu-beka"
 
 #. Gestor de archivos
 msgid "File manager"
-msgstr "doke-kopa-feke"
+msgstr "doke-kopa-mado"
 
 #. Imagen
 msgid "Image"
-msgstr "loke-dore"
+msgstr "salo-sena"
 
 #. Editor de imágenes
 msgid "Image editor"
-msgstr "loke-dore-feke"
+msgstr "salo-sena-mado"
 
 #. Hoja de cálculo
 msgid "Spreadsheet"
-msgstr "banu-feke"
+msgstr "banu-mata"
 
 #. Suite ofimática
 msgid "Office suite"
-msgstr "daro-feke"
+msgstr "lodu-beka-seta"
 
 #. Calculadora
 msgid "Calculator"
-msgstr "mado-feke"
+msgstr "banu-meka"
 
 #. Reloj
 msgid "Clock"
@@ -371,7 +371,7 @@ msgstr "tera-mede-meka"
 
 #. Monitor del sistema
 msgid "System monitor"
-msgstr "meka-mede"
+msgstr "meka-paku"
 
 #. Izquierda
 msgid "Left"
