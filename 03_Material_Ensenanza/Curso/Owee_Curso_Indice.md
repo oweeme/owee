@@ -9,7 +9,7 @@ Aprende Owee **sumergiéndote en el idioma**: cada lección te muestra frases re
 | **[Nivel 0 — Ver y oír](nivel-0.html)** | Vocales, sílabas, glifos, primeras palabras, números 0–20 | 1–2 h | Leer y pronunciar palabras sueltas |
 | **[Nivel 1 — Primeras frases (A1)](nivel-1.html)** | Yo y tú, querer, comer, casa y familia, lugar, tiempo, preguntas, cuerpo, naturaleza, colores | 10–15 h | Hablar de ti y de tu entorno |
 | **[Nivel 2 — Conversar (A2)](nivel-2.html)** | Negar, poseer, comparar, pedir con cortesía, verbos cotidianos, diálogos; hoy y ayer, casa y ropa, ciudad y viaje, salud y dinero, familia | 15–20 h | Mantener una conversación sencilla sobre la vida diaria |
-| **[Nivel 3 — Leer y crear (B1)](nivel-3.html)** | Compuestos, narrar, relativas, ciencia, poesía y canto, informática, escribir | 15–20 h | Leer textos y escribir los tuyos |
+| **[Nivel 3 — Leer y crear (B1)](nivel-3.html)** | Compuestos, narrar, relativas, ciencia, poesía y canto, informática, ciencia y sociedad, escribir | 15–20 h | Leer textos y escribir los tuyos |
 
 ## Cómo estudiar
 

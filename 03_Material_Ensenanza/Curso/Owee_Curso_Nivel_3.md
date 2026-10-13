@@ -109,7 +109,46 @@ bomo kera
 
 *La variable pone cinco. Si la variable es mayor que tres. Ejecutar. Si no. Encontrar el bug.*
 
-## Lección 3.6 — Escribe tu primer texto
+## Lección 3.6 — Ciencia y sociedad
+
+Con las raíces que ya conoces puedes **leer** palabras nuevas sin diccionario: cada una dice de qué está hecha. Aquí van las más útiles, por campos.
+
+<!--vocabulario suma-kedo suma-bora lare-seta tase-kuma fela-nara tase-nara beka-seta foma-bade bade-saro malo-saro naro-bosa mase-kume saro-reka reka-palo lena-sone sone-nuse saro-mena-->
+
+| Campo | Compuesto | Construcción |
+|---|---|---|
+| Biología | `suma-kedo` (célula) | vida + unidad |
+| Biología | `suma-bora` (organismo) | vida + cuerpo |
+| Educación | `tase-kuma` (escuela) | aprender + casa |
+| Educación | `fela-nara` / `tase-nara` (maestro / alumno) | enseñar / aprender + persona |
+| Educación | `beka-seta` (libro) | escritura + conjunto |
+| Ciencia | `lare-seta` (ciencia) | saber + conjunto |
+| Derecho | `foma-bade` (ley) | regla + autoridad |
+| Política | `bade-saro` (gobierno) | autoridad + comunidad |
+| Paz y guerra | `malo-saro` (paz) / `naro-bosa` (guerra) | calma de la comunidad / rotura entre grupos |
+| Economía | `mase-kume` (economía) | recursos + intercambio |
+| Lengua | `saro-reka` (idioma) / `reka-palo` (palabra) | comunidad + comunicación / parte de la comunicación |
+| Música | `lena-sone` (música) / `sone-nuse` (silencio) | sonido agradable / sonido vacío |
+| Cultura | `saro-mena` (cultura) | comunidad + memoria |
+
+**Truco para recordar:** el primer elemento es el *campo* (`suma` = vida, `foma` = regla, `reka` = comunicación, `sone` = sonido); el segundo precisa. Si ves `suma-…`, piensa en biología; si ves `foma-…`, en leyes.
+
+```owee
+tase-kuma bo, me tase
+fela-nara beka-seta lodu
+tase-nara, lare-seta tase
+malo-saro, lena-sone
+naro-bosa no, malo-saro nume
+```
+
+*En la escuela aprendo. El maestro lee el libro. El alumno aprende ciencia. En paz, música. Sin guerra: quiero paz.*
+
+<!--resp-->
+**Ejercicios.** 1) ¿Qué es `saro-mena`? 2) Descompón `mase-kume`. 3) ¿Cuál es el opuesto de `sone-nuse`? 4) Di «el alumno lee el libro» con las palabras de la lección.
+**Respuestas.** 1) cultura (memoria de la comunidad). 2) `mase` (recurso) + `kume` (intercambio) = economía. 3) `sone` (sonido), o `lena-sone` (música). 4) `tase-nara beka-seta lodu`.
+<!--/resp-->
+
+## Lección 3.7 — Escribe tu primer texto
 
 **Reto:** escribe 6 líneas sobre tu día usando solo palabras de este curso. Sigue esta plantilla:
 
