@@ -124,6 +124,23 @@ console.log(JSON.stringify(fallos));"""
     fl = r.stdout.strip() if r.returncode == 0 else r.stderr[-200:]
     ok("Traductor Owee <-> español: pruebas de humo", r.returncode == 0 and fl == "[]", "" if fl == "[]" else fl[:160])
 
+# 7d. calculadora de numeros Owee: lectura, ida y vuelta, romanos y evaluador
+if nodo:
+    pc = """
+const C=require('./07_Sitio_Web/calculadora.js'),f=[];
+const L={'0':'cho','10':'be tanu','25':'du tanu sa','100':'be gabu','909':'she gabu she','2026':'du soku du tanu ku','1200000':'be benu du gabu soku','25.50':'du tanu sa doto sa cho'};
+for(const k in L){const r=C.leerNum(k);if(r!==L[k])f.push(k+' => '+r);}
+for(let n=0;n<3000;n+=7){const r=C.leerOwee(C.leerNum(String(n)));if(r!==n)f.push('ida-vuelta '+n);}
+const R={1994:'MCMXCIV',2026:'MMXXVI',3999:'MMMCMXCIX',4:'IV'};
+for(const k in R){if(C.aRomano(+k)!==R[k]||C.deRomano(R[k])!==+k)f.push('romano '+k);}
+if(C.deRomano('IIII')!==null)f.push('IIII');
+if(C.evaluar('2+3*4')!==14||C.evaluar('(2+3)*4/8')!==2.5||!isNaN(C.evaluar('2+')))f.push('evaluar');
+if(C.leerExpr('-5+3')!=='po sa dapa ga')f.push('expr '+C.leerExpr('-5+3'));
+console.log(JSON.stringify(f));"""
+    r = subprocess.run(["node", "-e", pc], cwd=RAIZ, capture_output=True, text=True)
+    fl = r.stdout.strip() if r.returncode == 0 else r.stderr[-200:]
+    ok("Calculadora de numeros Owee y romanos: pruebas", r.returncode == 0 and fl == "[]", "" if fl == "[]" else fl[:160])
+
 # 8. git
 g = correr(["git", "status", "--porcelain"]).stdout.strip().splitlines()
 ok("Git: sin cambios sin guardar", not g, f"{len(g)} archivos con cambios" if g else "")

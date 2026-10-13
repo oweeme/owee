@@ -438,3 +438,32 @@ COMPUESTOS += [
  ("kore-doma","centro (lugar del medio)",L5,"Interfaz"),
  ("seta-dore","tipo (forma del conjunto)",L5,"Interfaz"),
 ]
+
+L6 = "Alimentos (lote 6)"
+RAICES += [
+ ("tabu","pan",L6,"Alimentos"),
+ ("sebu","arroz",L6,"Alimentos"),
+ ("fuko","papa",L6,"Alimentos"),
+ ("mugo","maíz",L6,"Alimentos"),
+ ("kenua","quinua (nombre adaptado)",L6,"Alimentos"),
+ ("salotena","salteña (nombre adaptado)",L6,"Alimentos"),
+ ("kunape","cuñapé (nombre adaptado)",L6,"Alimentos"),
+ ("charake","charque (nombre adaptado)",L6,"Alimentos"),
+]
+COMPUESTOS += [
+ ("tabu-gume","harina (materia del pan)",L6,"Alimentos"),
+ ("nede-fame","verdura (comida verde)",L6,"Alimentos"),
+ ("ruma-kuna-gume","pollo (carne de ave)",L6,"Alimentos"),
+ ("ruma-suna-gume","pescado (carne de pez)",L6,"Alimentos"),
+ ("naku-nobe-gume","queso (materia de la leche)",L6,"Alimentos"),
+ ("lena-gume","azúcar (materia agradable)",L6,"Alimentos"),
+ ("nelo-mase","aceite (grasa de planta)",L6,"Alimentos"),
+ ("suna-fame","sopa (agua y comida)",L6,"Alimentos"),
+ ("nelo-nobe","jugo (bebida de fruta)",L6,"Alimentos"),
+ ("fuko-suna-nuse","chuño (papa sin agua)",L6,"Alimentos"),
+ ("mugo-nobe","bebida de maíz (api, chicha)",L6,"Alimentos"),
+ ("pore-nelo","ají (planta de fuego)",L6,"Alimentos"),
+ ("pore-sabe","picante (fuego de la boca)",L6,"Alimentos"),
+ ("kale-nelo-fame","plátano (fruta amarilla)",L6,"Alimentos"),
+ ("saro-fame","comida típica (comida de la comunidad)",L6,"Alimentos"),
+]

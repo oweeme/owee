@@ -89,6 +89,14 @@ netu	ne-tu	raíz técnica	neutrón	AUDITADO 2.0	Física atómica	Física
 shara	sha-ra	raíz técnica	radiación	AUDITADO 2.0	Física atómica	Física	
 sapa	sa-pa	raíz técnica	espacio físico	AUDITADO 2.0	Espacio-tiempo	Física	
 bomo	bo-mo	raíz técnica	bug (defecto del programa)	APROBADA	Calidad y depuración	Informática	raíz nueva (mezcla recortada de bo-sa + m-ado)
+tabu	ta-bu	raíz técnica	pan	APROBADA	Alimentos	Alimentos (lote 6)	
+sebu	se-bu	raíz técnica	arroz	APROBADA	Alimentos	Alimentos (lote 6)	
+fuko	fu-ko	raíz técnica	papa	APROBADA	Alimentos	Alimentos (lote 6)	
+mugo	mu-go	raíz técnica	maíz	APROBADA	Alimentos	Alimentos (lote 6)	
+kenua	ke-nu-a	raíz técnica	quinua (nombre adaptado)	APROBADA	Alimentos	Alimentos (lote 6)	
+salotena	sa-lo-te-na	raíz técnica	salteña (nombre adaptado)	APROBADA	Alimentos	Alimentos (lote 6)	
+kunape	ku-na-pe	raíz técnica	cuñapé (nombre adaptado)	APROBADA	Alimentos	Alimentos (lote 6)	
+charake	cha-ra-ke	raíz técnica	charque (nombre adaptado)	APROBADA	Alimentos	Alimentos (lote 6)	
 ga-kado	ga-kado	construcción	triángulo	AUDITADO 2.0	Construcciones	Matemáticas	
 fo-kado	fo-kado	construcción	cuadrilátero	AUDITADO 2.0	Construcciones	Matemáticas	
 sa-kado	sa-kado	construcción	pentágono	AUDITADO 2.0	Construcciones	Matemáticas	
@@ -685,3 +693,18 @@ gore-po-dare	gore-po-dare	construcción	minimizar (hacer pequeño)	APROBADA	Inte
 salo-lafe	salo-lafe	construcción	color (cualidad de la luz)	APROBADA	Interfaz	Interfaz 3 (lote 5)	
 kore-doma	kore-doma	construcción	centro (lugar del medio)	APROBADA	Interfaz	Interfaz 3 (lote 5)	
 seta-dore	seta-dore	construcción	tipo (forma del conjunto)	APROBADA	Interfaz	Interfaz 3 (lote 5)	
+tabu-gume	tabu-gume	construcción	harina (materia del pan)	APROBADA	Alimentos	Alimentos (lote 6)	
+nede-fame	nede-fame	construcción	verdura (comida verde)	APROBADA	Alimentos	Alimentos (lote 6)	
+ruma-kuna-gume	ruma-kuna-gume	construcción	pollo (carne de ave)	APROBADA	Alimentos	Alimentos (lote 6)	
+ruma-suna-gume	ruma-suna-gume	construcción	pescado (carne de pez)	APROBADA	Alimentos	Alimentos (lote 6)	
+naku-nobe-gume	naku-nobe-gume	construcción	queso (materia de la leche)	APROBADA	Alimentos	Alimentos (lote 6)	
+lena-gume	lena-gume	construcción	azúcar (materia agradable)	APROBADA	Alimentos	Alimentos (lote 6)	
+nelo-mase	nelo-mase	construcción	aceite (grasa de planta)	APROBADA	Alimentos	Alimentos (lote 6)	
+suna-fame	suna-fame	construcción	sopa (agua y comida)	APROBADA	Alimentos	Alimentos (lote 6)	
+nelo-nobe	nelo-nobe	construcción	jugo (bebida de fruta)	APROBADA	Alimentos	Alimentos (lote 6)	
+fuko-suna-nuse	fuko-suna-nuse	construcción	chuño (papa sin agua)	APROBADA	Alimentos	Alimentos (lote 6)	
+mugo-nobe	mugo-nobe	construcción	bebida de maíz (api, chicha)	APROBADA	Alimentos	Alimentos (lote 6)	
+pore-nelo	pore-nelo	construcción	ají (planta de fuego)	APROBADA	Alimentos	Alimentos (lote 6)	
+pore-sabe	pore-sabe	construcción	picante (fuego de la boca)	APROBADA	Alimentos	Alimentos (lote 6)	
+kale-nelo-fame	kale-nelo-fame	construcción	plátano (fruta amarilla)	APROBADA	Alimentos	Alimentos (lote 6)	
+saro-fame	saro-fame	construcción	comida típica (comida de la comunidad)	APROBADA	Alimentos	Alimentos (lote 6)	

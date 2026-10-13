@@ -347,7 +347,7 @@ def md(text, convert=True):
 # ---------------------------------------------------------------- plantilla
 NAV = [("index.html", "Inicio", "pado"),
        ("Aprender", [("curso.html", "Curso por niveles", "tase-kelo"), ("escritura.html", "Escritura", "beka"), ("pronunciacion.html", "Pronunciación", "sone"),
-                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor")], "tase"),
+                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor"), ("calculadora.html", "Calculadora de números", "banu-meka")], "tase"),
        ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
        ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"),
                      ("informatica.html", "Informática")], "lare"),
@@ -766,6 +766,101 @@ window.addEventListener('load',pinta);
 }})();</script>""".replace("{n}", str(len(ALLMAP))).replace("{{", "{").replace("}}", "}")
     page("traductor.html", "Traductor asistido", body, "traductor.html")
 
+def build_calculadora():
+    shutil.copy2(Path(__file__).resolve().parent / "calculadora.js", OUT / "assets/calculadora.js")
+    head = """<style>
+.calc{display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:24px;align-items:start}
+@media(max-width:760px){.calc{grid-template-columns:1fr}}
+.calc .pad{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:14px}
+.calc .pant{background:var(--soft);border-radius:10px;padding:10px 14px;min-height:5.4rem;text-align:right;overflow-x:auto}
+.calc .pant .ex{font-size:1.1rem;color:var(--ink2);min-height:1.6rem;white-space:nowrap}
+.calc .pant .re{font-size:2.2rem;line-height:1.3;white-space:nowrap}
+.calc .teclas{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.calc .teclas button{font:inherit;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:10px;padding:8px 0 4px;cursor:pointer;min-height:3.4rem;line-height:1.1}
+.calc .teclas button:hover{background:var(--soft)}.calc .teclas button.op{background:var(--soft)}.calc .teclas button.ig{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.calc .teclas .o{font-size:1.7rem;display:block}.calc .teclas small{display:block;font-size:.7rem;color:var(--ink2)}.calc .teclas .ig small{color:var(--accent-ink)}
+.cv input{width:100%;font:1.3rem/1.4 system-ui;padding:10px 12px;border:1px solid var(--rule);border-radius:10px;background:var(--surface);color:var(--ink)}
+.cv .o{font-size:1.9rem}.cv .big2{font-size:2.6rem;line-height:1.3}
+</style>"""
+    teclas = ""
+    for k in ["C", "(", ")", "\u00f7", "7", "8", "9", "\u00d7", "4", "5", "6", "\u2212", "1", "2", "3", "+", "0", ".", "\u232b", "="]:
+        if k.isdigit():
+            teclas += f'<button data-k="{k}" aria-label="{k}"><span class="o">{chr(0xE040 + int(k))}</span><small>{NOMBRES[int(k)]}</small></button>'
+        else:
+            nm = {"+": "dapa", "\u2212": "dopo", "\u00d7": "kebu", "\u00f7": "faku", "=": "se", ".": "doto"}.get(k, "")
+            cls = "ig" if k == "=" else ("op" if k in "+\u2212\u00d7\u00f7" else "")
+            teclas += f'<button class="{cls}" data-k="{k}"><span style="font-size:1.4rem">{k}</span><small>{nm}</small></button>'
+    body = """<h1>Calculadora de números Owee</h1>
+<p>Calcula con las cifras de Owee Script y lee el resultado en voz alta. Los números romanos van incluidos. Reglas: <code>coeficiente + escala</code> (<code>tanu</code> 10, <code>gabu</code> 100, <code>soku</code> 1 000, <code>benu</code> 1 000 000), las posiciones con 0 no se leen y la coma decimal es <code>doto</code>. Todo ocurre en tu navegador.</p>
+<div class="calc">
+<div class="pad" aria-label="Calculadora"><div class="pant"><div class="ex" id="cx"></div><div class="re" id="cr"><span class="o">\ue040</span></div></div>
+<div class="teclas">""" + teclas + """</div></div>
+<div><div class="poema" id="cl"><p><strong>Se lee:</strong></p><div class="v" id="cls"></div><p id="clr"></p><p id="cro"></p></div>
+<p class="noprint"><small>Puedes escribir con el teclado: cifras, <code>+ − × ÷</code>, paréntesis, Enter (=), Retroceso y Escape (C).</small></p></div></div>
+<h2>Convertidor</h2>
+<p>Escribe un <strong>número</strong> (<code>2026</code>), un <strong>número romano</strong> (<code>MMXXVI</code>) o la <strong>lectura Owee</strong> (<code>du soku du tanu ku</code>) y verás las tres formas.</p>
+<div class="cv"><input id="cin" value="2026" aria-label="Número, romano o lectura Owee" autocomplete="off" spellcheck="false">
+<div class="poema" id="cout" style="margin-top:14px"></div></div>
+<p class="noprint" id="cej"></p>
+<h2>Cómo se lee</h2>
+<div class="tw"><table><thead><tr><th>Cifra</th><th>Owee</th><th>Cifra</th><th>Owee</th></tr></thead><tbody>""" + "".join(
+        f'<tr><td><span class="o">{chr(0xE040+i)}</span> {i}</td><td><code>{NOMBRES[i]}</code></td><td><span class="o">{chr(0xE040+i+5)}</span> {i+5}</td><td><code>{NOMBRES[i+5]}</code></td></tr>' for i in range(5)) + """</tbody></table></div>
+<script src="assets/calculadora.js"></script>
+<script>(function(){
+var C=OweeCalc,ex='',res=null,cx=document.getElementById('cx'),cr=document.getElementById('cr');
+function sc(t){return window.Owee?Owee.toScript(t):t}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function lectura(t,id){var h='<span class="o">'+sc(t)+'</span><br><small class="rm">'+esc(t)+'</small>';document.getElementById(id).innerHTML=h}
+function muestra(){
+ cx.innerHTML=ex?'<span class="o">'+C.glifos(ex).replace(/[+\u2212\u00d7\u00f7()]/g,function(c){return '</span> '+c+' <span class="o">'})+'</span>':'';
+ var cur=res!==null?res:(ex.match(/\d+\.?\d*$/)||['0'])[0];
+ cr.innerHTML='<span class="o">'+C.glifos(String(cur))+'</span>';
+ var txt=res!==null?C.leerValor(+res):C.leerExpr(ex);
+ document.getElementById('cls').innerHTML=txt?'<span class="o">'+sc(txt)+'</span><br><small class="rm">'+esc(txt)+'</small>':'<small>Escribe una operación.</small>';
+ var ro=res!==null?C.aRomano(+res):null;
+ document.getElementById('clr').innerHTML=res!==null?'<strong>Resultado:</strong> '+esc(+(+res).toFixed(8)):'';
+ document.getElementById('cro').innerHTML=ro?'<strong>En romanos:</strong> '+ro:(res!==null?'<small>El romano solo representa enteros de 1 a 3999.</small>':'');
+}
+function tecla(k){
+ if(res!==null&&/[0-9.(]/.test(k))ex='';
+ if(res!==null&&/[+\u2212\u00d7\u00f7]/.test(k)){ex=String(+(+res).toFixed(8));}
+ if(k!=='='){res=null}
+ if(k==='C'){ex='';res=null}
+ else if(k==='\u232b'){ex=ex.slice(0,-1)}
+ else if(k==='='){var v=C.evaluar(ex);if(isNaN(v)||!isFinite(v)){cr.innerHTML='<small>Operación no válida</small>';return}res=+v.toFixed(8)}
+ else if(k==='.'){if(/\d+\.\d*$/.test(ex))return;ex+=(/\d$/.test(ex)?'.':'0.')}
+ else ex+=k;
+ muestra();
+}
+document.querySelectorAll('.teclas button').forEach(function(b){b.onclick=function(){tecla(b.dataset.k)}});
+document.addEventListener('keydown',function(e){
+ if(e.target.tagName==='INPUT'||e.ctrlKey||e.metaKey||e.altKey)return;
+ var k=e.key,m={'*':'\u00d7','/':'\u00f7','-':'\u2212',Enter:'=',Backspace:'\u232b',Escape:'C',',':'.'};
+ if(m[k])k=m[k];
+ if(/^[0-9+()=.\u00d7\u00f7\u2212\u232bC]$/.test(k)){e.preventDefault();tecla(k)}
+});
+var cin=document.getElementById('cin'),cout=document.getElementById('cout');
+function conv(){
+ var t=cin.value.trim(),n=null,modo='';
+ if(/^\d+(\.\d+)?$/.test(t)){n=parseFloat(t);modo='número'}
+ else if(/^[mdclxviMDCLXVI]+$/.test(t)){n=C.deRomano(t);modo='romano'}
+ else {n=C.leerOwee(t);modo='lectura Owee'}
+ if(n===null||isNaN(n)||Math.abs(n)>=1e9){cout.innerHTML='<p style="color:var(--warn)">No reconozco «'+esc(t)+'». Prueba con un número, un romano canónico (MCMXCIV) o una lectura como <code>be soku ga gabu</code>.</p>';return}
+ var lee=C.leerValor(n),ro=C.aRomano(n);
+ cout.innerHTML='<p><small>Entendido como '+modo+'</small></p>'
+  +'<div class="v"><span class="big2 o">'+C.glifos(String(n))+'</span></div>'
+  +'<p><strong>Número:</strong> '+n+'</p>'
+  +'<p><strong>Lectura Owee:</strong></p><div class="v"><span class="o">'+sc(lee)+'</span><br><small class="rm">'+esc(lee)+'</small></div>'
+  +'<p><strong>Romano:</strong> '+(ro||'<small>solo enteros de 1 a 3999</small>')+'</p>';
+}
+cin.addEventListener('input',conv);
+var EJ=['25','2026','1994','MMXXVI','MCMXCIV','be soku ga gabu','du tanu sa doto sa cho'];
+document.getElementById('cej').innerHTML=EJ.map(function(x){return '<button class="btn" data-x="'+esc(x)+'">'+esc(x)+'</button>'}).join(' ');
+document.getElementById('cej').addEventListener('click',function(e){var d=e.target.dataset.x;if(d){cin.value=d;conv()}});
+window.addEventListener('load',function(){muestra();conv()});
+})();</script>"""
+    page("calculadora.html", "Calculadora de números", body, "calculadora.html", extra_head=head)
+
 def build_estado():
     for doc, fname, titulo in (("Owee_Estado_y_Pendientes.md", "estado.html", "Estado y pendientes"),
                                ("Owee_Auditoria_y_Hoja_de_Ruta.md", "auditoria.html", "Auditoría inicial (histórica)")):
@@ -843,7 +938,7 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion(); build_revision(); build_traductor()
+    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion(); build_revision(); build_traductor(); build_calculadora()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     (OUT / ".nojekyll").write_text("")
     print(f"OK {OUT}: {len(LEX)} entradas, {len(poems)} textos poeticos, {npdf} PDFs, fuente literatura: {LIT.name}")
