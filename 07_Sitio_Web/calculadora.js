@@ -1,4 +1,4 @@
-/* Calculadora de numeros Owee: lectura, glifos, numeros romanos y operaciones.
+/* Calculadora de numeros Owee: lectura, cifras Owee <-> cifras normales y operaciones.
    Mismas reglas que Matematicas 2.0: coeficiente + escala (tanu 10, gabu 100, soku 1000, benu 1 000 000),
    las posiciones con 0 no se leen, be (1) si se lee, "doto" es la coma decimal, "po" el signo negativo. */
 (function (root) {
@@ -56,20 +56,8 @@
   /** Glifos numericos Owee (U+E040..E049) para un texto con cifras. */
   function glifos(txt) { return String(txt).replace(/[0-9]/g, function (d) { return String.fromCharCode(0xE040 + +d); }); }
 
-  var ROM = [[1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"], [50, "L"], [40, "XL"], [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]];
-  function aRomano(n) {
-    if (!(n >= 1 && n <= 3999) || n !== Math.floor(n)) return null;
-    var s = "";
-    ROM.forEach(function (p) { while (n >= p[0]) { s += p[1]; n -= p[0]; } });
-    return s;
-  }
-  function deRomano(txt) {
-    var s = String(txt).toUpperCase().trim();
-    if (!/^[MDCLXVI]+$/.test(s)) return null;
-    var v = 0, i = 0;
-    ROM.forEach(function (p) { while (s.substr(i, p[1].length) === p[1]) { v += p[0]; i += p[1].length; } });
-    return i === s.length && aRomano(v) === s ? v : null;   // solo formas canonicas (IIII no vale)
-  }
+  /** Cifras Owee (U+E040..E049) -> cifras normales; deja lo demas igual. */
+  function normales(txt) { return String(txt).replace(/[\uE040-\uE049]/g, function (c) { return String(c.charCodeAt(0) - 0xE040); }); }
 
   /** Evaluador seguro (sin eval): + - x / con prioridad, parentesis, negativo unario, decimales. */
   function evaluar(expr) {
@@ -102,6 +90,6 @@
     return out.join(" ");
   }
 
-  var API = { leerNum: leerNum, leerOwee: leerOwee, leerValor: leerValor, glifos: glifos, aRomano: aRomano, deRomano: deRomano, evaluar: evaluar, leerExpr: leerExpr };
+  var API = { leerNum: leerNum, leerOwee: leerOwee, leerValor: leerValor, glifos: glifos, normales: normales, evaluar: evaluar, leerExpr: leerExpr };
   if (typeof module !== "undefined") module.exports = API; else root.OweeCalc = API;
 })(typeof window !== "undefined" ? window : this);

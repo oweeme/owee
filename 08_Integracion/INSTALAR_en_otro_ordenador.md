@@ -71,3 +71,8 @@ cd 08_Integracion/linux && ./build-debs.sh && sudo dpkg -i dist/*.deb
 ```
 
 **Si el teclado no compila** por la versión de Fcitx5 de la otra máquina, instala `libfcitx5core-dev` de esa versión; las fuentes y el locale no dependen de ello.
+
+
+## Teclado Keyman (Android, Windows, iOS, macOS y navegadores)
+
+Paquete listo en `05_Teclado_IME/keyman-owee/dist/Owee.kmp` (también descargable en la página *Teclado* del sitio). Instálalo con Keyman (ver `05_Teclado_IME/keyman-owee/README.md`). En oweelinux sigue usándose `fcitx5-owee`; Keyman es para teléfonos y otros sistemas.

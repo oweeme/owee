@@ -347,7 +347,7 @@ def md(text, convert=True):
 # ---------------------------------------------------------------- plantilla
 NAV = [("index.html", "Inicio", "pado"),
        ("Aprender", [("curso.html", "Curso por niveles", "tase-kelo"), ("escritura.html", "Escritura", "beka"), ("pronunciacion.html", "Pronunciación", "sone"),
-                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor"), ("calculadora.html", "Calculadora de números", "banu-meka")], "tase"),
+                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor"), ("calculadora.html", "Calculadora de números", "banu-meka"), ("teclado.html", "Teclado Owee", "maku-tabe")], "tase"),
        ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
        ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"),
                      ("informatica.html", "Informática")], "lare"),
@@ -791,15 +791,15 @@ def build_calculadora():
             cls = "ig" if k == "=" else ("op" if k in "+\u2212\u00d7\u00f7" else "")
             teclas += f'<button class="{cls}" data-k="{k}"><span style="font-size:1.4rem">{k}</span><small>{nm}</small></button>'
     body = """<h1>Calculadora de números Owee</h1>
-<p>Calcula con las cifras de Owee Script y lee el resultado en voz alta. Los números romanos van incluidos. Reglas: <code>coeficiente + escala</code> (<code>tanu</code> 10, <code>gabu</code> 100, <code>soku</code> 1 000, <code>benu</code> 1 000 000), las posiciones con 0 no se leen y la coma decimal es <code>doto</code>. Todo ocurre en tu navegador.</p>
+<p>Calcula con las cifras de Owee Script y lee el resultado en voz alta. Convierte entre las cifras Owee y los números normales. Reglas: <code>coeficiente + escala</code> (<code>tanu</code> 10, <code>gabu</code> 100, <code>soku</code> 1 000, <code>benu</code> 1 000 000), las posiciones con 0 no se leen y la coma decimal es <code>doto</code>. Todo ocurre en tu navegador.</p>
 <div class="calc">
 <div class="pad" aria-label="Calculadora"><div class="pant"><div class="ex" id="cx"></div><div class="re" id="cr"><span class="o">\ue040</span></div></div>
 <div class="teclas">""" + teclas + """</div></div>
 <div><div class="poema" id="cl"><p><strong>Se lee:</strong></p><div class="v" id="cls"></div><p id="clr"></p><p id="cro"></p></div>
 <p class="noprint"><small>Puedes escribir con el teclado: cifras, <code>+ − × ÷</code>, paréntesis, Enter (=), Retroceso y Escape (C).</small></p></div></div>
 <h2>Convertidor</h2>
-<p>Escribe un <strong>número</strong> (<code>2026</code>), un <strong>número romano</strong> (<code>MMXXVI</code>) o la <strong>lectura Owee</strong> (<code>du soku du tanu ku</code>) y verás las tres formas.</p>
-<div class="cv"><input id="cin" value="2026" aria-label="Número, romano o lectura Owee" autocomplete="off" spellcheck="false">
+<p>Escribe un <strong>número normal</strong> (<code>2026</code>), <strong>cifras Owee</strong> (pégalas o escríbelas con el teclado Owee) o la <strong>lectura Owee</strong> (<code>du soku du tanu ku</code>) y verás las tres formas.</p>
+<div class="cv"><input id="cin" value="2026" aria-label="Número normal, cifras Owee o lectura Owee" autocomplete="off" spellcheck="false">
 <div class="poema" id="cout" style="margin-top:14px"></div></div>
 <p class="noprint" id="cej"></p>
 <h2>Cómo se lee</h2>
@@ -817,9 +817,8 @@ function muestra(){
  cr.innerHTML='<span class="o">'+C.glifos(String(cur))+'</span>';
  var txt=res!==null?C.leerValor(+res):C.leerExpr(ex);
  document.getElementById('cls').innerHTML=txt?'<span class="o">'+sc(txt)+'</span><br><small class="rm">'+esc(txt)+'</small>':'<small>Escribe una operación.</small>';
- var ro=res!==null?C.aRomano(+res):null;
  document.getElementById('clr').innerHTML=res!==null?'<strong>Resultado:</strong> '+esc(+(+res).toFixed(8)):'';
- document.getElementById('cro').innerHTML=ro?'<strong>En romanos:</strong> '+ro:(res!==null?'<small>El romano solo representa enteros de 1 a 3999.</small>':'');
+ document.getElementById('cro').innerHTML=res!==null?'<strong>Cifras Owee:</strong> <span class="o">'+C.glifos(String(+(+res).toFixed(8)))+'</span>':'';
 }
 function tecla(k){
  if(res!==null&&/[0-9.(]/.test(k))ex='';
@@ -842,24 +841,69 @@ document.addEventListener('keydown',function(e){
 var cin=document.getElementById('cin'),cout=document.getElementById('cout');
 function conv(){
  var t=cin.value.trim(),n=null,modo='';
- if(/^\d+(\.\d+)?$/.test(t)){n=parseFloat(t);modo='número'}
- else if(/^[mdclxviMDCLXVI]+$/.test(t)){n=C.deRomano(t);modo='romano'}
+ var tn=C.normales(t);
+ if(/^\d+(\.\d+)?$/.test(tn)){n=parseFloat(tn);modo=tn===t?'número normal':'cifras Owee'}
  else {n=C.leerOwee(t);modo='lectura Owee'}
- if(n===null||isNaN(n)||Math.abs(n)>=1e9){cout.innerHTML='<p style="color:var(--warn)">No reconozco «'+esc(t)+'». Prueba con un número, un romano canónico (MCMXCIV) o una lectura como <code>be soku ga gabu</code>.</p>';return}
- var lee=C.leerValor(n),ro=C.aRomano(n);
+ if(n===null||isNaN(n)||Math.abs(n)>=1e9){cout.innerHTML='<p style="color:var(--warn)">No reconozco «'+esc(t)+'». Prueba con un número (2026), cifras Owee o una lectura como <code>be soku ga gabu</code>.</p>';return}
+ var lee=C.leerValor(n);
  cout.innerHTML='<p><small>Entendido como '+modo+'</small></p>'
   +'<div class="v"><span class="big2 o">'+C.glifos(String(n))+'</span></div>'
-  +'<p><strong>Número:</strong> '+n+'</p>'
+  +'<p><strong>Número normal:</strong> '+n+'</p>'
   +'<p><strong>Lectura Owee:</strong></p><div class="v"><span class="o">'+sc(lee)+'</span><br><small class="rm">'+esc(lee)+'</small></div>'
-  +'<p><strong>Romano:</strong> '+(ro||'<small>solo enteros de 1 a 3999</small>')+'</p>';
+  ;
 }
 cin.addEventListener('input',conv);
-var EJ=['25','2026','1994','MMXXVI','MCMXCIV','be soku ga gabu','du tanu sa doto sa cho'];
+var EJ=['25','2026','1994','70712345','be soku ga gabu','du tanu sa doto sa cho'];
 document.getElementById('cej').innerHTML=EJ.map(function(x){return '<button class="btn" data-x="'+esc(x)+'">'+esc(x)+'</button>'}).join(' ');
 document.getElementById('cej').addEventListener('click',function(e){var d=e.target.dataset.x;if(d){cin.value=d;conv()}});
 window.addEventListener('load',function(){muestra();conv()});
 })();</script>"""
     page("calculadora.html", "Calculadora de números", body, "calculadora.html", extra_head=head)
+
+def build_teclado():
+    d = OUT / "teclado"; d.mkdir(exist_ok=True)
+    dist = ROOT / "05_Teclado_IME/keyman-owee/dist"
+    for f in ("Owee.kmp", "owee.js", "owee.kmx"):
+        shutil.copy2(dist / f, d / f)
+    body = """<h1>Teclado Owee</h1>
+<p>Escribe en <strong>romano</strong> y obtén la escritura <strong>Owee Script</strong>. Funciona en Windows, Android, iPhone, macOS, Linux y navegadores con <a href="https://keyman.com">Keyman</a>, y en Linux también con el IME <code>fcitx5-owee</code>.</p>
+<h2>Pruébalo aquí</h2>
+<p>Escribe <code>suna</code>, <code>sade-kelo</code>, <code>Ana</code>, <code>shome</code> o una cifra (<code>2026</code>).</p>
+<textarea id="kt" rows="4" class="o" style="width:100%;font-size:1.8rem;line-height:1.5;padding:12px;border:1px solid var(--rule);border-radius:10px;background:var(--surface);color:var(--ink)" aria-label="Escribe aquí en romano" placeholder="me suna nume"></textarea>
+<p id="kmsg"><small>Cargando el teclado… (necesita conexión para el motor KeymanWeb)</small></p>
+<p class="noprint"><button class="btn" id="kosk">Mostrar teclado en pantalla</button></p>
+<h2>Descargar</h2>
+<div class="dl"><a href="teclado/Owee.kmp">Owee.kmp<span>Paquete Keyman (Windows, Android, iOS, macOS)</span></a><a href="teclado/owee.js">owee.js<span>Teclado para KeymanWeb (tu propia página)</span></a></div>
+<h2>Instalar</h2>
+<div class="tw"><table><thead><tr><th>Sistema</th><th>Pasos</th></tr></thead><tbody>
+<tr><td><strong>Windows</strong></td><td>Instala <a href="https://keyman.com/windows">Keyman para Windows</a>, descarga <code>Owee.kmp</code> y ábrelo con doble clic. Instala también la fuente Owee Sans.</td></tr>
+<tr><td><strong>Android</strong></td><td>Instala <a href="https://keyman.com/android">Keyman para Android</a>, copia <code>Owee.kmp</code> al teléfono y ábrelo desde Keyman («Instalar teclado desde archivo»). Activa Keyman como teclado.</td></tr>
+<tr><td><strong>iPhone / iPad / macOS</strong></td><td>Instala Keyman para <a href="https://keyman.com/iphone-and-ipad">iOS</a> o <a href="https://keyman.com/mac">macOS</a> e importa <code>Owee.kmp</code>.</td></tr>
+<tr><td><strong>Linux</strong></td><td>Keyman para Linux con <code>Owee.kmp</code>, o el paquete <code>fcitx5-owee</code> (ver Integración).</td></tr>
+<tr><td><strong>Navegadores</strong></td><td>La caja de arriba usa KeymanWeb. Para tu propia web, carga KeymanWeb y <code>teclado/owee.js</code>.</td></tr>
+</tbody></table></div>
+<h2>Cómo escribir</h2>
+<div class="tw"><table><thead><tr><th>Escribes</th><th>Resultado</th></tr></thead><tbody>
+<tr><td><code>su</code> + <code>na</code></td><td>los glifos de <em>suna</em> (cada sílaba al escribir la vocal)</td></tr>
+<tr><td><code>sh</code>, <code>ch</code></td><td>una sola consonante (<em>shome</em>, <em>chuko</em>)</td></tr>
+<tr><td><code>sade-kelo</code></td><td>el guion tras una sílaba pone el nexo de compuesto</td></tr>
+<tr><td><code>Ana</code></td><td>mayúscula inicial: marca de nombre propio + glifos</td></tr>
+<tr><td><code>0</code>–<code>9</code></td><td>cifras Owee; <code>AltGr</code> + cifra escribe la cifra normal</td></tr>
+<tr><td>consonante sin vocal</td><td>queda en romano, no se pierde texto</td></tr>
+</tbody></table></div>
+<script src="https://s.keyman.com/kmw/engine/18.0.253/keymanweb.js"></script>
+<script>(function(){
+var msg=document.getElementById('kmsg'),ta=document.getElementById('kt');
+if(!window.keyman){msg.innerHTML='<small>No se pudo cargar KeymanWeb (¿sin conexión?). Descarga el paquete para instalar el teclado.</small>';return}
+keyman.init({attachType:'manual',ui:'none'}).then(function(){
+ keyman.attachToControl(ta);
+ return keyman.addKeyboards({id:'owee',name:'Owee',languages:{id:'qow',name:'Owee'},filename:'teclado/owee.js'});
+}).then(function(){return keyman.setActiveKeyboard('Keyboard_owee','qow')}).then(function(){
+ msg.innerHTML='<small>Teclado Owee activo. Escribe en romano.</small>';
+ document.getElementById('kosk').onclick=function(){ta.focus();keyman.osk.show(true)};
+}).catch(function(e){msg.innerHTML='<small>No se pudo activar el teclado: '+e+'</small>'});
+})();</script>"""
+    page("teclado.html", "Teclado Owee", body, "teclado.html")
 
 def build_estado():
     for doc, fname, titulo in (("Owee_Estado_y_Pendientes.md", "estado.html", "Estado y pendientes"),
@@ -938,7 +982,7 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion(); build_revision(); build_traductor(); build_calculadora()
+    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion(); build_revision(); build_traductor(); build_calculadora(); build_teclado()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     (OUT / ".nojekyll").write_text("")
     print(f"OK {OUT}: {len(LEX)} entradas, {len(poems)} textos poeticos, {npdf} PDFs, fuente literatura: {LIT.name}")

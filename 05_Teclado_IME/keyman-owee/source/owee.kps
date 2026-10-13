@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package>
+  <System>
+    <KeymanDeveloperVersion>18.0.253.0</KeymanDeveloperVersion>
+    <FileVersion>7.0</FileVersion>
+  </System>
+  <Options>
+    <ReadMeFile>readme.htm</ReadMeFile>
+    <FollowKeyboardVersion/>
+  </Options>
+  <StartMenu><Folder>Owee</Folder><Items/></StartMenu>
+  <Info>
+    <Name URL="https://oweeme.com">Owee</Name>
+    <Copyright URL="">(c) 2026 Hector Martinez</Copyright>
+    <Author URL="mailto:hector@oweeme.com">Proyecto Owee</Author>
+    <Version URL="">1.0</Version>
+    <Description URL="">Teclado Owee: escribe en romano y obtén la escritura Owee Script (glifos). Incluye cifras Owee y compuestos.</Description>
+  </Info>
+  <Files>
+    <File><Name>../build/owee.kmx</Name><Description>Keyboard Owee</Description><CopyLocation>0</CopyLocation><FileType>.kmx</FileType></File>
+    <File><Name>../build/owee.js</Name><Description>Keyboard Owee (web, Android, iOS)</Description><CopyLocation>0</CopyLocation><FileType>.js</FileType></File>
+    <File><Name>OweeSans-Regular.ttf</Name><Description>Fuente Owee Sans</Description><CopyLocation>0</CopyLocation><FileType>.ttf</FileType></File>
+    <File><Name>readme.htm</Name><Description>Lee esto</Description><CopyLocation>0</CopyLocation><FileType>.htm</FileType></File>
+  </Files>
+  <Keyboards>
+    <Keyboard>
+      <Name>Owee</Name>
+      <ID>owee</ID>
+      <Version>1.0</Version>
+      <OSKFont>OweeSans-Regular.ttf</OSKFont>
+      <DisplayFont>OweeSans-Regular.ttf</DisplayFont>
+      <Languages><Language ID="qow">Owee</Language></Languages>
+    </Keyboard>
+  </Keyboards>
+</Package>

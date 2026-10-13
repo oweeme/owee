@@ -124,22 +124,29 @@ console.log(JSON.stringify(fallos));"""
     fl = r.stdout.strip() if r.returncode == 0 else r.stderr[-200:]
     ok("Traductor Owee <-> español: pruebas de humo", r.returncode == 0 and fl == "[]", "" if fl == "[]" else fl[:160])
 
-# 7d. calculadora de numeros Owee: lectura, ida y vuelta, romanos y evaluador
+# 7d. calculadora de numeros Owee: lectura, ida y vuelta, cifras y evaluador
 if nodo:
     pc = """
 const C=require('./07_Sitio_Web/calculadora.js'),f=[];
 const L={'0':'cho','10':'be tanu','25':'du tanu sa','100':'be gabu','909':'she gabu she','2026':'du soku du tanu ku','1200000':'be benu du gabu soku','25.50':'du tanu sa doto sa cho'};
 for(const k in L){const r=C.leerNum(k);if(r!==L[k])f.push(k+' => '+r);}
 for(let n=0;n<3000;n+=7){const r=C.leerOwee(C.leerNum(String(n)));if(r!==n)f.push('ida-vuelta '+n);}
-const R={1994:'MCMXCIV',2026:'MMXXVI',3999:'MMMCMXCIX',4:'IV'};
-for(const k in R){if(C.aRomano(+k)!==R[k]||C.deRomano(R[k])!==+k)f.push('romano '+k);}
-if(C.deRomano('IIII')!==null)f.push('IIII');
+if(C.normales('\\uE042\\uE040\\uE042\\uE046')!=='2026')f.push('normales');
 if(C.evaluar('2+3*4')!==14||C.evaluar('(2+3)*4/8')!==2.5||!isNaN(C.evaluar('2+')))f.push('evaluar');
 if(C.leerExpr('-5+3')!=='po sa dapa ga')f.push('expr '+C.leerExpr('-5+3'));
 console.log(JSON.stringify(f));"""
     r = subprocess.run(["node", "-e", pc], cwd=RAIZ, capture_output=True, text=True)
     fl = r.stdout.strip() if r.returncode == 0 else r.stderr[-200:]
-    ok("Calculadora de numeros Owee y romanos: pruebas", r.returncode == 0 and fl == "[]", "" if fl == "[]" else fl[:160])
+    ok("Calculadora de numeros Owee: pruebas", r.returncode == 0 and fl == "[]", "" if fl == "[]" else fl[:160])
+
+# 7e. teclado Keyman: paquete listo y reglas al dia con el mapa de glifos
+import hashlib
+kd = RAIZ / "05_Teclado_IME/keyman-owee"
+falta = [f for f in ("Owee.kmp", "owee.kmx", "owee.js") if not (kd / "dist" / f).exists()]
+kmn0 = (kd / "source/owee.kmn").read_text(encoding="utf8") if (kd / "source/owee.kmn").exists() else ""
+subprocess.run(["python3", "generar_keyman.py"], cwd=kd, capture_output=True)
+kmn1 = (kd / "source/owee.kmn").read_text(encoding="utf8")
+ok("Teclado Keyman (Owee.kmp) generado y al dia", not falta and kmn0 == kmn1, ("falta " + ", ".join(falta)) if falta else ("owee.kmn desactualizado" if kmn0 != kmn1 else ""))
 
 # 8. git
 g = correr(["git", "status", "--porcelain"]).stdout.strip().splitlines()

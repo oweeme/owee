@@ -1,0 +1,169 @@
+c Teclado Owee 1.0 para Keyman. Generado por generar_keyman.py: no editar a mano.
+c Escribe en romano y obtiene Owee Script (glifos en la zona privada U+E000..E049).
+store(&VERSION) '17.0'
+store(&NAME) 'Owee'
+store(&KEYBOARDVERSION) '1.0'
+store(&COPYRIGHT) '(c) 2026 Hector Martinez - MIT'
+store(&MESSAGE) 'Escribe en romano: suna -> glifos Owee. Guion para compuestos, Mayuscula para nombres, AltGr+cifra para cifras normales.'
+store(&TARGETS) 'any'
+store(&LAYOUTFILE) 'owee.keyman-touch-layout'
+
+begin Unicode > use(main)
+store(glifos) U+E000 .. U+E03B
+
+group(main) using keys
+
+c --- cifras: 0-9 -> glifos numericos; AltGr + cifra -> cifra normal
++ [RALT K_0] > '0'
++ '0' > U+E040
++ [RALT K_1] > '1'
++ '1' > U+E041
++ [RALT K_2] > '2'
++ '2' > U+E042
++ [RALT K_3] > '3'
++ '3' > U+E043
++ [RALT K_4] > '4'
++ '4' > U+E044
++ [RALT K_5] > '5'
++ '5' > U+E045
++ [RALT K_6] > '6'
++ '6' > U+E046
++ [RALT K_7] > '7'
++ '7' > U+E047
++ [RALT K_8] > '8'
++ '8' > U+E048
++ [RALT K_9] > '9'
++ '9' > U+E049
+
+c --- sh y ch (minuscula y mayuscula inicial)
+'s' + 'h' > 'sh'
+'S' + 'h' > 'Sh'
+'c' + 'h' > 'ch'
+'C' + 'h' > 'Ch'
+
+c --- silabas: consonante + vocal -> glifo; con mayuscula inicial -> marca de nombre + glifo
+'p' + 'a' > U+E004
+'P' + 'a' > U+E03D U+E004
+'p' + 'e' > U+E005
+'P' + 'e' > U+E03D U+E005
+'p' + 'o' > U+E006
+'P' + 'o' > U+E03D U+E006
+'p' + 'u' > U+E007
+'P' + 'u' > U+E03D U+E007
+'b' + 'a' > U+E008
+'B' + 'a' > U+E03D U+E008
+'b' + 'e' > U+E009
+'B' + 'e' > U+E03D U+E009
+'b' + 'o' > U+E00A
+'B' + 'o' > U+E03D U+E00A
+'b' + 'u' > U+E00B
+'B' + 'u' > U+E03D U+E00B
+'t' + 'a' > U+E00C
+'T' + 'a' > U+E03D U+E00C
+'t' + 'e' > U+E00D
+'T' + 'e' > U+E03D U+E00D
+'t' + 'o' > U+E00E
+'T' + 'o' > U+E03D U+E00E
+'t' + 'u' > U+E00F
+'T' + 'u' > U+E03D U+E00F
+'d' + 'a' > U+E010
+'D' + 'a' > U+E03D U+E010
+'d' + 'e' > U+E011
+'D' + 'e' > U+E03D U+E011
+'d' + 'o' > U+E012
+'D' + 'o' > U+E03D U+E012
+'d' + 'u' > U+E013
+'D' + 'u' > U+E03D U+E013
+'k' + 'a' > U+E014
+'K' + 'a' > U+E03D U+E014
+'k' + 'e' > U+E015
+'K' + 'e' > U+E03D U+E015
+'k' + 'o' > U+E016
+'K' + 'o' > U+E03D U+E016
+'k' + 'u' > U+E017
+'K' + 'u' > U+E03D U+E017
+'g' + 'a' > U+E018
+'G' + 'a' > U+E03D U+E018
+'g' + 'e' > U+E019
+'G' + 'e' > U+E03D U+E019
+'g' + 'o' > U+E01A
+'G' + 'o' > U+E03D U+E01A
+'g' + 'u' > U+E01B
+'G' + 'u' > U+E03D U+E01B
+'f' + 'a' > U+E01C
+'F' + 'a' > U+E03D U+E01C
+'f' + 'e' > U+E01D
+'F' + 'e' > U+E03D U+E01D
+'f' + 'o' > U+E01E
+'F' + 'o' > U+E03D U+E01E
+'f' + 'u' > U+E01F
+'F' + 'u' > U+E03D U+E01F
+'s' + 'a' > U+E020
+'S' + 'a' > U+E03D U+E020
+'s' + 'e' > U+E021
+'S' + 'e' > U+E03D U+E021
+'s' + 'o' > U+E022
+'S' + 'o' > U+E03D U+E022
+'s' + 'u' > U+E023
+'S' + 'u' > U+E03D U+E023
+'m' + 'a' > U+E024
+'M' + 'a' > U+E03D U+E024
+'m' + 'e' > U+E025
+'M' + 'e' > U+E03D U+E025
+'m' + 'o' > U+E026
+'M' + 'o' > U+E03D U+E026
+'m' + 'u' > U+E027
+'M' + 'u' > U+E03D U+E027
+'n' + 'a' > U+E028
+'N' + 'a' > U+E03D U+E028
+'n' + 'e' > U+E029
+'N' + 'e' > U+E03D U+E029
+'n' + 'o' > U+E02A
+'N' + 'o' > U+E03D U+E02A
+'n' + 'u' > U+E02B
+'N' + 'u' > U+E03D U+E02B
+'l' + 'a' > U+E02C
+'L' + 'a' > U+E03D U+E02C
+'l' + 'e' > U+E02D
+'L' + 'e' > U+E03D U+E02D
+'l' + 'o' > U+E02E
+'L' + 'o' > U+E03D U+E02E
+'l' + 'u' > U+E02F
+'L' + 'u' > U+E03D U+E02F
+'r' + 'a' > U+E030
+'R' + 'a' > U+E03D U+E030
+'r' + 'e' > U+E031
+'R' + 'e' > U+E03D U+E031
+'r' + 'o' > U+E032
+'R' + 'o' > U+E03D U+E032
+'r' + 'u' > U+E033
+'R' + 'u' > U+E03D U+E033
+'sh' + 'a' > U+E034
+'Sh' + 'a' > U+E03D U+E034
+'sh' + 'e' > U+E035
+'Sh' + 'e' > U+E03D U+E035
+'sh' + 'o' > U+E036
+'Sh' + 'o' > U+E03D U+E036
+'sh' + 'u' > U+E037
+'Sh' + 'u' > U+E03D U+E037
+'ch' + 'a' > U+E038
+'Ch' + 'a' > U+E03D U+E038
+'ch' + 'e' > U+E039
+'Ch' + 'e' > U+E03D U+E039
+'ch' + 'o' > U+E03A
+'Ch' + 'o' > U+E03D U+E03A
+'ch' + 'u' > U+E03B
+'Ch' + 'u' > U+E03D U+E03B
+
+c --- vocal sola (con mayuscula: nombre propio)
++ 'a' > U+E000
++ 'A' > U+E03D U+E000
++ 'e' > U+E001
++ 'E' > U+E03D U+E001
++ 'o' > U+E002
++ 'O' > U+E03D U+E002
++ 'u' > U+E003
++ 'U' > U+E03D U+E003
+
+c --- guion tras un glifo -> nexo de compuesto
+any(glifos) + '-' > index(glifos,1) U+E03C

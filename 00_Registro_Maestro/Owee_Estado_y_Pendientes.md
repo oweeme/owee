@@ -67,7 +67,7 @@
 - **Prueba auditiva** de los 55 pares de sonidos parecidos (sobre todo partículas: `te/de`, `bo/po`, `ga/ka`) y **audio de pronunciación**.
 - **Registro Maestro:** el cuerpo principal sigue declarando «hasta Owee Sans 3.0» y no integra los números compuestos ni el léxico ampliado; regenerarlo desde los `.tsv`.
 - **PDFs antiguos:** Matemáticas 2.0 aún trae formas imposibles (`ango`, `akso`, `vara`…); los cuadernos usan fuentes 3.1/3.2.
-- **Teclado multiplataforma** (Keyman para Windows, macOS, Android, iOS).
+- ✅ **Teclado multiplataforma Keyman** (Windows, macOS, Linux, Android, iOS y navegadores): `05_Teclado_IME/keyman-owee`, paquete `Owee.kmp`, probado en el motor real KeymanWeb (904/904 palabras idénticas a `owee.js`). Pendiente: probarlo en un teléfono Android y en Windows reales; publicarlo en keyman.com (opcional).
 - **Publicar el sitio** (GitHub Pages u oweeme.com) y preparar `CONTRIBUTING`.
 - **Seguridad (tuya):** rotar las claves del archivo `oweeme/oweeme.md` y moverlas a un gestor de contraseñas.
 - **Curso de 30 lecciones** y ampliar la antología de 34 a 100 textos; traducciones de textos de dominio público.
