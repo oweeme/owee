@@ -10,11 +10,15 @@ Fuentes de verdad (no se duplican, se leen):
 Uso:  python3 07_Sitio_Web/build_site.py
 Despues, para el PDF imprimible:  python3 07_Sitio_Web/make_pdf.py
 """
-import html, json, re, shutil, sys, unicodedata
+import html, json, os, re, shutil, sys, unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = Path(__file__).resolve().parent / "docs"
+OUT = Path(os.environ.get("OWEE_OUT") or Path(__file__).resolve().parent / "docs")
+# Modo publico (OWEE_PUBLICO=1 o --publico): sin la seccion "Proyecto" (registro maestro, estado, auditoria, plan, integracion, revision):
+# es material de trabajo interno. El sitio publico solo muestra aprender, leer, ciencias y descargas.
+PUBLICO = os.environ.get("OWEE_PUBLICO") == "1" or "--publico" in sys.argv
+INTERNAS = ("idioma.html", "estado.html", "revision.html", "auditoria.html", "plan.html", "integracion.html")
 GM = ROOT / "04_Fuentes/actual_3.3_fuente_y_glifos/Owee_Glyph_Master_3.3"
 LIT = sorted((ROOT / "03_Material_Ensenanza/Literatura_Poesia").glob("Owee_Literatura_y_Poesia_*.md"))[-1]
 REG = ROOT / "00_Registro_Maestro/Owee_Registro_Maestro_Completo.md"
@@ -354,6 +358,9 @@ NAV = [("index.html", "Inicio", "pado"),
        ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y pendientes"), ("revision.html", "Revisión semántica"), ("auditoria.html", "Auditoría inicial"), ("plan.html", "Plan de ampliación"),
                      ("integracion.html", "Integración (oweelinux, web)"), ("descargas.html", "Descargas", "gura")], "dare")]
 
+if PUBLICO:
+    NAV = [it for it in NAV if it[0] != "Proyecto"] + [("descargas.html", "Descargas", "gura")]
+
 CSS = r"""
 :root{--bg:#fbfaf7;--surface:#fff;--ink:#1c2430;--ink2:#566170;--rule:#e2dfd7;--accent:#2F6FB0;--accent-ink:#fff;--soft:#eaf1f9;--warn:#a65f00;--ok:#2d7a4b;--owee-size:1.6rem}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14181e;--surface:#1b2129;--ink:#e8ebef;--ink2:#9aa6b4;--rule:#2b3440;--accent:#6aa8e6;--accent-ink:#0c1620;--soft:#1e2a38;--warn:#e0a24a;--ok:#6ccf93}}
@@ -491,6 +498,8 @@ def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=T
 <link rel="stylesheet" href="assets/owee.css"><style>{CSS}</style>{extra_head}</head>
 <body {body_attrs}>{top}<main>{body}</main>{foot}
 <script src="assets/owee.js"></script><script>{JS_COMMON}</script>{extra_js}</body></html>"""
+    if PUBLICO:
+        doc = re.sub(r'<a [^>]*href=["\'](?:%s)(?:#[^"\']*)?["\'][^>]*>(.*?)</a>' % "|".join(re.escape(x) for x in INTERNAS), r"\1", doc, flags=re.S)
     (OUT / fname).write_text(doc, encoding="utf8")
 
 # ---------------------------------------------------------------- paginas
@@ -507,6 +516,10 @@ window.addEventListener('DOMContentLoaded',function(){{document.getElementById('
 document.getElementById('fr').textContent=f[0];document.getElementById('fes').textContent=f[1]}})}})()</script></div>"""
 
 def build_index(stats):
+    if PUBLICO:
+        proy_href, proy_t, proy_p = "descargas.html", "Descargas", "PDF, fuentes, teclado y audio para usar Owee en tu ordenador."
+    else:
+        proy_href, proy_t, proy_p = "estado.html", "Proyecto", "Estado, pendientes, plan de ampliación, integración con Linux y la web, descargas."
     body = f"""
 <div class="hero"><div class="big o" data-o="owee suma">owee suma</div>
 <h1>Owee — aprende un idioma construido, fácil y completo</h1>
@@ -529,7 +542,7 @@ Empieza aquí: sumérgete en el idioma con glifos, romanización, pronunciación
 <a class="card" href="diccionario.html"><h3>Diccionario</h3><p>Todas las palabras con glifo, romano, pronunciación y traducción; buscador Owee ↔ español.</p></a>
 <a class="card" href="literatura.html"><h3>Literatura y canciones</h3><p>Poemas, mitos, cuentos y canciones con ritmo y acordes.</p></a>
 <a class="card" href="matematicas.html"><h3>Ciencias</h3><p>Matemáticas, física, química, astronomía e informática con ejemplos verificados.</p></a>
-<a class="card" href="estado.html"><h3>Proyecto</h3><p>Estado, pendientes, plan de ampliación, integración con Linux y la web, descargas.</p></a>
+<a class="card" href="{proy_href}"><h3>{proy_t}</h3><p>{proy_p}</p></a>
 <a class="card" href="pad/index.html"><h3>Owee Pad</h3><p>Escribe en romano y obtén Owee Script al instante.</p></a></div>
 <h2>Probar la escritura</h2>
 <div class="controls"><input id="t" type="search" value="me suna nume" aria-label="Texto en romano Owee"></div>
@@ -955,18 +968,16 @@ def build_descargas():
         dl = []
         for f in sorted(debs.glob("*.deb")):
             shutil.copy2(f, D / "linux" / f.name); dl.append(f"<a href='documentos/linux/{f.name}'>{f.name}<span>DEB · {sz(f)}</span></a>")
-        sections.insert(0, "<h3>oweelinux: paquetes .deb (fuentes, teclado y locale)</h3><p>Ver la página de <a href='integracion.html'>integración</a>.</p><div class='dl'>" + "".join(dl) + "</div>")
+        sections.insert(0, "<h3>oweelinux: paquetes .deb (fuentes, teclado y locale)</h3><p>Instalación en el repositorio de GitHub (carpeta <code>08_Integracion</code>).</p><div class='dl'>" + "".join(dl) + "</div>")
     F = OUT / "fuentes"; F.mkdir(exist_ok=True)
     fl = []
     for f in sorted((GM / "fonts/ttf").glob("*.ttf")) + sorted((GM / "fonts/otf").glob("*.otf")) + sorted((GM / "fonts/woff2").glob("*.woff2")):
         shutil.copy2(f, F / f.name); fl.append(f'<a href="fuentes/{f.name}">{f.name}<span>{sz(f)}</span></a>')
-    ime = ROOT / "99_Archivo/zips_originales/fcitx5-owee-1.1-digits.zip"
-    shutil.copy2(ime, D / ime.name)
     body = f"""<h1>Descargas</h1>
 <h2>Fuentes</h2><p><strong>Owee Sans</strong> (pantalla y documentos) y <strong>Owee School</strong> (escritura a mano). Linux: copiar los <code>.ttf</code> a <code>~/.local/share/fonts/Owee/</code> y ejecutar <code>fc-cache -f</code>.</p>
 <div class="dl">{''.join(fl)}</div>
-<h2>Teclado</h2><div class="dl"><a href="documentos/{ime.name}">fcitx5-owee 1.1 (con dígitos) — Fcitx5 / Deepin<span>ZIP · {sz(ime)}</span></a></div>
-<p>Instrucciones en el Registro Maestro, Parte IX. Alternativa sin instalar nada: <a href="pad/index.html">Owee Pad</a>.</p>
+<h2>Teclado</h2><div class="dl"><a href="teclado/Owee.kmp">Owee.kmp — teclado Keyman<span>Windows, Android, iOS, macOS</span></a><a href="teclado.html">Teclado Owee: instalar y probar<span>página con instrucciones</span></a></div>
+<p>Alternativa sin instalar nada: <a href="pad/index.html">Owee Pad</a>. Para Linux (Fcitx5) está el paquete <code>fcitx5-owee</code> en el repositorio de GitHub.</p>
 <h2>Documentos</h2>{''.join(sections)}"""
     page("descargas.html", "Descargas", body, "descargas.html")
     return npdf
@@ -982,7 +993,8 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_idioma(); build_dic(use); build_ciencias(); build_estado(); build_plan(); build_integracion(); build_revision(); build_traductor(); build_calculadora(); build_teclado()
+    build_escritura(); build_dic(use); build_ciencias(); build_traductor(); build_calculadora(); build_teclado()
+    if not PUBLICO: build_idioma(); build_estado(); build_plan(); build_integracion(); build_revision()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     (OUT / ".nojekyll").write_text("")
     print(f"OK {OUT}: {len(LEX)} entradas, {len(poems)} textos poeticos, {npdf} PDFs, fuente literatura: {LIT.name}")

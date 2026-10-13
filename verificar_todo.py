@@ -148,6 +148,24 @@ subprocess.run(["python3", "generar_keyman.py"], cwd=kd, capture_output=True)
 kmn1 = (kd / "source/owee.kmn").read_text(encoding="utf8")
 ok("Teclado Keyman (Owee.kmp) generado y al dia", not falta and kmn0 == kmn1, ("falta " + ", ".join(falta)) if falta else ("owee.kmn desactualizado" if kmn0 != kmn1 else ""))
 
+# 7f. sitio publico: sin la seccion Proyecto y sin enlaces rotos
+import tempfile, os as _os
+with tempfile.TemporaryDirectory() as td:
+    env = dict(_os.environ, OWEE_PUBLICO="1", OWEE_OUT=td + "/pub")
+    rp = subprocess.run(["python3", "-W", "ignore", "07_Sitio_Web/build_site.py"], cwd=RAIZ, env=env, capture_output=True, text=True)
+    prob = []
+    if rp.returncode: prob.append("no compila: " + rp.stderr[-120:])
+    else:
+        pub = pathlib.Path(td) / "pub"
+        for i in ("idioma", "estado", "plan", "integracion", "revision", "auditoria"):
+            if (pub / f"{i}.html").exists(): prob.append(f"{i}.html no deberia publicarse")
+        for h in pub.glob("*.html"):
+            t = h.read_text(encoding="utf8")
+            if "Proyecto" in t and ">Proyecto" in t.replace("▾", "").replace(" ", ""): prob.append(f"{h.name}: menu Proyecto")
+            for m in re.findall(r"""(?:href|src)=["']([^"'#:?]+)(?:#[^"']*)?["']""", t):
+                if not (pub / m).exists() and not m.startswith("http"): prob.append(f"{h.name} -> {m}")
+    ok("Sitio publico (sin Proyecto, sin enlaces rotos)", not prob, "; ".join(prob[:5]))
+
 # 8. git
 g = correr(["git", "status", "--porcelain"]).stdout.strip().splitlines()
 ok("Git: sin cambios sin guardar", not g, f"{len(g)} archivos con cambios" if g else "")
