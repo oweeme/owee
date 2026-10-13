@@ -948,5 +948,115 @@
   "es": "Documentos",
   "owee": "doke-beka",
   "script": ""
+ },
+ "Drag": {
+  "es": "Arrastrar",
+  "owee": "delo-duma",
+  "script": ""
+ },
+ "Drop": {
+  "es": "Soltar",
+  "owee": "delo-gune",
+  "script": ""
+ },
+ "Press": {
+  "es": "Pulsar",
+  "owee": "tada-kade",
+  "script": ""
+ },
+ "Scroll": {
+  "es": "Desplazar",
+  "owee": "loke-duma",
+  "script": ""
+ },
+ "Import": {
+  "es": "Importar",
+  "owee": "doke-duma-bo",
+  "script": ""
+ },
+ "Export": {
+  "es": "Exportar",
+  "owee": "doke-duma-ba",
+  "script": ""
+ },
+ "Confirm": {
+  "es": "Confirmar",
+  "owee": "tare-dare",
+  "script": ""
+ },
+ "Share": {
+  "es": "Compartir",
+  "owee": "saro-pema",
+  "script": ""
+ },
+ "Disconnect": {
+  "es": "Desconectar",
+  "owee": "rela-bosa",
+  "script": ""
+ },
+ "Rename": {
+  "es": "Renombrar",
+  "owee": "sena-nara-telo",
+  "script": ""
+ },
+ "Show": {
+  "es": "Mostrar",
+  "owee": "loke-pema",
+  "script": ""
+ },
+ "Hide": {
+  "es": "Ocultar",
+  "owee": "loke-kose",
+  "script": ""
+ },
+ "Calendar": {
+  "es": "Calendario",
+  "owee": "loda-kelo-seta",
+  "script": ""
+ },
+ "Friend": {
+  "es": "Amigo",
+  "owee": "reme-nara",
+  "script": ""
+ },
+ "Door": {
+  "es": "Puerta",
+  "owee": "kuma-nado",
+  "script": ""
+ },
+ "Table": {
+  "es": "Mesa",
+  "owee": "kema-tabe",
+  "script": ""
+ },
+ "Lamp": {
+  "es": "Lámpara",
+  "owee": "salo-feke",
+  "script": ""
+ },
+ "Emergency": {
+  "es": "Emergencia",
+  "owee": "sape-moke",
+  "script": ""
+ },
+ "Pharmacy": {
+  "es": "Farmacia",
+  "owee": "sado-feke-kuma",
+  "script": ""
+ },
+ "Bus": {
+  "es": "Autobús",
+  "owee": "naro-meka",
+  "script": ""
+ },
+ "Train": {
+  "es": "Tren",
+  "owee": "taro-meka-raga",
+  "script": ""
+ },
+ "Bicycle": {
+  "es": "Bicicleta",
+  "owee": "kalu-meka",
+  "script": ""
  }
 }

@@ -769,3 +769,91 @@ msgstr ""
 msgid "Documents"
 msgstr ""
 
+#. Arrastrar
+msgid "Drag"
+msgstr ""
+
+#. Soltar
+msgid "Drop"
+msgstr ""
+
+#. Pulsar
+msgid "Press"
+msgstr ""
+
+#. Desplazar
+msgid "Scroll"
+msgstr ""
+
+#. Importar
+msgid "Import"
+msgstr ""
+
+#. Exportar
+msgid "Export"
+msgstr ""
+
+#. Confirmar
+msgid "Confirm"
+msgstr ""
+
+#. Compartir
+msgid "Share"
+msgstr ""
+
+#. Desconectar
+msgid "Disconnect"
+msgstr ""
+
+#. Renombrar
+msgid "Rename"
+msgstr ""
+
+#. Mostrar
+msgid "Show"
+msgstr ""
+
+#. Ocultar
+msgid "Hide"
+msgstr ""
+
+#. Calendario
+msgid "Calendar"
+msgstr ""
+
+#. Amigo
+msgid "Friend"
+msgstr ""
+
+#. Puerta
+msgid "Door"
+msgstr ""
+
+#. Mesa
+msgid "Table"
+msgstr ""
+
+#. Lámpara
+msgid "Lamp"
+msgstr ""
+
+#. Emergencia
+msgid "Emergency"
+msgstr ""
+
+#. Farmacia
+msgid "Pharmacy"
+msgstr ""
+
+#. Autobús
+msgid "Bus"
+msgstr ""
+
+#. Tren
+msgid "Train"
+msgstr ""
+
+#. Bicicleta
+msgid "Bicycle"
+msgstr ""
+

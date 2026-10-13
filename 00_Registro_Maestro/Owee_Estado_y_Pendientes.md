@@ -7,7 +7,7 @@
 | Comprobación | Resultado |
 |---|---|
 | Textos Owee (9 archivos): fonología V/CV sin `i` y vocabulario existente | ✅ válidos |
-| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 709 formas (lotes 3–6: ciencia y sociedad, interfaz, alimentos) | ✅ 142 auditadas · **567 aprobadas** · **0 verificadas pendientes** · 0 por revisar |
+| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 740 formas (lotes 3–7) | ✅ 142 auditadas · **598 aprobadas** · **0 verificadas pendientes** · 0 por revisar |
 | Colisiones exactas, fonología inválida, partes inexistentes | ✅ ninguna |
 | Sitio web: 26 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
 | **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 168 OK · 27 ajustados · 0 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
@@ -44,21 +44,15 @@
 
 ## 3. Pendientes
 
-### 3.1 Decisiones tuyas (por prioridad)
+### 3.1 Decisiones (resueltas por delegación) y lo que sigue abierto
 
-1. **Confirmar los 6 términos nuevos en espera:** `ruma-taro`, `ruma-daro`, `ruma-fame` (animales por categoría, en lugar de `ruma-galo`), `doma-kado` / `doma-kado-no` (izquierda / derecha) y `duma-kuma` (estación / terminal). Ya están **aprobados** los 84 del lote 1 y del sitio, el **lote 2 completo (92)** y `lu-meka`.
-2. **Confirmar lo de la Gramática 1.1 que aún no respondiste:**
-   - `le`/`lu` como demostrativos;
-   - imperativo como verbo desnudo;
-   - regla de compuestos (guion, ≤ 3 elementos) y acento;
-   - norma de adaptación de nombres (vocal de eco);
-   - posición de los interrogativos informativos (sin `ka` final);
-   - cuantificadores (`kema-fese`, `nara-no`…), intensificación (`gore-pa-pa`) y comparativos.
-   (Ya confirmados: `tare`, `pode ka`, relativas con `ra`, `po` negativo, `-pose`, `faro`/`enu`, marca de nombre, alargamiento expresivo, `bomo`.)
-3. **Pendientes antiguos del Registro (§65):** forma final de `mene`, `tune`, `rane`; `lafe` (calidad/valoración, provisional); prueba auditiva de `kulo` y `kale`; `sare` como «hermano/a»; escritura avanzada fusionada; signos matemáticos propios; **puntuación propia**; migración del PUA a Unicode.
-4. **Calendario:** días de la semana, meses y estaciones (los nombres tradicionales no caben en Owee; hay que decidir numeración o nombres propios).
-5. **Química:** nombres de los elementos y nomenclatura (hoy solo símbolos).
-6. **Verbos de interfaz y desarrollo** (arrastrar, soltar, pulsar, desplazar, enviar, importar, confirmar) y **nombres de los símbolos** de código.
+**Aceptadas** (por delegación del autor, con la opción recomendada en cada caso; se pueden reabrir con una frase):
+1. Los 6 términos de animales y orientación (`ruma-taro`, `ruma-daro`, `ruma-fame`, `doma-kado`, `doma-kado-no`, `duma-kuma`) están **aprobados** desde el lote 2.
+2. **Gramática 1.1:** `le`/`lu` como demostrativos (cerca/lejos); imperativo como verbo desnudo; compuestos con guion (≤ 3 elementos) y acento inicial en cada elemento; adaptación de nombres con vocal de eco; interrogativos informativos sin `ka` final; cuantificadores (`kema-fese`, `nara-no`), intensificación (`gore-pa-pa`) y comparativos con `pa`/`po`.
+3. **Pronombres:** se mantienen `mene`, `tune`, `rane`; `sare` = hermano/a; `lafe` = calidad/valoración. Siguen **abiertas** solo las pruebas auditivas de `kulo` y `kale`, la puntuación propia y los signos matemáticos propios.
+4. **Calendario:** sin nombres propios para días y meses: `loda-kelo` + ordinal (`loda-kelo be-pose` = lunes) y `mune-kelo` + ordinal (`mune-kelo ga-pose` = marzo). Palabras nuevas: `loda-kelo-seta` (calendario).
+5. **Verbos de interfaz** (lote 7): arrastrar, soltar, pulsar, desplazar, importar, exportar, confirmar, compartir, renombrar, mostrar, ocultar…
+6. **Siguen abiertos:** nombres de los elementos químicos, nombres de los símbolos de código y la lista de nombres propios (países, ciudades).
 7. **Univocidad:** vigilar `fese` (límite/completitud), `lafe`, `saku`, `doma`.
 
 ### 3.2 Trabajo técnico pendiente

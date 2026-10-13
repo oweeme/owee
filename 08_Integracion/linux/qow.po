@@ -769,3 +769,91 @@ msgstr "salo-sena-duma"
 msgid "Documents"
 msgstr "doke-beka"
 
+#. Arrastrar
+msgid "Drag"
+msgstr "delo-duma"
+
+#. Soltar
+msgid "Drop"
+msgstr "delo-gune"
+
+#. Pulsar
+msgid "Press"
+msgstr "tada-kade"
+
+#. Desplazar
+msgid "Scroll"
+msgstr "loke-duma"
+
+#. Importar
+msgid "Import"
+msgstr "doke-duma-bo"
+
+#. Exportar
+msgid "Export"
+msgstr "doke-duma-ba"
+
+#. Confirmar
+msgid "Confirm"
+msgstr "tare-dare"
+
+#. Compartir
+msgid "Share"
+msgstr "saro-pema"
+
+#. Desconectar
+msgid "Disconnect"
+msgstr "rela-bosa"
+
+#. Renombrar
+msgid "Rename"
+msgstr "sena-nara-telo"
+
+#. Mostrar
+msgid "Show"
+msgstr "loke-pema"
+
+#. Ocultar
+msgid "Hide"
+msgstr "loke-kose"
+
+#. Calendario
+msgid "Calendar"
+msgstr "loda-kelo-seta"
+
+#. Amigo
+msgid "Friend"
+msgstr "reme-nara"
+
+#. Puerta
+msgid "Door"
+msgstr "kuma-nado"
+
+#. Mesa
+msgid "Table"
+msgstr "kema-tabe"
+
+#. Lámpara
+msgid "Lamp"
+msgstr "salo-feke"
+
+#. Emergencia
+msgid "Emergency"
+msgstr "sape-moke"
+
+#. Farmacia
+msgid "Pharmacy"
+msgstr "sado-feke-kuma"
+
+#. Autobús
+msgid "Bus"
+msgstr "naro-meka"
+
+#. Tren
+msgid "Train"
+msgstr "taro-meka-raga"
+
+#. Bicicleta
+msgid "Bicycle"
+msgstr "kalu-meka"
+

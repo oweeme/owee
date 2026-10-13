@@ -5,10 +5,18 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 325 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 379 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
+| `tabu` | pan | `tabu` (pan) | OK |
+| `sebu` | arroz | `sebu` (arroz) | OK |
+| `fuko` | papa | `fuko` (papa) | OK |
+| `mugo` | maíz | `mugo` (maíz) | OK |
+| `kenua` | quinua (nombre adaptado) | `kenua` (quinua) | OK |
+| `salotena` | salteña (nombre adaptado) | `salotena` (salteña) | OK |
+| `kunape` | cuñapé (nombre adaptado) | `kunape` (cuñapé) | OK |
+| `charake` | charque (nombre adaptado) | `charake` (charque) | OK |
 | `lu-meka` | nube informática (máquina lejana) | `lu` (lejos) + `meka` (máquina) | AJUSTADO — antes kuna-meka «máquina del cielo», que se confundiría con el avión (sura-meka); la nube informática es una máquina lejana |
 | `foma-fena` | configuración (poner reglas) | `foma` (regla) + `fena` (poner) | OK |
 | `meka-gune` | apagar (fin de la máquina) | `meka` (máquina) + `gune` (fin) | OK |
@@ -361,3 +369,49 @@ Criterios (2026-10-12):
 | `salo-lafe` | color (cualidad de la luz) | `salo` (luz) + `lafe` (calidad) | OK |
 | `kore-doma` | centro (lugar del medio) | `kore` (lugar) + `doma` (corazón) | OK |
 | `seta-dore` | tipo (forma del conjunto) | `seta` (conjunto) + `dore` (forma) | OK |
+| `tabu-gume` | harina (materia del pan) | `tabu` (pan) + `gume` (materia) | OK |
+| `nede-fame` | verdura (comida verde) | `nede` (verde) + `fame` (comida) | OK |
+| `ruma-kuna-gume` | pollo (carne de ave) | `ruma` (animal) + `kuna` (cielo) + `gume` (materia) | OK |
+| `ruma-suna-gume` | pescado (carne de pez) | `ruma` (animal) + `suna` (agua) + `gume` (materia) | OK |
+| `naku-nobe-gume` | queso (materia de la leche) | `naku` (descendiente) + `nobe` (bebida) + `gume` (materia) | OK |
+| `lena-gume` | azúcar (materia agradable) | `lena` (agrado) + `gume` (materia) | OK |
+| `nelo-mase` | aceite (grasa de planta) | `nelo` (planta) + `mase` (recurso) | OK |
+| `suna-fame` | sopa (agua y comida) | `suna` (agua) + `fame` (comida) | OK |
+| `nelo-nobe` | jugo (bebida de fruta) | `nelo` (planta) + `nobe` (bebida) | OK |
+| `fuko-suna-nuse` | chuño (papa sin agua) | `fuko` (papa) + `suna` (agua) + `nuse` (vacío) | OK |
+| `mugo-nobe` | bebida de maíz (api, chicha) | `mugo` (maíz) + `nobe` (bebida) | OK |
+| `pore-nelo` | ají (planta de fuego) | `pore` (fuego) + `nelo` (planta) | OK |
+| `pore-sabe` | picante (fuego de la boca) | `pore` (fuego) + `sabe` (boca) | OK |
+| `kale-nelo-fame` | plátano (fruta amarilla) | `kale` (amarillo) + `nelo` (planta) + `fame` (comida) | OK |
+| `saro-fame` | comida típica (comida de la comunidad) | `saro` (comunidad) + `fame` (comida) | OK |
+| `loda-kelo-seta` | calendario (conjunto de días) | `loda` (rotación) + `kelo` (ciclo) + `seta` (conjunto) | OK |
+| `reme-nara` | amigo (persona de amistad) | `reme` (amistad) + `nara` (persona) | OK |
+| `pade-pade-pade` | bisabuelo/a (progenitor del abuelo) | `pade` (progenitor) + `pade` (progenitor) + `pade` (progenitor) | OK |
+| `mela-nara` | pariente (persona de la familia) | `mela` (familia) + `nara` (persona) | OK |
+| `kuma-nado` | puerta (acceso de la casa) | `kuma` (hogar) + `nado` (acceso) | OK |
+| `kema-tabe` | mesa (superficie para objetos) | `kema` (objeto) + `tabe` (superficie de apoyo) | OK |
+| `kuma-gore-pa` | edificio (casa grande) | `kuma` (hogar) + `gore` (tamaño) + `pa` (más) | OK |
+| `kuma-duma-kore` | calle (camino de casas) | `kuma` (hogar) + `duma` (movimiento) + `kore` (lugar) | OK |
+| `gase-gume` | jabón (materia de limpieza) | `gase` (limpieza) + `gume` (materia) | OK |
+| `kuma-kema` | mueble (objeto de la casa) | `kuma` (hogar) + `kema` (objeto) | OK |
+| `bume-fena` | vestirse (poner la ropa) | `bume` (ropa) + `fena` (poner) | OK |
+| `sado-no` | enfermo (sin salud) | `sado` (salud) + `no` (negación) | OK |
+| `sado-meka` | ambulancia (máquina de salud) | `sado` (salud) + `meka` (máquina) | OK |
+| `sado-feke-kuma` | farmacia (casa de medicina) | `sado` (salud) + `feke` (herramienta) + `kuma` (hogar) | OK |
+| `sape-moke` | emergencia (necesidad rápida) | `sape` (velocidad) + `moke` (necesidad) | OK |
+| `sado-dare` | sanar (hacer salud) | `sado` (salud) + `dare` (hacer) | OK |
+| `naro-meka` | autobús (máquina de la comunidad) | `naro` (grupo humano) + `meka` (máquina) | OK |
+| `taro-meka-raga` | tren (máquinas de tierra en fila) | `taro` (tierra) + `meka` (máquina) + `raga` (fila) | OK |
+| `kalu-meka` | bicicleta (máquina de pierna) | `kalu` (pierna) + `meka` (máquina) | OK |
+| `delo-duma` | arrastrar (tomar y mover) | `delo` (tomar) + `duma` (movimiento) | OK |
+| `delo-gune` | soltar (fin de tomar) | `delo` (tomar) + `gune` (fin) | OK |
+| `tada-kade` | pulsar (hacer contacto) | `tada` (contacto) + `kade` (usar) | OK |
+| `loke-duma` | desplazar (mover la vista) | `loke` (ojo) + `duma` (movimiento) | OK |
+| `doke-duma-bo` | importar (datos que entran) | `doke` (información) + `duma` (movimiento) + `bo` (interior) | OK |
+| `doke-duma-ba` | exportar (datos que salen) | `doke` (información) + `duma` (movimiento) + `ba` (exterior) | OK |
+| `tare-dare` | confirmar (hacer verdad) | `tare` (realidad) + `dare` (hacer) | OK |
+| `saro-pema` | compartir (dar a la comunidad) | `saro` (comunidad) + `pema` (dar) | OK |
+| `rela-bosa` | desconectar (romper la unión) | `rela` (unión) + `bosa` (rotura) | OK |
+| `sena-nara-telo` | renombrar (cambiar el nombre) | `sena` (signo) + `nara` (persona) + `telo` (cambiar) | OK |
+| `loke-pema` | mostrar (dar al ojo) | `loke` (ojo) + `pema` (dar) | OK |
+| `loke-kose` | ocultar (cerrar al ojo) | `loke` (ojo) + `kose` (cerrar) | OK |

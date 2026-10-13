@@ -1628,3 +1628,13 @@ Reglas aplicadas: un solo significado por forma (se descartaron `tera-no` y `num
 ## 90. Teclado Keyman de Owee y ajustes de la calculadora
 
 Teclado Keyman (`05_Teclado_IME/keyman-owee`): romano → Owee Script sílaba a sílaba (consonante + vocal → glifo, `sh`/`ch`, guion → nexo de compuesto, mayúscula → marca de nombre, 0–9 → cifras Owee, AltGr + cifra → cifra normal), con teclado táctil para Android/iOS. Se genera con `generar_keyman.py` desde el mismo mapa de glifos que el IME de Fcitx5; el paquete `Owee.kmp` está en `dist/` y en la página *Teclado* del sitio, que incluye una caja de prueba con KeymanWeb. La calculadora ya no usa números romanos: convierte entre cifras Owee, números normales y lectura Owee.
+
+## 91. Lote 7, decisiones aceptadas, sitio público e instalación en el equipo
+
+**Lote 7 (31 términos aprobados)**, vida diaria y verbos de interfaz: `reme-nara` amigo, `pade-pade-pade` bisabuelo/a, `mela-nara` pariente, `kuma-nado` puerta, `kema-tabe` mesa, `kuma-gore-pa` edificio, `kuma-duma-kore` calle, `gase-gume` jabón, `kuma-kema` mueble, `bume-fena` vestirse, `sado-no` enfermo, `sado-meka` ambulancia, `sado-feke-kuma` farmacia, `sape-moke` emergencia, `sado-dare` sanar, `naro-meka` autobús, `taro-meka-raga` tren, `kalu-meka` bicicleta, y los verbos `delo-duma` arrastrar, `delo-gune` soltar, `tada-kade` pulsar, `loke-duma` desplazar, `doke-duma-bo` importar, `doke-duma-ba` exportar, `tare-dare` confirmar, `saro-pema` compartir, `rela-bosa` desconectar, `sena-nara-telo` renombrar, `loke-pema` mostrar, `loke-kose` ocultar. Se descartaron los que ya existían (`sare-naku`, `naku-naku`, `salo-feke`, `maku-bume`, `sura-meka-kuma`, `sade-kelo-palo`, viaje, boleto, frontera). Calendario: días y meses con `loda-kelo` / `mune-kelo` + ordinal.
+
+**Decisiones de Gramática 1.1 y pronombres:** aceptadas las opciones recomendadas (ver «Estado y pendientes», §3.1).
+
+**Sitio público:** `OWEE_PUBLICO=1 python3 07_Sitio_Web/build_site.py` genera el sitio sin la sección *Proyecto* (registro maestro, estado, auditoría, plan, integración, revisión) y sin sus enlaces; `.github/workflows/pages.yml` lo publica en GitHub Pages.
+
+**Instalación en el equipo (Deepin):** `08_Integracion/instalar_en_host.sh` (modo usuario, sin sudo, o `--sistema`) y `probar_host.sh` (comprueba cada pieza). `herramientas/gettext_rellenar.py` crea catálogos de interfaz en Owee para los programas ya instalados a partir del glosario (130 catálogos, 2 135 textos de 82 433; el resto se ve en español).

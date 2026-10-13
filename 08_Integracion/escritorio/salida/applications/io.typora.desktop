@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Typora-Beta
+Name[zh_CN]=Typora-免费版
+Comment=A minimal Markdown reading & writing app.
+GenericName=Markdown Editor
+Exec=/opt/apps/io.typora/files/typora/Typora %F
+Icon=typora
+Type=Application
+Categories=Office;WordProcessor;Development;
+MimeType=text/markdown;text/x-markdown;
+Keywords=markdown;editor;write;
+Keywords[zh_CN]=markdown;editor;write;编辑器;写作;
+StartupNotify=true
+Terminal=false
+GenericName[qow]=lodu-beka
+GenericName[qow@owee]=

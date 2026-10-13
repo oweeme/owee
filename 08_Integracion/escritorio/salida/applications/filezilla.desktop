@@ -1,0 +1,22 @@
+[Desktop Entry]
+Name=FileZilla
+Name[zh_CN]=FileZilla 客户端
+GenericName=FTP client
+GenericName[da]=FTP-klient
+GenericName[de]=FTP-Client
+GenericName[fr]=Client FTP
+GenericName[zh_CN]=FTP 客户端
+Comment=Download and upload files via FTP, FTPS and SFTP
+Comment[da]=Download og upload filer via FTP, FTPS og SFTP
+Comment[de]=Dateien über FTP, FTPS und SFTP übertragen
+Comment[fr]=Transférer des fichiers via FTP, FTPS et SFTP
+Comment[zh_CN]=通过FTP、FTPS或SFTP进行文件下载/上传
+Exec=/opt/apps/org.filezilla/files/AppRun
+Icon=filezilla
+Type=Application
+Categories=Network;FileTransfer;
+
+Terminal=false
+StartupNotify=true
+GenericName[qow]=doke-kopa-mado
+GenericName[qow@owee]=
