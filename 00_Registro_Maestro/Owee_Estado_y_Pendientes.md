@@ -7,15 +7,15 @@
 | Comprobación | Resultado |
 |---|---|
 | Textos Owee (9 archivos): fonología V/CV sin `i` y vocabulario existente | ✅ válidos |
-| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 509 formas | ✅ 142 auditadas · **273 aprobadas** · **94 verificadas (92 del lote 2, `lu-meka` y `ruma-galo` en espera)** · 0 por revisar |
+| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 514 formas | ✅ 142 auditadas · **366 aprobadas** · **6 verificadas (esperan confirmación)** · 0 por revisar |
 | Colisiones exactas, fonología inválida, partes inexistentes | ✅ ninguna |
 | Sitio web: 26 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
-| **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 159 OK · 15 ajustados · 1 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
+| **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 157 OK · 17 ajustados · 6 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
 | Traducciones de interfaz (66 textos) | ✅ generan; 19 avisos por términos aún sin aprobar |
 | Python (compila) y JavaScript (sintaxis) | ✅ |
 | Repositorio público en GitHub (licencias CC BY-SA / OFL / MIT) | ✅ |
 | Cobertura de vocabulario básico (lista de trabajo de 114 conceptos) | 66 % con forma · 32 % componible · 1 pendiente (`soñar`) |
-| **Cobertura Swadesh-100 (lista estándar entre lenguas)** | **91 % con forma · 8 % componible · 1 % falta (`piojo`)** — antes del lote 1 era 56 / 9 / 35 |
+| **Cobertura Swadesh-100 (lista estándar entre lenguas)** | **90 % con forma · 9 % componible · 1 % falta (`piojo`)** — antes del lote 1 era 56 / 9 / 35 |
 | Cada bloque Owee con su traducción | ✅ sin excepciones |
 
 > **Hallazgo y resolución:** la lista propia de 114 conceptos daba una cobertura casi completa, pero la lista **Swadesh de 100 palabras** (más exigente y objetiva) revela el hueco real: **35 conceptos faltan**, casi todos de **cuerpo humano y naturaleza concreta** (piel, sangre, hueso, oreja, diente, lengua, rodilla, cuello, hoja, semilla, raíz, piedra, arena, humo, ceniza, huevo, cola, pluma, cabello…) y de **acciones del cuerpo** (morder, nadar, volar, yacer, estar de pie). **Resuelto con el lote 1** (60 términos de cuerpo, animales, naturaleza y posturas, todos compuestos de raíces existentes).
@@ -35,7 +35,8 @@
 | **Informática** | 58 términos y 1 raíz nueva (`bomo`, bug); guía para desarrolladores | aprobado |
 | **Interfaz (UI)** | 19 términos y 66 textos de menú (archivo, guardar, configuración…) | **verificado, falta aprobar** |
 | **Cuerpo y naturaleza (lote 1)** | 60 términos: piel, sangre, hueso, oreja, diente, lengua, piedra, arena, humo, hoja, semilla…; posturas | **aprobado** |
-| **Vida diaria (lote 2)** | 92 términos: hoy/ayer/mañana, semana, comidas, ciudad y geografía, familia ampliada, cocina, casa y ropa, salud, dinero y compras, transporte y viaje | **verificado, falta aprobar** |
+| **Vida diaria (lote 2)** | 92 términos: hoy/ayer/mañana, semana, comidas, ciudad y geografía, familia ampliada, cocina, casa y ropa, salud, dinero y compras, transporte y viaje; verificados por practicidad (máximo 6 sílabas) | **aprobado** |
+| **Animales y orientación** | norma de animales por categoría (`ruma-taro`, `ruma-daro`, `ruma-fame`), izquierda/derecha (`doma-le`, `doma-lu`) y terminal (`duma-kuma`) | verificado, falta confirmar |
 | **Curso por niveles** | 4 niveles (0–3), 34 lecciones con glifos, romano, pronunciación, traducción, ejercicios y lecturas; lector con glosa en cada palabra; modo inmersión de la interfaz | **nuevo** |
 | **Literatura y música** | 34 textos: poemas, canciones, mitos, cuentos; herramienta de ritmo y acento con melodía automática o propia | 0.5 |
 | **Integración** | Paquetes `.deb`, traducciones gettext y Qt, módulo web, locale `qow_BO` | kit listo |
@@ -45,7 +46,7 @@
 
 ### 3.1 Decisiones tuyas (por prioridad)
 
-1. **Aprobar los 94 términos verificados**: sobre todo los **92 del lote 2** (`te-loda-kelo` hoy, `kuma-seta` ciudad, `bado-feke` dinero…); `lu-meka` (nube informática, reemplaza a `kuna-meka`) y `ruma-galo` (perro) esperan una decisión. Ya se **aprobaron 84** tras la revisión semántica del 2026-10-12.
+1. **Confirmar los 6 términos nuevos en espera:** `ruma-taro`, `ruma-daro`, `ruma-fame` (animales por categoría, en lugar de `ruma-galo`), `doma-le` / `doma-lu` (izquierda / derecha) y `duma-kuma` (estación / terminal). Ya están **aprobados** los 84 del lote 1 y del sitio, el **lote 2 completo (92)** y `lu-meka`.
 2. **Confirmar lo de la Gramática 1.1 que aún no respondiste:**
    - `le`/`lu` como demostrativos;
    - imperativo como verbo desnudo;
@@ -109,9 +110,8 @@ Medicina · Ingeniería, construcción y electrónica · Telecomunicaciones · A
 
 ## 5. Siguiente paso recomendado
 
-1. ~~Lote 1: cuerpo y naturaleza~~ **hecho y aprobado**. ~~Lote 2: vida diaria~~ **hecho (esperando aprobación)**.
-2. **Sesión de aprobación** del lote 2 y de las decisiones de Gramática 1.1.
-3. **Norma para nombrar especies** (perro, gato, caballo…) y **direcciones** izquierda/derecha.
+1. ~~Lote 1: cuerpo y naturaleza~~ y ~~lote 2: vida diaria~~ **hechos y aprobados**; norma de animales y orientación **hechas**.
+2. **Confirmar** los 6 términos en espera y las decisiones restantes de Gramática 1.1.
 4. **Lote 3 (≈ 100 términos):** biología, geología y clima, educación, derecho y política, economía, lingüística y metalenguaje, artes y teoría musical.
 5. **Audio de pronunciación**, más lecturas y ejercicios autocorregibles en el curso.
 6. **Regenerar el Registro Maestro** y los PDF antiguos desde los datos actuales.

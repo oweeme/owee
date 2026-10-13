@@ -33,6 +33,7 @@ for r in filas:
     problemas = []
     partes = f.split("-")
     if len(partes) > 3 and f not in EXCEPCION_LARGO: problemas.append("más de 3 elementos")
+    if len(re.findall(r"(?:sh|ch|[pbtdkgfsmnlr])?[aeou]", f.replace("-", ""))) > 6 and d not in ("Matemáticas", "Física"): problemas.append("más de 6 sílabas (poco práctico)")
     for p in partes:
         if p not in raices and not sil(p): problemas.append(f"'{p}' no existe ni es fonología válida")
     if formas.count(f) > 1 or f in base: problemas.append("forma repetida")

@@ -259,6 +259,24 @@ du soku du tanu ku
 Los verbos que faltaban se componen con **parte del cuerpo + función**, que es un patrón regular: `luma-salo` (ojo + percepción = ver), `luma-sone` (oír), `loke-suna` (ojo + agua = llorar), `sabe-sone` (boca + sonido = cantar), `kalu-duma` (pierna + movimiento = caminar).
 <!--construcciones Cotidiano 0.1-->
 
+## 12.1 Nombrar animales y plantas (norma práctica)
+
+Para que el idioma sea **fácil**, no se crea una palabra nueva por cada especie. Se usa una **categoría + rasgo**, y solo cuando de verdad hace falta se añade un segundo rasgo:
+
+| Categoría | Forma | Ejemplo de uso |
+|---|---|---|
+| animal | `ruma` | `ruma` (animal) |
+| animal del agua / del cielo | `ruma-suna` / `ruma-kuna` | pez / pájaro |
+| animal terrestre | `ruma-taro` | animal que vive en la tierra |
+| animal de compañía | `ruma-lore` | perro, gato… según el contexto |
+| animal de trabajo | `ruma-daro` | caballo, buey… |
+| animal de alimento (ganado) | `ruma-fame` | vaca, oveja… |
+| planta / árbol / fruta | `nelo` / `nelo-gore-pa` / `nelo-fame` | |
+
+Si hay que distinguir dos especies de la misma categoría, se añade **un rasgo**: tamaño (`gore-pa` / `gore-po`), color (`rale`, `fale`…), sonido (`sone`)… Ejemplo: `ruma-lore gore-pa` (animal de compañía grande). Las especies concretas se nombrarán después, con ejemplos reales, siguiendo esta misma regla.
+
+**Izquierda y derecha:** `doma-le` («el lado cercano al corazón») e `doma-lu` («el lado lejano»), con los operadores `le` / `lu` que ya existen.
+
 ## 13. Puntuación (provisional)
 
 Mientras no exista puntuación propia de Owee, se usan los signos latinos: `.` `,` `?` `!`. El IME los deja pasar sin cambios. En poemas, el **salto de línea** hace de pausa.

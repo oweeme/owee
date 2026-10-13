@@ -146,7 +146,7 @@ pu-reme
 
 ## Lección 2.8 — Hoy, ayer, mañana y las comidas
 
-<!--vocabulario te-loda-kelo pe-loda-kelo pu-loda-kelo loda-kelo-pado loda-kelo-gune pado-fame loda-kelo-fame kuna-bore-fame mu-loda-kelo-->
+<!--vocabulario te-loda-kelo pe-loda-kelo pu-loda-kelo loda-kelo-pado loda-kelo-gune pado-fame fame-gore-pa gune-fame mu-loda-kelo-->
 
 El **día** es `loda-kelo` («ciclo de rotación»). Con los marcadores de tiempo `pe` (antes), `te` (ahora) y `pu` (después) se forman **ayer, hoy y mañana**.
 
@@ -156,7 +156,7 @@ pe-loda-kelo me sule
 pu-loda-kelo me duma-lu
 loda-kelo-pado me loke bure
 pado-fame me pume
-kuna-bore-fame me pume
+gune-fame me pume
 ```
 
 *Hoy trabajo. Ayer dormí. Mañana hago un viaje. Al amanecer abro los ojos. El desayuno lo como. La cena la como.*
@@ -220,7 +220,7 @@ duma-kore le
 
 ## Lección 2.11 — Salud, dinero y comprar
 
-<!--vocabulario sado-nara sado-kuma bora-fure-pa bosa-dune bado-feke kera-fedo kume-kore bado-bema-pa bado-bema-po fedo-no-->
+<!--vocabulario sado-nara sado-kuma bora-fure-pa bosa-dune bado-feke kera-fedo kume-kore bado-pa bado-po fedo-no-->
 
 ```owee
 me bora-fure-pa
@@ -229,15 +229,15 @@ sado-nara galo
 me sado-kuma to duma
 bado-feke ka-bema
 me kume-kore bo nelo-fame kera-fedo
-bado-bema-pa
-bado-bema-po
+bado-pa
+bado-po
 fedo-no
 ```
 
 *Tengo fiebre. Siento dolor. El médico ayuda. Voy al hospital. ¿Cuánto dinero? Compro fruta en el mercado. Caro. Barato. Gratis.*
 
 <!--resp-->
-**Ejercicios.** 1) «Compro comida». 2) «El médico está en el hospital». 3) Traduce `bado-bema-po ka`.
+**Ejercicios.** 1) «Compro comida». 2) «El médico está en el hospital». 3) Traduce `bado-po ka`.
 **Respuestas.** 1) `me fame kera-fedo`. 2) `sado-nara sado-kuma bo mora`. 3) «¿Es barato?».
 <!--/resp-->
 

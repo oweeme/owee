@@ -17,16 +17,25 @@ AJUSTADOS = {
     "reka-doke": "antes sena-seta «conjunto de signos», que se leería como alfabeto; el diccionario es información de la comunicación",
     "nelo-fame": "significado ampliado a «fruta / alimento vegetal»",
     "bora-kopa": "significado precisado a «vientre / abdomen»",
+    "fame-gore-pa": "práctica: antes loda-kelo-fame (6 sílabas); el almuerzo es la «comida grande»",
+    "gune-fame": "práctica: antes kuna-bore-fame (6 sílabas); la cena es la «comida del final», como pado-fame (desayuno) es la del comienzo",
+    "bado-pa": "práctica: antes bado-bema-pa (6 sílabas); sigue el patrón raíz + pa/po de faro-pa o fure-po",
+    "bado-po": "práctica: antes bado-bema-po; mismo motivo",
     "lu-meka": "antes kuna-meka «máquina del cielo», que se confundiría con el avión (sura-meka); la nube informática es una máquina lejana",
     "loke-kopa": "significado precisado a «ventana de programa» para distinguirla de loke-nado (ventana de la casa)",
     "te-loda-kelo": "en el diseño, antes te-loda: loda es «rotación», no «día»; el día es loda-kelo (igual con pe- y pu-, amanecer, tarde y almuerzo)",
     "pado-fame": "en el diseño, antes loda-pado-fame (4 elementos, supera el máximo de 3)",
     "lena-sabe": "en el diseño, «dulce» era demasiado específico; ahora «sabroso»",
-    "bado-bema-pa": "en el diseño, antes bado-pa «valor más»; caro/barato se refieren al precio (bado-bema, ya existente)",
-    "bado-bema-po": "en el diseño, antes bado-po; mismo motivo",
     "seta": "raíz ampliada de «conjunto matemático» a «conjunto / colección» (menú, galaxia, vocabulario, grafo)",
 }
-ESPERA = {"ruma-galo": "«perro = animal que ayuda» es culturalmente específico: queda a la espera de la norma para nombrar especies"}
+ESPERA = {
+    "ruma-daro": "nueva (norma de animales por categorías); espera confirmación",
+    "ruma-fame": "nueva (norma de animales por categorías); espera confirmación",
+    "ruma-taro": "nueva (norma de animales por categorías); espera confirmación",
+    "doma-le": "nueva: izquierda = el lado del corazón; espera confirmación",
+    "doma-lu": "nueva: derecha = el lado lejano al corazón; espera confirmación",
+    "duma-kuma": "nueva: estación / terminal; espera confirmación",
+}
 base = {}
 for l in (aqui / "lexico.tsv").read_text(encoding="utf8").splitlines()[1:]:
     c = l.split("\t"); base[c[0]] = c[3]

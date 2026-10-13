@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 159 OK · 15 ajustados · 1 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 157 OK · 17 ajustados · 6 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -55,7 +55,6 @@ Criterios (2026-10-12):
 | `ruma-kuna-lobe` | pluma (cubierta del pájaro) | `ruma` (animal) + `kuna` (cielo) + `lobe` (cubierta) | AJUSTADO — antes ruma-kuna-nelo «planta del pájaro»; la pluma es la cubierta del pájaro, como bora-lobe (piel) |
 | `pado-kopa` | huevo (contenedor del comienzo) | `pado` (comienzo) + `kopa` (contenedor) | OK |
 | `naku-nobe` | leche (bebida del hijo) | `naku` (descendiente) + `nobe` (bebida) | OK |
-| `ruma-galo` | perro (animal que ayuda) | `ruma` (animal) + `galo` (ayuda) | EN ESPERA — «perro = animal que ayuda» es culturalmente específico: queda a la espera de la norma para nombrar especies |
 | `ruma-lore` | mascota (animal de afecto) | `ruma` (animal) + `lore` (afecto) | OK |
 | `taro-goda` | piedra (tierra sólida) | `taro` (tierra) + `goda` (estado sólido) | OK |
 | `taro-gore-po` | arena (tierra pequeña) | `taro` (tierra) + `gore` (tamaño) + `po` (menos) | OK |
@@ -97,9 +96,9 @@ Criterios (2026-10-12):
 | `pu-loda-kelo` | mañana, el día siguiente (el día posterior) | `pu` (posterior) + `loda` (rotación) + `kelo` (ciclo) | OK |
 | `loda-kelo-pado` | amanecer (comienzo del día) | `loda` (rotación) + `kelo` (ciclo) + `pado` (comienzo) | OK |
 | `loda-kelo-gune` | tarde (fin del día) | `loda` (rotación) + `kelo` (ciclo) + `gune` (fin) | OK |
-| `loda-kelo-fame` | almuerzo (comida del día) | `loda` (rotación) + `kelo` (ciclo) + `fame` (comida) | OK |
+| `fame-gore-pa` | almuerzo (comida grande) | `fame` (comida) + `gore` (tamaño) + `pa` (más) | AJUSTADO — práctica: antes loda-kelo-fame (6 sílabas); el almuerzo es la «comida grande» |
 | `pado-fame` | desayuno (comida del comienzo) | `pado` (comienzo) + `fame` (comida) | AJUSTADO — en el diseño, antes loda-pado-fame (4 elementos, supera el máximo de 3) |
-| `kuna-bore-fame` | cena (comida de la noche) | `kuna` (cielo) + `bore` (negro) + `fame` (comida) | OK |
+| `gune-fame` | cena (comida del final) | `gune` (fin) + `fame` (comida) | AJUSTADO — práctica: antes kuna-bore-fame (6 sílabas); la cena es la «comida del final», como pado-fame (desayuno) es la del comienzo |
 | `mu-loda-kelo` | semana (siete días) | `mu` (7) + `loda` (rotación) + `kelo` (ciclo) | OK |
 | `sade-kelo-palo` | estación del año (parte del año) | `sade` (sol) + `kelo` (ciclo) + `palo` (parte) | OK |
 | `fure-pa-tera` | verano (tiempo caliente) | `fure` (temperatura) + `pa` (más) + `tera` (tiempo) | OK |
@@ -169,8 +168,8 @@ Criterios (2026-10-12):
 | `kume-kuma` | tienda (casa de intercambio) | `kume` (intercambio) + `kuma` (hogar) | OK |
 | `kume-kore` | mercado (lugar de intercambio) | `kume` (intercambio) + `kore` (lugar) | OK |
 | `bado-kopa` | banco (contenedor de valor) | `bado` (valor) + `kopa` (contenedor) | OK |
-| `bado-bema-pa` | caro (precio más) | `bado` (valor) + `bema` (cantidad) + `pa` (más) | AJUSTADO — en el diseño, antes bado-pa «valor más»; caro/barato se refieren al precio (bado-bema, ya existente) |
-| `bado-bema-po` | barato (precio menos) | `bado` (valor) + `bema` (cantidad) + `po` (menos) | AJUSTADO — en el diseño, antes bado-po; mismo motivo |
+| `bado-pa` | caro / valioso (valor más) | `bado` (valor) + `pa` (más) | AJUSTADO — práctica: antes bado-bema-pa (6 sílabas); sigue el patrón raíz + pa/po de faro-pa o fure-po |
+| `bado-po` | barato / de poco valor (valor menos) | `bado` (valor) + `po` (menos) | AJUSTADO — práctica: antes bado-bema-po; mismo motivo |
 | `fedo-no` | gratis (sin pago) | `fedo` (pago) + `no` (negación) | OK |
 | `fedo-pu` | deuda (pago futuro) | `fedo` (pago) + `pu` (posterior) | OK |
 | `daro-fedo` | salario (pago del trabajo) | `daro` (trabajo) + `fedo` (pago) | OK |
@@ -184,3 +183,9 @@ Criterios (2026-10-12):
 | `sura-meka-kuma` | aeropuerto (casa de aviones) | `sura` (aire) + `meka` (máquina) + `kuma` (hogar) | OK |
 | `nado-sena` | boleto (signo de acceso) | `nado` (acceso) + `sena` (signo) | OK |
 | `bume-kopa` | maleta (contenedor de ropa) | `bume` (ropa) + `kopa` (contenedor) | OK |
+| `ruma-daro` | animal de trabajo (animal + trabajo) | `ruma` (animal) + `daro` (trabajo) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
+| `ruma-fame` | animal de alimento / ganado (animal + comida) | `ruma` (animal) + `fame` (comida) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
+| `ruma-taro` | animal terrestre (animal + tierra) | `ruma` (animal) + `taro` (tierra) | EN ESPERA — nueva (norma de animales por categorías); espera confirmación |
+| `doma-le` | izquierda (el lado cercano al corazón) | `doma` (corazón) + `le` (cerca) | EN ESPERA — nueva: izquierda = el lado del corazón; espera confirmación |
+| `doma-lu` | derecha (el lado lejano al corazón) | `doma` (corazón) + `lu` (lejos) | EN ESPERA — nueva: derecha = el lado lejano al corazón; espera confirmación |
+| `duma-kuma` | estación / terminal (casa del movimiento) | `duma` (movimiento) + `kuma` (hogar) | EN ESPERA — nueva: estación / terminal; espera confirmación |

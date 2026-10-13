@@ -177,7 +177,7 @@ COMPUESTOS += [
  ("maku-palo","dedo (parte de la mano)",CN,CU),("maku-fese","uña (límite de la mano)",CN,CU),("kalu-gune","pie (fin de la pierna)",CN,CU),("kalu-telo","rodilla (cambio de la pierna)",CN,CU),
  # animales
  ("bora-gune","cola (fin del cuerpo)",CN,CU),("tume-faro","cuerno (fuerza de la cabeza)",CN,CU),("ruma-kuna-lobe","pluma (cubierta del pájaro)",CN,CU),
- ("pado-kopa","huevo (contenedor del comienzo)",CN,CU),("naku-nobe","leche (bebida del hijo)",CN,CU),("ruma-galo","perro (animal que ayuda)",CN,CU),("ruma-lore","mascota (animal de afecto)",CN,CU),
+ ("pado-kopa","huevo (contenedor del comienzo)",CN,CU),("naku-nobe","leche (bebida del hijo)",CN,CU),("ruma-lore","mascota (animal de afecto)",CN,CU),
  # tierra, agua, fuego, aire
  ("taro-goda","piedra (tierra sólida)",CN,NA),("taro-gore-po","arena (tierra pequeña)",CN,NA),("taro-suna","barro (tierra y agua)",CN,NA),("taro-sura","polvo (tierra en el aire)",CN,NA),
  ("pore-sura","humo (aire de fuego)",CN,NA),("pore-taro","ceniza (tierra de fuego)",CN,NA),("pore-salo","llama (luz de fuego)",CN,NA),
@@ -211,8 +211,8 @@ V2 = "Vida diaria (lote 2)"
 CT, GE, FA, CC, CR, SA, DI, TR = ("Calendario y tiempo", "Geografía", "Familia y personas", "Comida y cocina", "Casa y ropa", "Salud", "Dinero y comercio", "Transporte y viaje")
 COMPUESTOS += [
  ("te-loda-kelo","hoy (el día de ahora)",V2,CT),("pe-loda-kelo","ayer (el día anterior)",V2,CT),("pu-loda-kelo","mañana, el día siguiente (el día posterior)",V2,CT),
- ("loda-kelo-pado","amanecer (comienzo del día)",V2,CT),("loda-kelo-gune","tarde (fin del día)",V2,CT),("loda-kelo-fame","almuerzo (comida del día)",V2,CT),
- ("pado-fame","desayuno (comida del comienzo)",V2,CT),("kuna-bore-fame","cena (comida de la noche)",V2,CT),("mu-loda-kelo","semana (siete días)",V2,CT),
+ ("loda-kelo-pado","amanecer (comienzo del día)",V2,CT),("loda-kelo-gune","tarde (fin del día)",V2,CT),("fame-gore-pa","almuerzo (comida grande)",V2,CT),
+ ("pado-fame","desayuno (comida del comienzo)",V2,CT),("gune-fame","cena (comida del final)",V2,CT),("mu-loda-kelo","semana (siete días)",V2,CT),
  ("sade-kelo-palo","estación del año (parte del año)",V2,CT),("fure-pa-tera","verano (tiempo caliente)",V2,CT),("fure-po-tera","invierno (tiempo frío)",V2,CT),
  ("suna-tera","época de lluvias (tiempo de agua)",V2,CT),("suna-nuse-tera","época seca (tiempo sin agua)",V2,CT),
  ("taro-gore-pa","continente (gran tierra)",V2,GE),("kuma-seta","ciudad / pueblo (conjunto de casas)",V2,GE),("bade-kore","capital (lugar de autoridad)",V2,GE),
@@ -238,10 +238,18 @@ COMPUESTOS += [
  ("bora-bosa","herida (rotura del cuerpo)",V2,SA),("sado-rude","curar (reparar la salud)",V2,SA),
  ("bado-feke","dinero (herramienta de valor)",V2,DI),("kera-fedo","comprar (obtener con pago)",V2,DI),("pema-fedo","vender (dar con pago)",V2,DI),
  ("kume-kuma","tienda (casa de intercambio)",V2,DI),("kume-kore","mercado (lugar de intercambio)",V2,DI),("bado-kopa","banco (contenedor de valor)",V2,DI),
- ("bado-bema-pa","caro (precio más)",V2,DI),("bado-bema-po","barato (precio menos)",V2,DI),("fedo-no","gratis (sin pago)",V2,DI),("fedo-pu","deuda (pago futuro)",V2,DI),
+ ("bado-pa","caro / valioso (valor más)",V2,DI),("bado-po","barato / de poco valor (valor menos)",V2,DI),("fedo-no","gratis (sin pago)",V2,DI),("fedo-pu","deuda (pago futuro)",V2,DI),
  ("daro-fedo","salario (pago del trabajo)",V2,DI),
  ("meka-duma","vehículo (máquina de movimiento)",V2,TR),("taro-meka","coche (máquina de tierra)",V2,TR),("suna-meka","barco (máquina de agua)",V2,TR),
  ("sura-meka","avión (máquina de aire)",V2,TR),("duma-lu","viaje (movimiento lejano)",V2,TR),("duma-nara","viajero (persona que se mueve)",V2,TR),
  ("suna-meka-kuma","puerto (casa de barcos)",V2,TR),("sura-meka-kuma","aeropuerto (casa de aviones)",V2,TR),("nado-sena","boleto (signo de acceso)",V2,TR),
  ("bume-kopa","maleta (contenedor de ropa)",V2,TR),
+]
+
+# --- Practicidad (2026-10-12): categorias de animales en lugar de una palabra por especie, orientacion y terminal. 0 raices nuevas.
+COMPUESTOS += [
+ ("ruma-daro","animal de trabajo (animal + trabajo)",V2,"Animales"),("ruma-fame","animal de alimento / ganado (animal + comida)",V2,"Animales"),
+ ("ruma-taro","animal terrestre (animal + tierra)",V2,"Animales"),
+ ("doma-le","izquierda (el lado cercano al corazón)",V2,"Orientación"),("doma-lu","derecha (el lado lejano al corazón)",V2,"Orientación"),
+ ("duma-kuma","estación / terminal (casa del movimiento)",V2,GE),
 ]

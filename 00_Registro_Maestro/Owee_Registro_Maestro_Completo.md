@@ -1581,4 +1581,14 @@ El idioma se integra por tres vías, todas generadas desde `08_Integracion/datos
 
 ------------------------------------------------------------------------
 
+## 84. Practicidad, lote 2 aprobado y norma de animales (2026-10-12)
+
+**Criterio de practicidad:** una palabra nueva debe ser **fácil de decir y de recordar**: como máximo **3 elementos y 6 sílabas** (la mayoría de las formas, 334 de 757, tienen 4). La verificación automática lo comprueba. Para simplificar: el almuerzo es `fame-gore-pa`, la cena `gune-fame` (como `pado-fame`, desayuno) y caro/barato son `bado-pa` / `bado-po`.
+
+**Aprobados:** el lote 2 completo (92 términos) y `lu-meka` (nube informática). **Una forma = un significado:** se corrigió además `dune-fada` («enojo sentido») para que no duplique a `fada` («enojo»).
+
+**Animales:** no se crea una palabra por especie; se usa **categoría + rasgo** (`ruma-taro`, `ruma-daro`, `ruma-fame`, `ruma-lore`…). Se retiró `ruma-galo`. **Izquierda/derecha:** `doma-le` / `doma-lu`. En espera de confirmación.
+
+------------------------------------------------------------------------
+
 **Fin del registro maestro consolidado.**

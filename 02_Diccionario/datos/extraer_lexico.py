@@ -36,7 +36,8 @@ for l in txt2.splitlines():
     if m: add(m.group(1), m.group(1), "derivado (" + m.group(3).lower() + ")", m.group(2).strip(), "ESTABLE", "Derivaciones (Primer Diccionario 1.0)")
 
 # decisiones posteriores al PDF (se reaplican al regenerar)
-OVERRIDES = {"faro": "fuerza (vigor)", "nado-bure": "acceso abierto (iniciar sesión)", "nado-kose": "acceso cerrado (cerrar sesión)", "suna-duma": "flujo de agua (río)"}   # 2026-10-12: la energia es `enu`; faro-enu = fuerza energetica
+OVERRIDES = {"faro": "fuerza (vigor)", "nado-bure": "acceso abierto (iniciar sesión)", "nado-kose": "acceso cerrado (cerrar sesión)", "suna-duma": "flujo de agua (río)",
+             "dune-fada": "enojo sentido (estado interno)"}   # fada ya es «enojo»: evita dos formas con el mismo significado   # 2026-10-12: la energia es `enu`; faro-enu = fuerza energetica
 for w, m in OVERRIDES.items():
     if w in rows: rows[w][3] = m
 out = raiz / "02_Diccionario/datos/lexico.tsv"
