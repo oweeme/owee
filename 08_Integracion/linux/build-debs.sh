@@ -2,6 +2,7 @@
 # Construye los paquetes .deb de Owee para oweelinux (Debian/Deepin/Ubuntu). No instala nada: solo crea dist/*.deb
 #   fonts-owee      fuentes Owee Sans y Owee School 3.3 (TTF + OTF)
 #   fcitx5-owee     teclado Owee para Fcitx5 1.2 (compuestos con "-" y nombres propios)
+#   owee-numerals   cifras 0-9 en Owee Script en todo el sistema (opcional; se quita desinstalando)
 #   owee-locale     locale qow_BO (definicion) y catalogos de traduccion qow.po / qow@owee.po
 # Uso: ./build-debs.sh        Requiere: dpkg-deb, cmake, g++, libfcitx5core-dev
 set -euo pipefail
@@ -54,6 +55,17 @@ d="$TMP/fcitx5-owee"
 DESTDIR="$d" cmake --install "$TMP/ime" >/dev/null
 copyright "$d" fcitx5-owee
 dpkg-deb --root-owner-group --build "$d" "$DIST/fcitx5-owee_1.2-1_$(dpkg --print-architecture).deb" >/dev/null
+
+# ---- owee-numerals (opcional: las cifras de cualquier programa se ven en Owee)
+paquete owee-numerals 1.0-1 all "Cifras Owee Script (0-9) para todo el sistema: calculadora, reloj, calendario" "fontconfig" fonts
+d="$TMP/owee-numerals"
+mkdir -p "$d/usr/share/fonts/truetype/owee-numerals" "$d/etc/fonts/conf.d"
+cp "$AQUI/fontconfig/OweeNumerals-Regular.ttf" "$d/usr/share/fonts/truetype/owee-numerals/"
+cp "$AQUI/fontconfig/60-owee-numerals.conf" "$d/etc/fonts/conf.d/"
+copyright "$d" owee-numerals
+printf '#!/bin/sh\nset -e\ncommand -v fc-cache >/dev/null && fc-cache -f || true\nexit 0\n' > "$d/DEBIAN/postinst"; chmod 755 "$d/DEBIAN/postinst"
+cp "$d/DEBIAN/postinst" "$d/DEBIAN/postrm"
+dpkg-deb --root-owner-group --build "$d" "$DIST/owee-numerals_1.0-1_all.deb" >/dev/null
 
 # ---- owee-locale
 paquete owee-locale 0.1-1 all "Locale qow_BO y catalogos de traduccion de oweelinux al Owee" "fonts-owee" localization

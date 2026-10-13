@@ -21,11 +21,12 @@ sudo apt install cmake g++ pkg-config dpkg-dev libfcitx5core-dev fcitx5 python3
 
 ```bash
 cd 08_Integracion/linux
-./build-debs.sh                      # crea dist/fonts-owee, fcitx5-owee y owee-locale (.deb)
+./build-debs.sh                      # crea dist/fonts-owee, fcitx5-owee, owee-numerals y owee-locale (.deb)
 sudo dpkg -i dist/*.deb && sudo apt -f install
 ```
 
 - **Fuentes** (`fonts-owee`): Owee Sans y Owee School, disponibles en todo el sistema.
+- **Cifras Owee** (`owee-numerals`, opcional): fuente que solo tiene las cifras 0-9 en Owee Script; con su regla de fontconfig, la calculadora, el reloj y el calendario muestran los números en Owee sin tocar los programas. Para volver a cifras normales: `sudo apt remove owee-numerals`. Se regenera con `04_Fuentes/actual_3.3_fuente_y_glifos/numeros/hacer_fuente_numeros.py` (requiere fontTools).
 - **Teclado** (`fcitx5-owee`): añade «Owee» en Fcitx5; el guion une compuestos y la mayúscula marca nombres propios.
 - **Locale** (`owee-locale`): define `qow_BO` y deja los catálogos en `/usr/share/oweelinux/po/`.
 
