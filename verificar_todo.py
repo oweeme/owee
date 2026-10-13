@@ -166,6 +166,18 @@ with tempfile.TemporaryDirectory() as td:
                 if not (pub / m).exists() and not m.startswith("http"): prob.append(f"{h.name} -> {m}")
     ok("Sitio publico (sin Proyecto, sin enlaces rotos)", not prob, "; ".join(prob[:5]))
 
+# 7g. audio de pronunciacion: cubre todo el lexico y los archivos existen
+import json as _json
+ad = RAIZ / "03_Material_Ensenanza/Pronunciacion/audio"
+try:
+    idx = _json.loads((ad / "indice.json").read_text(encoding="utf8"))
+    lex = [l.split("\t")[0] for f in ("lexico.tsv", "lexico_ciencias.tsv") for l in (RAIZ / "02_Diccionario/datos" / f).read_text(encoding="utf8").splitlines()[1:]]
+    sin = [w for w in lex if w not in idx]
+    vacios = [f for f in set(idx.values()) if not (ad / f).exists() or (ad / f).stat().st_size < 500]
+    ok(f"Audio de pronunciacion ({len(idx)} textos)", not sin and not vacios, (f"sin audio: {', '.join(sin[:6])}" if sin else "") + (f" archivos vacios: {vacios[:3]}" if vacios else "") + (" (regenera con sintetizar_audio.py)" if sin or vacios else ""))
+except Exception as e:
+    ok("Audio de pronunciacion", False, str(e)[:100])
+
 # 8. git
 g = correr(["git", "status", "--porcelain"]).stdout.strip().splitlines()
 ok("Git: sin cambios sin guardar", not g, f"{len(g)} archivos con cambios" if g else "")

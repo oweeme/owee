@@ -1,5 +1,17 @@
 # Usar el proyecto en otro ordenador (oweelinux)
 
+## Camino rápido (Deepin 25, Debian, Ubuntu)
+
+```bash
+git clone https://github.com/oweeme/owee.git && cd owee/08_Integracion
+./instalar_en_host.sh            # modo usuario: sin sudo, solo toca ~/.local y ~/.config (guarda copia de lo que reemplaza)
+./probar_host.sh                 # comprueba cada pieza: OK / FALLA / AVISO, con la solución de cada fallo
+```
+
+Opciones: `--con-cifras` (las cifras de todas tus apps salen en Owee; se quita borrando `~/.config/fontconfig/conf.d/60-owee-numerals.conf`) y `--sistema` (paquetes `.deb` para todo el equipo, pide sudo). Para ver un programa instalado en Owee: `LANG=es_ES.UTF-8 LANGUAGE=qow:es <programa>` (glifos: `LANGUAGE=qow@owee:qow:es`); lo que Owee aún no traduce se ve en español. Hoy hay catálogos para unos 130 programas, con unos 2 100 textos de más de 82 000: crece al ampliar `datos/ui_glosario.tsv` y volver a ejecutar `herramientas/gettext_rellenar.py`.
+
+Los pasos de abajo son lo mismo, uno por uno.
+
 Pasos para traer todo desde GitHub a otra máquina Debian/Deepin/Ubuntu y dejar Owee funcionando.
 
 ## 1. Descargar

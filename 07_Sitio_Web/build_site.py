@@ -263,7 +263,7 @@ def verso_html(linea):
             sp += f'<span class="ow" tabindex="0" data-o="{esc(t)}"' + (f' data-g="{esc(g)}"' if g else "") + f'>{esc(t)}</span>'
         else:
             sp += esc(t)
-    return f'<div class="v"><span class="o">{sp}</span><small class="r">{esc(linea)}</small></div>'
+    return f'<div class="v" data-say="{esc(linea)}"><span class="o">{sp}</span><small class="r">{esc(linea)}</small></div>'
 
 def md(text, convert=True):
     """Devuelve (html, toc[(nivel, texto, id)], poems[(id, titulo, [lineas])])"""
@@ -421,6 +421,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 16px 40px;color:var(--ink2);font
 .dd summary:hover,.dd[open] summary{background:var(--soft)}.dd[data-on] summary{background:var(--accent);color:var(--accent-ink)}
 .dd .dm{position:absolute;top:100%;left:0;z-index:9;min-width:220px;background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:6px;display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(0,0,0,.12)}
 .dd .dm a{white-space:nowrap}
+.say{cursor:pointer;border-bottom:1px dotted var(--accent)}.say:hover{background:var(--soft)}.playbtn{border:1px solid var(--rule);background:var(--surface);color:var(--accent);border-radius:50%;width:1.9rem;height:1.9rem;cursor:pointer;font-size:.7rem;margin-left:10px;vertical-align:middle;line-height:1}.playbtn:hover{background:var(--soft)}
 .rm{color:var(--ink2);font-size:.78rem}.chip.ver{border:1px solid var(--accent);background:transparent;color:var(--accent)}
 .ow{position:relative}.ow[data-g]{cursor:help;border-bottom:1px dotted transparent}.ow[data-g]:hover,.ow[data-g]:focus{border-bottom-color:var(--accent);outline:none}
 .ow[data-g]:hover::after,.ow[data-g]:focus::after{content:attr(data-g);position:absolute;z-index:20;left:0;bottom:calc(100% + 6px);width:max-content;max-width:17rem;background:var(--ink);color:var(--bg);font:.8rem/1.35 system-ui,sans-serif;padding:5px 9px;border-radius:7px;white-space:normal;pointer-events:none}
@@ -475,6 +476,23 @@ JS_COMMON = r"""
     var tb=document.getElementById('theme');if(tb)tb.onclick=function(){var d=document.documentElement.dataset.theme;
       var n=d==='dark'?'light':'dark';document.documentElement.dataset.theme=n;try{localStorage.setItem('owee-theme',n)}catch(e){}};
   });
+
+  /* Audio de pronunciacion (voz sintetica): .v[data-say] ganan un boton, las palabras y los <code> con audio se pueden pulsar */
+  var cur=null;
+  function say(t){var A=window.OWEE_AUDIO,f=A&&A[String(t).toLowerCase().trim()];if(!f)return false;
+    try{if(cur)cur.pause();cur=new Audio('audio/'+f);cur.play().catch(function(){})}catch(e){}return true}
+  window.oweeSay=say;
+  document.addEventListener('DOMContentLoaded',function(){
+    var A=window.OWEE_AUDIO;if(!A)return;
+    document.querySelectorAll('.v[data-say]').forEach(function(v){var t=v.dataset.say;if(!A[t.toLowerCase()])return;
+      var b=document.createElement('button');b.className='playbtn noprint';b.type='button';b.title='Escuchar';b.setAttribute('aria-label','Escuchar');b.textContent='▶';
+      b.onclick=function(){say(t)};v.appendChild(b)});
+    document.querySelectorAll('.ow[data-o]').forEach(function(w){if(!A[w.dataset.o.toLowerCase()])return;
+      w.addEventListener('click',function(){say(w.dataset.o)})});
+    document.querySelectorAll('code').forEach(function(c){var t=c.textContent;if(!A[t.toLowerCase()]||c.closest('pre'))return;
+      c.classList.add('say');c.title='Escuchar';c.onclick=function(){say(t)}});
+    var fd=document.getElementById('fr');if(fd){var f=fd.textContent;if(A[f.toLowerCase()]){var b=document.createElement('button');b.className='playbtn noprint';b.type='button';b.title='Escuchar';b.textContent='▶';b.onclick=function(){say(f)};fd.parentNode.insertBefore(b,fd.nextSibling)}}
+  });
 })();
 """
 
@@ -497,7 +515,7 @@ def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=T
 <link rel="icon" href="pad/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/owee.css"><style>{CSS}</style>{extra_head}</head>
 <body {body_attrs}>{top}<main>{body}</main>{foot}
-<script src="assets/owee.js"></script><script>{JS_COMMON}</script>{extra_js}</body></html>"""
+<script src="assets/owee.js"></script><script src="assets/audio.js"></script><script>{JS_COMMON}</script>{extra_js}</body></html>"""
     if PUBLICO:
         doc = re.sub(r'<a [^>]*href=["\'](?:%s)(?:#[^"\']*)?["\'][^>]*>(.*?)</a>' % "|".join(re.escape(x) for x in INTERNAS), r"\1", doc, flags=re.S)
     (OUT / fname).write_text(doc, encoding="utf8")
@@ -996,6 +1014,12 @@ def main():
     build_escritura(); build_dic(use); build_ciencias(); build_traductor(); build_calculadora(); build_teclado()
     if not PUBLICO: build_idioma(); build_estado(); build_plan(); build_integracion(); build_revision()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
+    aud = ROOT / "03_Material_Ensenanza/Pronunciacion/audio"
+    idx = {}
+    if (aud / "indice.json").exists():
+        idx = json.loads((aud / "indice.json").read_text(encoding="utf8"))
+        shutil.copytree(aud, OUT / "audio", ignore=shutil.ignore_patterns("indice.json"))
+    (OUT / "assets/audio.js").write_text("window.OWEE_AUDIO=" + json.dumps(idx, ensure_ascii=False) + ";", encoding="utf8")
     (OUT / ".nojekyll").write_text("")
     print(f"OK {OUT}: {len(LEX)} entradas, {len(poems)} textos poeticos, {npdf} PDFs, fuente literatura: {LIT.name}")
 

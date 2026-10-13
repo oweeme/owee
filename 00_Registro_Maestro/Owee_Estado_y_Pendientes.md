@@ -107,7 +107,7 @@ Medicina · Ingeniería, construcción y electrónica · Telecomunicaciones · A
 1. ~~Lote 1: cuerpo y naturaleza~~ y ~~lote 2: vida diaria~~ **hechos y aprobados**; norma de animales y orientación **hechas**.
 2. **Confirmar** los 6 términos en espera y las decisiones restantes de Gramática 1.1.
 4. **Lote 3 (≈ 100 términos):** biología, geología y clima, educación, derecho y política, economía, lingüística y metalenguaje, artes y teoría musical.
-5. **Audio de pronunciación**, más lecturas y ejercicios autocorregibles en el curso.
+5. ✅ **Audio de pronunciación** con voz sintética (1 164 audios; botón ▶ en las frases y clic en las palabras). **Pendiente: grabaciones humanas** y más lecturas y ejercicios autocorregibles en el curso.
 6. **Regenerar el Registro Maestro** y los PDF antiguos desde los datos actuales.
 7. **Prueba auditiva** de pares mínimos antes de congelar más vocabulario.
 

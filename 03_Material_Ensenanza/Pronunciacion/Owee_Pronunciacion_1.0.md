@@ -2,6 +2,8 @@
 
 Cómo se pronuncia Owee, para que cualquiera pueda leerlo en voz alta. Cada ejemplo muestra la **escritura Owee**, la **romanización latina**, la **pronunciación en el Alfabeto Fonético Internacional (AFI)** entre barras y una **transcripción aproximada para hispanohablantes**. La sílaba **acentuada va en mayúsculas**.
 
+> **Audio:** en la web, pulsa cualquier palabra escrita en código (`suna`, `me`, `shome`…) o el botón ▶ de las frases para escucharla. Es una **voz sintética** de español latinoamericano que recibe los sonidos de Owee: sirve para estudiar el ritmo y el acento, no sustituye a una persona. Las grabaciones humanas están pendientes.
+
 > **Regla de oro:** Owee se lee **tal como se escribe**. No hay letras mudas, no hay excepciones y **cada letra se pronuncia siempre igual**. El acento va **siempre en la primera sílaba**.
 
 ## 1. Las 4 vocales

@@ -1638,3 +1638,7 @@ Teclado Keyman (`05_Teclado_IME/keyman-owee`): romano → Owee Script sílaba a 
 **Sitio público:** `OWEE_PUBLICO=1 python3 07_Sitio_Web/build_site.py` genera el sitio sin la sección *Proyecto* (registro maestro, estado, auditoría, plan, integración, revisión) y sin sus enlaces; `.github/workflows/pages.yml` lo publica en GitHub Pages.
 
 **Instalación en el equipo (Deepin):** `08_Integracion/instalar_en_host.sh` (modo usuario, sin sudo, o `--sistema`) y `probar_host.sh` (comprueba cada pieza). `herramientas/gettext_rellenar.py` crea catálogos de interfaz en Owee para los programas ya instalados a partir del glosario (130 catálogos, 2 135 textos de 82 433; el resto se ve en español).
+
+## 92. Audio de pronunciación (voz sintética)
+
+`03_Material_Ensenanza/Pronunciacion/audio/`: 1 164 archivos `.ogg` (60 sílabas, cifras, las 973 palabras del léxico y las frases del curso y de «frase del día»), generados con `herramientas/sintetizar_audio.py` y la voz Piper `es_MX-ald-medium` (dominio público). Reciben los fonemas de Owee (sh = ʃ, ch = tʃ, r = ɾ, acento en la primera sílaba de cada elemento). Es una **aproximación hecha por una voz de español**, no una grabación nativa; no la he escuchado, solo he comprobado que los archivos existen, no están vacíos y duran lo esperado. En la web: botón ▶ junto a cada frase, clic en las palabras con glosa y en las palabras en código. Pendiente: grabaciones humanas y revisión auditiva.
