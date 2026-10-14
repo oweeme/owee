@@ -502,3 +502,26 @@ COMPUESTOS += [
  ("loke-pema","mostrar (dar al ojo)",L7,"Vida diaria 2"),
  ("loke-kose","ocultar (cerrar al ojo)",L7,"Vida diaria 2"),
 ]
+
+L8 = "Vida diaria 3 (lote 8)"
+COMPUESTOS += [
+ ("pume-kore","comedor (lugar de comer)",L8,"Vida diaria 3"),
+ ("suna-delo-feke","toalla (herramienta para tomar el agua)",L8,"Vida diaria 3"),
+ ("fure-fadu-bume","abrigo (ropa de protección contra la temperatura)",L8,"Vida diaria 3"),
+ ("doma-kalu-bume","vestido (ropa del pecho a la pierna)",L8,"Vida diaria 3"),
+ ("suna-gase","lavar (limpiar con agua)",L8,"Vida diaria 3"),
+ ("pema-kema","regalo (objeto para dar)",L8,"Vida diaria 3"),
+ ("kema-kopa","bolsa (contenedor de objetos)",L8,"Vida diaria 3"),
+ ("faro-po-dune","cansancio (sentir poca fuerza)",L8,"Vida diaria 3"),
+ ("sule-moke","sueño (necesidad de dormir)",L8,"Vida diaria 3"),
+ ("saku-kasu","peligro (causa de alerta)",L8,"Vida diaria 3"),
+ ("sado-fadu-feke","vacuna (herramienta de seguridad de la salud)",L8,"Vida diaria 3"),
+ ("faro-gura","descansar (recibir fuerza)",L8,"Vida diaria 3"),
+ ("lena-gume-sabe","dulce (sabor de azúcar)",L8,"Vida diaria 3"),
+ ("chaga-rela-sabe","salado (sabor de sal)",L8,"Vida diaria 3"),
+ ("taro-nelo-fame","yuca (comida de planta de tierra)",L8,"Vida diaria 3"),
+ ("go-gore","alto (tamaño hacia arriba)",L8,"Vida diaria 3"),
+ ("kado-gore","ancho (tamaño del lado)",L8,"Vida diaria 3"),
+ ("go-gu","vertical (arriba y abajo)",L8,"Vida diaria 3"),
+ ("taro-tabe","horizontal (superficie de la tierra)",L8,"Vida diaria 3"),
+]

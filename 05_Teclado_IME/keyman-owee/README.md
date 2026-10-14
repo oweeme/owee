@@ -16,7 +16,7 @@ Comprobado en el motor real KeymanWeb 18: 904 de 904 palabras del léxico dan ex
 ## Instalar
 
 1. **Windows** — instala [Keyman para Windows](https://keyman.com/windows), descarga `dist/Owee.kmp` y ábrelo con doble clic. Instala también la fuente Owee Sans.
-2. **Android** — instala [Keyman para Android](https://keyman.com/android), copia `Owee.kmp` al teléfono y ábrelo desde Keyman (*Instalar teclado desde archivo*). Activa Keyman como teclado del sistema.
+2. **Android** (límite: en aplicaciones de terceros los glifos pueden verse como cuadros, porque Android no deja instalar fuentes en todo el sistema; se ven bien en el editor de Keyman y en el navegador) — instala [Keyman para Android](https://keyman.com/android), copia `Owee.kmp` al teléfono y ábrelo desde Keyman (*Instalar teclado desde archivo*). Activa Keyman como teclado del sistema.
 3. **iPhone/iPad y macOS** — igual, con Keyman para iOS / macOS.
 4. **Navegadores** — la página *Teclado* del sitio incluye una caja de prueba con KeymanWeb; para tu propia web usa `dist/owee.js` con KeymanWeb.
 5. **Linux** — usa este teclado con Keyman para Linux o el IME `fcitx5-owee` (`../fcitx5-owee-1.2-marks`).

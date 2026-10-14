@@ -7,7 +7,7 @@
 | Comprobación | Resultado |
 |---|---|
 | Textos Owee (9 archivos): fonología V/CV sin `i` y vocabulario existente | ✅ válidos |
-| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 740 formas (lotes 3–7) | ✅ 142 auditadas · **598 aprobadas** · **0 verificadas pendientes** · 0 por revisar |
+| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 759 formas (lotes 3–8) | ✅ 142 auditadas · **617 aprobadas** · **0 verificadas pendientes** · 0 por revisar |
 | Colisiones exactas, fonología inválida, partes inexistentes | ✅ ninguna |
 | Sitio web: 26 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
 | **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 168 OK · 27 ajustados · 0 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
@@ -52,7 +52,7 @@
 3. **Pronombres:** se mantienen `mene`, `tune`, `rane`; `sare` = hermano/a; `lafe` = calidad/valoración. Siguen **abiertas** solo las pruebas auditivas de `kulo` y `kale`, la puntuación propia y los signos matemáticos propios.
 4. **Calendario:** sin nombres propios para días y meses: `loda-kelo` + ordinal (`loda-kelo be-pose` = lunes) y `mune-kelo` + ordinal (`mune-kelo ga-pose` = marzo). Palabras nuevas: `loda-kelo-seta` (calendario).
 5. **Verbos de interfaz** (lote 7): arrastrar, soltar, pulsar, desplazar, importar, exportar, confirmar, compartir, renombrar, mostrar, ocultar…
-6. **Siguen abiertos:** nombres de los elementos químicos, nombres de los símbolos de código y la lista de nombres propios (países, ciudades).
+6. **Nombres propios:** hecho (`adaptar_nombre.py`, 52 nombres de países, ciudades de Bolivia, continentes y personas; página «Nombres propios»). **Siguen abiertos**, y necesitan una decisión de método tuya: los **nombres de los elementos químicos** (opción A: nombre numérico `ganu` + número atómico, que solo cabe hasta Z = 20 con la regla de 3 elementos; opción B: nombres adaptados con la norma de nombres propios, p. ej. `Oksegeno`; recomendada la B para los comunes y símbolos para el resto) y los **nombres de los símbolos de código** (leerlos por su sonido en español o crear nombres propios).
 7. **Univocidad:** vigilar `fese` (límite/completitud), `lafe`, `saku`, `doma`.
 
 ### 3.2 Trabajo técnico pendiente

@@ -1642,3 +1642,11 @@ Teclado Keyman (`05_Teclado_IME/keyman-owee`): romano → Owee Script sílaba a 
 ## 92. Audio de pronunciación (voz sintética)
 
 `03_Material_Ensenanza/Pronunciacion/audio/`: 1 164 archivos `.ogg` (60 sílabas, cifras, las 973 palabras del léxico y las frases del curso y de «frase del día»), generados con `herramientas/sintetizar_audio.py` y la voz Piper `es_MX-ald-medium` (dominio público). Reciben los fonemas de Owee (sh = ʃ, ch = tʃ, r = ɾ, acento en la primera sílaba de cada elemento). Es una **aproximación hecha por una voz de español**, no una grabación nativa; no la he escuchado, solo he comprobado que los archivos existen, no están vacíos y duran lo esperado. En la web: botón ▶ junto a cada frase, clic en las palabras con glosa y en las palabras en código. Pendiente: grabaciones humanas y revisión auditiva.
+
+## 93. Lote 8, nombres propios, r vibrante en el audio y grabación de voz humana
+
+**Lote 8 (19 términos aprobados):** comedor `pume-kore`, toalla `suna-delo-feke`, abrigo `fure-fadu-bume`, vestido `doma-kalu-bume`, lavar `suna-gase`, regalo `pema-kema`, bolsa `kema-kopa`, cansancio `faro-po-dune`, sueño `sule-moke`, peligro `saku-kasu`, vacuna `sado-fadu-feke`, descansar `faro-gura`, dulce `lena-gume-sabe`, salado `chaga-rela-sabe`, yuca `taro-nelo-fame`, alto `go-gore`, ancho `kado-gore`, vertical `go-gu`, horizontal `taro-tabe`. Se descartaron sala, dormitorio, isla, desierto y capital, que ya existían.
+
+**Nombres propios:** `02_Diccionario/datos/adaptar_nombre.py` aplica la norma de la Gramática 1.1 §14 (reproduce los ejemplos documentados: Pedro → Pedero, Carlos → Karaloso, María → Marea) y genera `nombres_propios.tsv` (52 nombres) y la página *Nombres propios*.
+
+**Audio:** la voz sintética pronunciaba la `r` como una `d` (`tare` sonaba `tade`); ahora usa la `r` vibrante. Para grabar tu propia voz: `03_Material_Ensenanza/Pronunciacion/herramientas/grabar_voz.py` (graba palabra por palabra, recorta, normaliza y guarda en `audio_humano/`; tus grabaciones reemplazan a la voz sintética al regenerar el sitio).

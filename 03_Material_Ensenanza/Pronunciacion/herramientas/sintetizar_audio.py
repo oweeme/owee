@@ -3,14 +3,14 @@
 sintetica de espanol latinoamericano (Piper, modelo es_MX-ald-medium, dominio publico / Unlicense).
 
 IMPORTANTE: es una aproximacion. Owee no tiene hablantes nativos todavia; la voz espanola recibe los fonemas de Owee
-(vocales a e o u, consonantes con sh y ch, acento en la primera silaba de cada elemento) y suena a un hispanohablante
+(vocales a e o u, consonantes con sh y ch, acento en la primera silaba de cada elemento; la r se pronuncia vibrante, mas marcada que la r simple espanola, para que no suene como d: tare != tade) y suena a un hispanohablante
 pronunciando Owee. Sirve para estudiar el ritmo y el acento; una grabacion humana siempre sera mejor.
 
 Requisitos (una vez):  numpy y onnxruntime (pip install numpy onnxruntime), el modelo de voz y ffmpeg.
    mkdir -p ~/.owee-tts && cd ~/.owee-tts
    curl -LO https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_MX/ald/medium/es_MX-ald-medium.onnx
    curl -LO https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_MX/ald/medium/es_MX-ald-medium.onnx.json
-Uso:   python3 sintetizar_audio.py [--voz ~/.owee-tts/es_MX-ald-medium.onnx] [--salida ../audio] [--solo silabas,cifras,palabras,frases]
+Uso:   python3 sintetizar_audio.py [--voz ~/.owee-tts/es_MX-ald-medium.onnx] [--salida ../audio] [--solo silabas,cifras,palabras,nombres,frases]
 Genera  <salida>/<texto>.ogg  y  <salida>/indice.json  ({texto: archivo}).  OWEE_TTS_DEPS=ruta  anade rutas de Python extra."""
 import argparse, json, os, pathlib, re, subprocess, sys, tempfile, wave
 for extra in filter(None, os.environ.get("OWEE_TTS_DEPS", "").split(os.pathsep)): sys.path.insert(0, extra)
@@ -20,7 +20,7 @@ import onnxruntime as ort
 aqui = pathlib.Path(__file__).resolve().parent
 RAIZ = aqui.parents[2]
 IPA = {"p": ["p"], "b": ["b"], "t": ["t"], "d": ["d"], "k": ["k"], "g": ["ɡ"], "f": ["f"], "s": ["s"], "m": ["m"], "n": ["n"],
-       "l": ["l"], "r": ["ɾ"], "sh": ["ʃ"], "ch": ["t", "ʃ"]}
+       "l": ["l"], "r": ["r"], "sh": ["ʃ"], "ch": ["t", "ʃ"]}
 SIL = re.compile(r"(sh|ch|[pbtdkgfsmnlr])?([aeou])")
 
 def fonemas(texto):
@@ -81,6 +81,9 @@ def unidades(solo):
         for f in ("lexico.tsv", "lexico_ciencias.tsv"):
             for l in (RAIZ / "02_Diccionario/datos" / f).read_text(encoding="utf8").splitlines()[1:]:
                 u.setdefault(l.split("\t")[0], "palabra")
+    if "nombres" in solo:
+        for l in (RAIZ / "02_Diccionario/datos/nombres_propios.tsv").read_text(encoding="utf8").splitlines()[1:]:
+            u.setdefault(l.split("\t")[1].lower(), "palabra")
     if "frases" in solo:
         for l in (RAIZ / "07_Sitio_Web/frases.tsv").read_text(encoding="utf8").splitlines():
             if l.strip(): u.setdefault(l.split("\t")[0], "frase")
@@ -95,7 +98,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--voz", default=str(pathlib.Path.home() / ".owee-tts/es_MX-ald-medium.onnx"))
     ap.add_argument("--salida", default=str(aqui.parent / "audio"))
-    ap.add_argument("--solo", default="silabas,cifras,palabras,frases")
+    ap.add_argument("--solo", default="silabas,cifras,palabras,nombres,frases")
     a = ap.parse_args()
     voz = Voz(a.voz); sal = pathlib.Path(a.salida); sal.mkdir(parents=True, exist_ok=True)
     idx = json.loads((sal / "indice.json").read_text(encoding="utf8")) if (sal / "indice.json").exists() else {}

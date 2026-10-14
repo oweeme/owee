@@ -351,7 +351,7 @@ def md(text, convert=True):
 # ---------------------------------------------------------------- plantilla
 NAV = [("index.html", "Inicio", "pado"),
        ("Aprender", [("curso.html", "Curso por niveles", "tase-kelo"), ("escritura.html", "Escritura", "beka"), ("pronunciacion.html", "Pronunciación", "sone"),
-                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor"), ("calculadora.html", "Calculadora de números", "banu-meka"), ("teclado.html", "Teclado Owee", "maku-tabe")], "tase"),
+                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor"), ("calculadora.html", "Calculadora de números", "banu-meka"), ("teclado.html", "Teclado Owee", "maku-tabe"), ("nombres.html", "Nombres propios", "sena-nara")], "tase"),
        ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
        ("Ciencias", [("matematicas.html", "Matemáticas"), ("fisica.html", "Física"), ("quimica.html", "Química"), ("astronomia.html", "Astronomía y astrología"),
                      ("informatica.html", "Informática")], "lare"),
@@ -913,6 +913,15 @@ def build_teclado():
 <tr><td><strong>Linux</strong></td><td>Keyman para Linux con <code>Owee.kmp</code>, o el paquete <code>fcitx5-owee</code> (ver Integración).</td></tr>
 <tr><td><strong>Navegadores</strong></td><td>La caja de arriba usa KeymanWeb. Para tu propia web, carga KeymanWeb y <code>teclado/owee.js</code>.</td></tr>
 </tbody></table></div>
+<h2>Probar en tu Android, paso a paso</h2>
+<ol>
+<li>Instala <strong>Keyman</strong> desde Google Play.</li>
+<li>Desde el navegador del teléfono abre esta página y toca <a href="teclado/Owee.kmp">Owee.kmp</a> para descargarlo.</li>
+<li>Abre el archivo descargado y elige <strong>Keyman</strong> (o, dentro de Keyman: <em>Ajustes → Instalar teclado o diccionario → Desde archivo</em>). Acepta instalar «Owee».</li>
+<li>En Keyman sigue los dos pasos: <em>Activar Keyman como teclado del sistema</em> y <em>Elegir Keyman como teclado actual</em>.</li>
+<li>Abre cualquier caja de texto, pulsa el icono del globo y elige <strong>Owee</strong>. Escribe <code>suna</code>.</li>
+</ol>
+<p><strong>Límite en Android:</strong> los glifos son caracteres de la fuente Owee Sans y Android no permite instalar fuentes en todo el sistema sin permisos especiales. Por eso el texto se verá bien en el <strong>editor de Keyman</strong> y en el <strong>navegador</strong> (esta web carga la fuente), pero en otras aplicaciones (WhatsApp, notas…) puede verse como cuadros vacíos. En Windows y macOS, Keyman sí instala la fuente y se ve en todas partes.</p>
 <h2>Cómo escribir</h2>
 <div class="tw"><table><thead><tr><th>Escribes</th><th>Resultado</th></tr></thead><tbody>
 <tr><td><code>su</code> + <code>na</code></td><td>los glifos de <em>suna</em> (cada sílaba al escribir la vocal)</td></tr>
@@ -935,6 +944,22 @@ keyman.init({attachType:'manual',ui:'none'}).then(function(){
 }).catch(function(e){msg.innerHTML='<small>No se pudo activar el teclado: '+e+'</small>'});
 })();</script>"""
     page("teclado.html", "Teclado Owee", body, "teclado.html")
+
+def build_nombres():
+    filas = [l.split("\t") for l in (ROOT / "02_Diccionario/datos/nombres_propios.tsv").read_text(encoding="utf8").splitlines()[1:]]
+    por = {}
+    for o, ow, t in filas: por.setdefault(t, []).append((o, ow))
+    tit = {"país": "Países", "continente": "Continentes", "ciudad": "Ciudades de Bolivia", "lugar": "Lugares", "persona": "Nombres de persona"}
+    sec = ""
+    for t in ("país", "continente", "ciudad", "lugar", "persona"):
+        if t not in por: continue
+        f = "".join(f'<tr><td>{esc(o)}</td><td>{verso_html(ow)}</td></tr>' for o, ow in por[t])
+        sec += f'<h2>{tit[t]}</h2><div class="tw"><table><thead><tr><th>En español</th><th>En Owee</th></tr></thead><tbody>{f}</tbody></table></div>'
+    body = ("<h1>Nombres propios en Owee</h1><p>Owee no tiene <code>i</code>, <code>v</code>, <code>h</code>, <code>y</code>, <code>z</code>, <code>j</code>, <code>c</code>, <code>q</code>, <code>w</code>, <code>x</code> ni consonantes finales, así que los nombres se <strong>adaptan por el sonido</strong>: "
+            "<code>i</code> → <code>e</code>, <code>v</code> → <code>b</code>, <code>z</code>/<code>c</code> suave → <code>s</code>, <code>j</code> → <code>k</code>, <code>h</code> no se escribe, y a la consonante final o al grupo se le añade una <strong>vocal de eco</strong> (la anterior). "
+            "El acento va en la primera sílaba y el nombre se escribe con <strong>inicial mayúscula</strong> (en Owee Script lleva la marca de nombre, los dos puntos), así nunca se confunde con una palabra común. Pulsa ▶ para escuchar.</p>"
+            + sec + "<p><small>Generados con <code>02_Diccionario/datos/adaptar_nombre.py</code>: prueba cualquier nombre con <code>python3 adaptar_nombre.py Rosa Miguel</code>.</small></p>")
+    page("nombres.html", "Nombres propios", body, "nombres.html")
 
 def build_estado():
     for doc, fname, titulo in (("Owee_Estado_y_Pendientes.md", "estado.html", "Estado y pendientes"),
@@ -1011,7 +1036,7 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_dic(use); build_ciencias(); build_traductor(); build_calculadora(); build_teclado()
+    build_escritura(); build_dic(use); build_ciencias(); build_traductor(); build_calculadora(); build_teclado(); build_nombres()
     if not PUBLICO: build_idioma(); build_estado(); build_plan(); build_integracion(); build_revision()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     aud = ROOT / "03_Material_Ensenanza/Pronunciacion/audio"
@@ -1019,6 +1044,12 @@ def main():
     if (aud / "indice.json").exists():
         idx = json.loads((aud / "indice.json").read_text(encoding="utf8"))
         shutil.copytree(aud, OUT / "audio", ignore=shutil.ignore_patterns("indice.json"))
+    hum = ROOT / "03_Material_Ensenanza/Pronunciacion/audio_humano"      # grabaciones humanas: reemplazan a la voz sintetica
+    if (hum / "indice.json").exists():
+        (OUT / "audio").mkdir(exist_ok=True)
+        for t, f in json.loads((hum / "indice.json").read_text(encoding="utf8")).items():
+            if (hum / f).exists():
+                shutil.copy2(hum / f, OUT / "audio" / ("h_" + f)); idx[t.lower()] = "h_" + f
     (OUT / "assets/audio.js").write_text("window.OWEE_AUDIO=" + json.dumps(idx, ensure_ascii=False) + ";", encoding="utf8")
     (OUT / ".nojekyll").write_text("")
     print(f"OK {OUT}: {len(LEX)} entradas, {len(poems)} textos poeticos, {npdf} PDFs, fuente literatura: {LIT.name}")
