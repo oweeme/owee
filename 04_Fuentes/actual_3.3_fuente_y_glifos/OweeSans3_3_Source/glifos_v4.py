@@ -120,6 +120,8 @@ def mark(v, cx, cy, k=1.0):
         def seg(*pts): return {"width": W, "segments": [L((x * k2 + cx, y * k2 + cy), (x2 * k2 + cx, y2 * k2 + cy)) for (x, y), (x2, y2) in zip(pts, pts[1:])]}
         if E_FORM == "tee":      # ト (katakana to): trazo vertical con un ramal
             return [seg((-0.6, 2.0), (-0.6, -2.0)), seg((-0.6, 0.6), (1.9, -0.7))]
+        if E_FORM == "kata":     # エ (katakana e): viga en I
+            return [seg((-1.7, 2.0), (1.7, 2.0)), seg((0.0, 2.0), (0.0, -2.0)), seg((-1.7, -2.0), (1.7, -2.0))]
         if E_FORM == "ko":       # コ (katakana ko)
             return [seg((-1.8, 2.0), (1.8, 2.0), (1.8, -2.0), (-1.8, -2.0))]
         if E_FORM == "he":       # ヘ (katakana he)
