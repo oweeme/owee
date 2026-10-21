@@ -15,7 +15,10 @@ from pathlib import Path
 from math import cos, sin, pi
 import json, sys, math
 
+import os
 from consonantes_v34 import aplicar as consonantes_v34
+import glifos_v4
+V4 = os.environ.get("OWEE_GLIFOS") == "v4"   # propuesta de glifos nuevos (no toca la fuente actual)
 
 import pathops
 from fontTools.fontBuilder import FontBuilder
@@ -186,12 +189,14 @@ def main():
     g_ = globals()
     for k in ("SX", "SY", "SLANT", "STROKE", "MIN_W", "SIDE", "DIGIT_SIDE"):
         g_[k] = st[k]
+    if V4: g_["MIN_W"] = glifos_v4.MIN_W[style]
     g_["VW"] = width(2.632171); g_["CW"] = width(3.070866)
-    sk = consonantes_v34(json.loads((ROOT / "skeletons.json").read_text()))
+    sk = json.loads((ROOT / "skeletons.json").read_text())
+    sk = glifos_v4.aplicar(sk, style) if V4 else consonantes_v34(sk)
     outlines = {}
     cp = 0xE000
     for v in VOW:
-        outlines[cp] = (vowel(v), SIDE); cp += 1
+        outlines[cp] = (syllable(sk["_" + v]) if V4 else vowel(v), SIDE); cp += 1
     for c in CONS:
         for v in VOW:
             outlines[cp] = (syllable(sk[c + v]), SIDE); cp += 1
@@ -228,7 +233,7 @@ def main():
     ys = [(g[n].yMin, g[n].yMax) for n in order if g[n].numberOfContours]
     lo, hi = min(a for a, _ in ys), max(b for _, b in ys)
     assert DESC <= lo and hi <= ASC, (lo, hi)
-    out = ROOT / (st["ps"] + ".ttf")
+    out = Path(os.environ.get("OWEE_OUT", ROOT)) / (st["ps"] + (".v4" if V4 else "") + ".ttf")
     fb.save(out)
     print("Creado:", out, "glifos:", len(outlines), "y:", lo, "..", hi)
 

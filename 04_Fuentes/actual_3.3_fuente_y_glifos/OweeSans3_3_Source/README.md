@@ -42,3 +42,11 @@ inclinación, grosor y espaciado (tabla `STYLES` en `build_font_33.py`).
 
 Ajustes al principio de `build_font_33.py`: `STROKE`/`MIN_W` (grosor),
 `S` (tamaño), `SIDE` (espacio entre sílabas), `DIGIT_SIDE`/`BAR_GAP` (dígitos).
+
+## Propuesta de glifos nuevos (v4, sin activar)
+`glifos_v4.py` define un sistema geométrico por familias (recto en `sans`, esquinas
+redondeadas en `school`). No toca la fuente actual; se genera aparte:
+
+    OWEE_GLIFOS=v4 OWEE_OUT=/ruta/salida python3 build_font_33.py sans   # o school
+
+Vista previa en `propuesta_v4.png`.
