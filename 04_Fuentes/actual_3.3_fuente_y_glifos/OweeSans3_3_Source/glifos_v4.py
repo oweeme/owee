@@ -9,9 +9,9 @@ pegada a un lado del recuadro:  a arriba · e izquierda · o derecha · u abajo.
 La barra es corta y nunca toca la consonante, así no se confunde con sus trazos.
 
 Consonantes (rasgo = significado, igual en todas las familias):
-    labiales   m ▯▯ cuadro con división · p ⊔ abierta arriba · b ⊔ con barra · f ⊏ abierta de lado
-    dentales   t Λ · d A (barra = sonora) · s Z (en la mano, S) · n ○
-               l <  · r <· (la r lleva un punto)
+    labiales   m ▯▯ cuadro con división · p ⊔ abierta arriba · b ⊔ con barra · f ⊤ (T)
+    dentales   t Λ · d A (barra = sonora) · s Z (en la mano, S) · n Θ (círculo con barra)
+               l Y · r Y con un punto en la horquilla
     velares    k ┐ · g ┐ con barra
     palatales  sh X · ch X con raya vertical (✱)
 Barra al medio = sonora (b, d, g). Coordenadas en pt de la tabla; y hacia arriba.
@@ -36,13 +36,13 @@ C = {
     "m":  [poly((X0, Y1), (X1, Y1), (X1, Y0), (X0, Y0), closed=True), poly((XC, Y1), (XC, Y0))],
     "p":  [poly((X0, Y1), (X0, Y0), (X1, Y0), (X1, Y1))],
     "b":  [poly((X0, Y1), (X0, Y0), (X1, Y0), (X1, Y1)), poly((X0, MIDY), (X1, MIDY))],
-    "f":  [poly((X1, Y1), (X0, Y1), (X0, Y0), (X1, Y0))],
+    "f":  [poly((X0, Y1), (X1, Y1)), poly((XC, Y1), (XC, Y0))],
     "t":  [poly((X0, Y0), (XC, Y1), (X1, Y0))],
     "d":  [poly((X0, Y0), (XC, Y1), (X1, Y0)), poly((X0 + 2.0, -1.8), (X1 - 2.0, -1.8))],
     "s":  [poly((X0, Y1), (X1, Y1), (X0, Y0), (X1, Y0))],
-    "n":  "circle",
-    "l":  [poly((X1, Y1), (X0, YC), (X1, Y0))],
-    "r":  [poly((X1, Y1), (X0, YC), (X1, Y0)), ("dot", 5.6, YC)],
+    "n":  "theta",
+    "l":  [poly((X0, Y1), (XC, -0.5), (X1, Y1)), poly((XC, -0.5), (XC, Y0))],
+    "r":  [poly((X0, Y1), (XC, -0.5), (X1, Y1)), poly((XC, -0.5), (XC, Y0)), ("dot", XC, 3.7)],
     "k":  [poly((X0, Y1), (X1, Y1), (X1, Y0))],
     "g":  [poly((X0, Y1), (X1, Y1), (X1, Y0)), poly((X0, MIDY), (X1, MIDY))],
     "sh": [poly((X0, Y1), (X1, Y0)), poly((X0, Y0), (X1, Y1))],
@@ -168,7 +168,10 @@ def aplicar(sk, style):
     r = CORNER[style]
     for c, shape in C.items():
         parts = []
-        if shape == "circle":
+        if shape == "theta":
+            parts.append({"width": W, "segments": _circle(XC, YC, (X1 - X0) / 2, (Y1 - Y0) / 2)})
+            parts.append({"width": W, "segments": [L((X0, YC), (X1, YC))]})
+        elif shape == "circle":
             parts.append({"width": W, "segments": _circle(XC, YC, (X1 - X0) / 2, (Y1 - Y0) / 2)})
         else:
             for item in shape:
