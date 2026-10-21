@@ -98,12 +98,37 @@ def vowel_part(v):
     return (W, [L((X1 + G, YC - h), (X1 + G, YC + h))])
 
 
+import os
+VOWEL_SOLO = os.environ.get("OWEE_V4_VOW", "C")     # A barra larga · B línea base · C anillo pequeño
+NAME_MARK = os.environ.get("OWEE_V4_NAME", "EQ")    # II doble raya vertical · EQ doble raya horizontal
+
+
 def vowel_isolated(v, d=3.6):
-    """A E O U sueltas: un punto portador y la barra de su lado."""
+    """A E O U sueltas: portador neutro + la barra de su lado (tres variantes a elegir)."""
     h = BAR / 2
+    if VOWEL_SOLO == "A":                       # sólo la barra, a lo ancho del recuadro
+        hw = (X1 - X0) / 2; d = 3.4
+        pos = {"a": [L((XC - hw, d), (XC + hw, d))], "u": [L((XC - hw, -d), (XC + hw, -d))],
+               "e": [L((XC - d - 1, -hw), (XC - d - 1, hw))], "o": [L((XC + d + 1, -hw), (XC + d + 1, hw))]}[v]
+        return [{"width": W, "segments": pos}]
+    if VOWEL_SOLO == "B":                       # una línea base de lado a lado como portador
+        d = 4.2
+        base = L((X0, YC), (X1, YC)) if v in "ou" else L((X0, YC), (X1, YC))
+        pos = {"a": [L((XC - h, d), (XC + h, d))], "u": [L((XC - h, -d), (XC + h, -d))],
+               "e": [L((X0 - 2.2, -h), (X0 - 2.2, h))], "o": [L((X1 + 2.2, -h), (X1 + 2.2, h))]}[v]
+        return [{"width": W, "segments": [base]}, {"width": W, "segments": pos}]
+    r = 2.1                                     # C: anillo pequeño (el cero de Hangul)
+    d = r + 2.9
     pos = {"a": [L((XC - h, d), (XC + h, d))], "u": [L((XC - h, -d), (XC + h, -d))],
            "e": [L((XC - d, -h), (XC - d, h))], "o": [L((XC + d, -h), (XC + d, h))]}[v]
-    return [{"width": DOT_W, "segments": [L((XC, YC), (XC, YC))]}, {"width": W, "segments": pos}]
+    return [{"width": W, "segments": _circle(XC, YC, r, r)}, {"width": W, "segments": pos}]
+
+
+def name_mark():
+    """U+E03D marca de nombre propio."""
+    if NAME_MARK == "EQ":
+        return [{"width": W, "segments": [L((X0, 1.6), (X1, 1.6))]}, {"width": W, "segments": [L((X0, -1.6), (X1, -1.6))]}]
+    return [{"width": W, "segments": [L((XC - 1.7, Y0), (XC - 1.7, Y1))]}, {"width": W, "segments": [L((XC + 1.7, Y0), (XC + 1.7, Y1))]}]
 
 
 def aplicar(sk, style):
