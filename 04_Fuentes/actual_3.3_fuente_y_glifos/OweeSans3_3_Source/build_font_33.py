@@ -189,7 +189,7 @@ def main():
     g_ = globals()
     for k in ("SX", "SY", "SLANT", "STROKE", "MIN_W", "SIDE", "DIGIT_SIDE"):
         g_[k] = st[k]
-    if V4: g_["MIN_W"] = glifos_v4.MIN_W[style]
+    if V4: g_["MIN_W"] = glifos_v4.MIN_W[style]; g_["S"] = glifos_v4.S_V4; g_["SY"] = glifos_v4.SY_V4[style]
     g_["VW"] = width(2.632171); g_["CW"] = width(3.070866)
     sk = json.loads((ROOT / "skeletons.json").read_text())
     sk = glifos_v4.aplicar(sk, style) if V4 else consonantes_v34(sk)
