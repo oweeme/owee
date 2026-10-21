@@ -90,12 +90,12 @@ def _segments(pts, closed, r):
 
 import os
 NAME_MARK = os.environ.get("OWEE_V4_NAME", "EQ")    # EQ doble raya horizontal · II doble raya vertical
-E_FORM = os.environ.get("OWEE_V4_E", "plus")      # e: "plus" (+) o "bars" (=)
+E_FORM = os.environ.get("OWEE_V4_E", "tee")      # e: "plus" (+) o "bars" (=)
 S_V4 = 42                                         # unidades de fuente por pt (más chico: caben las marcas de vocal)
 SY_V4 = {"sans": 0.95, "school": 1.1}
 
 # Cada vocal tiene una FORMA propia, no sólo un lado:
-#   a  barra   ·   e  cruz + (o doble barra =)   ·   o  anillo   ·   u  triángulo
+#   a  barra   ·   e  ト (o コ, ヘ, Y)   ·   o  anillo   ·   u  triángulo
 # y además un lado fijo (a arriba, e izquierda, o derecha, u abajo) que refuerza la lectura.
 HALF = {"a": 0.0, "e": 2.0, "o": 1.8, "u": 1.5}   # media altura/anchura de cada marca, en pt
 GAP = 1.0
@@ -107,13 +107,23 @@ def mark(v, cx, cy, k=1.0):
         h = BAR / 2 * k
         return [{"width": W, "segments": [L((cx - h, cy), (cx + h, cy))]}]
     if v == "e":
+        k2 = k
         if E_FORM == "bars":
             h, g = BAR / 2 * k * 0.8, 1.4 * k
             return [{"width": W, "segments": [L((cx - h, cy + g), (cx + h, cy + g))]},
                     {"width": W, "segments": [L((cx - h, cy - g), (cx + h, cy - g))]}]
-        h = 2.0 * k
-        return [{"width": W, "segments": [L((cx - h, cy), (cx + h, cy))]},
-                {"width": W, "segments": [L((cx, cy - h), (cx, cy + h))]}]
+        if E_FORM == "plus":
+            h = 2.0 * k
+            return [{"width": W, "segments": [L((cx - h, cy), (cx + h, cy))]},
+                    {"width": W, "segments": [L((cx, cy - h), (cx, cy + h))]}]
+        def seg(*pts): return {"width": W, "segments": [L((x * k2 + cx, y * k2 + cy), (x2 * k2 + cx, y2 * k2 + cy)) for (x, y), (x2, y2) in zip(pts, pts[1:])]}
+        if E_FORM == "tee":      # ト (katakana to): trazo vertical con un ramal
+            return [seg((-0.6, 2.0), (-0.6, -2.0)), seg((-0.6, 0.6), (1.9, -0.7))]
+        if E_FORM == "ko":       # コ (katakana ko)
+            return [seg((-1.8, 2.0), (1.8, 2.0), (1.8, -2.0), (-1.8, -2.0))]
+        if E_FORM == "he":       # ヘ (katakana he)
+            return [seg((-2.3, -1.2), (-0.1, 1.3), (2.3, -1.2))]
+        return [seg((-2.0, 2.0), (0.0, 0.0), (2.0, 2.0)), seg((0.0, 0.0), (0.0, -2.0))]   # Y: ípsilon
     if v == "o":
         r = 1.8 * k
         return [{"width": W, "segments": _circle(cx, cy, r, r)}]
