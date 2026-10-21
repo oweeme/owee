@@ -202,7 +202,7 @@ def main():
             outlines[cp] = (syllable(sk[c + v]), SIDE); cp += 1
     assert cp == 0xE03C
     outlines[0xE03C] = (joiner(), 40)
-    outlines[0xE03D] = (namemark(), 80)
+    outlines[0xE03D] = (syllable(glifos_v4.name_mark()) if V4 else namemark(), 80)
     for n in range(10):
         outlines[0xE040 + n] = (digit(n), DIGIT_SIDE)
 
