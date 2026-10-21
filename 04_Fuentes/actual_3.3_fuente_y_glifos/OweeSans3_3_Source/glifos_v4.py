@@ -20,7 +20,7 @@ import math
 
 W = 2.0             # grosor nominal en pt (el estilo lo sube al mínimo de su fuente)
 DOT_W = 3.6
-MIN_W = {"sans": 88, "school": 64}   # grosor del trazo en unidades de fuente (1000 por em)
+MIN_W = {"sans": 76, "school": 56}   # grosor del trazo en unidades de fuente (1000 por em)
 X0, X1, XC = -1.2, 7.8, 3.3          # recuadro de la consonante
 Y0, Y1, YC = -4.5, 4.5, 0.0
 G = 3.3                              # centro de la barra de vocal, medido desde el borde
@@ -88,40 +88,52 @@ def _segments(pts, closed, r):
     return out
 
 
-def vowel_part(v):
-    h = BAR / 2
-    ex = G + (Y1 - Y0) / 2           # distancia del centro a la barra
-    ey = G + (X1 - X0) / 2
-    if v == "a": return (W, [L((XC - h, Y1 + G), (XC + h, Y1 + G))])
-    if v == "u": return (W, [L((XC - h, Y0 - G), (XC + h, Y0 - G))])
-    if v == "e": return (W, [L((X0 - G, YC - h), (X0 - G, YC + h))])
-    return (W, [L((X1 + G, YC - h), (X1 + G, YC + h))])
-
-
 import os
-VOWEL_SOLO = os.environ.get("OWEE_V4_VOW", "C")     # A barra larga · B línea base · C anillo pequeño
-NAME_MARK = os.environ.get("OWEE_V4_NAME", "EQ")    # II doble raya vertical · EQ doble raya horizontal
+NAME_MARK = os.environ.get("OWEE_V4_NAME", "EQ")    # EQ doble raya horizontal · II doble raya vertical
+E_FORM = os.environ.get("OWEE_V4_E", "plus")      # e: "plus" (+) o "bars" (=)
+S_V4 = 42                                         # unidades de fuente por pt (más chico: caben las marcas de vocal)
+SY_V4 = {"sans": 0.95, "school": 1.1}
+
+# Cada vocal tiene una FORMA propia, no sólo un lado:
+#   a  barra   ·   e  cruz + (o doble barra =)   ·   o  anillo   ·   u  triángulo
+# y además un lado fijo (a arriba, e izquierda, o derecha, u abajo) que refuerza la lectura.
+HALF = {"a": 0.0, "e": 2.0, "o": 1.8, "u": 1.5}   # media altura/anchura de cada marca, en pt
+GAP = 1.0
 
 
-def vowel_isolated(v, d=3.6):
-    """A E O U sueltas: portador neutro + la barra de su lado (tres variantes a elegir)."""
-    h = BAR / 2
-    if VOWEL_SOLO == "A":                       # sólo la barra, a lo ancho del recuadro
-        hw = (X1 - X0) / 2; d = 3.4
-        pos = {"a": [L((XC - hw, d), (XC + hw, d))], "u": [L((XC - hw, -d), (XC + hw, -d))],
-               "e": [L((XC - d - 1, -hw), (XC - d - 1, hw))], "o": [L((XC + d + 1, -hw), (XC + d + 1, hw))]}[v]
-        return [{"width": W, "segments": pos}]
-    if VOWEL_SOLO == "B":                       # una línea base de lado a lado como portador
-        d = 4.2
-        base = L((X0, YC), (X1, YC)) if v in "ou" else L((X0, YC), (X1, YC))
-        pos = {"a": [L((XC - h, d), (XC + h, d))], "u": [L((XC - h, -d), (XC + h, -d))],
-               "e": [L((X0 - 2.2, -h), (X0 - 2.2, h))], "o": [L((X1 + 2.2, -h), (X1 + 2.2, h))]}[v]
-        return [{"width": W, "segments": [base]}, {"width": W, "segments": pos}]
-    r = 2.1                                     # C: anillo pequeño (el cero de Hangul)
-    d = r + 2.9
-    pos = {"a": [L((XC - h, d), (XC + h, d))], "u": [L((XC - h, -d), (XC + h, -d))],
-           "e": [L((XC - d, -h), (XC - d, h))], "o": [L((XC + d, -h), (XC + d, h))]}[v]
-    return [{"width": W, "segments": _circle(XC, YC, r, r)}, {"width": W, "segments": pos}]
+def mark(v, cx, cy, k=1.0):
+    """Marca de la vocal v centrada en (cx, cy); k escala el tamaño (las vocales sueltas van a 1.5)."""
+    if v == "a":
+        h = BAR / 2 * k
+        return [{"width": W, "segments": [L((cx - h, cy), (cx + h, cy))]}]
+    if v == "e":
+        if E_FORM == "bars":
+            h, g = BAR / 2 * k * 0.8, 1.4 * k
+            return [{"width": W, "segments": [L((cx - h, cy + g), (cx + h, cy + g))]},
+                    {"width": W, "segments": [L((cx - h, cy - g), (cx + h, cy - g))]}]
+        h = 2.0 * k
+        return [{"width": W, "segments": [L((cx - h, cy), (cx + h, cy))]},
+                {"width": W, "segments": [L((cx, cy - h), (cx, cy + h))]}]
+    if v == "o":
+        r = 1.8 * k
+        return [{"width": W, "segments": _circle(cx, cy, r, r)}]
+    h = 1.5 * k
+    pts = [(cx - h * 1.25, cy - h), (cx + h * 1.25, cy - h), (cx, cy + h), (cx - h * 1.25, cy - h)]
+    return [{"width": W, "segments": [L(a, b) for a, b in zip(pts, pts[1:])]}]
+
+
+def vowel_parts(v):
+    """La vocal de una sílaba: su marca en su lado del recuadro, a una distancia fija del borde."""
+    off = HALF[v] + 2.0 + GAP + 0.2        # medio trazo del recuadro + medio trazo de la marca + aire
+    if v == "a": return mark(v, XC, Y1 + off)
+    if v == "u": return mark(v, XC, Y0 - off)
+    if v == "e": return mark(v, X0 - off, YC)
+    return mark(v, X1 + off, YC)
+
+
+def vowel_isolated(v):
+    """A E O U sueltas: sólo la marca, grande y en el centro (la forma ya dice qué vocal es)."""
+    return mark(v, XC, YC, 1.5)
 
 
 def name_mark():
@@ -145,8 +157,7 @@ def aplicar(sk, style):
                     pts, closed = item
                     parts.append({"width": W, "segments": _segments(pts, closed, r)})
         for v in "aeou":
-            w, segs = vowel_part(v)
-            sk[c + v] = parts + [{"width": w, "segments": segs}]
+            sk[c + v] = parts + vowel_parts(v)
     for v in "aeou":
         sk["_" + v] = vowel_isolated(v)
     return sk
