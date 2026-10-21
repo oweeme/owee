@@ -16,9 +16,8 @@ from math import cos, sin, pi
 import json, sys, math
 
 import os
-from consonantes_v34 import aplicar as consonantes_v34
 import glifos_v4
-V4 = os.environ.get("OWEE_GLIFOS") == "v4"   # propuesta de glifos nuevos (no toca la fuente actual)
+V4 = os.environ.get("OWEE_GLIFOS", "v4") != "v33"   # glifos Owee 3.4 (glifos_v4.py); OWEE_GLIFOS=v33 regenera los de 3.3
 
 import pathops
 from fontTools.fontBuilder import FontBuilder
@@ -193,7 +192,7 @@ def main():
     if V4: g_["MIN_W"] = glifos_v4.MIN_W[style]; g_["S"] = glifos_v4.S_V4; g_["SY"] = glifos_v4.SY_V4[style]
     g_["VW"] = width(2.632171); g_["CW"] = width(3.070866)
     sk = json.loads((ROOT / "skeletons.json").read_text())
-    sk = glifos_v4.aplicar(sk, style) if V4 else consonantes_v34(sk)
+    if V4: sk = glifos_v4.aplicar(sk, style)
     outlines = {}
     cp = 0xE000
     for v in VOW:
@@ -234,7 +233,7 @@ def main():
     ys = [(g[n].yMin, g[n].yMax) for n in order if g[n].numberOfContours]
     lo, hi = min(a for a, _ in ys), max(b for _, b in ys)
     assert DESC <= lo and hi <= ASC, (lo, hi)
-    out = Path(os.environ.get("OWEE_OUT", ROOT)) / (st["ps"] + (".v4" if V4 else "") + ".ttf")
+    out = Path(os.environ.get("OWEE_OUT", ROOT)) / (st["ps"] + (".v33" if not V4 else "") + ".ttf")
     fb.save(out)
     print("Creado:", out, "glifos:", len(outlines), "y:", lo, "..", hi)
 

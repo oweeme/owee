@@ -1,4 +1,4 @@
-# Las vocales de Owee Script (propuesta v4)
+# Las vocales de Owee Script 
 
 Cada vocal tiene una **forma propia** que no depende de la posición ni de girar o
 espejar otra forma, y cada forma viene de una escritura real donde esa forma
