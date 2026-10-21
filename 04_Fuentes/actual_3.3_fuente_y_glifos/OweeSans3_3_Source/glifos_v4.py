@@ -91,12 +91,12 @@ def _segments(pts, closed, r):
 import os
 NAME_MARK = os.environ.get("OWEE_V4_NAME", "EQ")    # EQ doble raya horizontal · II doble raya vertical
 U_FORM = os.environ.get("OWEE_V4_U", "uruz")      # u: uruz · tiwaz · dagaz · thurs · triangle
-E_FORM = os.environ.get("OWEE_V4_E", "tee")      # e: "plus" (+) o "bars" (=)
+E_FORM = os.environ.get("OWEE_V4_E", "kata")      # e: "plus" (+) o "bars" (=)
 S_V4 = 42                                         # unidades de fuente por pt (más chico: caben las marcas de vocal)
 SY_V4 = {"sans": 0.95, "school": 0.97}
 
 # Cada vocal tiene una FORMA propia, no sólo un lado:
-#   a  barra   ·   e  ト (o コ, ヘ, Y)   ·   o  anillo   ·   u  triángulo
+#   a  barra   ·   e  エ (o ト, コ, ヘ, Y)   ·   o  anillo   ·   u  triángulo
 # y además un lado fijo (a arriba, e izquierda, o derecha, u abajo) que refuerza la lectura.
 HALF = {"a": 0.0, "e": 2.0, "o": 1.8, "u": 2.2}   # media altura/anchura de cada marca, en pt
 GAP = 1.0
