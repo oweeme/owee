@@ -9,11 +9,11 @@ pegada a un lado del recuadro:  a arriba · e izquierda · o derecha · u abajo.
 La barra es corta y nunca toca la consonante, así no se confunde con sus trazos.
 
 Consonantes (rasgo = significado, igual en todas las familias):
-    labiales   m □ cerrada · p ⊔ abierta arriba · b ⊔ con barra · f ⊏ abierta de lado
-    dentales   t Λ · d A (barra = sonora) · s Z (en la mano, S) · n ○ (nasal = cerrada)
+    labiales   m ▯▯ cuadro con división · p ⊔ abierta arriba · b ⊔ con barra · f ⊏ abierta de lado
+    dentales   t Λ · d A (barra = sonora) · s Z (en la mano, S) · n ○
                l <  · r <· (la r lleva un punto)
     velares    k ┐ · g ┐ con barra
-    palatales  sh W (en la mano, onda) · ch W con barra arriba
+    palatales  sh X · ch X con raya vertical (✱)
 Barra al medio = sonora (b, d, g). Coordenadas en pt de la tabla; y hacia arriba.
 """
 import math
@@ -33,7 +33,7 @@ def poly(*pts, closed=False): return (list(pts), closed)
 
 MIDY = 0.0
 C = {
-    "m":  [poly((X0, Y1), (X1, Y1), (X1, Y0), (X0, Y0), closed=True)],
+    "m":  [poly((X0, Y1), (X1, Y1), (X1, Y0), (X0, Y0), closed=True), poly((XC, Y1), (XC, Y0))],
     "p":  [poly((X0, Y1), (X0, Y0), (X1, Y0), (X1, Y1))],
     "b":  [poly((X0, Y1), (X0, Y0), (X1, Y0), (X1, Y1)), poly((X0, MIDY), (X1, MIDY))],
     "f":  [poly((X1, Y1), (X0, Y1), (X0, Y0), (X1, Y0))],
@@ -45,9 +45,8 @@ C = {
     "r":  [poly((X1, Y1), (X0, YC), (X1, Y0)), ("dot", 5.6, YC)],
     "k":  [poly((X0, Y1), (X1, Y1), (X1, Y0))],
     "g":  [poly((X0, Y1), (X1, Y1), (X1, Y0)), poly((X0, MIDY), (X1, MIDY))],
-    "sh": [poly((X0, Y1), (X0 + 2.25, Y0), (XC, Y1), (X1 - 2.25, Y0), (X1, Y1))],
-    "ch": [poly((X0, Y1), (X0 + 2.25, Y0), (XC, Y1), (X1 - 2.25, Y0), (X1, Y1)),
-           poly((X0, Y1), (X1, Y1))],
+    "sh": [poly((X0, Y1), (X1, Y0)), poly((X0, Y0), (X1, Y1))],
+    "ch": [poly((X0, Y1), (X1, Y0)), poly((X0, Y0), (X1, Y1)), poly((XC, Y1), (XC, Y0))],
 }
 # la "s" y el zigzag necesitan esquinas más suaves en la mano; el círculo es siempre círculo
 CORNER = {"sans": 0.0, "school": 3.6}
