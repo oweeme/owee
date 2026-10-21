@@ -89,7 +89,7 @@ def _segments(pts, closed, r):
 
 
 import os
-NAME_MARK = os.environ.get("OWEE_V4_NAME", "EQ")    # EQ doble raya horizontal · II doble raya vertical
+NAME_MARK = os.environ.get("OWEE_V4_NAME", "fehu")    # EQ doble raya horizontal · II doble raya vertical
 U_FORM = os.environ.get("OWEE_V4_U", "uruz")      # u: uruz · tiwaz · dagaz · thurs · triangle
 E_FORM = os.environ.get("OWEE_V4_E", "kata")      # e: "plus" (+) o "bars" (=)
 S_V4 = 42                                         # unidades de fuente por pt (más chico: caben las marcas de vocal)
@@ -158,10 +158,31 @@ def vowel_isolated(v):
 
 
 def name_mark():
-    """U+E03D marca de nombre propio."""
-    if NAME_MARK == "EQ":
-        return [{"width": W, "segments": [L((X0, 1.6), (X1, 1.6))]}, {"width": W, "segments": [L((X0, -1.6), (X1, -1.6))]}]
-    return [{"width": W, "segments": [L((XC - 1.7, Y0), (XC - 1.7, Y1))]}, {"width": W, "segments": [L((XC + 1.7, Y0), (XC + 1.7, Y1))]}]
+    """U+E03D marca de nombre propio (alternativas: EQ ==, tilde ~, fehu ᚠ, slashes //)."""
+    r = CORNER[os.environ.get("OWEE_V4_STYLE", "sans")]
+    if NAME_MARK == "II":
+        return [{"width": W, "segments": [L((XC - 1.7, Y0), (XC - 1.7, Y1))]}, {"width": W, "segments": [L((XC + 1.7, Y0), (XC + 1.7, Y1))]}]
+    if NAME_MARK == "tilde":     # onda corta (la onda del habla; ni igual ni menos)
+        pts = [(XC - 3.8, 0.2), (XC - 1.9, 2.0), (XC, 0.2), (XC + 1.9, 2.0), (XC + 3.8, 0.2)]
+        return [{"width": W, "segments": _segments(pts, False, min(r, 1.0) if r else 0)}]
+    if NAME_MARK == "fehu":      # ᚠ (runa Fehu): palo con dos ramas hacia arriba y la derecha
+        return [{"width": W, "segments": [L((XC - 1.2, -3.2), (XC - 1.2, 3.2))]},
+                {"width": W, "segments": [L((XC - 1.2, 3.2), (XC + 1.8, 4.6))]},
+                {"width": W, "segments": [L((XC - 1.2, 0.6), (XC + 1.8, 2.0))]}]
+    if NAME_MARK == "slashes":   # dos diagonales paralelas
+        return [{"width": W, "segments": [L((XC - 1.6, -2.4), (XC - 0.5, 2.4))]},
+                {"width": W, "segments": [L((XC + 0.5, -2.4), (XC + 1.6, 2.4))]}]
+    return [{"width": W, "segments": [L((X0, 1.6), (X1, 1.6))]}, {"width": W, "segments": [L((X0, -1.6), (X1, -1.6))]}]
+
+
+JOIN = os.environ.get("OWEE_V4_JOIN", "tie")        # nexo de compuesto: slash / · tie ‿
+
+
+def joiner():
+    """U+E03C nexo de compuesto (el guion de sade-kelo). Ya no es una barra: se confundía con la vocal a."""
+    if JOIN == "tie":            # ‿ (el «tie» de la fonética: enlaza dos bloques)
+        return [{"width": W, "segments": [Cb((0.0, -3.6), (0.6, -6.0), (3.2, -6.0), (3.8, -3.6))]}]
+    return [{"width": W, "segments": [L((0.0, -6.2), (1.8, -3.4))]}]
 
 
 def aplicar(sk, style):
