@@ -28,7 +28,7 @@ from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.pens.svgPathPen import SVGPathPen
 
-VERSION = "3.3"
+VERSION = "3.4"
 STYLES = {
     "sans":   {"ttf": "OweeSans3_3-Canonical-Regular.ttf", "base": "OweeSans-Regular",
                "family": "Owee Sans", "ps": "OweeSans-Regular"},

@@ -1,4 +1,4 @@
-# @oweeme/owee-script 3.3
+# @oweeme/owee-script 3.4
 
 Copia esta carpeta al proyecto. Nada más es necesario.
 

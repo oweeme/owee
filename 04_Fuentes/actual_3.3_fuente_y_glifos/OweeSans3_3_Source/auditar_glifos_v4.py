@@ -56,7 +56,7 @@ def main():
     items = {c: norm(raster(sk[c + "a"][:-1])) for c in g.C}
     for v in "aeou": items["vocal " + v] = norm(raster(g.vowel_isolated(v)))
     items["marca de nombre"] = norm(raster(g.name_mark()))
-    items["nexo (3.3)"] = norm(raster([{"width": 2.7, "segments": [g.L((0, 0), (4.0, 0))]}]))
+    items["nexo"] = norm(raster(g.joiner()))
     filas = []
     for k1, k2 in itertools.combinations(items, 2):
         A, B = items[k1], items[k2]

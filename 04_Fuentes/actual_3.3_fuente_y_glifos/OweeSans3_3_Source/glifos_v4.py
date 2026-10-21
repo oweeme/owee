@@ -1,4 +1,4 @@
-"""Owee Script 4 (propuesta): sistema de glifos geométrico y por familias.
+"""Owee Script 3.4: sistema de glifos geométrico y por familias (activo).
 
 Un solo esqueleto de líneas rectas y círculos, dibujado de dos maneras:
   sans    recto, en bloque (pantalla, teclado, pancartas)

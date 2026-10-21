@@ -1,6 +1,6 @@
 {
   "name": "@oweeme/owee-script",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "private": true,
   "description": "Owee Script para la web: fuentes Owee Sans / Owee School y parser Roman <-> Owee.",
   "type": "module",

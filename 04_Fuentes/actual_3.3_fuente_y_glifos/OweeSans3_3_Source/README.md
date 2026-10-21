@@ -1,4 +1,4 @@
-# Owee Sans 3.3 Canonical
+# Owee Sans 3.4 (glifos nuevos)
 
 Mejora de Owee Sans 3.2 construida desde los vectores originales del
 Curso Práctico para Adultos (pág. 4, "Sistema silábico").
@@ -14,13 +14,6 @@ Curso Práctico para Adultos (pág. 4, "Sistema silábico").
   con los palos de cada dígito agrupados y más aire entre dígitos.
 - Mismo PUA (U+E000..U+E03B, U+E040..U+E049): funciona con el IME Fcitx5 actual.
 - Métricas verticales correctas (no se recorta ni invade la línea anterior).
-
-## Consonantes rediseñadas (3.4)
-`consonantes_v34.py` sustituye f, s, l, r, d y ch por siluetas que se distinguen
-a primera vista (antes s/f, r/l, d/t y ch/sh sólo se diferenciaban por una barrita
-que se pegaba a la vocal): f `/`, l `\`, s `/` cruzada por una barra, r `\` con un
-punto, d arco cerrado por su base (t queda abierto), ch zigzag (sh sigue siendo onda).
-El PUA y el romano no cambian.
 
 ## Dos estilos desde el mismo esqueleto
 | Estilo | Fuente | Uso | Proporción |
@@ -43,10 +36,15 @@ inclinación, grosor y espaciado (tabla `STYLES` en `build_font_33.py`).
 Ajustes al principio de `build_font_33.py`: `STROKE`/`MIN_W` (grosor),
 `S` (tamaño), `SIDE` (espacio entre sílabas), `DIGIT_SIDE`/`BAR_GAP` (dígitos).
 
-## Propuesta de glifos nuevos (v4, sin activar)
-`glifos_v4.py` define un sistema geométrico por familias (recto en `sans`, esquinas
-redondeadas en `school`). No toca la fuente actual; se genera aparte:
+## Glifos 3.4 (activos)
+Desde la 3.4 los glifos salen de `glifos_v4.py`, un sistema geométrico por familias:
+recto en `sans` y con las esquinas redondeadas en `school`. Ver `GUIA_DE_ESTILO_v4.md`
+(qué define a cada glifo y qué puede variar) y `VOCALES_v4.md` (origen de las vocales).
+Los esqueletos de `skeletons.json` ya no se usan para el dibujo; sólo quedan para la 3.3.
 
-    OWEE_GLIFOS=v4 OWEE_OUT=/ruta/salida python3 build_font_33.py sans   # o school
+    python3 build_font_33.py sans          # o school
+    OWEE_GLIFOS=v33 python3 build_font_33.py sans   # regenera los glifos de 3.3 (archivo .v33.ttf)
+    python3 auditar_glifos_v4.py           # comprueba que ningún glifo sea giro de otro
 
-Vista previa en `propuesta_v4.png`.
+El PUA y el romano no cambian: U+E000..U+E03B sílabas, U+E03C nexo `‿`,
+U+E03D marca de nombre `ᚠ`, U+E040..U+E049 dígitos.

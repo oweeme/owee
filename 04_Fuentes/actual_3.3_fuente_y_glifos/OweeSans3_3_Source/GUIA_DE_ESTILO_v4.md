@@ -1,4 +1,4 @@
-# Guía de estilo de Owee Script (propuesta v4)
+# Guía de estilo de Owee Script 3.4
 
 Para escribir Owee a mano, en pancartas o en pantalla, cada quien puede darle **su
 estilo**. Lo único que no se negocia es que cada glifo se pueda **distinguir de los
@@ -62,8 +62,12 @@ Parejas: la **barra al medio** marca la sonora (b, d, g).
 Detalle en `VOCALES_v4.md`.
 
 ## 5. Marcas
-- **Nombre propio:** dos rayas horizontales `=` delante.
-- **Nexo de compuesto** (el guion de sade-kelo): una barra baja.
+- **Nombre propio `ᚠ`** (runa Fehu): va **antes** del nombre y lo distingue de una palabra
+  común que suene igual (`Kale` nombre, `kale` «amarillo»). En romano es la mayúscula inicial.
+  Rasgo: un palo con dos ramas hacia arriba y la derecha.
+- **Nexo de compuesto `‿`** (el «tie» de la fonética): va **entre** los bloques de un compuesto
+  y lo distingue de las mismas palabras sueltas (`sade-kelo` «año», `sade kelo` «sol, ciclo»).
+  En romano es el guion. Rasgo: una curva pequeña y baja, abierta hacia arriba.
 
 ## 6. Parecidos con otros símbolos (a tener en cuenta)
 Los glifos son caracteres propios (zona de uso privado), así que **no chocan con símbolos
@@ -72,8 +76,8 @@ del teclado**; el riesgo es sólo visual al leer.
 | Glifo | Se parece a | Riesgo | Qué hacer |
 |---|---|---|---|
 | a `—` | signo menos, guion | bajo: va junto a una consonante | no usarla sola en cuentas |
-| marca de nombre `=` | signo igual | medio: aparece en cuentas y código | si molesta, se cambia por otra marca |
-| nexo (barra baja) | `a` sola | **medio:** son casi iguales; sólo cambia la altura | pendiente de decidir un nexo distinto (por ejemplo una diagonal `/`) |
+| nombre `ᚠ` | la F latina | bajo | va siempre pegada al principio de un nombre |
+| nexo `‿` | una sonrisa pequeña | bajo | va siempre baja, entre dos bloques |
 | sh `X` | signo por `×` | bajo | el contexto lo resuelve (va con vocal) |
 | ch `✱` | asterisco | bajo | ídem |
 | t `Λ` | «y» lógico, lambda | muy bajo | |
@@ -85,4 +89,4 @@ del teclado**; el riesgo es sólo visual al leer.
 `auditar_glifos_v4.py` compara cada par de glifos, tal cual y girado o espejado. En la
 primera versión había tres parejas de consonantes que eran giros una de otra (p/f, t/l,
 d/r); se cambiaron f, l, r y n. Ahora **ningún par de consonantes ajenas es giro de otro**.
-La única coincidencia exacta que queda es la `a` sola con el nexo antiguo.
+Ya no queda ninguna coincidencia exacta: la marca de nombre y el nexo se rediseñaron (`=` se parecía al signo igual, y la barra baja del nexo era casi la `a`).
