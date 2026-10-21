@@ -90,14 +90,15 @@ def _segments(pts, closed, r):
 
 import os
 NAME_MARK = os.environ.get("OWEE_V4_NAME", "EQ")    # EQ doble raya horizontal · II doble raya vertical
+U_FORM = os.environ.get("OWEE_V4_U", "uruz")      # u: uruz · tiwaz · dagaz · thurs · triangle
 E_FORM = os.environ.get("OWEE_V4_E", "tee")      # e: "plus" (+) o "bars" (=)
 S_V4 = 42                                         # unidades de fuente por pt (más chico: caben las marcas de vocal)
-SY_V4 = {"sans": 0.95, "school": 1.1}
+SY_V4 = {"sans": 0.95, "school": 0.97}
 
 # Cada vocal tiene una FORMA propia, no sólo un lado:
 #   a  barra   ·   e  ト (o コ, ヘ, Y)   ·   o  anillo   ·   u  triángulo
 # y además un lado fijo (a arriba, e izquierda, o derecha, u abajo) que refuerza la lectura.
-HALF = {"a": 0.0, "e": 2.0, "o": 1.8, "u": 1.5}   # media altura/anchura de cada marca, en pt
+HALF = {"a": 0.0, "e": 2.0, "o": 1.8, "u": 2.2}   # media altura/anchura de cada marca, en pt
 GAP = 1.0
 
 
@@ -127,9 +128,17 @@ def mark(v, cx, cy, k=1.0):
     if v == "o":
         r = 1.8 * k
         return [{"width": W, "segments": _circle(cx, cy, r, r)}]
-    h = 1.5 * k
-    pts = [(cx - h * 1.25, cy - h), (cx + h * 1.25, cy - h), (cx, cy + h), (cx - h * 1.25, cy - h)]
-    return [{"width": W, "segments": [L(a, b) for a, b in zip(pts, pts[1:])]}]
+    def seg(*pts): return {"width": W, "segments": [L((x * k + cx, y * k + cy), (x2 * k + cx, y2 * k + cy)) for (x, y), (x2, y2) in zip(pts, pts[1:])]}
+    if U_FORM == "triangle":
+        h = 1.5
+        return [seg((-h * 1.25, -h), (h * 1.25, -h), (0, h), (-h * 1.25, -h))]
+    if U_FORM == "tiwaz":     # ᛏ (runa Tiwaz): flecha hacia arriba
+        return [seg((0, -2.2), (0, 2.2)), seg((-1.7, 0.5), (0, 2.2), (1.7, 0.5))]
+    if U_FORM == "dagaz":     # ᛞ (runa Dagaz): dos triángulos unidos por la punta
+        return [seg((-1.9, 2.0), (-1.9, -2.0), (1.9, 2.0), (1.9, -2.0), (-1.9, 2.0))]
+    if U_FORM == "thurs":     # ᚦ (runa Thurisaz): palo con una púa
+        return [seg((-1.2, -2.2), (-1.2, 2.2)), seg((-1.2, 1.5), (1.6, 0.4), (-1.2, -0.7))]
+    return [seg((-1.6, -2.2), (-1.6, 2.2), (1.6, 0.5), (1.6, -2.2))]       # ᚢ (runa Uruz)
 
 
 def vowel_parts(v):
