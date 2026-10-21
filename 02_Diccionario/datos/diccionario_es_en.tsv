@@ -1094,3 +1094,271 @@ alto	height
 ancho	width
 vertical	vertical
 horizontal	horizontal
+silla	chair
+armario	wardrobe
+estante	shelf
+espejo	mirror
+cortina	curtain
+alfombra	rug
+almohada	pillow
+manta	blanket
+sábana	bed sheet
+ventilador	fan
+calefacción	heating
+refrigerador	refrigerator
+estufa	stove
+lavadora	washing machine
+escoba	broom
+basura	rubbish
+grifo	tap
+tubería	pipe
+ducha	shower
+enchufe	socket
+interruptor	switch
+cable	cable
+foco	light bulb
+televisión	television
+radio	radio
+teléfono	telephone
+patio	yard
+garaje	garage
+valla	fence
+cerradura	door lock
+sótano	basement
+azotea	roof terrace
+alquiler	rent
+dueño	owner
+mudarse	to move house
+limpiar	to clean
+barrer	to sweep
+timbre	doorbell
+buzón	mailbox
+papel	paper
+agua potable	drinking water
+leña	firewood
+cepillo	brush
+peine	comb
+tijeras	scissors
+aguja	needle
+carpeta	folder
+sistema de archivos	file system
+proceso de programa	running process
+hilo de ejecución	thread
+memoria rápida	fast memory
+procesador	processor
+disco	disk
+memoria externa	external storage
+núcleo del sistema	kernel
+red local	local network
+instalar	to install
+desinstalar	to uninstall
+repositorio de programas	software repository
+descargar	to download
+subir	to upload
+copia de seguridad	backup
+restaurar	to restore
+administrador	administrator
+permiso	permission
+cuenta de usuario	user account
+sesión	session
+seleccionar	to select
+pegar	to paste
+portapapeles	clipboard
+enviar un mensaje	to send a message
+recibir un mensaje	to receive a message
+mensaje	message
+notificación	notification
+alarma	alarm
+cámara	camera
+micrófono	microphone
+altavoz	loudspeaker
+auriculares	headphones
+audio	audio
+comprimir	to compress
+descomprimir	to decompress
+virus informático	computer virus
+antivirus	antivirus
+cortafuegos	firewall
+controlador de dispositivo	device driver
+terminal de comandos	command console
+script	script
+bucle	loop
+enlace	link
+sincronizar	to synchronize
+programar	to code
+código abierto	open source
+registro de eventos	event log
+pestaña de ventana	tab
+historial	history log
+cargador	charger
+cargar la batería	to charge the battery
+contactos	contacts
+sensor	sensor
+robot	robot
+cobrar	to charge
+vuelto	money back
+moneda	coin
+billete	banknote
+tarjeta de pago	payment card
+recibo	receipt
+comprador	buyer
+vendedor	seller
+comerciante	merchant
+descuento	discount
+regatear	to haggle
+préstamo	loan
+ahorrar	to save money
+cuenta bancaria	bank account
+cajero	bank clerk
+cajero automático	cash machine
+pesar	to weigh
+balanza	scale
+paquete	package
+caja	box
+carrito	cart
+inventario	inventory
+almacén	warehouse
+entrega	delivery
+garantía	warranty
+devolver	to return an item
+trueque	barter
+total a pagar	total
+puesto de venta	stall
+contabilidad	accounting
+presupuesto	budget
+pedido	order
+cuerpo humano	human body
+órgano	organ
+espalda	back
+hombro	shoulder
+codo	elbow
+muñeca	wrist
+palma	palm
+huella dactilar	fingerprint
+cadera	hip
+muslo	thigh
+tobillo	ankle
+dedo del pie	toe
+talón	heel
+ombligo	navel
+cintura	waist
+garganta	throat
+labio	lip
+mejilla	cheek
+frente	forehead
+ceja	eyebrow
+párpado	eyelid
+pestaña	eyelash
+barba	beard
+mentón	chin
+vaso sanguíneo	blood vessel
+riñón	kidney
+intestino	intestine
+vejiga	bladder
+columna vertebral	spine
+costilla	rib
+cráneo	skull
+articulación	joint
+tendón	tendon
+saliva	saliva
+lágrima	tear
+voz	voice
+latido	heartbeat
+edad	age
+orina	urine
+excremento	excrement
+embarazo	pregnancy
+tos	cough
+sonrisa	smile
+hervir	to boil
+freír	to fry
+horno	oven
+hornear	to bake
+asar	to roast
+mezclar	to mix
+pelar	to peel
+beber	to drink
+servir comida	to serve food
+calentar	to warm up
+enfriar	to cool
+condimento	seasoning
+masa de harina	dough
+grano	grain
+ensalada	salad
+postre	dessert
+salsa	sauce
+mantequilla	butter
+té	tea
+sartén	frying pan
+cuchara	spoon
+tenedor	fork
+jarra	jug
+botella	bottle
+tabla de cortar	cutting board
+receta	recipe
+ingrediente	ingredient
+porción	portion
+crudo	raw
+cocido	cooked
+podrido	rotten
+amargo	bitter
+cocinero	chef
+restaurante	restaurant
+panadería	bakery
+carnicería	butcher shop
+agricultura	agriculture
+agricultor	farmer
+campo de cultivo	field
+terreno	plot of land
+cultivar	to cultivate
+sembrar	to sow
+cosechar	to harvest
+cosecha	crop yield
+época de cosecha	harvest season
+regar	to irrigate
+arar	to plough
+abono	fertilizer
+canal de riego	irrigation channel
+tractor	tractor
+arado	plough (tool)
+pala	shovel
+azada	hoe
+hoz	sickle
+granja	farm
+corral	corral
+ganadería	livestock farming
+pastor	herder
+pasto	pasture
+gallina	hen
+vaca	cow
+oveja	sheep
+lana	wool
+cerdo	pig
+caballo	horse
+llama andina	llama
+perro	dog
+gato	cat
+plaga	pest
+maleza	weed
+helada	frost
+silo	granary
+molino	mill
+pozo	well
+huerto	vegetable garden
+palta	avocado
+tomate	tomato
+cebolla	onion
+zanahoria	carrot
+trigo	wheat
+frijol	bean
+haba	broad bean
+arveja	pea
+ajo	garlic
+limón	lemon
+naranja	orange
+manzana	apple
+uva	grape
+camote	sweet potato
+lechuga	lettuce
+café	coffee
+cacao	cocoa

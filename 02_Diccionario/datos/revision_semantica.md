@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 379 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 666 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -17,6 +17,23 @@ Criterios (2026-10-12):
 | `salotena` | salteña (nombre adaptado) | `salotena` (salteña) | OK |
 | `kunape` | cuñapé (nombre adaptado) | `kunape` (cuñapé) | OK |
 | `charake` | charque (nombre adaptado) | `charake` (charque) | OK |
+| `palata` | palta (nombre adaptado) | `palata` (palta) | OK |
+| `tomate` | tomate (nombre adaptado) | `tomate` (tomate) | OK |
+| `seboea` | cebolla (nombre adaptado) | `seboea` (cebolla) | OK |
+| `sanaorea` | zanahoria (nombre adaptado) | `sanaorea` (zanahoria) | OK |
+| `terego` | trigo (nombre adaptado) | `terego` (trigo) | OK |
+| `ferekolo` | frijol (nombre adaptado) | `ferekolo` (frijol) | OK |
+| `abana` | haba (nombre adaptado) | `abana` (haba) | OK |
+| `arabeka` | arveja (nombre adaptado) | `arabeka` (arveja) | OK |
+| `ako` | ajo (nombre adaptado) | `ako` (ajo) | OK |
+| `lemono` | limón (nombre adaptado) | `lemono` (limón) | OK |
+| `naranaka` | naranja (nombre adaptado) | `naranaka` (naranja) | OK |
+| `manasana` | manzana (nombre adaptado) | `manasana` (manzana) | OK |
+| `uba` | uva (nombre adaptado) | `uba` (uva) | OK |
+| `kamoto` | camote (nombre adaptado) | `kamoto` (camote) | OK |
+| `lechuga` | lechuga (nombre adaptado) | `lechuga` (lechuga) | OK |
+| `kafea` | café (nombre adaptado) | `kafea` (café) | OK |
+| `kakao` | cacao (nombre adaptado) | `kakao` (cacao) | OK |
 | `lu-meka` | nube informática (máquina lejana) | `lu` (lejos) + `meka` (máquina) | AJUSTADO — antes kuna-meka «máquina del cielo», que se confundiría con el avión (sura-meka); la nube informática es una máquina lejana |
 | `foma-fena` | configuración (poner reglas) | `foma` (regla) + `fena` (poner) | OK |
 | `meka-gune` | apagar (fin de la máquina) | `meka` (máquina) + `gune` (fin) | OK |
@@ -415,3 +432,273 @@ Criterios (2026-10-12):
 | `sena-nara-telo` | renombrar (cambiar el nombre) | `sena` (signo) + `nara` (persona) + `telo` (cambiar) | OK |
 | `loke-pema` | mostrar (dar al ojo) | `loke` (ojo) + `pema` (dar) | OK |
 | `loke-kose` | ocultar (cerrar al ojo) | `loke` (ojo) + `kose` (cerrar) | OK |
+| `pume-kore` | comedor (lugar de comer) | `pume` (comer) + `kore` (lugar) | OK |
+| `suna-delo-feke` | toalla (herramienta para tomar el agua) | `suna` (agua) + `delo` (tomar) + `feke` (herramienta) | OK |
+| `fure-fadu-bume` | abrigo (ropa de protección contra la temperatura) | `fure` (temperatura) + `fadu` (seguridad) + `bume` (ropa) | OK |
+| `doma-kalu-bume` | vestido (ropa del pecho a la pierna) | `doma` (corazón) + `kalu` (pierna) + `bume` (ropa) | OK |
+| `suna-gase` | lavar (limpiar con agua) | `suna` (agua) + `gase` (limpieza) | OK |
+| `pema-kema` | regalo (objeto para dar) | `pema` (dar) + `kema` (objeto) | OK |
+| `kema-kopa` | bolsa (contenedor de objetos) | `kema` (objeto) + `kopa` (contenedor) | OK |
+| `faro-po-dune` | cansancio (sentir poca fuerza) | `faro` (fuerza) + `po` (menos) + `dune` (sentir) | OK |
+| `sule-moke` | sueño (necesidad de dormir) | `sule` (dormir) + `moke` (necesidad) | OK |
+| `saku-kasu` | peligro (causa de alerta) | `saku` (alerta) + `kasu` (causa) | OK |
+| `sado-fadu-feke` | vacuna (herramienta de seguridad de la salud) | `sado` (salud) + `fadu` (seguridad) + `feke` (herramienta) | OK |
+| `faro-gura` | descansar (recibir fuerza) | `faro` (fuerza) + `gura` (recibir) | OK |
+| `lena-gume-sabe` | dulce (sabor de azúcar) | `lena` (agrado) + `gume` (materia) + `sabe` (boca) | OK |
+| `chaga-rela-sabe` | salado (sabor de sal) | `chaga` (carga eléctrica) + `rela` (unión) + `sabe` (boca) | OK |
+| `taro-nelo-fame` | yuca (comida de planta de tierra) | `taro` (tierra) + `nelo` (planta) + `fame` (comida) | OK |
+| `go-gore` | alto (tamaño hacia arriba) | `go` (arriba) + `gore` (tamaño) | OK |
+| `kado-gore` | ancho (tamaño del lado) | `kado` (lado geométrico) + `gore` (tamaño) | OK |
+| `go-gu` | vertical (arriba y abajo) | `go` (arriba) + `gu` (abajo) | OK |
+| `taro-tabe` | horizontal (superficie de la tierra) | `taro` (tierra) + `tabe` (superficie de apoyo) | OK |
+| `sede-kema` | silla (objeto de asiento) | `sede` (asiento) + `kema` (objeto) | OK |
+| `kuma-kopa-gore` | armario (contenedor grande de la casa) | `kuma` (hogar) + `kopa` (contenedor) + `gore` (tamaño) | OK |
+| `go-tabe` | estante (superficie alta) | `go` (arriba) + `tabe` (superficie de apoyo) | OK |
+| `falo-tabe` | espejo (superficie de reflexión) | `falo` (reflexión) + `tabe` (superficie de apoyo) | OK |
+| `loke-nado-lobe` | cortina (cubierta de la ventana) | `loke` (ojo) + `nado` (acceso) + `lobe` (cubierta) | OK |
+| `kuma-tabe-lobe` | alfombra (cubierta del suelo) | `kuma` (hogar) + `tabe` (superficie de apoyo) + `lobe` (cubierta) | OK |
+| `tume-sede` | almohada (asiento de la cabeza) | `tume` (cabeza) + `sede` (asiento) | OK |
+| `sule-lobe` | manta (cubierta de dormir) | `sule` (dormir) + `lobe` (cubierta) | OK |
+| `sule-tabe-lobe` | sábana (cubierta de la cama) | `sule` (dormir) + `tabe` (superficie de apoyo) + `lobe` (cubierta) | OK |
+| `sura-duma-meka` | ventilador (máquina del viento) | `sura` (aire) + `duma` (movimiento) + `meka` (máquina) | OK |
+| `fure-pa-meka` | calefacción (máquina de calor) | `fure` (temperatura) + `pa` (más) + `meka` (máquina) | OK |
+| `fure-po-kopa` | refrigerador (contenedor de frío) | `fure` (temperatura) + `po` (menos) + `kopa` (contenedor) | OK |
+| `pore-meka` | estufa (máquina de fuego) | `pore` (fuego) + `meka` (máquina) | OK |
+| `gase-meka` | lavadora (máquina de limpieza) | `gase` (limpieza) + `meka` (máquina) | OK |
+| `dabo-delo-feke` | escoba (herramienta para tomar la suciedad) | `dabo` (suciedad) + `delo` (tomar) + `feke` (herramienta) | OK |
+| `dabo-gume` | basura (materia de suciedad) | `dabo` (suciedad) + `gume` (materia) | OK |
+| `suna-nado` | grifo (acceso del agua) | `suna` (agua) + `nado` (acceso) | OK |
+| `suna-duma-kore` | tubería (camino del agua) | `suna` (agua) + `duma` (movimiento) + `kore` (lugar) | OK |
+| `suna-gu-duma` | ducha (agua que baja) | `suna` (agua) + `gu` (abajo) + `duma` (movimiento) | OK |
+| `eleka-nado` | enchufe (acceso de la electricidad) | `eleka` (electricidad) + `nado` (acceso) | OK |
+| `bure-kose-feke` | interruptor (herramienta de abrir y cerrar) | `bure` (abrir) + `kose` (cerrar) + `feke` (herramienta) | OK |
+| `kura-rela` | cable (unión de la corriente eléctrica) | `kura` (corriente eléctrica) + `rela` (unión) | OK |
+| `eleka-salo` | foco (luz eléctrica) | `eleka` (electricidad) + `salo` (luz) | OK |
+| `sone-salo-sena` | televisión (imagen y sonido) | `sone` (sonido) + `salo` (luz) + `sena` (signo) | OK |
+| `sone-meka` | radio (máquina de sonido) | `sone` (sonido) + `meka` (máquina) | OK |
+| `lu-sone-meka` | teléfono (máquina de sonido lejano) | `lu` (lejos) + `sone` (sonido) + `meka` (máquina) | OK |
+| `kuma-ba-kore` | patio (lugar exterior de la casa) | `kuma` (hogar) + `ba` (exterior) + `kore` (lugar) | OK |
+| `taro-meka-kuma` | garaje (casa del coche) | `taro` (tierra) + `meka` (máquina) + `kuma` (hogar) | OK |
+| `kore-kose` | valla (cierre de un lugar) | `kore` (lugar) + `kose` (cerrar) | OK |
+| `nado-kose-feke` | cerradura (herramienta de cerrar el acceso) | `nado` (acceso) + `kose` (cerrar) + `feke` (herramienta) | OK |
+| `kuma-gu-kore` | sótano (lugar bajo la casa) | `kuma` (hogar) + `gu` (abajo) + `kore` (lugar) | OK |
+| `kuma-go-kore` | azotea (lugar alto de la casa) | `kuma` (hogar) + `go` (arriba) + `kore` (lugar) | OK |
+| `kuma-fedo-kelo` | alquiler (pago periódico de la casa) | `kuma` (hogar) + `fedo` (pago) + `kelo` (ciclo) | OK |
+| `pase-nara` | dueño (persona de posesión) | `pase` (posesión) + `nara` (persona) | OK |
+| `kuma-telo` | mudarse (cambio de casa) | `kuma` (hogar) + `telo` (cambiar) | OK |
+| `gase-dare` | limpiar (hacer limpieza) | `gase` (limpieza) + `dare` (hacer) | OK |
+| `dabo-delo` | barrer (tomar la suciedad) | `dabo` (suciedad) + `delo` (tomar) | OK |
+| `sone-tada` | timbre (sonido de contacto) | `sone` (sonido) + `tada` (contacto) | OK |
+| `reka-sena-kopa` | buzón (contenedor de mensajes) | `reka` (comunicación) + `sena` (signo) + `kopa` (contenedor) | OK |
+| `beka-tabe` | papel (superficie de escritura) | `beka` (escritura) + `tabe` (superficie de apoyo) | OK |
+| `suna-fadu` | agua potable (agua segura) | `suna` (agua) + `fadu` (seguridad) | OK |
+| `pore-nelo-gume` | leña (materia de planta para el fuego) | `pore` (fuego) + `nelo` (planta) + `gume` (materia) | OK |
+| `gase-feke` | cepillo (herramienta de limpieza) | `gase` (limpieza) + `feke` (herramienta) | OK |
+| `tume-nelo-feke` | peine (herramienta del cabello) | `tume` (cabeza) + `nelo` (planta) + `feke` (herramienta) | OK |
+| `delo-nuse-feke` | tijeras (herramienta de cortar) | `delo` (tomar) + `nuse` (vacío) + `feke` (herramienta) | OK |
+| `bume-rela-feke` | aguja (herramienta para unir la ropa) | `bume` (ropa) + `rela` (unión) + `feke` (herramienta) | OK |
+| `doke-kopa-seta` | carpeta (conjunto de archivos) | `doke` (información) + `kopa` (contenedor) + `seta` (conjunto) | OK |
+| `doke-kopa-foma` | sistema de archivos (reglas de los archivos) | `doke` (información) + `kopa` (contenedor) + `foma` (regla) | OK |
+| `mado-tera` | proceso de programa (cálculo en el tiempo) | `mado` (cálculo) + `tera` (tiempo) | OK |
+| `mado-raga` | hilo de ejecución (cálculo en fila) | `mado` (cálculo) + `raga` (fila) | OK |
+| `mena-sape` | memoria rápida (memoria veloz) | `mena` (memoria) + `sape` (velocidad) | OK |
+| `mado-kore` | procesador (lugar del cálculo) | `mado` (cálculo) + `kore` (lugar) | OK |
+| `mena-goda` | disco (memoria sólida) | `mena` (memoria) + `goda` (estado sólido) | OK |
+| `mena-ba` | memoria externa (memoria exterior) | `mena` (memoria) + `ba` (exterior) | OK |
+| `meka-gora-doma` | núcleo del sistema (centro del sistema operativo) | `meka` (máquina) + `gora` (mundo) + `doma` (corazón) | OK |
+| `rela-le` | red local (unión cercana) | `rela` (unión) + `le` (cerca) | OK |
+| `mado-foma-fena` | instalar (poner programa) | `mado` (cálculo) + `foma` (regla) + `fena` (poner) | OK |
+| `mado-foma-nuse` | desinstalar (programa vacío) | `mado` (cálculo) + `foma` (regla) + `nuse` (vacío) | OK |
+| `mado-foma-kuma` | repositorio de programas (casa de programas) | `mado` (cálculo) + `foma` (regla) + `kuma` (hogar) | OK |
+| `lu-doke-gura` | descargar (recibir datos de lejos) | `lu` (lejos) + `doke` (información) + `gura` (recibir) | OK |
+| `lu-doke-pema` | subir (dar datos lejos) | `lu` (lejos) + `doke` (información) + `pema` (dar) | OK |
+| `dare-se-fadu` | copia de seguridad (copia con seguridad) | `dare` (hacer) + `se` (igualdad) + `fadu` (seguridad) | OK |
+| `doke-rude` | restaurar (reparar los datos) | `doke` (información) + `rude` (reparación) | OK |
+| `meka-gora-bade` | administrador (autoridad del sistema operativo) | `meka` (máquina) + `gora` (mundo) + `bade` (autoridad) | OK |
+| `nado-pode` | permiso (posibilidad de acceso) | `nado` (acceso) + `pode` (posibilidad) | OK |
+| `nara-kade-gade` | cuenta de usuario (identidad del usuario) | `nara` (persona) + `kade` (usar) + `gade` (identidad) | OK |
+| `kade-tera` | sesión (tiempo de uso) | `kade` (usar) + `tera` (tiempo) | OK |
+| `dese-kera` | seleccionar (obtener la decisión) | `dese` (decisión) + `kera` (obtener) | OK |
+| `dare-se-fena` | pegar (poner la copia) | `dare` (hacer) + `se` (igualdad) + `fena` (poner) | OK |
+| `dare-se-kopa` | portapapeles (contenedor de la copia) | `dare` (hacer) + `se` (igualdad) + `kopa` (contenedor) | OK |
+| `to-pema` | enviar un mensaje (dar hacia) | `to` (hacia) + `pema` (dar) | OK |
+| `de-gura` | recibir un mensaje (recibir desde) | `de` (desde) + `gura` (recibir) | OK |
+| `reka-sena` | mensaje (signo de comunicación) | `reka` (comunicación) + `sena` (signo) | OK |
+| `reka-paku` | notificación (comunicación que llama la atención) | `reka` (comunicación) + `paku` (atención) | OK |
+| `sone-saku` | alarma (sonido de alerta) | `sone` (sonido) + `saku` (alerta) | OK |
+| `salo-sena-meka` | cámara (máquina de imagen) | `salo` (luz) + `sena` (signo) + `meka` (máquina) | OK |
+| `sone-gura-meka` | micrófono (máquina que recibe sonido) | `sone` (sonido) + `gura` (recibir) + `meka` (máquina) | OK |
+| `sone-pema-meka` | altavoz (máquina que da sonido) | `sone` (sonido) + `pema` (dar) + `meka` (máquina) | OK |
+| `sone-loke-feke` | auriculares (herramienta del oído) | `sone` (sonido) + `loke` (ojo) + `feke` (herramienta) | OK |
+| `sone-mena` | audio (memoria de sonido) | `sone` (sonido) + `mena` (memoria) | OK |
+| `doke-gore-po` | comprimir (datos pequeños) | `doke` (información) + `gore` (tamaño) + `po` (menos) | OK |
+| `doke-gore-pa` | descomprimir (datos grandes) | `doke` (información) + `gore` (tamaño) + `pa` (más) | OK |
+| `mado-foma-bosa` | virus informático (programa de rotura) | `mado` (cálculo) + `foma` (regla) + `bosa` (rotura) | OK |
+| `mado-foma-fadu` | antivirus (programa de seguridad) | `mado` (cálculo) + `foma` (regla) + `fadu` (seguridad) | OK |
+| `rela-fadu` | cortafuegos (seguridad de la red) | `rela` (unión) + `fadu` (seguridad) | OK |
+| `meka-foma` | controlador de dispositivo (reglas de la máquina) | `meka` (máquina) + `foma` (regla) | OK |
+| `dare-reka-kore` | terminal de comandos (lugar de comandos) | `dare` (hacer) + `reka` (comunicación) + `kore` (lugar) | OK |
+| `dare-reka-beka` | script (comandos escritos) | `dare` (hacer) + `reka` (comunicación) + `beka` (escritura) | OK |
+| `kelo-dare` | bucle (hacer ciclo) | `kelo` (ciclo) + `dare` (hacer) | OK |
+| `kore-rela` | enlace (unión a un lugar) | `kore` (lugar) + `rela` (unión) | OK |
+| `se-tera-dare` | sincronizar (hacer igual en el tiempo) | `se` (igualdad) + `tera` (tiempo) + `dare` (hacer) | OK |
+| `foma-beka-dare` | programar (hacer código) | `foma` (regla) + `beka` (escritura) + `dare` (hacer) | OK |
+| `foma-beka-bure` | código abierto (código abierto) | `foma` (regla) + `beka` (escritura) + `bure` (abrir) | OK |
+| `telo-tera-mena` | registro de eventos (memoria de los eventos) | `telo` (cambiar) + `tera` (tiempo) + `mena` (memoria) | OK |
+| `loke-kopa-palo` | pestaña de ventana (parte de la ventana) | `loke` (ojo) + `kopa` (contenedor) + `palo` (parte) | OK |
+| `kade-mena` | historial (memoria de uso) | `kade` (usar) + `mena` (memoria) | OK |
+| `enu-pema-feke` | cargador (herramienta que da energía) | `enu` (energía) + `pema` (dar) + `feke` (herramienta) | OK |
+| `enu-fena` | cargar la batería (poner energía) | `enu` (energía) + `fena` (poner) | OK |
+| `nara-seta` | contactos (conjunto de personas) | `nara` (persona) + `seta` (conjunto) | OK |
+| `luma-meka` | sensor (máquina de percepción) | `luma` (percepción) + `meka` (máquina) | OK |
+| `meka-daro` | robot (máquina de trabajo) | `meka` (máquina) + `daro` (trabajo) | OK |
+| `fedo-gura` | cobrar (recibir pago) | `fedo` (pago) + `gura` (recibir) | OK |
+| `fedo-telo` | vuelto (pago de cambio) | `fedo` (pago) + `telo` (cambiar) | OK |
+| `bado-goda` | moneda (valor sólido) | `bado` (valor) + `goda` (estado sólido) | OK |
+| `bado-tabe` | billete (superficie de valor) | `bado` (valor) + `tabe` (superficie de apoyo) | OK |
+| `fedo-kema` | tarjeta de pago (objeto de pago) | `fedo` (pago) + `kema` (objeto) | OK |
+| `fedo-beka` | recibo (escritura del pago) | `fedo` (pago) + `beka` (escritura) | OK |
+| `kera-fedo-nara` | comprador (persona que compra) | `kera` (obtener) + `fedo` (pago) + `nara` (persona) | OK |
+| `pema-fedo-nara` | vendedor (persona que vende) | `pema` (dar) + `fedo` (pago) + `nara` (persona) | OK |
+| `kume-daro-nara` | comerciante (persona del trabajo de intercambio) | `kume` (intercambio) + `daro` (trabajo) + `nara` (persona) | OK |
+| `bado-po-dare` | descuento (hacer menos valor) | `bado` (valor) + `po` (menos) + `dare` (hacer) | OK |
+| `bado-reka` | regatear (comunicar el valor) | `bado` (valor) + `reka` (comunicación) | OK |
+| `bado-pema-pu` | préstamo (valor dado y devuelto en el futuro) | `bado` (valor) + `pema` (dar) + `pu` (posterior) | OK |
+| `bado-fena-pu` | ahorrar (poner valor para el futuro) | `bado` (valor) + `fena` (poner) + `pu` (posterior) | OK |
+| `bado-gade` | cuenta bancaria (identidad de valor) | `bado` (valor) + `gade` (identidad) | OK |
+| `bado-kopa-nara` | cajero (persona del banco) | `bado` (valor) + `kopa` (contenedor) + `nara` (persona) | OK |
+| `bado-kopa-meka` | cajero automático (máquina del banco) | `bado` (valor) + `kopa` (contenedor) + `meka` (máquina) | OK |
+| `gama-mede` | pesar (medir la masa) | `gama` (masa) + `mede` (medir) | OK |
+| `gama-mede-feke` | balanza (herramienta para medir la masa) | `gama` (masa) + `mede` (medir) + `feke` (herramienta) | OK |
+| `kema-lobe` | paquete (objeto cubierto) | `kema` (objeto) + `lobe` (cubierta) | OK |
+| `kopa-goda` | caja (contenedor sólido) | `kopa` (contenedor) + `goda` (estado sólido) | OK |
+| `kopa-duma` | carrito (contenedor móvil) | `kopa` (contenedor) + `duma` (movimiento) | OK |
+| `kema-seta-doke` | inventario (datos del conjunto de objetos) | `kema` (objeto) + `seta` (conjunto) + `doke` (información) | OK |
+| `kema-seta-kuma` | almacén (casa del conjunto de objetos) | `kema` (objeto) + `seta` (conjunto) + `kuma` (hogar) | OK |
+| `pema-lu` | entrega (dar lejos) | `pema` (dar) + `lu` (lejos) | OK |
+| `fadu-beka` | garantía (seguridad escrita) | `fadu` (seguridad) + `beka` (escritura) | OK |
+| `telo-pema` | devolver (dar de regreso) | `telo` (cambiar) + `pema` (dar) | OK |
+| `kume-fedo-no` | trueque (intercambio sin pago) | `kume` (intercambio) + `fedo` (pago) + `no` (negación) | OK |
+| `dapa-bado` | total a pagar (suma de valor) | `dapa` (suma) + `bado` (valor) | OK |
+| `kume-pose` | puesto de venta (posición de intercambio) | `kume` (intercambio) + `pose` (posición) | OK |
+| `bado-mado` | contabilidad (cálculo de valor) | `bado` (valor) + `mado` (cálculo) | OK |
+| `bado-pu-seta` | presupuesto (conjunto de valor futuro) | `bado` (valor) + `pu` (posterior) + `seta` (conjunto) | OK |
+| `kera-fedo-nume` | pedido (deseo de comprar) | `kera` (obtener) + `fedo` (pago) + `nume` (deseo) | OK |
+| `nara-bora` | cuerpo humano (cuerpo de persona) | `nara` (persona) + `bora` (cuerpo) | OK |
+| `bora-palo` | órgano (parte del cuerpo) | `bora` (cuerpo) + `palo` (parte) | OK |
+| `bora-kefe-kado` | espalda (lado del soporte del cuerpo) | `bora` (cuerpo) + `kefe` (sostener) + `kado` (lado geométrico) | OK |
+| `maku-rela-go` | hombro (unión alta del brazo) | `maku` (mano) + `rela` (unión) + `go` (arriba) | OK |
+| `maku-rela-telo` | codo (cambio del brazo) | `maku` (mano) + `rela` (unión) + `telo` (cambiar) | OK |
+| `maku-kefe` | muñeca (soporte de la mano) | `maku` (mano) + `kefe` (sostener) | OK |
+| `maku-doma` | palma (centro de la mano) | `maku` (mano) + `doma` (corazón) | OK |
+| `maku-sena` | huella dactilar (signo de la mano) | `maku` (mano) + `sena` (signo) | OK |
+| `kalu-rela` | cadera (unión de la pierna) | `kalu` (pierna) + `rela` (unión) | OK |
+| `kalu-gore-gume` | muslo (materia grande de la pierna) | `kalu` (pierna) + `gore` (tamaño) + `gume` (materia) | OK |
+| `kalu-gune-rela` | tobillo (unión del pie) | `kalu` (pierna) + `gune` (fin) + `rela` (unión) | OK |
+| `kalu-gune-palo` | dedo del pie (parte del pie) | `kalu` (pierna) + `gune` (fin) + `palo` (parte) | OK |
+| `kalu-gune-gu` | talón (abajo del pie) | `kalu` (pierna) + `gune` (fin) + `gu` (abajo) | OK |
+| `bora-doma` | ombligo (centro del cuerpo) | `bora` (cuerpo) + `doma` (corazón) | OK |
+| `bora-rela` | cintura (unión del cuerpo) | `bora` (cuerpo) + `rela` (unión) | OK |
+| `sabe-nado` | garganta (acceso de la boca) | `sabe` (boca) + `nado` (acceso) | OK |
+| `sabe-lobe` | labio (cubierta de la boca) | `sabe` (boca) + `lobe` (cubierta) | OK |
+| `loke-sabe-kado` | mejilla (lado de la cara) | `loke` (ojo) + `sabe` (boca) + `kado` (lado geométrico) | OK |
+| `loke-go` | frente (arriba de los ojos) | `loke` (ojo) + `go` (arriba) | OK |
+| `loke-nelo` | ceja (planta del ojo) | `loke` (ojo) + `nelo` (planta) | OK |
+| `loke-lobe` | párpado (cubierta del ojo) | `loke` (ojo) + `lobe` (cubierta) | OK |
+| `loke-lobe-nelo` | pestaña (planta de la cubierta del ojo) | `loke` (ojo) + `lobe` (cubierta) + `nelo` (planta) | OK |
+| `sabe-nelo` | barba (planta de la boca) | `sabe` (boca) + `nelo` (planta) | OK |
+| `sabe-gu` | mentón (abajo de la boca) | `sabe` (boca) + `gu` (abajo) | OK |
+| `suma-suna-nado` | vaso sanguíneo (acceso de la sangre) | `suma` (vida) + `suna` (agua) + `nado` (acceso) | OK |
+| `bora-suna-gase` | riñón (limpieza del agua del cuerpo) | `bora` (cuerpo) + `suna` (agua) + `gase` (limpieza) | OK |
+| `fame-duma-kore` | intestino (camino de la comida) | `fame` (comida) + `duma` (movimiento) + `kore` (lugar) | OK |
+| `bora-suna-kopa` | vejiga (contenedor del agua del cuerpo) | `bora` (cuerpo) + `suna` (agua) + `kopa` (contenedor) | OK |
+| `go-gu-kefe` | columna vertebral (soporte vertical) | `go` (arriba) + `gu` (abajo) + `kefe` (sostener) | OK |
+| `doma-kopa-kefe` | costilla (soporte del pecho) | `doma` (corazón) + `kopa` (contenedor) + `kefe` (sostener) | OK |
+| `tume-kefe` | cráneo (soporte de la cabeza) | `tume` (cabeza) + `kefe` (sostener) | OK |
+| `bora-kefe-rela` | articulación (unión de huesos) | `bora` (cuerpo) + `kefe` (sostener) + `rela` (unión) | OK |
+| `bora-faro-rela` | tendón (unión del músculo) | `bora` (cuerpo) + `faro` (fuerza) + `rela` (unión) | OK |
+| `sabe-suna` | saliva (agua de la boca) | `sabe` (boca) + `suna` (agua) | OK |
+| `loke-suna-gume` | lágrima (materia del llanto) | `loke` (ojo) + `suna` (agua) + `gume` (materia) | OK |
+| `reka-sone-dore` | voz (forma del sonido al hablar) | `reka` (comunicación) + `sone` (sonido) + `dore` (forma) | OK |
+| `doma-kelo` | latido (ciclo del corazón) | `doma` (corazón) + `kelo` (ciclo) | OK |
+| `suma-dure` | edad (duración de la vida) | `suma` (vida) + `dure` (duración) | OK |
+| `bora-dabo-suna` | orina (agua de desecho del cuerpo) | `bora` (cuerpo) + `dabo` (suciedad) + `suna` (agua) | OK |
+| `bora-dabo-gume` | excremento (materia de desecho del cuerpo) | `bora` (cuerpo) + `dabo` (suciedad) + `gume` (materia) | OK |
+| `naku-bo` | embarazo (hijo en el interior) | `naku` (descendiente) + `bo` (interior) | OK |
+| `sura-bosa-sone` | tos (sonido del aire roto) | `sura` (aire) + `bosa` (rotura) + `sone` (sonido) | OK |
+| `sabe-lena-po` | sonrisa (risa menor) | `sabe` (boca) + `lena` (agrado) + `po` (menos) | OK |
+| `suna-boga-dare` | hervir (hacer vapor del agua) | `suna` (agua) + `boga` (estado gaseoso) + `dare` (hacer) | OK |
+| `mase-pore-dare` | freír (cocinar con grasa y fuego) | `mase` (recurso) + `pore` (fuego) + `dare` (hacer) | OK |
+| `pore-kuma` | horno (casa de fuego) | `pore` (fuego) + `kuma` (hogar) | OK |
+| `pore-kuma-dare` | hornear (hacer en el horno) | `pore` (fuego) + `kuma` (hogar) + `dare` (hacer) | OK |
+| `pore-salo-dare` | asar (hacer con llama) | `pore` (fuego) + `salo` (luz) + `dare` (hacer) | OK |
+| `gume-rela-dare` | mezclar (hacer unión de materias) | `gume` (materia) + `rela` (unión) + `dare` (hacer) | OK |
+| `lobe-delo` | pelar (tomar la cubierta) | `lobe` (cubierta) + `delo` (tomar) | OK |
+| `nobe-pume` | beber (comer bebida) | `nobe` (bebida) + `pume` (comer) | OK |
+| `fame-pema` | servir comida (dar comida) | `fame` (comida) + `pema` (dar) | OK |
+| `fure-pa-dare` | calentar (hacer caliente) | `fure` (temperatura) + `pa` (más) + `dare` (hacer) | OK |
+| `fure-po-dare` | enfriar (hacer frío) | `fure` (temperatura) + `po` (menos) + `dare` (hacer) | OK |
+| `sabe-gume` | condimento (materia del sabor) | `sabe` (boca) + `gume` (materia) | OK |
+| `tabu-gume-suna` | masa de harina (harina con agua) | `tabu` (pan) + `gume` (materia) + `suna` (agua) | OK |
+| `pado-nelo-fame` | grano (semilla de comida) | `pado` (comienzo) + `nelo` (planta) + `fame` (comida) | OK |
+| `nede-fame-seta` | ensalada (conjunto de verdura) | `nede` (verde) + `fame` (comida) + `seta` (conjunto) | OK |
+| `lena-gume-fame` | postre (comida de azúcar) | `lena` (agrado) + `gume` (materia) + `fame` (comida) | OK |
+| `fame-luda` | salsa (comida líquida) | `fame` (comida) + `luda` (estado líquido) | OK |
+| `naku-nobe-mase` | mantequilla (grasa de la leche) | `naku` (descendiente) + `nobe` (bebida) + `mase` (recurso) | OK |
+| `nelo-maku-nobe` | té (bebida de hoja) | `nelo` (planta) + `maku` (mano) + `nobe` (bebida) | OK |
+| `mase-pore-kopa` | sartén (contenedor para freír) | `mase` (recurso) + `pore` (fuego) + `kopa` (contenedor) | OK |
+| `suna-fame-feke` | cuchara (herramienta de sopa) | `suna` (agua) + `fame` (comida) + `feke` (herramienta) | OK |
+| `fame-kefe-feke` | tenedor (herramienta para sostener la comida) | `fame` (comida) + `kefe` (sostener) + `feke` (herramienta) | OK |
+| `nobe-kopa-gore` | jarra (contenedor grande de bebida) | `nobe` (bebida) + `kopa` (contenedor) + `gore` (tamaño) | OK |
+| `nobe-kopa-kose` | botella (contenedor cerrado de bebida) | `nobe` (bebida) + `kopa` (contenedor) + `kose` (cerrar) | OK |
+| `delo-nuse-tabe` | tabla de cortar (superficie de cortar) | `delo` (tomar) + `nuse` (vacío) + `tabe` (superficie de apoyo) | OK |
+| `fame-foma` | receta (reglas de la comida) | `fame` (comida) + `foma` (regla) | OK |
+| `fame-palo` | ingrediente (parte de la comida) | `fame` (comida) + `palo` (parte) | OK |
+| `fame-gore-po` | porción (comida pequeña) | `fame` (comida) + `gore` (tamaño) + `po` (menos) | OK |
+| `pore-so` | crudo (sin fuego) | `pore` (fuego) + `so` (sin) | OK |
+| `pore-ko` | cocido (con fuego) | `pore` (fuego) + `ko` (con) | OK |
+| `fame-bosa` | podrido (comida rota) | `fame` (comida) + `bosa` (rotura) | OK |
+| `lena-no-sabe` | amargo (sabor sin agrado) | `lena` (agrado) + `no` (negación) + `sabe` (boca) | OK |
+| `pore-dare-nara` | cocinero (persona que cocina) | `pore` (fuego) + `dare` (hacer) + `nara` (persona) | OK |
+| `fame-fedo-kore` | restaurante (lugar de comida con pago) | `fame` (comida) + `fedo` (pago) + `kore` (lugar) | OK |
+| `tabu-kuma` | panadería (casa del pan) | `tabu` (pan) + `kuma` (hogar) | OK |
+| `bora-gume-kuma` | carnicería (casa de carne) | `bora` (cuerpo) + `gume` (materia) + `kuma` (hogar) | OK |
+| `taro-nelo-daro` | agricultura (trabajo de tierra y planta) | `taro` (tierra) + `nelo` (planta) + `daro` (trabajo) | OK |
+| `taro-nelo-nara` | agricultor (persona de tierra y planta) | `taro` (tierra) + `nelo` (planta) + `nara` (persona) | OK |
+| `taro-nelo-kore` | campo de cultivo (lugar de tierra y planta) | `taro` (tierra) + `nelo` (planta) + `kore` (lugar) | OK |
+| `taro-pose` | terreno (posición de tierra) | `taro` (tierra) + `pose` (posición) | OK |
+| `nelo-dare` | cultivar (hacer plantas) | `nelo` (planta) + `dare` (hacer) | OK |
+| `pado-nelo-fena` | sembrar (poner semilla) | `pado` (comienzo) + `nelo` (planta) + `fena` (poner) | OK |
+| `nelo-kera` | cosechar (obtener de la planta) | `nelo` (planta) + `kera` (obtener) | OK |
+| `nelo-kera-kema` | cosecha (objeto de cosechar) | `nelo` (planta) + `kera` (obtener) + `kema` (objeto) | OK |
+| `nelo-kera-tera` | época de cosecha (tiempo de cosechar) | `nelo` (planta) + `kera` (obtener) + `tera` (tiempo) | OK |
+| `nelo-suna-pema` | regar (dar agua a la planta) | `nelo` (planta) + `suna` (agua) + `pema` (dar) | OK |
+| `taro-bure` | arar (abrir la tierra) | `taro` (tierra) + `bure` (abrir) | OK |
+| `taro-fame-gume` | abono (materia para tierra fértil) | `taro` (tierra) + `fame` (comida) + `gume` (materia) | OK |
+| `nelo-suna-duma` | canal de riego (movimiento de agua de las plantas) | `nelo` (planta) + `suna` (agua) + `duma` (movimiento) | OK |
+| `taro-bure-meka` | tractor (máquina de arar) | `taro` (tierra) + `bure` (abrir) + `meka` (máquina) | OK |
+| `taro-bure-feke` | arado (herramienta de arar) | `taro` (tierra) + `bure` (abrir) + `feke` (herramienta) | OK |
+| `taro-delo-feke` | pala (herramienta para tomar tierra) | `taro` (tierra) + `delo` (tomar) + `feke` (herramienta) | OK |
+| `taro-bosa-feke` | azada (herramienta de romper tierra) | `taro` (tierra) + `bosa` (rotura) + `feke` (herramienta) | OK |
+| `nelo-bosa-feke` | hoz (herramienta de romper plantas) | `nelo` (planta) + `bosa` (rotura) + `feke` (herramienta) | OK |
+| `ruma-nelo-kuma` | granja (casa de animales y plantas) | `ruma` (animal) + `nelo` (planta) + `kuma` (hogar) | OK |
+| `ruma-kopa` | corral (contenedor de animales) | `ruma` (animal) + `kopa` (contenedor) | OK |
+| `ruma-fame-daro` | ganadería (trabajo de animales de alimento) | `ruma` (animal) + `fame` (comida) + `daro` (trabajo) | OK |
+| `ruma-fame-nara` | pastor (persona del ganado) | `ruma` (animal) + `fame` (comida) + `nara` (persona) | OK |
+| `ruma-fame-nelo` | pasto (planta del ganado) | `ruma` (animal) + `fame` (comida) + `nelo` (planta) | OK |
+| `ruma-kuna-kuma` | gallina (pájaro de casa) | `ruma` (animal) + `kuna` (cielo) + `kuma` (hogar) | OK |
+| `ruma-naku-nobe` | vaca (animal de la leche) | `ruma` (animal) + `naku` (descendiente) + `nobe` (bebida) | OK |
+| `ruma-bume` | oveja (animal de ropa) | `ruma` (animal) + `bume` (ropa) | OK |
+| `ruma-bume-gume` | lana (materia de la ropa animal) | `ruma` (animal) + `bume` (ropa) + `gume` (materia) | OK |
+| `ruma-mase` | cerdo (animal de grasa) | `ruma` (animal) + `mase` (recurso) | OK |
+| `ruma-duma-feke` | caballo (animal herramienta de movimiento) | `ruma` (animal) + `duma` (movimiento) + `feke` (herramienta) | OK |
+| `ruma-taro-go` | llama andina (animal de la montaña) | `ruma` (animal) + `taro` (tierra) + `go` (arriba) | OK |
+| `ruma-fadu` | perro (animal de seguridad) | `ruma` (animal) + `fadu` (seguridad) | OK |
+| `ruma-kuma-po` | gato (animal pequeño de casa) | `ruma` (animal) + `kuma` (hogar) + `po` (menos) | OK |
+| `ku-kalu-bosa` | plaga (insectos que rompen) | `ku` (6) + `kalu` (pierna) + `bosa` (rotura) | OK |
+| `nelo-bado-no` | maleza (planta sin valor) | `nelo` (planta) + `bado` (valor) + `no` (negación) | OK |
+| `nelo-suna-goda` | helada (hielo de las plantas) | `nelo` (planta) + `suna` (agua) + `goda` (estado sólido) | OK |
+| `pado-nelo-kuma` | silo (casa de semillas) | `pado` (comienzo) + `nelo` (planta) + `kuma` (hogar) | OK |
+| `tabu-gume-meka` | molino (máquina de harina) | `tabu` (pan) + `gume` (materia) + `meka` (máquina) | OK |
+| `suna-taro-gu` | pozo (agua bajo la tierra) | `suna` (agua) + `taro` (tierra) + `gu` (abajo) | OK |
+| `nede-fame-kore` | huerto (lugar de verduras) | `nede` (verde) + `fame` (comida) + `kore` (lugar) | OK |

@@ -7,7 +7,7 @@
 | Comprobación | Resultado |
 |---|---|
 | Textos Owee (9 archivos): fonología V/CV sin `i` y vocabulario existente | ✅ válidos |
-| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 759 formas (lotes 3–8) | ✅ 142 auditadas · **617 aprobadas** · **0 verificadas pendientes** · 0 por revisar |
+| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 1 027 formas (lotes 3–14) | ✅ 142 auditadas · **617 aprobadas** · **268 verificadas pendientes de aprobar (lotes 9–14)** · 0 por revisar |
 | Colisiones exactas, fonología inválida, partes inexistentes | ✅ ninguna |
 | Sitio web: 26 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
 | **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 168 OK · 27 ajustados · 0 en espera — ver `02_Diccionario/datos/revision_semantica.md` |
@@ -24,7 +24,7 @@
 
 | Área | Contenido | Estado |
 |---|---|---|
-| **Fonología y escritura** | 4 vocales, 14 consonantes, 60 sílabas, acento inicial; Owee Script con 72 glifos (sílabas, dígitos, nexo de compuesto, marca de nombre propio) | cerrado |
+| **Fonología y escritura** | 4 vocales, 14 consonantes, 60 sílabas, acento inicial; Owee Script 3.4 con 72 glifos nuevos (sílabas, dígitos, nexo `‿`, marca de nombre `ᚠ`): geométricos, por familias, recto y fluido; vocales con forma propia; ver `GUIA_DE_ESTILO_v4.md` | cerrado |
 | **Pronunciación** | Guía con AFI y transcripción para hispanohablantes, alargamiento expresivo (`tareee`) | aprobado |
 | **Gramática** | Base 1.0 + propuesta 1.1 (sí, imperativo, vocativo, demostrativos, cuantificadores, relativas con `ra`, ordinales, negativos con `po`, nombres propios) | **parcialmente confirmada** |
 | **Vocabulario general** | 200 formas (Base 1.0) + 40 de vida diaria + 27 de gramática | aprobado |
