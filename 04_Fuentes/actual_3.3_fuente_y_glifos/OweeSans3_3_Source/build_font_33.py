@@ -189,6 +189,7 @@ def main():
     g_ = globals()
     for k in ("SX", "SY", "SLANT", "STROKE", "MIN_W", "SIDE", "DIGIT_SIDE"):
         g_[k] = st[k]
+    if V4: os.environ["OWEE_V4_STYLE"] = style
     if V4: g_["MIN_W"] = glifos_v4.MIN_W[style]; g_["S"] = glifos_v4.S_V4; g_["SY"] = glifos_v4.SY_V4[style]
     g_["VW"] = width(2.632171); g_["CW"] = width(3.070866)
     sk = json.loads((ROOT / "skeletons.json").read_text())
@@ -201,7 +202,7 @@ def main():
         for v in VOW:
             outlines[cp] = (syllable(sk[c + v]), SIDE); cp += 1
     assert cp == 0xE03C
-    outlines[0xE03C] = (joiner(), 40)
+    outlines[0xE03C] = (syllable(glifos_v4.joiner()) if V4 else joiner(), 40)
     outlines[0xE03D] = (syllable(glifos_v4.name_mark()) if V4 else namemark(), 80)
     for n in range(10):
         outlines[0xE040 + n] = (digit(n), DIGIT_SIDE)
