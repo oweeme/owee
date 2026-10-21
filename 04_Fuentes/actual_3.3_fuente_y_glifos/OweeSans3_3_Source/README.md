@@ -15,6 +15,13 @@ Curso Práctico para Adultos (pág. 4, "Sistema silábico").
 - Mismo PUA (U+E000..U+E03B, U+E040..U+E049): funciona con el IME Fcitx5 actual.
 - Métricas verticales correctas (no se recorta ni invade la línea anterior).
 
+## Consonantes rediseñadas (3.4)
+`consonantes_v34.py` sustituye f, s, l, r, d y ch por siluetas que se distinguen
+a primera vista (antes s/f, r/l, d/t y ch/sh sólo se diferenciaban por una barrita
+que se pegaba a la vocal): f `/`, l `\`, s `/` cruzada por una barra, r `\` con un
+punto, d arco cerrado por su base (t queda abierto), ch zigzag (sh sigue siendo onda).
+El PUA y el romano no cambian.
+
 ## Dos estilos desde el mismo esqueleto
 | Estilo | Fuente | Uso | Proporción |
 |---|---|---|---|

@@ -15,6 +15,8 @@ from pathlib import Path
 from math import cos, sin, pi
 import json, sys, math
 
+from consonantes_v34 import aplicar as consonantes_v34
+
 import pathops
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
@@ -185,7 +187,7 @@ def main():
     for k in ("SX", "SY", "SLANT", "STROKE", "MIN_W", "SIDE", "DIGIT_SIDE"):
         g_[k] = st[k]
     g_["VW"] = width(2.632171); g_["CW"] = width(3.070866)
-    sk = json.loads((ROOT / "skeletons.json").read_text())
+    sk = consonantes_v34(json.loads((ROOT / "skeletons.json").read_text()))
     outlines = {}
     cp = 0xE000
     for v in VOW:
@@ -216,7 +218,7 @@ def main():
     fb.setupNameTable({
         "familyName": st["family"], "styleName": "Regular",
         "uniqueFontIdentifier": st["family"], "fullName": st["family"] + " Regular",
-        "psName": st["ps"], "version": "Version 3.3",
+        "psName": st["ps"], "version": "Version 3.4",
     })
     fb.setupOS2(version=4, sTypoAscender=ASC, sTypoDescender=DESC, sTypoLineGap=0,
                 usWinAscent=ASC, usWinDescent=-DESC, sxHeight=660, sCapHeight=660,
