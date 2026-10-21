@@ -330,6 +330,23 @@ kenua	quinoa
 salotena	salteña (Bolivian pastry)
 kunape	cuñapé (cheese bread)
 charake	charque (dried meat)
+palata	avocado
+tomate	tomato
+seboea	onion
+sanaorea	carrot
+terego	wheat
+ferekolo	bean
+abana	broad bean
+arabeka	pea
+ako	garlic
+lemono	lemon
+naranaka	orange
+manasana	apple
+uba	grape
+kamoto	sweet potato
+lechuga	lettuce
+kafea	coffee
+kakao	cocoa
 ga-kado	triangle
 fo-kado	quadrilateral
 sa-kado	pentagon
@@ -991,3 +1008,254 @@ go-gore	height
 kado-gore	width
 go-gu	vertical
 taro-tabe	horizontal
+sede-kema	chair
+kuma-kopa-gore	wardrobe
+go-tabe	shelf
+falo-tabe	mirror
+loke-nado-lobe	curtain
+kuma-tabe-lobe	rug
+tume-sede	pillow
+sule-lobe	blanket
+sule-tabe-lobe	bed sheet
+sura-duma-meka	fan
+fure-pa-meka	heating
+fure-po-kopa	refrigerator
+pore-meka	stove
+gase-meka	washing machine
+dabo-delo-feke	broom
+dabo-gume	rubbish
+suna-nado	tap
+suna-duma-kore	pipe
+suna-gu-duma	shower
+eleka-nado	socket
+bure-kose-feke	switch
+kura-rela	cable
+eleka-salo	light bulb
+sone-salo-sena	television
+sone-meka	radio
+lu-sone-meka	telephone
+kuma-ba-kore	yard
+taro-meka-kuma	garage
+kore-kose	fence
+nado-kose-feke	door lock
+kuma-gu-kore	basement
+kuma-go-kore	roof terrace
+kuma-fedo-kelo	rent
+pase-nara	owner
+kuma-telo	to move house
+gase-dare	to clean
+dabo-delo	to sweep
+sone-tada	doorbell
+reka-sena-kopa	mailbox
+beka-tabe	paper
+suna-fadu	drinking water
+pore-nelo-gume	firewood
+gase-feke	brush
+tume-nelo-feke	comb
+delo-nuse-feke	scissors
+bume-rela-feke	needle
+doke-kopa-seta	folder
+doke-kopa-foma	file system
+mado-tera	running process
+mado-raga	thread
+mena-sape	fast memory
+mado-kore	processor
+mena-goda	disk
+mena-ba	external storage
+meka-gora-doma	kernel
+rela-le	local network
+mado-foma-fena	to install
+mado-foma-nuse	to uninstall
+mado-foma-kuma	software repository
+lu-doke-gura	to download
+lu-doke-pema	to upload
+dare-se-fadu	backup
+doke-rude	to restore
+meka-gora-bade	administrator
+nado-pode	permission
+nara-kade-gade	user account
+kade-tera	session
+dese-kera	to select
+dare-se-fena	to paste
+dare-se-kopa	clipboard
+to-pema	to send a message
+de-gura	to receive a message
+reka-sena	message
+reka-paku	notification
+sone-saku	alarm
+salo-sena-meka	camera
+sone-gura-meka	microphone
+sone-pema-meka	loudspeaker
+sone-loke-feke	headphones
+sone-mena	audio
+doke-gore-po	to compress
+doke-gore-pa	to decompress
+mado-foma-bosa	computer virus
+mado-foma-fadu	antivirus
+rela-fadu	firewall
+meka-foma	device driver
+dare-reka-kore	command console
+dare-reka-beka	script
+kelo-dare	loop
+kore-rela	link
+se-tera-dare	to synchronize
+foma-beka-dare	to code
+foma-beka-bure	open source
+telo-tera-mena	event log
+loke-kopa-palo	tab
+kade-mena	history log
+enu-pema-feke	charger
+enu-fena	to charge the battery
+nara-seta	contacts
+luma-meka	sensor
+meka-daro	robot
+fedo-gura	to charge
+fedo-telo	money back
+bado-goda	coin
+bado-tabe	banknote
+fedo-kema	payment card
+fedo-beka	receipt
+kera-fedo-nara	buyer
+pema-fedo-nara	seller
+kume-daro-nara	merchant
+bado-po-dare	discount
+bado-reka	to haggle
+bado-pema-pu	loan
+bado-fena-pu	to save money
+bado-gade	bank account
+bado-kopa-nara	bank clerk
+bado-kopa-meka	cash machine
+gama-mede	to weigh
+gama-mede-feke	scale
+kema-lobe	package
+kopa-goda	box
+kopa-duma	cart
+kema-seta-doke	inventory
+kema-seta-kuma	warehouse
+pema-lu	delivery
+fadu-beka	warranty
+telo-pema	to return an item
+kume-fedo-no	barter
+dapa-bado	total
+kume-pose	stall
+bado-mado	accounting
+bado-pu-seta	budget
+kera-fedo-nume	order
+nara-bora	human body
+bora-palo	organ
+bora-kefe-kado	back
+maku-rela-go	shoulder
+maku-rela-telo	elbow
+maku-kefe	wrist
+maku-doma	palm
+maku-sena	fingerprint
+kalu-rela	hip
+kalu-gore-gume	thigh
+kalu-gune-rela	ankle
+kalu-gune-palo	toe
+kalu-gune-gu	heel
+bora-doma	navel
+bora-rela	waist
+sabe-nado	throat
+sabe-lobe	lip
+loke-sabe-kado	cheek
+loke-go	forehead
+loke-nelo	eyebrow
+loke-lobe	eyelid
+loke-lobe-nelo	eyelash
+sabe-nelo	beard
+sabe-gu	chin
+suma-suna-nado	blood vessel
+bora-suna-gase	kidney
+fame-duma-kore	intestine
+bora-suna-kopa	bladder
+go-gu-kefe	spine
+doma-kopa-kefe	rib
+tume-kefe	skull
+bora-kefe-rela	joint
+bora-faro-rela	tendon
+sabe-suna	saliva
+loke-suna-gume	tear
+reka-sone-dore	voice
+doma-kelo	heartbeat
+suma-dure	age
+bora-dabo-suna	urine
+bora-dabo-gume	excrement
+naku-bo	pregnancy
+sura-bosa-sone	cough
+sabe-lena-po	smile
+suna-boga-dare	to boil
+mase-pore-dare	to fry
+pore-kuma	oven
+pore-kuma-dare	to bake
+pore-salo-dare	to roast
+gume-rela-dare	to mix
+lobe-delo	to peel
+nobe-pume	to drink
+fame-pema	to serve food
+fure-pa-dare	to warm up
+fure-po-dare	to cool
+sabe-gume	seasoning
+tabu-gume-suna	dough
+pado-nelo-fame	grain
+nede-fame-seta	salad
+lena-gume-fame	dessert
+fame-luda	sauce
+naku-nobe-mase	butter
+nelo-maku-nobe	tea
+mase-pore-kopa	frying pan
+suna-fame-feke	spoon
+fame-kefe-feke	fork
+nobe-kopa-gore	jug
+nobe-kopa-kose	bottle
+delo-nuse-tabe	cutting board
+fame-foma	recipe
+fame-palo	ingredient
+fame-gore-po	portion
+pore-so	raw
+pore-ko	cooked
+fame-bosa	rotten
+lena-no-sabe	bitter
+pore-dare-nara	chef
+fame-fedo-kore	restaurant
+tabu-kuma	bakery
+bora-gume-kuma	butcher shop
+taro-nelo-daro	agriculture
+taro-nelo-nara	farmer
+taro-nelo-kore	field
+taro-pose	plot of land
+nelo-dare	to cultivate
+pado-nelo-fena	to sow
+nelo-kera	to harvest
+nelo-kera-kema	crop yield
+nelo-kera-tera	harvest season
+nelo-suna-pema	to irrigate
+taro-bure	to plough
+taro-fame-gume	fertilizer
+nelo-suna-duma	irrigation channel
+taro-bure-meka	tractor
+taro-bure-feke	plough (tool)
+taro-delo-feke	shovel
+taro-bosa-feke	hoe
+nelo-bosa-feke	sickle
+ruma-nelo-kuma	farm
+ruma-kopa	corral
+ruma-fame-daro	livestock farming
+ruma-fame-nara	herder
+ruma-fame-nelo	pasture
+ruma-kuna-kuma	hen
+ruma-naku-nobe	cow
+ruma-bume	sheep
+ruma-bume-gume	wool
+ruma-mase	pig
+ruma-duma-feke	horse
+ruma-taro-go	llama
+ruma-fadu	dog
+ruma-kuma-po	cat
+ku-kalu-bosa	pest
+nelo-bado-no	weed
+nelo-suna-goda	frost
+pado-nelo-kuma	granary
+tabu-gume-meka	mill
+suna-taro-gu	well
+nede-fame-kore	vegetable garden

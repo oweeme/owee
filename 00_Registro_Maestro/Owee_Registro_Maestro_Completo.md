@@ -1650,3 +1650,19 @@ Teclado Keyman (`05_Teclado_IME/keyman-owee`): romano → Owee Script sílaba a 
 **Nombres propios:** `02_Diccionario/datos/adaptar_nombre.py` aplica la norma de la Gramática 1.1 §14 (reproduce los ejemplos documentados: Pedro → Pedero, Carlos → Karaloso, María → Marea) y genera `nombres_propios.tsv` (52 nombres) y la página *Nombres propios*.
 
 **Audio:** la voz sintética pronunciaba la `r` como una `d` (`tare` sonaba `tade`); ahora usa la `r` vibrante. Para grabar tu propia voz: `03_Material_Ensenanza/Pronunciacion/herramientas/grabar_voz.py` (graba palabra por palabra, recorta, normaliza y guarda en `audio_humano/`; tus grabaciones reemplazan a la voz sintética al regenerar el sitio).
+
+## 94. Glifos 3.4 (rediseño del sistema de escritura)
+
+Los glifos se rediseñaron para que cada uno se distinga a simple vista, incluso torcido, a mano o estirado en una pancarta. Salen de `04_Fuentes/actual_3.3_fuente_y_glifos/OweeSans3_3_Source/glifos_v4.py`: un solo esqueleto de líneas rectas y círculos, dibujado **recto** (Owee Sans, pantalla y pancartas) o con las **esquinas redondeadas** (Owee School, escritura a mano).
+
+- **Sílaba:** consonante grande en el centro + marca de vocal pequeña y suelta, en su lado (a arriba, e izquierda, o derecha, u abajo). El lado sólo refuerza; la vocal se reconoce por su **forma**.
+- **Vocales:** a `—` (Ogham, hebreo), e `エ` (katakana), o `○` (omicron griega), u `ᚢ` (runa Uruz). Ver `VOCALES_v4.md`.
+- **Consonantes:** p `⊔`, b `⊔` con barra, f `T`, m cuadro con raya vertical, t `Λ`, d `A`, s `Z`, n `Θ`, l `Y`, r `Y` con punto, k `┐`, g `┐` con barra, sh `X`, ch `✱`. La barra al medio marca la sonora (b, d, g). Ninguna consonante es el giro o el espejo de otra (`auditar_glifos_v4.py`).
+- **Marcas:** nombre propio `ᚠ` (runa Fehu, antes `=`), nexo de compuesto `‿` (antes una barra baja que se confundía con la vocal a).
+- **No cambian:** el romano, los puntos de código (U+E000–U+E03B sílabas, U+E03C nexo, U+E03D nombre, U+E040–U+E049 dígitos) ni los números.
+- **Guía de estilo:** `GUIA_DE_ESTILO_v4.md` (rasgo que define cada glifo, qué puede variar, con qué se confunde). Los PDF de especificación (`01_Especificacion`) describen aún la vocal como «extensión direccional» y las familias como pares por cierre o cruce: quedan **desactualizados**.
+
+## 95. Lotes 9 a 14 — vocabulario de hogar, informática, comercio, cuerpo, cocina y campo
+
+268 términos propuestos (estado VERIFICADA, pendientes de tu aprobación), compuestos de raíces existentes más 17 nombres de alimentos adaptados: `lotes_9_a_14_para_aprobar.md`. Cobertura por área (512 conceptos de trabajo): `02_Diccionario/datos/cobertura_dominios.py` y `.md`. Tras redactarlos se buscaron pares mínimos con el léxico y se cambiaron unas 45 formas; todo el léxico (1 260 formas) se escribe con los glifos 3.4 (`auditar_palabras_v4.py`). **Audio:** los términos nuevos aún no tienen audio (la síntesis necesita el modelo Piper, que no se pudo descargar); ejecutar `sintetizar_audio.py` en el equipo con el modelo.
+
