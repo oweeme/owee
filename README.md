@@ -1,5 +1,7 @@
 # Owee
 
+<p align="center"><img src="06_Logo/owee-logo-256.png" alt="Logo de Owee: un koi con la palabra ouee en Owee Script" width="160"></p>
+
 **Owee** es un idioma construido: fácil de pronunciar, regular, sin conjugaciones ni género, con una escritura propia (**Owee Script**) y herramientas para usarlo hoy en computadoras, la web y Linux.
 
 - **Fonología:** 4 vocales (`a e o u`), 14 consonantes, sílabas solo `V` o `CV` (60 sílabas), acento siempre en la primera sílaba. No existe la `i`.
@@ -18,6 +20,7 @@
 | `03_Material_Ensenanza/` | Gramática 1.1, pronunciación, matemáticas, física, química, astronomía, informática, literatura y cuadernos |
 | `04_Fuentes/` | Fuentes y glifos (Owee Glyph Master 3.3) y versiones anteriores |
 | `05_Teclado_IME/` | Teclado Fcitx5 para Linux (1.2: compuestos y nombres propios) |
+| `06_Logo/` | Logo de Owee (koi + «ouee» en Owee Script): SVG, PNG y el script que lo construye |
 | `07_Sitio_Web/` | Generador del sitio web estático |
 | `08_Integracion/` | Integración con oweelinux y sitios web: `.deb`, traducciones, módulo i18n |
 

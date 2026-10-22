@@ -1703,5 +1703,9 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - Corregido el texto de Informática («Estado: aprobada» ya no dice «Ninguno está aprobado»).
 
 ## §102 — Paquetes .deb (2026-10-22)
-- `08_Integracion/linux/build-debs.sh` genera ahora en `paquetes/` (versionado en Git): `fcitx5-owee_1.2-2_amd64`, `fonts-owee_3.4-1_all`, `owee-locale`, `owee-numerals`. El teclado se compiló con `libfcitx5core-dev` 5.1.7, se instaló con `dpkg -i`, el addon carga (`dlopen`) y la prueba del analizador pasa. Guía: `08_Integracion/linux/INSTALAR_fcitx5-owee.md`; los .deb también salen en Descargas del sitio.
+- `08_Integracion/linux/build-debs.sh` genera ahora en `paquetes/` (versionado en Git): `fcitx5-owee_1.2-3_amd64`, `fonts-owee_3.4-1_all`, `owee-locale`, `owee-numerals`. El teclado se compiló con `libfcitx5core-dev` 5.1.7, se instaló con `dpkg -i`, el addon carga (`dlopen`) y la prueba del analizador pasa. Guía: `08_Integracion/linux/INSTALAR_fcitx5-owee.md`; los .deb también salen en Descargas del sitio.
 - Mito, fábula y resumen pasan de compuestos a raíces: `meto`, `fobo`, `reshu` (distancia ≥ 2 con toda raíz de 2 sílabas).
+
+## §103 — Logo de Owee (2026-10-22)
+- `06_Logo/`: el koi del autor con «ouee» en Owee Script (trazados reales de Owee Sans, color crema del pez) encima de la cabeza; SVG, PNG 1024–32 y `construir_logo.py`.
+- Usos: cabecera y portada del sitio, favicon y manifiesto de Owee Pad, icono del método de entrada en el teclado Fcitx5 (`fcitx-owee`, `fcitx5-owee_1.2-3`), README.
