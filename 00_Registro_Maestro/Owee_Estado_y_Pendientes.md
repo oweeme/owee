@@ -57,7 +57,7 @@
 
 ### 3.2 Trabajo técnico pendiente
 
-- **Probar de verdad:** instalar los `.deb` en oweelinux, probar el teclado 1.2 con compuestos y nombres, probar `ts_rellenar.py` con un `.ts` real de Deepin, compilar el `.mo` (falta `msgfmt`).
+- **Probar de verdad:** instalar los `.deb` en oweelinux, (.deb 1.2-2 y fuentes 3.4-1 ya construidos y cargados en un sistema de prueba) probar el teclado 1.2 con compuestos y nombres en Deepin 25, probar `ts_rellenar.py` con un `.ts` real de Deepin, compilar el `.mo` (falta `msgfmt`).
 - **Prueba auditiva** de los 55 pares de sonidos parecidos (sobre todo partículas: `te/de`, `bo/po`, `ga/ka`) y **audio de pronunciación**.
 - **Registro Maestro:** el cuerpo principal sigue declarando «hasta Owee Sans 3.0» y no integra los números compuestos ni el léxico ampliado; regenerarlo desde los `.tsv`.
 - **PDFs antiguos:** Matemáticas 2.0 aún trae formas imposibles (`ango`, `akso`, `vara`…); los cuadernos usan fuentes 3.1/3.2.

@@ -1061,14 +1061,13 @@ rela-reka-palo
 reka-palo-fese
 gura-kema
 dare-nara
-
 lena-reka-beka
 saro-lare
-pado-reka-tera
-ruma-reka-tera
 rena-lare
 raga-kola
-gore-po-doke
 pado-beka
 dese-kare
 pose-foma
+meto
+fobo
+reshu

@@ -50,6 +50,9 @@ Criterios (2026-10-12):
 | `chokolo` | choclo (nombre adaptado) | `chokolo` (choclo) | OK |
 | `koneko` | conejo (nombre adaptado) | `koneko` (conejo) | OK |
 | `abeka` | abeja (nombre adaptado) | `abeka` (abeja) | OK |
+| `meto` | mito (relato sagrado del origen) | `meto` (mito) | OK |
+| `fobo` | fábula (relato con moraleja) | `fobo` (fábula) | OK |
+| `reshu` | resumen (texto corto de un texto) | `reshu` (resumen) | OK |
 | `lu-meka` | nube informática (máquina lejana) | `lu` (lejos) + `meka` (máquina) | AJUSTADO — antes kuna-meka «máquina del cielo», que se confundiría con el avión (sura-meka); la nube informática es una máquina lejana |
 | `foma-fena` | configuración (poner reglas) | `foma` (regla) + `fena` (poner) | OK |
 | `meka-gune` | apagar (fin de la máquina) | `meka` (máquina) + `gune` (fin) | OK |
@@ -857,11 +860,8 @@ Criterios (2026-10-12):
 | `dare-nara` | sujeto gramatical (persona que hace) | `dare` (hacer) + `nara` (persona) | OK |
 | `lena-reka-beka` | poema (poesía escrita) | `lena` (agrado) + `reka` (comunicación) + `beka` (escritura) | OK |
 | `saro-lare` | proverbio / sentencia (saber de la comunidad) | `saro` (comunidad) + `lare` (saber) | OK |
-| `pado-reka-tera` | mito (cuento del comienzo) | `pado` (comienzo) + `reka` (comunicación) + `tera` (tiempo) | OK |
-| `ruma-reka-tera` | fábula (cuento de animales) | `ruma` (animal) + `reka` (comunicación) + `tera` (tiempo) | OK |
 | `rena-lare` | filosofía (saber del pensar) | `rena` (pensar) + `lare` (saber) | OK |
 | `raga-kola` | tabla (filas y columnas) | `raga` (fila) + `kola` (columna) | OK |
-| `gore-po-doke` | resumen (información pequeña) | `gore` (tamaño) + `po` (menos) + `doke` (información) | OK |
 | `pado-beka` | borrador (escritura del comienzo) | `pado` (comienzo) + `beka` (escritura) | OK |
 | `dese-kare` | aprobado (decisión correcta) | `dese` (decisión) + `kare` (corrección) | OK |
 | `pose-foma` | orden (posición por regla) | `pose` (posición) + `foma` (regla) | OK |

@@ -1014,12 +1014,10 @@ L18 = "Términos del sitio y la literatura (lote 18)"
 COMPUESTOS += [
  ("lena-reka-beka","poema (poesía escrita)",L18,"Términos del sitio"),
  ("saro-lare","proverbio / sentencia (saber de la comunidad)",L18,"Términos del sitio"),
- ("pado-reka-tera","mito (cuento del comienzo)",L18,"Términos del sitio"),
- ("ruma-reka-tera","fábula (cuento de animales)",L18,"Términos del sitio"),
  ("rena-lare","filosofía (saber del pensar)",L18,"Términos del sitio"),
  ("raga-kola","tabla (filas y columnas)",L18,"Términos del sitio"),
- ("gore-po-doke","resumen (información pequeña)",L18,"Términos del sitio"),
  ("pado-beka","borrador (escritura del comienzo)",L18,"Términos del sitio"),
  ("dese-kare","aprobado (decisión correcta)",L18,"Términos del sitio"),
  ("pose-foma","orden (posición por regla)",L18,"Términos del sitio"),
 ]
+RAICES += [("meto","mito (relato sagrado del origen)",L18,"Términos del sitio"),("fobo","fábula (relato con moraleja)",L18,"Términos del sitio"),("reshu","resumen (texto corto de un texto)",L18,"Términos del sitio")]
