@@ -1,15 +1,16 @@
-# Lotes 9 a 14 — vocabulario nuevo para aprobar
+# Lotes 9 a 14 — vocabulario nuevo (aprobado el 2026-10-22)
 
-Propuesta de **268 términos** para hogar, informática y sistema operativo, comprar y vender, cuerpo humano, cocina y alimentos, y agricultura. Todos pasan la verificación automática (fonología V/CV sin `i`, sin colisiones, partes que existen, máximo 3 elementos y 6 sílabas, un significado = una forma, inglés por pivote) y quedan como **VERIFICADA**: no son oficiales hasta que se aprueben. Para aprobar un término, añádelo a `02_Diccionario/datos/aprobadas.txt` y ejecuta `generar_ciencias.py`; para cambiarlo, edítalo en `ciencias_fuente.py`.
+**268 términos** para hogar, informática y sistema operativo, comprar y vender, cuerpo humano, cocina y alimentos, y agricultura. Todos pasan la verificación automática (fonología V/CV sin `i`, sin colisiones, partes que existen, máximo 3 elementos y 6 sílabas, un significado = una forma, inglés por pivote) y están **APROBADOS** (`aprobadas.txt`).
 
-**Método:** compuestos de raíces ya existentes (`kuma` hogar, `bora` cuerpo, `fame` comida, `nelo` planta, `ruma` animal, `feke` herramienta, `meka` máquina, `kopa` contenedor, `kore` lugar…), igual que los lotes anteriores. Tras una primera redacción se buscaron los **pares mínimos** (palabras a una sola letra de otra del mismo tema) y se cambiaron unas 45 formas para evitarlos; en `04_Fuentes/.../OweeSans3_3_Source/auditar_palabras_v4.py` se comprueba además que todo el léxico se escribe con los glifos nuevos.
+**Método:** compuestos de raíces ya existentes (`kuma` hogar, `bora` cuerpo, `fame` comida, `nelo` planta, `ruma` animal, `feke` herramienta, `meka` máquina, `kopa` contenedor, `kore` lugar…), igual que los lotes anteriores. Antes de aprobar se hicieron dos revisiones: (1) **mismo significado en dos formas**: ningún concepto tiene más de una palabra; (2) **paralelismo**: se buscaron las palabras a una sola letra de otra del mismo tema y se cambiaron unas 50 formas (por ejemplo, agricultura estaba a una letra de «raíz de planta», `nelo-taro`; presupuesto y préstamo se distinguían por `b`/`p`; crudo y cocido usan `so`/`ko`, como «sin» y «con»). Quedan pares de la misma familia que son normales en un idioma de compuestos (`kuma-ba-kore` patio, `kuma-go-kore` azotea, `kuma-gu-kore` sótano; `fure-pa-dare` calentar, `fure-po-dare` enfriar).
 
-**Decisiones tuyas:**
+**Decisiones tomadas:**
 
-1. **Nombres de alimentos concretos** (palta, tomate, cebolla…): se adaptaron con la norma de nombres (`adaptar_nombre.py`), como ya se hizo con `kenua` (quinua). Son raíces nuevas. Dos llevan una sílaba más que la adaptación pura porque quedaban a una letra de otra palabra: `abana` (haba, en vez de `aba`, vecina de `uba`) y `kafea` (café, en vez de `kafe`, vecina de `kade`, `lafe`, `kare`, `kale`, `kefe`); y `kamoto` (camote) en vez de `kamote`, casi igual que `ka-mode` («cómo»).
-2. **Animales concretos** (`ruma-bume` oveja, `ruma-naku-nobe` vaca, `ruma-mase` cerdo…): se componen por su función. Si prefieres raíces propias, dímelo.
+1. **Nombres de alimentos concretos** (palta, tomate, cebolla…): adaptados con la norma de nombres (`adaptar_nombre.py`), como ya se hizo con `kenua` (quinua). Tres llevan una letra o sílaba distinta de la adaptación pura para no quedar a una letra de otra palabra: `abana` (haba; `aba` era vecina de `uba`), `kafea` (café; `kafe` era vecina de `kade`, `lafe`, `kare`, `kale`, `kefe`) y `kamoto` (camote; `kamote` sonaba casi igual que `ka-mode`, «cómo»).
+2. **Animales concretos** (`ruma-bume` oveja, `ruma-naku-nobe` vaca, `ruma-mase` cerdo…): se componen por su función, siguiendo la Gramática 1.1 §12.1 (categoría + rasgo). Si prefieres raíces propias, se cambian.
 3. **Sentidos** (vista, oído, olfato, gusto, tacto): no se añadieron; ya existen `luma-salo`, `luma-sone`, `luma-sura`, `luma-fame`, `luma-tada`.
 4. **Siguen faltando** (ver `cobertura_dominios.md`): materiales de casa (madera, ladrillo, vidrio), tareas y aplicaciones, oferta/factura/crédito, más frutas y verduras, más animales de granja, herramientas de poda e injerto.
+5. **Audio:** los términos nuevos aún no tienen audio (la síntesis necesita el modelo Piper): ejecutar `sintetizar_audio.py` en un equipo con el modelo.
 
 ## Lote 9 — Hogar y casa (46 términos)
 
@@ -99,7 +100,7 @@ Propuesta de **268 términos** para hogar, informática y sistema operativo, com
 | `sone-gura-meka` | **micrófono** — máquina que recibe sonido | `sone` (sonido) + `gura` (recibir) + `meka` (máquina) | microphone |
 | `sone-pema-meka` | **altavoz** — máquina que da sonido | `sone` (sonido) + `pema` (dar) + `meka` (máquina) | loudspeaker |
 | `sone-loke-feke` | **auriculares** — herramienta del oído | `sone` (sonido) + `loke` (ojo) + `feke` (herramienta) | headphones |
-| `sone-mena` | **audio** — memoria de sonido | `sone` (sonido) + `mena` (memoria) | audio |
+| `doke-sone` | **audio** — datos de sonido | `doke` (información) + `sone` (sonido) | audio |
 | `doke-gore-po` | **comprimir** — datos pequeños | `doke` (información) + `gore` (tamaño) + `po` (menos) | to compress |
 | `doke-gore-pa` | **descomprimir** — datos grandes | `doke` (información) + `gore` (tamaño) + `pa` (más) | to decompress |
 | `mado-foma-bosa` | **virus informático** — programa de rotura | `mado` (cálculo) + `foma` (regla) + `bosa` (rotura) | computer virus |
@@ -108,7 +109,7 @@ Propuesta de **268 términos** para hogar, informática y sistema operativo, com
 | `meka-foma` | **controlador de dispositivo** — reglas de la máquina | `meka` (máquina) + `foma` (regla) | device driver |
 | `dare-reka-kore` | **terminal de comandos** — lugar de comandos | `dare` (hacer) + `reka` (comunicación) + `kore` (lugar) | command console |
 | `dare-reka-beka` | **script** — comandos escritos | `dare` (hacer) + `reka` (comunicación) + `beka` (escritura) | script |
-| `kelo-dare` | **bucle** — hacer ciclo | `kelo` (ciclo) + `dare` (hacer) | loop |
+| `mado-kelo` | **bucle** — ciclo de cálculo | `mado` (cálculo) + `kelo` (ciclo) | loop |
 | `kore-rela` | **enlace** — unión a un lugar | `kore` (lugar) + `rela` (unión) | link |
 | `se-tera-dare` | **sincronizar** — hacer igual en el tiempo | `se` (igualdad) + `tera` (tiempo) + `dare` (hacer) | to synchronize |
 | `foma-beka-dare` | **programar** — hacer código | `foma` (regla) + `beka` (escritura) + `dare` (hacer) | to code |
@@ -238,7 +239,7 @@ Propuesta de **268 términos** para hogar, informática y sistema operativo, com
 | `delo-nuse-tabe` | **tabla de cortar** — superficie de cortar | `delo` (tomar) + `nuse` (vacío) + `tabe` (superficie de apoyo) | cutting board |
 | `fame-foma` | **receta** — reglas de la comida | `fame` (comida) + `foma` (regla) | recipe |
 | `fame-palo` | **ingrediente** — parte de la comida | `fame` (comida) + `palo` (parte) | ingredient |
-| `fame-gore-po` | **porción** — comida pequeña | `fame` (comida) + `gore` (tamaño) + `po` (menos) | portion |
+| `fame-palo-bema` | **porción** — cantidad parcial de comida | `fame` (comida) + `palo` (parte) + `bema` (cantidad) | portion |
 | `pore-so` | **crudo** — sin fuego | `pore` (fuego) + `so` (sin) | raw |
 | `pore-ko` | **cocido** — con fuego | `pore` (fuego) + `ko` (con) | cooked |
 | `fame-bosa` | **podrido** — comida rota | `fame` (comida) + `bosa` (rotura) | rotten |
@@ -281,7 +282,7 @@ Propuesta de **268 términos** para hogar, informática y sistema operativo, com
 | `nelo-suna-pema` | **regar** — dar agua a la planta | `nelo` (planta) + `suna` (agua) + `pema` (dar) | to irrigate |
 | `taro-bure` | **arar** — abrir la tierra | `taro` (tierra) + `bure` (abrir) | to plough |
 | `taro-fame-gume` | **abono** — materia para tierra fértil | `taro` (tierra) + `fame` (comida) + `gume` (materia) | fertilizer |
-| `nelo-suna-duma` | **canal de riego** — movimiento de agua de las plantas | `nelo` (planta) + `suna` (agua) + `duma` (movimiento) | irrigation channel |
+| `nelo-suna-nado` | **canal de riego** — acceso del agua de las plantas | `nelo` (planta) + `suna` (agua) + `nado` (acceso) | irrigation channel |
 | `taro-bure-meka` | **tractor** — máquina de arar | `taro` (tierra) + `bure` (abrir) + `meka` (máquina) | tractor |
 | `taro-bure-feke` | **arado** — herramienta de arar | `taro` (tierra) + `bure` (abrir) + `feke` (herramienta) | plough (tool) |
 | `taro-delo-feke` | **pala** — herramienta para tomar tierra | `taro` (tierra) + `delo` (tomar) + `feke` (herramienta) | shovel |

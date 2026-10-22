@@ -1,5 +1,5 @@
 # Traduccion de oweelinux al Owee (Owee Script)
-# Generado por 08_Integracion/herramientas/generar_traducciones.py el 2026-10-21. No editar a mano: edita datos/ui_glosario.tsv.
+# Generado por 08_Integracion/herramientas/generar_traducciones.py el 2026-10-22. No editar a mano: edita datos/ui_glosario.tsv.
 msgid ""
 msgstr ""
 "Project-Id-Version: oweelinux 0.1\n"

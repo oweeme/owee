@@ -1087,7 +1087,7 @@ salo-sena-meka	camera
 sone-gura-meka	microphone
 sone-pema-meka	loudspeaker
 sone-loke-feke	headphones
-sone-mena	audio
+doke-sone	audio
 doke-gore-po	to compress
 doke-gore-pa	to decompress
 mado-foma-bosa	computer virus
@@ -1096,7 +1096,7 @@ rela-fadu	firewall
 meka-foma	device driver
 dare-reka-kore	command console
 dare-reka-beka	script
-kelo-dare	loop
+mado-kelo	loop
 kore-rela	link
 se-tera-dare	to synchronize
 foma-beka-dare	to code
@@ -1211,7 +1211,7 @@ nobe-kopa-kose	bottle
 delo-nuse-tabe	cutting board
 fame-foma	recipe
 fame-palo	ingredient
-fame-gore-po	portion
+fame-palo-bema	portion
 pore-so	raw
 pore-ko	cooked
 fame-bosa	rotten
@@ -1232,7 +1232,7 @@ nelo-kera-tera	harvest season
 nelo-suna-pema	to irrigate
 taro-bure	to plough
 taro-fame-gume	fertilizer
-nelo-suna-duma	irrigation channel
+nelo-suna-nado	irrigation channel
 taro-bure-meka	tractor
 taro-bure-feke	plough (tool)
 taro-delo-feke	shovel

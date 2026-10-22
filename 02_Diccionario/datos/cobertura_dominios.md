@@ -171,7 +171,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | cámara | nuevo | salo-sena-meka |
 | micrófono | nuevo | sone-gura-meka |
 | altavoz | nuevo | sone-pema-meka |
-| audio | nuevo | sone-mena |
+| audio | nuevo | doke-sone |
 | imagen | había | remu, salo-sena |
 | comprimir | nuevo | doke-gore-po |
 | antivirus | nuevo | mado-foma-fadu |
@@ -181,7 +181,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | disco | nuevo | mena-goda |
 | almacenamiento | había | mena-kopa |
 | script | nuevo | dare-reka-beka |
-| bucle | nuevo | kelo-dare |
+| bucle | nuevo | mado-kelo |
 | programar | nuevo | foma-beka-dare |
 | depurar | había | bomo-kera |
 | código | había | foma-beka |
@@ -392,7 +392,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | botella | nuevo | nobe-kopa-kose |
 | receta | nuevo | fame-foma |
 | ingrediente | nuevo | fame-palo |
-| porción | nuevo | fame-gore-po |
+| porción | nuevo | fame-palo-bema |
 | crudo | nuevo | pore-so |
 | cocido | nuevo | pore-ko |
 | podrido | nuevo | fame-bosa |
@@ -493,7 +493,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | época de cosecha | nuevo | nelo-kera-tera |
 | estación del año | había | sade-kelo-palo |
 | época de lluvias | había | suna-tera |
-| canal de riego | nuevo | nelo-suna-duma |
+| canal de riego | nuevo | nelo-suna-nado |
 | raíz de planta | había | nelo-taro |
 | llama andina | nuevo | ruma-taro-go |
 | suelo fértil | había | taro-fame |
