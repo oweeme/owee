@@ -44,7 +44,7 @@ def main():
                     if modo == "es" and x["t"] != e["es"]: fallos.append(f"{nombre}: ES no restaura «{e['es']}» (queda «{x['t']}»)")
                     if modo == "owee" and (x["t"] != e["ow"] or PUA.search(x["t"])): fallos.append(f"{nombre}: Owee de «{e['es']}» = «{x['t']}»")
                     if modo == "script":
-                        sin_marcas = re.sub(r"\b(?:H₂|Python|GitHub|Owee|Sans|School|Keyman|Windows|Android|iPhone|macOS|Linux|ES|V|CV|AFI|i|URL|Git|json|qow|m|kg|s|N|J|W|H|O|Na|Cl|x|y|pH)\b", "", x["t"])
+                        sin_marcas = re.sub(r"\b(?:Script|sin|cos|tan|H₂|Python|GitHub|Owee|Sans|School|Keyman|Windows|Android|iPhone|macOS|Linux|ES|V|CV|AFI|i|URL|Git|json|qow|m|kg|s|N|J|W|H|O|Na|Cl|x|y|pH)\b", "", x["t"])
                         if not x["c"] or re.search(r"[A-Za-z]", sin_marcas):
                             fallos.append(f"{nombre}: Script de «{e['es'][:40]}» deja letras latinas: «{x['t'][:60]}»")
                         if not PUA.search(x["t"]): fallos.append(f"{nombre}: Script de «{e['es']}» sin glifos")

@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 819 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 829 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -855,3 +855,13 @@ Criterios (2026-10-12):
 | `reka-palo-fese` | modificador (palabra que limita) | `reka` (comunicación) + `palo` (parte) + `fese` (límite) | OK |
 | `gura-kema` | objeto gramatical (objeto que recibe) | `gura` (recibir) + `kema` (objeto) | OK |
 | `dare-nara` | sujeto gramatical (persona que hace) | `dare` (hacer) + `nara` (persona) | OK |
+| `lena-reka-beka` | poema (poesía escrita) | `lena` (agrado) + `reka` (comunicación) + `beka` (escritura) | OK |
+| `saro-lare` | proverbio / sentencia (saber de la comunidad) | `saro` (comunidad) + `lare` (saber) | OK |
+| `pado-reka-tera` | mito (cuento del comienzo) | `pado` (comienzo) + `reka` (comunicación) + `tera` (tiempo) | OK |
+| `ruma-reka-tera` | fábula (cuento de animales) | `ruma` (animal) + `reka` (comunicación) + `tera` (tiempo) | OK |
+| `rena-lare` | filosofía (saber del pensar) | `rena` (pensar) + `lare` (saber) | OK |
+| `raga-kola` | tabla (filas y columnas) | `raga` (fila) + `kola` (columna) | OK |
+| `gore-po-doke` | resumen (información pequeña) | `gore` (tamaño) + `po` (menos) + `doke` (información) | OK |
+| `pado-beka` | borrador (escritura del comienzo) | `pado` (comienzo) + `beka` (escritura) | OK |
+| `dese-kare` | aprobado (decisión correcta) | `dese` (decisión) + `kare` (corrección) | OK |
+| `pose-foma` | orden (posición por regla) | `pose` (posición) + `foma` (regla) | OK |
