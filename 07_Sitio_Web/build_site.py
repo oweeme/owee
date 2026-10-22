@@ -1072,13 +1072,13 @@ def build_descargas():
             shutil.copy2(f, D / "audio" / f.name)
             al.append(f"<a href='documentos/audio/{f.name}'>{f.stem.replace('_', ' ')} ({f.suffix[1:].upper()})<span>{sz(f)}</span></a>")
         sections.insert(0, "<h3>Canciones: bocetos de ritmo y acento (sin voz)</h3><p>Compara <em>doma bo romance</em> con <em>doma bo marcha</em>: misma letra, distinto acento musical.</p><div class='dl'>" + "".join(al) + "</div>")
-    debs = ROOT / "08_Integracion/linux/dist"
+    debs = ROOT / "08_Integracion/linux/paquetes"
     if debs.exists() and list(debs.glob("*.deb")):
         (D / "linux").mkdir(exist_ok=True)
         dl = []
         for f in sorted(debs.glob("*.deb")):
             shutil.copy2(f, D / "linux" / f.name); dl.append(f"<a href='documentos/linux/{f.name}'>{f.name}<span>DEB · {sz(f)}</span></a>")
-        sections.insert(0, "<h3>oweelinux: paquetes .deb (fuentes, teclado y locale)</h3><p>Instalación en el repositorio de GitHub (carpeta <code>08_Integracion</code>).</p><div class='dl'>" + "".join(dl) + "</div>")
+        sections.insert(0, "<h3>oweelinux: paquetes .deb (fuentes, teclado y locale)</h3><p>Linux (Debian, Ubuntu, Deepin): <code>sudo apt install ./fonts-owee_*.deb ./fcitx5-owee_*.deb</code>, luego <code>fcitx5 -rd</code> y añade «Owee» en <code>fcitx5-configtool</code>. Guía: <code>08_Integracion/linux/INSTALAR_fcitx5-owee.md</code>.</p><div class='dl'>" + "".join(dl) + "</div>")
     F = OUT / "fuentes"; F.mkdir(exist_ok=True)
     fl = []
     for f in sorted((GM / "fonts/ttf").glob("*.ttf")) + sorted((GM / "fonts/otf").glob("*.otf")) + sorted((GM / "fonts/woff2").glob("*.woff2")):
@@ -1087,7 +1087,7 @@ def build_descargas():
 <h2>Fuentes</h2><p><strong>Owee Sans</strong> (pantalla y documentos) y <strong>Owee School</strong> (escritura a mano). Linux: copiar los <code>.ttf</code> a <code>~/.local/share/fonts/Owee/</code> y ejecutar <code>fc-cache -f</code>.</p>
 <div class="dl">{''.join(fl)}</div>
 <h2>Teclado</h2><div class="dl"><a href="teclado/Owee.kmp">Owee.kmp — teclado Keyman<span>Windows, Android, iOS, macOS</span></a><a href="teclado.html">Teclado Owee: instalar y probar<span>página con instrucciones</span></a></div>
-<p>Alternativa sin instalar nada: <a href="pad/index.html">Owee Pad</a>. Para Linux (Fcitx5) está el paquete <code>fcitx5-owee</code> en el repositorio de GitHub.</p>
+<p>Alternativa sin instalar nada: <a href="pad/index.html">Owee Pad</a>. Para Linux (Fcitx5) descarga abajo el paquete <code>fcitx5-owee</code> (.deb).</p>
 <h2>Documentos</h2>{''.join(sections)}"""
     page("descargas.html", "Descargas", body, "descargas.html")
     return npdf

@@ -1,6 +1,6 @@
 # salidas generadas (se regeneran con los scripts)
 07_Sitio_Web/docs/
-08_Integracion/linux/dist/
+
 **/audio/*.wav
 __pycache__/
 *.pyc

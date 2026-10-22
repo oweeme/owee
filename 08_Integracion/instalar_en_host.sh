@@ -21,8 +21,8 @@ command -v msgfmt >/dev/null || echo "(opcional) sudo apt install gettext   # pa
 if [ "$MODO" = sistema ]; then
   say "2. Paquetes .deb para todo el sistema"
   ( cd "$AQUI/linux" && ./build-debs.sh )
-  PAQ=("$AQUI"/linux/dist/fonts-owee_*.deb "$AQUI"/linux/dist/fcitx5-owee_*.deb "$AQUI"/linux/dist/owee-locale_*.deb)
-  [ "$CIFRAS" = 1 ] && PAQ+=("$AQUI"/linux/dist/owee-numerals_*.deb)
+  PAQ=("$AQUI"/linux/paquetes/fonts-owee_*.deb "$AQUI"/linux/paquetes/fcitx5-owee_*.deb "$AQUI"/linux/paquetes/owee-locale_*.deb)
+  [ "$CIFRAS" = 1 ] && PAQ+=("$AQUI"/linux/paquetes/owee-numerals_*.deb)
   sudo apt install -y "${PAQ[@]}"
 else
   say "2. Fuentes Owee Sans y Owee School 3.3 (usuario)"

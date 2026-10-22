@@ -1695,9 +1695,13 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - Prueba de navegador: 0 fallos (ES/Owee/Script en todas las páginas).
 
 ## §101 — Ronda 5 de la interfaz en Owee y lote 18 (2026-10-22)
-- **Lote 18** (10 compuestos aprobados, sin raíces nuevas): `lena-reka-beka` poema, `saro-lare` proverbio/sentencia, `pado-reka-tera` mito, `ruma-reka-tera` fábula, `rena-lare` filosofía, `raga-kola` tabla, `gore-po-doke` resumen, `pado-beka` borrador, `dese-kare` aprobado, `pose-foma` orden (ver `02_Diccionario/datos/lotes_18.md`). `reka-pema` (responder) se reutiliza para «respuesta»: no se creó sinónimo.
+- **Lote 18** (10 términos aprobados: 7 compuestos y 3 raíces nuevas de 2 sílabas, a petición): `lena-reka-beka` poema, `saro-lare` proverbio/sentencia, `meto` mito (raíz nueva), `rena-lare` filosofía, `raga-kola` tabla, `reshu` resumen (raíz nueva), `fobo` fábula (raíz nueva), `pado-beka` borrador, `dese-kare` aprobado, `pose-foma` orden (ver `02_Diccionario/datos/lotes_18.md`). `reka-pema` (responder) se reutiliza para «respuesta»: no se creó sinónimo.
 - Nombres de lenguas adaptados: Español → `Esepaneolo`, Inglés → `Enegelese`.
 - `07_Sitio_Web/ui_owee_ronda5.tsv` (títulos, índices laterales, resúmenes de párrafos de Matemáticas, Química, Astronomía, Informática, Gramática, Pronunciación, Literatura, cabeceras de tablas) y `partes_owee.tsv` (las columnas «átomo + masa» se traducen solas a «ganu + gama»).
 - El traductor ahora alcanza párrafos que contienen palabras Owee con glifo (`<span class="o">`), el pie de página y los títulos «Nombre — Título (nota)».
 - El validador acepta compuestos con guion cuando cada parte está en el léxico; símbolos admitidos: sin, cos, tan, Script, PDF no.
 - Corregido el texto de Informática («Estado: aprobada» ya no dice «Ninguno está aprobado»).
+
+## §102 — Paquetes .deb (2026-10-22)
+- `08_Integracion/linux/build-debs.sh` genera ahora en `paquetes/` (versionado en Git): `fcitx5-owee_1.2-2_amd64`, `fonts-owee_3.4-1_all`, `owee-locale`, `owee-numerals`. El teclado se compiló con `libfcitx5core-dev` 5.1.7, se instaló con `dpkg -i`, el addon carga (`dlopen`) y la prueba del analizador pasa. Guía: `08_Integracion/linux/INSTALAR_fcitx5-owee.md`; los .deb también salen en Descargas del sitio.
+- Mito, fábula y resumen pasan de compuestos a raíces: `meto`, `fobo`, `reshu` (distancia ≥ 2 con toda raíz de 2 sílabas).
