@@ -29,7 +29,7 @@ def main():
         if es in vistos and vistos[es] != ow: malos.append(f"{n}: «{es[:40]}» tiene dos traducciones")
         vistos[es] = ow
         for tok in re.findall(r"[A-Za-z]+(?:-[A-Za-z]+)*", ow):
-            if tok in SIMBOLOS: continue
+            if tok in SIMBOLOS or re.fullmatch(r"[aeou]{1,4}", tok): continue      # vocales sueltas y largas (aa, ee…)
             if tok[0].isupper():          # nombre propio (Ouee): basta con que su fonología sea válida
                 if "".join(SIL.findall(tok.lower().replace("-", ""))) != tok.lower().replace("-", ""): malos.append(f"{n}: nombre «{tok}» con fonología inválida")
                 continue
