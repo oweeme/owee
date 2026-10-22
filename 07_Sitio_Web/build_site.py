@@ -499,9 +499,10 @@ JS_COMMON = r"""
 def cargar_ui():
     """Catálogo español -> Owee de la interfaz (ui_owee.tsv)."""
     d = {}
-    for l in (Path(__file__).resolve().parent / "ui_owee.tsv").read_text(encoding="utf8").splitlines():
-        if l.strip() and not l.startswith("#"):
-            es, ow = l.split("\t"); d[es] = ow
+    for f in sorted(Path(__file__).resolve().parent.glob("ui_owee*.tsv")):
+        for l in f.read_text(encoding="utf8").splitlines():
+            if l.strip() and not l.startswith("#"):
+                es, ow = l.split("\t"); d[es] = ow
     return d
 UI_OWEE = cargar_ui()
 UI_ETIQ = re.compile(r'<(h[1-4]|th|td|p|small|button|label|figcaption|li|div|a|summary)((?:\s[^<>]*)?)>((?:[^<>]|</?(?:strong|em|b|i|code)>)+)</\1>')
@@ -524,8 +525,14 @@ def ui_wrap(h):
         ow = None if ("data-ow" in m.group(2) or "data-o=" in m.group(2)) else traducir(txt)
         if ow is None: return m.group(0)
         return f'<{m.group(1)}{m.group(2)}><span data-ow="{esc(ow)}">{m.group(3)}</span></{m.group(1)}>'
+    def inline(m):
+        txt = " ".join(html.unescape(m.group(2)).split())
+        return f'<{m.group(1)} data-ow="{esc(UI_OWEE[txt])}">{m.group(2)}</{m.group(1)}>' if txt in UI_OWEE else m.group(0)
     partes = re.split(r"(<script.*?</script>|<style.*?</style>|<pre.*?</pre>)", h, flags=re.S)
-    return "".join(p if i % 2 else UI_ETIQ.sub(un, p) for i, p in enumerate(partes))
+    h2 = "".join(p if i % 2 else UI_ETIQ.sub(un, p) for i, p in enumerate(partes))
+    # el inline no entra en lo que ya está traducido por completo (<span data-ow>…</span>): no se anidan traducciones
+    partes = re.split(r'(<script.*?</script>|<style.*?</style>|<pre.*?</pre>|<span data-ow="[^"]*">.*?</span>)', h2, flags=re.S)
+    return "".join(p if i % 2 else re.sub(r"<(strong|b|em)>([^<>]+)</\1>", inline, p) for i, p in enumerate(partes))
 
 def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=True, extra_js=""):
     def lab(txt, ow=None):
