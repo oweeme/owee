@@ -371,7 +371,7 @@ a{color:var(--accent)}
 header.top{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--rule)}
 header.top .in{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px}
 .brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
-.brand b{font-size:1.25rem}html[data-ui=script] .brand .mark{display:none}.seg button .o{font-family:'Owee Sans',sans-serif;font-size:1em;line-height:1}.brand .mark{font-family:'Owee Sans';font-size:1.7rem;color:var(--accent);line-height:1}
+.brand .logo{align-self:center;border-radius:50%}.brand b{font-size:1.25rem}html[data-ui=script] .brand .mark{display:none}.seg button .o{font-family:'Owee Sans',sans-serif;font-size:1em;line-height:1}.brand .mark{font-family:'Owee Sans';font-size:1.7rem;color:var(--accent);line-height:1}
 nav{display:flex;flex-wrap:wrap;gap:4px}
 nav a{padding:6px 12px;border-radius:8px;text-decoration:none;color:var(--ink2);font-size:.95rem}
 nav a:hover{background:var(--soft)}nav a[aria-current=page]{background:var(--accent);color:var(--accent-ink)}
@@ -557,7 +557,7 @@ def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=T
             return f'<details class="dd"{" data-on=1" if on else ""}><summary>{lab(it[0], it[2] if len(it) > 2 else None)} ▾</summary><div class="dm">{kids}</div></details>'
         return f'<a href="{it[0]}"{" aria-current=page" if it[0] == active else ""}>{lab(it[1], it[2] if len(it) > 2 else None)}</a>'
     nav = "".join(navitem(it) for it in NAV)
-    top = (f'<header class="top"><div class="in"><a class="brand" href="index.html"><span class="mark o" data-o="Ouee">Ouee</span><b data-ow="Ouee">Owee</b></a>'
+    top = (f'<header class="top"><div class="in"><a class="brand" href="index.html"><img class="logo" src="assets/owee-logo.png" alt="" width="36" height="36"><span class="mark o" data-o="Ouee">Ouee</span><b data-ow="Ouee">Owee</b></a>'
            f'<nav>{nav}</nav><span class="seg uimode noprint" role="group" aria-label="Idioma de la interfaz"><button data-ui="es" aria-pressed="true">ES</button><button data-ui="owee">Owee</button><button data-ui="script" class="o" title="Owee Script" aria-label="Owee Script"><span class="o" data-o="beka">beka</span></button></span><button id="theme" class="noprint" style="font:inherit;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer" aria-label="Cambiar tema">◐</button></div></header>') if chrome else ""
     foot = f'<footer><p>Owee · sitio generado desde el Registro Maestro y el Diccionario Base · Owee Script/Sans {VERSION}. La romanización es la forma oficial; los glifos requieren la fuente Owee (incluida en esta página). Licencias: texto y datos CC BY-SA 4.0 · fuentes SIL OFL 1.1 · código MIT.</p></footer>' if chrome else ""
     doc = f"""<!doctype html>
@@ -590,7 +590,7 @@ def build_index(stats):
     else:
         proy_href, proy_t, proy_p = "estado.html", "Proyecto", "Estado, pendientes, plan de ampliación, integración con Linux y la web, descargas."
     body = f"""
-<div class="hero"><div class="big o" data-o="Ouee suma">Ouee suma</div>
+<div class="hero"><img src="assets/owee-logo-512.png" alt="Logo de Owee: un koi y la palabra ouee en Owee Script" width="168" height="168" style="border-radius:50%"><div class="big o" data-o="Ouee suma">Ouee suma</div>
 <h1>Owee — aprende un idioma construido, fácil y completo</h1>
 <p>4 vocales, 14 consonantes, 60 sílabas, gramática sin género ni conjugaciones y una escritura propia donde <strong>1 sílaba = 1 bloque</strong>.
 Empieza aquí: sumérgete en el idioma con glifos, romanización, pronunciación y traducción en cada frase.</p></div>
@@ -1099,6 +1099,8 @@ def main():
     for f in (GM / "package/fonts").iterdir(): shutil.copy2(f, OUT / "assets/fonts" / f.name)
     for n in ("owee.css", "owee.js", "owee-glyph-map.json"): shutil.copy2(GM / "package" / n, OUT / "assets" / n)
     shutil.copytree(GM / "web", OUT / "pad")
+    shutil.copy2(ROOT / "06_Logo/owee-logo-128.png", OUT / "assets" / "owee-logo.png")
+    shutil.copy2(ROOT / "06_Logo/owee-logo-512.png", OUT / "assets" / "owee-logo-512.png")
     lit_html, lit_toc, poems = md(LIT.read_text(encoding="utf8"))
     use = usage_index(poems)
     npdf = build_descargas()

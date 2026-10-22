@@ -11,3 +11,9 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/owee-addon.conf"
 
 install(FILES owee.conf
         DESTINATION "${FCITX_INSTALL_PKGDATADIR}/inputmethod")
+
+foreach(tam 256 64 32)
+  install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/../data/icons/fcitx-owee-${tam}.png"
+          RENAME fcitx-owee.png
+          DESTINATION "share/icons/hicolor/${tam}x${tam}/apps")
+endforeach()
