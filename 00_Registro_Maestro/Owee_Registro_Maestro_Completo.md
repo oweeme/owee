@@ -1688,3 +1688,8 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 
 **Interfaz:** 342 textos en Owee. Ronda 2: títulos y reglas principales de la Gramática y la Pronunciación. Ronda 3: títulos de las guías de Matemáticas, Física, Química, Astronomía e Informática. Los menús desplegables (Aprender, Ciencias), el nombre del sitio (`Ouee`: glifos en Script, `Ouee` en Owee) y la etiqueta del selector van ahora en los tres modos; la etiqueta del selector usaba una fuente del sistema y se veía como cuadros en algunos navegadores. Orden elegido para seguir: Gramática y Pronunciación (núcleo del aprendizaje) → niveles → Ciencias → Literatura.
 
+
+## §100 — Ronda 4 de traducción de la interfaz (2026-10-22)
+- `07_Sitio_Web/ui_owee_ronda4.tsv`: 28 resúmenes cortos en Owee de párrafos de informática, astronomía, física, química y matemáticas (370 textos de interfaz en total, 0 problemas del validador).
+- `validar_ui_owee.py` y `probar_idiomas.py`: símbolos admitidos ampliados (unidades, elementos, variables, URL/Git/Python/GitHub).
+- Prueba de navegador: 0 fallos (ES/Owee/Script en todas las páginas).
