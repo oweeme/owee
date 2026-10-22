@@ -9,7 +9,8 @@ RAIZ = aqui.parent
 LEX = {l.split("\t")[0] for f in ("lexico.tsv", "lexico_ciencias.tsv") for l in (RAIZ / "02_Diccionario/datos" / f).read_text(encoding="utf8").splitlines()[1:]}
 SIL = re.compile(r"(?:sh|ch|[pbtdkgfsmnlr])?[aeou]")
 # símbolos y nombres de productos que se dejan tal cual dentro del texto Owee
-SIMBOLOS = {"ES", "V", "CV", "AFI", "IPA", "Owee", "Sans", "School", "Script", "Keyman", "Android", "Windows", "Linux", "iPhone", "macOS", "Python", "GitHub", "sh", "ch", "a", "e", "o", "u", "i"}
+SIMBOLOS = {"ES", "V", "CV", "AFI", "IPA", "Owee", "Sans", "School", "Script", "Keyman", "Android", "Windows", "Linux", "iPhone", "macOS", "Python", "GitHub", "sh", "ch", "a", "e", "o", "u", "i",
+            "URL", "Git", "json", "qow", "m", "kg", "s", "N", "J", "W", "H", "O", "Na", "Cl", "x", "y", "pH"}
 
 def cargar():
     for f in sorted(aqui.glob("ui_owee*.tsv")):
