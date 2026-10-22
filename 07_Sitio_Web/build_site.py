@@ -355,8 +355,8 @@ NAV = [("index.html", "Inicio", "pado"),
        ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
        ("Ciencias", [("matematicas.html", "Matemáticas", "lare-banu"), ("fisica.html", "Física", "lare-fasa"), ("quimica.html", "Química", "lare-gume-rela"), ("astronomia.html", "Astronomía y astrología", "lare-sade-mune"),
                      ("informatica.html", "Informática", "lare-meka")], "lare"),
-       ("Proyecto", [("idioma.html", "Registro Maestro"), ("estado.html", "Estado y pendientes"), ("revision.html", "Revisión semántica"), ("auditoria.html", "Auditoría inicial"), ("plan.html", "Plan de ampliación"),
-                     ("integracion.html", "Integración (oweelinux, web)"), ("descargas.html", "Descargas", "gura")], "dare")]
+       ("Proyecto", [("idioma.html", "Registro Maestro", "bade-doke"), ("estado.html", "Estado y pendientes", "te-dore re moke"), ("revision.html", "Revisión semántica", "kare soma-karo"), ("auditoria.html", "Auditoría inicial", "kare pado"), ("plan.html", "Plan de ampliación", "foma pa"),
+                     ("integracion.html", "Integración (oweelinux, web)", "rela: meka-gora re gora-rela"), ("descargas.html", "Descargas", "gura")], "dare")]
 
 if PUBLICO:
     NAV = [it for it in NAV if it[0] != "Proyecto"] + [("descargas.html", "Descargas", "gura")]
@@ -506,7 +506,10 @@ def cargar_ui():
                 es, ow = l.split("\t"); d[es] = ow
     return d
 UI_OWEE = cargar_ui()
-UI_ETIQ = re.compile(r'<(h[1-4]|th|td|p|small|button|label|figcaption|li|div|a|summary)((?:\s[^<>]*)?)>((?:[^<>]|</?(?:strong|em|b|i|code)>)+)</\1>')
+PARTES = {}                       # componentes de «A + B» en las tablas de construcciones: español -> raíz Owee
+for _l in (Path(__file__).resolve().parent / "partes_owee.tsv").read_text(encoding="utf8").splitlines():
+    if _l.strip() and not _l.startswith("#"): _a, _b = _l.split("\t"); PARTES[_a] = _b
+UI_ETIQ = re.compile(r'<(h[1-4]|th|td|p|small|button|label|figcaption|li|div|a|summary)((?:\s[^<>]*)?)>((?:[^<>]|</?(?:strong|em|b|i|code)>|<span class="o[^"]*"[^<>]*>[^<>]*</span>)+)</\1>')
 
 def ui_wrap(h):
     """Envuelve en <span data-ow> los textos de la interfaz que tienen traducción al Owee, para que el selector
@@ -517,12 +520,21 @@ def ui_wrap(h):
         if n and n.group(2) in UI_OWEE: return n.group(1) + " " + UI_OWEE[n.group(2)]
         l = re.fullmatch(r"Lección ([\d.]+) — (.+)", txt)                  # «Lección 1.2 — Título»
         if l and l.group(2) in UI_OWEE: return "tase-palo " + l.group(1) + " — " + UI_OWEE[l.group(2)]
+        if " + " in txt:                                                   # «átomo + masa (nota)» -> «ganu + gama»
+            ps = [p.strip() for p in re.sub(r"\s*\([^()]*\)$", "", txt).split(" + ")]
+            if all(p in PARTES for p in ps): return " + ".join(PARTES[p] for p in ps)
+        if " — " in txt:                                                   # «Tera kelo — El ciclo del tiempo (nota)»: el nombre ya está en Owee
+            a, b = txt.split(" — ", 1); b = re.sub(r"\s*\([^()]*\)$", "", b)
+            if b in UI_OWEE and all(t in ALLMAP or all(q in ALLMAP for q in t.split("-")) for t in re.findall(r"[a-z]+(?:-[a-z]+)*", a.lower())) and not re.search(r"[áéíóúñ]", a):
+                return a + " — " + UI_OWEE[b]
+            if a in UI_OWEE and not re.search(r"[áéíóúñ]", b) and all(t in ALLMAP or all(q in ALLMAP for q in t.split("-")) for t in re.findall(r"[a-z]+(?:-[a-z]+)*", re.sub(r"\s*\([^()]*\)$", "", b).lower())):
+                return UI_OWEE[a] + " — " + re.sub(r"\s*\([^()]*\)$", "", b)
         if " · " in txt:                                                   # «Área · Sección»
             a, b = txt.split(" · ", 1)
             if a in UI_OWEE and b in UI_OWEE: return UI_OWEE[a] + " · " + UI_OWEE[b]
         return None
     def un(m):
-        txt = " ".join(html.unescape(re.sub(r"</?(?:strong|em|b|i|code)>", "", m.group(3))).split())
+        txt = " ".join(html.unescape(re.sub(r"</?(?:strong|em|b|i|code)>|</?span[^<>]*>", "", m.group(3))).split())
         ow = None if ("data-ow" in m.group(2) or "data-o=" in m.group(2)) else traducir(txt)
         if ow is None: return m.group(0)
         return f'<{m.group(1)}{m.group(2)}><span data-ow="{esc(ow)}">{m.group(3)}</span></{m.group(1)}>'
@@ -553,7 +565,7 @@ def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=T
 <title>{esc(title)} · Owee</title>
 <link rel="icon" href="pad/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/owee.css"><style>{CSS}</style>{extra_head}</head>
-<body {body_attrs}>{top}<main>{ui_wrap(body)}</main>{foot}
+<body {body_attrs}>{top}<main>{ui_wrap(body)}</main>{ui_wrap(foot)}
 <script src="assets/owee.js"></script><script src="assets/audio.js"></script><script>{JS_COMMON}</script>{extra_js}</body></html>"""
     if PUBLICO:
         doc = re.sub(r'<a [^>]*href=["\'](?:%s)(?:#[^"\']*)?["\'][^>]*>(.*?)</a>' % "|".join(re.escape(x) for x in INTERNAS), r"\1", doc, flags=re.S)

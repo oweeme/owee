@@ -1,6 +1,6 @@
 # Owee Informática — guía para desarrolladores (borrador 0.1)
 
-**Estado: aprobada.** Material nuevo con **una sola raíz nueva** (`bomo`, bug); todo lo demás se compone con raíces que ya existen (`meka` máquina, `mado` cálculo, `doke` datos, `foma` regla, `beka` escritura, `rela` conexión, `mena` memoria, `kare` corrección, `bosa` rotura…). Cada término pasó la **verificación automática** (fonología V/CV sin `i`, partes existentes, ≤ 3 elementos, forma y significado únicos). Ninguno está **aprobado** hasta que lo confirmes.
+**Estado: aprobada.** Material nuevo con **una sola raíz nueva** (`bomo`, bug); todo lo demás se compone con raíces que ya existen (`meka` máquina, `mado` cálculo, `doke` datos, `foma` regla, `beka` escritura, `rela` conexión, `mena` memoria, `kare` corrección, `bosa` rotura…). Cada término pasó la **verificación automática** (fonología V/CV sin `i`, partes existentes, ≤ 3 elementos, forma y significado únicos).
 
 > **Principio:** el **código no se traduce**. Palabras clave, nombres de funciones y símbolos se quedan como están (`if`, `for`, `==`, `{ }`). Owee aporta el **vocabulario para hablar, enseñar y documentar** el software, igual que en Matemáticas y Física.
 

@@ -1693,3 +1693,11 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - `07_Sitio_Web/ui_owee_ronda4.tsv`: 28 resúmenes cortos en Owee de párrafos de informática, astronomía, física, química y matemáticas (370 textos de interfaz en total, 0 problemas del validador).
 - `validar_ui_owee.py` y `probar_idiomas.py`: símbolos admitidos ampliados (unidades, elementos, variables, URL/Git/Python/GitHub).
 - Prueba de navegador: 0 fallos (ES/Owee/Script en todas las páginas).
+
+## §101 — Ronda 5 de la interfaz en Owee y lote 18 (2026-10-22)
+- **Lote 18** (10 compuestos aprobados, sin raíces nuevas): `lena-reka-beka` poema, `saro-lare` proverbio/sentencia, `pado-reka-tera` mito, `ruma-reka-tera` fábula, `rena-lare` filosofía, `raga-kola` tabla, `gore-po-doke` resumen, `pado-beka` borrador, `dese-kare` aprobado, `pose-foma` orden (ver `02_Diccionario/datos/lotes_18.md`). `reka-pema` (responder) se reutiliza para «respuesta»: no se creó sinónimo.
+- Nombres de lenguas adaptados: Español → `Esepaneolo`, Inglés → `Enegelese`.
+- `07_Sitio_Web/ui_owee_ronda5.tsv` (títulos, índices laterales, resúmenes de párrafos de Matemáticas, Química, Astronomía, Informática, Gramática, Pronunciación, Literatura, cabeceras de tablas) y `partes_owee.tsv` (las columnas «átomo + masa» se traducen solas a «ganu + gama»).
+- El traductor ahora alcanza párrafos que contienen palabras Owee con glifo (`<span class="o">`), el pie de página y los títulos «Nombre — Título (nota)».
+- El validador acepta compuestos con guion cuando cada parte está en el léxico; símbolos admitidos: sin, cos, tan, Script, PDF no.
+- Corregido el texto de Informática («Estado: aprobada» ya no dice «Ninguno está aprobado»).

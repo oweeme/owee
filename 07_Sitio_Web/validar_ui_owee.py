@@ -10,7 +10,7 @@ LEX = {l.split("\t")[0] for f in ("lexico.tsv", "lexico_ciencias.tsv") for l in 
 SIL = re.compile(r"(?:sh|ch|[pbtdkgfsmnlr])?[aeou]")
 # símbolos y nombres de productos que se dejan tal cual dentro del texto Owee
 SIMBOLOS = {"ES", "V", "CV", "AFI", "IPA", "Owee", "Sans", "School", "Script", "Keyman", "Android", "Windows", "Linux", "iPhone", "macOS", "Python", "GitHub", "sh", "ch", "a", "e", "o", "u", "i",
-            "URL", "Git", "json", "qow", "m", "kg", "s", "N", "J", "W", "H", "O", "Na", "Cl", "x", "y", "pH"}
+            "sin", "cos", "tan", "URL", "Git", "json", "qow", "m", "kg", "s", "N", "J", "W", "H", "O", "Na", "Cl", "x", "y", "pH"}
 
 def cargar():
     for f in sorted(aqui.glob("ui_owee*.tsv")):
@@ -22,7 +22,9 @@ def cargar():
 def valido(tok):
     if tok in LEX: return True
     m = re.fullmatch(r"([a-z]+(?:-[a-z]+)*?)((?:-pa|-po)+)", tok)
-    return bool(m and m.group(1) in LEX)
+    if m and m.group(1) in LEX: return True
+    partes = tok.split("-")                                    # compuesto con nexo: cada parte es una palabra del léxico
+    return len(partes) > 1 and all(p in LEX for p in partes)
 
 def main():
     malos, vistos = [], {}

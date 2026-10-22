@@ -1009,3 +1009,17 @@ COMPUESTOS += [
  ("gura-kema","objeto gramatical (objeto que recibe)",L17,"Términos de gramática"),
  ("dare-nara","sujeto gramatical (persona que hace)",L17,"Términos de gramática"),
 ]
+
+L18 = "Términos del sitio y la literatura (lote 18)"
+COMPUESTOS += [
+ ("lena-reka-beka","poema (poesía escrita)",L18,"Términos del sitio"),
+ ("saro-lare","proverbio / sentencia (saber de la comunidad)",L18,"Términos del sitio"),
+ ("pado-reka-tera","mito (cuento del comienzo)",L18,"Términos del sitio"),
+ ("ruma-reka-tera","fábula (cuento de animales)",L18,"Términos del sitio"),
+ ("rena-lare","filosofía (saber del pensar)",L18,"Términos del sitio"),
+ ("raga-kola","tabla (filas y columnas)",L18,"Términos del sitio"),
+ ("gore-po-doke","resumen (información pequeña)",L18,"Términos del sitio"),
+ ("pado-beka","borrador (escritura del comienzo)",L18,"Términos del sitio"),
+ ("dese-kare","aprobado (decisión correcta)",L18,"Términos del sitio"),
+ ("pose-foma","orden (posición por regla)",L18,"Términos del sitio"),
+]

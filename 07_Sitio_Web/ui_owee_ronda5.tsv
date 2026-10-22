@@ -1,0 +1,172 @@
+# Ronda 5 de la interfaz en Owee: títulos, índices y resúmenes de párrafos (borrador; nuevas formas del lote 18)
+Registro Maestro	bade-doke
+Estado y pendientes	te-dore re moke
+Revisión semántica	kare soma-karo
+Auditoría inicial	kare pado
+Plan de ampliación	foma pa
+Integración (oweelinux, web)	rela: meka-gora re gora-rela
+Los planetas por orden	taro-duma pose-foma
+Astrología (simbólica)	kuna-sena
+Pendientes de Astronomía	moke lare-sade-mune
+Owee Astronomía y Astrología — borrador 0.1	Ouee lare-sade-mune — pado-beka 0.1
+Owee en tu software: guía práctica	Ouee bo tu mado-foma: fela-doke
+Palabras que conviene decidir pronto	reka-palo: dese moke, te
+Owee Informática — guía para desarrolladores (borrador 0.1)	Ouee lare-meka — fela-doke mado-nara 0.1
+La mol y las masas	ganu-bema re gama
+Oxidación y reducción	elenu-pema re elenu-gura
+Todas las construcciones propuestas	reka-palo-rela: soma-dese
+Decisiones pendientes para Química	dese moke lare-gume-rela
+Raíces de Owee Base reutilizadas	reka-palo gule, kade tame
+Correcciones y pendientes de auditoría	kare re moke
+Teorema de Pitágoras	foma ga-kado
+Construcciones científicas principales	reka-palo-rela lare
+Modo inmersión	mode: bo Ouee
+Descargar PDF imprimible	lu-doke-gura beka-dare
+Glifos + romano	sena + Ouee
+Solo glifos	sena be
+Solo romano	Ouee be
+Qué le da Owee a la poesía	kema: Ouee pema to lena-reka
+Reglas métricas propuestas	foma sone-kelo: soma-dese
+Formas poéticas propuestas	dore lena-reka: soma-dese
+Prosa y otros textos	doke-beka tame
+Dichos (proverbios)	saro-lare
+Música y canciones	lena-sone re lena-sone-sabe
+Mitos, dioses y cuentos	pado-reka-tera, kuna-nara re reka-tera
+Nombrar a los dioses	sena kuna-nara
+Convenciones narrativas	foma reka-tera
+Siguientes pasos sugeridos	pu: soma-dese
+Dichos breves	saro-lare gore-po
+Notas de vocabulario	paku: reka-seta
+Por qué Owee canta bien	ka-kasu: Ouee sone lena
+Cómo escribir una canción nueva	ka-mode: beka lena-sone-sabe tame
+Pedir, ordenar y ser cortés	nume-reka, foma re reme-lena
+Palabras compuestas	reka-palo-rela
+Owee → español	Ouee to Esepaneolo
+Español → Owee	Esepaneolo to Ouee
+Especificación	foma-doke
+Canciones: bocetos de ritmo y acento (sin voz)	lena-sone-sabe: sone-kelo re sone-faro, so sabe
+Química (borrador propuesto)	lare-gume-rela (pado-beka)
+Vida	suma
+Filosofía	rena-lare
+Amor	lore
+Guerra y paz	naro-bosa re malo-saro
+Filial	mela
+Relato breve	reka-tera gore-po
+El ciclo del tiempo	tera-kelo
+Unión	rela
+Casa	kuma
+Noche	kuna-bore
+Antes, ahora, después	pe, te, pu
+Canción de cuna	sule lena-sone-sabe
+Canción de amor	lore lena-sone-sabe
+Canción de comunidad y trabajo	saro re daro lena-sone-sabe
+Canon a 4 voces	fo sabe-sone
+Canción de romance	mune-lore lena-sone-sabe
+Canción de cuna de cuento de hadas	reka-tera sule lena-sone-sabe
+Balada de nostalgia	mena lena-sone-sabe
+El comienzo del mundo	gora-pado
+El sol y la luna	sade re mune
+El agua y la piedra	suna re taro-goda
+La semilla que esperó	nelo-pado pe pu-dure
+El universo que respira	gora-fese: sura gura re pema
+Sentencias del universo (gora)	saro-lare gora-fese
+Sentencias de las plantas (nelo)	saro-lare nelo
+Sentencias de la vida (suma)	saro-lare suma
+El libro de los ciclos — historias y sentencias del universo, las plantas y la vida	beka-seta kelo — mena-tera re saro-lare: gora-fese, nelo, suma
+Owee — Literatura y Poesía 0.5	Ouee — lena-reka re lena-sone 0.5
+Borrador propuesto. Material nuevo, sin raíces nuevas. Todos los términos están VERIFICADOS automáticamente; faltan tu aprobación.	soma-dese. doke tame; reka-palo tame no. meka kare te; tu dese moke.
+Estado: VERIFICADA (pendiente de aprobación). Material nuevo; cada término pasó la verificación automática (fonología, partes existentes, forma y significado únicos). Como en Química, no se añade ninguna raíz nueva: todo se compone con raíces que ya existen (sade sol, mune luna, kuna cielo, salo luz, gadu gravedad, duma movimiento…). Los números llevan glifo numérico y lectura; los cálculos se verifican al generar el sitio.	te-dore: kare-mede; dese moke. doke tame. reka-palo tame no: sade, mune, kuna, salo, gadu, duma. banu: sena re lodu.
+Nombres de galaxias, estrellas y constelaciones concretas (Orión, Sirio…): requieren la norma de nombres propios (Gramática 1.1 §14) o numeración.	sena-nara sade-lu-seta, sade-lu re sade-lu-sena: foma moke, lo banu.
+Unidades: al (año luz), UA, parsec se conservan como símbolos.	kedo-sena: telo no.
+Borrador propuesto. Material nuevo con una sola raíz nueva (bomo, «bug»); el resto son compuestos. Términos aprobados.	soma-dese. doke tame; reka-palo tame be: bomo. dese-kare.
+Estado: aprobada. Material nuevo con una sola raíz nueva (bomo, bug); todo lo demás se compone con raíces que ya existen (meka máquina, mado cálculo, doke datos, foma regla, beka escritura, rela conexión, mena memoria, kare corrección, bosa rotura…). Cada término pasó la verificación automática (fonología V/CV sin i, partes existentes, ≤ 3 elementos, forma y significado únicos).	te-dore: dese-kare. reka-palo tame be: bomo. re reka-palo: meka, mado, doke, foma, beka, rela, mena, kare, bosa.
+Nombres de símbolos: { }, [ ], ( ), ;, :, _ (hace falta decidir si se leen en Owee o en la lengua original).	sena-nara: lodu Ouee ka? dese moke.
+Borrador propuesto. Material nuevo, sin raíces nuevas. Los términos están verificados automáticamente; ninguno aprobado todavía.	soma-dese. doke tame; reka-palo tame no. dese no, te.
+Estado: VERIFICADA (pendiente de aprobación). Esta guía no existía en el proyecto: se crea aquí con el mismo método de Matemáticas y Física. Nada de lo que contiene está aprobado hasta que lo confirmes. Los números se muestran con el glifo numérico de Owee y su lectura; los cálculos se verifican automáticamente al generar el sitio.	te-dore: kare-mede; dese moke. lare-gume-rela tame; mode se lare-banu re lare-fasa.
+El número atómico (ganu-banu) es el número de protones; en un átomo neutro hay tantos electrones como protones.	ganu-banu: poru banu. ganu: poru re elenu se.
+Nombres de elementos: conservar solo símbolos (decisión actual) o crear una convención sistemática. Con la fonología Owee, los nombres internacionales (sin i, sin consonantes finales) necesitarían una norma de adaptación.	ganu-dore sena-nara: dese moke.
+Aprobar las construcciones de esta guía (todas están marcadas PROPUESTA).	dese-kare: reka-palo-rela ne.
+Valencia, orbital, isótopo, enlace iónico/covalente: aún sin construcción; conviene decidirlas al escribir textos reales.	reka-palo tame: moke, dese te.
+Nomenclatura de compuestos (cómo se lee NaCl, H₂SO₄ en Owee).	gume-rela sena-nara: lodu Ouee ka? dese moke.
+Fuentes: Owee Mathematics 1.0 (números y aritmética escolar) y Owee Matemáticas 2.0 (álgebra a álgebra lineal), unificadas y con las correcciones de auditoría. Todos los números y ecuaciones de los ejemplos se muestran con el glifo numérico de Owee y, debajo, su lectura en Owee. Los ejemplos numéricos de esta página se verifican automáticamente al generar el sitio: si un cálculo estuviera mal, la página no se genera.	doke: banu re mado, seka re mata. banu re seka: sena re lodu. mado: kare-mede te.
+Práctica de lectura. Lee en voz alta y después tapa los números y reconoce solo por el nombre:	tase-daro lodu: lodu sone-pa. banu kose, reka lodu.
+Dictado: una persona dice los nombres Owee y otra escribe los glifos.	beka-lodu: nara be reka, nara be beka sena.
+La lengua refleja el valor posicional que se aprende en matemáticas: cada palabra de escala es una posición.	Ouee: banu pose bado. reka-palo: pose be.
+Figuras por número de lados (número + kado):	dore: banu + kado.
+La guía PDF 2.0 usaba formas impronunciables en Owee (no existen v ni i, ni consonantes finales o grupos):	gule beka: reka-palo no sone. kare te.
+Owee · sitio generado desde el Registro Maestro y el Diccionario Base · Owee Script/Sans 3.4. La romanización es la forma oficial; los glifos requieren la fuente Owee (incluida en esta página). Licencias: texto y datos CC BY-SA 4.0 · fuentes SIL OFL 1.1 · código MIT.	Ouee · rela-kuma: foma-doke re reka-seta. sena beka: Ouee Sans/Script 3.4. Kade so fedo.
+Cada palabra o elemento lleva el acento en su primera sílaba; el primer elemento del compuesto es el más fuerte.	reka-palo: sone-faro bo sone-palo be. reka-palo-rela: be faro-pa.
+Funciona igual para todos los papeles (sujeto, objeto, poseedor, lugar) con la misma regla.	foma se: dare-nara, gura-kema, pase, kore.
+Evita relativas dentro de relativas: parte la frase.	ra-rela bo ra-rela no: palo reka.
+Se escribe por el sonido, no por la ortografía.	beka: sone. beka-foma no.
+Consonante final o grupo: se añade una vocal de eco (la vocal anterior).	sone-kose gune: sone-bure pema (sone-bure pe).
+El acento va siempre en la primera sílaba, aunque el nombre original lo lleve en otra.	sone-faro: sone-palo be.
+¿Apruebas la regla de compuestos y acento (§6) y los glifos U+E03C / U+E03D?	tu dese-kare ka: foma reka-palo-rela re sone-faro, sena rela re sena-nara?
+¿La norma de nombres (§14) con la marca de nombre propio?	foma sena-nara (§14) ka?
+Lee las notas de la sección 5 en voz alta, una por una.	lodu sone-sena: be re be.
+Escucha la vocal de cada sílaba: no la cambies al hablar rápido.	luma-sone sone-bure: telo no, sape-pa reka ke.
+Canta cada palabra: en Owee cada sílaba admite una nota porque todas terminan en vocal.	sabe-sone reka-palo: sone-palo ne sone-sena kade, sone-bure gune.
+Di quién eres y dónde estás (me … bo).	reka: ka-nara me, ka-kore me (me … bo).
+Describe algo con un color o un tamaño.	reka kema: salo-lafe lo gore.
+Pregunta algo con ka-….	ka-… ko ka.
+Cargando el teclado… (necesita conexión para el motor KeymanWeb)	maku-tabe kera… (gora-rela moke)
+guía de pronunciación	sone-mode fela-doke
+Disoluciones	luda-ko
+Ecuaciones de dos pasos: 3x + 5 = 20	seka ko du duma
+Ecuación con potencia: x² + 2x + 1 = 0	seka ko telu
+Cifras posicionales, como los dígitos arábigos. Es la que se calcula con ella	sena: pose. mado: sena.
+El número como palabras Owee, sílaba por sílaba (du tanu sa). Es la que se lee en voz alta	banu: reka-palo Ouee. lodu sone-pa.
+Lógica visual de los numerales: cho (0) es ausencia; del 1 al 4 el glifo crece (una, dos, tres barras, y el 4 se cierra); el 5 es cambio (un punto, base cinco); del 6 al 9 son 5 + unidades (el punto del 5 más las barras del 1 al 4).	banu-sena: cho nuse; be-fo pa; sa telo; ku-she: sa pa.
+Las escalas son tanu (10), gabu (100), soku (1 000) y benu (1 000 000). Se lee coeficiente + escala, de la posición mayor a la menor. No hay formas irregulares (no hay «once», «doce», «veinte» propios).	bema: tanu, gabu, soku, benu. lodu: banu + bema. reka-palo gule no.
+Reglas: (1) se lee coeficiente + escala; (2) las posiciones con 0 no se leen (909 = she gabu she); (3) el coeficiente be (1) sí se lee (100 = be gabu).	foma: banu + bema lodu; cho lodu no; be lodu (be gabu).
+Los grupos son regulares: [cantidad] soku, [cantidad] benu. La cantidad que acompaña a soku o benu se lee como cualquier número de 1 a 999.	soku re benu: foma se. banu be-she lodu.
+Se conservan los símbolos SI (m, kg, s, K, L); Owee aporta los conceptos: longitud mede dase, masa mede gume, tiempo mede tera, volumen mede kopa, temperatura mede fure, área mede gore.	kedo-sena: m, kg, s kade. Ouee: mede dase, mede gume, mede tera, mede fure, mede gore.
+La variable puede cambiar; la incógnita es un valor desconocido	bara telo pode; daku: bado lare no.
+Ecuaciones relacionadas; no necesita raíz nueva	seka rela; reka-palo tame no.
+Anatomía de 3x + 5 = 20: toda la igualdad es una seka; 3x + 5 es una rebo (expresión); 3x y 5 son teda (términos); 3 es el kofa (coeficiente); x es bara y, al resolver, daku.	dore: seka, rebo, teda, kofa, bara, daku.
+Los operadores ya aprendidos funcionan igual. En lectura, x se dice bara:	dapa re dopo: se. lodu: x = bara.
+Se mantiene la notación sin(θ), cos(θ), tan(θ). En el discurso Owee: shenu, kosu, taga.	sena: sin, cos, tan. Ouee: shenu, kosu, taga.
+En el triángulo rectángulo 3-4-5 (cateto opuesto 3, adyacente 4, hipotenusa 5):	ga-kado: ga, fo, sa.
+Eje: la guía PDF usaba akso (grupo ks, impronunciable). Se sustituye por loka-mede («línea de medida»), en coherencia con pose-mede (coordenada). El eje de rotación en física es loda-loka.	loka-mede: mede-loka; pose-mede se.
+Ángulo: la guía PDF usaba ango, que no es pronunciable en Owee (grupo ng). Se sustituye por el compuesto tora-telo («cambio de dirección»): un ángulo mide cuánto cambia la dirección entre dos líneas. Se mide en grados (símbolo °).	tora-telo: loka du bo tora telo mede.
+Se reutilizó todo lo posible: gume (materia), ganu (átomo), elenu (electrón), poru (protón), netu (neutrón), chaga (carga), rela (unión), telo (cambio), shome (calor), goda/luda/boga (estados), suna (agua), suma (vida).	reka-palo gule kade: gume, ganu, elenu, poru, netu, chaga, rela, telo, shome, goda, luda, boga, suna, suma.
+Ya existen (Física 2.0): ganu átomo · ganu-choma núcleo · elenu electrón · poru protón · netu neutrón · gume materia · gama masa.	reka-palo gule: ganu, ganu-choma, elenu, poru, netu, gume, gama.
+Se conservan mol y g/mol. La masa molecular (ganu-kema-gama) es la suma de las masas atómicas (H = 1, O = 16, Na = 23, Cl = 35,5, C = 12).	ganu-kema-gama: ganu-gama seta.
+Neutralización: HCl + NaOH → NaCl + H₂O. El ácido (poru-pema) cede su protón a la base (poru-gura) y se forma una sal (chaga-rela, NaCl) y agua.	poru-pema poru pema to poru-gura; chaga-rela re suna dare.
+La transferencia de electrones se nombra con las acciones que ya tiene Owee, pema (dar) y gura (recibir):	elenu telo: pema re gura.
+Una unidad SI como m o kg conserva su símbolo; un concepto físico puede tener nombre Owee mientras su símbolo sigue siendo internacional.	kedo-sena m, kg: sena telo no. lare-fasa: Ouee sena.
+Cómo se nombran (principio concepto + modificador): una estrella es un sol lejano (sade-lu); un planeta es una tierra que se mueve (taro-duma, como «errante»); la galaxia es un conjunto de estrellas (sade-lu-seta); una constelación, un «signo» de estrellas (sade-lu-sena). El telescopio es el ojo lejano (loke-lu) y el microscopio el ojo cercano (loke-le).	reka-palo-rela: sade-lu = sade + lu; taro-duma = taro + duma; sade-lu-seta = sade-lu + seta; sade-lu-sena = sade-lu + sena; loke-lu = loke + lu; loke-le = loke + le.
+Se nombran por ordinal (número-pose, Gramática 1.1 §10) + taro-duma: así no hace falta adaptar los nombres propios (que no caben en la fonología de Owee).	taro-duma sena-nara: pose + banu (ga-pose taro-duma).
+El sol sube. · La luna cierra el sol (eclipse). · La Tierra orbita el sol. · El día es una parte del año.	sade go. · mune kose sade. · taro duma sade. · loda-kelo: sade-kelo palo.
+El año luz es la distancia (dase) que recorre la luz en un año (sade-kelo): se conserva como unidad internacional (al).	salo-kelo = salo duma bo sade-kelo, dase.
+Los 12 signos del zodiaco combinan 4 elementos (pore fuego, taro tierra, sura aire, suna agua) con 3 modalidades (pado cardinal = «comienzo», dure fijo = «duración», telo mutable = «cambio»). El nombre Owee de cada signo es simplemente elemento + modalidad, un sistema que coincide exactamente con la clasificación tradicional.	pore, taro, sura, suna ko pado, dure, telo: kuna-sena.
+Fases lunares (nueva, creciente, llena, menguante): composiciones con mune, pa/po y fese.	mune dore: mune, pa, po, fese.
+Calendario: días de la semana y meses (los nombres tradicionales no caben en Owee; se propone numerarlos: be-pose loda-kelo…).	loda-kelo re mune-kelo: sena-nara no, banu kade.
+Forma	dore
+Qué es	ka-kema
+Número	banu
+Ejemplo para 25	loke-pema-kema 25
+Serie	geda
+Lectura	lodu
+Descomposición	palo
+Expresión	rebo
+Operación	dare
+Idea	soma
+Palabra	reka-palo
+Símbolo	sena
+Valor	bado
+Razón	rata
+Medida	mede
+Código	foma-beka
+Lectura en Owee	lodu Ouee
+Recomendación	galo
+Signo tradicional	kuna-sena
+Ecuación	seka
+Solución	reda
+Verificación	kare-mede
+Caso	kema
+Problema	dema
+Forma original	dore pe
+Forma vigente	dore te
+Forma Owee	dore Ouee
+Inglés	Enegelese
