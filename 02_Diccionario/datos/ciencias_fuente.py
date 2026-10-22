@@ -979,3 +979,33 @@ COMPUESTOS += [
  ("doke-beka-palo","sección (parte de un texto)",L16,"Aprender y escribir"),
  ("fela-doke","guía (información que enseña)",L16,"Aprender y escribir"),
 ]
+
+L17 = "Gramática del idioma (lote 17)"
+COMPUESTOS += [
+ ("sena-nara-reka","vocativo (comunicación con el nombre de la persona)",L17,"Términos de gramática"),
+ ("le-lu-reka","demostrativo (palabra de cerca y lejos)",L17,"Términos de gramática"),
+ ("bema-reka-palo","cuantificador (palabra de cantidad)",L17,"Términos de gramática"),
+ ("no-reka","negativo (palabra de negación)",L17,"Términos de gramática"),
+ ("reka-palo-rela","compuesto (palabra unida)",L17,"Términos de gramática"),
+ ("rela-sena","guion (signo de unión)",L17,"Términos de gramática"),
+ ("nuse-sena","espacio (signo vacío)",L17,"Términos de gramática"),
+ ("sone-faro","acento (fuerza del sonido)",L17,"Términos de gramática"),
+ ("faro-bema","intensidad (cantidad de fuerza)",L17,"Términos de gramática"),
+ ("se-mede","comparación (medir la igualdad)",L17,"Términos de gramática"),
+ ("ka-reka-palo","interrogativo (palabra de pregunta)",L17,"Términos de gramática"),
+ ("ra-rela","relativo (unión con ra)",L17,"Términos de gramática"),
+ ("reka-fese-rela","subordinación (oración unida)",L17,"Términos de gramática"),
+ ("reme-reka","saludo (comunicación de amistad)",L17,"Términos de gramática"),
+ ("reme-lena","cortesía (amistad agradable)",L17,"Términos de gramática"),
+ ("sone-nuse-sena","puntuación (signos del silencio)",L17,"Términos de gramática"),
+ ("reka-palo-ba","préstamo lingüístico (palabra de fuera)",L17,"Términos de gramática"),
+ ("dore-tada","choque de formas (contacto de formas)",L17,"Términos de gramática"),
+ ("rela-kare","coherencia (unión correcta)",L17,"Términos de gramática"),
+ ("soma-dese","propuesta (idea para decidir)",L17,"Términos de gramática"),
+ ("foma-ba","excepción (fuera de la regla)",L17,"Términos de gramática"),
+ ("nara-reka-palo","pronombre (palabra de persona)",L17,"Términos de gramática"),
+ ("rela-reka-palo","conjunción (palabra de unión)",L17,"Términos de gramática"),
+ ("reka-palo-fese","modificador (palabra que limita)",L17,"Términos de gramática"),
+ ("gura-kema","objeto gramatical (objeto que recibe)",L17,"Términos de gramática"),
+ ("dare-nara","sujeto gramatical (persona que hace)",L17,"Términos de gramática"),
+]

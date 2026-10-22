@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 793 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 819 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -829,3 +829,29 @@ Criterios (2026-10-12):
 | `lare-nelo-ruma` | biología (saber de plantas y animales) | `lare` (saber) + `nelo` (planta) + `ruma` (animal) | OK |
 | `doke-beka-palo` | sección (parte de un texto) | `doke` (información) + `beka` (escritura) + `palo` (parte) | OK |
 | `fela-doke` | guía (información que enseña) | `fela` (enseñar) + `doke` (información) | OK |
+| `sena-nara-reka` | vocativo (comunicación con el nombre de la persona) | `sena` (signo) + `nara` (persona) + `reka` (comunicación) | OK |
+| `le-lu-reka` | demostrativo (palabra de cerca y lejos) | `le` (cerca) + `lu` (lejos) + `reka` (comunicación) | OK |
+| `bema-reka-palo` | cuantificador (palabra de cantidad) | `bema` (cantidad) + `reka` (comunicación) + `palo` (parte) | OK |
+| `no-reka` | negativo (palabra de negación) | `no` (negación) + `reka` (comunicación) | OK |
+| `reka-palo-rela` | compuesto (palabra unida) | `reka` (comunicación) + `palo` (parte) + `rela` (unión) | OK |
+| `rela-sena` | guion (signo de unión) | `rela` (unión) + `sena` (signo) | OK |
+| `nuse-sena` | espacio (signo vacío) | `nuse` (vacío) + `sena` (signo) | OK |
+| `sone-faro` | acento (fuerza del sonido) | `sone` (sonido) + `faro` (fuerza) | OK |
+| `faro-bema` | intensidad (cantidad de fuerza) | `faro` (fuerza) + `bema` (cantidad) | OK |
+| `se-mede` | comparación (medir la igualdad) | `se` (igualdad) + `mede` (medir) | OK |
+| `ka-reka-palo` | interrogativo (palabra de pregunta) | `ka` (pregunta) + `reka` (comunicación) + `palo` (parte) | OK |
+| `ra-rela` | relativo (unión con ra) | `ra` (él) + `rela` (unión) | OK |
+| `reka-fese-rela` | subordinación (oración unida) | `reka` (comunicación) + `fese` (límite) + `rela` (unión) | OK |
+| `reme-reka` | saludo (comunicación de amistad) | `reme` (amistad) + `reka` (comunicación) | OK |
+| `reme-lena` | cortesía (amistad agradable) | `reme` (amistad) + `lena` (agrado) | OK |
+| `sone-nuse-sena` | puntuación (signos del silencio) | `sone` (sonido) + `nuse` (vacío) + `sena` (signo) | OK |
+| `reka-palo-ba` | préstamo lingüístico (palabra de fuera) | `reka` (comunicación) + `palo` (parte) + `ba` (exterior) | OK |
+| `dore-tada` | choque de formas (contacto de formas) | `dore` (forma) + `tada` (contacto) | OK |
+| `rela-kare` | coherencia (unión correcta) | `rela` (unión) + `kare` (corrección) | OK |
+| `soma-dese` | propuesta (idea para decidir) | `soma` (idea) + `dese` (decisión) | OK |
+| `foma-ba` | excepción (fuera de la regla) | `foma` (regla) + `ba` (exterior) | OK |
+| `nara-reka-palo` | pronombre (palabra de persona) | `nara` (persona) + `reka` (comunicación) + `palo` (parte) | OK |
+| `rela-reka-palo` | conjunción (palabra de unión) | `rela` (unión) + `reka` (comunicación) + `palo` (parte) | OK |
+| `reka-palo-fese` | modificador (palabra que limita) | `reka` (comunicación) + `palo` (parte) + `fese` (límite) | OK |
+| `gura-kema` | objeto gramatical (objeto que recibe) | `gura` (recibir) + `kema` (objeto) | OK |
+| `dare-nara` | sujeto gramatical (persona que hace) | `dare` (hacer) + `nara` (persona) | OK |

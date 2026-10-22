@@ -7,7 +7,7 @@
 | Comprobación | Resultado |
 |---|---|
 | Textos Owee (9 archivos): fonología V/CV sin `i` y vocabulario existente | ✅ válidos |
-| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 1 154 formas (lotes 3–16) | ✅ 142 auditadas · **1 012 aprobadas** · **0 verificadas pendientes** · 0 por revisar |
+| Léxico base: 233 formas (incluye los 29 compuestos recuperados del *Primer Diccionario Conceptual*) · Léxico ampliado: 1 180 formas (lotes 3–17) | ✅ 142 auditadas · **805 aprobadas** · **0 verificadas pendientes** · 0 por revisar |
 | Colisiones exactas, fonología inválida, partes inexistentes | ✅ ninguna |
 | Sitio web: 26 páginas (curso incluido), enlaces internos y anclas | ✅ sin enlaces rotos |
 | **Revisión semántica de términos nuevos** (forma única en todo el proyecto y los PDFs antiguos, sin sinónimos, raíces con significado adecuado) | ✅ 168 OK · 27 ajustados · 0 en espera — ver `02_Diccionario/datos/revision_semantica.md` |

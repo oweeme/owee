@@ -59,6 +59,11 @@ def main():
         pg.goto(base + "index.html"); pg.click('[data-ui="script"]'); pg.wait_for_timeout(300)
         fuente = pg.evaluate("""() => document.fonts.ready.then(() => [...document.fonts].some(f => /Owee/.test(f.family) && f.status === 'loaded'))""")
         if not fuente: fallos.append("la fuente Owee no se cargó en modo Script")
+        # la etiqueta del propio selector y el nombre del sitio también van en glifos con la fuente Owee
+        etiqueta = pg.evaluate("""() => { const e = document.querySelector('[data-ui="script"] .o'); return e ? getComputedStyle(e).fontFamily + '|' + e.textContent : '' }""")
+        if "Owee" not in etiqueta.split("|")[0] or not PUA.search(etiqueta.split("|")[-1]): fallos.append(f"etiqueta del selector sin fuente Owee o sin glifos: {etiqueta}")
+        marca = pg.evaluate("""() => { const b = document.querySelector('.brand b'); return b ? getComputedStyle(b).fontFamily + '|' + b.textContent : '' }""")
+        if "Owee" not in marca.split("|")[0] or not PUA.search(marca.split("|")[-1]): fallos.append(f"el nombre del sitio no sale en glifos en modo Script: {marca}")
         if captura:
             for modo in ("es", "owee", "script"):
                 pg.goto(base + "index.html"); pg.evaluate("localStorage.clear()"); pg.goto(base + "index.html"); pg.click(f'[data-ui="{modo}"]'); pg.wait_for_timeout(500)
