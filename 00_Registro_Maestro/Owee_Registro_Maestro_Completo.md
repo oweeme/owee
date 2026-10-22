@@ -1671,3 +1671,10 @@ Los glifos se rediseñaron para que cada uno se distinga a simple vista, incluso
 **Diccionario:** la página *Diccionario* del sitio filtra ahora por todas las áreas (antes faltaban las de los lotes 3–14), muestra el inglés en cada ficha y permite buscar en inglés; incluye la descarga del diccionario completo en `assets/diccionario_owee.tsv` y `.json` (owee, sílabas, clase, español, inglés, área, estado, partes).
 
 **Literatura §11 — El libro de los ciclos:** tres historias (*El universo que respira*, *El agua y la piedra*, *La semilla que esperó*) y 12 sentencias del universo, las plantas y la vida, de referencia filosófica al modo de los libros taoístas pero de autoría original. Solo vocabulario existente.
+
+## 97. Lotes 15 y 16, `kumedo` e interfaz del sitio en Owee
+
+**Vocabulario:** 127 términos aprobados el 2026-10-22 (`02_Diccionario/datos/lotes_15_y_16.md`): `kumedo` = red social (`kume` + `do`, pedida por el autor), ampliación diaria (lote 15) y las palabras para aprender y escribir Owee (lote 16). Léxico: 1 154 formas ampliadas, 1 012 aprobadas.
+
+**Selector ES / Owee / Script:** el sitio traduce al Owee los títulos, las cabeceras de tabla, los botones y las tarjetas de la portada, del curso (niveles y lecciones), de escritura, pronunciación, teclado, descargas, nombres propios y diccionario: `07_Sitio_Web/ui_owee.tsv` (157 textos, validados contra el léxico con `validar_ui_owee.py`). Script pinta los glifos desde el romano; Owee muestra el romano; ES restaura el original; el modo se conserva al cambiar de página. La prosa larga (explicaciones de gramática, matemáticas, física…) sigue en español: Owee todavía no tiene vocabulario ni sintaxis para traducirla con fidelidad. Probado en un navegador con `07_Sitio_Web/probar_idiomas.py` (todas las páginas, los tres modos, ida y vuelta Script → romano).
+

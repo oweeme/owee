@@ -124,8 +124,8 @@ El Registro Maestro y la Especificación dicen una sola cosa: **«el acento siem
 
 | Glifo | Código | Romano | Función |
 |---|---|---|---|
-| nexo de compuesto (barra baja) | U+E03C | `-` | une los elementos de un compuesto: `sade-kelo` se ve como dos bloques ligados |
-| marca de nombre propio (dos puntos) | U+E03D | inicial **mayúscula** | precede a un nombre propio: `Ana` |
+| nexo de compuesto (`‿`, curva baja) | U+E03C | `-` | une los elementos de un compuesto: `sade-kelo` se ve como dos bloques ligados |
+| marca de nombre propio (runa `ᚠ`) | U+E03D | inicial **mayúscula** | precede a un nombre propio: `Ana` |
 
 Así `sade-kelo` (año) y la frase `sade kelo` (sol, ciclo) **se distinguen también en la escritura nativa**. La herramienta `owee.js` y el teclado Fcitx5 1.2 ya los generan.
 
@@ -289,7 +289,7 @@ Sin `i`, `v`, `h`, `y`, `z`, `j`, `c`, `q`, `w`, `x` ni consonantes finales, los
 2. Vocal inexistente: `i` → `e`. Consonantes: `v` → `b`, `z/c(suave)` → `s`, `j` → `k`, `h` → (no se escribe), `y` consonante → `e`, `q/c(fuerte)` → `k`, `w` → `u`, `ñ` → `ne`, `x` → `kes`+vocal.
 3. **Consonante final o grupo:** se añade una **vocal de eco** (la vocal anterior).
 4. El acento va **siempre en la primera sílaba**, aunque el nombre original lo lleve en otra.
-5. **Un nombre propio se marca:** en romano con **inicial mayúscula**; en Owee Script con el glifo **U+E03D** (dos puntos) delante. Así un nombre **nunca se confunde con una palabra común** aunque suene igual (por ejemplo, `Kale` es un nombre y `kale` es «amarillo»): esto cumple el principio de una forma = un significado.
+5. **Un nombre propio se marca:** en romano con **inicial mayúscula**; en Owee Script con el glifo **U+E03D** (la runa `ᚠ`) delante. Así un nombre **nunca se confunde con una palabra común** aunque suene igual (por ejemplo, `Kale` es un nombre y `kale` es «amarillo»): esto cumple el principio de una forma = un significado.
 
 | Nombre | Adaptación |
 |---|---|

@@ -81,7 +81,7 @@ En un compuesto con guion **cada elemento conserva su acento en su primera síla
 | `suna-gore-pa` (mar) | /ˈsu.na.ˌɡo.ɾe.pa/ | SU-na-GO-re-pa |
 | `bema-pa` (más cantidad) | /ˈbe.ma.pa/ | BE-ma-pa |
 
-Los elementos de **una sola sílaba** (`pa`, `po`, `no`, `le`, `lu`) se pronuncian ligeros. En **Owee Script** el compuesto se reconoce por el **nexo** (una barra baja) entre los bloques, y un nombre propio por **dos puntos** delante.
+Los elementos de **una sola sílaba** (`pa`, `po`, `no`, `le`, `lu`) se pronuncian ligeros. En **Owee Script** el compuesto se reconoce por el **nexo** (`‿`, una curva pequeña y baja) entre los bloques, y un nombre propio por la runa **ᚠ** delante.
 
 ### Nombres propios
 
