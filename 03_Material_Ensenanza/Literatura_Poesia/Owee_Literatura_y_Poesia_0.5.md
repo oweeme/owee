@@ -710,3 +710,231 @@ ke tu galo, ne galo
 3. Resolver los pendientes del Registro que afectan al texto largo: posición de interrogativos y puntuación.
 4. Escribir 10–20 textos más breves (dichos, cuartetos) y **de ahí** extraer qué vocabulario falta.
 5. ✓ PDF imprimible con Owee Sans: `Owee_Literatura_y_Poesia_0.5.pdf` (se genera desde el sitio web).
+
+## 11. El libro de los ciclos — historias y sentencias del universo, las plantas y la vida
+
+*Autoría original (borrador, 2026-10-22).* Textos de **referencia filosófica** escritos al modo de los libros de sabiduría taoístas: frases breves, paradoja, y las imágenes del **agua, el vacío, el valle, la raíz y el ciclo**. No copian ni parafrasean ningún libro: usan las mismas herramientas (contraste, comparación, silencio) con las raíces de Owee. Son tres historias (§11.1–11.3) y tres grupos de sentencias: el **universo** (`gora`), las **plantas** (`nelo`) y la **vida** (`suma`).
+
+**Reglas de este apartado:** solo vocabulario ya existente (se comprueba con `validar_owee.py`); orden SOV; modificador después del concepto; sin cópula (`kuna gore-pa-pa` = el cielo es muy grande); `pe` una sola vez al abrir un relato; moraleja final como dicho. Los relatos usan las convenciones de §9.5.
+
+### 11.1 Gora kelo — *El universo que respira* (historia)
+
+```owee
+pado
+gora pe sura gura
+gora sura pema
+gora gore-pa
+gora gore-po
+kelo
+nuse bo, gora mora
+gora bo, nuse mora
+kelo no gune
+```
+
+*al principio / el mundo recibió aire / el mundo dio aire / el mundo, grande / el mundo, pequeño / ciclo / en el vacío, el mundo existe / en el mundo, el vacío existe / el ciclo no termina.*
+
+Idea: el universo no se crea una vez; **respira** (recibe y da, crece y se encoge) y lo lleno y lo vacío se contienen mutuamente.
+
+### 11.2 Suna re taro-goda — *El agua y la piedra* (fábula)
+
+```owee
+suna re taro-goda pe reme
+taro-goda faro-pa
+suna faro-po
+taro-goda pe reka
+«tu faro-po»
+suna pe reka
+«me gu duma»
+taro-goda no duma
+suna duma
+kelo pe duma
+taro-goda gore-po
+suna gore-pa
+faro-po, dure-pa
+```
+
+*el agua y la piedra fueron amigas / la piedra, fuerte / el agua, débil / la piedra habló: «tú eres débil» / el agua habló: «yo bajo» / la piedra no se movió / el agua se movió / los ciclos pasaron / la piedra, pequeña / el agua, grande / lo débil dura más.*
+
+Idea: lo que cede y fluye vence a lo que se queda rígido. (Dicho final como en §9.5.)
+
+### 11.3 Pado-nelo — *La semilla que esperó* (cuento)
+
+```owee
+pado-nelo pe taro bo mora
+taro bo sone-nuse
+pado-nelo pe reka
+«salo ka-kore»
+taro-nara pe reka
+«salo go»
+pado-nelo pu-dure
+kuna-suna pe duma
+pado-nelo pe telo
+nelo-maku go duma
+pado-nelo, nelo-gore-pa
+ke tu pu-dure, tera tu galo
+```
+
+*la semilla estaba en la tierra / en la tierra, silencio / la semilla habló: «¿dónde está la luz?» / la deidad de la tierra habló: «la luz, arriba» / la semilla esperó / la lluvia llegó / la semilla cambió / la hoja subió / la semilla, árbol / si tú esperas, el tiempo te ayuda.*
+
+Idea: la semilla no busca la luz; **espera** a que el agua y el tiempo la lleven hacia arriba.
+
+### 11.4 Sentencias del universo (*gora*)
+
+**I. Nuse — el vacío**
+
+```owee
+nuse mora
+nuse mude
+kopa nuse, kopa kade
+nado nuse, nara duma
+ke nuse no, kema no mora
+```
+
+*el vacío existe / el vacío está lleno / el recipiente vacío sirve / la puerta vacía, la persona pasa / si no hay vacío, no hay cosa.*
+
+**II. Kelo — el ciclo**
+
+```owee
+sade go duma, sade gu duma
+mune go duma, mune gu duma
+kuna-salo re kuna-bore, kelo
+kelo no gune
+gora kelo
+```
+
+*el sol sube, el sol baja / la luna sube, la luna baja / el día y la noche, un ciclo / el ciclo no termina / el mundo es ciclo.*
+
+**III. Taro re kuna — la tierra y el cielo**
+
+```owee
+kuna go
+taro gu
+kuna no taro
+taro no kuna
+nara, kuna re taro rela-dare
+```
+
+*el cielo, arriba / la tierra, abajo / el cielo no es la tierra / la tierra no es el cielo / la persona une el cielo y la tierra.*
+
+**IV. Suna — el agua**
+
+```owee
+suna faro-po
+balo, suna taro-goda bosa
+suna gu duma
+suna faro-pa no nume
+```
+
+*el agua es débil / pero rompe la piedra / el agua baja / el agua no desea la fuerza.*
+
+### 11.5 Sentencias de las plantas (*nelo*)
+
+**V. Nelo-taro — la raíz**
+
+```owee
+nelo-taro gu mora
+me nelo-taro no luma-salo
+nelo-maku re nelo-lena go mora
+ke nelo-taro no mora, nelo-lena no mora
+```
+
+*la raíz está abajo / yo no veo la raíz / la hoja y la flor están arriba / si no hay raíz, no hay flor.*
+
+**VI. Nelo-gore-pa — el árbol**
+
+```owee
+nelo-gore-pa daro no
+balo, nelo-gore-pa suma dure-pa-pa
+nara nelo-gore-pa kade
+nelo-gore-pa bosa
+```
+
+*el árbol no trabaja / pero el árbol vive muy largo / la persona usa el árbol / el árbol se rompe.*
+
+**VII. Nelo-saro — el bosque**
+
+```owee
+nelo be sone no
+nelo-saro sone
+nara be faro-po
+naro faro-pa
+```
+
+*una planta, ningún sonido / el bosque suena / una persona, débil / el grupo, fuerte.*
+
+**VIII. Nelo-lena — la flor**
+
+```owee
+nelo-lena pe mora
+nelo-lena pe gune
+pado-nelo pe mora
+suma no gune
+```
+
+*la flor existió / la flor terminó / la semilla existió / la vida no termina.*
+
+### 11.6 Sentencias de la vida (*suma*)
+
+**IX. Suma suna se — la vida y el agua**
+
+```owee
+suma suna se
+suna duma, suma duma
+suna kopa dore delo
+suma tera dore delo
+```
+
+*la vida es como el agua / el agua se mueve, la vida se mueve / el agua toma la forma del recipiente / la vida toma la forma del tiempo.*
+
+**X. Suma-gune — la muerte**
+
+```owee
+suma-pado re suma-gune, kelo
+suma-gune no gune
+me suma-gune no dune-saku
+```
+
+*el nacimiento y la muerte, un ciclo / la muerte no es fin / yo no temo a la muerte.*
+
+**XI. Doma — el corazón**
+
+```owee
+ke doma malo, gora malo
+ke doma saku, gora saku
+doma, gora gade
+```
+
+*si el corazón está en calma, el mundo está en calma / si el corazón teme, el mundo teme / el corazón es la identidad del mundo.*
+
+**XII. Dare no — no hacer**
+
+```owee
+me dare no
+kema-fese telo
+me reka no
+kema-fese sone
+```
+
+*yo no hago / todo cambia / yo no hablo / todo suena.*
+
+### 11.7 Dichos breves
+
+```owee
+nuse mude
+faro-po, dure-pa
+pu-dure, galo
+kelo no gune
+doma malo, gora malo
+```
+
+| Owee | Español |
+|---|---|
+| nuse mude | El vacío está lleno. |
+| faro-po, dure-pa | Lo débil dura más. |
+| pu-dure, galo | Esperar es ayudar. |
+| kelo no gune | El ciclo no termina. |
+| doma malo, gora malo | Corazón en calma, mundo en calma. |
+
+### 11.8 Notas de vocabulario
+
+Todas las palabras ya existían; **no se creó ninguna**. Las que más trabajo hacen en estos textos: `nuse` (vacío), `kelo` (ciclo), `dure` (duración), `faro-po` (débil), `pu-dure` (esperar), `rela-dare` (conectar), `sone-nuse` (silencio), `suma-pado` (nacimiento), `suma-gune` (muerte), `taro-goda` (piedra), `nelo-gore-pa` (árbol). Lo que sigue **pendiente de decisión** (como siempre en este documento): la puntuación propia y la posición definitiva de los interrogativos (aquí `ka-kore` va al final).

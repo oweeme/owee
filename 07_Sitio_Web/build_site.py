@@ -22,7 +22,7 @@ INTERNAS = ("idioma.html", "estado.html", "revision.html", "auditoria.html", "pl
 GM = ROOT / "04_Fuentes/actual_3.3_fuente_y_glifos/Owee_Glyph_Master_3.3"
 LIT = sorted((ROOT / "03_Material_Ensenanza/Literatura_Poesia").glob("Owee_Literatura_y_Poesia_*.md"))[-1]
 REG = ROOT / "00_Registro_Maestro/Owee_Registro_Maestro_Completo.md"
-VERSION = "3.3"
+VERSION = "3.4"
 
 # ---------------------------------------------------------------- lexico
 def load_lex():
@@ -618,7 +618,19 @@ def usage_index(poems):
 def chipcls(est):
     return {"ESTABLE": "st", "AUDITADO 2.0": "st", "APROBADA": "st", "VERIFICADA": "ver", "PROVISIONAL": "prov", "PROPUESTA": "prov", "REVISAR": "prov"}.get(est, "")
 
+def export_diccionario(ENG):
+    """Diccionario completo descargable: TSV y JSON (Owee, sílabas, clase, español, inglés, área, estado, partes)."""
+    cols = ["owee", "silabas", "clase", "espanol", "ingles", "area", "estado", "partes"]
+    filas = []
+    for e in ALL:
+        partes = " + ".join(f"{p} ({ALLMAP.get(p, ('',))[0].split(' (')[0]})" for p in e["w"].split("-")) if "-" in e["w"] else ""
+        filas.append([e["w"], e["sil"], e["cls"], e["mean"], ENG.get(e["w"], ""), e["dom"], e["est"], partes])
+    (OUT / "assets").mkdir(exist_ok=True)
+    (OUT / "assets" / "diccionario_owee.tsv").write_text("\t".join(cols) + "\n" + "".join("\t".join(r) + "\n" for r in filas), encoding="utf8")
+    (OUT / "assets" / "diccionario_owee.json").write_text(json.dumps([dict(zip(cols, r)) for r in filas], ensure_ascii=False, indent=1), encoding="utf8")
+
 def build_dic(use):
+    ENG = {l.split("\t")[0]: l.split("\t")[1] for l in (ROOT / "02_Diccionario/datos/ingles.tsv").read_text(encoding="utf8").splitlines()[1:]}
     secs, order = {}, []
     for e in ALL:
         e["label"] = e["sec"] if e["dom"] == "General" else f'{e["dom"]} · {e["sec"]}'
@@ -639,7 +651,8 @@ def build_dic(use):
             used = f'<div class="u">Usado en: {links}</div>' if u else '<div class="u">Sin uso aún en los textos</div>'
             pr = pron(w)
             prstr = f'/{pr[0]}/ · {pr[1]}' if pr else ""
-            search = (w + " " + e["mean"] + " " + e["cls"]).lower()
+            eng = ENG.get(w, "")
+            search = (w + " " + e["mean"] + " " + e["cls"] + " " + eng).lower()
             search = "".join(c for c in unicodedata.normalize("NFD", search) if unicodedata.category(c) != "Mn")
             cards.append(
                 f'<article class="entry" id="w-{w}" data-s="{esc(search)}" data-est="{e["est"].lower()}" data-used="{1 if u else 0}" data-sec="{esc(sec)}" data-dom="{e["dom"]}" data-w="{w}" data-m="{esc(e["mean"].lower())}">'
@@ -647,17 +660,18 @@ def build_dic(use):
                 f'<div class="m">{esc(e["mean"])} <span class="chip">{esc(e["cls"])}</span>'
                 f'<span class="chip {chipcls(e["est"])}">{esc(e["est"].lower())}</span>'
                 f'{"<span class=chip>"+e["dom"]+"</span>" if e["dom"]!="General" else ""}'
-                f'{"<div class=u>"+esc(e["nota"])+"</div>" if e["nota"] else ""}</div>{used}</article>')
+                f'{"<div class=u>"+esc(e["nota"])+"</div>" if e["nota"] else ""}</div>{"<div class=u lang=en>EN: "+esc(eng)+"</div>" if eng else ""}{used}</article>')
         html_secs.append(f'<section data-secbox><h2 class="sec">{esc(sec)}</h2><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(330px,1fr))">{"".join(cards)}</div></section>')
     n_used = sum(1 for e in LEX if e["w"] in use)
     unused = [e["w"] for e in LEX if e["w"] not in use and not e["parts"] and e["sec"] != "Sistema numérico"]
-    doms = ["General", "Matemáticas", "Física", "Química", "Gramática 1.1", "Cotidiano 0.1", "Astronomía", "Astrología", "Mitología", "Informática", "Interfaz", "Cuerpo y naturaleza", "Vida diaria (lote 2)", "Sitio"]
+    doms = ["General"] + list(dict.fromkeys(e["dom"] for e in SCI))
     dopts = "".join(f"<option>{d}</option>" for d in doms)
     opts = "".join(f'<option>{esc(s)}</option>' for s in secs)
     body = f"""<h1>Diccionario Owee</h1>
 <p>Owee no se traduce palabra por palabra: cada raíz es un <strong>concepto</strong> y su sentido concreto depende de la estructura y del contexto. Incluye el léxico general (Base 1.0), Matemáticas y Física 2.0 y las propuestas de Química, Gramática, Astronomía, Astrología, Mitología, vida diaria e Informática.
 <br><strong>Estados:</strong> <em>estable / auditado</em> = ya en el idioma; <em>aprobada</em> = confirmada por el autor; <em>verificada</em> = pasó la verificación automática (fonología V/CV sin i, partes existentes, ≤ 3 elementos, forma y significado únicos) y espera aprobación; <em>por revisar</em> = falló una comprobación.
 Las formas con guion se construyen con raíces y operadores existentes (<code>bema-pa</code> = más cantidad).</p>
+<p><a href="assets/diccionario_owee.tsv" download>Descargar el diccionario completo (TSV)</a> · <a href="assets/diccionario_owee.json" download>JSON</a> — {len(ALL)} formas con español, inglés, área, estado y partes. Las fichas llevan también el inglés y se pueden buscar en inglés.</p>
 <div class="stats"><div><b>{len(LEX)}</b>léxico general</div><div><b>{sum(1 for e in SCI if e['dom'] in ('Matemáticas','Física'))}</b>matemática y física</div>
 <div><b>{sum(1 for e in SCI if e['est'] == 'VERIFICADA')}</b>verificadas</div><div><b>{sum(1 for e in SCI if e['est'] == 'APROBADA')}</b>aprobadas</div><div><b>{n_used}</b>usadas en textos</div></div>
 <div class="controls"><input id="q" type="search" placeholder="Buscar en Owee o en español (sin acentos)…" aria-label="Buscar">
@@ -696,6 +710,7 @@ function sort(m){mode=m;
 document.querySelectorAll('[data-sort]').forEach(function(b){b.onclick=function(){document.querySelectorAll('[data-sort]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});sort(b.dataset.sort)}});
 [q,fd,fs,fe,fu].forEach(function(c){c.addEventListener('input',function(){if(mode!=='sec')boxes.forEach(function(b){b.classList.add('hide')});apply()})});
 apply()})();</script>"""
+    export_diccionario(ENG)
     page("diccionario.html", "Diccionario", body, "diccionario.html", extra_js=js)
 
 def build_lit(html_body, toc, imprimir=False):

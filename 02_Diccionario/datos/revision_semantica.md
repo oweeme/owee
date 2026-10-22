@@ -530,7 +530,7 @@ Criterios (2026-10-12):
 | `sone-gura-meka` | micrófono (máquina que recibe sonido) | `sone` (sonido) + `gura` (recibir) + `meka` (máquina) | OK |
 | `sone-pema-meka` | altavoz (máquina que da sonido) | `sone` (sonido) + `pema` (dar) + `meka` (máquina) | OK |
 | `sone-loke-feke` | auriculares (herramienta del oído) | `sone` (sonido) + `loke` (ojo) + `feke` (herramienta) | OK |
-| `sone-mena` | audio (memoria de sonido) | `sone` (sonido) + `mena` (memoria) | OK |
+| `doke-sone` | audio (datos de sonido) | `doke` (información) + `sone` (sonido) | OK |
 | `doke-gore-po` | comprimir (datos pequeños) | `doke` (información) + `gore` (tamaño) + `po` (menos) | OK |
 | `doke-gore-pa` | descomprimir (datos grandes) | `doke` (información) + `gore` (tamaño) + `pa` (más) | OK |
 | `mado-foma-bosa` | virus informático (programa de rotura) | `mado` (cálculo) + `foma` (regla) + `bosa` (rotura) | OK |
@@ -539,7 +539,7 @@ Criterios (2026-10-12):
 | `meka-foma` | controlador de dispositivo (reglas de la máquina) | `meka` (máquina) + `foma` (regla) | OK |
 | `dare-reka-kore` | terminal de comandos (lugar de comandos) | `dare` (hacer) + `reka` (comunicación) + `kore` (lugar) | OK |
 | `dare-reka-beka` | script (comandos escritos) | `dare` (hacer) + `reka` (comunicación) + `beka` (escritura) | OK |
-| `kelo-dare` | bucle (hacer ciclo) | `kelo` (ciclo) + `dare` (hacer) | OK |
+| `mado-kelo` | bucle (ciclo de cálculo) | `mado` (cálculo) + `kelo` (ciclo) | OK |
 | `kore-rela` | enlace (unión a un lugar) | `kore` (lugar) + `rela` (unión) | OK |
 | `se-tera-dare` | sincronizar (hacer igual en el tiempo) | `se` (igualdad) + `tera` (tiempo) + `dare` (hacer) | OK |
 | `foma-beka-dare` | programar (hacer código) | `foma` (regla) + `beka` (escritura) + `dare` (hacer) | OK |
@@ -654,7 +654,7 @@ Criterios (2026-10-12):
 | `delo-nuse-tabe` | tabla de cortar (superficie de cortar) | `delo` (tomar) + `nuse` (vacío) + `tabe` (superficie de apoyo) | OK |
 | `fame-foma` | receta (reglas de la comida) | `fame` (comida) + `foma` (regla) | OK |
 | `fame-palo` | ingrediente (parte de la comida) | `fame` (comida) + `palo` (parte) | OK |
-| `fame-gore-po` | porción (comida pequeña) | `fame` (comida) + `gore` (tamaño) + `po` (menos) | OK |
+| `fame-palo-bema` | porción (cantidad parcial de comida) | `fame` (comida) + `palo` (parte) + `bema` (cantidad) | OK |
 | `pore-so` | crudo (sin fuego) | `pore` (fuego) + `so` (sin) | OK |
 | `pore-ko` | cocido (con fuego) | `pore` (fuego) + `ko` (con) | OK |
 | `fame-bosa` | podrido (comida rota) | `fame` (comida) + `bosa` (rotura) | OK |
@@ -675,7 +675,7 @@ Criterios (2026-10-12):
 | `nelo-suna-pema` | regar (dar agua a la planta) | `nelo` (planta) + `suna` (agua) + `pema` (dar) | OK |
 | `taro-bure` | arar (abrir la tierra) | `taro` (tierra) + `bure` (abrir) | OK |
 | `taro-fame-gume` | abono (materia para tierra fértil) | `taro` (tierra) + `fame` (comida) + `gume` (materia) | OK |
-| `nelo-suna-duma` | canal de riego (movimiento de agua de las plantas) | `nelo` (planta) + `suna` (agua) + `duma` (movimiento) | OK |
+| `nelo-suna-nado` | canal de riego (acceso del agua de las plantas) | `nelo` (planta) + `suna` (agua) + `nado` (acceso) | OK |
 | `taro-bure-meka` | tractor (máquina de arar) | `taro` (tierra) + `bure` (abrir) + `meka` (máquina) | OK |
 | `taro-bure-feke` | arado (herramienta de arar) | `taro` (tierra) + `bure` (abrir) + `feke` (herramienta) | OK |
 | `taro-delo-feke` | pala (herramienta para tomar tierra) | `taro` (tierra) + `delo` (tomar) + `feke` (herramienta) | OK |

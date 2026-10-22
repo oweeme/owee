@@ -1662,7 +1662,12 @@ Los glifos se rediseñaron para que cada uno se distinga a simple vista, incluso
 - **No cambian:** el romano, los puntos de código (U+E000–U+E03B sílabas, U+E03C nexo, U+E03D nombre, U+E040–U+E049 dígitos) ni los números.
 - **Guía de estilo:** `GUIA_DE_ESTILO_v4.md` (rasgo que define cada glifo, qué puede variar, con qué se confunde). Los PDF de especificación (`01_Especificacion`) describen aún la vocal como «extensión direccional» y las familias como pares por cierre o cruce: quedan **desactualizados**.
 
-## 95. Lotes 9 a 14 — vocabulario de hogar, informática, comercio, cuerpo, cocina y campo
+## 95. Lotes 9 a 14 — vocabulario de hogar, informática, comercio, cuerpo, cocina y campo (aprobados 2026-10-22)
 
-268 términos propuestos (estado VERIFICADA, pendientes de tu aprobación), compuestos de raíces existentes más 17 nombres de alimentos adaptados: `lotes_9_a_14_para_aprobar.md`. Cobertura por área (512 conceptos de trabajo): `02_Diccionario/datos/cobertura_dominios.py` y `.md`. Tras redactarlos se buscaron pares mínimos con el léxico y se cambiaron unas 45 formas; todo el léxico (1 260 formas) se escribe con los glifos 3.4 (`auditar_palabras_v4.py`). **Audio:** los términos nuevos aún no tienen audio (la síntesis necesita el modelo Piper, que no se pudo descargar); ejecutar `sintetizar_audio.py` en el equipo con el modelo.
+268 términos aprobados (compuestos de raíces existentes más 17 nombres de alimentos adaptados): `02_Diccionario/datos/lotes_9_a_14.md`. Antes de aprobar se comprobó que ningún concepto tuviera dos formas y se evitó el paralelismo (palabras a una letra de otra del mismo tema): se cambiaron unas 50 formas. Cobertura por área (512 conceptos de trabajo): `cobertura_dominios.py` y `.md`. Todo el léxico (1 260 formas) se escribe con los glifos 3.4 (`auditar_palabras_v4.py`). **Audio:** los términos nuevos aún no tienen audio (la síntesis necesita el modelo Piper, que no se pudo descargar); ejecutar `sintetizar_audio.py` en el equipo con el modelo.
 
+## 96. Diccionario descargable y El libro de los ciclos
+
+**Diccionario:** la página *Diccionario* del sitio filtra ahora por todas las áreas (antes faltaban las de los lotes 3–14), muestra el inglés en cada ficha y permite buscar en inglés; incluye la descarga del diccionario completo en `assets/diccionario_owee.tsv` y `.json` (owee, sílabas, clase, español, inglés, área, estado, partes).
+
+**Literatura §11 — El libro de los ciclos:** tres historias (*El universo que respira*, *El agua y la piedra*, *La semilla que esperó*) y 12 sentencias del universo, las plantas y la vida, de referencia filosófica al modo de los libros taoístas pero de autoría original. Solo vocabulario existente.
