@@ -44,9 +44,9 @@ def main():
                     if modo == "es" and x["t"] != e["es"]: fallos.append(f"{nombre}: ES no restaura «{e['es']}» (queda «{x['t']}»)")
                     if modo == "owee" and (x["t"] != e["ow"] or PUA.search(x["t"])): fallos.append(f"{nombre}: Owee de «{e['es']}» = «{x['t']}»")
                     if modo == "script":
-                        letras = re.sub(r"[\\s,.:;—\\-¿?¡!()\\d]", "", x["t"])
-                        if not x["c"] or (letras and not all(PUA.fullmatch(c) or not c.isalpha() or c in "ᚠ" for c in letras) and not re.fullmatch(r"[A-Za-z]+", letras)):
-                            fallos.append(f"{nombre}: Script de «{e['es']}» no es todo glifos: «{x['t']}»")
+                        sin_marcas = re.sub(r"\b(?:Owee|Sans|School|Keyman|Windows|Android|iPhone|macOS|Linux|ES|V|CV|AFI|i)\b", "", x["t"])
+                        if not x["c"] or re.search(r"[A-Za-z]", sin_marcas):
+                            fallos.append(f"{nombre}: Script de «{e['es'][:40]}» deja letras latinas: «{x['t'][:60]}»")
                         if not PUA.search(x["t"]): fallos.append(f"{nombre}: Script de «{e['es']}» sin glifos")
                         if x["r"].replace(" ", "") != e["ow"].replace(" ", ""): fallos.append(f"{nombre}: Script -> romano de «{e['es']}»: «{x['r']}» != «{e['ow']}»")
             resumen.append((nombre, len(info), tit))
