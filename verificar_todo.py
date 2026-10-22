@@ -178,6 +178,25 @@ try:
 except Exception as e:
     ok("Audio de pronunciacion", False, str(e)[:100])
 
+# 7h. glifos 3.4 y palabras: ningun glifo es giro de otro, todo el lexico se escribe con la fuente
+fd = "04_Fuentes/actual_3.3_fuente_y_glifos/OweeSans3_3_Source"
+r1 = correr([PY, "-I", fd + "/auditar_glifos_v4.py"]); r2 = correr([PY, "-I", fd + "/auditar_palabras_v4.py"])
+ok("Glifos 3.4: sin giros ni espejos entre consonantes; todo el lexico tiene glifo", r1.returncode == 0 and r2.returncode == 0,
+   (r1.stdout + r2.stdout).strip().splitlines()[-1][:120] if (r1.returncode or r2.returncode) else "")
+
+# 7i. interfaz del sitio en Owee: catalogo valido y selector ES / Owee / Script probado en un navegador
+r = correr([PY, "-I", "07_Sitio_Web/validar_ui_owee.py"])
+ok("Interfaz en Owee: textos validos", r.returncode == 0, r.stdout.strip().splitlines()[-1] if r.returncode else r.stdout.strip().splitlines()[-1])
+try:
+    import playwright  # noqa: F401
+    with tempfile.TemporaryDirectory() as td2:
+        env2 = dict(_os.environ, OWEE_PUBLICO="1", OWEE_OUT=td2 + "/pub")
+        subprocess.run(["python3", "-W", "ignore", "07_Sitio_Web/build_site.py"], cwd=RAIZ, env=env2, capture_output=True, text=True)
+        rb = correr([PY, "07_Sitio_Web/probar_idiomas.py", td2 + "/pub"])
+        ok("Selector ES / Owee / Script en el navegador", rb.returncode == 0, rb.stdout.strip().splitlines()[-1] if rb.returncode else rb.stdout.strip().splitlines()[-1])
+except ImportError:
+    ok("Selector ES / Owee / Script (playwright no instalado: omitido)", True)
+
 # 8. git
 g = correr(["git", "status", "--porcelain"]).stdout.strip().splitlines()
 ok("Git: sin cambios sin guardar", not g, f"{len(g)} archivos con cambios" if g else "")

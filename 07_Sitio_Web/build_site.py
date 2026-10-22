@@ -456,10 +456,10 @@ JS_COMMON = r"""
   function uiMode(m){
     try{localStorage.setItem('owee-ui',m)}catch(e){}
     document.querySelectorAll('[data-ow]').forEach(function(el){
-      if(!el.dataset.esOrig)el.dataset.esOrig=el.textContent;
-      if(m==='es'){el.textContent=el.dataset.esOrig;el.classList.remove('o');el.removeAttribute('title');return}
+      if(!el.dataset.esOrig){el.dataset.esOrig=el.textContent;el.dataset.esHtml=el.innerHTML}
+      if(m==='es'){el.innerHTML=el.dataset.esHtml;el.classList.remove('o');el.removeAttribute('title');return}
       if(m==='owee'){el.textContent=el.dataset.ow;el.classList.remove('o');el.title=el.dataset.esOrig;return}
-      el.textContent=window.Owee?Owee.toScript(el.dataset.ow):el.dataset.ow;el.classList.add('o');el.title=el.dataset.ow+' — '+el.dataset.esOrig;
+      el.textContent=window.Owee?Owee.toScript(el.dataset.ow,{digits:true}):el.dataset.ow;el.classList.add('o');el.title=el.dataset.ow+' — '+el.dataset.esOrig;
     });
     document.querySelectorAll('[data-ui]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.ui===m)});
   }
@@ -496,6 +496,37 @@ JS_COMMON = r"""
 })();
 """
 
+def cargar_ui():
+    """Catálogo español -> Owee de la interfaz (ui_owee.tsv)."""
+    d = {}
+    for l in (Path(__file__).resolve().parent / "ui_owee.tsv").read_text(encoding="utf8").splitlines():
+        if l.strip() and not l.startswith("#"):
+            es, ow = l.split("\t"); d[es] = ow
+    return d
+UI_OWEE = cargar_ui()
+UI_ETIQ = re.compile(r'<(h[1-4]|th|td|p|small|button|label|figcaption|li|div|a|summary)((?:\s[^<>]*)?)>((?:[^<>]|</?(?:strong|em|b|i|code)>)+)</\1>')
+
+def ui_wrap(h):
+    """Envuelve en <span data-ow> los textos de la interfaz que tienen traducción al Owee, para que el selector
+    ES / Owee / Script los cambie. Solo textos exactos de una etiqueta (títulos, cabeceras, botones, tarjetas)."""
+    def traducir(txt):
+        if txt in UI_OWEE: return UI_OWEE[txt]
+        n = re.fullmatch(r"(\d+(?:\.\d+)*\.?)\s+(.+)", txt)          # «3. Título»: la numeración queda en cifras
+        if n and n.group(2) in UI_OWEE: return n.group(1) + " " + UI_OWEE[n.group(2)]
+        l = re.fullmatch(r"Lección ([\d.]+) — (.+)", txt)                  # «Lección 1.2 — Título»
+        if l and l.group(2) in UI_OWEE: return "tase-palo " + l.group(1) + " — " + UI_OWEE[l.group(2)]
+        if " · " in txt:                                                   # «Área · Sección»
+            a, b = txt.split(" · ", 1)
+            if a in UI_OWEE and b in UI_OWEE: return UI_OWEE[a] + " · " + UI_OWEE[b]
+        return None
+    def un(m):
+        txt = " ".join(html.unescape(re.sub(r"</?(?:strong|em|b|i|code)>", "", m.group(3))).split())
+        ow = None if ("data-ow" in m.group(2) or "data-o=" in m.group(2)) else traducir(txt)
+        if ow is None: return m.group(0)
+        return f'<{m.group(1)}{m.group(2)}><span data-ow="{esc(ow)}">{m.group(3)}</span></{m.group(1)}>'
+    partes = re.split(r"(<script.*?</script>|<style.*?</style>|<pre.*?</pre>)", h, flags=re.S)
+    return "".join(p if i % 2 else UI_ETIQ.sub(un, p) for i, p in enumerate(partes))
+
 def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=True, extra_js=""):
     def lab(txt, ow=None):
         return f'<span data-ow="{ow}">{txt}</span>' if ow else txt
@@ -507,14 +538,14 @@ def page(fname, title, body, active=None, extra_head="", body_attrs="", chrome=T
         return f'<a href="{it[0]}"{" aria-current=page" if it[0] == active else ""}>{lab(it[1], it[2] if len(it) > 2 else None)}</a>'
     nav = "".join(navitem(it) for it in NAV)
     top = (f'<header class="top"><div class="in"><a class="brand" href="index.html"><span class="mark o" data-o="owee">owee</span><b>Owee</b></a>'
-           f'<nav>{nav}</nav><span class="seg uimode noprint" role="group" aria-label="Idioma de la interfaz"><button data-ui="es" aria-pressed="true">ES</button><button data-ui="owee">Owee</button><button data-ui="script" class="o">owee</button></span><button id="theme" class="noprint" style="font:inherit;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer" aria-label="Cambiar tema">◐</button></div></header>') if chrome else ""
+           f'<nav>{nav}</nav><span class="seg uimode noprint" role="group" aria-label="Idioma de la interfaz"><button data-ui="es" aria-pressed="true">ES</button><button data-ui="owee">Owee</button><button data-ui="script" class="o" title="Owee Script" aria-label="Owee Script"><span data-o="beka">beka</span></button></span><button id="theme" class="noprint" style="font:inherit;border:1px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer" aria-label="Cambiar tema">◐</button></div></header>') if chrome else ""
     foot = f'<footer><p>Owee · sitio generado desde el Registro Maestro y el Diccionario Base · Owee Script/Sans {VERSION}. La romanización es la forma oficial; los glifos requieren la fuente Owee (incluida en esta página). Licencias: texto y datos CC BY-SA 4.0 · fuentes SIL OFL 1.1 · código MIT.</p></footer>' if chrome else ""
     doc = f"""<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} · Owee</title>
 <link rel="icon" href="pad/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/owee.css"><style>{CSS}</style>{extra_head}</head>
-<body {body_attrs}>{top}<main>{body}</main>{foot}
+<body {body_attrs}>{top}<main>{ui_wrap(body)}</main>{foot}
 <script src="assets/owee.js"></script><script src="assets/audio.js"></script><script>{JS_COMMON}</script>{extra_js}</body></html>"""
     if PUBLICO:
         doc = re.sub(r'<a [^>]*href=["\'](?:%s)(?:#[^"\']*)?["\'][^>]*>(.*?)</a>' % "|".join(re.escape(x) for x in INTERNAS), r"\1", doc, flags=re.S)
@@ -580,17 +611,18 @@ def build_escritura():
     vow = "".join(f'<div>{oweespan(v)}<small>{v}</small></div>' for v in "aeou")
     dig = "".join(f'<div>{oweespan(str(i))}<small>{n} · {i}</small></div>' for i, n in enumerate("cho be du ga fo sa ku mu na she".split()))
     body = f"""<h1>Escritura: Owee Script</h1>
-<p>Cada sílaba es un bloque visual, escrito de izquierda a derecha. La consonante es el esqueleto y la vocal es una <em>dirección</em>:
-<strong>A</strong> arriba, <strong>E</strong> izquierda, <strong>O</strong> derecha, <strong>U</strong> abajo. Siete familias consonánticas agrupan las 14 consonantes.</p>
+<p>Cada sílaba es un bloque visual, escrito de izquierda a derecha. La consonante es una forma grande en el centro y la vocal una marca pequeña con <em>forma propia</em>:
+<strong>a</strong> una barra, <strong>e</strong> una viga <em>エ</em>, <strong>o</strong> un anillo y <strong>u</strong> la runa <em>ᚢ</em>; su lado (arriba, izquierda, derecha, abajo) solo refuerza la lectura. Cada consonante tiene su propia silueta, y la <strong>barra al medio</strong> marca la sonora (b, d, g). Dos estilos: <strong>Owee Sans</strong> (recto, para pantalla y pancartas) y <strong>Owee School</strong> (fluido, para escribir a mano).</p>
 <div class="controls"><div class="seg" role="group" aria-label="Fuente"><button data-fam="sans" aria-pressed="true">Owee Sans</button><button data-fam="school" aria-pressed="false">Owee School</button></div></div>
 <h2>Vocales</h2><div class="matrix" style="grid-template-columns:repeat(4,1fr)">{vow}</div>
+<p>Origen de cada vocal: <strong>a</strong> la raya del Ogham y del hebreo · <strong>e</strong> la <em>e</em> del katakana (エ) · <strong>o</strong> la omicron griega (círculo) · <strong>u</strong> la runa Uruz (ᚢ).</p>
 <h2>Matriz de 56 sílabas CV</h2><div class="matrix" id="mx">{cells}</div>
 <h2>Marcas de escritura</h2>
 <p>Dos glifos permiten <strong>demostrar en la escritura nativa</strong> la estructura de las palabras (principio de una forma = un significado):</p>
 <div class="matrix" style="grid-template-columns:repeat(3,1fr);max-width:720px">
-<div>{oweespan("sade-kelo")}<small>sade-kelo · compuesto «año» (nexo U+E03C)</small></div>
+<div>{oweespan("sade-kelo")}<small>sade-kelo · compuesto «año» (nexo ‿, U+E03C)</small></div>
 <div>{oweespan("sade kelo")}<small>sade kelo · frase libre «sol, ciclo» (sin nexo)</small></div>
-<div>{oweespan("Ana")}<small>Ana · nombre propio (marca U+E03D)</small></div></div>
+<div>{oweespan("Ana")}<small>Ana · nombre propio (marca ᚠ, U+E03D)</small></div></div>
 <p>Pronunciación de todo lo anterior en la <a href="pronunciacion.html">guía de pronunciación</a>.</p>
 <h2>Dígitos</h2><div class="matrix" style="grid-template-columns:repeat(5,1fr)">{dig}</div>
 <p>Escalas: <code>tanu</code> 10 · <code>gabu</code> 100 · <code>soku</code> 1 000 · <code>benu</code> 1 000 000. Detalles completos en <a href="idioma.html#parte-v-owee-script">Parte V del Registro Maestro</a>.</p>
@@ -972,7 +1004,7 @@ def build_nombres():
         sec += f'<h2>{tit[t]}</h2><div class="tw"><table><thead><tr><th>En español</th><th>En Owee</th></tr></thead><tbody>{f}</tbody></table></div>'
     body = ("<h1>Nombres propios en Owee</h1><p>Owee no tiene <code>i</code>, <code>v</code>, <code>h</code>, <code>y</code>, <code>z</code>, <code>j</code>, <code>c</code>, <code>q</code>, <code>w</code>, <code>x</code> ni consonantes finales, así que los nombres se <strong>adaptan por el sonido</strong>: "
             "<code>i</code> → <code>e</code>, <code>v</code> → <code>b</code>, <code>z</code>/<code>c</code> suave → <code>s</code>, <code>j</code> → <code>k</code>, <code>h</code> no se escribe, y a la consonante final o al grupo se le añade una <strong>vocal de eco</strong> (la anterior). "
-            "El acento va en la primera sílaba y el nombre se escribe con <strong>inicial mayúscula</strong> (en Owee Script lleva la marca de nombre, los dos puntos), así nunca se confunde con una palabra común. Pulsa ▶ para escuchar.</p>"
+            "El acento va en la primera sílaba y el nombre se escribe con <strong>inicial mayúscula</strong> (en Owee Script lleva delante la marca de nombre, la runa ᚠ), así nunca se confunde con una palabra común. Pulsa ▶ para escuchar.</p>"
             + sec + "<p><small>Generados con <code>02_Diccionario/datos/adaptar_nombre.py</code>: prueba cualquier nombre con <code>python3 adaptar_nombre.py Rosa Miguel</code>.</small></p>")
     page("nombres.html", "Nombres propios", body, "nombres.html")
 

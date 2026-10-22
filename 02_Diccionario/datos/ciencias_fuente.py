@@ -822,3 +822,160 @@ COMPUESTOS += [
  ("suna-taro-gu","pozo (agua bajo la tierra)",L14,"Campo y animales"),
  ("nede-fame-kore","huerto (lugar de verduras)",L14,"Campo y animales"),
 ]
+
+L15 = "Ampliación diaria (lote 15)"
+COMPUESTOS += [
+ ("nelo-bora-gume","madera (materia del cuerpo de planta)",L15,"Casa y herramientas"),
+ ("taro-pore-kema","ladrillo (objeto de tierra y fuego)",L15,"Casa y herramientas"),
+ ("salo-nado-goda","vidrio (sólido por donde pasa la luz)",L15,"Casa y herramientas"),
+ ("kema-rela-feke","clavo (herramienta para unir objetos)",L15,"Casa y herramientas"),
+ ("tada-faro-feke","martillo (herramienta de contacto y fuerza)",L15,"Casa y herramientas"),
+ ("sede-gore-pa","sofá (asiento grande)",L15,"Casa y herramientas"),
+ ("pore-salo-feke","vela (herramienta de llama)",L15,"Casa y herramientas"),
+ ("sule-lena-tabe","colchón (superficie agradable de dormir)",L15,"Casa y herramientas"),
+ ("bume-fure-feke","plancha (herramienta de calor para la ropa)",L15,"Casa y herramientas"),
+ ("bora-dabo-kopa","inodoro (contenedor de desecho del cuerpo)",L15,"Casa y herramientas"),
+ ("suna-gase-kopa","bañera (contenedor de agua para limpiar)",L15,"Casa y herramientas"),
+ ("salo-lafe-gume","pigmento (materia del color)",L15,"Casa y herramientas"),
+]
+COMPUESTOS += [
+ ("daro-pu","tarea (trabajo futuro)",L15,"Informática y redes"),
+]
+COMPUESTOS += [
+ ("kume-beka","factura (escritura del intercambio)",L15,"Comercio"),
+ ("bado-pa-tera","interés (valor que crece en el tiempo)",L15,"Comercio"),
+ ("maku-bado","efectivo (valor de la mano)",L15,"Comercio"),
+ ("lena-fedo","propina (pago de agrado)",L15,"Comercio"),
+ ("kume-kuma-gore","supermercado (tienda grande)",L15,"Comercio"),
+ ("kume-lena-kore","feria (lugar de intercambio agradable)",L15,"Comercio"),
+]
+COMPUESTOS += [
+ ("tume-rela-kado","nuca (lado de la unión de la cabeza)",L15,"Cuerpo"),
+ ("gu-maku-rela","axila (abajo del brazo)",L15,"Cuerpo"),
+ ("bora-nelo","vello (planta del cuerpo)",L15,"Cuerpo"),
+ ("noke-sura-bosa","estornudo (aire roto de la nariz)",L15,"Cuerpo"),
+ ("sabe-bure","bostezo (boca abierta)",L15,"Cuerpo"),
+]
+COMPUESTOS += [
+ ("nobe-sabe-pa","vinagre (bebida de más sabor)",L15,"Cocina y bebidas"),
+ ("lena-gume-ruma","miel (azúcar del animal)",L15,"Cocina y bebidas"),
+ ("naku-nobe-telo","yogur (leche cambiada)",L15,"Cocina y bebidas"),
+ ("bora-gume-suna","caldo (agua de carne)",L15,"Cocina y bebidas"),
+ ("tabu-gume-dase","fideo (harina larga)",L15,"Cocina y bebidas"),
+ ("tabu-gore-po","galleta (pan pequeño)",L15,"Cocina y bebidas"),
+ ("uba-nobe","vino (bebida de uva)",L15,"Cocina y bebidas"),
+ ("terego-nobe","cerveza (bebida de trigo)",L15,"Cocina y bebidas"),
+ ("gume-rela-meka","licuadora (máquina de mezclar)",L15,"Cocina y bebidas"),
+ ("kema-tabe-bume","mantel (ropa de la mesa)",L15,"Cocina y bebidas"),
+ ("sabe-gase-feke","servilleta (herramienta para limpiar la boca)",L15,"Cocina y bebidas"),
+]
+COMPUESTOS += [
+ ("taro-go-tabe","terraza de cultivo (superficie de tierra alta)",L15,"Campo y animales"),
+ ("ruma-kuna-suna","pato (pájaro del agua)",L15,"Campo y animales"),
+ ("nelo-kuma","invernadero (casa de plantas)",L15,"Campo y animales"),
+ ("pado-nelo-kore","semillero (lugar de semillas)",L15,"Campo y animales"),
+ ("nelo-delo-nuse","podar (cortar la planta)",L15,"Campo y animales"),
+ ("nelo-rela-dare","injertar (conectar plantas)",L15,"Campo y animales"),
+ ("nelo-kera-meka","cosechadora (máquina de cosechar)",L15,"Campo y animales"),
+ ("ruma-fame-kuma","establo (casa del ganado)",L15,"Campo y animales"),
+ ("ruma-duma-nara","arriero (persona que mueve animales)",L15,"Campo y animales"),
+]
+COMPUESTOS += [
+ ("kalu-bume-bure","falda (ropa de la pierna abierta)",L15,"Ropa y transporte"),
+ ("kalu-gune-lobe","calcetín (cubierta del pie)",L15,"Ropa y transporte"),
+ ("bora-rela-bume","cinturón (ropa de la cintura)",L15,"Ropa y transporte"),
+ ("tume-rela-bume","bufanda (ropa del cuello)",L15,"Ropa y transporte"),
+ ("bume-kopa-po","bolsillo (contenedor pequeño de ropa)",L15,"Ropa y transporte"),
+ ("bume-gume","tela (materia de ropa)",L15,"Ropa y transporte"),
+ ("nelo-bume-gume","algodón (materia de ropa de planta)",L15,"Ropa y transporte"),
+ ("bora-lobe-gume","cuero (materia de piel)",L15,"Ropa y transporte"),
+ ("loke-feke","gafas (herramienta del ojo)",L15,"Ropa y transporte"),
+ ("maku-palo-bume","anillo (ropa del dedo)",L15,"Ropa y transporte"),
+ ("tume-rela-lena","collar (agrado del cuello)",L15,"Ropa y transporte"),
+ ("kema-kopa-bora","mochila (bolsa del cuerpo)",L15,"Ropa y transporte"),
+ ("kuna-suna-lobe","paraguas (cubierta de la lluvia)",L15,"Ropa y transporte"),
+ ("selo-meka","rueda (círculo de la máquina)",L15,"Ropa y transporte"),
+ ("meka-duma-kore","carretera (camino de vehículos)",L15,"Ropa y transporte"),
+ ("duma-kore-salo","semáforo (luz del camino)",L15,"Ropa y transporte"),
+ ("meka-nobe","gasolina (bebida de la máquina)",L15,"Ropa y transporte"),
+ ("dure-gune-feke","freno (herramienta de detener)",L15,"Ropa y transporte"),
+ ("meka-enu","motor (energía de la máquina)",L15,"Ropa y transporte"),
+ ("meka-duma-bade","conductor (autoridad del vehículo)",L15,"Ropa y transporte"),
+ ("duma-lu-kema","equipaje (objeto del viaje lejano)",L15,"Ropa y transporte"),
+]
+COMPUESTOS += [
+ ("sabe-faro-nara","dentista (persona del diente)",L15,"Emociones y salud"),
+ ("lore-bosa","odio (rotura del afecto)",L15,"Emociones y salud"),
+ ("pu-dune-lena","esperanza (sentimiento agradable del futuro)",L15,"Emociones y salud"),
+ ("naro-loke-dune","vergüenza (sentir los ojos del grupo)",L15,"Emociones y salud"),
+ ("gade-dune","orgullo (sentir la propia identidad)",L15,"Emociones y salud"),
+ ("lore-saku","celos (afecto con miedo)",L15,"Emociones y salud"),
+ ("sape-dune","sorpresa (sentir rápido)",L15,"Emociones y salud"),
+ ("naro-nuse-dune","soledad (sentir el grupo vacío)",L15,"Emociones y salud"),
+ ("fadu-lore","confianza (seguridad de afecto)",L15,"Emociones y salud"),
+ ("pu-dure-malo","paciencia (calma al esperar)",L15,"Emociones y salud"),
+ ("doma-faro","ánimo (fuerza del corazón)",L15,"Emociones y salud"),
+ ("sule-soma","soñar (idea de dormir)",L15,"Emociones y salud"),
+]
+COMPUESTOS += [
+ ("beka-seta-po","cuaderno (libro pequeño)",L15,"Escuela y ciudad"),
+ ("fela-beka-tabe","pizarra (superficie de escritura para enseñar)",L15,"Escuela y ciudad"),
+ ("daro-kuma","oficina (casa de trabajo)",L15,"Escuela y ciudad"),
+ ("dare-kema-kuma","fábrica (casa de productos hechos)",L15,"Escuela y ciudad"),
+ ("kuma-seta-doma","plaza (centro de la ciudad)",L15,"Escuela y ciudad"),
+ ("nelo-lena-kore","parque (lugar agradable de plantas)",L15,"Escuela y ciudad"),
+ ("kuna-nara-kuma","iglesia (casa de la deidad)",L15,"Escuela y ciudad"),
+ ("pore-gune-nara","bombero (persona que acaba el fuego)",L15,"Escuela y ciudad"),
+ ("kuma-seta-palo","barrio (parte de la ciudad)",L15,"Escuela y ciudad"),
+]
+COMPUESTOS += [
+ ("sura-suna-gu","niebla (nube baja)",L15,"Naturaleza y clima"),
+ ("salo-lafe-seta","arcoíris (conjunto de colores de la luz)",L15,"Naturaleza y clima"),
+ ("nelo-saro-suna","selva (bosque con agua)",L15,"Naturaleza y clima"),
+ ("ruma-kalu-so","serpiente (animal sin pierna)",L15,"Naturaleza y clima"),
+ ("nelo-lena-tera","primavera (tiempo de flores)",L15,"Naturaleza y clima"),
+ ("nelo-maku-tera","otoño (tiempo de hojas)",L15,"Naturaleza y clima"),
+]
+
+# lote 15: kumedo (kume + do) lo pidió el autor; el resto son nombres adaptados (adaptar_nombre.py), pendientes de revisión de uso
+RAICES += [
+ ("kumedo","red social (raíz nueva: kume + do)",L15,"Informática y redes"),
+ ("leneteka","lenteja (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("garabanaso","garbanzo (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("pemeeneta","pimienta (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("papaea","papaya (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("ananasa","piña (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("sanadea","sandía (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("durasano","durazno (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("perea","pera (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("pepeno","pepino (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("kalabasa","calabaza (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("esepenaka","espinaca (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("repoeo","repollo (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("chokolo","choclo (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("koneko","conejo (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+ ("abeka","abeja (nombre adaptado)",L15,"Alimentos y animales adaptados"),
+]
+
+L16 = "Aprender y escribir (lote 16)"
+COMPUESTOS += [
+ ("loke-pema-kema","ejemplo (objeto que se muestra)",L16,"Aprender y escribir"),
+ ("sone-mode","pronunciación (manera del sonido)",L16,"Aprender y escribir"),
+ ("tase-pose","nivel (posición del aprender)",L16,"Aprender y escribir"),
+ ("sone-bure","vocal (sonido abierto)",L16,"Aprender y escribir"),
+ ("sone-kose","consonante (sonido cerrado)",L16,"Aprender y escribir"),
+ ("sone-beka-seta","alfabeto (conjunto de sonidos escritos)",L16,"Aprender y escribir"),
+ ("lena-sone-sabe","canción (música de la boca)",L16,"Aprender y escribir"),
+ ("lena-reka","poesía (comunicación agradable)",L16,"Aprender y escribir"),
+ ("pado-fena","empezar (poner el comienzo)",L16,"Aprender y escribir"),
+ ("kare-mede-dare","probar (hacer una prueba)",L16,"Aprender y escribir"),
+ ("luma-sone-paku","escuchar (oír con atención)",L16,"Aprender y escribir"),
+ ("lare-banu","matemáticas (saber de los números)",L16,"Aprender y escribir"),
+ ("lare-fasa","física (saber de la fuerza)",L16,"Aprender y escribir"),
+ ("lare-gume-rela","química (saber de la unión de las materias)",L16,"Aprender y escribir"),
+ ("lare-sade-mune","astronomía (saber del sol y la luna)",L16,"Aprender y escribir"),
+ ("lare-meka","informática (saber de las máquinas)",L16,"Aprender y escribir"),
+ ("lare-nelo-ruma","biología (saber de plantas y animales)",L16,"Aprender y escribir"),
+ ("doke-beka-palo","sección (parte de un texto)",L16,"Aprender y escribir"),
+ ("fela-doke","guía (información que enseña)",L16,"Aprender y escribir"),
+]

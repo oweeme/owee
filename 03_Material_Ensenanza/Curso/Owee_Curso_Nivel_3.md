@@ -5,7 +5,7 @@ Requisito: haber terminado el Nivel 2.
 
 ## Lección 3.1 — Palabras compuestas
 
-Owee construye vocabulario **uniendo raíces con guion**. El **primer elemento** es lo principal y el segundo lo precisa. En Owee Script, el guion se ve como un **nexo** (una barra baja) entre los bloques.
+Owee construye vocabulario **uniendo raíces con guion**. El **primer elemento** es lo principal y el segundo lo precisa. En Owee Script, el guion se ve como un **nexo** (`‿`, una curva pequeña y baja) entre los bloques.
 
 <!--vocabulario sade-kelo mune-kelo kuna-bore suna-duma nelo-fame ruma-kuna ruma-suna kalu-duma-->
 
