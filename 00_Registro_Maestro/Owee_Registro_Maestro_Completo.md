@@ -1762,4 +1762,4 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 
 - **Interfaz en Owee Script:** los glifos ocupan menos de la mitad de la caja de la letra; en el modo Script del sitio se escalan respecto del texto que reemplazan (×2,2 en párrafos, ×1,9 en menú y títulos) para leerse tan grandes como el español.
 - **Portafolio de maestros (requisito previo):** artículo en el blog de oweeme.com escrito **solo en Owee** (romano, Owee Script o ambos, sin traducción) sobre lo aprendido, la experiencia y su aplicación —300 palabras para maestro infantil, 600 para adultos, 800 para examinador— y un video en YouTube enseñando o hablando en Owee. Los enlaces se publican en el registro de certificados.
-
+- **Propuestas por correo (2026-10-25):** las palabras nuevas y las solicitudes de examen se envían a hector@oweeme.com (asuntos «Idioma Owee: nueva palabra» e «Idioma Owee: examen de nivel»); la página «Crear palabras» prepara el correo con la palabra, su significado, sus partes y cómo la usaría quien la propone.

@@ -24,7 +24,7 @@ LIT = sorted((ROOT / "03_Material_Ensenanza/Literatura_Poesia").glob("Owee_Liter
 REG = ROOT / "00_Registro_Maestro/Owee_Registro_Maestro_Completo.md"
 VERSION = "3.4"
 # Dirección pública que recibe las propuestas de palabras desde la página «Crear palabras» (vacía: no se muestra el botón de correo).
-CORREO_PROPUESTAS = ""
+CORREO_PROPUESTAS = "hector@oweeme.com"
 
 # ---------------------------------------------------------------- lexico
 def load_lex():
@@ -1163,6 +1163,7 @@ def build_crear():
 <label>Significado en español <input type="search" id="sig" placeholder="por ejemplo: tanque de agua" autocomplete="off"></label>
 <label>Significado en inglés (opcional) <input type="search" id="ing" placeholder="water tank" autocomplete="off"></label>
 <label>Área (opcional) <input type="search" id="area" placeholder="hogar, oficio, región…" autocomplete="off"></label>
+<label>¿Cómo la usarías? Explica el contexto y escribe una o dos frases de ejemplo <textarea id="uso" rows="4" placeholder="La uso en mi trabajo de…; ejemplo: me suna-kopa-gore kera-fedo nume"></textarea></label>
 </div>
 <div class="fdd"><span class="o" id="glifo" data-o=""></span><small id="info"></small></div>
 <div id="veredicto"></div>
@@ -1170,15 +1171,15 @@ def build_crear():
 <p>Estas raíces de 3 sílabas están libres y cumplen las reglas. Comprueba en voz alta que no suenen como una palabra de tu idioma. <button class="btn" id="otras">Otras</button></p>
 <div id="sug" class="dl"></div>
 <h2>Enviar la propuesta</h2>
-<p>Las propuestas pasan por <strong>PROPUESTA → VERIFICADA → APROBADA</strong>; las aprobadas entran en el diccionario oficial, que es de dominio público (licencia CC BY-SA 4.0). <strong>No hace falta saber de programación:</strong> guarda tu palabra en «Mis palabras» para usarla ya en tus textos, y envíala por correo o, si tienes cuenta, en GitHub.</p>
+<p>Las propuestas pasan por <strong>PROPUESTA → VERIFICADA → APROBADA</strong>; las aprobadas entran en el diccionario oficial, que es de dominio público (licencia CC BY-SA 4.0). <strong>No hace falta saber de programación:</strong> guarda tu palabra en «Mis palabras» para usarla ya en tus textos y envíala por correo a <strong>hector@oweeme.com</strong> (asunto «Idioma Owee: nueva palabra»), explicando cómo la usarías; si tienes cuenta, también puedes proponerla en GitHub.</p>
 <pre id="prop">—</pre>
 <p><button class="btn" id="guardar">Guardar en mis palabras</button> <button class="btn" id="copiar">Copiar</button>__CORREO__ <a class="btn" id="enviar" href="#" target="_blank" rel="noopener">Proponer en GitHub</a></p>
 <h2>Mis palabras</h2>
 <p>Se guardan solo en este navegador. Descárgalas para conservarlas o para enviarlas todas juntas.</p>
 <div id="mias" class="dl"></div>
-<p><button class="btn" id="descargar">Descargar mis palabras (.txt)</button></p>
+<p><button class="btn" id="descargar">Descargar mis palabras (.txt)</button> <a class="btn" id="correo-todas" href="#">Enviar todas por correo</a></p>
 <style>.btn{font:inherit;padding:7px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--accent);cursor:pointer;text-decoration:none;display:inline-block}
-.formu{display:grid;gap:10px;max-width:640px;margin:14px 0}.formu label{display:flex;flex-direction:column;gap:4px;color:var(--ink2);font-size:.9rem}.formu label input{font:inherit;padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink)}
+.formu{display:grid;gap:10px;max-width:640px;margin:14px 0}.formu label{display:flex;flex-direction:column;gap:4px;color:var(--ink2);font-size:.9rem}.formu textarea{font:inherit;padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink)}.formu label input{font:inherit;padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink)}
 .v-err{color:#b3261e}.v-av{color:var(--warn)}.v-ok{color:var(--ok)}#veredicto li{margin:4px 0}</style>
 <script src="assets/lexico.js"></script><script src="assets/crear.js"></script>
 <script>(function(){
@@ -1192,20 +1193,20 @@ function prueba(){var f=$('forma').value.trim().toLowerCase(),m=$('sig').value.t
  var li=r.errores.map(function(x){return '<li class="v-err">✗ '+esc(x)+'</li>'}).concat(r.avisos.map(function(x){return '<li class="v-av">⚠ '+esc(x)+'</li>'}),r.bien.map(function(x){return '<li class="v-ok">✓ '+esc(x)+'</li>'}));
  var ok=f&&m&&!r.errores.length;
  $('veredicto').innerHTML=(f?'<p><strong>'+(ok?'Cumple las reglas: lista para proponer.':(r.errores.length?'Todavía no cumple las reglas.':'Falta el significado.'))+'</strong></p>':'')+'<ul>'+li.join('')+'</ul>';
- var txt=ok?('Palabra: '+f+'\\nSignificado: '+m+'\\nInglés: '+($('ing').value||'—')+'\\nÁrea: '+($('area').value||'—')+'\\nTipo: '+r.tipo+', '+r.silabas+' sílabas'+(r.tipo==='compuesto'?'\\nPartes: '+r.partes.map(function(p){return p+' ('+L[p][0]+')'}).join(' + '):'')+'\\nAvisos: '+(r.avisos.join(' | ')||'ninguno')):'—';
+ var txt=ok?('Palabra: '+f+'\\nSignificado: '+m+'\\nInglés: '+($('ing').value||'—')+'\\nÁrea: '+($('area').value||'—')+'\\nCómo la usaría: '+($('uso').value.trim()||'—')+'\\nTipo: '+r.tipo+', '+r.silabas+' sílabas'+(r.tipo==='compuesto'?'\\nPartes: '+r.partes.map(function(p){return p+' ('+L[p][0]+')'}).join(' + '):'')+'\\nAvisos: '+(r.avisos.join(' | ')||'ninguno')):'—';
  $('prop').textContent=txt;
  $('enviar').href=ok?('https://github.com/oweeme/owee/issues/new?labels=propuesta&title='+encodeURIComponent('Propuesta: '+f+' = '+m)+'&body='+encodeURIComponent(txt)):'#';
- $('enviar').style.opacity=ok?1:.4;var c=$('correo');if(c){c.href=ok?('mailto:'+c.dataset.a+'?subject='+encodeURIComponent('Propuesta Owee: '+f)+'&body='+encodeURIComponent(txt)):'#';c.style.opacity=ok?1:.4}
+ $('enviar').style.opacity=ok?1:.4;var c=$('correo');if(c){c.href=ok?('mailto:'+c.dataset.a+'?subject='+encodeURIComponent('Idioma Owee: nueva palabra – '+f)+'&body='+encodeURIComponent('Hola,\\n\\nPropongo una palabra nueva para el idioma Owee:\\n\\n'+txt+'\\n\\nNombre:\\n')):'#';c.style.opacity=ok?1:.4}
  $('guardar').disabled=!ok;ULTIMA=ok?{forma:f,sig:m,ing:$('ing').value,area:$('area').value,texto:txt}:null}
 var ULTIMA=null;
 function leerMias(){try{return JSON.parse(localStorage.getItem('owee-mis-palabras')||'[]')}catch(e){return[]}}
 function guardarMias(a){try{localStorage.setItem('owee-mis-palabras',JSON.stringify(a))}catch(e){}}
-function pintaMias(){var a=leerMias();$('mias').innerHTML=a.map(function(x,i){return '<a href="#" data-i="'+i+'"><b>'+esc(x.forma)+'</b><span>'+esc(x.sig)+' · quitar ✕</span></a>'}).join('')||'<p>Todavía no guardaste palabras.</p>'}
+function pintaMias(){var a=leerMias(),ct=$('correo-todas'),dc=($('correo')||{dataset:{}}).dataset.a;if(ct){ct.style.display=dc?'':'none';ct.href=(dc&&a.length)?('mailto:'+dc+'?subject='+encodeURIComponent('Idioma Owee: nueva palabra – '+a.map(function(x){return x.forma}).join(', '))+'&body='+encodeURIComponent('Hola,\\n\\nPropongo estas palabras nuevas para el idioma Owee:\\n\\n'+a.map(function(x){return x.texto}).join('\\n\\n----\\n\\n')+'\\n\\nNombre:\\n')):'#'}$('mias').innerHTML=a.map(function(x,i){return '<a href="#" data-i="'+i+'"><b>'+esc(x.forma)+'</b><span>'+esc(x.sig)+' · quitar ✕</span></a>'}).join('')||'<p>Todavía no guardaste palabras.</p>'}
 $('guardar').onclick=function(){if(!ULTIMA)return;var a=leerMias().filter(function(x){return x.forma!==ULTIMA.forma});a.push(ULTIMA);guardarMias(a);pintaMias()};
 $('mias').addEventListener('click',function(e){var x=e.target.closest('[data-i]');if(!x)return;e.preventDefault();var a=leerMias();a.splice(+x.dataset.i,1);guardarMias(a);pintaMias()});
 $('descargar').onclick=function(){var a=leerMias();if(!a.length)return;var b=new Blob([a.map(function(x){return x.texto}).join('\\n\\n----\\n\\n')+'\\n'],{type:'text/plain'});var u=URL.createObjectURL(b),l=document.createElement('a');l.href=u;l.download='mis_palabras_owee.txt';document.body.appendChild(l);l.click();l.remove();URL.revokeObjectURL(u)};
 window.addEventListener('load',pintaMias);
-['forma','sig','ing','area'].forEach(function(i){$(i).addEventListener('input',prueba)});
+['forma','sig','ing','area','uso'].forEach(function(i){$(i).addEventListener('input',prueba)});
 $('copiar').onclick=function(){try{navigator.clipboard.writeText($('prop').textContent)}catch(e){}};
 function sug(){$('sug').innerHTML=C.sugerirRaices(L,6).map(function(w){return '<a href="#forma" data-w="'+w+'"><b>'+w+'</b><span class="o" data-o="'+w+'">'+(window.Owee?Owee.toScript(w):w)+'</span></a>'}).join('')}
 $('sug').addEventListener('click',function(e){var a=e.target.closest('[data-w]');if(a){$('forma').value=a.dataset.w;prueba()}});

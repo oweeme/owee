@@ -12,7 +12,8 @@ Owee crece con quienes lo usan. Puedes proponer palabras nuevas, corregir textos
    - que su significado no tenga ya una palabra (una forma = un significado);
    - que sea práctica: 2 elementos para lo de cada día, como máximo 3; las raíces nuevas, de 3 sílabas;
    - que no copie una palabra de otra lengua (solo los nombres propios se adaptan por el sonido).
-4. Pulsa **«Guardar en mis palabras»** para usarla ya en tus textos, y envíala por **correo** o, si tienes cuenta, con **«Proponer en GitHub»**.
+4. Pulsa **«Guardar en mis palabras»** para usarla ya en tus textos.
+5. Envíala por **correo a hector@oweeme.com** con el asunto **«Idioma Owee: nueva palabra»** (el botón «Enviar por correo» lo prepara): la palabra, su significado y **cómo la usarías**, con el contexto y una o dos frases de ejemplo. Puedes enviar varias juntas con «Enviar todas por correo». Si tienes cuenta de GitHub, también puedes usar **«Proponer en GitHub»**.
 
 La lección 3.8 del curso explica el método con ejemplos.
 

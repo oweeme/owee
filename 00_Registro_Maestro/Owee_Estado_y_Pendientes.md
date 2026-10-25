@@ -44,14 +44,13 @@ Nada de lo siguiente bloquea el uso del idioma; son pruebas y crecimiento que no
 2. **Grabaciones de voz humana** (`03_Material_Ensenanza/Pronunciacion/herramientas/grabar_voz.py`): sustituyen a la voz sintética al regenerar el sitio.
 3. **Probar los teclados en otros equipos:** Keyman en Android y Windows reales; Fcitx5 en otro equipo oweelinux.
 4. **Seguridad (tuya):** rotar las claves del archivo `oweeme/oweeme.md` y guardarlas en un gestor de contraseñas.
-5. **Correo para propuestas:** indicar la dirección pública en `CORREO_PROPUESTAS` (`07_Sitio_Web/build_site.py`) para que la página «Crear palabras» muestre el botón de correo.
-6. **Primeros certificados:** el examinador fundador certifica a los primeros maestros; cada certificado se añade a `03_Material_Ensenanza/Certificacion/certificados.tsv`.
-7. **Crecer con el uso:** más textos de literatura (meta: 100), traducciones de obras de dominio público y las palabras que propongan los usuarios.
-8. **Opcional:** `sudo apt install gettext` (para compilar `.po` con `msgfmt`); publicar el teclado en keyman.com.
+5. **Primeros certificados:** el examinador fundador certifica a los primeros maestros; cada certificado se añade a `03_Material_Ensenanza/Certificacion/certificados.tsv`.
+6. **Crecer con el uso:** más textos de literatura (meta: 100), traducciones de obras de dominio público y las palabras que propongan los usuarios.
+7. **Opcional:** `sudo apt install gettext` (para compilar `.po` con `msgfmt`); publicar el teclado en keyman.com.
 
 ## 4. Cómo seguir creciendo
 
-- **Palabras nuevas:** página «Crear palabras» → propuesta → revisión → `ciencias_fuente.py` → `generar_ciencias.py` → `verificar_todo.py`. Guía en `CONTRIBUTING.md`.
+- **Palabras nuevas:** página «Crear palabras» → correo a hector@oweeme.com («Idioma Owee: nueva palabra») o GitHub → revisión → `ciencias_fuente.py` → `generar_ciencias.py` → `verificar_todo.py`. Guía en `CONTRIBUTING.md`.
 - **Fase 2 (cuando haya comunidad):** base de datos de propuestas con cuentas y votos (MySQL + API en Python/FastAPI en el VPS); el léxico aprobado se sigue exportando al repositorio como fuente pública.
 
 > Para comprobar el estado en cualquier momento: `python3 verificar_todo.py`.

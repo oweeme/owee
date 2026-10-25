@@ -51,7 +51,7 @@ Los exámenes modelo (con su clave para el examinador) están en la página **Ex
 ## 3. Cómo obtener un certificado
 
 1. **Prepárate** con los materiales del nivel (tabla de la sección 1) y haz el examen modelo.
-2. **Solicita el examen** a un examinador certificado o, mientras la comunidad es pequeña, al equipo de Owee (página «Crear palabras» → correo o GitHub).
+2. **Solicita el examen** a un examinador certificado o, mientras la comunidad es pequeña, escribiendo a **hector@oweeme.com** con el asunto «Idioma Owee: examen de nivel» (indica el nivel, tu edad y tu país).
 3. **Haz el examen** con un examinador: escrito y oral. El examinador usa el examen modelo o uno equivalente del mismo nivel.
 4. **Acta:** el examinador anota los puntos de cada parte y envía el acta al registro. Para maestros, el acta incluye los enlaces al artículo y al video en oweeme.com.
 5. **Registro:** si aprobaste, el certificado recibe un **código** (`OWEE-2026-0001`) y se publica en el **Registro público de certificados** del sitio, con nombre, nivel, fecha y examinador.
