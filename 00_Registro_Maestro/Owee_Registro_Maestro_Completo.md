@@ -1724,3 +1724,10 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - Los cuadernos usan `<!--copiar …-->` (hojas de caligrafía), `<!--lineas N-->` y `<!--pagina-->`; las cuentas se comprueban al generar y las palabras de los bloques Owee se validan contra el léxico (`verificar_todo.py`). Los nombres propios (mayúscula) se validan solo por fonología.
 - `make_pdf.py` imprime con una copia de fontconfig sin `owee-numerals`, para que las cifras del texto en español no salgan con dígitos Owee en equipos que tienen las cifras Owee en todo el sistema.
 
+## §106 — Lote 20: norma de practicidad y palabras de cada día (2026-10-25)
+
+- **Problema:** muchas palabras cotidianas eran compuestos de 5–6 sílabas (`ruma-kuna-gume` pollo, `te-loda-kelo` hoy, `rale-nede-fame` tomate): «quiero comprar 3 tomates, 2 lechugas, 4 sandías y un plato de conejo» ocupaba 40 sílabas. Faltaban además personas (hombre, mujer, niño, niña), saludos e invitaciones, ropa, tecnología del hogar, internet y correo, viajes, jardinería, animales salvajes e insectos.
+- **Norma de practicidad (decidida):** lo que se nombra cada día tiene una **raíz corta**: 2 sílabas para lo más frecuente y, de forma excepcional, 3 sílabas cuando ya no caben raíces de 2 sin confundirse al oído; los derivados se forman con **2 elementos**. Los compuestos de 6 sílabas quedan para lo técnico o poco frecuente.
+- **Lote 20:** 179 raíces nuevas y 71 compuestos; 100 formas largas sustituidas en el léxico, el curso, la interfaz y las traducciones. Ejemplos: `fusu` día (`te-fusu` hoy, `mu-fusu` semana), `mopu` hombre, `bufu` mujer, `nofo` niño/a (`nofo-mopu` niño, `nofo-bufu` niña), `botu` perro, `pegu` teléfono, `geru` coche, `muru` tomate, `meka-rela` bluetooth, `sura-rela` wifi, `lena-fusu` buenos días.
+- La misma frase ocupa ahora 24 sílabas. Detalle y tabla antes/ahora: `02_Diccionario/datos/lotes_20.md`.
+

@@ -4,22 +4,44 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 
 | Área | Conceptos | Ya había | Añadido (lotes 9-14) | Falta |
 |---|---|---|---|---|
-| Hogar y casa | 84 | 40 | 44 | 0 |
-| Informática y sistema | 85 | 38 | 42 | 5 |
+| Hogar y casa | 84 | 52 | 32 | 0 |
+| Informática y sistema | 85 | 42 | 40 | 3 |
 | Comprar y vender | 62 | 27 | 32 | 3 |
-| Cuerpo humano | 86 | 41 | 43 | 2 |
-| Cocina y alimentos | 121 | 83 | 36 | 2 |
-| Agricultura y campo | 74 | 30 | 39 | 5 |
-| **Total** | 512 | 259 | 236 | 17 |
+| Cuerpo humano | 86 | 42 | 43 | 1 |
+| Cocina y alimentos | 121 | 93 | 28 | 0 |
+| Agricultura y campo | 74 | 39 | 32 | 3 |
+| Saludos y vida social | 43 | 34 | 2 | 7 |
+| Personas | 20 | 16 | 0 | 4 |
+| Ropa | 38 | 36 | 0 | 2 |
+| Tecnología del hogar | 36 | 25 | 9 | 2 |
+| Internet y correo | 32 | 22 | 5 | 5 |
+| Viajes | 31 | 30 | 0 | 1 |
+| Jardinería | 24 | 20 | 3 | 1 |
+| Animales de casa y de campo | 20 | 18 | 2 | 0 |
+| Animales salvajes | 24 | 24 | 0 | 0 |
+| Insectos y bichos | 16 | 16 | 0 | 0 |
+| Día a día | 33 | 27 | 3 | 3 |
+| **Total** | 829 | 563 | 231 | 35 |
 
 ## Lo que falta (por decidir en el próximo lote)
 
 - **Hogar y casa:** —
-- **Informática y sistema:** memoria virtual, aplicación, video, arranque, pila
+- **Informática y sistema:** memoria virtual, arranque, pila
 - **Comprar y vender:** negocio, oferta, crédito
-- **Cuerpo humano:** aliento, diarrea
-- **Cocina y alimentos:** taza, colador
-- **Agricultura y campo:** lago, burro, alambre, yunta, cooperativa
+- **Cuerpo humano:** diarrea
+- **Cocina y alimentos:** —
+- **Agricultura y campo:** lago, yunta, cooperativa
+- **Saludos y vida social:** por favor, hola, brindis, presentar, encuentro, cita, juntos
+- **Personas:** señor, señora, gente, gemelos
+- **Ropa:** guantes, manga
+- **Tecnología del hogar:** aire acondicionado, portátil
+- **Internet y correo:** página web, chat, seguir, sello, contestar
+- **Viajes:** reserva
+- **Jardinería:** plantar
+- **Animales de casa y de campo:** —
+- **Animales salvajes:** —
+- **Insectos y bichos:** —
+- **Día a día:** ducharse, desayunar, peinarse
 
 ## Hogar y casa
 
@@ -40,30 +62,30 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | habitación | había | kuma-palo |
 | jardín | había | nelo-kore |
 | patio | nuevo | kuma-ba-kore |
-| garaje | nuevo | taro-meka-kuma |
+| garaje | nuevo | geru-kuma |
 | sótano | nuevo | kuma-gu-kore |
 | azotea | nuevo | kuma-go-kore |
 | mesa | había | kema-tabe |
 | silla | nuevo | sede-kema |
 | cama | había | sule-tabe |
-| armario | nuevo | kuma-kopa-gore |
+| armario | había | romonu |
 | estante | nuevo | go-tabe |
 | espejo | nuevo | falo-tabe |
-| cortina | nuevo | loke-nado-lobe |
-| alfombra | nuevo | kuma-tabe-lobe |
+| cortina | había | banape |
+| alfombra | había | gedogu |
 | almohada | nuevo | tume-sede |
 | manta | nuevo | sule-lobe |
-| sábana | nuevo | sule-tabe-lobe |
+| sábana | había | rutule |
 | lámpara | había | salo-feke |
 | llave | había | nado-feke |
 | cerradura | nuevo | nado-kose-feke |
 | timbre | nuevo | sone-tada |
-| ventilador | nuevo | sura-duma-meka |
+| ventilador | había | dafonu |
 | calefacción | nuevo | fure-pa-meka |
 | refrigerador | nuevo | fure-po-kopa |
 | estufa | nuevo | pore-meka |
 | lavadora | nuevo | gase-meka |
-| escoba | nuevo | dabo-delo-feke |
+| escoba | había | dulabo |
 | basura | nuevo | dabo-gume |
 | grifo | nuevo | suna-nado |
 | tubería | nuevo | suna-duma-kore |
@@ -73,10 +95,10 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | cable | nuevo | kura-rela |
 | foco | nuevo | eleka-salo |
 | electricidad | había | eleka |
-| televisión | nuevo | sone-salo-sena |
+| televisión | había | chegu |
 | radio | nuevo | sone-meka |
-| teléfono | nuevo | lu-sone-meka |
-| reloj | había | tera-mede-meka |
+| teléfono | había | pegu |
+| reloj | había | tera-mede-meka, maku-tera |
 | valla | nuevo | kore-kose |
 | alquiler | nuevo | kuma-fedo-kelo |
 | dueño | nuevo | pase-nara |
@@ -87,27 +109,27 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | lavar | había | suna-gase |
 | buzón | nuevo | reka-sena-kopa |
 | papel | nuevo | beka-tabe |
-| cepillo | nuevo | gase-feke |
-| peine | nuevo | tume-nelo-feke |
-| tijeras | nuevo | delo-nuse-feke |
-| aguja | nuevo | bume-rela-feke |
-| toalla | había | suna-delo-feke |
+| cepillo | había | nepodu |
+| peine | había | rufosu |
+| tijeras | había | noguto |
+| aguja | había | nafume |
+| toalla | había | nadoto |
 | jabón | había | gase-gume |
 | mueble | había | kuma-kema |
 | edificio | había | kuma-gore-pa |
-| calle | había | kuma-duma-kore |
-| madera | había | nelo-bora-gume |
-| ladrillo | había | taro-pore-kema |
-| vidrio | había | salo-nado-goda |
-| clavo | había | kema-rela-feke |
-| martillo | había | tada-faro-feke |
+| calle | había | tofe |
+| madera | había | tapamu |
+| ladrillo | había | toluru |
+| vidrio | había | soforu |
+| clavo | había | gatudu |
+| martillo | había | lufegu |
 | pintura | había | salo-sena-dare |
 | sofá | había | sede-gore-pa |
 | escritorio | había | meka-tabe |
-| vela | había | pore-salo-feke |
-| colchón | había | sule-lena-tabe |
-| plancha | había | bume-fure-feke |
-| inodoro | había | bora-dabo-kopa |
+| vela | había | dumofe |
+| colchón | había | bolupo |
+| plancha | había | doluko |
+| inodoro | había | nekuda |
 | bañera | había | suna-gase-kopa |
 
 ## Informática y sistema
@@ -138,7 +160,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | ventana | había | loke-kopa, loke-nado |
 | pantalla | había | loke-tabe |
 | teclado | había | maku-tabe |
-| ratón | había | pose-feke |
+| ratón | había | batupu, pose-feke |
 | impresora | había | meka-beka |
 | red | había | rela-doke, reku |
 | internet | había | gora-rela |
@@ -168,9 +190,9 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | notificación | nuevo | reka-paku |
 | enlace | nuevo | kore-rela |
 | navegador | había | gora-rela-duma |
-| cámara | nuevo | salo-sena-meka |
+| cámara | había | datuma |
 | micrófono | nuevo | sone-gura-meka |
-| altavoz | nuevo | sone-pema-meka |
+| altavoz | había | roshe |
 | audio | nuevo | doke-sone |
 | imagen | había | remu, salo-sena |
 | comprimir | nuevo | doke-gore-po |
@@ -193,9 +215,9 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | sensor | nuevo | luma-meka |
 | robot | nuevo | meka-daro |
 | dispositivo | había | meka-reka |
-| aplicación | falta |  |
+| aplicación | había | dopunu |
 | tarea | había | daro-pu |
-| video | falta |  |
+| video | había | dulu |
 | arranque | falta |  |
 | pila | falta |  |
 | cola | había | bora-gune |
@@ -329,7 +351,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | sudor | había | bora-suna |
 | orina | nuevo | bora-dabo-suna |
 | excremento | nuevo | bora-dabo-gume |
-| aliento | falta |  |
+| aliento | había | sabe-sura |
 | voz | nuevo | reka-sone-dore |
 | latido | nuevo | doma-kelo |
 | respiración | había | sura-gura |
@@ -381,15 +403,15 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | cocina | había | fame-kore |
 | horno | nuevo | pore-kuma |
 | olla | había | pore-kopa |
-| sartén | nuevo | mase-pore-kopa |
+| sartén | había | sekafu |
 | plato | había | fame-tabe |
 | vaso | había | nobe-kopa |
-| cuchara | nuevo | suna-fame-feke |
-| tenedor | nuevo | fame-kefe-feke |
+| cuchara | había | foshu |
+| tenedor | había | shofo |
 | cuchillo | había | bosa-feke |
 | cubierto | había | fame-feke |
 | jarra | nuevo | nobe-kopa-gore |
-| botella | nuevo | nobe-kopa-kose |
+| botella | había | shupu |
 | receta | nuevo | fame-foma |
 | ingrediente | nuevo | fame-palo |
 | porción | nuevo | fame-palo-bema |
@@ -397,8 +419,8 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | cocido | nuevo | pore-ko |
 | podrido | nuevo | fame-bosa |
 | sabroso | había | lena-sabe |
-| dulce | había | lena-gume-sabe |
-| salado | había | chaga-rela-sabe |
+| dulce | había | petodu |
+| salado | había | podepu |
 | amargo | nuevo | lena-no-sabe |
 | picante | había | pore-sabe |
 | sal | había | chaga-rela |
@@ -408,8 +430,8 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | condimento | nuevo | sabe-gume |
 | salsa | nuevo | fame-luda |
 | sopa | había | suna-fame |
-| ensalada | nuevo | nede-fame-seta |
-| postre | nuevo | lena-gume-fame |
+| ensalada | había | nubuda |
+| postre | había | lena-fame |
 | pan | había | tabu |
 | arroz | había | sebu |
 | papa | había | fuko |
@@ -419,33 +441,33 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | fruta | había | nelo-fame |
 | verdura | había | nede-fame |
 | carne | había | bora-gume |
-| pollo | había | ruma-kuna-gume |
-| pescado | había | ruma-suna-gume |
+| pollo | había | bupo |
+| pescado | había | gutu |
 | huevo | había | pado-kopa |
 | leche | había | naku-nobe |
-| queso | había | naku-nobe-gume |
-| mantequilla | nuevo | naku-nobe-mase |
+| queso | había | fefu |
+| mantequilla | había | fubofa |
 | jugo | había | nelo-nobe |
-| té | nuevo | nelo-maku-nobe |
+| té | había | gono |
 | café | había | bore-nobe |
 | cacao | había | choru |
-| plátano | había | kale-nelo-fame |
-| yuca | había | taro-nelo-fame |
-| palta | había | mase-nelo-fame |
-| tomate | había | rale-nede-fame |
+| plátano | había | tudu |
+| yuca | había | mopale |
+| palta | había | neshe |
+| tomate | había | muru |
 | cebolla | había | nolu |
 | zanahoria | había | shuko |
 | trigo | había | tabu-nelo |
 | frijol | había | rale-dobu |
-| haba | había | dobu-gore-pa |
+| haba | había | perabu |
 | arveja | había | nede-dobu |
 | ajo | había | tushe |
 | limón | había | shefa |
 | naranja | había | lufo |
-| manzana | había | rale-nelo-fame |
+| manzana | había | gudo |
 | uva | había | nugu |
-| camote | había | fuko-lena-gume |
-| lechuga | había | nelo-maku-fame |
+| camote | había | teguno |
+| lechuga | había | chube |
 | desayuno | había | pado-fame |
 | almuerzo | había | fame-gore-pa |
 | cena | había | gune-fame |
@@ -456,32 +478,32 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | panadería | nuevo | tabu-kuma |
 | carnicería | nuevo | bora-gume-kuma |
 | comedor | había | pume-kore |
-| chuño | había | fuko-suna-nuse |
+| chuño | había | supuko |
 | vinagre | había | nobe-sabe-pa |
-| miel | había | lena-gume-ruma |
-| yogur | había | naku-nobe-telo |
-| caldo | había | bora-gume-suna |
-| fideo | había | tabu-gume-dase |
+| miel | había | rumode |
+| yogur | había | kemape |
+| caldo | había | guleru |
+| fideo | había | rufolo |
 | galleta | había | tabu-gore-po |
 | vino | había | nugu-nobe |
-| cerveza | había | tabu-nelo-nobe |
-| taza | falta |  |
-| colador | falta |  |
-| licuadora | había | gume-rela-meka |
+| cerveza | había | fope |
+| taza | había | dashu |
+| colador | había | fodofu |
+| licuadora | había | radolu |
 | mantel | había | kema-tabe-bume |
 | servilleta | había | sabe-gase-feke |
-| lenteja | había | dobu-gore-po |
+| lenteja | había | gupore |
 | garbanzo | había | kale-dobu |
-| pimienta | había | pore-pado-nelo |
+| pimienta | había | gutaro |
 | papaya | había | chamu |
 | piña | había | shebo |
-| sandía | había | suna-nelo-fame |
+| sandía | había | guchu |
 | durazno | había | gesho |
 | pera | había | chede |
 | pepino | había | rofu |
 | calabaza | había | kushu |
 | espinaca | había | lepu |
-| repollo | había | nelo-maku-selo |
+| repollo | había | nufupa |
 | choclo | había | mugo-tame |
 
 ## Agricultura y campo
@@ -495,7 +517,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | época de lluvias | había | suna-tera |
 | canal de riego | nuevo | nelo-suna-nado |
 | raíz de planta | había | nelo-taro |
-| llama andina | nuevo | ruma-taro-go |
+| llama andina | había | numuro |
 | suelo fértil | había | taro-fame |
 | época seca | había | suna-nuse-tera |
 | agricultura | nuevo | taro-nelo-daro |
@@ -505,7 +527,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | sembrar | nuevo | pado-nelo-fena |
 | cosechar | nuevo | nelo-kera |
 | cosecha | nuevo | nelo-kera-kema |
-| regar | nuevo | nelo-suna-pema |
+| regar | había | nelo-suna |
 | arar | nuevo | taro-bure |
 | abono | nuevo | taro-fame-gume |
 | tractor | nuevo | taro-bure-meka |
@@ -518,14 +540,14 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | ganadería | nuevo | ruma-fame-daro |
 | pastor | nuevo | ruma-fame-nara |
 | pasto | nuevo | ruma-fame-nelo |
-| gallina | nuevo | ruma-kuna-kuma |
-| vaca | nuevo | ruma-naku-nobe |
+| gallina | había | rachu |
+| vaca | había | chuku |
 | oveja | nuevo | ruma-bume |
 | lana | nuevo | ruma-bume-gume |
 | cerdo | nuevo | ruma-mase |
-| caballo | nuevo | ruma-duma-feke |
-| perro | nuevo | ruma-fadu |
-| gato | nuevo | ruma-kuma-po |
+| caballo | había | dochu |
+| perro | había | botu |
+| gato | había | tomu |
 | plaga | nuevo | ku-kalu-bosa |
 | maleza | nuevo | nelo-bado-no |
 | helada | nuevo | nelo-suna-goda |
@@ -538,7 +560,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | semilla | había | pado-nelo |
 | planta | había | nelo |
 | árbol | había | nelo-gore-pa, nelo-doke |
-| flor | había | nelo-lena |
+| flor | había | doboka, nelo-lena |
 | hoja | había | nelo-maku, banu-mata |
 | tronco | había | nelo-bora |
 | rama | había | nelo-rela |
@@ -548,17 +570,389 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | sequía | había | suna-nuse-dure |
 | verano | había | fure-pa-tera |
 | invierno | había | fure-po-tera |
-| burro | falta |  |
-| pato | había | ruma-kuna-suna |
-| conejo | había | ruma-sone-loke |
-| abeja | había | ruma-nelo-lena |
+| burro | había | netubu |
+| pato | había | fekepe |
+| conejo | había | kucha |
+| abeja | había | fesha |
 | invernadero | había | nelo-kuma |
 | semillero | había | pado-nelo-kore |
 | podar | había | nelo-delo-nuse |
 | injertar | había | nelo-rela-dare |
-| alambre | falta |  |
+| alambre | había | faro-loka |
 | cosechadora | había | nelo-kera-meka |
 | establo | había | ruma-fame-kuma |
 | yunta | falta |  |
 | arriero | había | ruma-duma-nara |
 | cooperativa | falta |  |
+
+## Saludos y vida social
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| buenas tardes | había | lena-fusu-gune |
+| buenas noches | había | sule-lena |
+| buenos días | había | lena-fusu |
+| por favor | falta |  |
+| hola | falta |  |
+| adiós | había | pu-reme |
+| gracias | había | gura-lena |
+| perdón | había | bosa-rude |
+| bienvenido | había | gura-reme |
+| felicidades | había | lena-pema |
+| cumpleaños | había | nosho |
+| fiesta | había | naro-lena |
+| regalo | había | pema-kema |
+| invitación | había | pedobo |
+| invitar | había | pedobo |
+| celebrar | había | naro-lena |
+| pastel | había | lena-tabu |
+| boda | había | nudamo |
+| amigo | había | reme-nara |
+| novio | había | gusha-pu |
+| esposo | había | gusha |
+| visita | había | reme-duma |
+| visitar | había | reme-duma |
+| abrazo | había | defupe |
+| beso | había | sabe-tada |
+| sonrisa | nuevo | sabe-lena-po |
+| felicitar | había | lena-pema |
+| aniversario | había | gusha-kelo |
+| brindis | falta |  |
+| música | había | lena-sone |
+| bailar | había | notesa |
+| cantar | había | sabe-sone |
+| juego | había | lena-duma |
+| jugar | había | lena-duma |
+| nacimiento | había | suma-pado |
+| edad | nuevo | suma-dure |
+| saludar | había | reme-dare |
+| despedirse | había | pu-reme-dare |
+| presentar | falta |  |
+| conocer | había | lare |
+| encuentro | falta |  |
+| cita | falta |  |
+| juntos | falta |  |
+
+## Personas
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| hombre | había | mopu |
+| mujer | había | bufu |
+| niño | había | nofo, nofo-mopu |
+| niña | había | nofo-bufu |
+| bebé | había | naku-tame |
+| joven | había | nara-tame |
+| anciano | había | nara-gule |
+| chico | había | mopu-tame |
+| chica | había | bufu-tame |
+| abuelo | había | pade-pade |
+| tío | había | pade-sare |
+| primo | había | pade-sare-naku |
+| esposo | había | gusha |
+| vecino | había | kuma-le-nara |
+| señor | falta |  |
+| señora | falta |  |
+| gente | falta |  |
+| persona | había | nara |
+| adulto | había | nara-gore-pa |
+| gemelos | falta |  |
+
+## Ropa
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| reloj de pulsera | había | maku-tera |
+| ropa interior | había | bume-bo |
+| ropa | había | bume, bume-mopu, bume-bufu, bume-nofo |
+| camisa | había | doma-bume |
+| camiseta | había | shogu |
+| pantalón | había | kalu-bume |
+| falda | había | mufune |
+| vestido | había | kosedu |
+| zapato | había | rogo |
+| zapatilla | había | mesode |
+| bota | había | gefoko |
+| sandalia | había | monopo |
+| calcetín | había | denoba |
+| sostén | había | lebofa |
+| abrigo | había | gofepa |
+| chaqueta | había | kuluge |
+| suéter | había | gofene |
+| sombrero | había | tume-bume |
+| gorra | había | gusabo |
+| bufanda | había | lufule |
+| guantes | falta |  |
+| cinturón | había | kebogo |
+| corbata | había | gudusa |
+| traje | había | sabode |
+| uniforme | había | bume-se |
+| pijama | había | duparu |
+| bolsillo | había | bume-kopa-po |
+| botón | había | lorudu, tada-sena |
+| cremallera | había | nupolo |
+| bolso | había | nabafu |
+| cartera | había | nabafu |
+| mochila | había | sumuse |
+| anillo | había | naradu |
+| collar | había | pufupe |
+| arete | había | lotufe |
+| gafas | había | loke-feke |
+| manga | falta |  |
+| tela | había | bume-gume |
+
+## Tecnología del hogar
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| aire acondicionado | falta |  |
+| control remoto | había | lu-feke |
+| teléfono | había | pegu |
+| celular | había | pegu |
+| cargador | nuevo | enu-pema-feke |
+| batería | había | enu-kopa |
+| bluetooth | había | meka-rela |
+| wifi | había | sura-rela |
+| parlante | había | roshe |
+| auriculares | había | ropofe |
+| televisión | había | chegu |
+| computadora | había | meka-mado |
+| portátil | falta |  |
+| tableta | había | butapu |
+| cámara | había | datuma |
+| micrófono | nuevo | sone-gura-meka |
+| enchufe | nuevo | eleka-nado |
+| cable | nuevo | kura-rela |
+| pantalla | había | loke-tabe |
+| consola | había | futege-meka |
+| videojuego | había | futege |
+| refrigerador | nuevo | fure-po-kopa |
+| microondas | había | mupume |
+| lavadora | nuevo | gase-meka |
+| aspiradora | había | fatopa |
+| licuadora | había | radolu |
+| ventilador | había | dafonu |
+| plancha | había | doluko |
+| foco | nuevo | eleka-salo |
+| linterna | había | maku-salo |
+| router | había | rela-meka |
+| impresora | había | meka-beka |
+| reloj | había | tera-mede-meka, maku-tera |
+| alarma | nuevo | sone-saku |
+| radio | nuevo | sone-meka |
+| antena | había | fonoku |
+
+## Internet y correo
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| correo electrónico | había | reka-rela |
+| archivo adjunto | había | doke-rela |
+| correo postal | había | kafosa-kuma |
+| red social | había | kumedo |
+| página web | falta |  |
+| sitio web | había | rela-kuma |
+| internet | había | gora-rela |
+| red | había | rela-doke, reku |
+| mensaje | nuevo | reka-sena |
+| contraseña | había | sena-fadu |
+| usuario | había | nara-kade |
+| enlace | nuevo | kore-rela |
+| descargar | nuevo | lu-doke-gura |
+| subir | nuevo | lu-doke-pema |
+| buscar | había | kera-nume |
+| navegador | había | gora-rela-duma |
+| video | había | dulu |
+| foto | había | gogu |
+| llamada | había | shuse |
+| videollamada | había | dulu-shuse |
+| chat | falta |  |
+| publicar | había | naro-pema |
+| compartir | había | saro-pema |
+| seguir | falta |  |
+| comentario | había | doke-reka |
+| carta | había | kafosa |
+| sobre | había | reka-lobe |
+| sello | falta |  |
+| cartero | había | kafosa-nara |
+| paquete | nuevo | kema-lobe |
+| llamar | había | shuse |
+| contestar | falta |  |
+
+## Viajes
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| viaje | había | pubu |
+| viajar | había | pubu |
+| maleta | había | bume-kopa |
+| pasaporte | había | kubosa |
+| boleto | había | nado-sena |
+| hotel | había | sule-kuma |
+| aeropuerto | había | sura-meka-kuma |
+| avión | había | sura-meka |
+| tren | había | larope |
+| autobús | había | naro-meka |
+| taxi | había | geru-fedo |
+| coche | había | geru |
+| bicicleta | había | kalu-meka |
+| moto | había | kemore |
+| barco | había | suna-meka |
+| puerto | había | suna-meka-kuma, rela-nado |
+| estación | había | sade-kelo-palo, duma-kuma |
+| mapa | había | kore-sena |
+| turista | había | pubu-nara |
+| vacaciones | había | lena-tera |
+| playa | había | dutude |
+| montaña | había | taro-go |
+| frontera | había | saro-fese |
+| equipaje | había | pubu-kema |
+| reserva | falta |  |
+| guía | había | fela-doke |
+| llegar | había | duma-gune |
+| salir | había | duma-ba |
+| camino | había | duma-kore |
+| carretera | había | pomotu |
+| puente | había | suna-go-kore |
+
+## Jardinería
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| jardín | había | nelo-kore |
+| flor | había | doboka, nelo-lena |
+| rosa | había | doboka |
+| árbol | había | nelo-gore-pa, nelo-doke |
+| arbusto | había | nelo-gore-po |
+| césped | había | nede-tabe |
+| semilla | había | pado-nelo |
+| regar | había | nelo-suna |
+| maceta | había | nelo-kopa |
+| tierra | había | taro |
+| abono | nuevo | taro-fame-gume |
+| podar | había | nelo-delo-nuse |
+| manguera | había | suna-loka |
+| regadera | había | tumafa |
+| rastrillo | había | gupumo |
+| pala | nuevo | taro-delo-feke |
+| hoja | había | nelo-maku, banu-mata |
+| rama | había | nelo-rela |
+| huerto | nuevo | nede-fame-kore |
+| gusano | había | danufu |
+| caracol | había | busale |
+| cactus | había | topeme |
+| plantar | falta |  |
+| crecer | había | gore-telo |
+
+## Animales de casa y de campo
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| perro | había | botu |
+| gato | había | tomu |
+| pájaro | había | ruma-kuna |
+| pez | había | ruma-suna |
+| caballo | había | dochu |
+| vaca | había | chuku |
+| toro | había | chuku-mopu |
+| oveja | nuevo | ruma-bume |
+| cerdo | nuevo | ruma-mase |
+| gallina | había | rachu |
+| gallo | había | rachu-mopu |
+| pollito | había | rachu-tame |
+| pato | había | fekepe |
+| conejo | había | kucha |
+| cabra | había | tubege |
+| burro | había | netubu |
+| loro | había | fotafa |
+| tortuga | había | dumuda |
+| ratón | había | batupu, pose-feke |
+| mascota | había | ruma-lore |
+
+## Animales salvajes
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| león | había | degodu |
+| tigre | había | rotebu |
+| oso | había | funage |
+| lobo | había | dulone |
+| zorro | había | suteku |
+| mono | había | mapegu |
+| elefante | había | kogamu |
+| jirafa | había | gudopu |
+| cebra | había | tadopa |
+| serpiente | había | lemufu |
+| cocodrilo | había | telusu |
+| águila | había | lesugu |
+| búho | había | fubuga |
+| ballena | había | kumudu |
+| delfín | había | somase |
+| tiburón | había | numodo |
+| ciervo | había | gupoko |
+| ardilla | había | rokone |
+| rana | había | gotube |
+| murciélago | había | peduge |
+| cóndor | había | rubatu |
+| puma | había | ragadu |
+| lagarto | había | soramu |
+| pingüino | había | sufaso |
+
+## Insectos y bichos
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| insecto | había | ku-kalu |
+| mosca | había | shage |
+| mosquito | había | nurabo |
+| hormiga | había | sechu |
+| abeja | había | fesha |
+| mariposa | había | munege |
+| araña | había | shuta |
+| cucaracha | había | labufu |
+| escarabajo | había | tanalu |
+| grillo | había | rofuke |
+| gusano | había | danufu |
+| caracol | había | busale |
+| pulga | había | surafu |
+| piojo | había | tufesa |
+| libélula | había | fegone |
+| avispa | había | segamu |
+
+## Día a día
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| cepillo de dientes | había | nepodu |
+| fin de semana | había | mu-fusu-gune |
+| pasta dental | había | dumoga |
+| despertar | había | sule-gune |
+| levantarse | había | bora-go |
+| ducharse | falta |  |
+| vestirse | había | bume-fena |
+| desayunar | falta |  |
+| almuerzo | había | fame-gore-pa |
+| descansar | había | faro-gura |
+| dormir | había | sule |
+| jabón | había | gase-gume |
+| champú | había | geloke |
+| toalla | había | nadoto |
+| espejo | nuevo | falo-tabe |
+| peinarse | falta |  |
+| limpiar | nuevo | gase-dare |
+| hora | había | nate |
+| minuto | había | tegeba |
+| mañana | había | fusu-pado |
+| tarde | había | fusu-gune |
+| noche | había | kuna-bore |
+| feriado | había | fusu-lena |
+| llave | había | nado-feke |
+| dinero | había | bado-feke |
+| basura | nuevo | dabo-gume |
+| lista | había | doke-raga |
+| tarea | había | daro-pu |
+| esperar | había | pu-dure |
+| ayudar | había | galo |
+| llegar | había | duma-gune |
+| empezar | había | pado-fena |
+| terminar | había | gune-dare |

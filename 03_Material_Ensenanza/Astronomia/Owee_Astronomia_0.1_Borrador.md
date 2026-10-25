@@ -28,7 +28,7 @@ El **Sol** es `sade` y la **Luna** es `mune`. El **sistema solar** es `sade-rela
 
 ## 3. Movimientos, tiempo y calendario
 
-- **Rotación** de la Tierra: `loda`. El **día** astronómico es `loda-kelo` («ciclo de rotación»).
+- **Rotación** de la Tierra: `loda`. El **día** es `fusu` (raíz corta de uso diario; antes `loda-kelo`, «ciclo de rotación»).
 - **Órbita**: `duma-selo` («movimiento circular»). El **año** es `sade-kelo` («ciclo del sol»).
 - El **mes** es `mune-kelo` («ciclo de la luna»).
 - **Eclipse solar**: `sade-kose` («sol cerrado»); **eclipse lunar**: `mune-kose`.
@@ -38,7 +38,7 @@ El **Sol** es `sade` y la **Luna** es `mune`. El **sistema solar** es `sade-rela
 sade go duma
 mune sade kose
 taro sade duma-selo
-loda-kelo sade-kelo palo
+fusu sade-kelo palo
 ```
 
 *El sol sube. · La luna cierra el sol (eclipse). · La Tierra orbita el sol. · El día es una parte del año.*
@@ -94,5 +94,5 @@ me loke-lu
 
 - Nombres de **galaxias, estrellas y constelaciones concretas** (Orión, Sirio…): requieren la norma de nombres propios (Gramática 1.1 §14) o numeración.
 - **Fases lunares** (nueva, creciente, llena, menguante): composiciones con `mune`, `pa/po` y `fese`.
-- **Calendario**: días de la semana y meses (los nombres tradicionales no caben en Owee; se propone numerarlos: `be-pose loda-kelo`…).
+- **Calendario**: días de la semana y meses (los nombres tradicionales no caben en Owee; se propone numerarlos: `be-pose fusu`…).
 - **Unidades**: al (año luz), UA, parsec se conservan como símbolos.

@@ -146,31 +146,31 @@ pu-reme
 
 ## Lección 2.8 — Hoy, ayer, mañana y las comidas
 
-<!--vocabulario te-loda-kelo pe-loda-kelo pu-loda-kelo loda-kelo-pado loda-kelo-gune pado-fame fame-gore-pa gune-fame mu-loda-kelo-->
+<!--vocabulario te-fusu pe-fusu pu-fusu fusu-pado fusu-gune pado-fame fame-gore-pa gune-fame mu-fusu-->
 
-El **día** es `loda-kelo` («ciclo de rotación»). Con los marcadores de tiempo `pe` (antes), `te` (ahora) y `pu` (después) se forman **ayer, hoy y mañana**.
+El **día** es `fusu`, una raíz corta porque se usa a cada rato (antes era `loda-kelo`, «ciclo de rotación»). Con los marcadores de tiempo `pe` (antes), `te` (ahora) y `pu` (después) se forman **ayer, hoy y mañana**.
 
 ```owee
-te-loda-kelo me daro
-pe-loda-kelo me sule
-pu-loda-kelo me duma-lu
-loda-kelo-pado me loke bure
+te-fusu me daro
+pe-fusu me sule
+pu-fusu me pubu
+fusu-pado me loke bure
 pado-fame me pume
 gune-fame me pume
 ```
 
 *Hoy trabajo. Ayer dormí. Mañana hago un viaje. Al amanecer abro los ojos. El desayuno lo como. La cena la como.*
 
-**Fíjate:** la **semana** es `mu-loda-kelo`: «siete días». Los números se pegan al nombre con guion.
+**Fíjate:** la **semana** es `mu-fusu`: «siete días». Los números se pegan al nombre con guion.
 
 <!--resp-->
-**Ejercicios.** 1) «Ayer comí». 2) «Mañana duermo». 3) Traduce `te-loda-kelo me kuma bo mora`.
-**Respuestas.** 1) `pe-loda-kelo me fame pume`. 2) `pu-loda-kelo me sule`. 3) «Hoy estoy en casa».
+**Ejercicios.** 1) «Ayer comí». 2) «Mañana duermo». 3) Traduce `te-fusu me kuma bo mora`.
+**Respuestas.** 1) `pe-fusu me fame pume`. 2) `pu-fusu me sule`. 3) «Hoy estoy en casa».
 <!--/resp-->
 
 ## Lección 2.9 — La casa, la ropa y la cocina
 
-<!--vocabulario sule-kore gase-kore fame-kore reme-kore loke-nado nado-feke sule-tabe kalu-bume tume-bume doma-bume kalu-gune-bume pore-dare fame-moke nobe-moke-->
+<!--vocabulario sule-kore gase-kore fame-kore reme-kore loke-nado nado-feke sule-tabe kalu-bume tume-bume doma-bume rogo pore-dare fame-moke nobe-moke-->
 
 Las **habitaciones** se forman con `kore` (lugar): `sule-kore` («lugar de dormir») es el dormitorio y `gase-kore` («lugar de limpieza») es el baño. La **ropa** se forma con `bume` y la parte del cuerpo: `kalu-bume` («ropa de la pierna») es el pantalón.
 
@@ -179,7 +179,7 @@ me sule-kore bo sule
 ra fame-kore bo pore-dare
 me fame-moke
 me nobe-moke
-me kalu-gune-bume tame
+me rogo tame
 tu doma-bume fale
 loke-nado bure
 nado kose
@@ -194,14 +194,14 @@ nado kose
 
 ## Lección 2.10 — La ciudad y el viaje
 
-<!--vocabulario kuma-seta bade-kore duma-kore taro-meka suna-meka sura-meka duma-lu nado-sena bume-kopa-->
+<!--vocabulario kuma-seta bade-kore duma-kore geru suna-meka sura-meka pubu nado-sena bume-kopa-->
 
-Los **medios de transporte** son **máquinas** (`meka`) de un medio: `taro-meka` (de tierra) es el coche, `suna-meka` (de agua) es el barco, `sura-meka` (de aire) es el avión.
+Los **medios de transporte** son **máquinas** (`meka`) de un medio: el coche tiene raíz propia, `geru`, por lo mucho que se usa; `suna-meka` (de agua) es el barco, `sura-meka` (de aire) es el avión.
 
 ```owee
 me kuma-seta bo mora
 bade-kore lu
-me taro-meka kade
+me geru kade
 suna-meka suna bo duma
 sura-meka sura bo duma
 tu ka-kore to duma
@@ -249,7 +249,7 @@ La familia se construye **encadenando** relaciones: el abuelo es «el progenitor
 
 ```owee
 me pade-pade kuma bo mora
-me pade-sare duma-lu
+me pade-sare pubu
 naku-tame sule
 me kuma-le-nara reme
 nara-gule fame pume

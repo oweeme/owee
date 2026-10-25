@@ -73,7 +73,7 @@
   }
   var FUNC = { a: "to", y: "re", o: "lo", si: "ke", con: "ko", sin: "so", en: "bo", hacia: "to", desde: "de", cerca: "le", lejos: "lu", pero: "balo", porque: "kasu",
                no: "no", yo: "me", tu: "tu", el: "ra", ella: "ra", nosotros: "mene", ustedes: "tune", ellos: "rane", ellas: "rane", que: "ka-kema", quien: "ka-nara",
-               donde: "ka-kore", cuando: "ka-tera", como: "ka-mode", cuanto: "ka-bema", si_: "tare", hoy: "te-loda-kelo", ayer: "pe-loda-kelo", manana: "pu-loda-kelo" };
+               donde: "ka-kore", cuando: "ka-tera", como: "ka-mode", cuanto: "ka-bema", si_: "tare", hoy: "te-fusu", ayer: "pe-fusu", manana: "pu-fusu" };
   var VERBOS = { querer: "nume", necesitar: "moke", poder: "pode", deber: "pelo", comer: "pume", beber: "nobe pume", dormir: "sule", ver: "luma-salo", oir: "luma-sone",
     hablar: "reka", decir: "reka", saber: "lare", pensar: "rena", entender: "karo", dar: "pema", recibir: "gura", tomar: "delo", poner: "fena", abrir: "bure", cerrar: "kose",
     usar: "kade", hacer: "dare", ayudar: "galo", trabajar: "daro", aprender: "tase", ensenar: "fela", caminar: "kalu-duma", ir: "duma", venir: "duma", mover: "duma", vivir: "suma",
@@ -85,7 +85,7 @@
     tienes: "tener", tiene: "tener", hago: "hacer", hizo: "hacer", doy: "dar", das: "dar", veo: "ver", ves: "ver", vio: "ver", se: "saber", sabe: "saber", digo: "decir",
     dice: "decir", duermo: "dormir", duermes: "dormir", duerme: "dormir", vengo: "venir", viene: "venir", pienso: "pensar", piensa: "pensar", entiendo: "entender", pido: "pedir" };
   var SINON = { nino: "naku", nina: "naku", hijo: "naku", hija: "naku", padre: "pade", madre: "pade", amigo: "reme", amiga: "reme", persona: "nara", gente: "naro", hombre: "nara", mujer: "nara",
-    casa: "kuma", hogar: "kuma", ciudad: "kuma-seta", comida: "fame", bebida: "nobe", fruta: "nelo-fame", libro: "beka kema", dinero: "bado-feke", tiempo: "tera", dia: "loda-kelo",
+    casa: "kuma", hogar: "kuma", ciudad: "kuma-seta", comida: "fame", bebida: "nobe", fruta: "nelo-fame", libro: "beka kema", dinero: "bado-feke", tiempo: "tera", dia: "fusu",
     noche: "kuna-bore", sol: "sade", luna: "mune", estrella: "sade-lu", cielo: "kuna", tierra: "taro", fuego: "pore", aire: "sura", rio: "suna-duma", mar: "suna-gore-pa", arbol: "nelo-gore-pa",
     grande: "gore-pa", pequeno: "gore-po", caliente: "fure-pa", frio: "fure-po", rapido: "sape-pa", lento: "sape-po", bueno: "lafe", nuevo: "tame", viejo: "gule", si: "tare" };
   function lema(w) {
@@ -119,7 +119,7 @@
       var POSP = ["bo", "ba", "to", "de", "go", "gu", "le", "lu", "ko", "so"], sug = out.slice();
       for (var q = 0; q < sug.length - 1; q++) if (POSP.indexOf(sug[q]) >= 0) { var tmp = sug[q]; sug[q] = sug[q + 1]; sug[q + 1] = tmp; q++; }
       var iv = -1; pal.forEach(function (w, i) { if (lema(w)) iv = i; });
-      var ADV = ["pe-loda-kelo", "pu-loda-kelo", "te-loda-kelo"];
+      var ADV = ["pe-fusu", "pu-fusu", "te-fusu"];
       if (tiempo && !sug.some(function (x) { return ADV.indexOf(x) >= 0; })) { var k = sug.length - 1; var pos = out.indexOf(VERBOS[lema(pal[iv] || "")]); if (pos >= 0) sug.splice(pos, 0, tiempo); }
       var verbo = iv >= 0 ? VERBOS[lema(pal[iv])] : null;
       if (verbo) { var j = sug.indexOf(verbo); if (j >= 0 && j !== sug.length - 1) { sug.splice(j, 1); sug.push(verbo); } }
@@ -179,7 +179,7 @@
   }
   var FUNC_EN = { and: "re", or: "lo", if: "ke", with: "ko", without: "so", in: "bo", at: "bo", on: "bo", to: "to", from: "de", near: "le", far: "lu", but: "balo", because: "kasu", up: "go", down: "gu", outside: "ba",
     i: "me", you: "tu", he: "ra", she: "ra", it: "ra", we: "mene", they: "rane", what: "ka-kema", who: "ka-nara", where: "ka-kore", when: "ka-tera", how: "ka-mode", why: "ka-kasu", yes: "tare",
-    today: "te-loda-kelo", yesterday: "pe-loda-kelo", tomorrow: "pu-loda-kelo", never: "tera-no", always: "tera-fese", nothing: "kema-no", nobody: "nara-no", everything: "kema-fese", also: "re-se" };
+    today: "te-fusu", yesterday: "pe-fusu", tomorrow: "pu-fusu", never: "tera-no", always: "tera-fese", nothing: "kema-no", nobody: "nara-no", everything: "kema-fese", also: "re-se" };
   var BACK_PAST = {}; Object.keys(IRREG_PAST).forEach(function (k) { BACK_PAST[IRREG_PAST[k]] = k; });
   function enLema(w) {
     indEn();
@@ -210,7 +210,7 @@
       });
       var POSP = ["bo", "ba", "to", "de", "go", "gu", "le", "lu", "ko", "so"], sug = out.slice();
       for (var q = 0; q < sug.length - 1; q++) if (POSP.indexOf(sug[q]) >= 0) { var tmp = sug[q]; sug[q] = sug[q + 1]; sug[q + 1] = tmp; q++; }
-      if (verbo) { var j = sug.indexOf(verbo); if (j >= 0) { sug.splice(j, 1); if (neg) sug.push("no"); if (tiempo && sug.every(function (x) { return ["pe-loda-kelo", "pu-loda-kelo", "te-loda-kelo"].indexOf(x) < 0; })) sug.push(tiempo); sug.push(verbo); } }
+      if (verbo) { var j = sug.indexOf(verbo); if (j >= 0) { sug.splice(j, 1); if (neg) sug.push("no"); if (tiempo && sug.every(function (x) { return ["pe-fusu", "pu-fusu", "te-fusu"].indexOf(x) < 0; })) sug.push(tiempo); sug.push(verbo); } }
       else if (neg) { var k = sug.length ? sug.length - 1 : 0; sug.splice(k, 0, "no"); }
       if (preg) sug.push("ka");
       return { frase: fr, palabras: det, sugerencia: sug.join(" ") };

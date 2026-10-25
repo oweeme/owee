@@ -43,13 +43,34 @@ AREAS = {
    "pala azada hoz granja corral ganadería pastor pasto gallina vaca oveja lana cerdo caballo llama andina perro gato plaga maleza helada silo molino río lago pozo huerto "
    "semilla planta árbol flor hoja raíz de planta tronco rama fruta bosque lluvia sequía estación del año verano invierno época de lluvias época seca suelo fértil "
    "burro pato conejo abeja invernadero terraza de cultivo semillero podar injertar alambre cosechadora establo yunta arriero cooperativa",
+ "Saludos y vida social": "hola adiós gracias por favor perdón bienvenido buenos días buenas tardes buenas noches felicidades cumpleaños fiesta regalo invitación invitar "
+   "celebrar pastel boda amigo novio esposo visita visitar abrazo beso sonrisa felicitar aniversario brindis música bailar cantar juego jugar nacimiento edad "
+   "saludar despedirse presentar conocer encuentro cita juntos",
+ "Personas": "hombre mujer niño niña bebé joven anciano chico chica abuelo tío primo esposo vecino señor señora gente persona adulto gemelos",
+ "Ropa": "ropa camisa camiseta pantalón falda vestido zapato zapatilla bota sandalia calcetín ropa interior sostén abrigo chaqueta suéter sombrero gorra bufanda "
+   "guantes cinturón corbata traje uniforme pijama bolsillo botón cremallera bolso cartera mochila anillo collar arete reloj de pulsera gafas manga tela",
+ "Tecnología del hogar": "teléfono celular cargador batería bluetooth wifi parlante auriculares televisión control remoto computadora portátil tableta cámara micrófono "
+   "enchufe cable pantalla consola videojuego refrigerador microondas lavadora aspiradora licuadora ventilador aire acondicionado plancha foco linterna router impresora "
+   "reloj alarma radio antena",
+ "Internet y correo": "internet red correo electrónico mensaje contraseña usuario enlace sitio web página web descargar subir buscar navegador video foto llamada "
+   "videollamada chat red social publicar compartir seguir comentario archivo adjunto correo postal carta sobre sello cartero paquete llamar contestar",
+ "Viajes": "viaje viajar maleta pasaporte boleto hotel aeropuerto avión tren autobús taxi coche bicicleta moto barco puerto estación mapa turista vacaciones playa "
+   "montaña frontera equipaje reserva guía llegar salir camino carretera puente",
+ "Jardinería": "jardín flor rosa árbol arbusto césped semilla regar maceta tierra abono podar manguera regadera rastrillo pala hoja rama huerto gusano caracol cactus "
+   "plantar crecer",
+ "Animales de casa y de campo": "perro gato pájaro pez caballo vaca toro oveja cerdo gallina gallo pollito pato conejo cabra burro loro tortuga ratón mascota",
+ "Animales salvajes": "león tigre oso lobo zorro mono elefante jirafa cebra serpiente cocodrilo águila búho ballena delfín tiburón ciervo ardilla rana murciélago "
+   "cóndor puma lagarto pingüino",
+ "Insectos y bichos": "insecto mosca mosquito hormiga abeja mariposa araña cucaracha escarabajo grillo gusano caracol pulga piojo libélula avispa",
+ "Día a día": "despertar levantarse ducharse vestirse desayunar almuerzo descansar dormir cepillo de dientes pasta dental jabón champú toalla espejo peinarse "
+   "limpiar hora minuto mañana tarde noche fin de semana feriado llave dinero basura lista tarea esperar ayudar llegar empezar terminar",
 }
 # conceptos de varias palabras: se separan por espacios, así que se declaran aquí
 FRASES = ["base de datos", "cuenta de usuario", "enviar un mensaje", "recibir un mensaje", "correo electrónico", "sitio web", "virus informático", "copia de seguridad",
  "memoria rápida", "proceso de programa", "terminal de comandos", "sistema operativo", "núcleo del sistema", "controlador de dispositivo", "pestaña de ventana", "red social", "memoria virtual", "tarjeta de pago",
  "cuenta bancaria", "cajero automático", "total a pagar", "puesto de venta", "dedo del pie", "columna vertebral", "vaso sanguíneo", "huella dactilar", "cuerpo humano",
  "servir comida", "tabla de cortar", "masa de harina", "campo de cultivo", "época de cosecha", "canal de riego", "llama andina", "raíz de planta", "estación del año",
- "época de lluvias", "época seca", "suelo fértil", "terraza de cultivo"]
+ "época de lluvias", "época seca", "suelo fértil", "terraza de cultivo", "por favor", "buenos días", "buenas tardes", "buenas noches", "ropa interior", "reloj de pulsera", "control remoto", "aire acondicionado", "página web", "archivo adjunto", "correo postal", "fin de semana", "cepillo de dientes", "pasta dental"]
 
 def conceptos(texto):
     t = " " + texto + " "; out = []

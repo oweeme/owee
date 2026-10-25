@@ -950,7 +950,7 @@ function pinta(){{var t=ent.value,h='';
 ent.addEventListener('input',pinta);
 document.querySelectorAll('[data-dir]').forEach(function(b){{b.onclick=function(){{dir=b.dataset.dir;document.querySelectorAll('[data-dir]').forEach(function(x){{x.setAttribute('aria-pressed',x===b)}});
  ent.value={{oe:'me suna nume',eo:'Yo quiero agua',oi:'me pe fame pume',io:'I want water'}}[dir];pinta()}}}});
-var EJ={{oe:['me pe fame pume','tu kuma bo mora ka','ra fame no pume','te-loda-kelo me daro'],eo:['Hoy trabajo','Ayer comí fruta','No quiero comer','Mañana voy a la ciudad'],oi:['me suna nume','ra pe sule','tu fame pume ka'],io:['I want water','She does not eat food','Tomorrow I will go to the city']}};
+var EJ={{oe:['me pe fame pume','tu kuma bo mora ka','ra fame no pume','te-fusu me daro'],eo:['Hoy trabajo','Ayer comí fruta','No quiero comer','Mañana voy a la ciudad'],oi:['me suna nume','ra pe sule','tu fame pume ka'],io:['I want water','She does not eat food','Tomorrow I will go to the city']}};
 document.getElementById('ej').innerHTML=['oe','eo','oi','io'].map(function(k){{return EJ[k].map(function(x){{return '<button class="btn" data-x="'+k+'|'+x+'">'+x+'</button>'}}).join(' ')}}).join(' ');
 document.getElementById('ej').addEventListener('click',function(e){{var d=e.target.dataset.x;if(!d)return;var a=d.split('|');dir=a[0];ent.value=a[1];
  document.querySelectorAll('[data-dir]').forEach(function(x){{x.setAttribute('aria-pressed',x.dataset.dir===dir)}});pinta()}});

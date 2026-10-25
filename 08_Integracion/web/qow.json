@@ -466,18 +466,18 @@
  },
  "Today": {
   "es": "Hoy",
-  "owee": "te-loda-kelo",
-  "script": ""
+  "owee": "te-fusu",
+  "script": ""
  },
  "Yesterday": {
   "es": "Ayer",
-  "owee": "pe-loda-kelo",
-  "script": ""
+  "owee": "pe-fusu",
+  "script": ""
  },
  "Tomorrow": {
   "es": "Mañana",
-  "owee": "pu-loda-kelo",
-  "script": ""
+  "owee": "pu-fusu",
+  "script": ""
  },
  "Appearance": {
   "es": "Apariencia",
@@ -941,8 +941,8 @@
  },
  "Videos": {
   "es": "Vídeos",
-  "owee": "salo-sena-duma",
-  "script": ""
+  "owee": "dulu",
+  "script": ""
  },
  "Documents": {
   "es": "Documentos",
@@ -1011,8 +1011,8 @@
  },
  "Calendar": {
   "es": "Calendario",
-  "owee": "loda-kelo-seta",
-  "script": ""
+  "owee": "fusu-seta",
+  "script": ""
  },
  "Friend": {
   "es": "Amigo",
@@ -1051,8 +1051,8 @@
  },
  "Train": {
   "es": "Tren",
-  "owee": "taro-meka-raga",
-  "script": ""
+  "owee": "larope",
+  "script": ""
  },
  "Bicycle": {
   "es": "Bicicleta",

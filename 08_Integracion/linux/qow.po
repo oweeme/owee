@@ -383,15 +383,15 @@ msgstr "doma-kado-no"
 
 #. Hoy
 msgid "Today"
-msgstr "te-loda-kelo"
+msgstr "te-fusu"
 
 #. Ayer
 msgid "Yesterday"
-msgstr "pe-loda-kelo"
+msgstr "pe-fusu"
 
 #. Mañana
 msgid "Tomorrow"
-msgstr "pu-loda-kelo"
+msgstr "pu-fusu"
 
 #. Apariencia
 msgid "Appearance"
@@ -763,7 +763,7 @@ msgstr "lena-sone"
 
 #. Vídeos
 msgid "Videos"
-msgstr "salo-sena-duma"
+msgstr "dulu"
 
 #. Documentos
 msgid "Documents"
@@ -819,7 +819,7 @@ msgstr "loke-kose"
 
 #. Calendario
 msgid "Calendar"
-msgstr "loda-kelo-seta"
+msgstr "fusu-seta"
 
 #. Amigo
 msgid "Friend"
@@ -851,7 +851,7 @@ msgstr "naro-meka"
 
 #. Tren
 msgid "Train"
-msgstr "taro-meka-raga"
+msgstr "larope"
 
 #. Bicicleta
 msgid "Bicycle"

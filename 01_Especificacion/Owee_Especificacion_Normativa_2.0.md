@@ -146,7 +146,8 @@ El operador de lugar va **después** del nombre: `me kuma bo` = estoy en casa.
 | Operadores | raíz + `pa` `po` `se` `no` `le` `lu` `fese`: `gore-pa` grande, `tera-no` nunca |
 | Espacio | frase libre, no fija: `kuma gore-pa` casa grande |
 | Raíz nueva | solo si ninguna composición es clara: 2 sílabas, a distancia ≥ 2 de toda raíz de 2 sílabas, sin parecerse a una palabra de otra lengua |
-| Préstamos | **no** para nombres comunes: `rale-nede-fame` tomate, `suna-nelo-fame` sandía, `nolu` cebolla (lote 19) |
+| Préstamos | **no** para nombres comunes: `muru` tomate, `guchu` sandía, `nolu` cebolla (lotes 19 y 20) |
+| Practicidad | lo que se nombra cada día tiene una raíz de 2 sílabas (`fusu` día, `botu` perro, `pegu` teléfono) o, si no cabe, de 3; los derivados, de 2 elementos (`te-fusu` hoy, `nofo-mopu` niño). Lote 20 |
 
 | Compuesto | Partes | Significado |
 |---|---|---|

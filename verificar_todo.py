@@ -117,7 +117,7 @@ const eo={'Yo quiero agua':'me suna nume','Tu duermes en casa':'tu kuma bo sule'
 for(const k in eo){ if(T.es2owee(k)[0].sugerencia!==eo[k]) fallos.push(k+' => '+T.es2owee(k)[0].sugerencia); }
 const oi={'me suna nume':'I want water','me pe fame pume':'I ate food','ra fame no pume':'he/she does not eat food','tu fame pume ka':'do you eat food?'};
 for(const k in oi){ if(T.owee2en(k)[0].aproximada!==oi[k]) fallos.push('EN '+k+' => '+T.owee2en(k)[0].aproximada); }
-const io={'I want water':'me suna nume','She does not eat food':'ra fame no pume','Tomorrow I will go to the city':'pu-loda-kelo me kuma-seta to duma'};
+const io={'I want water':'me suna nume','She does not eat food':'ra fame no pume','Tomorrow I will go to the city':'pu-fusu me kuma-seta to duma'};
 for(const k in io){ if(T.en2owee(k)[0].sugerencia!==io[k]) fallos.push('EN '+k+' => '+T.en2owee(k)[0].sugerencia); }
 console.log(JSON.stringify(fallos));"""
     r = subprocess.run(["node", "-e", prueba], cwd=RAIZ, capture_output=True, text=True)

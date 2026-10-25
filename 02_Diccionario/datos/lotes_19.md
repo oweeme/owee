@@ -1,5 +1,7 @@
 # Lote 19 — raíces propias para alimentos y animales (aprobado el 2026-10-25)
 
+> **Lote 20 (2026-10-25):** los compuestos de 6 sílabas de este lote (tomate, lechuga, manzana, sandía, palta, camote, pimienta, repollo, cerveza, salteña, charque, conejo, abeja, haba, lenteja) pasaron a raíces cortas por practicidad. Ver [`lotes_20.md`](lotes_20.md).
+
 **40 términos** (18 raíces nuevas de 2 sílabas y 22 compuestos) que sustituyen a 37 nombres adaptados del español (`tomate`, `sanaorea`, `lechuga`, `uba`…) y a la raíz `meto` (mito). Lo pidió el autor: una palabra Owee no debe parecer una palabra española, sino nacer de las raíces del idioma.
 
 **Criterio:**

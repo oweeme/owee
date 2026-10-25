@@ -383,15 +383,15 @@ msgstr ""
 
 #. Hoy
 msgid "Today"
-msgstr ""
+msgstr ""
 
 #. Ayer
 msgid "Yesterday"
-msgstr ""
+msgstr ""
 
 #. Mañana
 msgid "Tomorrow"
-msgstr ""
+msgstr ""
 
 #. Apariencia
 msgid "Appearance"
@@ -763,7 +763,7 @@ msgstr ""
 
 #. Vídeos
 msgid "Videos"
-msgstr ""
+msgstr ""
 
 #. Documentos
 msgid "Documents"
@@ -819,7 +819,7 @@ msgstr ""
 
 #. Calendario
 msgid "Calendar"
-msgstr ""
+msgstr ""
 
 #. Amigo
 msgid "Friend"
@@ -851,7 +851,7 @@ msgstr ""
 
 #. Tren
 msgid "Train"
-msgstr ""
+msgstr ""
 
 #. Bicicleta
 msgid "Bicycle"

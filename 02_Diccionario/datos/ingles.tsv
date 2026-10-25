@@ -347,6 +347,185 @@ chede	pear
 choru	cocoa
 dusho	cuñapé (cheese bread)
 fonu	myth
+fusu	day
+mopu	man / male
+bufu	woman
+nofo	child
+nate	hour
+botu	dog
+tomu	cat
+pegu	telephone / mobile phone
+geru	car
+pubu	trip / to travel
+tofe	street
+bupo	chicken
+gutu	fish
+fefu	cheese
+muru	tomato
+gudo	apple
+tudu	banana
+rogo	shoe
+gogu	photo / photograph
+dulu	video / film
+gono	tea
+fope	beer
+dashu	cup
+foshu	spoon
+shupu	bottle
+gusha	spouse / partner
+nosho	birthday
+shuse	call / to call
+shogu	T-shirt
+chegu	television
+roshe	speaker / loudspeaker
+chube	lettuce
+guchu	watermelon
+neshe	avocado
+shofo	fork
+chuku	cow
+dochu	horse
+rachu	hen
+kucha	rabbit
+fesha	bee
+shage	fly
+sechu	ant
+shuta	spider
+munege	butterfly
+rumode	honey
+rufolo	noodle
+nadoto	towel
+dutude	beach
+notesa	dance / to dance
+datuma	camera
+dopunu	app
+mufune	skirt
+kosedu	dress
+denoba	sock
+gofepa	coat
+gusabo	cap
+nabafu	handbag / purse
+kuluge	jacket
+larope	train
+kafosa	letter (mail)
+nudamo	wedding
+defupe	hug / to hug
+pedobo	invitation / to invite
+butapu	tablet
+ropofe	headphones
+fekepe	duck
+batupu	mouse
+numuro	llama
+lemufu	snake
+netubu	donkey
+tubege	goat
+nurabo	mosquito
+dulabo	broom
+noguto	scissors
+rufosu	comb
+dumofe	candle
+tapamu	wood
+soforu	glass (material)
+teguno	sweet potato
+gutaro	pepper
+nufupa	cabbage
+matose	salteña (Bolivian pastry)
+karofu	charque (dried meat)
+perabu	broad bean
+gupore	lentil
+mopale	cassava
+supuko	chuño (freeze-dried potato)
+guleru	broth
+kemape	yogurt
+nubuda	salad
+fubofa	butter
+petodu	sweet
+podepu	salty
+sekafu	frying pan
+fodofu	strainer
+fotafa	parrot
+dumuda	turtle
+degodu	lion
+rotebu	tiger
+funage	bear
+dulone	wolf
+suteku	fox
+mapegu	monkey
+kogamu	elephant
+gudopu	giraffe
+tadopa	zebra
+telusu	crocodile
+lesugu	eagle
+fubuga	owl
+kumudu	whale
+somase	dolphin
+numodo	shark
+gupoko	deer
+rokone	squirrel
+gotube	frog
+peduge	bat (animal)
+rubatu	condor
+ragadu	puma
+soramu	lizard
+sufaso	penguin
+labufu	cockroach
+tanalu	beetle
+rofuke	cricket
+danufu	worm
+busale	snail
+surafu	flea
+tufesa	louse
+fegone	dragonfly
+segamu	wasp
+gefoko	boot
+monopo	sandal
+mesode	sneaker
+gofene	sweater
+gudusa	tie
+duparu	pajamas
+gudolo	wallet
+lotufe	earring
+lebofa	bra
+sabode	suit
+lorudu	button (clothing)
+nupolo	zipper
+kebogo	belt
+lufule	scarf
+naradu	ring
+pufupe	necklace
+sumuse	backpack
+kedopa	umbrella
+romonu	wardrobe
+banape	curtain
+gedogu	rug
+rutule	bed sheet
+bolupo	mattress
+nafume	needle
+doluko	iron
+nekuda	toilet
+dafonu	fan
+toluru	brick
+lufegu	hammer
+gatudu	metal nail
+geloke	shampoo
+dumoga	toothpaste
+nepodu	toothbrush
+mupume	microwave
+fatopa	vacuum cleaner
+radolu	blender
+sutugu	laptop
+futege	video game
+fonoku	antenna
+kubosa	passport
+pomotu	road
+kemore	motorcycle
+doboka	rose
+gupumo	rake
+tumafa	watering can
+topeme	cactus
+dupega	snow
+kafumo	feather
+lenapu	song
+tegeba	minute
 ga-kado	triangle
 fo-kado	quadrilateral
 sa-kado	pentagon
@@ -450,7 +629,7 @@ kalu-duma	to walk
 loke-suna	to cry
 sabe-lena	to laugh
 sabe-sone	to sing
-lena-duma	to play
+lena-duma	to play / game
 nume-reka	to ask for
 kera-nume	to search
 reka-pema	to answer
@@ -463,7 +642,6 @@ nelo-lena	flower
 saro-kore	country
 sade-kelo	year
 mune-kelo	month
-loda-kelo	day
 suna-gore-pa	sea
 taro-go	mountain
 nelo-gore-pa	tree
@@ -625,7 +803,6 @@ kalu-gune	foot
 kalu-telo	knee
 bora-gune	tail
 tume-faro	horn
-ruma-kuna-lobe	feather
 pado-kopa	egg
 naku-nobe	milk
 ruma-lore	pet
@@ -637,7 +814,6 @@ pore-sura	smoke
 pore-taro	ash
 pore-salo	flame
 suna-goda	ice
-kuna-suna-goda	snow
 suna-boga	steam
 kuna-sone	thunder
 kuna-faro	lightning
@@ -673,15 +849,9 @@ pema-enu	energy emission
 gura-enu	energy absorption
 fuda-duma-rata	flow rate
 dore-fese	outline
-te-loda-kelo	today
-pe-loda-kelo	yesterday
-pu-loda-kelo	tomorrow
-loda-kelo-pado	dawn
-loda-kelo-gune	afternoon
 fame-gore-pa	lunch
 pado-fame	breakfast
 gune-fame	dinner
-mu-loda-kelo	week
 sade-kelo-palo	season
 fure-pa-tera	summer
 fure-po-tera	winter
@@ -734,7 +904,6 @@ salo-feke	lamp
 tume-bume	hat
 doma-bume	shirt
 kalu-bume	trousers
-kalu-gune-bume	shoe
 maku-bume	glove
 sado-bosa	illness
 bosa-dune	pain
@@ -756,10 +925,8 @@ fedo-no	free
 fedo-pu	debt
 daro-fedo	salary
 meka-duma	vehicle
-taro-meka	car
 suna-meka	ship
 sura-meka	airplane
-duma-lu	trip
 duma-nara	traveler
 suna-meka-kuma	port
 sura-meka-kuma	airport
@@ -873,13 +1040,10 @@ sone-duma	melody
 sone-rela	harmony
 sone-nuse	silence
 sabe-sone-nara	singer
-lena-bora-duma	dance
 salo-sena-dare	drawing / painting
-salo-sena-kera	photograph
-salo-sena-duma	film
 mena-tera	history
 saro-mena	culture
-naro-lena	party
+naro-lena	party / to celebrate
 feke-lare	technology
 dore-salo	appearance
 dore-seta	visual theme
@@ -912,7 +1076,7 @@ sena-dore	font
 kore-doke	address
 foma-ko	normal
 duma-dare	move
-gore-telo	resize
+gore-telo	to grow / resize
 te-dore	status
 rela-dare	connect
 nume-seta	preferences
@@ -945,27 +1109,20 @@ kore-doma	center
 seta-dore	type
 tabu-gume	flour
 nede-fame	vegetable
-ruma-kuna-gume	chicken
-ruma-suna-gume	fish
-naku-nobe-gume	cheese
 lena-gume	sugar
 nelo-mase	oil
 suna-fame	soup
 nelo-nobe	juice
-fuko-suna-nuse	chuño (freeze-dried potato)
 mugo-nobe	corn drink
 pore-nelo	chili pepper
 pore-sabe	spicy
-kale-nelo-fame	banana
 saro-fame	traditional food
-loda-kelo-seta	calendar
 reme-nara	friend
 pade-pade-pade	great-grandparent
 mela-nara	relative
 kuma-nado	door
 kema-tabe	table
 kuma-gore-pa	building
-kuma-duma-kore	street
 gase-gume	soap
 kuma-kema	furniture
 bume-fena	get dressed
@@ -975,7 +1132,6 @@ sado-feke-kuma	pharmacy
 sape-moke	emergency
 sado-dare	heal
 naro-meka	bus
-taro-meka-raga	train
 kalu-meka	bicycle
 delo-duma	drag
 delo-gune	drop
@@ -990,9 +1146,6 @@ sena-nara-telo	rename
 loke-pema	show
 loke-kose	hide
 pume-kore	dining room
-suna-delo-feke	towel
-fure-fadu-bume	coat
-doma-kalu-bume	dress
 suna-gase	wash
 pema-kema	gift
 kema-kopa	bag
@@ -1001,28 +1154,19 @@ sule-moke	sleepiness
 saku-kasu	danger
 sado-fadu-feke	vaccine
 faro-gura	rest
-lena-gume-sabe	sweet
-chaga-rela-sabe	salty
-taro-nelo-fame	cassava
 go-gore	height
 kado-gore	width
 go-gu	vertical
 taro-tabe	horizontal
 sede-kema	chair
-kuma-kopa-gore	wardrobe
 go-tabe	shelf
 falo-tabe	mirror
-loke-nado-lobe	curtain
-kuma-tabe-lobe	rug
 tume-sede	pillow
 sule-lobe	blanket
-sule-tabe-lobe	bed sheet
-sura-duma-meka	fan
 fure-pa-meka	heating
 fure-po-kopa	refrigerator
 pore-meka	stove
 gase-meka	washing machine
-dabo-delo-feke	broom
 dabo-gume	rubbish
 suna-nado	tap
 suna-duma-kore	pipe
@@ -1031,11 +1175,9 @@ eleka-nado	socket
 bure-kose-feke	switch
 kura-rela	cable
 eleka-salo	light bulb
-sone-salo-sena	television
 sone-meka	radio
-lu-sone-meka	telephone
 kuma-ba-kore	yard
-taro-meka-kuma	garage
+geru-kuma	garage
 kore-kose	fence
 nado-kose-feke	door lock
 kuma-gu-kore	basement
@@ -1051,9 +1193,6 @@ beka-tabe	paper
 suna-fadu	drinking water
 pore-nelo-gume	firewood
 gase-feke	brush
-tume-nelo-feke	comb
-delo-nuse-feke	scissors
-bume-rela-feke	needle
 doke-kopa-seta	folder
 doke-kopa-foma	file system
 mado-tera	running process
@@ -1083,10 +1222,7 @@ de-gura	to receive a message
 reka-sena	message
 reka-paku	notification
 sone-saku	alarm
-salo-sena-meka	camera
 sone-gura-meka	microphone
-sone-pema-meka	loudspeaker
-sone-loke-feke	headphones
 doke-sone	audio
 doke-gore-po	to compress
 doke-gore-pa	to decompress
@@ -1198,16 +1334,8 @@ fure-po-dare	to cool
 sabe-gume	seasoning
 tabu-gume-suna	dough
 pado-nelo-fame	grain
-nede-fame-seta	salad
-lena-gume-fame	dessert
 fame-luda	sauce
-naku-nobe-mase	butter
-nelo-maku-nobe	tea
-mase-pore-kopa	frying pan
-suna-fame-feke	spoon
-fame-kefe-feke	fork
 nobe-kopa-gore	jug
-nobe-kopa-kose	bottle
 delo-nuse-tabe	cutting board
 fame-foma	recipe
 fame-palo	ingredient
@@ -1229,7 +1357,6 @@ pado-nelo-fena	to sow
 nelo-kera	to harvest
 nelo-kera-kema	crop yield
 nelo-kera-tera	harvest season
-nelo-suna-pema	to irrigate
 taro-bure	to plough
 taro-fame-gume	fertilizer
 nelo-suna-nado	irrigation channel
@@ -1243,15 +1370,9 @@ ruma-kopa	corral
 ruma-fame-daro	livestock farming
 ruma-fame-nara	herder
 ruma-fame-nelo	pasture
-ruma-kuna-kuma	hen
-ruma-naku-nobe	cow
 ruma-bume	sheep
 ruma-bume-gume	wool
 ruma-mase	pig
-ruma-duma-feke	horse
-ruma-taro-go	llama
-ruma-fadu	dog
-ruma-kuma-po	cat
 ku-kalu-bosa	pest
 nelo-bado-no	weed
 nelo-suna-goda	frost
@@ -1259,16 +1380,7 @@ pado-nelo-kuma	granary
 tabu-gume-meka	mill
 suna-taro-gu	well
 nede-fame-kore	vegetable garden
-nelo-bora-gume	wood
-taro-pore-kema	brick
-salo-nado-goda	glass (material)
-kema-rela-feke	metal nail
-tada-faro-feke	hammer
 sede-gore-pa	sofa
-pore-salo-feke	candle
-sule-lena-tabe	mattress
-bume-fure-feke	iron
-bora-dabo-kopa	toilet
 suna-gase-kopa	bathtub
 salo-lafe-gume	pigment
 daro-pu	task
@@ -1284,16 +1396,10 @@ bora-nelo	body hair
 noke-sura-bosa	sneeze
 sabe-bure	yawn
 nobe-sabe-pa	vinegar
-lena-gume-ruma	honey
-naku-nobe-telo	yogurt
-bora-gume-suna	broth
-tabu-gume-dase	noodle
 tabu-gore-po	biscuit
-gume-rela-meka	blender
 kema-tabe-bume	tablecloth
 sabe-gase-feke	napkin
 taro-go-tabe	terrace
-ruma-kuna-suna	duck
 nelo-kuma	greenhouse
 pado-nelo-kore	seedbed
 nelo-delo-nuse	to prune
@@ -1301,27 +1407,17 @@ nelo-rela-dare	to graft
 nelo-kera-meka	harvester
 ruma-fame-kuma	stable
 ruma-duma-nara	herdsman
-kalu-bume-bure	skirt
-kalu-gune-lobe	sock
-bora-rela-bume	belt
-tume-rela-bume	scarf
 bume-kopa-po	pocket
 bume-gume	fabric
 nelo-bume-gume	cotton
 bora-lobe-gume	leather
 loke-feke	glasses
-maku-palo-bume	ring
-tume-rela-lena	necklace
-kema-kopa-bora	backpack
-kuna-suna-lobe	umbrella
 selo-meka	wheel
-meka-duma-kore	road
 duma-kore-salo	traffic light
 meka-nobe	fuel
 dure-gune-feke	brake
 meka-enu	engine
 meka-duma-bade	driver
-duma-lu-kema	luggage
 sabe-faro-nara	dentist
 lore-bosa	hatred
 pu-dune-lena	hope
@@ -1346,7 +1442,6 @@ kuma-seta-palo	neighbourhood
 sura-suna-gu	fog
 salo-lafe-seta	rainbow
 nelo-saro-suna	jungle
-ruma-kalu-so	snake
 nelo-lena-tera	spring
 nelo-maku-tera	autumn
 loke-pema-kema	example
@@ -1355,7 +1450,6 @@ tase-pose	level
 sone-bure	vowel
 sone-kose	consonant
 sone-beka-seta	alphabet
-lena-sone-sabe	song
 lena-reka	poetry
 pado-fena	to begin
 kare-mede-dare	to try out
@@ -1401,25 +1495,81 @@ raga-kola	table
 pado-beka	draft
 dese-kare	approved
 pose-foma	order / arrangement
-rale-nede-fame	tomato
-nelo-maku-fame	lettuce
-nelo-maku-selo	cabbage
-fuko-lena-gume	sweet potato
 mugo-tame	sweetcorn
-pore-pado-nelo	pepper
 tabu-nelo	wheat
 rale-dobu	bean
 nede-dobu	pea
 kale-dobu	chickpea
-dobu-gore-pa	broad bean
-dobu-gore-po	lentil
-rale-nelo-fame	apple
-suna-nelo-fame	watermelon
-mase-nelo-fame	avocado
 bore-nobe	coffee
 nugu-nobe	wine
-tabu-nelo-nobe	beer
-tabu-bora-gume	salteña (Bolivian pastry)
-bora-gume-sade	charque (dried meat)
-ruma-sone-loke	rabbit
-ruma-nelo-lena	bee
+nofo-mopu	child
+nofo-bufu	girl
+mopu-tame	young man
+bufu-tame	young woman
+pade-mopu	father
+pade-bufu	mother
+gusha-pu	boyfriend
+naku-se	twin
+te-fusu	today
+pe-fusu	yesterday
+pu-fusu	tomorrow
+mu-fusu	week
+fusu-pado	morning / dawn
+fusu-gune	afternoon
+fusu-seta	calendar
+fusu-lena	holiday
+mu-fusu-gune	weekend
+lena-fusu	good morning
+lena-fusu-gune	good afternoon
+sule-lena	good night
+gura-reme	welcome
+lena-pema	congratulations
+reme-dare	to greet
+pu-reme-dare	to say goodbye
+reme-duma	visit / to visit
+sabe-tada	kiss / to kiss
+lena-tabu	cake
+gusha-kelo	anniversary
+lena-fame	dessert
+chuku-mopu	bull
+rachu-mopu	rooster
+rachu-tame	chick
+botu-tame	puppy
+tomu-tame	kitten
+dashu-gore-pa	bowl
+bupo-pore	roast chicken
+bume-bo	underwear
+bume-se	uniform
+maku-tera	wristwatch
+bume-mopu	men's clothing
+bume-bufu	women's clothing
+bume-nofo	children's clothing
+meka-rela	bluetooth
+sura-rela	wifi
+rela-meka	router
+lu-feke	remote control
+maku-salo	flashlight
+dulu-shuse	video call
+futege-meka	game console
+naro-pema	to post
+reka-lobe	envelope
+fedo-sena	stamp
+kafosa-nara	mail carrier
+kafosa-kuma	post office
+doke-rela	attachment
+sule-kuma	hotel
+geru-fedo	taxi
+pubu-nara	tourist / traveler
+pubu-kema	luggage
+lena-tera	vacation
+duma-gune	to arrive
+nelo-gore-po	bush
+nede-tabe	lawn
+nelo-kopa	flowerpot
+suna-loka	hose
+nelo-suna	to irrigate
+bora-go	to get up
+sule-gune	to wake up
+gune-dare	to finish
+sabe-sura	breath
+faro-loka	wire

@@ -178,7 +178,7 @@ Un compuesto es **concepto principal + modificador**. Solo se usa si el resultad
 | `suna-duma` | agua + movimiento | río |
 | `meka-mado` | máquina + cálculo | computadora |
 | `rela-doke` | conexión + información | red de datos |
-| `suna-nelo-fame` | agua + planta + comida | sandía (fruta de agua) |
+| `nelo-kopa` | planta + contenedor | maceta |
 | `bore-nobe` | negra + bebida | café |
 
 **Juego:** creen un compuesto con dos raíces conocidas. Si los demás no lo adivinan, quizá no es claro.

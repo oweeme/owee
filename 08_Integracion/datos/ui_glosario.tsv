@@ -92,9 +92,9 @@ Clock	Reloj	tera-mede-meka
 System monitor	Monitor del sistema	meka-paku	
 Left	Izquierda	doma-kado	
 Right	Derecha	doma-kado-no	
-Today	Hoy	te-loda-kelo	
-Yesterday	Ayer	pe-loda-kelo	
-Tomorrow	Mañana	pu-loda-kelo	
+Today	Hoy	te-fusu	
+Yesterday	Ayer	pe-fusu	
+Tomorrow	Mañana	pu-fusu	
 Appearance	Apariencia	dore-salo	
 Theme	Tema	dore-seta	
 Light	Claro	salo-pa	tema o modo claro
@@ -187,7 +187,7 @@ Home	Inicio	kuma
 Downloads	Descargas	gura	
 Pictures	Imágenes	salo-sena	
 Music	Música	lena-sone	
-Videos	Vídeos	salo-sena-duma	
+Videos	Vídeos	dulu	
 Documents	Documentos	doke-beka	
 Drag	Arrastrar	delo-duma	
 Drop	Soltar	delo-gune	
@@ -201,7 +201,7 @@ Disconnect	Desconectar	rela-bosa
 Rename	Renombrar	sena-nara-telo	
 Show	Mostrar	loke-pema	
 Hide	Ocultar	loke-kose	
-Calendar	Calendario	loda-kelo-seta	
+Calendar	Calendario	fusu-seta	
 Friend	Amigo	reme-nara	
 Door	Puerta	kuma-nado	
 Table	Mesa	kema-tabe	
@@ -209,5 +209,5 @@ Lamp	Lámpara	salo-feke
 Emergency	Emergencia	sape-moke	
 Pharmacy	Farmacia	sado-feke-kuma	
 Bus	Autobús	naro-meka	
-Train	Tren	taro-meka-raga	
+Train	Tren	larope	
 Bicycle	Bicicleta	kalu-meka	

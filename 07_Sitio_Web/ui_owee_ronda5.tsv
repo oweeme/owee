@@ -30,7 +30,7 @@ Reglas métricas propuestas	foma sone-kelo: soma-dese
 Formas poéticas propuestas	dore lena-reka: soma-dese
 Prosa y otros textos	doke-beka tame
 Dichos (proverbios)	saro-lare
-Música y canciones	lena-sone re lena-sone-sabe
+Música y canciones	lena-sone re lenapu
 Mitos, dioses y cuentos	fonu, kuna-nara re reka-tera
 Nombrar a los dioses	sena kuna-nara
 Convenciones narrativas	foma reka-tera
@@ -38,13 +38,13 @@ Siguientes pasos sugeridos	pu: soma-dese
 Dichos breves	saro-lare gore-po
 Notas de vocabulario	paku: reka-seta
 Por qué Owee canta bien	ka-kasu: Ouee sone lena
-Cómo escribir una canción nueva	ka-mode: beka lena-sone-sabe tame
+Cómo escribir una canción nueva	ka-mode: beka lenapu tame
 Pedir, ordenar y ser cortés	nume-reka, foma re reme-lena
 Palabras compuestas	reka-palo-rela
 Owee → español	Ouee to Esepaneolo
 Español → Owee	Esepaneolo to Ouee
 Especificación	foma-doke
-Canciones: bocetos de ritmo y acento (sin voz)	lena-sone-sabe: sone-kelo re sone-faro, so sabe
+Canciones: bocetos de ritmo y acento (sin voz)	lenapu: sone-kelo re sone-faro, so sabe
 Química (borrador propuesto)	lare-gume-rela (pado-beka)
 Vida	suma
 Filosofía	rena-lare
@@ -57,13 +57,13 @@ Unión	rela
 Casa	kuma
 Noche	kuna-bore
 Antes, ahora, después	pe, te, pu
-Canción de cuna	sule lena-sone-sabe
-Canción de amor	lore lena-sone-sabe
-Canción de comunidad y trabajo	saro re daro lena-sone-sabe
+Canción de cuna	sule lenapu
+Canción de amor	lore lenapu
+Canción de comunidad y trabajo	saro re daro lenapu
 Canon a 4 voces	fo sabe-sone
-Canción de romance	mune-lore lena-sone-sabe
-Canción de cuna de cuento de hadas	reka-tera sule lena-sone-sabe
-Balada de nostalgia	mena lena-sone-sabe
+Canción de romance	mune-lore lenapu
+Canción de cuna de cuento de hadas	reka-tera sule lenapu
+Balada de nostalgia	mena lenapu
 El comienzo del mundo	gora-pado
 El sol y la luna	sade re mune
 El agua y la piedra	suna re taro-goda
@@ -137,11 +137,11 @@ La transferencia de electrones se nombra con las acciones que ya tiene Owee, pem
 Una unidad SI como m o kg conserva su símbolo; un concepto físico puede tener nombre Owee mientras su símbolo sigue siendo internacional.	kedo-sena m, kg: sena telo no. lare-fasa: Ouee sena.
 Cómo se nombran (principio concepto + modificador): una estrella es un sol lejano (sade-lu); un planeta es una tierra que se mueve (taro-duma, como «errante»); la galaxia es un conjunto de estrellas (sade-lu-seta); una constelación, un «signo» de estrellas (sade-lu-sena). El telescopio es el ojo lejano (loke-lu) y el microscopio el ojo cercano (loke-le).	reka-palo-rela: sade-lu = sade + lu; taro-duma = taro + duma; sade-lu-seta = sade-lu + seta; sade-lu-sena = sade-lu + sena; loke-lu = loke + lu; loke-le = loke + le.
 Se nombran por ordinal (número-pose, Gramática 1.1 §10) + taro-duma: así no hace falta adaptar los nombres propios (que no caben en la fonología de Owee).	taro-duma sena-nara: pose + banu (ga-pose taro-duma).
-El sol sube. · La luna cierra el sol (eclipse). · La Tierra orbita el sol. · El día es una parte del año.	sade go. · mune kose sade. · taro duma sade. · loda-kelo: sade-kelo palo.
+El sol sube. · La luna cierra el sol (eclipse). · La Tierra orbita el sol. · El día es una parte del año.	sade go. · mune kose sade. · taro duma sade. · fusu: sade-kelo palo.
 El año luz es la distancia (dase) que recorre la luz en un año (sade-kelo): se conserva como unidad internacional (al).	salo-kelo = salo duma bo sade-kelo, dase.
 Los 12 signos del zodiaco combinan 4 elementos (pore fuego, taro tierra, sura aire, suna agua) con 3 modalidades (pado cardinal = «comienzo», dure fijo = «duración», telo mutable = «cambio»). El nombre Owee de cada signo es simplemente elemento + modalidad, un sistema que coincide exactamente con la clasificación tradicional.	pore, taro, sura, suna ko pado, dure, telo: kuna-sena.
 Fases lunares (nueva, creciente, llena, menguante): composiciones con mune, pa/po y fese.	mune dore: mune, pa, po, fese.
-Calendario: días de la semana y meses (los nombres tradicionales no caben en Owee; se propone numerarlos: be-pose loda-kelo…).	loda-kelo re mune-kelo: sena-nara no, banu kade.
+Calendario: días de la semana y meses (los nombres tradicionales no caben en Owee; se propone numerarlos: be-pose fusu…).	fusu re mune-kelo: sena-nara no, banu kade.
 Forma	dore
 Qué es	ka-kema
 Número	banu

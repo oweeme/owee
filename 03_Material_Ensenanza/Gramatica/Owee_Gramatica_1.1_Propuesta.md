@@ -300,7 +300,7 @@ Sin `i`, `v`, `h`, `y`, `z`, `j`, `c`, `q`, `w`, `x` ni consonantes finales, los
 | Elena | `Elena` |
 | Juan | `Kuana` |
 
-**Solo para nombres propios** (personas, lugares, marcas). Los nombres comunes —también los de alimentos, plantas y animales— no se adaptan del español: se forman con raíces Owee (`rale-nede-fame` tomate, `suna-nelo-fame` sandía) o con una raíz propia (`nolu` cebolla, `nugu` uva). Ver el lote 19 (`02_Diccionario/datos/lotes_19.md`).
+**Solo para nombres propios** (personas, lugares, marcas). Los nombres comunes —también los de alimentos, plantas y animales— no se adaptan del español: tienen una raíz Owee propia (`muru` tomate, `guchu` sandía, `nolu` cebolla) o se componen con raíces existentes (`bore-nobe` café, `nelo-kopa` maceta). Lo que se nombra cada día recibe una raíz corta para que sea práctico de decir. Ver los lotes 19 y 20 (`02_Diccionario/datos/lotes_19.md`, `lotes_20.md`).
 
 Excepción: un nombre se puede conservar **entre comillas en romano** si se prefiere el original. Convención de mayúsculas: en romano Owee **solo** los nombres propios llevan mayúscula inicial (no hay mayúscula de inicio de oración).
 

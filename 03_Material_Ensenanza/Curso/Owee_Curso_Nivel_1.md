@@ -244,7 +244,7 @@ sade kale
 suna kulo
 nelo nede
 pore rale
-kuna-suna-goda fale
+dupega fale
 kuna-bore bore
 ```
 

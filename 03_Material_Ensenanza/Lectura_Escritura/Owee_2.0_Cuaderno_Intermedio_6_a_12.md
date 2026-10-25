@@ -213,7 +213,7 @@ suna mora
 | `sone-loke` | sonido + ojo | oreja |
 | `meka-mado` | máquina + cálculo | computadora |
 | `doke-beka` | información + escritura | texto |
-| `rale-nelo-fame` | roja + planta + comida | manzana |
+| `sule-kuma` | dormir + casa | hotel |
 
 **Desafío:** une dos raíces que conozcas y pide a alguien que adivine el significado.
 
