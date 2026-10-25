@@ -4,9 +4,12 @@ Un solo esqueleto de líneas rectas y círculos, dibujado de dos maneras:
   sans    recto, en bloque (pantalla, teclado, pancartas)
   school  los mismos trazos con las esquinas redondeadas (escritura a mano, fluido)
 
-Sílaba = consonante en un recuadro central + una barra de vocal suelta (con aire)
-pegada a un lado del recuadro:  a arriba · e izquierda · o derecha · u abajo.
-La barra es corta y nunca toca la consonante, así no se confunde con sus trazos.
+Sílaba = consonante en un recuadro + marca de vocal suelta (con aire). Dos disposiciones:
+  linear  (activa) la vocal va a la DERECHA de la consonante, en el mismo renglón; la a es una
+          barra vertical (horizontal parecería un guion entre sílabas)
+  around  la vocal rodea a la consonante: a arriba · e izquierda · o derecha · u abajo
+          (OWEE_V4_LAYOUT=around)
+La marca es corta y nunca toca la consonante, así no se confunde con sus trazos.
 
 Consonantes (rasgo = significado, igual en todas las familias):
     labiales   m ▯▯ cuadro con división · p ⊔ abierta arriba · b ⊔ con barra · f ⊤ (T)
@@ -92,6 +95,7 @@ import os
 NAME_MARK = os.environ.get("OWEE_V4_NAME", "fehu")    # EQ doble raya horizontal · II doble raya vertical
 U_FORM = os.environ.get("OWEE_V4_U", "uruz")      # u: uruz · tiwaz · dagaz · thurs · triangle
 E_FORM = os.environ.get("OWEE_V4_E", "kata")      # e: "plus" (+) o "bars" (=)
+LAYOUT = os.environ.get("OWEE_V4_LAYOUT", "linear")   # linear: vocal a la derecha · around: vocal alrededor
 S_V4 = 42                                         # unidades de fuente por pt (más chico: caben las marcas de vocal)
 SY_V4 = {"sans": 0.95, "school": 0.97}
 
@@ -143,8 +147,17 @@ def mark(v, cx, cy, k=1.0):
     return [seg((-1.6, -2.2), (-1.6, 2.2), (1.6, 0.5), (1.6, -2.2))]       # ᚢ (runa Uruz)
 
 
+LINEAR_GAP = 4.3   # del borde derecho del recuadro al centro de la marca (deja aire y no pisa la consonante)
+
+
 def vowel_parts(v):
-    """La vocal de una sílaba: su marca en su lado del recuadro, a una distancia fija del borde."""
+    """La vocal de una sílaba. linear: a la derecha, a la altura de la consonante.
+    around: en su lado del recuadro, a una distancia fija del borde."""
+    if LAYOUT == "linear":
+        cx = X1 + LINEAR_GAP
+        if v == "a":     # barra vertical: horizontal se leería como guion entre sílabas
+            return [{"width": W, "segments": [L((cx, BAR / 2), (cx, -BAR / 2))]}]
+        return mark(v, cx, YC)
     off = HALF[v] + 2.0 + GAP + 0.2        # medio trazo del recuadro + medio trazo de la marca + aire
     if v == "a": return mark(v, XC, Y1 + off)
     if v == "u": return mark(v, XC, Y0 - off)
@@ -154,6 +167,8 @@ def vowel_parts(v):
 
 def vowel_isolated(v):
     """A E O U sueltas: sólo la marca, grande y en el centro (la forma ya dice qué vocal es)."""
+    if LAYOUT == "linear" and v == "a":
+        return [{"width": W, "segments": [L((XC, BAR * 0.75), (XC, -BAR * 0.75))]}]
     return mark(v, XC, YC, 1.5)
 
 

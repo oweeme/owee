@@ -2,14 +2,15 @@
 
 Cada vocal tiene una **forma propia** que no depende de la posición ni de girar o
 espejar otra forma, y cada forma viene de una escritura real donde esa forma
-representa **esa misma vocal**. La posición (a arriba, e izquierda, o derecha, u abajo)
-sólo refuerza la lectura.
+representa **esa misma vocal**. En la disposición en línea las cuatro vocales van a la derecha de la consonante;
+sólo la a pasa de barra horizontal a **barra vertical**, para no leerse como guion.
+(Disposición `around`: a arriba, e izquierda, o derecha, u abajo.)
 
 ![Las cuatro vocales](vocales_v4.png)
 
 | Vocal | Forma en Owee | Origen | Cómo recordarla |
 |---|---|---|---|
-| **a** | barra horizontal `—` | Ogham: la **a** es una sola muesca (ᚐ). En hebreo, la raya (patah) marca la **a**. | Una sola raya: la vocal más simple. |
+| **a** | barra vertical `|` (horizontal `—` en `around`) | Ogham: la **a** es una sola muesca (ᚐ). En hebreo, la raya (patah) marca la **a**. | Una sola raya: la vocal más simple. |
 | **e** | viga en I `エ` | Katakana: **エ** se lee «e». | Una viga con dos tapas. |
 | **o** | anillo `○` | Alfabeto griego: la **ο** (ómicron) es un círculo; también la o latina. | La boca redonda al decir «o». |
 | **u** | `ᚢ` | Runas germánicas (Futhark antiguo): **ᚢ** (Uruz) es la **u**. | Una «n» angulosa abierta por abajo, como una copa al revés. |

@@ -189,6 +189,7 @@ def main():
     for k in ("SX", "SY", "SLANT", "STROKE", "MIN_W", "SIDE", "DIGIT_SIDE"):
         g_[k] = st[k]
     if V4: os.environ["OWEE_V4_STYLE"] = style
+    if V4 and glifos_v4.LAYOUT == "linear": g_["SIDE"] += 42   # más aire entre sílabas que dentro de ellas (consonante·vocal)
     if V4: g_["MIN_W"] = glifos_v4.MIN_W[style]; g_["S"] = glifos_v4.S_V4; g_["SY"] = glifos_v4.SY_V4[style]
     g_["VW"] = width(2.632171); g_["CW"] = width(3.070866)
     sk = json.loads((ROOT / "skeletons.json").read_text())

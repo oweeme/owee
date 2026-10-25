@@ -7,18 +7,23 @@ demás**. Esta guía dice qué rasgo define cada glifo (no cambiar) y qué puede
 ![Todas las sílabas, recto (arriba) y fluido (abajo)](propuesta_v4.png)
 
 ## 1. Cómo se arma una sílaba
-Una sílaba es un **bloque**: la **consonante** (forma grande, en el centro) y la
-**vocal** (marca pequeña, suelta, a un lado). El lado refuerza la lectura:
+Owee se escribe **en línea**: una sílaba es la **consonante** (forma grande) seguida, a su
+derecha y en el mismo renglón, de la **marca de la vocal** (pequeña, suelta, con aire).
+Se lee de izquierda a derecha, consonante y vocal, sin saltar arriba ni abajo.
 
-| Vocal | Lado | Marca |
-|---|---|---|
-| a | arriba | barra `—` |
-| e | izquierda | viga `エ` |
-| o | derecha | anillo `○` |
-| u | abajo | `ᚢ` |
+| Vocal | Marca |
+|---|---|
+| a | barra **vertical** `|` (horizontal parecería un guion entre sílabas) |
+| e | viga `エ` |
+| o | anillo `○` |
+| u | `ᚢ` |
 
-La marca de vocal **no toca** la consonante: deja aire. Una vocal sola (A, E, O, U) es
-sólo su marca, más grande, en el centro.
+La marca de vocal **no toca** la consonante: deja aire. Entre sílabas hay más aire que
+entre la consonante y su vocal, para que se vea qué vocal pertenece a qué consonante. Una
+vocal sola (A, E, O, U) es sólo su marca, más grande, en el centro.
+
+La disposición anterior (vocal alrededor: a arriba, e izquierda, o derecha, u abajo) sigue
+disponible con `OWEE_V4_LAYOUT=around`.
 
 ## 2. Lo que no puede cambiar y lo que sí
 | Se puede variar | No se puede variar |
