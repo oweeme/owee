@@ -14,7 +14,7 @@ En Owee solo hay **4 vocales**: se pronuncian siempre igual, cortas y puras. **N
 | `o` | o | «lobo» | hacia la derecha |
 | `u` | u | «luna» | cerrada, hacia abajo |
 
-**Truco para recordar el glifo:** cada vocal tiene su **forma**: A una barra, E una viga (エ), O un anillo, U la runa ᚢ; y su lado refuerza: A arriba, E izquierda, O derecha, U abajo.
+**Truco para recordar el glifo:** cada vocal tiene su **forma**: A una barra vertical, E una viga (エ), O un anillo, U la runa ᚢ. La vocal se escribe a la derecha de la consonante, en el mismo renglón.
 
 <!--resp-->
 **Practica:** di en voz alta `a e o u`, luego `u o e a`. ¿Notas que la `u` suena más cerrada que la `a`?

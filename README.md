@@ -7,7 +7,7 @@
 - **Fonología:** 4 vocales (`a e o u`), 14 consonantes, sílabas solo `V` o `CV` (60 sílabas), acento siempre en la primera sílaba. No existe la `i`.
 - **Gramática:** analítica, orden SOV, sin género, número ni conjugación; contexto antes que redundancia.
 - **Vocabulario:** conceptual y composicional (pocas raíces, muchos compuestos); principio de **una forma = un significado**.
-- **Escritura:** 1 sílaba = 1 bloque visual, con marcas para compuestos y nombres propios.
+- **Escritura:** en línea, de izquierda a derecha: 1 sílaba = consonante + vocal a su derecha, con marcas para compuestos y nombres propios.
 - **Herramientas:** fuentes (Owee Sans y Owee School), teclado Fcitx5, validador, sitio web, paquetes `.deb` y traducciones para oweelinux.
 
 ## Estructura

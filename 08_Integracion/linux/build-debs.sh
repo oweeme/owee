@@ -38,26 +38,26 @@ CR
 }
 
 # ---- fonts-owee
-paquete fonts-owee 3.4-1 all "Fuentes Owee Sans y Owee School (escritura Owee Script)" "" fonts
+paquete fonts-owee 3.4-2 all "Fuentes Owee Sans y Owee School (escritura Owee Script)" "" fonts
 d="$TMP/fonts-owee"
 mkdir -p "$d/usr/share/fonts/truetype/owee" "$d/usr/share/fonts/opentype/owee"
 cp "$GM"/fonts/ttf/*.ttf "$d/usr/share/fonts/truetype/owee/"
 cp "$GM"/fonts/otf/*.otf "$d/usr/share/fonts/opentype/owee/"
 copyright "$d" fonts-owee
 printf '#!/bin/sh\nset -e\n[ "$1" = configure ] && command -v fc-cache >/dev/null && fc-cache -f /usr/share/fonts/truetype/owee /usr/share/fonts/opentype/owee || true\nexit 0\n' > "$d/DEBIAN/postinst"; chmod 755 "$d/DEBIAN/postinst"
-dpkg-deb --root-owner-group --build "$d" "$DIST/fonts-owee_3.4-1_all.deb" >/dev/null
+dpkg-deb --root-owner-group --build "$d" "$DIST/fonts-owee_3.4-2_all.deb" >/dev/null
 
 # ---- fcitx5-owee (compila el addon)
 cmake -S "$IME" -B "$TMP/ime" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr >/dev/null
 cmake --build "$TMP/ime" -j"$(nproc)" >/dev/null
-paquete fcitx5-owee 1.2-3 "$(dpkg --print-architecture)" "Teclado Owee para Fcitx5: romano a Owee Script, compuestos y nombres propios" "fcitx5, libfcitx5core7, libc6, libstdc++6" inputmethods
+paquete fcitx5-owee 1.2-4 "$(dpkg --print-architecture)" "Teclado Owee para Fcitx5: romano a Owee Script, compuestos y nombres propios" "fcitx5, libfcitx5core7, libc6, libstdc++6" inputmethods
 echo "Recommends: fonts-owee" >> "$TMP/fcitx5-owee/DEBIAN/control"
 d="$TMP/fcitx5-owee"
 DESTDIR="$d" cmake --install "$TMP/ime" >/dev/null
 copyright "$d" fcitx5-owee
 printf '#!/bin/sh\nset -e\ncommand -v gtk-update-icon-cache >/dev/null && gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor 2>/dev/null || true\nexit 0\n' > "$d/DEBIAN/postinst"; chmod 755 "$d/DEBIAN/postinst"
 cp "$d/DEBIAN/postinst" "$d/DEBIAN/postrm"
-dpkg-deb --root-owner-group --build "$d" "$DIST/fcitx5-owee_1.2-3_$(dpkg --print-architecture).deb" >/dev/null
+dpkg-deb --root-owner-group --build "$d" "$DIST/fcitx5-owee_1.2-4_$(dpkg --print-architecture).deb" >/dev/null
 
 # ---- owee-numerals (opcional: las cifras de cualquier programa se ven en Owee)
 paquete owee-numerals 1.0-1 all "Cifras Owee Script (0-9) para todo el sistema: calculadora, reloj, calendario" "fontconfig" fonts
