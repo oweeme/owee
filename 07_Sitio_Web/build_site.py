@@ -444,6 +444,14 @@ footer{max-width:1100px;margin:0 auto;padding:0 16px 40px;color:var(--ink2);font
 .ow[data-g]:hover::after,.ow[data-g]:focus::after{content:attr(data-g);position:absolute;z-index:20;left:0;bottom:calc(100% + 6px);width:max-content;max-width:17rem;background:var(--ink);color:var(--bg);font:.8rem/1.35 system-ui,sans-serif;padding:5px 9px;border-radius:7px;white-space:normal;pointer-events:none}
 details.resp{margin:1em 0;border:1px solid var(--rule);border-radius:10px;padding:.2em 1em;background:var(--surface)}details.resp summary{cursor:pointer;font-weight:600;padding:.5em 0;color:var(--accent)}
 .uimode{margin-left:auto}.uimode button{padding:5px 9px!important;font-size:.82rem!important}.uimode .o{font-size:1.15rem;line-height:1}
+/* modo Owee Script de la interfaz: los glifos ocupan menos de la mitad de la caja de la letra; se escalan respecto del texto
+   que reemplazan para que se lean tan grandes como el español (párrafos, títulos, menú y botones) */
+html[data-ui=script] [data-ow].o{font-size:2.2em;line-height:1.45;letter-spacing:.03em;word-spacing:.12em}
+html[data-ui=script] h1 [data-ow].o,html[data-ui=script] h1[data-ow].o{font-size:1.9em;line-height:1.25}
+html[data-ui=script] h2 [data-ow].o,html[data-ui=script] h3 [data-ow].o{font-size:2em;line-height:1.3}
+html[data-ui=script] nav [data-ow].o,html[data-ui=script] .dd summary [data-ow].o,html[data-ui=script] .brand [data-ow].o{font-size:1.9em;line-height:1}
+html[data-ui=script] .uimode .o{font-size:1.7rem}
+html[data-ui=script] main p,html[data-ui=script] main li{line-height:1.9}
 .ruta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}.nivel{border-left:5px solid var(--accent)}.nivel .n{font-size:2rem;font-weight:700;color:var(--accent);line-height:1}
 .fdd{background:var(--soft);border:1px solid var(--rule);border-radius:14px;padding:14px 20px;margin:18px 0}.fdd .o{font-size:2rem;display:block}.fdd small{color:var(--ink2)}
 .hide{display:none!important}
@@ -1211,8 +1219,11 @@ def build_certificados():
     """Registro público de certificados (03_Material_Ensenanza/Certificacion/certificados.tsv) y certificado imprimible."""
     f = ROOT / "03_Material_Ensenanza/Certificacion/certificados.tsv"
     filas = [l.split("\t") for l in f.read_text(encoding="utf8").splitlines()[1:] if l.strip()] if f.exists() else []
-    tr = "".join(f'<tr data-c="{esc(r[0].lower())}"><td><code>{esc(r[0])}</code></td><td>{esc(r[1])}</td><td>{esc(r[2])}</td><td>{esc(r[3])}</td><td>{esc(r[4])}</td></tr>' for r in filas)
-    tabla = (f'<div class="tw"><table id="reg"><thead><tr><th>Código</th><th>Nombre</th><th>Nivel</th><th>Fecha</th><th>Examinador</th></tr></thead><tbody>{tr}</tbody></table></div>'
+    def enlace(u, t): return f'<a href="{esc(u)}" target="_blank" rel="noopener">{t}</a>' if u.startswith("https://") else ""
+    filas = [(r + [""] * 7)[:7] for r in filas]
+    tr = "".join(f'<tr data-c="{esc(r[0].lower())}"><td><code>{esc(r[0])}</code></td><td>{esc(r[1])}</td><td>{esc(r[2])}</td><td>{esc(r[3])}</td><td>{esc(r[4])}</td>'
+                 f'<td>{enlace(r[5], "artículo")} {enlace(r[6], "video")}</td></tr>' for r in filas)
+    tabla = (f'<div class="tw"><table id="reg"><thead><tr><th>Código</th><th>Nombre</th><th>Nivel</th><th>Fecha</th><th>Examinador</th><th>Portafolio (maestros)</th></tr></thead><tbody>{tr}</tbody></table></div>'
              if filas else "<p><em>Todavía no se han emitido certificados.</em> Los primeros aparecerán aquí cuando el examinador fundador certifique a los primeros maestros y alumnos.</p>")
     body = f"""<h1>Registro público de certificados</h1>
 <p>Un certificado Owee <strong>solo es válido si su código figura en este registro</strong>. Escribe el código para comprobarlo. Cómo obtener uno: <a href="certificacion.html">Certificación y maestros</a>.</p>

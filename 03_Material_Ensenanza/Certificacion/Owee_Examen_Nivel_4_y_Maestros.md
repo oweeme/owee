@@ -42,6 +42,8 @@ Debate de 10 minutos con los examinadores sobre un tema de la vida pública (edu
 
 ## Examen de maestro
 
+**Requisito previo — portafolio en oweeme.com:** artículo escrito solo en Owee (romano, Owee Script o ambos) sobre lo aprendido, la experiencia y cómo se aplicará, y un video en YouTube enseñando o hablando en Owee (ver *Certificación y maestros*, sección 4.1). El examinador lo revisa antes de la lección observada.
+
 ### 1. Lección observada (40 puntos)
 
 El candidato prepara y da una lección de 20 minutos (a niños para *maestro infantil*, a jóvenes o adultos para *maestro de adultos*). Se evalúa:

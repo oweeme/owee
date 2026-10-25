@@ -53,7 +53,7 @@ Los exámenes modelo (con su clave para el examinador) están en la página **Ex
 1. **Prepárate** con los materiales del nivel (tabla de la sección 1) y haz el examen modelo.
 2. **Solicita el examen** a un examinador certificado o, mientras la comunidad es pequeña, al equipo de Owee (página «Crear palabras» → correo o GitHub).
 3. **Haz el examen** con un examinador: escrito y oral. El examinador usa el examen modelo o uno equivalente del mismo nivel.
-4. **Acta:** el examinador anota los puntos de cada parte y envía el acta al registro.
+4. **Acta:** el examinador anota los puntos de cada parte y envía el acta al registro. Para maestros, el acta incluye los enlaces al artículo y al video en oweeme.com.
 5. **Registro:** si aprobaste, el certificado recibe un **código** (`OWEE-2026-0001`) y se publica en el **Registro público de certificados** del sitio, con nombre, nivel, fecha y examinador.
 6. **Certificado:** se imprime desde la página «Certificado». **Solo es válido si su código figura en el registro público.**
 
@@ -67,6 +67,8 @@ Los exámenes modelo (con su clave para el examinador) están en la página **Ex
 | Práctica supervisada | 10 sesiones con niños, observadas por un maestro certificado (o grabadas) | 15 sesiones con jóvenes o adultos |
 | Pronunciación | clara y regular; sin `i`; `r` simple y clara; acento en la primera sílaba | igual |
 | Escritura | Owee Script legible a mano en los dos estilos (recto y fluido) | igual, y corregir la escritura de otros |
+| Artículo en oweeme.com | 300 palabras o más, escrito solo en Owee (sección 4.1) | 600 palabras o más, escrito solo en Owee (sección 4.1) |
+| Video en YouTube | uno, de 5 minutos o más, enseñando o hablando en Owee | uno, de 10 minutos o más, enseñando o hablando en Owee |
 | Compromiso | código de conducta (sección 6) | código de conducta (sección 6) |
 
 **Competencias que se evalúan en el examen de maestro:**
@@ -77,6 +79,37 @@ Los exámenes modelo (con su clave para el examinador) están en la página **Ex
 4. Usar los materiales del nivel y adaptar la sesión a la edad (infantil: juegos, movimiento y sesiones de 15 a 25 minutos).
 5. Evaluar con los criterios de esta página y llenar el acta.
 6. Guiar a sus alumnos para **crear palabras** con las reglas del idioma.
+
+### 4.1 Artículo y video en oweeme.com
+
+Para el certificado de **maestro** (y de **examinador**), el candidato publica en su **blog de oweeme.com** un artículo sobre **lo que aprendió**, **su experiencia** enseñando o estudiando Owee y **cómo piensa aplicarlo** con sus alumnos.
+
+- **Todo en Owee:** se escribe en **romano**, en **Owee Script** o en las **dos formas** (glifos y debajo el romano). **No hace falta traducirlo** al español ni al inglés: el artículo demuestra que el idioma basta para pensar y enseñar.
+- **Extensión según el certificado:** maestro infantil, 300 palabras o más; maestro de jóvenes y adultos, 600 o más; examinador, 800 o más, además de comentar en Owee dos artículos de otros candidatos.
+- **Video:** un enlace a **YouTube** donde el candidato enseña una lección o habla en Owee de lo aprendido (5 minutos para maestro infantil, 10 para adultos). Subtítulos en Owee, opcionales.
+- **Evaluación:** el examinador revisa la corrección (fonología, gramática y vocabulario del nivel), la claridad, la variedad (compuestos, relativas, palabras de enlace, tiempos) y la reflexión (qué aprendió, qué vivió, cómo lo aplicará). Es un **requisito previo** al examen de maestro: se aprueba o se pide una nueva versión.
+- **Registro:** los enlaces al artículo y al video se publican en el **registro de certificados** junto al código.
+
+**Cómo escribir en Owee en el blog:**
+
+1. Escribe en **romano** con cualquier teclado, o en **Owee Script** con el teclado Owee (Fcitx5 en Linux, Keyman en Windows, macOS, Android e iOS) o con el **Owee Pad** del sitio, y copia el texto.
+2. Para que **todos los lectores vean los glifos**, el blog carga el kit web de Owee (las fuentes `owee.css` y `owee.js` de *Descargas*): así el texto en romano se muestra también en Owee Script.
+3. Los videos se enlazan o se insertan desde YouTube en la misma entrada.
+
+**Modelo breve** (un artículo real debe ser más largo):
+
+```owee
+reme, me sena-nara Marea
+me ga sade-kelo pe Ouee tase
+te-fese me Ouee lodu, beka re reka-sone lare
+te-fusu me du tanu nofo ko fela-dure dare
+nofo lena-duma ko tase, re pa-pa lena
+pu-tera me fela-dure tame dare, kalu-selo re sone ko
+me gune-nume: saro bo Ouee reka-sone
+gura-lena, pu-reme
+```
+
+*Modelo de artículo: se publica solo en Owee, en romano, en Owee Script o en ambas formas.*
 
 ## 5. Examinadores
 

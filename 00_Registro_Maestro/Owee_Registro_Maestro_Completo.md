@@ -1758,3 +1758,8 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - **Registro público** de certificados (código `OWEE-AAAA-NNNN`) y **certificado imprimible** en el sitio; un certificado solo vale si su código está en el registro.
 - **Lote 23:** `lare-sena` certificado, `mede-nara` examinador, `nelo-tame` brote, `fela-foma` didáctica, `fela-dure` clase.
 
+## §110 — Modo Owee Script legible y portafolio de maestros (2026-10-25)
+
+- **Interfaz en Owee Script:** los glifos ocupan menos de la mitad de la caja de la letra; en el modo Script del sitio se escalan respecto del texto que reemplazan (×2,2 en párrafos, ×1,9 en menú y títulos) para leerse tan grandes como el español.
+- **Portafolio de maestros (requisito previo):** artículo en el blog de oweeme.com escrito **solo en Owee** (romano, Owee Script o ambos, sin traducción) sobre lo aprendido, la experiencia y su aplicación —300 palabras para maestro infantil, 600 para adultos, 800 para examinador— y un video en YouTube enseñando o hablando en Owee. Los enlaces se publican en el registro de certificados.
+
