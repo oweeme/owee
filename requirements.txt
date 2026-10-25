@@ -2,3 +2,6 @@
 fonttools>=4.50
 skia-pathops>=0.8
 brotli>=1.1
+# auditoria de glifos y audio de pronunciacion (sintetizar_audio.py)
+numpy>=1.26
+onnxruntime>=1.17

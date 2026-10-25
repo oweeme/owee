@@ -182,7 +182,7 @@ except Exception as e:
 fd = "04_Fuentes/actual_3.3_fuente_y_glifos/OweeSans3_3_Source"
 r1 = correr([PY, "-I", fd + "/auditar_glifos_v4.py"]); r2 = correr([PY, "-I", fd + "/auditar_palabras_v4.py"])
 ok("Glifos 3.4: sin giros ni espejos entre consonantes; todo el lexico tiene glifo", r1.returncode == 0 and r2.returncode == 0,
-   (r1.stdout + r2.stdout).strip().splitlines()[-1][:120] if (r1.returncode or r2.returncode) else "")
+   ((r1.stdout + r2.stdout + r1.stderr + r2.stderr).strip().splitlines() or [""])[-1][:120] if (r1.returncode or r2.returncode) else "")
 
 # 7i. interfaz del sitio en Owee: catalogo valido y selector ES / Owee / Script probado en un navegador
 r = correr([PY, "-I", "07_Sitio_Web/validar_ui_owee.py"])
