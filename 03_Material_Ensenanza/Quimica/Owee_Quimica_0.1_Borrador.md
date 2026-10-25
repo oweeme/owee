@@ -1,4 +1,4 @@
-# Owee Química — guía completa (borrador 0.2)
+# Owee Química — guía completa
 
 **Estado: VERIFICADA (pendiente de aprobación).** Esta guía **no existía** en el proyecto: se crea aquí con el mismo método de Matemáticas y Física. Nada de lo que contiene está aprobado hasta que lo confirmes. Los números se muestran con el **glifo numérico de Owee** y su lectura; los cálculos se verifican automáticamente al generar el sitio.
 
@@ -142,7 +142,7 @@ La transferencia de electrones se nombra con las acciones que ya tiene Owee, `pe
 
 `suma-gume` = química orgánica (**materia de la vida**). Inorgánica: `suma-gume no`. **Ejemplo:** el metano CH₄ tiene 1 átomo de carbono y 4 de hidrógeno: [[1 + 4 = 5]] átomos en total.
 
-## 10. Todas las construcciones propuestas
+## 10. Todas las construcciones
 <!--construcciones Química-->
 
 ## 11. Ejercicios
@@ -156,6 +156,6 @@ La transferencia de electrones se nombra con las acciones que ya tiene Owee, `pe
 ## 12. Decisiones pendientes para Química
 
 - ~~Nombres de elementos~~ **decidido** (lote 21): símbolo + nombre propio adaptado; raíz propia para oro, plata, hierro, cobre y metal.
-- **Aprobar las construcciones** de esta guía (todas están marcadas PROPUESTA).
+- ~~Aprobar las construcciones de esta guía~~ **aprobadas** (están en el diccionario).
 - **Valencia, orbital, isótopo, enlace iónico/covalente:** aún sin construcción; conviene decidirlas al escribir textos reales.
 - **Nomenclatura de compuestos** (cómo se lee NaCl, H₂SO₄ en Owee).

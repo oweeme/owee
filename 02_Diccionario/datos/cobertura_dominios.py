@@ -84,13 +84,39 @@ AREAS = {
    "caliente frío rápido lento fuerte débil",
  "Palabras de enlace": "también tampoco muy más menos casi ya todavía siempre nunca pronto tarde temprano aquí allí entonces porque pero aunque si cuando "
    "después antes además quizás",
+ "Biología": "célula ADN gen especie evolución ecosistema bacteria virus hongo órgano tejido sangre hueso músculo nervio cerebro reproducción respiración "
+   "digestión alimentación planta animal mamífero ave pez reptil anfibio insecto selva océano extinción vida muerte nacer crecer",
+ "Tierra y clima": "clima tiempo atmosférico lluvia nieve viento nube tormenta trueno rayo temperatura estación volcán terremoto montaña valle río lago mar océano "
+   "isla desierto bosque roca mineral suelo glaciar sequía inundación contaminación reciclar",
+ "Historia y sociedad": "historia pasado siglo época antiguo moderno guerra paz imperio revolución pueblo cultura tradición costumbre ciudad país nación "
+   "frontera migración población trabajo esclavitud independencia monumento museo",
+ "Derecho y política": "ley derecho deber justicia juez abogado juicio delito crimen robo castigo cárcel policía gobierno estado presidente ministro "
+   "parlamento elección votar partido política democracia constitución libertad igualdad ciudadano impuesto",
+ "Economía": "economía dinero precio mercado empresa negocio trabajo salario ganancia pérdida deuda préstamo interés banco ahorro inversión impuesto "
+   "comercio exportar importar oferta demanda pobreza riqueza crisis",
+ "Artes": "arte artista pintura dibujo escultura teatro actor cine película música danza fotografía museo obra color forma estilo belleza",
+ "Música": "música canción cantar melodía ritmo armonía nota instrumento guitarra piano tambor flauta violín orquesta concierto cantante músico",
+ "Filosofía y mente": "filosofía pensar idea razón verdad mentira bien mal ética moral libertad conciencia mente alma sentido duda pregunta "
+   "creencia valor respeto justicia psicología memoria emoción carácter personalidad",
+ "Medios": "noticia periódico revista radio televisión internet red social mensaje publicar anuncio entrevista periodista",
+ "Medicina": "medicina médico enfermero hospital clínica paciente enfermedad síntoma diagnóstico tratamiento cirugía operación receta pastilla vacuna "
+   "inyección sangre presión corazón dolor fiebre herida infección cáncer diabetes embarazo parto salud",
+ "Ingeniería y construcción": "ingeniería ingeniero construir construcción edificio puente camino túnel máquina motor herramienta diseño plano medir "
+   "cemento ladrillo madera metal acero vidrio electricidad cable",
+ "Energía e industria": "energía electricidad petróleo gas carbón sol viento agua fábrica industria producción máquina motor combustible batería "
+   "contaminación reciclaje",
+ "Deporte y juegos": "deporte juego jugar equipo partido ganar perder fútbol pelota correr nadar saltar carrera gimnasio entrenador árbitro campeón "
+   "premio competencia ajedrez",
+ "Seguridad y emergencias": "ayuda emergencia peligro accidente incendio bombero policía ambulancia rescate seguridad alarma herido",
+ "Finanzas": "banco cuenta ahorro préstamo crédito interés tarjeta pago transferencia inversión acción seguro presupuesto contabilidad factura impuesto",
+ "Signos y puntuación": "punto coma pregunta exclamación comillas paréntesis guion barra llave corchete asterisco arroba almohadilla espacio línea",
 }
 # conceptos de varias palabras: se separan por espacios, así que se declaran aquí
 FRASES = ["base de datos", "cuenta de usuario", "enviar un mensaje", "recibir un mensaje", "correo electrónico", "sitio web", "virus informático", "copia de seguridad",
  "memoria rápida", "proceso de programa", "terminal de comandos", "sistema operativo", "núcleo del sistema", "controlador de dispositivo", "pestaña de ventana", "red social", "memoria virtual", "tarjeta de pago",
  "cuenta bancaria", "cajero automático", "total a pagar", "puesto de venta", "dedo del pie", "columna vertebral", "vaso sanguíneo", "huella dactilar", "cuerpo humano",
  "servir comida", "tabla de cortar", "masa de harina", "campo de cultivo", "época de cosecha", "canal de riego", "llama andina", "raíz de planta", "estación del año",
- "época de lluvias", "época seca", "suelo fértil", "terraza de cultivo", "por favor", "buenos días", "buenas tardes", "buenas noches", "ropa interior", "reloj de pulsera", "control remoto", "aire acondicionado", "página web", "archivo adjunto", "correo postal", "fin de semana", "cepillo de dientes", "pasta dental"]
+ "época de lluvias", "época seca", "suelo fértil", "terraza de cultivo", "por favor", "buenos días", "buenas tardes", "buenas noches", "ropa interior", "reloj de pulsera", "control remoto", "aire acondicionado", "página web", "archivo adjunto", "correo postal", "fin de semana", "cepillo de dientes", "pasta dental", "tiempo atmosférico", "red social"]
 
 def conceptos(texto):
     t = " " + texto + " "; out = []

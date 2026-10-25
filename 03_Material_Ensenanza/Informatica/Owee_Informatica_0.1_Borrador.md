@@ -1,4 +1,4 @@
-# Owee Informática — guía para desarrolladores (borrador 0.1)
+# Owee Informática — guía para desarrolladores
 
 **Estado: aprobada.** Material nuevo con **una sola raíz nueva** (`bomo`, bug); todo lo demás se compone con raíces que ya existen (`meka` máquina, `mado` cálculo, `doke` datos, `foma` regla, `beka` escritura, `rela` conexión, `mena` memoria, `kare` corrección, `bosa` rotura…). Cada término pasó la **verificación automática** (fonología V/CV sin `i`, partes existentes, ≤ 3 elementos, forma y significado únicos).
 

@@ -1,8 +1,8 @@
-# Owee Gramática 1.1 — propuesta
+# Owee Gramática 1.1
 
-**Estado: VERIFICADA; varias decisiones ya confirmadas (ver §16).** Completa lo que el Registro Maestro dejó abierto (respuestas, imperativo, vocativo, demostrativos, cuantificadores, compuestos y su acento, relativas, cortesía, nombres propios). Nada de aquí está aprobado hasta que lo confirmes.
+**Estado: CONFIRMADA.** Todas las decisiones de esta gramática están aceptadas (§16); completa lo que el Registro Maestro dejó abierto (respuestas, imperativo, vocativo, demostrativos, cuantificadores, compuestos y su acento, relativas, cortesía, nombres propios y puntuación).
 
-> **Método:** (1) **cero raíces nuevas**: todo se construye con raíces y operadores que ya existen; (2) todo cumple V/CV, sin `i`; (3) cada regla va con ejemplos validados contra el léxico; (4) se prefiere la solución más corta y regular. Las construcciones nuevas están en el diccionario con estado PROPUESTA.
+> **Método:** (1) **cero raíces nuevas**: todo se construye con raíces y operadores que ya existen; (2) todo cumple V/CV, sin `i`; (3) cada regla va con ejemplos validados contra el léxico; (4) se prefiere la solución más corta y regular. Las construcciones están en el diccionario, aprobadas.
 >
 > **Principio de univocidad (decidido):** **una forma = un significado.** Una raíz **no se reutiliza** como palabra para otra idea. Si hace falta una idea nueva, se **extiende con guion** (`sade-kelo`, «año»); en el alfabeto romano el guion lo muestra, y en **Owee Script el nexo de compuesto (glifo U+E03C) lo hace visible** (ver §6). Ninguna raíz debe cargar dos significados muy distintos (por ejemplo, no puede haber una misma palabra para «sol» y «agua»).
 
@@ -277,9 +277,9 @@ Si hay que distinguir dos especies de la misma categoría, se añade **un rasgo*
 
 **Izquierda y derecha:** `doma-kado` («el lado del corazón») y `doma-kado-no` («el lado sin corazón»), con `kado` (lado) y `no` que ya existen. *(Se descartó `doma-le`/`doma-lu`: sonaba igual que la frase «corazón cerca/lejos».)*
 
-## 13. Puntuación (provisional)
+## 13. Puntuación (decidida, lote 22)
 
-Mientras no exista puntuación propia de Owee, se usan los signos latinos: `.` `,` `?` `!`. El IME los deja pasar sin cambios. En poemas, el **salto de línea** hace de pausa.
+Owee usa los **signos internacionales** (`.` `,` `?` `!` `«»` `()` `:` `;`), también en Owee Script: no hay signos propios. El teclado los deja pasar sin cambios. En poemas, el **salto de línea** hace de pausa. Los signos tienen **nombre** en Owee para leerlos y enseñarlos: `gune-sena` punto, `malo-sena` coma, `ka-sena` interrogación, `faro-sena` exclamación, `reka-kopa` comillas, `selo-palo` paréntesis.
 
 ## 14. Nombres propios y préstamos
 
@@ -326,11 +326,11 @@ Cada propuesta se comprobó contra **todo el léxico** (general, ciencias y prop
 
 ## 16. Decisiones que necesito de ti
 
-1. ¿Confirmas **`tare` = «sí»**? (recomendado)
+1. ~~¿`tare` = «sí»?~~ **Confirmado** (por delegación del autor).
 2. ~~¿Aceptas `pode ka`?~~ **Confirmado.**
-3. ¿Mantienes **`le`/`lu`** como demostrativos?
-4. ¿Apruebas la **regla de compuestos y acento** (§6) y los **glifos U+E03C / U+E03D**?
+3. ~~¿`le`/`lu` como demostrativos?~~ **Confirmado.**
+4. ~~¿Regla de compuestos y acento (§6) y glifos U+E03C / U+E03D?~~ **Confirmado**; los glifos están en Owee Script 3.4.
 5. ~~¿Relativas con `ra`?~~ **Confirmado**, con la regla de comas del §9 para que no choquen con el vocativo.
-6. ¿La **norma de nombres** (§14) con la marca de nombre propio?
+6. ~~¿Norma de nombres (§14)?~~ **Confirmada**; se aplica solo a nombres propios (lotes 19–21).
 7. ~~¿`po` para el signo negativo?~~ **Confirmado.** `-pose` para ordinales: confirmado.
 8. ~~¿Restringes `faro` a «fuerza»?~~ **Confirmado** (`faro-enu` = fuerza energética).

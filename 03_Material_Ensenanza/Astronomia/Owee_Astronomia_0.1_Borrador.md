@@ -1,4 +1,4 @@
-# Owee Astronomía y Astrología — borrador 0.1
+# Owee Astronomía y Astrología
 
 **Estado: VERIFICADA (pendiente de aprobación).** Material nuevo; cada término pasó la verificación automática (fonología, partes existentes, forma y significado únicos). Como en Química, **no se añade ninguna raíz nueva**: todo se compone con raíces que ya existen (`sade` sol, `mune` luna, `kuna` cielo, `salo` luz, `gadu` gravedad, `duma` movimiento…). Los números llevan glifo numérico y lectura; los cálculos se verifican al generar el sitio.
 

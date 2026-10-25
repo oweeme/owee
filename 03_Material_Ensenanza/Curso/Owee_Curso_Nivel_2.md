@@ -263,4 +263,69 @@ nara-tame lena-duma
 **Respuestas.** 1) `me sare-naku`. 2) `me naku-naku sule`. 3) «Mi pareja».
 <!--/resp-->
 
+## Lección 2.13 — Personas, saludos y fiestas
+
+<!--vocabulario mopu bufu nofo nofo-mopu nofo-bufu pade-mopu pade-bufu gusha lena-fusu lena-fusu-gune sule-lena gura-reme nosho pedobo lena-tabu defupe sabe-tada notesa-->
+
+Owee no tiene género gramatical: `pade` es padre o madre. Cuando hace falta precisar, se añade **`mopu`** (hombre) o **`bufu`** (mujer): `pade-mopu` papá, `nofo-bufu` niña.
+
+```owee
+lena-fusu, gura-reme
+te-fusu me nosho mora
+me tu pedobo
+nofo-mopu re nofo-bufu notesa
+me pade-bufu lena-tabu dare
+me tu defupe
+sule-lena
+```
+
+*Buenos días, bienvenido. Hoy es mi cumpleaños. Te invito. El niño y la niña bailan. Mi mamá hace un pastel. Te abrazo. Buenas noches.*
+
+<!--resp-->
+**Ejercicios.** 1) «Mi papá». 2) «Hoy es tu cumpleaños». 3) Traduce `lena-fusu-gune`.
+**Respuestas.** 1) `me pade-mopu`. 2) `te-fusu tu nosho mora`. 3) «Buenas tardes».
+<!--/resp-->
+
+## Lección 2.14 — El día, la comida y la tecnología
+
+<!--vocabulario fusu nate te-fusu pu-fusu botu tomu pegu roshe meka-rela sura-rela gogu dulu shuse bupo gutu fefu muru gudo tudu gono dashu-->
+
+Las palabras de **cada día son cortas**: `fusu` día, `nate` hora, `pegu` teléfono, `botu` perro. Con ellas, una compra o un mensaje se dicen rápido.
+
+```owee
+me ga muru re du gudo kera-fedo nume
+me dashu gono nobe-pume
+pu-fusu me tu shuse
+me pegu meka-rela bo roshe ko rela
+botu re tomu kuma bo sule
+```
+
+*Quiero comprar tres tomates y dos manzanas. Bebo una taza de té. Mañana te llamo. Conecto el teléfono al parlante por bluetooth. El perro y el gato duermen en casa.*
+
+<!--resp-->
+**Ejercicios.** 1) «Quiero comprar queso». 2) «Hoy veo un video». 3) Traduce `me pegu bo gogu luma-salo`.
+**Respuestas.** 1) `me fefu kera-fedo nume`. 2) `te-fusu me dulu luma-salo`. 3) «Veo una foto en el teléfono».
+<!--/resp-->
+
+## Lección 2.15 — Viajes, trabajo y palabras de enlace
+
+<!--vocabulario pubu geru tofe dutude sule-kuma kubosa naro-rela daro-doke daro-reme pa-pa fese-po te-fese te-dure balo-ke pu-le sufugo bumosa-->
+
+Las **palabras de enlace** dan fluidez: `pa-pa` muy, `fese-po` casi, `te-fese` ya, `te-dure` todavía, `balo-ke` aunque, `pu-le` pronto, `sufugo` quizás.
+
+```owee
+pu-fusu me geru bo dutude to pubu
+me kubosa te-fese pase
+te-fusu naro-rela mora, balo-ke me faro-nuse
+sufugo me daro-doke pu-le pema
+bumosa dema-pa-pa
+```
+
+*Mañana viajo en coche a la playa. Ya tengo el pasaporte. Hoy hay reunión, aunque estoy cansado. Quizás entregue pronto el informe. El problema es muy difícil.*
+
+<!--resp-->
+**Ejercicios.** 1) «Casi termino». 2) «Todavía trabajo». 3) Traduce `pu-le me sule-kuma to duma`.
+**Respuestas.** 1) `me fese-po gune-dare`. 2) `me te-dure daro`. 3) «Pronto voy al hotel».
+<!--/resp-->
+
 **¡Terminaste el Nivel 2!** Pasa al **Nivel 3**.

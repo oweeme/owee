@@ -23,6 +23,8 @@ GM = ROOT / "04_Fuentes/actual_3.3_fuente_y_glifos/Owee_Glyph_Master_3.3"
 LIT = sorted((ROOT / "03_Material_Ensenanza/Literatura_Poesia").glob("Owee_Literatura_y_Poesia_*.md"))[-1]
 REG = ROOT / "00_Registro_Maestro/Owee_Registro_Maestro_Completo.md"
 VERSION = "3.4"
+# Dirección pública que recibe las propuestas de palabras desde la página «Crear palabras» (vacía: no se muestra el botón de correo).
+CORREO_PROPUESTAS = ""
 
 # ---------------------------------------------------------------- lexico
 def load_lex():
@@ -809,9 +811,9 @@ GUIAS = [
     ("matematicas.html", "Matemáticas", ROOT / "03_Material_Ensenanza/Matematicas/Owee_Matematicas_2.0_Web.md", None, False),
     ("fisica.html", "Física", ROOT / "03_Material_Ensenanza/Fisica/Owee_Fisica_2.0_Web.md", None, False),
     ("quimica.html", "Química", ROOT / "03_Material_Ensenanza/Quimica/Owee_Quimica_0.1_Borrador.md",
-     "Material nuevo, sin raíces nuevas. Los términos están verificados automáticamente; ninguno aprobado todavía.", True),
+     None, True),
     ("astronomia.html", "Astronomía y astrología", ROOT / "03_Material_Ensenanza/Astronomia/Owee_Astronomia_0.1_Borrador.md",
-     "Material nuevo, sin raíces nuevas. Todos los términos están VERIFICADOS automáticamente; faltan tu aprobación.", False),
+     None, False),
     ("curso.html", "Curso por niveles", ROOT / "03_Material_Ensenanza/Curso/Owee_Curso_Indice.md", None, False),
     ("nivel-0.html", "Nivel 0 — Ver y oír", ROOT / "03_Material_Ensenanza/Curso/Owee_Curso_Nivel_0.md", None, False),
     ("nivel-1.html", "Nivel 1 — Primeras frases (A1)", ROOT / "03_Material_Ensenanza/Curso/Owee_Curso_Nivel_1.md", None, False),
@@ -821,7 +823,7 @@ GUIAS = [
      "Material nuevo con una sola raíz nueva (bomo, «bug»); el resto son compuestos. Términos aprobados.", False),
     ("pronunciacion.html", "Pronunciación", ROOT / "03_Material_Ensenanza/Pronunciacion/Owee_Pronunciacion_1.0.md", None, True),
     ("gramatica.html", "Gramática 1.1", ROOT / "03_Material_Ensenanza/Gramatica/Owee_Gramatica_1.1_Propuesta.md",
-     "Propuesta que completa el Registro Maestro; nada está aprobado hasta que lo confirmes.", False),
+     None, False),
 ]
 
 def build_ciencias():
@@ -1149,9 +1151,13 @@ def build_crear():
 <p>Estas raíces de 3 sílabas están libres y cumplen las reglas. Comprueba en voz alta que no suenen como una palabra de tu idioma. <button class="btn" id="otras">Otras</button></p>
 <div id="sug" class="dl"></div>
 <h2>Enviar la propuesta</h2>
-<p>Las propuestas pasan por <strong>PROPUESTA → VERIFICADA → APROBADA</strong>. Copia el texto o envíalo como propuesta pública en GitHub (necesitas una cuenta). Todo el diccionario es de dominio público bajo licencia CC BY-SA 4.0.</p>
+<p>Las propuestas pasan por <strong>PROPUESTA → VERIFICADA → APROBADA</strong>; las aprobadas entran en el diccionario oficial, que es de dominio público (licencia CC BY-SA 4.0). <strong>No hace falta saber de programación:</strong> guarda tu palabra en «Mis palabras» para usarla ya en tus textos, y envíala por correo o, si tienes cuenta, en GitHub.</p>
 <pre id="prop">—</pre>
-<p><button class="btn" id="copiar">Copiar</button> <a class="btn" id="enviar" href="#" target="_blank" rel="noopener">Proponer en GitHub</a></p>
+<p><button class="btn" id="guardar">Guardar en mis palabras</button> <button class="btn" id="copiar">Copiar</button>__CORREO__ <a class="btn" id="enviar" href="#" target="_blank" rel="noopener">Proponer en GitHub</a></p>
+<h2>Mis palabras</h2>
+<p>Se guardan solo en este navegador. Descárgalas para conservarlas o para enviarlas todas juntas.</p>
+<div id="mias" class="dl"></div>
+<p><button class="btn" id="descargar">Descargar mis palabras (.txt)</button></p>
 <style>.btn{font:inherit;padding:7px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--accent);cursor:pointer;text-decoration:none;display:inline-block}
 .formu{display:grid;gap:10px;max-width:640px;margin:14px 0}.formu label{display:flex;flex-direction:column;gap:4px;color:var(--ink2);font-size:.9rem}.formu label input{font:inherit;padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink)}
 .v-err{color:#b3261e}.v-av{color:var(--warn)}.v-ok{color:var(--ok)}#veredicto li{margin:4px 0}</style>
@@ -1170,13 +1176,24 @@ function prueba(){var f=$('forma').value.trim().toLowerCase(),m=$('sig').value.t
  var txt=ok?('Palabra: '+f+'\\nSignificado: '+m+'\\nInglés: '+($('ing').value||'—')+'\\nÁrea: '+($('area').value||'—')+'\\nTipo: '+r.tipo+', '+r.silabas+' sílabas'+(r.tipo==='compuesto'?'\\nPartes: '+r.partes.map(function(p){return p+' ('+L[p][0]+')'}).join(' + '):'')+'\\nAvisos: '+(r.avisos.join(' | ')||'ninguno')):'—';
  $('prop').textContent=txt;
  $('enviar').href=ok?('https://github.com/oweeme/owee/issues/new?labels=propuesta&title='+encodeURIComponent('Propuesta: '+f+' = '+m)+'&body='+encodeURIComponent(txt)):'#';
- $('enviar').style.opacity=ok?1:.4}
+ $('enviar').style.opacity=ok?1:.4;var c=$('correo');if(c){c.href=ok?('mailto:'+c.dataset.a+'?subject='+encodeURIComponent('Propuesta Owee: '+f)+'&body='+encodeURIComponent(txt)):'#';c.style.opacity=ok?1:.4}
+ $('guardar').disabled=!ok;ULTIMA=ok?{forma:f,sig:m,ing:$('ing').value,area:$('area').value,texto:txt}:null}
+var ULTIMA=null;
+function leerMias(){try{return JSON.parse(localStorage.getItem('owee-mis-palabras')||'[]')}catch(e){return[]}}
+function guardarMias(a){try{localStorage.setItem('owee-mis-palabras',JSON.stringify(a))}catch(e){}}
+function pintaMias(){var a=leerMias();$('mias').innerHTML=a.map(function(x,i){return '<a href="#" data-i="'+i+'"><b>'+esc(x.forma)+'</b><span>'+esc(x.sig)+' · quitar ✕</span></a>'}).join('')||'<p>Todavía no guardaste palabras.</p>'}
+$('guardar').onclick=function(){if(!ULTIMA)return;var a=leerMias().filter(function(x){return x.forma!==ULTIMA.forma});a.push(ULTIMA);guardarMias(a);pintaMias()};
+$('mias').addEventListener('click',function(e){var x=e.target.closest('[data-i]');if(!x)return;e.preventDefault();var a=leerMias();a.splice(+x.dataset.i,1);guardarMias(a);pintaMias()});
+$('descargar').onclick=function(){var a=leerMias();if(!a.length)return;var b=new Blob([a.map(function(x){return x.texto}).join('\\n\\n----\\n\\n')+'\\n'],{type:'text/plain'});var u=URL.createObjectURL(b),l=document.createElement('a');l.href=u;l.download='mis_palabras_owee.txt';document.body.appendChild(l);l.click();l.remove();URL.revokeObjectURL(u)};
+window.addEventListener('load',pintaMias);
 ['forma','sig','ing','area'].forEach(function(i){$(i).addEventListener('input',prueba)});
 $('copiar').onclick=function(){try{navigator.clipboard.writeText($('prop').textContent)}catch(e){}};
 function sug(){$('sug').innerHTML=C.sugerirRaices(L,6).map(function(w){return '<a href="#forma" data-w="'+w+'"><b>'+w+'</b><span class="o" data-o="'+w+'">'+(window.Owee?Owee.toScript(w):w)+'</span></a>'}).join('')}
 $('sug').addEventListener('click',function(e){var a=e.target.closest('[data-w]');if(a){$('forma').value=a.dataset.w;prueba()}});
 $('otras').onclick=sug;window.addEventListener('load',function(){sug();prueba()});
 })();</script>"""
+    correo = os.environ.get("OWEE_CORREO_PROPUESTAS") or CORREO_PROPUESTAS
+    body = body.replace("__CORREO__", f' <a class="btn" id="correo" data-a="{esc(correo)}" href="#">Enviar por correo</a>' if correo else "")
     page("crear.html", "Crear palabras", body, "crear.html")
 
 def build_estado():
@@ -1211,7 +1228,7 @@ def build_descargas():
     qui = ROOT / "03_Material_Ensenanza/Quimica/Owee_Quimica_0.1_Borrador.pdf"
     if qui.exists():
         shutil.copy2(qui, D / qui.name); npdf += 1
-        sections.append(f"<h3>Química (borrador propuesto)</h3><div class='dl'><a href='documentos/{qui.name}'>Owee Química 0.1 — borrador<span>PDF · {sz(qui)}</span></a></div>")
+        sections.append(f"<h3>Química</h3><div class='dl'><a href='documentos/{qui.name}'>Owee Química<span>PDF · {sz(qui)}</span></a></div>")
     lit = LIT.with_suffix(".pdf")
     if lit.exists():
         shutil.copy2(lit, D / lit.name)

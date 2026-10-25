@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 1110 OK · 25 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 1241 OK · 25 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -234,6 +234,15 @@ Criterios (2026-10-12):
 | `komepu` | ingeniero/a | `komepu` (ingeniero/a) | OK |
 | `lusuga` | gripe / resfriado | `lusuga` (gripe) | OK |
 | `fudapa` | alergia | `fudapa` (alergia) | OK |
+| `nokoma` | virus | `nokoma` (virus) | OK |
+| `semuku` | hongo | `semuku` (hongo) | OK |
+| `malasu` | reptil | `malasu` (reptil) | OK |
+| `gaboke` | anfibio | `gaboke` (anfibio) | OK |
+| `fetopu` | guitarra | `fetopu` (guitarra) | OK |
+| `gesulo` | piano | `gesulo` (piano) | OK |
+| `tabepu` | violín | `tabepu` (violín) | OK |
+| `mukule` | nadar | `mukule` (nadar) | OK |
+| `mapube` | ajedrez | `mapube` (ajedrez) | OK |
 | `lu-meka` | nube informática (máquina lejana) | `lu` (lejos) + `meka` (máquina) | AJUSTADO — antes kuna-meka «máquina del cielo», que se confundiría con el avión (sura-meka); la nube informática es una máquina lejana |
 | `foma-fena` | configuración (poner reglas) | `foma` (regla) + `fena` (poner) | OK |
 | `meka-gune` | apagar (fin de la máquina) | `meka` (máquina) + `gune` (fin) | OK |
@@ -430,7 +439,7 @@ Criterios (2026-10-12):
 | `fame-bora-telo` | digestión (cambio de la comida) | `fame` (comida) + `bora` (cuerpo) + `telo` (cambiar) | OK |
 | `suma-dare` | reproducción (hacer vida) | `suma` (vida) + `dare` (hacer) | OK |
 | `gore-pa-telo` | crecimiento (cambio de tamaño) | `gore` (tamaño) + `pa` (más) + `telo` (cambiar) | OK |
-| `suma-gore-po` | microbio (vida menor) | `suma` (vida) + `gore` (tamaño) + `po` (menos) | OK |
+| `suma-gore-po` | microbio / bacteria (vida menor) | `suma` (vida) + `gore` (tamaño) + `po` (menos) | OK |
 | `ku-kalu` | insecto (animal pequeño) | `ku` (6) + `kalu` (pierna) | OK |
 | `luma-nado` | nervio (conexión de percepción) | `luma` (percepción) + `nado` (acceso) | OK |
 | `bora-faro` | músculo (fuerza del cuerpo) | `bora` (cuerpo) + `faro` (fuerza) | OK |
@@ -463,8 +472,8 @@ Criterios (2026-10-12):
 | `kare-foma` | justicia (regla correcta) | `kare` (corrección) + `foma` (regla) | OK |
 | `bade-saro` | gobierno (autoridad de la comunidad) | `bade` (autoridad) + `saro` (comunidad) | OK |
 | `dese-saro` | elección (decisión de la comunidad) | `dese` (decisión) + `saro` (comunidad) | OK |
-| `dese-pema` | voto (dar la decisión) | `dese` (decisión) + `pema` (dar) | OK |
-| `foma-bosa` | delito (rotura de la regla) | `foma` (regla) + `bosa` (rotura) | OK |
+| `dese-pema` | voto / votar (dar la decisión) | `dese` (decisión) + `pema` (dar) | OK |
+| `foma-bosa` | delito / crimen (rotura de la regla) | `foma` (regla) + `bosa` (rotura) | OK |
 | `foma-nara` | juez (persona de la ley) | `foma` (regla) + `nara` (persona) | OK |
 | `foma-fadu` | policía (seguridad de la regla) | `foma` (regla) + `fadu` (seguridad) | OK |
 | `foma-fadu-nara` | agente de policía (persona de la policía) | `foma` (regla) + `fadu` (seguridad) + `nara` (persona) | OK |
@@ -1144,3 +1153,125 @@ Criterios (2026-10-12):
 | `saro-sena` | bandera (signo de la comunidad) | `saro` (comunidad) + `sena` (signo) | OK |
 | `kuna-soma` | religión (idea del cielo) | `kuna` (cielo) + `soma` (idea) | OK |
 | `fusu-doke` | periódico (información del día) | `fusu` (día) + `doke` (información) | OK |
+| `suma-doke-seta` | ADN (conjunto de genes) | `suma` (vida) + `doke` (información) + `seta` (conjunto) | OK |
+| `fame-dare` | alimentación (hacer la comida) | `fame` (comida) + `dare` (hacer) | OK |
+| `ruma-nobe` | mamífero (animal de leche) | `ruma` (animal) + `nobe` (bebida) | OK |
+| `gune-fese` | extinción (fin completo) | `gune` (fin) + `fese` (límite) | OK |
+| `kuna-telo` | tiempo atmosférico (cambio del cielo) | `kuna` (cielo) + `telo` (cambiar) | OK |
+| `suna-goda-pa` | glaciar (mucho hielo) | `suna` (agua) + `goda` (estado sólido) + `pa` (más) | OK |
+| `kelo-kade` | reciclar (uso en ciclo) | `kelo` (ciclo) + `kade` (usar) | OK |
+| `gabu-kelo` | siglo (ciclo de cien) | `gabu` (100) + `kelo` (ciclo) | OK |
+| `tera-gule` | antiguo (tiempo viejo) | `tera` (tiempo) + `gule` (viejo) | OK |
+| `tera-tame` | moderno (tiempo nuevo) | `tera` (tiempo) + `tame` (nuevo) | OK |
+| `bade-gora-pa` | imperio (reino más grande) | `bade` (autoridad) + `gora` (mundo) + `pa` (más) | OK |
+| `saro-telo` | revolución (cambio de la comunidad) | `saro` (comunidad) + `telo` (cambiar) | OK |
+| `pe-foma` | tradición (regla del pasado) | `pe` (anterior) + `foma` (regla) | OK |
+| `mode-kelo` | costumbre (manera repetida) | `mode` (manera) + `kelo` (ciclo) | OK |
+| `kore-telo` | migración / mudarse (cambio de lugar) | `kore` (lugar) + `telo` (cambiar) | OK |
+| `nara-bema` | población (cantidad de personas) | `nara` (persona) + `bema` (cantidad) | OK |
+| `tulupo-no` | esclavitud (sin libertad) | `tulupo` (libre) + `no` (negación) | OK |
+| `tulupo-saro` | independencia (comunidad libre) | `tulupo` (libre) + `saro` (comunidad) | OK |
+| `mena-dore` | monumento (forma de la memoria) | `mena` (memoria) + `dore` (forma) | OK |
+| `mena-kuma` | museo (casa de la memoria) | `mena` (memoria) + `kuma` (hogar) | OK |
+| `foma-lare` | derecho (saber de las reglas) | `foma` (regla) + `lare` (saber) | OK |
+| `foma-dese` | juicio (decisión de la ley) | `foma` (regla) + `dese` (decisión) | OK |
+| `delo-bosa` | robo / robar (tomar rompiendo) | `delo` (tomar) + `bosa` (rotura) | OK |
+| `dema-pema` | castigo (dar dificultad) | `dema` (dificultad) + `pema` (dar) | OK |
+| `bade-palo` | ministro/a (parte de la autoridad) | `bade` (autoridad) + `palo` (parte) | OK |
+| `foma-naro` | parlamento (grupo de la ley) | `foma` (regla) + `naro` (grupo humano) | OK |
+| `rena-naro` | partido político (grupo de pensamiento) | `rena` (pensar) + `naro` (grupo humano) | OK |
+| `bade-lare` | política (saber de la autoridad) | `bade` (autoridad) + `lare` (saber) | OK |
+| `saro-dese` | democracia (decisión de la comunidad) | `saro` (comunidad) + `dese` (decisión) | OK |
+| `foma-choma` | constitución (ley central) | `foma` (regla) + `choma` (centro) | OK |
+| `kume-daro` | negocio (trabajo de intercambio) | `kume` (intercambio) + `daro` (trabajo) | OK |
+| `bado-fena` | ahorro / ahorrar (poner valor) | `bado` (valor) + `fena` (poner) | OK |
+| `bado-pu` | inversión (valor futuro) | `bado` (valor) + `pu` (posterior) | OK |
+| `pema-bema` | oferta (cantidad que se da) | `pema` (dar) + `bema` (cantidad) | OK |
+| `nume-bema` | demanda (cantidad deseada) | `nume` (deseo) + `bema` (cantidad) | OK |
+| `dema-tera` | crisis (tiempo difícil) | `dema` (dificultad) + `tera` (tiempo) | OK |
+| `bado-delo` | crédito (tomar valor) | `bado` (valor) + `delo` (tomar) | OK |
+| `bado-duma` | transferencia (movimiento de valor) | `bado` (valor) + `duma` (movimiento) | OK |
+| `kume-palo` | acción de empresa (parte del negocio) | `kume` (intercambio) + `palo` (parte) | OK |
+| `fadu-fedo` | seguro (pago de seguridad) | `fadu` (seguridad) + `fedo` (pago) | OK |
+| `dore-dare` | escultura (hacer forma) | `dore` (forma) + `dare` (hacer) | OK |
+| `loke-kuma` | teatro (casa de mirar) | `loke` (ojo) + `kuma` (hogar) | OK |
+| `gade-telo` | actor / actriz (cambio de identidad) | `gade` (identidad) + `telo` (cambiar) | OK |
+| `dulu-kuma` | cine (casa de películas) | `dulu` (video) + `kuma` (hogar) | OK |
+| `mode-gade` | estilo (manera propia) | `mode` (manera) + `gade` (identidad) | OK |
+| `tada-sone` | tambor (sonido de golpe) | `tada` (contacto) + `sone` (sonido) | OK |
+| `sura-sone` | flauta (sonido de aire) | `sura` (aire) + `sone` (sonido) | OK |
+| `sone-naro` | orquesta / banda (grupo de sonido) | `sone` (sonido) + `naro` (grupo humano) | OK |
+| `sone-tera` | concierto (tiempo de música) | `sone` (sonido) + `tera` (tiempo) | OK |
+| `sone-nara` | músico/a (persona del sonido) | `sone` (sonido) + `nara` (persona) | OK |
+| `lafe-foma` | ética / moral (reglas del bien) | `lafe` (calidad) + `foma` (regla) | OK |
+| `rena-luma` | conciencia (percibir el pensar) | `rena` (pensar) + `luma` (percepción) | OK |
+| `rena-kore` | mente (lugar del pensar) | `rena` (pensar) + `kore` (lugar) | OK |
+| `suma-choma` | alma / espíritu (centro de la vida) | `suma` (vida) + `choma` (centro) | OK |
+| `soma-tora` | sentido / significado (dirección de la idea) | `soma` (idea) + `tora` (dirección) | OK |
+| `tare-ka` | duda / dudar (¿es verdad?) | `tare` (realidad) + `ka` (pregunta) | OK |
+| `lafe-pema` | respeto (dar valoración) | `lafe` (calidad) + `pema` (dar) | OK |
+| `lare-dune` | psicología (saber del sentir) | `lare` (saber) + `dune` (sentir) | OK |
+| `gade-dore` | carácter / personalidad (forma de la identidad) | `gade` (identidad) + `dore` (forma) | OK |
+| `mune-doke` | revista (información del mes) | `mune` (luna) + `doke` (información) | OK |
+| `kume-reka` | anuncio / publicidad (comunicación de venta) | `kume` (intercambio) + `reka` (comunicación) | OK |
+| `ka-reka-seta` | entrevista (conjunto de preguntas) | `ka` (pregunta) + `reka` (comunicación) + `seta` (conjunto) | OK |
+| `doke-nara` | periodista (persona de la información) | `doke` (información) + `nara` (persona) | OK |
+| `sado-gura` | paciente (recibe salud) | `sado` (salud) + `gura` (recibir) | OK |
+| `bosa-sena` | síntoma (signo del daño) | `bosa` (rotura) + `sena` (signo) | OK |
+| `bosa-lare` | diagnóstico (saber del daño) | `bosa` (rotura) + `lare` (saber) | OK |
+| `sado-foma` | tratamiento (regla de salud) | `sado` (salud) + `foma` (regla) | OK |
+| `bora-bure` | cirugía / operación (abrir el cuerpo) | `bora` (cuerpo) + `bure` (abrir) | OK |
+| `sado-goda` | pastilla (medicina sólida) | `sado` (salud) + `goda` (estado sólido) | OK |
+| `sado-nado` | inyección (acceso de la salud) | `sado` (salud) + `nado` (acceso) | OK |
+| `bosa-bo` | infección (daño dentro) | `bosa` (rotura) + `bo` (interior) | OK |
+| `lena-gume-bosa` | diabetes (enfermedad del azúcar) | `lena` (agrado) + `gume` (materia) + `bosa` (rotura) | OK |
+| `naku-pado` | parto (comienzo del hijo) | `naku` (descendiente) + `pado` (comienzo) | OK |
+| `sado-kuma-po` | clínica (hospital pequeño) | `sado` (salud) + `kuma` (hogar) + `po` (menos) | OK |
+| `komepu-lare` | ingeniería (saber del ingeniero) | `komepu` (ingeniero/a) + `lare` (saber) | OK |
+| `goda-dare` | construir / construcción (hacer sólido) | `goda` (estado sólido) + `dare` (hacer) | OK |
+| `taro-nado` | túnel (paso por la tierra) | `taro` (tierra) + `nado` (acceso) | OK |
+| `dore-soma` | diseño (idea de la forma) | `dore` (forma) + `soma` (idea) | OK |
+| `kuma-sena` | plano (signo de la casa) | `kuma` (hogar) + `sena` (signo) | OK |
+| `goda-gume` | cemento (materia que se hace sólida) | `goda` (estado sólido) + `gume` (materia) | OK |
+| `menedu-faro` | acero (hierro fuerte) | `menedu` (hierro) + `faro` (fuerza) | OK |
+| `taro-luda` | petróleo (líquido de la tierra) | `taro` (tierra) + `luda` (estado líquido) | OK |
+| `boga-pore` | gas combustible (gas de fuego) | `boga` (estado gaseoso) + `pore` (fuego) | OK |
+| `pore-goda` | carbón (sólido de fuego) | `pore` (fuego) + `goda` (estado sólido) | OK |
+| `kema-dare` | industria (hacer objetos) | `kema` (objeto) + `dare` (hacer) | OK |
+| `dare-bema` | producción (cantidad hecha) | `dare` (hacer) + `bema` (cantidad) | OK |
+| `pore-gume` | combustible (materia de fuego) | `pore` (fuego) + `gume` (materia) | OK |
+| `bora-daro` | deporte (trabajo del cuerpo) | `bora` (cuerpo) + `daro` (trabajo) | OK |
+| `du-naro` | partido (dos grupos) | `du` (2) + `naro` (grupo humano) | OK |
+| `kalu-selo` | fútbol (círculo del pie) | `kalu` (pierna) + `selo` (círculo) | OK |
+| `lena-selo` | pelota (círculo de juego) | `lena` (agrado) + `selo` (círculo) | OK |
+| `go-kalu` | saltar (pierna arriba) | `go` (arriba) + `kalu` (pierna) | OK |
+| `sape-lena` | carrera (juego de velocidad) | `sape` (velocidad) + `lena` (agrado) | OK |
+| `faro-kuma` | gimnasio (casa de la fuerza) | `faro` (fuerza) + `kuma` (hogar) | OK |
+| `faro-fela` | entrenador/a (enseñar la fuerza) | `faro` (fuerza) + `fela` (enseñar) | OK |
+| `foma-loke` | árbitro (ojo de la regla) | `foma` (regla) + `loke` (ojo) | OK |
+| `lurufa-nara` | campeón / campeona (persona que gana) | `lurufa` (ganar) + `nara` (persona) | OK |
+| `lurufa-kema` | premio (objeto de ganar) | `lurufa` (ganar) + `kema` (objeto) | OK |
+| `lurufa-nume` | competencia (deseo de ganar) | `lurufa` (ganar) + `nume` (deseo) | OK |
+| `ranu-bosa` | accidente (rotura por azar) | `ranu` (azar) + `bosa` (rotura) | OK |
+| `pore-gore-pa` | incendio (fuego grande) | `pore` (fuego) + `gore` (tamaño) + `pa` (más) | OK |
+| `saku-galo` | rescate (ayuda en el peligro) | `saku` (alerta) + `galo` (ayuda) | OK |
+| `gune-sena` | punto (signo del fin) | `gune` (fin) + `sena` (signo) | OK |
+| `malo-sena` | coma (signo de pausa) | `malo` (calma) + `sena` (signo) | OK |
+| `faro-sena` | signo de exclamación (signo de fuerza) | `faro` (fuerza) + `sena` (signo) | OK |
+| `ka-sena` | signo de interrogación (signo de pregunta) | `ka` (pregunta) + `sena` (signo) | OK |
+| `reka-kopa` | comillas (contenedor de palabras) | `reka` (comunicación) + `kopa` (contenedor) | OK |
+| `selo-palo` | paréntesis (parte de círculo) | `selo` (círculo) + `palo` (parte) | OK |
+| `kado-palo` | corchete (parte de lado) | `kado` (lado geométrico) + `palo` (parte) | OK |
+| `kado-selo` | llave tipográfica (lado curvo) | `kado` (lado geométrico) + `selo` (círculo) | OK |
+| `palo-loka` | barra (línea que parte) | `palo` (parte) + `loka` (línea) | OK |
+| `sade-sena` | asterisco (signo de estrella) | `sade` (sol) + `sena` (signo) | OK |
+| `bo-sena` | arroba (signo de «en») | `bo` (interior) + `sena` (signo) | OK |
+| `raga-sena` | almohadilla (signo de filas) | `raga` (fila) + `sena` (signo) | OK |
+| `beka-nuse` | espacio en blanco (escritura vacía) | `beka` (escritura) + `nuse` (vacío) | OK |
+| `te-reka` | chat (comunicación ahora) | `te` (ahora) + `reka` (comunicación) | OK |
+| `pe-dese` | reserva / reservar (decisión antes) | `pe` (anterior) + `dese` (decisión) | OK |
+| `nara-gore-po` | enano/a (persona pequeña) | `nara` (persona) + `gore` (tamaño) + `po` (menos) | OK |
+| `rela-tabe` | página web (superficie de la red) | `rela` (unión) + `tabe` (superficie de apoyo) | OK |
+| `tera-dese` | cita (decisión de tiempo) | `tera` (tiempo) + `dese` (decisión) | OK |
+| `se-kore` | juntos (mismo lugar) | `se` (igualdad) + `kore` (lugar) | OK |
+| `gade-pema` | presentar a alguien (dar la identidad) | `gade` (identidad) + `pema` (dar) | OK |

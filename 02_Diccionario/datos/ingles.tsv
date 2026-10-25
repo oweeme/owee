@@ -547,6 +547,15 @@ kafotu	character
 komepu	engineer
 lusuga	flu / cold
 fudapa	allergy
+nokoma	virus
+semuku	fungus
+malasu	reptile
+gaboke	amphibian
+fetopu	guitar
+gesulo	piano
+tabepu	violin
+mukule	to swim
+mapube	chess
 ga-kado	triangle
 fo-kado	quadrilateral
 sa-kado	pentagon
@@ -750,7 +759,7 @@ mado-seta	code library
 mado-dare	to run
 beka-telo	to compile
 ke-no	else
-tare-no	false
+tare-no	false / lie
 telo-tera	event
 sape-mado	performance
 doke-kopa	file
@@ -986,7 +995,7 @@ sura-gura	breathing
 fame-bora-telo	digestion
 suma-dare	reproduction
 gore-pa-telo	growth
-suma-gore-po	microbe
+suma-gore-po	microbe / bacterium
 ku-kalu	insect
 luma-nado	nerve
 bora-faro	muscle
@@ -1019,7 +1028,7 @@ pase-pode	right to something
 kare-foma	justice
 bade-saro	government
 dese-saro	election
-dese-pema	vote
+dese-pema	vote / to vote
 foma-bosa	crime
 foma-nara	judge
 foma-fadu	police
@@ -1700,3 +1709,125 @@ kose-kuma	prison
 saro-sena	flag
 kuna-soma	religion
 fusu-doke	newspaper
+suma-doke-seta	DNA
+fame-dare	nutrition
+ruma-nobe	mammal
+gune-fese	extinction
+kuna-telo	weather
+suna-goda-pa	glacier
+kelo-kade	to recycle
+gabu-kelo	century
+tera-gule	ancient
+tera-tame	modern
+bade-gora-pa	empire
+saro-telo	revolution
+pe-foma	tradition
+mode-kelo	custom
+kore-telo	migration / to move house
+nara-bema	population
+tulupo-no	slavery
+tulupo-saro	independence
+mena-dore	monument
+mena-kuma	museum
+foma-lare	law (field)
+foma-dese	trial
+delo-bosa	theft / to steal
+dema-pema	punishment
+bade-palo	minister
+foma-naro	parliament
+rena-naro	political party
+bade-lare	politics
+saro-dese	democracy
+foma-choma	constitution
+kume-daro	business
+bado-fena	savings / to save money
+bado-pu	investment
+pema-bema	supply
+nume-bema	demand
+dema-tera	crisis
+bado-delo	credit
+bado-duma	transfer
+kume-palo	share
+fadu-fedo	insurance
+dore-dare	sculpture
+loke-kuma	theater
+gade-telo	actor / actress
+dulu-kuma	cinema
+mode-gade	style
+tada-sone	drum
+sura-sone	flute
+sone-naro	orchestra / band
+sone-tera	concert
+sone-nara	musician
+lafe-foma	ethics / morals
+rena-luma	consciousness
+rena-kore	mind
+suma-choma	soul / spirit
+soma-tora	meaning
+tare-ka	doubt / to doubt
+lafe-pema	respect
+lare-dune	psychology
+gade-dore	character / personality
+mune-doke	magazine
+kume-reka	advertisement
+ka-reka-seta	interview
+doke-nara	journalist
+sado-gura	patient
+bosa-sena	symptom
+bosa-lare	diagnosis
+sado-foma	treatment
+bora-bure	surgery
+sado-goda	pill
+sado-nado	injection
+bosa-bo	infection
+lena-gume-bosa	diabetes
+naku-pado	childbirth
+sado-kuma-po	clinic
+komepu-lare	engineering
+goda-dare	to build / construction
+taro-nado	tunnel
+dore-soma	design
+kuma-sena	blueprint
+goda-gume	cement
+menedu-faro	steel
+taro-luda	petroleum
+boga-pore	fuel gas
+pore-goda	coal
+kema-dare	industry
+dare-bema	production
+pore-gume	fuel
+bora-daro	sport
+du-naro	match
+kalu-selo	football
+lena-selo	ball
+go-kalu	to jump
+sape-lena	race
+faro-kuma	gym
+faro-fela	coach
+foma-loke	referee
+lurufa-nara	champion
+lurufa-kema	prize
+lurufa-nume	competition
+ranu-bosa	accident
+pore-gore-pa	fire (blaze)
+saku-galo	rescue
+gune-sena	period
+malo-sena	comma
+faro-sena	exclamation mark
+ka-sena	question mark
+reka-kopa	quotation marks
+selo-palo	parenthesis
+kado-palo	square bracket
+kado-selo	curly brace
+palo-loka	slash
+sade-sena	asterisk
+bo-sena	at sign
+raga-sena	hash sign
+beka-nuse	space
+te-reka	chat
+pe-dese	reservation / to book
+nara-gore-po	dwarf
+rela-tabe	web page
+tera-dese	appointment
+se-kore	together
+gade-pema	to introduce

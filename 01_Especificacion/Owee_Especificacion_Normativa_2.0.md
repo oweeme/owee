@@ -160,7 +160,7 @@ El operador de lugar va **después** del nombre: `me kuma bo` = estoy en casa.
 
 **Flujo de una palabra nueva:** PROPUESTA → VERIFICADA (fonología, partes existentes, sin colisión, sin sinónimo, ≤ 3 elementos) → APROBADA por el autor. El estado de cada forma está en `02_Diccionario/datos/`.
 
-**Léxico actual:** 233 formas base y 1 191 de vocabulario por áreas (matemáticas, física, química, astronomía, informática, interfaz, vida diaria, cocina, campo, cuerpo, gramática…), todas aprobadas o auditadas.
+**Léxico actual:** 233 formas base y 1 599 de vocabulario por áreas (vida diaria, personas, tecnología, viajes, cartas, literatura, fantasía, trabajo, salud, sociedad, ciencias, artes, deporte…), todas aprobadas o auditadas.
 
 ## 10. Nombres propios
 

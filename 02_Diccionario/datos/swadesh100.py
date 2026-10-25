@@ -7,7 +7,7 @@ LISTA = [
  ("yo","R me"),("tú","R tu"),("nosotros","R mene (prov.)"),("este","R kema-le"),("ese/aquel","R kema-lu"),("quién","R ka-nara"),("qué","R ka-kema"),("no","R no"),
  ("todo","R kema-fese"),("mucho","R bema-pa"),("uno","R be"),("dos","R du"),("grande","R gore-pa"),("largo","R dase-pa"),("pequeño","R gore-po"),
  ("mujer","R nara (neutro)"),("hombre","R nara (neutro)"),("persona","R nara"),("pez","R ruma-suna"),("pájaro","R ruma-kuna"),("perro","C ruma-lore (categoría) o ruma-taro"),
- ("piojo","F"),("árbol","R nelo-gore-pa"),("semilla","R pado-nelo"),("hoja","R nelo-maku"),("raíz (planta)","R nelo-taro"),("corteza","R nelo-lobe"),("piel","R bora-lobe"),("carne","R bora-gume"),("sangre","R suma-suna"),("hueso","R bora-kefe"),
+ ("piojo","R tufesa"),("árbol","R nelo-gore-pa"),("semilla","R pado-nelo"),("hoja","R nelo-maku"),("raíz (planta)","R nelo-taro"),("corteza","R nelo-lobe"),("piel","R bora-lobe"),("carne","R bora-gume"),("sangre","R suma-suna"),("hueso","R bora-kefe"),
  ("grasa","R bora-mase"),("huevo","R pado-kopa"),("cuerno","R tume-faro"),("cola","R bora-gune"),("pluma","R kafumo"),("cabello","R tume-nelo"),("cabeza","R tume"),("oreja","R sone-loke"),("ojo","R loke"),("nariz","R noke"),("boca","R sabe"),
  ("diente","R sabe-faro"),("lengua (órgano)","R sabe-duma"),("uña/garra","R maku-fese"),("pie","R kalu-gune"),("rodilla","R kalu-telo"),("mano","R maku"),("vientre","R bora-kopa"),("cuello","R tume-rela"),("pecho/seno","R doma-kopa"),("corazón","R doma"),
  ("hígado","R bora-gase"),("beber","C nobe pume"),("comer","R pume"),("morder","R sabe-bosa"),("ver","R luma-salo"),("oír","R luma-sone"),("saber","R lare"),("dormir","R sule"),("morir","C suma-gune"),

@@ -1,7 +1,10 @@
 # Owee --- Registro maestro del idioma, escritura y sistema digital
 
 **Estado:** consolidación de todo lo definido desde el inicio del
-proyecto hasta Owee Script / Owee Sans 3.0\
+proyecto. Las secciones 1–80 son el registro histórico (hasta Owee Script / Owee Sans 3.0);
+las secciones 81 en adelante registran cada decisión posterior, hasta Owee Script 3.4 y el lote 22.
+**La norma vigente resumida** está en la *Especificación normativa 2.0* (`01_Especificacion/`); el
+léxico vigente, en `02_Diccionario/datos/*.tsv`.\
 **Objetivo:** servir como fuente maestra de referencia para continuar el
 idioma, los cuadernos, el diccionario, la fuente, el IME y futuras
 implementaciones.
@@ -1738,4 +1741,12 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - **Ya no caben raíces de 2 sílabas** que respeten la distancia ≥ 2: desde este lote las raíces nuevas son de 3 sílabas (caso excepcional previsto en la norma de practicidad, §106).
 - **Elementos químicos (decisión, opción B):** símbolo internacional + nombre propio adaptado (`Okesekeno` O, `Karabono` C); los metales de uso diario tienen raíz propia (`patofe` oro, `pafade` plata, `menedu` hierro, `nopabu` cobre).
 - Detalle: `02_Diccionario/datos/lotes_21.md`.
+
+## §108 — Lote 22, decisiones cerradas y propuestas sin GitHub (2026-10-25)
+
+- **Lote 22 (131 términos aprobados):** estudio y profesiones (niveles 2 y 3 del plan de áreas): biología, clima, historia, derecho y política, economía y finanzas, artes, música, filosofía, medios, medicina, ingeniería, energía, deporte, seguridad; 9 raíces nuevas de 3 sílabas (virus, hongo, reptil, anfibio, guitarra, piano, violín, nadar, ajedrez) y el resto compuestos de 4 sílabas. Detalle: `02_Diccionario/datos/lotes_22.md`.
+- **Decisiones cerradas:** puntuación internacional también en Owee Script, con nombres Owee para cada signo; notación matemática internacional; los símbolos de código se leen por su nombre Owee; Gramática 1.1 confirmada por completo; elementos químicos (lote 21).
+- **Cobertura:** 43 áreas y 1 489 conceptos de uso diario, de estudio y profesional; Swadesh-100 y la lista básica de 114 conceptos, sin faltantes.
+- **Contribuir sin GitHub:** la página «Crear palabras» guarda las palabras del usuario en su navegador («Mis palabras»), las descarga y las envía por correo (dirección configurable en `CORREO_PROPUESTAS`) o como *issue* de GitHub. Guía en `CONTRIBUTING.md` y en la lección 3.8.
+- **Curso:** lecciones 2.13–2.15 (personas y fiestas, día y tecnología, viajes, trabajo y palabras de enlace) con el vocabulario de los lotes 20–22.
 

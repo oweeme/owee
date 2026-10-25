@@ -4,18 +4,18 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 
 | Área | Conceptos | Ya había | Añadido (lotes 9-14) | Falta |
 |---|---|---|---|---|
-| Hogar y casa | 84 | 52 | 32 | 0 |
+| Hogar y casa | 84 | 53 | 31 | 0 |
 | Informática y sistema | 85 | 42 | 40 | 3 |
-| Comprar y vender | 62 | 27 | 32 | 3 |
+| Comprar y vender | 62 | 31 | 31 | 0 |
 | Cuerpo humano | 86 | 42 | 43 | 1 |
 | Cocina y alimentos | 121 | 93 | 28 | 0 |
 | Agricultura y campo | 74 | 39 | 32 | 3 |
-| Saludos y vida social | 43 | 34 | 2 | 7 |
+| Saludos y vida social | 43 | 36 | 2 | 5 |
 | Personas | 20 | 16 | 0 | 4 |
 | Ropa | 38 | 36 | 0 | 2 |
 | Tecnología del hogar | 36 | 25 | 9 | 2 |
-| Internet y correo | 32 | 22 | 5 | 5 |
-| Viajes | 31 | 30 | 0 | 1 |
+| Internet y correo | 32 | 24 | 5 | 3 |
+| Viajes | 31 | 31 | 0 | 0 |
 | Jardinería | 24 | 20 | 3 | 1 |
 | Animales de casa y de campo | 20 | 18 | 2 | 0 |
 | Animales salvajes | 24 | 24 | 0 | 0 |
@@ -23,30 +23,46 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | Día a día | 33 | 27 | 3 | 3 |
 | Cartas y comunicación | 30 | 22 | 0 | 8 |
 | Literatura | 28 | 26 | 0 | 2 |
-| Fantasía y relatos | 32 | 30 | 0 | 2 |
-| Trabajo y profesiones | 34 | 31 | 0 | 3 |
+| Fantasía y relatos | 32 | 31 | 0 | 1 |
+| Trabajo y profesiones | 34 | 32 | 0 | 2 |
 | Salud | 16 | 15 | 0 | 1 |
 | Educación | 17 | 15 | 0 | 2 |
-| Sociedad | 23 | 22 | 0 | 1 |
+| Sociedad | 23 | 23 | 0 | 0 |
 | Verbos comunes | 61 | 49 | 2 | 10 |
-| Adjetivos comunes | 48 | 34 | 0 | 14 |
+| Adjetivos comunes | 48 | 35 | 0 | 13 |
 | Palabras de enlace | 25 | 24 | 0 | 1 |
-| **Total** | 1143 | 831 | 233 | 79 |
+| Biología | 35 | 30 | 1 | 4 |
+| Tierra y clima | 30 | 28 | 0 | 2 |
+| Historia y sociedad | 25 | 24 | 0 | 1 |
+| Derecho y política | 28 | 28 | 0 | 0 |
+| Economía | 25 | 24 | 1 | 0 |
+| Artes | 18 | 15 | 0 | 3 |
+| Música | 17 | 16 | 0 | 1 |
+| Filosofía y mente | 26 | 23 | 0 | 3 |
+| Medios | 12 | 10 | 2 | 0 |
+| Medicina | 28 | 26 | 2 | 0 |
+| Ingeniería y construcción | 22 | 21 | 1 | 0 |
+| Energía e industria | 17 | 16 | 0 | 1 |
+| Deporte y juegos | 20 | 20 | 0 | 0 |
+| Seguridad y emergencias | 12 | 10 | 1 | 1 |
+| Finanzas | 16 | 11 | 5 | 0 |
+| Signos y puntuación | 15 | 14 | 0 | 1 |
+| **Total** | 1489 | 1161 | 244 | 84 |
 
 ## Lo que falta (por decidir en el próximo lote)
 
 - **Hogar y casa:** —
 - **Informática y sistema:** memoria virtual, arranque, pila
-- **Comprar y vender:** negocio, oferta, crédito
+- **Comprar y vender:** —
 - **Cuerpo humano:** diarrea
 - **Cocina y alimentos:** —
 - **Agricultura y campo:** lago, yunta, cooperativa
-- **Saludos y vida social:** por favor, hola, brindis, presentar, encuentro, cita, juntos
+- **Saludos y vida social:** por favor, hola, brindis, presentar, encuentro
 - **Personas:** señor, señora, gente, gemelos
 - **Ropa:** guantes, manga
 - **Tecnología del hogar:** aire acondicionado, portátil
-- **Internet y correo:** página web, chat, seguir, sello, contestar
-- **Viajes:** reserva
+- **Internet y correo:** seguir, sello, contestar
+- **Viajes:** —
 - **Jardinería:** plantar
 - **Animales de casa y de campo:** —
 - **Animales salvajes:** —
@@ -54,14 +70,30 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 - **Día a día:** ducharse, desayunar, peinarse
 - **Cartas y comunicación:** escribir, recordar, cariño, respuesta, contar, desear, decir, traducir
 - **Literatura:** final, principio
-- **Fantasía y relatos:** enano, duende
-- **Trabajo y profesiones:** empleado, sueldo, entrevista
+- **Fantasía y relatos:** duende
+- **Trabajo y profesiones:** empleado, sueldo
 - **Salud:** sano
 - **Educación:** estudiante, respuesta
-- **Sociedad:** derecho
+- **Sociedad:** —
 - **Verbos comunes:** decir, recordar, necesitar, gustar, elegir, vivir, morir, nacer, leer, escribir
-- **Adjetivos comunes:** posible, necesario, seguro, verdadero, correcto, limpio, sucio, feliz, triste, sano, abierto, cerrado, igual, mismo
+- **Adjetivos comunes:** posible, necesario, verdadero, correcto, limpio, sucio, feliz, triste, sano, abierto, cerrado, igual, mismo
 - **Palabras de enlace:** porque
+- **Biología:** ADN, tejido, ave, nacer
+- **Tierra y clima:** lago, roca
+- **Historia y sociedad:** nación
+- **Derecho y política:** —
+- **Economía:** —
+- **Artes:** danza, obra, belleza
+- **Música:** instrumento
+- **Filosofía y mente:** bien, mal, creencia
+- **Medios:** —
+- **Medicina:** —
+- **Ingeniería y construcción:** —
+- **Energía e industria:** gas
+- **Deporte y juegos:** —
+- **Seguridad y emergencias:** herido
+- **Finanzas:** —
+- **Signos y puntuación:** exclamación
 
 ## Hogar y casa
 
@@ -123,7 +155,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | alquiler | nuevo | kuma-fedo-kelo |
 | dueño | nuevo | pase-nara |
 | vecino | había | kuma-le-nara |
-| mudarse | nuevo | kuma-telo |
+| mudarse | había | kore-telo |
 | limpiar | nuevo | gase-dare |
 | barrer | nuevo | dabo-delo |
 | lavar | había | suna-gase |
@@ -269,7 +301,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | descuento | nuevo | bado-po-dare |
 | regatear | nuevo | bado-reka |
 | préstamo | nuevo | bado-pema-pu |
-| ahorrar | nuevo | bado-fena-pu |
+| ahorrar | había | bado-fena |
 | banco | había | bado-kopa |
 | cajero | nuevo | bado-kopa-nara |
 | pesar | nuevo | gama-mede |
@@ -284,7 +316,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | garantía | nuevo | fadu-beka |
 | devolver | nuevo | telo-pema |
 | trueque | nuevo | kume-fedo-no |
-| negocio | falta |  |
+| negocio | había | kume-daro |
 | contabilidad | nuevo | bado-mado |
 | presupuesto | nuevo | bado-pu-seta |
 | pedido | nuevo | kera-fedo-nume |
@@ -300,10 +332,10 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | producto | había | dare-kema |
 | calidad | había | lafe |
 | cantidad | había | bema |
-| oferta | falta |  |
+| oferta | había | pema-bema |
 | factura | había | kume-beka |
 | interés | había | bado-pa-tera |
-| crédito | falta |  |
+| crédito | había | bado-delo |
 | efectivo | había | maku-bado |
 | propina | había | lena-fedo |
 | supermercado | había | kume-kuma-gore |
@@ -650,8 +682,8 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | presentar | falta |  |
 | conocer | había | lare |
 | encuentro | falta |  |
-| cita | falta |  |
-| juntos | falta |  |
+| cita | había | tera-dese |
+| juntos | había | se-kore |
 
 ## Personas
 
@@ -770,7 +802,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | archivo adjunto | había | doke-rela |
 | correo postal | había | kafosa-kuma |
 | red social | había | kumedo |
-| página web | falta |  |
+| página web | había | rela-tabe |
 | sitio web | había | rela-kuma |
 | internet | había | gora-rela |
 | red | había | rela-doke, reku |
@@ -786,7 +818,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | foto | había | gogu |
 | llamada | había | shuse |
 | videollamada | había | dulu-shuse |
-| chat | falta |  |
+| chat | había | te-reka |
 | publicar | había | naro-pema |
 | compartir | había | saro-pema |
 | seguir | falta |  |
@@ -827,7 +859,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | montaña | había | taro-go |
 | frontera | había | saro-fese |
 | equipaje | había | pubu-kema |
-| reserva | falta |  |
+| reserva | había | pe-dese |
 | guía | había | fela-doke |
 | llegar | había | duma-gune |
 | salir | había | duma-ba |
@@ -1017,7 +1049,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | Concepto | Estado | Palabra |
 |---|---|---|
 | libro | había | beka-seta |
-| página | había | lodu-tabe |
+| página | había | lodu-tabe, rela-tabe |
 | capítulo | había | lodu-palo |
 | título | había | go-sena |
 | autor | había | beka-nara |
@@ -1064,7 +1096,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | escudo | había | fadu-tabe |
 | monstruo | había | bagefe |
 | gigante | había | nara-gore |
-| enano | falta |  |
+| enano | había | nara-gore-po |
 | hada | había | gutomu |
 | duende | falta |  |
 | tesoro | había | bado-seta |
@@ -1095,7 +1127,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | informe | había | daro-doke |
 | horario | había | tera-foma |
 | sueldo | falta |  |
-| entrevista | falta |  |
+| entrevista | había | ka-reka-seta |
 | profesión | había | daro-gade |
 | médico | había | sado-nara |
 | enfermero | había | sado-galo |
@@ -1176,7 +1208,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | presidente | había | saro-bade |
 | voto | había | dese-pema |
 | elección | había | dese-saro |
-| derecho | falta |  |
+| derecho | había | foma-lare |
 | justicia | había | kare-foma |
 | policía | había | foma-fadu |
 | juez | había | foma-nara |
@@ -1280,7 +1312,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | importante | había | paku-pa |
 | posible | falta |  |
 | necesario | falta |  |
-| seguro | falta |  |
+| seguro | había | fadu-fedo |
 | verdadero | falta |  |
 | falso | había | tare-no |
 | correcto | falta |  |
@@ -1340,3 +1372,429 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | antes | había | pe-tera |
 | además | había | re-pa |
 | quizás | había | sufugo |
+
+## Biología
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| célula | había | suma-kedo |
+| ADN | falta |  |
+| gen | había | suma-doke |
+| especie | había | suma-seta |
+| evolución | había | suma-telo-tera |
+| ecosistema | había | suma-rela |
+| bacteria | había | suma-gore-po |
+| virus | había | nokoma |
+| hongo | había | semuku |
+| órgano | nuevo | bora-palo |
+| tejido | falta |  |
+| sangre | había | suma-suna |
+| hueso | había | bora-kefe |
+| músculo | había | bora-faro |
+| nervio | había | luma-nado |
+| cerebro | había | tume-rena |
+| reproducción | había | suma-dare |
+| respiración | había | sura-gura |
+| digestión | había | fame-bora-telo |
+| alimentación | había | fame-dare |
+| planta | había | nelo |
+| animal | había | ruma, ruma-daro, ruma-fame |
+| mamífero | había | ruma-nobe |
+| ave | falta |  |
+| pez | había | ruma-suna |
+| reptil | había | malasu |
+| anfibio | había | gaboke |
+| insecto | había | ku-kalu |
+| selva | había | nelo-saro-suna |
+| océano | había | suna-gora |
+| extinción | había | gune-fese |
+| vida | había | suma |
+| muerte | había | suma-gune |
+| nacer | falta |  |
+| crecer | había | gore-telo |
+
+## Tierra y clima
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| tiempo atmosférico | había | kuna-telo |
+| clima | había | sura-fure-tera |
+| lluvia | había | kuna-suna |
+| nieve | había | dupega |
+| viento | había | sura-duma |
+| nube | había | sura-suna |
+| tormenta | había | kuna-faro-suna |
+| trueno | había | kuna-sone |
+| rayo | había | kuna-faro |
+| temperatura | había | fure |
+| estación | había | sade-kelo-palo, duma-kuma |
+| volcán | había | taro-pore |
+| terremoto | había | taro-faro-duma |
+| montaña | había | taro-go |
+| valle | había | taro-gu |
+| río | había | suna-duma |
+| lago | falta |  |
+| mar | había | suna-gore-pa |
+| océano | había | suna-gora |
+| isla | había | suna-taro |
+| desierto | había | taro-suna-nuse |
+| bosque | había | nelo-saro |
+| roca | falta |  |
+| mineral | había | taro-gume |
+| suelo | había | kuma-tabe |
+| glaciar | había | suna-goda-pa |
+| sequía | había | suna-nuse-dure |
+| inundación | había | suna-taro-mude |
+| contaminación | había | dabo-gora |
+| reciclar | había | kelo-kade |
+
+## Historia y sociedad
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| historia | había | mena-tera |
+| pasado | había | pe |
+| siglo | había | gabu-kelo |
+| época | había | suna-tera |
+| antiguo | había | tera-gule |
+| moderno | había | tera-tame |
+| guerra | había | naro-bosa |
+| paz | había | malo-saro |
+| imperio | había | bade-gora-pa |
+| revolución | había | saro-telo |
+| pueblo | había | kuma-seta |
+| cultura | había | saro-mena |
+| tradición | había | pe-foma |
+| costumbre | había | mode-kelo |
+| ciudad | había | kuma-seta |
+| país | había | saro-kore |
+| nación | falta |  |
+| frontera | había | saro-fese |
+| migración | había | kore-telo |
+| población | había | nara-bema |
+| trabajo | había | daro |
+| esclavitud | había | tulupo-no |
+| independencia | había | tulupo-saro |
+| monumento | había | mena-dore |
+| museo | había | mena-kuma |
+
+## Derecho y política
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| ley | había | foma-bade |
+| derecho | había | foma-lare |
+| deber | había | pelo |
+| justicia | había | kare-foma |
+| juez | había | foma-nara |
+| abogado | había | foma-galo |
+| juicio | había | foma-dese |
+| delito | había | foma-bosa |
+| crimen | había | foma-bosa |
+| robo | había | delo-bosa |
+| castigo | había | dema-pema |
+| cárcel | había | kose-kuma |
+| policía | había | foma-fadu |
+| gobierno | había | bade-saro |
+| estado | había | te-dore |
+| presidente | había | saro-bade |
+| ministro | había | bade-palo |
+| parlamento | había | foma-naro |
+| elección | había | dese-saro |
+| votar | había | dese-pema |
+| partido | había | du-naro |
+| política | había | bade-lare |
+| democracia | había | saro-dese |
+| constitución | había | foma-choma |
+| libertad | había | tulupo, duma-pode |
+| igualdad | había | se |
+| ciudadano | había | saro-nara |
+| impuesto | había | bade-fedo |
+
+## Economía
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| economía | había | mase-kume |
+| dinero | había | bado-feke |
+| precio | había | bado-bema |
+| mercado | había | kume-kore |
+| empresa | había | daro-saro |
+| negocio | había | kume-daro |
+| trabajo | había | daro |
+| salario | había | daro-fedo |
+| ganancia | había | bado-kera |
+| pérdida | había | bado-gune |
+| deuda | había | fedo-pu |
+| préstamo | nuevo | bado-pema-pu |
+| interés | había | bado-pa-tera |
+| banco | había | bado-kopa |
+| ahorro | había | bado-fena |
+| inversión | había | bado-pu |
+| impuesto | había | bade-fedo |
+| comercio | había | kume-fedo |
+| exportar | había | doke-duma-ba |
+| importar | había | doke-duma-bo |
+| oferta | había | pema-bema |
+| demanda | había | nume-bema |
+| pobreza | había | mase-nuse |
+| riqueza | había | mase-mude |
+| crisis | había | dema-tera |
+
+## Artes
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| arte | había | lena-dare |
+| artista | había | lena-dare-nara |
+| pintura | había | salo-sena-dare |
+| dibujo | había | salo-sena-dare |
+| escultura | había | dore-dare |
+| teatro | había | loke-kuma |
+| actor | había | gade-telo |
+| cine | había | dulu-kuma |
+| película | había | dulu |
+| música | había | lena-sone |
+| danza | falta |  |
+| fotografía | había | gogu |
+| museo | había | mena-kuma |
+| obra | falta |  |
+| color | había | salo-lafe |
+| forma | había | dore |
+| estilo | había | mode-gade |
+| belleza | falta |  |
+
+## Música
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| música | había | lena-sone |
+| canción | había | lenapu |
+| cantar | había | sabe-sone |
+| melodía | había | sone-duma |
+| ritmo | había | sone-kelo |
+| armonía | había | sone-rela |
+| nota | había | lafe-banu |
+| instrumento | falta |  |
+| guitarra | había | fetopu |
+| piano | había | gesulo |
+| tambor | había | tada-sone |
+| flauta | había | sura-sone |
+| violín | había | tabepu |
+| orquesta | había | sone-naro |
+| concierto | había | sone-tera |
+| cantante | había | sabe-sone-nara |
+| músico | había | sone-nara |
+
+## Filosofía y mente
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| filosofía | había | rena-lare |
+| pensar | había | rena |
+| idea | había | soma |
+| razón | había | kasu, rata |
+| verdad | había | tare |
+| mentira | había | tare-no |
+| bien | falta |  |
+| mal | falta |  |
+| ética | había | lafe-foma |
+| moral | había | lafe-foma |
+| libertad | había | tulupo, duma-pode |
+| conciencia | había | rena-luma |
+| mente | había | rena-kore |
+| alma | había | suma-choma |
+| sentido | había | soma-tora |
+| duda | había | tare-ka |
+| pregunta | había | ka |
+| creencia | falta |  |
+| valor | había | bado |
+| respeto | había | lafe-pema |
+| justicia | había | kare-foma |
+| psicología | había | lare-dune |
+| memoria | había | mena |
+| emoción | había | doma-duma |
+| carácter | había | gade-dore |
+| personalidad | había | gade-dore |
+
+## Medios
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| red social | había | kumedo |
+| noticia | había | tame-doke |
+| periódico | había | fusu-doke |
+| revista | había | mune-doke |
+| radio | nuevo | sone-meka |
+| televisión | había | chegu |
+| internet | había | gora-rela |
+| mensaje | nuevo | reka-sena |
+| publicar | había | naro-pema |
+| anuncio | había | kume-reka |
+| entrevista | había | ka-reka-seta |
+| periodista | había | doke-nara |
+
+## Medicina
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| medicina | había | sado-feke |
+| médico | había | sado-nara |
+| enfermero | había | sado-galo |
+| hospital | había | sado-kuma |
+| clínica | había | sado-kuma-po |
+| paciente | había | sado-gura |
+| enfermedad | había | sado-bosa |
+| síntoma | había | bosa-sena |
+| diagnóstico | había | bosa-lare |
+| tratamiento | había | sado-foma |
+| cirugía | había | bora-bure |
+| operación | había | bora-bure |
+| receta | nuevo | fame-foma |
+| pastilla | había | sado-goda |
+| vacuna | había | sado-fadu-feke |
+| inyección | había | sado-nado |
+| sangre | había | suma-suna |
+| presión | había | pesa |
+| corazón | había | doma |
+| dolor | había | bosa-dune |
+| fiebre | había | bora-fure-pa |
+| herida | había | bora-bosa |
+| infección | había | bosa-bo |
+| cáncer | había | suna-pado |
+| diabetes | había | lena-gume-bosa |
+| embarazo | nuevo | naku-bo |
+| parto | había | naku-pado |
+| salud | había | sado |
+
+## Ingeniería y construcción
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| ingeniería | había | komepu-lare |
+| ingeniero | había | komepu |
+| construir | había | goda-dare |
+| construcción | había | goda-dare |
+| edificio | había | kuma-gore-pa |
+| puente | había | suna-go-kore |
+| camino | había | duma-kore |
+| túnel | había | taro-nado |
+| máquina | había | meka, meka-mado |
+| motor | había | meka-enu |
+| herramienta | había | feke |
+| diseño | había | dore-soma |
+| plano | había | kuma-sena |
+| medir | había | mede |
+| cemento | había | goda-gume |
+| ladrillo | había | toluru |
+| madera | había | tapamu |
+| metal | había | rolefa |
+| acero | había | menedu-faro |
+| vidrio | había | soforu |
+| electricidad | había | eleka |
+| cable | nuevo | kura-rela |
+
+## Energía e industria
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| energía | había | enu |
+| electricidad | había | eleka |
+| petróleo | había | taro-luda |
+| gas | falta |  |
+| carbón | había | pore-goda |
+| sol | había | sade |
+| viento | había | sura-duma |
+| agua | había | suna |
+| fábrica | había | dare-kema-kuma |
+| industria | había | kema-dare |
+| producción | había | dare-bema |
+| máquina | había | meka, meka-mado |
+| motor | había | meka-enu |
+| combustible | había | pore-gume |
+| batería | había | enu-kopa |
+| contaminación | había | dabo-gora |
+| reciclaje | había | kade-pu-kelo |
+
+## Deporte y juegos
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| deporte | había | bora-daro |
+| juego | había | lena-duma |
+| jugar | había | lena-duma |
+| equipo | había | daro-naro |
+| partido | había | du-naro |
+| ganar | había | lurufa |
+| perder | había | pase-no |
+| fútbol | había | kalu-selo |
+| pelota | había | lena-selo |
+| correr | había | kalu-sape |
+| nadar | había | mukule |
+| saltar | había | go-kalu |
+| carrera | había | sape-lena |
+| gimnasio | había | faro-kuma |
+| entrenador | había | faro-fela |
+| árbitro | había | foma-loke |
+| campeón | había | lurufa-nara |
+| premio | había | lurufa-kema |
+| competencia | había | lurufa-nume |
+| ajedrez | había | mapube |
+
+## Seguridad y emergencias
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| ayuda | había | galo |
+| emergencia | había | sape-moke |
+| peligro | había | saku-kasu |
+| accidente | había | ranu-bosa |
+| incendio | había | pore-gore-pa |
+| bombero | había | pore-gune-nara |
+| policía | había | foma-fadu |
+| ambulancia | había | sado-meka |
+| rescate | había | saku-galo |
+| seguridad | había | fadu |
+| alarma | nuevo | sone-saku |
+| herido | falta |  |
+
+## Finanzas
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| banco | había | bado-kopa |
+| cuenta | nuevo | nara-kade-gade |
+| ahorro | había | bado-fena |
+| préstamo | nuevo | bado-pema-pu |
+| crédito | había | bado-delo |
+| interés | había | bado-pa-tera |
+| tarjeta | nuevo | fedo-kema |
+| pago | había | fedo |
+| transferencia | había | bado-duma |
+| inversión | había | bado-pu |
+| acción | había | kume-palo |
+| seguro | había | fadu-fedo |
+| presupuesto | nuevo | bado-pu-seta |
+| contabilidad | nuevo | bado-mado |
+| factura | había | kume-beka |
+| impuesto | había | bade-fedo |
+
+## Signos y puntuación
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| punto | había | gune-sena |
+| coma | había | malo-sena |
+| pregunta | había | ka |
+| exclamación | falta |  |
+| comillas | había | reka-kopa |
+| paréntesis | había | selo-palo |
+| guion | había | rela-sena |
+| barra | había | palo-loka |
+| llave | había | nado-feke |
+| corchete | había | kado-palo |
+| asterisco | había | sade-sena |
+| arroba | había | bo-sena |
+| almohadilla | había | raga-sena |
+| espacio | había | nuse-sena |
+| línea | había | loka |
