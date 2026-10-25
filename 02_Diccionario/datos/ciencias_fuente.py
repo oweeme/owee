@@ -1474,3 +1474,14 @@ COMPUESTOS += [
  ("se-kore","juntos (mismo lugar)",L22,"Saludos"),
  ("gade-pema","presentar a alguien (dar la identidad)",L22,"Saludos"),
 ]
+
+# lote 23 (2026-10-25): certificación y enseñanza. Compuestos de 2 elementos; ver 03_Material_Ensenanza/Certificacion.
+L23 = "Certificación y enseñanza (lote 23)"
+COMPUESTOS += [
+ ("lare-sena","certificado (signo del saber)",L23,"Certificación"),
+ ("mede-nara","examinador/a (persona que mide)",L23,"Certificación"),
+ ("nelo-tame","brote (planta nueva)",L23,"Naturaleza"),
+ ("fela-foma","didáctica (reglas de enseñar)",L23,"Certificación"),
+ ("fela-dure","clase / lección (duración de enseñar)",L23,"Certificación"),
+]
+

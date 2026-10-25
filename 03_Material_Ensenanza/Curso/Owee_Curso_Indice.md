@@ -27,6 +27,7 @@ Aprende Owee **sumergiéndote en el idioma**: cada lección te muestra frases re
 - [Diccionario](diccionario.html): todas las palabras con glifo, romano, pronunciación y traducción.
 - [Literatura y canciones](literatura.html): poemas, mitos, cuentos y música.
 - [Crear palabras](crear.html): prueba y propón palabras nuevas para tu entorno.
+- [Certificación y maestros](certificacion.html): niveles, exámenes modelo, certificados y requisitos para enseñar.
 
 ## Modo inmersión
 

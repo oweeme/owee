@@ -368,7 +368,7 @@ def md(text, convert=True):
 # ---------------------------------------------------------------- plantilla
 NAV = [("index.html", "Inicio", "pado"),
        ("Aprender", [("curso.html", "Curso por niveles", "tase-kelo"), ("escritura.html", "Escritura", "beka"), ("pronunciacion.html", "Pronunciación", "sone"),
-                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor", "telo-reka"), ("calculadora.html", "Calculadora de números", "banu-meka"), ("teclado.html", "Teclado Owee", "maku-tabe"), ("nombres.html", "Nombres propios", "sena-nara"), ("crear.html", "Crear palabras", "reka-palo dare")], "tase"),
+                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor", "telo-reka"), ("calculadora.html", "Calculadora de números", "banu-meka"), ("teclado.html", "Teclado Owee", "maku-tabe"), ("nombres.html", "Nombres propios", "sena-nara"), ("crear.html", "Crear palabras", "reka-palo dare"), ("certificacion.html", "Certificación y maestros", "lare-sena")], "tase"),
        ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
        ("Ciencias", [("matematicas.html", "Matemáticas", "lare-banu"), ("fisica.html", "Física", "lare-fasa"), ("quimica.html", "Química", "lare-gume-rela"), ("astronomia.html", "Astronomía y astrología", "lare-sade-mune"),
                      ("informatica.html", "Informática", "lare-meka")], "lare"),
@@ -822,6 +822,11 @@ GUIAS = [
     ("informatica.html", "Informática", ROOT / "03_Material_Ensenanza/Informatica/Owee_Informatica_0.1_Borrador.md",
      "Material nuevo con una sola raíz nueva (bomo, «bug»); el resto son compuestos. Términos aprobados.", False),
     ("pronunciacion.html", "Pronunciación", ROOT / "03_Material_Ensenanza/Pronunciacion/Owee_Pronunciacion_1.0.md", None, True),
+    ("certificacion.html", "Certificación y maestros", ROOT / "03_Material_Ensenanza/Certificacion/Owee_Certificacion_y_Maestros.md", None, False),
+    ("examen-infantil.html", "Exámenes infantiles", ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examenes_Infantiles.md", None, False),
+    ("examen-nivel-0-1.html", "Exámenes de Nivel 0 y 1", ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_0_y_1.md", None, False),
+    ("examen-nivel-2-3.html", "Exámenes de Nivel 2 y 3", ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_2_y_3.md", None, False),
+    ("examen-nivel-4-maestros.html", "Examen de Nivel 4 y de maestro", ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_4_y_Maestros.md", None, False),
     ("gramatica.html", "Gramática 1.1", ROOT / "03_Material_Ensenanza/Gramatica/Owee_Gramatica_1.1_Propuesta.md",
      None, False),
 ]
@@ -833,7 +838,7 @@ def build_ciencias():
         aviso = f'<blockquote><p><strong>Borrador propuesto.</strong> {borrador}</p></blockquote>' if borrador else ""
         extra = f'<p class="noprint"><a href="documentos/{path.with_suffix(".pdf").name}">Descargar PDF imprimible</a></p>' if pdf else ""
         body = f'<div class="layout"><aside class="toc">{t}</aside><article>{aviso}{h}{extra}</article></div>'
-        page(fname, nombre, body, "curso.html" if fname.startswith("nivel-") else fname)
+        page(fname, nombre, body, "curso.html" if fname.startswith("nivel-") else ("certificacion.html" if fname.startswith("examen-") else fname))
         if pdf:
             css = "<style>@page{size:A4;margin:16mm 15mm}body{font-size:11pt}.o{font-size:14pt}td .o{font-size:13pt}</style>"
             page(fname.replace(".html", "-imprimir.html"), nombre + " (impresión)", aviso + h, extra_head=css, chrome=False)
@@ -855,6 +860,12 @@ DOCUMENTOS = [
     ([LEE / "Owee_Caligrafia_Escolar_3.4.md"], LEE / "Owee_Caligrafia_Escolar_3.4.pdf", "Caligrafía escolar", "Trazar Owee Script 3.4: vocales, sílabas, palabras y frases"),
     ([MAT_ / "Owee_Matematicas_2.0_Web.md"], MAT_ / "Owee_Matematicas_2.0_Guia_Completa_de_Estudio.pdf", "Matemáticas 2.0", "Guía completa: números, aritmética, álgebra, geometría, cálculo y estadística"),
     ([MAT_ / "Owee_Matematicas_2.0_Cuaderno_Escolar.md"], MAT_ / "Owee_Matematicas_2.0_Cuaderno_Escolar.pdf", "Cuaderno escolar de matemáticas", "Contar, sumar, restar, multiplicar y dividir en Owee"),
+    ([ROOT / "03_Material_Ensenanza/Certificacion/Owee_Certificacion_y_Maestros.md"], ROOT / "03_Material_Ensenanza/Certificacion/Owee_Certificacion_y_Maestros.pdf", "Certificación y maestros",
+     "Niveles infantiles y de adultos, exámenes, requisitos para maestros y examinadores"),
+    ([ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examenes_Infantiles.md"], ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examenes_Infantiles.pdf", "Exámenes infantiles", "Semilla, Brote y Árbol · 5 a 12 años · con clave para el examinador"),
+    ([ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_0_y_1.md"], ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_0_y_1.pdf", "Exámenes de Nivel 0 y 1", "Inicial y primeras frases · con clave para el examinador"),
+    ([ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_2_y_3.md"], ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_2_y_3.pdf", "Exámenes de Nivel 2 y 3", "Conversar · leer y crear · con clave para el examinador"),
+    ([ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_4_y_Maestros.md"], ROOT / "03_Material_Ensenanza/Certificacion/Owee_Examen_Nivel_4_y_Maestros.pdf", "Examen de Nivel 4 y de maestro", "Dominio del idioma · lección observada y didáctica · con clave"),
     ([ROOT / "03_Material_Ensenanza/Fisica/Owee_Fisica_2.0_Web.md"], ROOT / "03_Material_Ensenanza/Fisica/Owee_Fisica_2.0_Guia_Completa_de_Estudio.pdf", "Física 2.0",
      "Guía completa: de la cinemática a la relatividad"),
 ]
@@ -1196,6 +1207,46 @@ $('otras').onclick=sug;window.addEventListener('load',function(){sug();prueba()}
     body = body.replace("__CORREO__", f' <a class="btn" id="correo" data-a="{esc(correo)}" href="#">Enviar por correo</a>' if correo else "")
     page("crear.html", "Crear palabras", body, "crear.html")
 
+def build_certificados():
+    """Registro público de certificados (03_Material_Ensenanza/Certificacion/certificados.tsv) y certificado imprimible."""
+    f = ROOT / "03_Material_Ensenanza/Certificacion/certificados.tsv"
+    filas = [l.split("\t") for l in f.read_text(encoding="utf8").splitlines()[1:] if l.strip()] if f.exists() else []
+    tr = "".join(f'<tr data-c="{esc(r[0].lower())}"><td><code>{esc(r[0])}</code></td><td>{esc(r[1])}</td><td>{esc(r[2])}</td><td>{esc(r[3])}</td><td>{esc(r[4])}</td></tr>' for r in filas)
+    tabla = (f'<div class="tw"><table id="reg"><thead><tr><th>Código</th><th>Nombre</th><th>Nivel</th><th>Fecha</th><th>Examinador</th></tr></thead><tbody>{tr}</tbody></table></div>'
+             if filas else "<p><em>Todavía no se han emitido certificados.</em> Los primeros aparecerán aquí cuando el examinador fundador certifique a los primeros maestros y alumnos.</p>")
+    body = f"""<h1>Registro público de certificados</h1>
+<p>Un certificado Owee <strong>solo es válido si su código figura en este registro</strong>. Escribe el código para comprobarlo. Cómo obtener uno: <a href="certificacion.html">Certificación y maestros</a>.</p>
+<div class="controls"><input type="search" id="cod" placeholder="OWEE-2026-0001" aria-label="Código del certificado"></div>
+<p id="res"></p>{tabla}
+<p><small>Datos publicados: código, nombre, nivel, fecha y examinador. Registro: <code>03_Material_Ensenanza/Certificacion/certificados.tsv</code>.</small></p>
+<script>document.getElementById('cod').addEventListener('input',function(){{var q=this.value.trim().toLowerCase(),n=0;
+document.querySelectorAll('#reg tbody tr').forEach(function(t){{var ok=!q||t.dataset.c.indexOf(q)>=0;t.style.display=ok?'':'none';if(ok&&q)n++}});
+document.getElementById('res').textContent=q?(n?'✓ Certificado encontrado en el registro.':'✗ Ese código no está en el registro.'):''}});</script>"""
+    page("certificados.html", "Registro de certificados", body, "certificacion.html")
+    niveles = ["Infantil 1 — Semilla", "Infantil 2 — Brote", "Infantil 3 — Árbol", "Nivel 0 — Inicial", "Nivel 1 — Primeras frases (A1)", "Nivel 2 — Conversar (A2)",
+               "Nivel 3 — Leer y crear (B1)", "Nivel 4 — Dominio (B2)", "Maestro infantil", "Maestro de jóvenes y adultos", "Examinador"]
+    opts = "".join(f"<option>{esc(n)}</option>" for n in niveles)
+    body = f"""<div class="noprint"><h1>Certificado imprimible</h1>
+<p>El examinador completa los datos y lo imprime (o lo guarda en PDF). <strong>El certificado solo es válido si su código está en el <a href="certificados.html">registro público</a>.</strong></p>
+<div class="formu"><label>Nombre <input id="n" placeholder="Ana Pérez"></label><label>Nombre en Owee (adaptado) <input id="no" placeholder="Ana Pereso"></label>
+<label>Nivel <select id="ni">{opts}</select></label><label>Fecha <input id="f" placeholder="25/10/2026"></label>
+<label>Examinador <input id="e" placeholder="Hector Martinez"></label><label>Código <input id="c" placeholder="OWEE-2026-0001"></label></div>
+<p><button class="btn" onclick="print()">Imprimir / PDF</button></p></div>
+<section class="cert"><div class="o big" data-o="ouee">ouee</div><h2>Certificado de conocimiento del idioma Owee</h2>
+<div class="o" data-o="lare-sena">lare-sena</div><p>Se certifica que</p><p class="nom" id="vn">—</p><p class="o" id="vo" data-o=""></p>
+<p>aprobó el examen de</p><p class="niv" id="vni">—</p><p id="vf">—</p>
+<div class="firmas"><div><span id="ve">—</span><small>Examinador</small></div><div><code id="vc">—</code><small>Código · verificar en oweeme.github.io/owee/certificados.html</small></div></div></section>
+<style>.formu{{display:grid;gap:10px;max-width:640px;margin:14px 0}}.formu label{{display:flex;flex-direction:column;gap:4px;color:var(--ink2);font-size:.9rem}}.formu input,.formu select{{font:inherit;padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink)}}
+.btn{{font:inherit;padding:7px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--accent);cursor:pointer}}
+.cert{{background:#fff;color:#1c2430;border:6px double #2F6FB0;border-radius:14px;padding:36px;margin:24px 0;text-align:center;max-width:900px}}.cert .big{{font-size:3.5rem;color:#2F6FB0}}.cert h2{{border:0;margin:.3em 0}}
+.cert .nom{{font-size:2rem;font-weight:700;margin:.2em 0}}.cert .niv{{font-size:1.4rem;font-weight:600;color:#2F6FB0}}.cert .o{{color:#1c2430}}.firmas{{display:flex;justify-content:space-around;gap:20px;margin-top:40px}}.firmas div{{display:flex;flex-direction:column;border-top:1px solid #999;padding-top:6px;min-width:220px}}
+@media print{{@page{{size:A4 landscape;margin:10mm}}.cert{{margin:0;max-width:none;min-height:180mm}}}}</style>
+<script>(function(){{function $(i){{return document.getElementById(i)}}
+function act(){{$('vn').textContent=$('n').value||'—';var o=$('no').value.trim();$('vo').dataset.o=o;$('vo').textContent=o&&window.Owee?Owee.toScript(o):o;
+$('vni').textContent=$('ni').value;$('vf').textContent=$('f').value?'el '+$('f').value:'—';$('ve').textContent=$('e').value||'—';$('vc').textContent=$('c').value||'—'}}
+['n','no','ni','f','e','c'].forEach(function(i){{$(i).addEventListener('input',act)}});window.addEventListener('load',act)}})();</script>"""
+    page("certificado.html", "Certificado", body, "certificacion.html")
+
 def build_estado():
     for doc, fname, titulo in (("Owee_Estado_y_Pendientes.md", "estado.html", "Estado y pendientes"),
                                ("Owee_Auditoria_y_Hoja_de_Ruta.md", "auditoria.html", "Auditoría inicial (histórica)")):
@@ -1210,6 +1261,7 @@ def build_descargas():
         ("Especificación", ROOT / "01_Especificacion", "*.pdf"),
         ("Diccionario", ROOT / "02_Diccionario", "*.pdf"),
         ("Curso por niveles", ROOT / "03_Material_Ensenanza/Curso", "*.pdf"),
+        ("Certificación y exámenes", ROOT / "03_Material_Ensenanza/Certificacion", "*.pdf"),
         ("Lectura y escritura", ROOT / "03_Material_Ensenanza/Lectura_Escritura", "*.pdf"),
         ("Matemáticas", ROOT / "03_Material_Ensenanza/Matematicas", "*.pdf"),
         ("Física", ROOT / "03_Material_Ensenanza/Fisica", "*.pdf"),
@@ -1274,7 +1326,7 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_dic(use); build_ciencias(); build_documentos(); build_traductor(); build_calculadora(); build_teclado(); build_nombres(); build_crear()
+    build_escritura(); build_dic(use); build_ciencias(); build_documentos(); build_traductor(); build_calculadora(); build_teclado(); build_nombres(); build_crear(); build_certificados()
     if not PUBLICO: build_idioma(); build_estado(); build_plan(); build_integracion(); build_revision()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     aud = ROOT / "03_Material_Ensenanza/Pronunciacion/audio"

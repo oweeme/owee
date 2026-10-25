@@ -30,6 +30,7 @@
 | **Vocabulario** | vida diaria, personas, saludos y fiestas, ropa, hogar, cocina, animales, insectos, tecnología, internet y correo, viajes, jardinería, cartas, literatura, fantasía, trabajo, salud, educación, sociedad, biología, clima, historia, derecho, economía, artes, música, filosofía, medios, medicina, ingeniería, energía, deporte, seguridad, signos, matemáticas, física, química, astronomía, informática, interfaz |
 | **Nombres propios** | 76: países, ciudades, continentes, personas y 24 elementos químicos (con su símbolo) |
 | **Curso** | 4 niveles, 39 lecciones con glifos, pronunciación, traducción, ejercicios y lecturas |
+| **Certificación** | ruta infantil (Semilla, Brote, Árbol) y de adultos (Niveles 0–4); exámenes modelo con clave; requisitos para maestros y examinadores; registro público y certificado imprimible |
 | **Literatura** | 50 textos: poemas, canciones, mitos, cuentos |
 | **Documentos PDF** | 15, generados desde las fuentes actuales (especificaciones, diccionario, curso, cuadernos, caligrafía, matemáticas, física, química, pronunciación, literatura) |
 | **Herramientas** | fuentes TTF/OTF/WOFF2, teclados Fcitx5 y Keyman, Owee Pad, traductor, calculadora, «Crear palabras», validadores, audio |
@@ -44,8 +45,9 @@ Nada de lo siguiente bloquea el uso del idioma; son pruebas y crecimiento que no
 3. **Probar los teclados en otros equipos:** Keyman en Android y Windows reales; Fcitx5 en otro equipo oweelinux.
 4. **Seguridad (tuya):** rotar las claves del archivo `oweeme/oweeme.md` y guardarlas en un gestor de contraseñas.
 5. **Correo para propuestas:** indicar la dirección pública en `CORREO_PROPUESTAS` (`07_Sitio_Web/build_site.py`) para que la página «Crear palabras» muestre el botón de correo.
-6. **Crecer con el uso:** más textos de literatura (meta: 100), traducciones de obras de dominio público y las palabras que propongan los usuarios.
-7. **Opcional:** `sudo apt install gettext` (para compilar `.po` con `msgfmt`); publicar el teclado en keyman.com.
+6. **Primeros certificados:** el examinador fundador certifica a los primeros maestros; cada certificado se añade a `03_Material_Ensenanza/Certificacion/certificados.tsv`.
+7. **Crecer con el uso:** más textos de literatura (meta: 100), traducciones de obras de dominio público y las palabras que propongan los usuarios.
+8. **Opcional:** `sudo apt install gettext` (para compilar `.po` con `msgfmt`); publicar el teclado en keyman.com.
 
 ## 4. Cómo seguir creciendo
 

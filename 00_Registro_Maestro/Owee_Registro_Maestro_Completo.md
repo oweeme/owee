@@ -1750,3 +1750,11 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - **Contribuir sin GitHub:** la página «Crear palabras» guarda las palabras del usuario en su navegador («Mis palabras»), las descarga y las envía por correo (dirección configurable en `CORREO_PROPUESTAS`) o como *issue* de GitHub. Guía en `CONTRIBUTING.md` y en la lección 3.8.
 - **Curso:** lecciones 2.13–2.15 (personas y fiestas, día y tecnología, viajes, trabajo y palabras de enlace) con el vocabulario de los lotes 20–22.
 
+## §109 — Certificación, exámenes y maestros (2026-10-25)
+
+- **Niveles:** ruta infantil (Infantil 1 Semilla 5–7 años, Infantil 2 Brote 8–9, Infantil 3 Árbol 10–12, equivalente al Nivel 1) y ruta de jóvenes y adultos (Nivel 0 Inicial, 1 A1, 2 A2, 3 B1, 4 Dominio B2), cada uno con sus materiales.
+- **Exámenes:** partes Escuchar, Leer, Escribir, Gramática y vocabulario, Hablar, Números (infantil y niveles 0–1) y Explicar y crear (nivel 4); aprobado con 70 % del total y 50 % en cada parte; en la ruta infantil no se suspende (las partes no logradas quedan «en camino»). Exámenes modelo con clave en `03_Material_Ensenanza/Certificacion/`.
+- **Maestros:** infantil (Nivel 3 + didáctica infantil + 10 sesiones supervisadas) y de jóvenes y adultos (Nivel 4 + didáctica + 15 sesiones); **examinadores**: maestros con 20 alumnos o 1 año y 85 % en evaluación; certifican hasta el nivel inferior al suyo. Certificación gratuita; código de conducta; renovación de maestros cada 3 años.
+- **Registro público** de certificados (código `OWEE-AAAA-NNNN`) y **certificado imprimible** en el sitio; un certificado solo vale si su código está en el registro.
+- **Lote 23:** `lare-sena` certificado, `mede-nara` examinador, `nelo-tame` brote, `fela-foma` didáctica, `fela-dure` clase.
+

@@ -74,6 +74,10 @@ El estado actual, los pendientes y las áreas por cubrir están en [`00_Registro
 python3 verificar_todo.py
 ```
 
+## Certificación y maestros
+
+Niveles desde la infancia (Semilla, Brote, Árbol) hasta la edad adulta (Niveles 0 a 4), exámenes modelo con su clave, requisitos para maestros y examinadores, registro público de certificados y certificado imprimible: `03_Material_Ensenanza/Certificacion/` y la página «Certificación» del sitio.
+
 ## Cómo contribuir
 
 **Cualquier persona puede crear y proponer palabras** en la página «Crear palabras» del sitio: comprueba las reglas en el navegador, sugiere raíces libres y abre la propuesta en GitHub. Guía en la lección 3.8 del curso.

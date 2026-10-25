@@ -1484,3 +1484,9 @@ rela-tabe
 tera-dese
 se-kore
 gade-pema
+# Lote 23, aprobado por delegación del autor el 2026-10-25 (certificación y enseñanza):
+lare-sena
+mede-nara
+nelo-tame
+fela-foma
+fela-dure
