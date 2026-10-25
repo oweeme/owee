@@ -1,5 +1,7 @@
 # Lotes 9 a 14 — vocabulario nuevo (aprobado el 2026-10-22)
 
+> **Sustituido en el lote 19 (2026-10-25):** los nombres adaptados del español de este lote (p. ej. `tomate`, `sanaorea`, `lechuga`, `uba`) se reemplazaron por compuestos de raíces Owee o raíces propias. Ver [`lotes_19.md`](lotes_19.md). Las tablas de abajo se conservan como registro histórico.
+
 **268 términos** para hogar, informática y sistema operativo, comprar y vender, cuerpo humano, cocina y alimentos, y agricultura. Todos pasan la verificación automática (fonología V/CV sin `i`, sin colisiones, partes que existen, máximo 3 elementos y 6 sílabas, un significado = una forma, inglés por pivote) y están **APROBADOS** (`aprobadas.txt`).
 
 **Método:** compuestos de raíces ya existentes (`kuma` hogar, `bora` cuerpo, `fame` comida, `nelo` planta, `ruma` animal, `feke` herramienta, `meka` máquina, `kopa` contenedor, `kore` lugar…), igual que los lotes anteriores. Antes de aprobar se hicieron dos revisiones: (1) **mismo significado en dos formas**: ningún concepto tiene más de una palabra; (2) **paralelismo**: se buscaron las palabras a una sola letra de otra del mismo tema y se cambiaron unas 50 formas (por ejemplo, agricultura estaba a una letra de «raíz de planta», `nelo-taro`; presupuesto y préstamo se distinguían por `b`/`p`; crudo y cocido usan `so`/`ko`, como «sin» y «con»). Quedan pares de la misma familia que son normales en un idioma de compuestos (`kuma-ba-kore` patio, `kuma-go-kore` azotea, `kuma-gu-kore` sótano; `fure-pa-dare` calentar, `fure-po-dare` enfriar).

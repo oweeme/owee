@@ -445,10 +445,6 @@ RAICES += [
  ("sebu","arroz",L6,"Alimentos"),
  ("fuko","papa",L6,"Alimentos"),
  ("mugo","maíz",L6,"Alimentos"),
- ("kenua","quinua (nombre adaptado)",L6,"Alimentos"),
- ("salotena","salteña (nombre adaptado)",L6,"Alimentos"),
- ("kunape","cuñapé (nombre adaptado)",L6,"Alimentos"),
- ("charake","charque (nombre adaptado)",L6,"Alimentos"),
 ]
 COMPUESTOS += [
  ("tabu-gume","harina (materia del pan)",L6,"Alimentos"),
@@ -758,28 +754,6 @@ COMPUESTOS += [
  ("bora-gume-kuma","carnicería (casa de carne)",L13,"Cocina"),
 ]
 
-# nombres adaptados con la norma de la Gramática 1.1 §14 (adaptar_nombre.py): raíces nuevas, pendientes de aprobación.
-# abana (haba) y kafea (café) llevan una sílaba más que la adaptación pura (aba, kafe) porque esas formas quedaban a una letra de uba y de kade/lafe/kare/kale/kefe.
-RAICES += [
- ("palata","palta (nombre adaptado)",L13,"Alimentos adaptados"),
- ("tomate","tomate (nombre adaptado)",L13,"Alimentos adaptados"),
- ("seboea","cebolla (nombre adaptado)",L13,"Alimentos adaptados"),
- ("sanaorea","zanahoria (nombre adaptado)",L13,"Alimentos adaptados"),
- ("terego","trigo (nombre adaptado)",L13,"Alimentos adaptados"),
- ("ferekolo","frijol (nombre adaptado)",L13,"Alimentos adaptados"),
- ("abana","haba (nombre adaptado)",L13,"Alimentos adaptados"),
- ("arabeka","arveja (nombre adaptado)",L13,"Alimentos adaptados"),
- ("ako","ajo (nombre adaptado)",L13,"Alimentos adaptados"),
- ("lemono","limón (nombre adaptado)",L13,"Alimentos adaptados"),
- ("naranaka","naranja (nombre adaptado)",L13,"Alimentos adaptados"),
- ("manasana","manzana (nombre adaptado)",L13,"Alimentos adaptados"),
- ("uba","uva (nombre adaptado)",L13,"Alimentos adaptados"),
- ("kamoto","camote (nombre adaptado)",L13,"Alimentos adaptados"),
- ("lechuga","lechuga (nombre adaptado)",L13,"Alimentos adaptados"),
- ("kafea","café (nombre adaptado)",L13,"Alimentos adaptados"),
- ("kakao","cacao (nombre adaptado)",L13,"Alimentos adaptados"),
-]
-
 L14 = "Agricultura y campo (lote 14)"
 COMPUESTOS += [
  ("taro-nelo-daro","agricultura (trabajo de tierra y planta)",L14,"Campo y animales"),
@@ -863,8 +837,6 @@ COMPUESTOS += [
  ("bora-gume-suna","caldo (agua de carne)",L15,"Cocina y bebidas"),
  ("tabu-gume-dase","fideo (harina larga)",L15,"Cocina y bebidas"),
  ("tabu-gore-po","galleta (pan pequeño)",L15,"Cocina y bebidas"),
- ("uba-nobe","vino (bebida de uva)",L15,"Cocina y bebidas"),
- ("terego-nobe","cerveza (bebida de trigo)",L15,"Cocina y bebidas"),
  ("gume-rela-meka","licuadora (máquina de mezclar)",L15,"Cocina y bebidas"),
  ("kema-tabe-bume","mantel (ropa de la mesa)",L15,"Cocina y bebidas"),
  ("sabe-gase-feke","servilleta (herramienta para limpiar la boca)",L15,"Cocina y bebidas"),
@@ -937,24 +909,9 @@ COMPUESTOS += [
  ("nelo-maku-tera","otoño (tiempo de hojas)",L15,"Naturaleza y clima"),
 ]
 
-# lote 15: kumedo (kume + do) lo pidió el autor; el resto son nombres adaptados (adaptar_nombre.py), pendientes de revisión de uso
+# lote 15: kumedo (kume + do) lo pidió el autor
 RAICES += [
  ("kumedo","red social (raíz nueva: kume + do)",L15,"Informática y redes"),
- ("leneteka","lenteja (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("garabanaso","garbanzo (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("pemeeneta","pimienta (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("papaea","papaya (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("ananasa","piña (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("sanadea","sandía (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("durasano","durazno (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("perea","pera (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("pepeno","pepino (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("kalabasa","calabaza (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("esepenaka","espinaca (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("repoeo","repollo (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("chokolo","choclo (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("koneko","conejo (nombre adaptado)",L15,"Alimentos y animales adaptados"),
- ("abeka","abeja (nombre adaptado)",L15,"Alimentos y animales adaptados"),
 ]
 
 L16 = "Aprender y escribir (lote 16)"
@@ -1020,4 +977,53 @@ COMPUESTOS += [
  ("dese-kare","aprobado (decisión correcta)",L18,"Términos del sitio"),
  ("pose-foma","orden (posición por regla)",L18,"Términos del sitio"),
 ]
-RAICES += [("meto","mito (relato sagrado del origen)",L18,"Términos del sitio"),("fobo","fábula (relato con moraleja)",L18,"Términos del sitio"),("reshu","resumen (texto corto de un texto)",L18,"Términos del sitio")]
+RAICES += [("fobo","fábula (relato con moraleja)",L18,"Términos del sitio"),("reshu","resumen (texto corto de un texto)",L18,"Términos del sitio")]
+
+# lote 19 (2026-10-25, a petición del autor): los alimentos y animales que eran copias del español (tomate, sanaorea, lechuga…)
+# y la raíz meto (mito) se sustituyen por compuestos de raíces Owee o por raíces nuevas de 2 sílabas que no se parecen a
+# ninguna palabra española (distancia >= 2 con toda raíz de 2 sílabas, sin metátesis). Detalle en lotes_19.md.
+L19 = "Raíces propias para alimentos y animales (lote 19)"
+RAICES += [
+ ("nolu","cebolla",L19,"Verduras"),
+ ("shuko","zanahoria",L19,"Verduras"),
+ ("lepu","espinaca",L19,"Verduras"),
+ ("rofu","pepino",L19,"Verduras"),
+ ("kushu","calabaza",L19,"Verduras"),
+ ("tushe","ajo",L19,"Verduras"),
+ ("dobu","legumbre (grano que crece en vaina)",L19,"Legumbres y granos"),
+ ("kupu","quinua",L19,"Legumbres y granos"),
+ ("lufo","naranja",L19,"Frutas"),
+ ("shefa","limón",L19,"Frutas"),
+ ("nugu","uva",L19,"Frutas"),
+ ("chamu","papaya",L19,"Frutas"),
+ ("shebo","piña",L19,"Frutas"),
+ ("gesho","durazno",L19,"Frutas"),
+ ("chede","pera",L19,"Frutas"),
+ ("choru","cacao",L19,"Frutas"),
+ ("dusho","cuñapé (pan de queso y almidón)",L19,"Comida típica"),
+ ("fonu","mito (relato sagrado del origen)",L19,"Términos del sitio"),
+]
+COMPUESTOS += [
+ ("rale-nede-fame","tomate (verdura roja)",L19,"Verduras"),
+ ("nelo-maku-fame","lechuga (comida de hoja)",L19,"Verduras"),
+ ("nelo-maku-selo","repollo (hojas en círculo)",L19,"Verduras"),
+ ("fuko-lena-gume","camote (papa de azúcar)",L19,"Verduras"),
+ ("mugo-tame","choclo (maíz nuevo)",L19,"Verduras"),
+ ("pore-pado-nelo","pimienta (semilla de fuego)",L19,"Verduras"),
+ ("tabu-nelo","trigo (planta del pan)",L19,"Legumbres y granos"),
+ ("rale-dobu","frijol (legumbre roja)",L19,"Legumbres y granos"),
+ ("nede-dobu","arveja (legumbre verde)",L19,"Legumbres y granos"),
+ ("kale-dobu","garbanzo (legumbre amarilla)",L19,"Legumbres y granos"),
+ ("dobu-gore-pa","haba (legumbre grande)",L19,"Legumbres y granos"),
+ ("dobu-gore-po","lenteja (legumbre pequeña)",L19,"Legumbres y granos"),
+ ("rale-nelo-fame","manzana (fruta roja)",L19,"Frutas"),
+ ("suna-nelo-fame","sandía (fruta de agua)",L19,"Frutas"),
+ ("mase-nelo-fame","palta (fruta de grasa)",L19,"Frutas"),
+ ("bore-nobe","café (bebida negra)",L19,"Bebidas"),
+ ("nugu-nobe","vino (bebida de uva)",L19,"Bebidas"),
+ ("tabu-nelo-nobe","cerveza (bebida de trigo)",L19,"Bebidas"),
+ ("tabu-bora-gume","salteña (pan de carne)",L19,"Comida típica"),
+ ("bora-gume-sade","charque (carne de sol)",L19,"Comida típica"),
+ ("ruma-sone-loke","conejo (animal de orejas)",L19,"Animales"),
+ ("ruma-nelo-lena","abeja (animal de la flor)",L19,"Animales"),
+]

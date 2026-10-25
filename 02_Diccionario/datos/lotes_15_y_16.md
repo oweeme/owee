@@ -1,5 +1,7 @@
 # Lotes 15 y 16 — ampliación diaria y vocabulario para aprender Owee (aprobados el 2026-10-22)
 
+> **Sustituido en el lote 19 (2026-10-25):** los nombres adaptados del español de este lote (p. ej. `tomate`, `sanaorea`, `lechuga`, `uba`) se reemplazaron por compuestos de raíces Owee o raíces propias. Ver [`lotes_19.md`](lotes_19.md). Las tablas de abajo se conservan como registro histórico.
+
 **127 términos nuevos**: `kumedo` (red social, pedida por el autor: `kume` + `do`), ampliación de casa, comercio, cuerpo, cocina, campo, ropa, transporte, emociones, escuela y naturaleza (lote 15) y las palabras para hablar de aprender y escribir Owee (lote 16: ejemplo, pronunciación, nivel, vocal, consonante, alfabeto, canción, poesía y los nombres de las áreas de estudio), necesarias para la interfaz en Owee. Pasaron la misma verificación que los lotes 9–14: sin colisiones, sin dos palabras con el mismo significado, y revisión de paralelismo (se cambiaron unas 25 formas que quedaban a una letra de otra del mismo tema). Quedan **aprobados**.
 
 Los nombres adaptados (lenteja, garbanzo, pimienta, papaya, piña, sandía, durazno, pera, pepino, calabaza, espinaca, repollo, choclo, conejo, abeja) siguen la norma de nombres; `ananasa` (piña, nombre usado en Sudamérica) evita quedar a una letra de `perea` (pera).

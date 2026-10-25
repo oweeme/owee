@@ -326,46 +326,27 @@ tabu	pan
 sebu	rice
 fuko	potato
 mugo	corn
-kenua	quinoa
-salotena	salteña (Bolivian pastry)
-kunape	cuñapé (cheese bread)
-charake	charque (dried meat)
-palata	avocado
-tomate	tomato
-seboea	onion
-sanaorea	carrot
-terego	wheat
-ferekolo	bean
-abana	broad bean
-arabeka	pea
-ako	garlic
-lemono	lemon
-naranaka	orange
-manasana	apple
-uba	grape
-kamoto	sweet potato
-lechuga	lettuce
-kafea	coffee
-kakao	cocoa
 kumedo	social network
-leneteka	lentil
-garabanaso	chickpea
-pemeeneta	pepper
-papaea	papaya
-ananasa	pineapple
-sanadea	watermelon
-durasano	peach
-perea	pear
-pepeno	cucumber
-kalabasa	pumpkin
-esepenaka	spinach
-repoeo	cabbage
-chokolo	sweetcorn
-koneko	rabbit
-abeka	bee
-meto	myth
 fobo	fable
 reshu	summary
+nolu	onion
+shuko	carrot
+lepu	spinach
+rofu	cucumber
+kushu	pumpkin
+tushe	garlic
+dobu	legume
+kupu	quinoa
+lufo	orange
+shefa	lemon
+nugu	grape
+chamu	papaya
+shebo	pineapple
+gesho	peach
+chede	pear
+choru	cocoa
+dusho	cuñapé (cheese bread)
+fonu	myth
 ga-kado	triangle
 fo-kado	quadrilateral
 sa-kado	pentagon
@@ -1308,8 +1289,6 @@ naku-nobe-telo	yogurt
 bora-gume-suna	broth
 tabu-gume-dase	noodle
 tabu-gore-po	biscuit
-uba-nobe	wine
-terego-nobe	beer
 gume-rela-meka	blender
 kema-tabe-bume	tablecloth
 sabe-gase-feke	napkin
@@ -1422,3 +1401,25 @@ raga-kola	table
 pado-beka	draft
 dese-kare	approved
 pose-foma	order / arrangement
+rale-nede-fame	tomato
+nelo-maku-fame	lettuce
+nelo-maku-selo	cabbage
+fuko-lena-gume	sweet potato
+mugo-tame	sweetcorn
+pore-pado-nelo	pepper
+tabu-nelo	wheat
+rale-dobu	bean
+nede-dobu	pea
+kale-dobu	chickpea
+dobu-gore-pa	broad bean
+dobu-gore-po	lentil
+rale-nelo-fame	apple
+suna-nelo-fame	watermelon
+mase-nelo-fame	avocado
+bore-nobe	coffee
+nugu-nobe	wine
+tabu-nelo-nobe	beer
+tabu-bora-gume	salteña (Bolivian pastry)
+bora-gume-sade	charque (dried meat)
+ruma-sone-loke	rabbit
+ruma-nelo-lena	bee

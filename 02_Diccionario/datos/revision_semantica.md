@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 829 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 830 OK · 27 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -13,46 +13,27 @@ Criterios (2026-10-12):
 | `sebu` | arroz | `sebu` (arroz) | OK |
 | `fuko` | papa | `fuko` (papa) | OK |
 | `mugo` | maíz | `mugo` (maíz) | OK |
-| `kenua` | quinua (nombre adaptado) | `kenua` (quinua) | OK |
-| `salotena` | salteña (nombre adaptado) | `salotena` (salteña) | OK |
-| `kunape` | cuñapé (nombre adaptado) | `kunape` (cuñapé) | OK |
-| `charake` | charque (nombre adaptado) | `charake` (charque) | OK |
-| `palata` | palta (nombre adaptado) | `palata` (palta) | OK |
-| `tomate` | tomate (nombre adaptado) | `tomate` (tomate) | OK |
-| `seboea` | cebolla (nombre adaptado) | `seboea` (cebolla) | OK |
-| `sanaorea` | zanahoria (nombre adaptado) | `sanaorea` (zanahoria) | OK |
-| `terego` | trigo (nombre adaptado) | `terego` (trigo) | OK |
-| `ferekolo` | frijol (nombre adaptado) | `ferekolo` (frijol) | OK |
-| `abana` | haba (nombre adaptado) | `abana` (haba) | OK |
-| `arabeka` | arveja (nombre adaptado) | `arabeka` (arveja) | OK |
-| `ako` | ajo (nombre adaptado) | `ako` (ajo) | OK |
-| `lemono` | limón (nombre adaptado) | `lemono` (limón) | OK |
-| `naranaka` | naranja (nombre adaptado) | `naranaka` (naranja) | OK |
-| `manasana` | manzana (nombre adaptado) | `manasana` (manzana) | OK |
-| `uba` | uva (nombre adaptado) | `uba` (uva) | OK |
-| `kamoto` | camote (nombre adaptado) | `kamoto` (camote) | OK |
-| `lechuga` | lechuga (nombre adaptado) | `lechuga` (lechuga) | OK |
-| `kafea` | café (nombre adaptado) | `kafea` (café) | OK |
-| `kakao` | cacao (nombre adaptado) | `kakao` (cacao) | OK |
 | `kumedo` | red social (raíz nueva: kume + do) | `kumedo` (red social) | OK |
-| `leneteka` | lenteja (nombre adaptado) | `leneteka` (lenteja) | OK |
-| `garabanaso` | garbanzo (nombre adaptado) | `garabanaso` (garbanzo) | OK |
-| `pemeeneta` | pimienta (nombre adaptado) | `pemeeneta` (pimienta) | OK |
-| `papaea` | papaya (nombre adaptado) | `papaea` (papaya) | OK |
-| `ananasa` | piña (nombre adaptado) | `ananasa` (piña) | OK |
-| `sanadea` | sandía (nombre adaptado) | `sanadea` (sandía) | OK |
-| `durasano` | durazno (nombre adaptado) | `durasano` (durazno) | OK |
-| `perea` | pera (nombre adaptado) | `perea` (pera) | OK |
-| `pepeno` | pepino (nombre adaptado) | `pepeno` (pepino) | OK |
-| `kalabasa` | calabaza (nombre adaptado) | `kalabasa` (calabaza) | OK |
-| `esepenaka` | espinaca (nombre adaptado) | `esepenaka` (espinaca) | OK |
-| `repoeo` | repollo (nombre adaptado) | `repoeo` (repollo) | OK |
-| `chokolo` | choclo (nombre adaptado) | `chokolo` (choclo) | OK |
-| `koneko` | conejo (nombre adaptado) | `koneko` (conejo) | OK |
-| `abeka` | abeja (nombre adaptado) | `abeka` (abeja) | OK |
-| `meto` | mito (relato sagrado del origen) | `meto` (mito) | OK |
 | `fobo` | fábula (relato con moraleja) | `fobo` (fábula) | OK |
 | `reshu` | resumen (texto corto de un texto) | `reshu` (resumen) | OK |
+| `nolu` | cebolla | `nolu` (cebolla) | OK |
+| `shuko` | zanahoria | `shuko` (zanahoria) | OK |
+| `lepu` | espinaca | `lepu` (espinaca) | OK |
+| `rofu` | pepino | `rofu` (pepino) | OK |
+| `kushu` | calabaza | `kushu` (calabaza) | OK |
+| `tushe` | ajo | `tushe` (ajo) | OK |
+| `dobu` | legumbre (grano que crece en vaina) | `dobu` (legumbre) | OK |
+| `kupu` | quinua | `kupu` (quinua) | OK |
+| `lufo` | naranja | `lufo` (naranja) | OK |
+| `shefa` | limón | `shefa` (limón) | OK |
+| `nugu` | uva | `nugu` (uva) | OK |
+| `chamu` | papaya | `chamu` (papaya) | OK |
+| `shebo` | piña | `shebo` (piña) | OK |
+| `gesho` | durazno | `gesho` (durazno) | OK |
+| `chede` | pera | `chede` (pera) | OK |
+| `choru` | cacao | `choru` (cacao) | OK |
+| `dusho` | cuñapé (pan de queso y almidón) | `dusho` (cuñapé) | OK |
+| `fonu` | mito (relato sagrado del origen) | `fonu` (mito) | OK |
 | `lu-meka` | nube informática (máquina lejana) | `lu` (lejos) + `meka` (máquina) | AJUSTADO — antes kuna-meka «máquina del cielo», que se confundiría con el avión (sura-meka); la nube informática es una máquina lejana |
 | `foma-fena` | configuración (poner reglas) | `foma` (regla) + `fena` (poner) | OK |
 | `meka-gune` | apagar (fin de la máquina) | `meka` (máquina) + `gune` (fin) | OK |
@@ -751,8 +732,6 @@ Criterios (2026-10-12):
 | `bora-gume-suna` | caldo (agua de carne) | `bora` (cuerpo) + `gume` (materia) + `suna` (agua) | OK |
 | `tabu-gume-dase` | fideo (harina larga) | `tabu` (pan) + `gume` (materia) + `dase` (distancia) | OK |
 | `tabu-gore-po` | galleta (pan pequeño) | `tabu` (pan) + `gore` (tamaño) + `po` (menos) | OK |
-| `uba-nobe` | vino (bebida de uva) | `uba` (uva) + `nobe` (bebida) | OK |
-| `terego-nobe` | cerveza (bebida de trigo) | `terego` (trigo) + `nobe` (bebida) | OK |
 | `gume-rela-meka` | licuadora (máquina de mezclar) | `gume` (materia) + `rela` (unión) + `meka` (máquina) | OK |
 | `kema-tabe-bume` | mantel (ropa de la mesa) | `kema` (objeto) + `tabe` (superficie de apoyo) + `bume` (ropa) | OK |
 | `sabe-gase-feke` | servilleta (herramienta para limpiar la boca) | `sabe` (boca) + `gase` (limpieza) + `feke` (herramienta) | OK |
@@ -865,3 +844,25 @@ Criterios (2026-10-12):
 | `pado-beka` | borrador (escritura del comienzo) | `pado` (comienzo) + `beka` (escritura) | OK |
 | `dese-kare` | aprobado (decisión correcta) | `dese` (decisión) + `kare` (corrección) | OK |
 | `pose-foma` | orden (posición por regla) | `pose` (posición) + `foma` (regla) | OK |
+| `rale-nede-fame` | tomate (verdura roja) | `rale` (rojo) + `nede` (verde) + `fame` (comida) | OK |
+| `nelo-maku-fame` | lechuga (comida de hoja) | `nelo` (planta) + `maku` (mano) + `fame` (comida) | OK |
+| `nelo-maku-selo` | repollo (hojas en círculo) | `nelo` (planta) + `maku` (mano) + `selo` (círculo) | OK |
+| `fuko-lena-gume` | camote (papa de azúcar) | `fuko` (papa) + `lena` (agrado) + `gume` (materia) | OK |
+| `mugo-tame` | choclo (maíz nuevo) | `mugo` (maíz) + `tame` (nuevo) | OK |
+| `pore-pado-nelo` | pimienta (semilla de fuego) | `pore` (fuego) + `pado` (comienzo) + `nelo` (planta) | OK |
+| `tabu-nelo` | trigo (planta del pan) | `tabu` (pan) + `nelo` (planta) | OK |
+| `rale-dobu` | frijol (legumbre roja) | `rale` (rojo) + `dobu` (legumbre) | OK |
+| `nede-dobu` | arveja (legumbre verde) | `nede` (verde) + `dobu` (legumbre) | OK |
+| `kale-dobu` | garbanzo (legumbre amarilla) | `kale` (amarillo) + `dobu` (legumbre) | OK |
+| `dobu-gore-pa` | haba (legumbre grande) | `dobu` (legumbre) + `gore` (tamaño) + `pa` (más) | OK |
+| `dobu-gore-po` | lenteja (legumbre pequeña) | `dobu` (legumbre) + `gore` (tamaño) + `po` (menos) | OK |
+| `rale-nelo-fame` | manzana (fruta roja) | `rale` (rojo) + `nelo` (planta) + `fame` (comida) | OK |
+| `suna-nelo-fame` | sandía (fruta de agua) | `suna` (agua) + `nelo` (planta) + `fame` (comida) | OK |
+| `mase-nelo-fame` | palta (fruta de grasa) | `mase` (recurso) + `nelo` (planta) + `fame` (comida) | OK |
+| `bore-nobe` | café (bebida negra) | `bore` (negro) + `nobe` (bebida) | OK |
+| `nugu-nobe` | vino (bebida de uva) | `nugu` (uva) + `nobe` (bebida) | OK |
+| `tabu-nelo-nobe` | cerveza (bebida de trigo) | `tabu` (pan) + `nelo` (planta) + `nobe` (bebida) | OK |
+| `tabu-bora-gume` | salteña (pan de carne) | `tabu` (pan) + `bora` (cuerpo) + `gume` (materia) | OK |
+| `bora-gume-sade` | charque (carne de sol) | `bora` (cuerpo) + `gume` (materia) + `sade` (sol) | OK |
+| `ruma-sone-loke` | conejo (animal de orejas) | `ruma` (animal) + `sone` (sonido) + `loke` (ojo) | OK |
+| `ruma-nelo-lena` | abeja (animal de la flor) | `ruma` (animal) + `nelo` (planta) + `lena` (agrado) | OK |

@@ -4,22 +4,22 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 
 | Área | Conceptos | Ya había | Añadido (lotes 9-14) | Falta |
 |---|---|---|---|---|
-| Hogar y casa | 84 | 29 | 44 | 11 |
-| Informática y sistema | 85 | 36 | 42 | 7 |
-| Comprar y vender | 62 | 21 | 32 | 9 |
-| Cuerpo humano | 86 | 36 | 43 | 7 |
-| Cocina y alimentos | 121 | 42 | 53 | 26 |
-| Agricultura y campo | 74 | 19 | 39 | 16 |
-| **Total** | 512 | 183 | 253 | 76 |
+| Hogar y casa | 84 | 40 | 44 | 0 |
+| Informática y sistema | 85 | 38 | 42 | 5 |
+| Comprar y vender | 62 | 27 | 32 | 3 |
+| Cuerpo humano | 86 | 41 | 43 | 2 |
+| Cocina y alimentos | 121 | 83 | 36 | 2 |
+| Agricultura y campo | 74 | 30 | 39 | 5 |
+| **Total** | 512 | 259 | 236 | 17 |
 
 ## Lo que falta (por decidir en el próximo lote)
 
-- **Hogar y casa:** madera, ladrillo, vidrio, clavo, martillo, sofá, vela, colchón, plancha, inodoro, bañera
-- **Informática y sistema:** memoria virtual, red social, aplicación, tarea, video, arranque, pila
-- **Comprar y vender:** negocio, oferta, factura, interés, crédito, efectivo, propina, supermercado, feria
-- **Cuerpo humano:** aliento, nuca, axila, vello, estornudo, bostezo, diarrea
-- **Cocina y alimentos:** vinagre, miel, yogur, caldo, fideo, galleta, vino, cerveza, taza, colador, licuadora, mantel, servilleta, lenteja, garbanzo, pimienta, papaya, piña, sandía, durazno, pera, pepino, calabaza, espinaca, repollo, choclo
-- **Agricultura y campo:** terraza de cultivo, lago, burro, pato, conejo, abeja, invernadero, semillero, podar, injertar, alambre, cosechadora, establo, yunta, arriero, cooperativa
+- **Hogar y casa:** —
+- **Informática y sistema:** memoria virtual, aplicación, video, arranque, pila
+- **Comprar y vender:** negocio, oferta, crédito
+- **Cuerpo humano:** aliento, diarrea
+- **Cocina y alimentos:** taza, colador
+- **Agricultura y campo:** lago, burro, alambre, yunta, cooperativa
 
 ## Hogar y casa
 
@@ -96,19 +96,19 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | mueble | había | kuma-kema |
 | edificio | había | kuma-gore-pa |
 | calle | había | kuma-duma-kore |
-| madera | falta |  |
-| ladrillo | falta |  |
-| vidrio | falta |  |
-| clavo | falta |  |
-| martillo | falta |  |
+| madera | había | nelo-bora-gume |
+| ladrillo | había | taro-pore-kema |
+| vidrio | había | salo-nado-goda |
+| clavo | había | kema-rela-feke |
+| martillo | había | tada-faro-feke |
 | pintura | había | salo-sena-dare |
-| sofá | falta |  |
+| sofá | había | sede-gore-pa |
 | escritorio | había | meka-tabe |
-| vela | falta |  |
-| colchón | falta |  |
-| plancha | falta |  |
-| inodoro | falta |  |
-| bañera | falta |  |
+| vela | había | pore-salo-feke |
+| colchón | había | sule-lena-tabe |
+| plancha | había | bume-fure-feke |
+| inodoro | había | bora-dabo-kopa |
+| bañera | había | suna-gase-kopa |
 
 ## Informática y sistema
 
@@ -129,7 +129,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | memoria virtual | falta |  |
 | memoria rápida | nuevo | mena-sape |
 | base de datos | había | doke-mena |
-| red social | falta |  |
+| red social | había | kumedo |
 | sitio web | había | rela-kuma |
 | archivo | había | doke-kopa |
 | carpeta | nuevo | doke-kopa-seta |
@@ -194,7 +194,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | robot | nuevo | meka-daro |
 | dispositivo | había | meka-reka |
 | aplicación | falta |  |
-| tarea | falta |  |
+| tarea | había | daro-pu |
 | video | falta |  |
 | arranque | falta |  |
 | pila | falta |  |
@@ -259,13 +259,13 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | calidad | había | lafe |
 | cantidad | había | bema |
 | oferta | falta |  |
-| factura | falta |  |
-| interés | falta |  |
+| factura | había | kume-beka |
+| interés | había | bado-pa-tera |
 | crédito | falta |  |
-| efectivo | falta |  |
-| propina | falta |  |
-| supermercado | falta |  |
-| feria | falta |  |
+| efectivo | había | maku-bado |
+| propina | había | lena-fedo |
+| supermercado | había | kume-kuma-gore |
+| feria | había | kume-lena-kore |
 
 ## Cuerpo humano
 
@@ -348,14 +348,14 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | visión | había | luma-salo |
 | oír | había | luma-sone |
 | oler | había | luma-sura |
-| nuca | falta |  |
-| axila | falta |  |
-| vello | falta |  |
+| nuca | había | tume-rela-kado |
+| axila | había | gu-maku-rela |
+| vello | había | bora-nelo |
 | dolor | había | bosa-dune |
 | fiebre | había | bora-fure-pa |
 | herida | había | bora-bosa |
-| estornudo | falta |  |
-| bostezo | falta |  |
+| estornudo | había | noke-sura-bosa |
+| bostezo | había | sabe-bure |
 | diarrea | falta |  |
 
 ## Cocina y alimentos
@@ -414,7 +414,7 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | arroz | había | sebu |
 | papa | había | fuko |
 | maíz | había | mugo |
-| quinua | había | kenua |
+| quinua | había | kupu |
 | grano | nuevo | pado-nelo-fame |
 | fruta | había | nelo-fame |
 | verdura | había | nede-fame |
@@ -427,25 +427,25 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | mantequilla | nuevo | naku-nobe-mase |
 | jugo | había | nelo-nobe |
 | té | nuevo | nelo-maku-nobe |
-| café | nuevo | kafea |
-| cacao | nuevo | kakao |
+| café | había | bore-nobe |
+| cacao | había | choru |
 | plátano | había | kale-nelo-fame |
 | yuca | había | taro-nelo-fame |
-| palta | nuevo | palata |
-| tomate | nuevo | tomate |
-| cebolla | nuevo | seboea |
-| zanahoria | nuevo | sanaorea |
-| trigo | nuevo | terego |
-| frijol | nuevo | ferekolo |
-| haba | nuevo | abana |
-| arveja | nuevo | arabeka |
-| ajo | nuevo | ako |
-| limón | nuevo | lemono |
-| naranja | nuevo | naranaka |
-| manzana | nuevo | manasana |
-| uva | nuevo | uba |
-| camote | nuevo | kamoto |
-| lechuga | nuevo | lechuga |
+| palta | había | mase-nelo-fame |
+| tomate | había | rale-nede-fame |
+| cebolla | había | nolu |
+| zanahoria | había | shuko |
+| trigo | había | tabu-nelo |
+| frijol | había | rale-dobu |
+| haba | había | dobu-gore-pa |
+| arveja | había | nede-dobu |
+| ajo | había | tushe |
+| limón | había | shefa |
+| naranja | había | lufo |
+| manzana | había | rale-nelo-fame |
+| uva | había | nugu |
+| camote | había | fuko-lena-gume |
+| lechuga | había | nelo-maku-fame |
 | desayuno | había | pado-fame |
 | almuerzo | había | fame-gore-pa |
 | cena | había | gune-fame |
@@ -457,38 +457,38 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | carnicería | nuevo | bora-gume-kuma |
 | comedor | había | pume-kore |
 | chuño | había | fuko-suna-nuse |
-| vinagre | falta |  |
-| miel | falta |  |
-| yogur | falta |  |
-| caldo | falta |  |
-| fideo | falta |  |
-| galleta | falta |  |
-| vino | falta |  |
-| cerveza | falta |  |
+| vinagre | había | nobe-sabe-pa |
+| miel | había | lena-gume-ruma |
+| yogur | había | naku-nobe-telo |
+| caldo | había | bora-gume-suna |
+| fideo | había | tabu-gume-dase |
+| galleta | había | tabu-gore-po |
+| vino | había | nugu-nobe |
+| cerveza | había | tabu-nelo-nobe |
 | taza | falta |  |
 | colador | falta |  |
-| licuadora | falta |  |
-| mantel | falta |  |
-| servilleta | falta |  |
-| lenteja | falta |  |
-| garbanzo | falta |  |
-| pimienta | falta |  |
-| papaya | falta |  |
-| piña | falta |  |
-| sandía | falta |  |
-| durazno | falta |  |
-| pera | falta |  |
-| pepino | falta |  |
-| calabaza | falta |  |
-| espinaca | falta |  |
-| repollo | falta |  |
-| choclo | falta |  |
+| licuadora | había | gume-rela-meka |
+| mantel | había | kema-tabe-bume |
+| servilleta | había | sabe-gase-feke |
+| lenteja | había | dobu-gore-po |
+| garbanzo | había | kale-dobu |
+| pimienta | había | pore-pado-nelo |
+| papaya | había | chamu |
+| piña | había | shebo |
+| sandía | había | suna-nelo-fame |
+| durazno | había | gesho |
+| pera | había | chede |
+| pepino | había | rofu |
+| calabaza | había | kushu |
+| espinaca | había | lepu |
+| repollo | había | nelo-maku-selo |
+| choclo | había | mugo-tame |
 
 ## Agricultura y campo
 
 | Concepto | Estado | Palabra |
 |---|---|---|
-| terraza de cultivo | falta |  |
+| terraza de cultivo | había | taro-go-tabe |
 | campo de cultivo | nuevo | taro-nelo-kore |
 | época de cosecha | nuevo | nelo-kera-tera |
 | estación del año | había | sade-kelo-palo |
@@ -549,16 +549,16 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | verano | había | fure-pa-tera |
 | invierno | había | fure-po-tera |
 | burro | falta |  |
-| pato | falta |  |
-| conejo | falta |  |
-| abeja | falta |  |
-| invernadero | falta |  |
-| semillero | falta |  |
-| podar | falta |  |
-| injertar | falta |  |
+| pato | había | ruma-kuna-suna |
+| conejo | había | ruma-sone-loke |
+| abeja | había | ruma-nelo-lena |
+| invernadero | había | nelo-kuma |
+| semillero | había | pado-nelo-kore |
+| podar | había | nelo-delo-nuse |
+| injertar | había | nelo-rela-dare |
 | alambre | falta |  |
-| cosechadora | falta |  |
-| establo | falta |  |
+| cosechadora | había | nelo-kera-meka |
+| establo | había | ruma-fame-kuma |
 | yunta | falta |  |
-| arriero | falta |  |
+| arriero | había | ruma-duma-nara |
 | cooperativa | falta |  |

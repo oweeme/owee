@@ -1621,7 +1621,7 @@ Reglas aplicadas: un solo significado por forma (se descartaron `tera-no` y `num
 
 ## 89. Lote 6 — Alimentos (23 términos, aprobado) y calculadora web
 
-**Raíces nuevas (8), justificadas por frecuencia cotidiana y cultural:** `tabu` (pan), `sebu` (arroz), `fuko` (papa), `mugo` (maíz), y cuatro nombres de la cocina boliviana adaptados a la fonología de Owee, sin `i` ni grupos de consonantes: `kenua` (quinua), `salotena` (salteña), `kunape` (cuñapé), `charake` (charque). **Compuestos (15):** `tabu-gume` harina, `nede-fame` verdura, `ruma-kuna-gume` pollo, `ruma-suna-gume` pescado, `naku-nobe-gume` queso, `lena-gume` azúcar, `nelo-mase` aceite, `suna-fame` sopa, `nelo-nobe` jugo, `fuko-suna-nuse` chuño (papa sin agua), `mugo-nobe` bebida de maíz (api, chicha), `pore-nelo` ají, `pore-sabe` picante, `kale-nelo-fame` plátano, `saro-fame` comida típica. Se reutilizan los ya existentes: `fame` comida, `nelo-fame` fruta, `bora-gume` carne, `naku-nobe` leche, `pado-kopa` huevo, `chaga-rela` sal.
+**Raíces nuevas (8), justificadas por frecuencia cotidiana y cultural:** `tabu` (pan), `sebu` (arroz), `fuko` (papa), `mugo` (maíz), y cuatro nombres de la cocina boliviana adaptados a la fonología de Owee, sin `i` ni grupos de consonantes: `kenua` (quinua), `salotena` (salteña), `kunape` (cuñapé), `charake` (charque) *(sustituidos en el lote 19, §104: `kupu`, `tabu-bora-gume`, `dusho`, `bora-gume-sade`)*. **Compuestos (15):** `tabu-gume` harina, `nede-fame` verdura, `ruma-kuna-gume` pollo, `ruma-suna-gume` pescado, `naku-nobe-gume` queso, `lena-gume` azúcar, `nelo-mase` aceite, `suna-fame` sopa, `nelo-nobe` jugo, `fuko-suna-nuse` chuño (papa sin agua), `mugo-nobe` bebida de maíz (api, chicha), `pore-nelo` ají, `pore-sabe` picante, `kale-nelo-fame` plátano, `saro-fame` comida típica. Se reutilizan los ya existentes: `fame` comida, `nelo-fame` fruta, `bora-gume` carne, `naku-nobe` leche, `pado-kopa` huevo, `chaga-rela` sal.
 
 **Calculadora de números** (`calculadora.html`, `07_Sitio_Web/calculadora.js`): teclado con cifras Owee, lectura en voz alta (coeficiente + escala, `doto` decimal, `po` negativo), convertidor número normal ⇄ cifras Owee ⇄ lectura Owee (sin números romanos). Probada con `verificar_todo.py` (lecturas, ida y vuelta 0–3000, evaluador sin `eval`).
 
@@ -1695,7 +1695,7 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - Prueba de navegador: 0 fallos (ES/Owee/Script en todas las páginas).
 
 ## §101 — Ronda 5 de la interfaz en Owee y lote 18 (2026-10-22)
-- **Lote 18** (10 términos aprobados: 7 compuestos y 3 raíces nuevas de 2 sílabas, a petición): `lena-reka-beka` poema, `saro-lare` proverbio/sentencia, `meto` mito (raíz nueva), `rena-lare` filosofía, `raga-kola` tabla, `reshu` resumen (raíz nueva), `fobo` fábula (raíz nueva), `pado-beka` borrador, `dese-kare` aprobado, `pose-foma` orden (ver `02_Diccionario/datos/lotes_18.md`). `reka-pema` (responder) se reutiliza para «respuesta»: no se creó sinónimo.
+- **Lote 18** (10 términos aprobados: 7 compuestos y 3 raíces nuevas de 2 sílabas, a petición): `lena-reka-beka` poema, `saro-lare` proverbio/sentencia, `meto` mito (raíz nueva; `fonu` desde el lote 19), `rena-lare` filosofía, `raga-kola` tabla, `reshu` resumen (raíz nueva), `fobo` fábula (raíz nueva), `pado-beka` borrador, `dese-kare` aprobado, `pose-foma` orden (ver `02_Diccionario/datos/lotes_18.md`). `reka-pema` (responder) se reutiliza para «respuesta»: no se creó sinónimo.
 - Nombres de lenguas adaptados: Español → `Esepaneolo`, Inglés → `Enegelese`.
 - `07_Sitio_Web/ui_owee_ronda5.tsv` (títulos, índices laterales, resúmenes de párrafos de Matemáticas, Química, Astronomía, Informática, Gramática, Pronunciación, Literatura, cabeceras de tablas) y `partes_owee.tsv` (las columnas «átomo + masa» se traducen solas a «ganu + gama»).
 - El traductor ahora alcanza párrafos que contienen palabras Owee con glifo (`<span class="o">`), el pie de página y los títulos «Nombre — Título (nota)».
@@ -1704,8 +1704,15 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 
 ## §102 — Paquetes .deb (2026-10-22)
 - `08_Integracion/linux/build-debs.sh` genera ahora en `paquetes/` (versionado en Git): `fcitx5-owee_1.2-3_amd64`, `fonts-owee_3.4-1_all`, `owee-locale`, `owee-numerals`. El teclado se compiló con `libfcitx5core-dev` 5.1.7, se instaló con `dpkg -i`, el addon carga (`dlopen`) y la prueba del analizador pasa. Guía: `08_Integracion/linux/INSTALAR_fcitx5-owee.md`; los .deb también salen en Descargas del sitio.
-- Mito, fábula y resumen pasan de compuestos a raíces: `meto`, `fobo`, `reshu` (distancia ≥ 2 con toda raíz de 2 sílabas).
+- Mito, fábula y resumen pasan de compuestos a raíces: `meto` (hoy `fonu`, §104), `fobo`, `reshu` (distancia ≥ 2 con toda raíz de 2 sílabas).
 
 ## §103 — Logo de Owee (2026-10-22)
 - `06_Logo/`: el koi del autor con «ouee» en Owee Script (trazados reales de Owee Sans, color crema del pez) encima de la cabeza; SVG, PNG 1024–32 y `construir_logo.py`.
 - Usos: cabecera y portada del sitio, favicon y manifiesto de Owee Pad, icono del método de entrada en el teclado Fcitx5 (`fcitx-owee`, `fcitx5-owee_1.2-3`), README.
+
+## §104 — Lote 19: raíces propias en lugar de nombres adaptados del español (2026-10-25)
+
+- **Decisión del autor:** ninguna palabra Owee debe parecer una palabra española. Los 37 alimentos y animales que eran nombres adaptados (`tomate`, `sanaorea`, `lechuga`, `uba`, `koneko`…) y la raíz `meto` (mito) se sustituyen.
+- **40 términos aprobados** (18 raíces nuevas, 22 compuestos): compuesto cuando una descripción con raíces existentes basta (`rale-nede-fame` tomate, `suna-nelo-fame` sandía, `bore-nobe` café, `tabu-nelo` trigo, `mugo-tame` choclo, `ruma-sone-loke` conejo, `ruma-nelo-lena` abeja); raíz nueva cuando no (`nolu` cebolla, `shuko` zanahoria, `shefa` limón, `nugu` uva, `lufo` naranja, `kupu` quinua, `fonu` mito…). Nueva raíz de clase `dobu` (legumbre) con frijol, arveja, garbanzo, haba y lenteja por color y tamaño.
+- **Norma derivada:** la adaptación fonológica (Gramática 1.1 §14) queda para **nombres propios** (personas, lugares, marcas); los nombres comunes —también los de alimentos y especies— se forman con raíces Owee.
+- Detalle y tabla antes/ahora: `02_Diccionario/datos/lotes_19.md`.
