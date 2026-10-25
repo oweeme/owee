@@ -3,7 +3,7 @@
 legible por programas; si el diccionario cambia, editar lexico.tsv a mano o regenerar con esto."""
 import re, subprocess, pathlib
 raiz = pathlib.Path(__file__).resolve().parents[2]
-pdf = raiz / "02_Diccionario/Owee_Diccionario_Base_1.0_Inventario_Completo.pdf"
+pdf = raiz / "02_Diccionario/versiones_anteriores/Owee_Diccionario_Base_1.0_Inventario_Completo.pdf"
 txt = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, text=True, check=True).stdout
 L = [re.sub(r"[-\x0c]", "", l).rstrip() for l in txt.splitlines()]
 sec, rows, i = "", {}, 0
@@ -28,7 +28,7 @@ for w, n in zip("cho be du ga fo sa ku mu na she".split(), range(10)): add(w, w,
 for w, n in [("tanu", "10"), ("gabu", "100"), ("soku", "1 000"), ("benu", "1 000 000")]: add(w, w, "escala numérica", n, "ESTABLE", "Sistema numérico")
 for w, n in [("dapa", "suma"), ("dopo", "resta"), ("kebu", "multiplicación"), ("faku", "división"), ("doto", "separador decimal")]: add(w, w, "operación matemática", n, "ESTABLE", "Sistema numérico")
 # Primer Diccionario Conceptual 1.0 (PDF): sus compuestos ya forman parte del idioma
-pdf2 = raiz / "02_Diccionario/Owee_1.0_Primer_Diccionario_Conceptual.pdf"
+pdf2 = raiz / "02_Diccionario/versiones_anteriores/Owee_1.0_Primer_Diccionario_Conceptual.pdf"
 txt2 = subprocess.run(["pdftotext", "-layout", str(pdf2), "-"], capture_output=True, text=True, check=True).stdout
 for l in txt2.splitlines():
     l = re.sub(r"[\ue000-\uf8ff\x0c]", "", l).rstrip()

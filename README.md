@@ -46,7 +46,20 @@ python3 04_Fuentes/actual_3.3_fuente_y_glifos/Owee_Glyph_Master_3.3/build_glyph_
 08_Integracion/linux/build-debs.sh
 ```
 
-Los PDF del sitio se generan con Chrome/Chromium: `python3 07_Sitio_Web/make_pdf.py`.
+Dependencias de Python (fuentes, auditoría de glifos y audio) en un entorno local:
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python verificar_todo.py
+```
+
+**PDFs:** cada documento tiene su fuente `.md` (especificaciones, cuadernos, curso, matemáticas, física…) y el diccionario se genera desde el léxico. Se imprimen con Chrome/Chromium:
+
+```bash
+python3 07_Sitio_Web/build_site.py && python3 07_Sitio_Web/make_pdf.py && python3 07_Sitio_Web/build_site.py
+```
+
+Los PDF anteriores (versión 1.0, glifos con la vocal alrededor) se conservan en las carpetas `versiones_anteriores/`.
 
 ## Usar Owee
 

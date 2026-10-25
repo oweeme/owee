@@ -1716,3 +1716,11 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - **40 términos aprobados** (18 raíces nuevas, 22 compuestos): compuesto cuando una descripción con raíces existentes basta (`rale-nede-fame` tomate, `suna-nelo-fame` sandía, `bore-nobe` café, `tabu-nelo` trigo, `mugo-tame` choclo, `ruma-sone-loke` conejo, `ruma-nelo-lena` abeja); raíz nueva cuando no (`nolu` cebolla, `shuko` zanahoria, `shefa` limón, `nugu` uva, `lufo` naranja, `kupu` quinua, `fonu` mito…). Nueva raíz de clase `dobu` (legumbre) con frijol, arveja, garbanzo, haba y lenteja por color y tamaño.
 - **Norma derivada:** la adaptación fonológica (Gramática 1.1 §14) queda para **nombres propios** (personas, lugares, marcas); los nombres comunes —también los de alimentos y especies— se forman con raíces Owee.
 - Detalle y tabla antes/ahora: `02_Diccionario/datos/lotes_19.md`.
+
+## §105 — Documentos PDF rehechos en la versión actual (2026-10-25)
+
+- Los 14 PDF heredados (Base 1.0, Escritura 3.0, diccionarios 1.0, cuadernos 1.0, caligrafía 0.2, matemáticas 1.0/2.0, física 2.0) usaban la escritura anterior (vocal alrededor de la consonante) y el vocabulario 1.0. Se conservan en `versiones_anteriores/` y se sustituyen por documentos generados desde fuentes `.md` con Owee Script 3.4 en línea, la Gramática 1.1 y el léxico actual (lote 19 incluido).
+- Nuevos: Especificación normativa 2.0, Escritura y glifos 3.4, Diccionario 2.0 (generado del léxico: base, áreas e índice español → Owee), Curso por niveles 2.0, Cuaderno infantil 2.0, Cuaderno intermedio 2.0, Cuaderno conversacional 2.0, Tutorial para familias 2.0, Caligrafía escolar 3.4, Matemáticas 2.0 (guía y cuaderno escolar) y Física 2.0.
+- Los cuadernos usan `<!--copiar …-->` (hojas de caligrafía), `<!--lineas N-->` y `<!--pagina-->`; las cuentas se comprueban al generar y las palabras de los bloques Owee se validan contra el léxico (`verificar_todo.py`). Los nombres propios (mayúscula) se validan solo por fonología.
+- `make_pdf.py` imprime con una copia de fontconfig sin `owee-numerals`, para que las cifras del texto en español no salgan con dígitos Owee en equipos que tienen las cifras Owee en todo el sistema.
+

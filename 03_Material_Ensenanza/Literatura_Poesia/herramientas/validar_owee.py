@@ -28,8 +28,9 @@ def main(paths):
             if not bloque or not linea.strip() or linea.lstrip().startswith('#'):
                 continue
             total = 0
-            for tok in re.findall(r"[a-z-]+", linea.lower()):
-                for raiz in tok.split("-"):
+            for tok in re.findall(r"[A-Za-z-]+", linea):
+                nombre = tok[0].isupper()   # nombre propio (Gramatica 1.1 §14): solo se comprueba la fonologia
+                for raiz in tok.lower().split("-"):
                     if not raiz:
                         continue
                     s = silabas(raiz)
@@ -38,7 +39,7 @@ def main(paths):
                     else:
                         total += len(s)
                     # vocal larga opcional (aa ee oo uu): se valida la raiz con la vocal simple
-                    if raiz not in LEX and re.sub(r"([aeou])\1+", r"\1", raiz) not in LEX:
+                    if not nombre and raiz not in LEX and re.sub(r"([aeou])\1+", r"\1", raiz) not in LEX:
                         print(f"{path}:{n}: fuera del lexico: {raiz}"); malos += 1
             print(f"  l.{n:>3} [{total:>2} sil] {linea.strip()}") if "-v" in sys.argv else None
     print("OK: todo valido" if not malos else f"{malos} problema(s)")

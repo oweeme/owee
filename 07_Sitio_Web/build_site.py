@@ -265,6 +265,15 @@ def verso_html(linea):
             sp += esc(t)
     return f'<div class="v" data-say="{esc(linea)}"><span class="o">{sp}</span><small class="r">{esc(linea)}</small></div>'
 
+def copiar_html(palabras):
+    """Hoja de caligrafia: modelo con glifo y romano, tres copias claras para repasar y dos casillas vacias."""
+    filas = []
+    for w in palabras:
+        if not is_owee(w) and not re.fullmatch(r"[0-9]", w): raise ValueError("copiar: no es Owee valido: " + w)
+        calco = f'<span class="o calco" data-o="{esc(w)}">{esc(w)}</span>'
+        filas.append(f'<div class="cp"><div class="mod">{oweespan(w)}<small>{esc(w)}</small></div>' + f"<div>{calco}</div>" * 3 + "<div></div>" * 2 + "</div>")
+    return '<div class="copiar">' + "".join(filas) + "</div>"
+
 def md(text, convert=True):
     """Devuelve (html, toc[(nivel, texto, id)], poems[(id, titulo, [lineas])])"""
     lines = text.splitlines()
@@ -340,6 +349,12 @@ def md(text, convert=True):
             i -= 1
             tag = "ol" if ordered else "ul"
             out.append(f"<{tag}>" + "".join("<li>" + inline(" ".join(it), convert) + "</li>" for it in items) + f"</{tag}>")
+        elif s == "<!--pagina-->":
+            flush(); out.append('<div class="pb"></div>')
+        elif s.startswith("<!--copiar ") and s.endswith("-->"):
+            flush(); out.append(copiar_html(s[len("<!--copiar "):-3].split()))
+        elif re.fullmatch(r"<!--lineas \d+-->", s):
+            flush(); out.append('<div class="lineas">' + "<div></div>" * int(re.search(r"\d+", s).group()) + "</div>")
         elif not s:
             flush()
         else:
@@ -430,6 +445,15 @@ details.resp{margin:1em 0;border:1px solid var(--rule);border-radius:10px;paddin
 .ruta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}.nivel{border-left:5px solid var(--accent)}.nivel .n{font-size:2rem;font-weight:700;color:var(--accent);line-height:1}
 .fdd{background:var(--soft);border:1px solid var(--rule);border-radius:14px;padding:14px 20px;margin:18px 0}.fdd .o{font-size:2rem;display:block}.fdd small{color:var(--ink2)}
 .hide{display:none!important}
+.copiar{margin:12px 0;display:grid;gap:6px}.cp{display:grid;grid-template-columns:1.3fr repeat(5,1fr);gap:6px;break-inside:avoid}
+.cp>div{border:1px solid var(--rule);border-radius:8px;min-height:3.6rem;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface)}
+.cp .mod{background:var(--soft)}.cp .o{font-size:2rem;line-height:1.1}.cp small{color:var(--ink2);font-size:.75rem}.cp .calco{color:#c9ced6}
+.lineas{margin:8px 0 14px}.lineas div{height:2.4rem;border-bottom:1px dashed #9aa6b4}
+.pb{break-before:page;height:0}
+.cover{min-height:250mm;display:flex;flex-direction:column;justify-content:center;gap:5mm;break-after:page}.cover .o{font-size:5rem;color:#2F6FB0;line-height:1.1}
+.cover h1{font-size:2.4rem;margin:0}.cover .sub{font-size:1.15rem;color:var(--ink2);margin:0}.cover .meta{color:var(--ink2);font-size:.95rem;border-top:1px solid var(--rule);padding-top:4mm}
+table.dic td{padding:1px 6px;vertical-align:middle}table.dic td .o{font-size:1.6rem;line-height:1.2}table.dic td:first-child{width:5.5rem;text-align:center}table.dic tr{break-inside:avoid}
+.idx{columns:2;column-gap:10mm;font-size:.9rem}.idx p{margin:0 0 2px;break-inside:avoid}
 @media print{header.top,.controls,.toc,footer,.noprint{display:none!important}body{background:#fff;color:#000}.layout{display:block}main{max-width:none;padding:0}
 .poema,.entry,.card{break-inside:avoid;border-color:#bbb;background:#fff}h2{break-before:auto}}
 """
@@ -771,7 +795,7 @@ def build_lit(html_body, toc, imprimir=False):
             '<button data-setmode="ambos">Glifos + romano</button><button data-setmode="glifos">Solo glifos</button><button data-setmode="romano">Solo romano</button></div>'
             '<button class="seg" style="font:inherit;padding:7px 12px;cursor:pointer;background:var(--surface);color:var(--ink)" onclick="print()">Imprimir / PDF</button></div>')
     if imprimir:
-        cover = ('<section class="cover"><div class="o" data-o="owee" style="font-size:5rem;color:#2F6FB0">owee</div><h1>Literatura y Poesía</h1>'
+        cover = ('<section class="cover"><div class="o" data-o="ouee" style="font-size:5rem;color:#2F6FB0">owee</div><h1>Literatura y Poesía</h1>'
                  '<p>Poemas, canciones, mitos, dioses y cuentos, con reglas métricas y musicales.</p><p>Versión 0.4 · Owee Sans / Owee School</p></section>')
         css = """<style>@page{size:A4;margin:16mm 15mm}body{font-size:11pt}.cover{min-height:240mm;display:flex;flex-direction:column;justify-content:center;gap:6mm;break-after:page}
 .poema{max-width:none}.poema .v .o{font-size:21pt}h2{break-after:avoid}h3{break-after:avoid}.o{font-size:15pt}td .o{font-size:14pt}</style>"""
@@ -811,6 +835,76 @@ def build_ciencias():
         if pdf:
             css = "<style>@page{size:A4;margin:16mm 15mm}body{font-size:11pt}.o{font-size:14pt}td .o{font-size:13pt}</style>"
             page(fname.replace(".html", "-imprimir.html"), nombre + " (impresión)", aviso + h, extra_head=css, chrome=False)
+
+ESP, LEE, MAT_, CUR = ROOT / "01_Especificacion", ROOT / "03_Material_Ensenanza/Lectura_Escritura", ROOT / "03_Material_Ensenanza/Matematicas", ROOT / "03_Material_Ensenanza/Curso"
+DOCUMENTOS = [
+    # (fuentes .md o None = generado, PDF de destino, titulo, subtitulo)
+    ([ESP / "Owee_Especificacion_Normativa_2.0.md"], ESP / "Owee_Especificacion_Normativa_2.0.pdf", "Especificación normativa 2.0",
+     "Fonología, gramática, vocabulario, números, escritura y estándar digital"),
+    ([ESP / "Owee_Escritura_y_Glifos_3.4.md"], ESP / "Owee_Escritura_y_Glifos_3.4.pdf", "Escritura y glifos 3.4",
+     "Owee Script en línea: vocales, consonantes, sílabas, marcas, dígitos y codificación"),
+    (None, ROOT / "02_Diccionario/Owee_Diccionario_2.0.pdf", "Diccionario 2.0", "Léxico base, vocabulario por áreas e índice español → Owee"),
+    ([CUR / "Owee_Curso_Indice.md"] + [CUR / f"Owee_Curso_Nivel_{n}.md" for n in range(4)], CUR / "Owee_Curso_por_Niveles_2.0.pdf", "Curso por niveles 2.0",
+     "Para jóvenes y adultos: de los sonidos a leer y crear (niveles 0 a 3)"),
+    ([LEE / "Owee_2.0_Cuaderno_Infantil_5_a_10.md"], LEE / "Owee_2.0_Cuaderno_Infantil_5_a_10.pdf", "Owee para niños", "Cuaderno de aprendizaje · 5 a 10 años"),
+    ([LEE / "Owee_2.0_Cuaderno_Intermedio_6_a_12.md"], LEE / "Owee_2.0_Cuaderno_Intermedio_6_a_12.pdf", "Cuaderno intermedio", "Leer, escribir y conversar · 6 a 12 años"),
+    ([LEE / "Owee_2.0_Cuaderno_Conversacional.md"], LEE / "Owee_2.0_Cuaderno_Conversacional.pdf", "Cuaderno conversacional", "Diálogos y pruebas orales por situaciones"),
+    ([LEE / "Owee_2.0_Tutorial_Familias.md"], LEE / "Owee_2.0_Tutorial_Familias.pdf", "Tutorial para familias", "Aprender Owee juntos en casa"),
+    ([LEE / "Owee_Caligrafia_Escolar_3.4.md"], LEE / "Owee_Caligrafia_Escolar_3.4.pdf", "Caligrafía escolar", "Trazar Owee Script 3.4: vocales, sílabas, palabras y frases"),
+    ([MAT_ / "Owee_Matematicas_2.0_Web.md"], MAT_ / "Owee_Matematicas_2.0_Guia_Completa_de_Estudio.pdf", "Matemáticas 2.0", "Guía completa: números, aritmética, álgebra, geometría, cálculo y estadística"),
+    ([MAT_ / "Owee_Matematicas_2.0_Cuaderno_Escolar.md"], MAT_ / "Owee_Matematicas_2.0_Cuaderno_Escolar.pdf", "Cuaderno escolar de matemáticas", "Contar, sumar, restar, multiplicar y dividir en Owee"),
+    ([ROOT / "03_Material_Ensenanza/Fisica/Owee_Fisica_2.0_Web.md"], ROOT / "03_Material_Ensenanza/Fisica/Owee_Fisica_2.0_Guia_Completa_de_Estudio.pdf", "Física 2.0",
+     "Guía completa: de la cinemática a la relatividad"),
+]
+
+def diccionario_doc():
+    ENG = {l.split("\t")[0]: l.split("\t")[1] for l in (ROOT / "02_Diccionario/datos/ingles.tsv").read_text(encoding="utf8").splitlines()[1:]}
+    def tabla(rows):
+        tr = "".join(f'<tr><td>{oweespan(e["w"])}</td><td><b>{esc(e["w"])}</b> <small class="rm">{esc(pron(e["w"])[1] if pron(e["w"]) else "")}</small></td>'
+                     f'<td>{esc(e["mean"])}</td><td><small>{esc(ENG.get(e["w"], ""))}</small></td></tr>' for e in rows)
+        return f'<table class="dic"><thead><tr><th>Owee Script</th><th>Romano</th><th>Significado</th><th>Inglés</th></tr></thead><tbody>{tr}</tbody></table>'
+    h = ["<h1>Cómo usar este diccionario</h1><p>Cada entrada muestra la palabra en <strong>Owee Script</strong> (glifos 3.4, en línea), en <strong>romano</strong> con su pronunciación (la sílaba en mayúsculas lleva el acento), el <strong>significado</strong> y la glosa en <strong>inglés</strong>. "
+         f"Contiene las {len(LEX)} formas del léxico base y las {len(SCI)} del vocabulario por áreas, todas aprobadas o auditadas. El guion une los elementos de un compuesto: <code>sade-kelo</code> = sol + ciclo = año.</p>"
+         "<p>Principios: una forma = un significado; sílabas V o CV sin <code>i</code>; acento en la primera sílaba; las palabras nuevas se forman con raíces Owee y solo los nombres propios se adaptan de otras lenguas.</p>",
+         '<div class="pb"></div><h1>Parte I · Léxico base</h1>']
+    secs = []
+    for e in LEX:
+        if e["sec"] not in secs: secs.append(e["sec"])
+    for sec in secs:
+        h.append(f"<h2>{esc(sec)}</h2>" + tabla([e for e in LEX if e["sec"] == sec]))
+    h.append('<div class="pb"></div><h1>Parte II · Vocabulario por áreas</h1>')
+    doms = []
+    for e in SCI:
+        if e["dom"] not in doms: doms.append(e["dom"])
+    for d in doms:
+        h.append(f"<h2>{esc(d)}</h2>" + tabla(sorted((e for e in SCI if e["dom"] == d), key=lambda e: ("-" in e["w"], e["w"]))))
+    h.append('<div class="pb"></div><h1>Parte III · Índice español → Owee</h1><div class="idx">')
+    def clave(m): return unicodedata.normalize("NFD", m.lower()).encode("ascii", "ignore").decode()
+    for e in sorted(ALL, key=lambda e: clave(e["mean"])):
+        h.append(f'<p>{esc(e["mean"])} — <b>{esc(e["w"])}</b></p>')
+    h.append("</div>")
+    return "".join(h)
+
+def build_documentos():
+    """Paginas de impresion (sin menu) para los PDF: portada + contenido. make_pdf.py las imprime con Chrome."""
+    lista = []
+    for fuentes, pdf, titulo, sub in DOCUMENTOS:
+        if fuentes is None:
+            h = diccionario_doc()
+        else:
+            if not all(f.exists() for f in fuentes): continue
+            h = '<div class="pb"></div>'.join(md(expand(f.read_text(encoding="utf8")))[0] for f in fuentes)
+            h = h.replace('<details class="resp"><summary>Ver respuestas</summary>', '<details class="resp" open><summary>Respuestas</summary>')
+        cover = (f'<section class="cover"><div class="o" data-o="ouee">owee</div><h1>{esc(titulo)}</h1><p class="sub">{esc(sub)}</p>'
+                 f'<p class="meta">Owee Script {VERSION} · Gramática 1.1 · léxico de {len(ALL)} formas · {esc(pdf.stem.replace("_", " "))}<br>'
+                 'Texto y datos CC BY-SA 4.0 · fuentes SIL OFL 1.1 · oweeme.com</p></section>')
+        css = ("<style>@page{size:A4;margin:15mm 14mm 16mm;@bottom-center{content:'Owee · " + titulo.replace("'", "") + " · ' counter(page);font:8pt system-ui,sans-serif;color:#777}}"
+               "@page:first{@bottom-center{content:none}}body{font-size:10.5pt}.o{font-size:19pt}td .o{font-size:19pt}p .o,li .o{font-size:17pt;line-height:1}h1{break-before:auto}h2{break-after:avoid}h3{break-after:avoid}"
+               ".poema{max-width:none;break-inside:avoid}.poema .v .o{font-size:18pt}details.resp{font-size:8.5pt;color:#555;padding:0 3mm;break-inside:avoid}details.resp summary{padding:1mm 0;font-size:8.5pt}</style>")
+        fname = "doc-" + slug(pdf.stem) + ".html"
+        page(fname, titulo + " (impresión)", cover + h, extra_head=css, chrome=False, body_attrs='data-forcemode="ambos"')
+        lista.append([fname, str(pdf.relative_to(ROOT))])
+    (OUT / "imprimir.json").write_text(json.dumps(lista, ensure_ascii=False, indent=1), encoding="utf8")
 
 def build_plan():
     h, toc, _ = md((ROOT / "00_Registro_Maestro/Owee_Plan_de_Ampliacion.md").read_text(encoding="utf8"), convert=False)
@@ -1041,6 +1135,7 @@ def build_descargas():
     groups = [
         ("Especificación", ROOT / "01_Especificacion", "*.pdf"),
         ("Diccionario", ROOT / "02_Diccionario", "*.pdf"),
+        ("Curso por niveles", ROOT / "03_Material_Ensenanza/Curso", "*.pdf"),
         ("Lectura y escritura", ROOT / "03_Material_Ensenanza/Lectura_Escritura", "*.pdf"),
         ("Matemáticas", ROOT / "03_Material_Ensenanza/Matematicas", "*.pdf"),
         ("Física", ROOT / "03_Material_Ensenanza/Fisica", "*.pdf"),
@@ -1105,7 +1200,7 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_dic(use); build_ciencias(); build_traductor(); build_calculadora(); build_teclado(); build_nombres()
+    build_escritura(); build_dic(use); build_ciencias(); build_documentos(); build_traductor(); build_calculadora(); build_teclado(); build_nombres()
     if not PUBLICO: build_idioma(); build_estado(); build_plan(); build_integracion(); build_revision()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     aud = ROOT / "03_Material_Ensenanza/Pronunciacion/audio"

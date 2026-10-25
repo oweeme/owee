@@ -7,12 +7,12 @@ En todas las páginas del curso: **pasa el cursor o toca una palabra Owee** y ve
 
 En Owee solo hay **4 vocales**: se pronuncian siempre igual, cortas y puras. **No existe la `i`.**
 
-| Glifo | Romano | Suena como… | Mueve la boca… |
+| Glifo | Romano | Suena como… | Forma del glifo |
 |---|---|---|---|
-| `a` | a | «casa» | abierta, hacia arriba |
-| `e` | e | «mesa» | hacia la izquierda |
-| `o` | o | «lobo» | hacia la derecha |
-| `u` | u | «luna» | cerrada, hacia abajo |
+| `a` | a | «casa» | una barra de pie |
+| `e` | e | «mesa» | una viga (エ) |
+| `o` | o | «lobo» | un anillo |
+| `u` | u | «luna» | la runa ᚢ |
 
 **Truco para recordar el glifo:** cada vocal tiene su **forma**: A una barra vertical, E una viga (エ), O un anillo, U la runa ᚢ. La vocal se escribe a la derecha de la consonante, en el mismo renglón.
 

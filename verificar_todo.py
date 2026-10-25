@@ -17,7 +17,7 @@ def ok(nombre, pasa, detalle=""):
 
 # 1. textos Owee
 val = RAIZ / "03_Material_Ensenanza/Literatura_Poesia/herramientas/validar_owee.py"
-mds = sorted(glob.glob(str(RAIZ / "03_Material_Ensenanza/*/Owee_*.md")) + [str(RAIZ / "08_Integracion/README.md")])
+mds = sorted(glob.glob(str(RAIZ / "03_Material_Ensenanza/*/Owee_*.md")) + glob.glob(str(RAIZ / "01_Especificacion/Owee_*.md")) + [str(RAIZ / "08_Integracion/README.md")])
 malos = [m for m in mds if correr([PY, "-I", str(val), m]).returncode != 0]
 ok(f"Textos Owee validos ({len(mds)} archivos)", not malos, ", ".join(pathlib.Path(m).name for m in malos))
 
