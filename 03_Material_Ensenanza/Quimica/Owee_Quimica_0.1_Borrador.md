@@ -33,7 +33,24 @@ Ya existen (Física 2.0): `ganu` átomo · `ganu-choma` núcleo · `elenu` elect
 | compuesto químico | `gume-rela` | materia + unión |
 | mezcla | `gume-ko` | materia + con |
 
-Los **nombres de los elementos** (hidrógeno, oxígeno, sodio…) no se traducen por ahora: se conserva su **símbolo** internacional. Ver «Decisiones pendientes».
+**Nombres de los elementos (decidido, lote 21).** Se escribe siempre el **símbolo** internacional; para nombrarlo se usa su **nombre propio adaptado** (mayúscula y marca ᚠ en Owee Script), y los metales de uso diario tienen raíz propia:
+
+| Elemento | Símbolo | Owee |
+|---|---|---|
+| hidrógeno | H | `Ederokeno` |
+| carbono | C | `Karabono` |
+| nitrógeno | N | `Neterokeno` |
+| oxígeno | O | `Okesekeno` |
+| sodio | Na | `Sodeo` |
+| cloro | Cl | `Koloro` |
+| calcio | Ca | `Kalaseo` |
+| hierro | Fe | `menedu` |
+| cobre | Cu | `nopabu` |
+| plata | Ag | `pafade` |
+| oro | Au | `patofe` |
+| metal (en general) | — | `rolefa` |
+
+Lista completa en la página «Nombres propios».
 
 ### 2.1 Contar partículas
 
@@ -138,7 +155,7 @@ La transferencia de electrones se nombra con las acciones que ya tiene Owee, `pe
 
 ## 12. Decisiones pendientes para Química
 
-- **Nombres de elementos:** conservar solo símbolos (decisión actual) o crear una convención sistemática. Con la fonología Owee, los nombres internacionales (sin `i`, sin consonantes finales) necesitarían una norma de adaptación.
+- ~~Nombres de elementos~~ **decidido** (lote 21): símbolo + nombre propio adaptado; raíz propia para oro, plata, hierro, cobre y metal.
 - **Aprobar las construcciones** de esta guía (todas están marcadas PROPUESTA).
 - **Valencia, orbital, isótopo, enlace iónico/covalente:** aún sin construcción; conviene decidirlas al escribir textos reales.
 - **Nomenclatura de compuestos** (cómo se lee NaCl, H₂SO₄ en Owee).

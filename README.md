@@ -76,6 +76,8 @@ python3 verificar_todo.py
 
 ## Cómo contribuir
 
+**Cualquier persona puede crear y proponer palabras** en la página «Crear palabras» del sitio: comprueba las reglas en el navegador, sugiere raíces libres y abre la propuesta en GitHub. Guía en la lección 3.8 del curso.
+
 Cada palabra nueva pasa por un flujo: **PROPUESTA → VERIFICADA → APROBADA** (ver `00_Registro_Maestro`, secciones 73–78). Una forma nueva debe cumplir V/CV sin `i`, usar partes que existan, tener como máximo 3 elementos y un significado único. Añade tus propuestas a `02_Diccionario/datos/ciencias_fuente.py` y ejecuta `generar_ciencias.py`; la aprobación final la da el autor en `aprobadas.txt`.
 
 ## Licencias

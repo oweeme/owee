@@ -5,7 +5,7 @@ Criterios (2026-10-12):
  2. Ningun otro termino tiene ya ese significado (sin sinonimos): una forma = un significado.
  3. Cada raiz del compuesto existe y su significado registrado encaja con el concepto (revision de cada termino).
 
-**Resultado:** 983 OK · 25 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
+**Resultado:** 1110 OK · 25 ajustados · 0 en espera. Antes se reconcilió el léxico con el *Primer Diccionario Conceptual 1.0* (45 compuestos ya existentes, 29 no recogidos): se mantuvieron sus formas y se retiraron mis duplicados.
 
 | Forma | Concepto | Partes y su significado | Veredicto |
 |---|---|---|---|
@@ -213,6 +213,27 @@ Criterios (2026-10-12):
 | `kafumo` | pluma (de ave) | `kafumo` (pluma) | OK |
 | `lenapu` | canción | `lenapu` (canción) | OK |
 | `tegeba` | minuto | `tegeba` (minuto) | OK |
+| `sufugo` | quizás / tal vez | `sufugo` (quizás) | OK |
+| `bumosa` | problema | `bumosa` (problema) | OK |
+| `tulupo` | libre / libertad | `tulupo` (libre) | OK |
+| `lurufa` | ganar / victoria | `lurufa` (ganar) | OK |
+| `rolefa` | metal | `rolefa` (metal) | OK |
+| `patofe` | oro | `patofe` (oro) | OK |
+| `pafade` | plata | `pafade` (plata) | OK |
+| `menedu` | hierro | `menedu` (hierro) | OK |
+| `nopabu` | cobre | `nopabu` (cobre) | OK |
+| `fokoro` | magia | `fokoro` (magia) | OK |
+| `purufe` | espada | `purufe` (espada) | OK |
+| `bagefe` | monstruo | `bagefe` (monstruo) | OK |
+| `gutomu` | hada | `gutomu` (hada) | OK |
+| `fagosu` | guerrero/a / soldado | `fagosu` (guerrero/a) | OK |
+| `namupu` | fantasma | `namupu` (fantasma) | OK |
+| `gotage` | leyenda | `gotage` (leyenda) | OK |
+| `putubo` | héroe / heroína | `putubo` (héroe) | OK |
+| `kafotu` | personaje | `kafotu` (personaje) | OK |
+| `komepu` | ingeniero/a | `komepu` (ingeniero/a) | OK |
+| `lusuga` | gripe / resfriado | `lusuga` (gripe) | OK |
+| `fudapa` | alergia | `fudapa` (alergia) | OK |
 | `lu-meka` | nube informática (máquina lejana) | `lu` (lejos) + `meka` (máquina) | AJUSTADO — antes kuna-meka «máquina del cielo», que se confundiría con el avión (sura-meka); la nube informática es una máquina lejana |
 | `foma-fena` | configuración (poner reglas) | `foma` (regla) + `fena` (poner) | OK |
 | `meka-gune` | apagar (fin de la máquina) | `meka` (máquina) + `gune` (fin) | OK |
@@ -503,7 +524,7 @@ Criterios (2026-10-12):
 | `loke-tabe-kera` | captura de pantalla (obtener la pantalla) | `loke` (ojo) + `tabe` (superficie de apoyo) + `kera` (obtener) | OK |
 | `mado-foma-kume` | tienda de aplicaciones (intercambio de programas) | `mado` (cálculo) + `foma` (regla) + `kume` (intercambio) | OK |
 | `gade-no` | otro / diferente (no la misma identidad) | `gade` (identidad) + `no` (negación) | OK |
-| `lare-no` | desconocido (no saber) | `lare` (saber) + `no` (negación) | OK |
+| `lare-no` | desconocido / misterio (no saber) | `lare` (saber) + `no` (negación) | OK |
 | `bema-nuse` | ninguno (cantidad vacía) | `bema` (cantidad) + `nuse` (vacío) | OK |
 | `pado-foma` | predeterminado (regla inicial) | `pado` (comienzo) + `foma` (regla) | OK |
 | `dese-seta` | opciones (conjunto de decisiones) | `dese` (decisión) + `seta` (conjunto) | OK |
@@ -873,7 +894,7 @@ Criterios (2026-10-12):
 | `fadu-lore` | confianza (seguridad de afecto) | `fadu` (seguridad) + `lore` (afecto) | OK |
 | `pu-dure-malo` | paciencia (calma al esperar) | `pu` (posterior) + `dure` (duración) + `malo` (calma) | OK |
 | `doma-faro` | ánimo (fuerza del corazón) | `doma` (corazón) + `faro` (fuerza) | OK |
-| `sule-soma` | soñar (idea de dormir) | `sule` (dormir) + `soma` (idea) | OK |
+| `sule-soma` | sueño / soñar (idea de dormir) | `sule` (dormir) + `soma` (idea) | OK |
 | `beka-seta-po` | cuaderno (libro pequeño) | `beka` (escritura) + `seta` (conjunto) + `po` (menos) | OK |
 | `fela-beka-tabe` | pizarra (superficie de escritura para enseñar) | `fela` (enseñar) + `beka` (escritura) + `tabe` (superficie de apoyo) | OK |
 | `daro-kuma` | oficina (casa de trabajo) | `daro` (trabajo) + `kuma` (hogar) | OK |
@@ -1017,3 +1038,109 @@ Criterios (2026-10-12):
 | `gune-dare` | terminar (hacer el fin) | `gune` (fin) + `dare` (hacer) | OK |
 | `sabe-sura` | aliento (aire de la boca) | `sabe` (boca) + `sura` (aire) | OK |
 | `faro-loka` | alambre (línea fuerte) | `faro` (fuerza) + `loka` (línea) | OK |
+| `pa-pa` | muy (más y más) | `pa` (más) + `pa` (más) | OK |
+| `fese-po` | casi (menos que completo) | `fese` (límite) + `po` (menos) | OK |
+| `te-fese` | ya (completo ahora) | `te` (ahora) + `fese` (límite) | OK |
+| `te-dure` | todavía (dura ahora) | `te` (ahora) + `dure` (duración) | OK |
+| `kasu-pu` | entonces / por eso (consecuencia) | `kasu` (causa) + `pu` (posterior) | OK |
+| `balo-ke` | aunque (contraste y condición) | `balo` (contraste) + `ke` (si) | OK |
+| `ke-tera` | cuando (condición de tiempo) | `ke` (si) + `tera` (tiempo) | OK |
+| `pu-tera` | después / más tarde (tiempo posterior) | `pu` (posterior) + `tera` (tiempo) | OK |
+| `pe-tera` | antes / hace tiempo (tiempo anterior) | `pe` (anterior) + `tera` (tiempo) | OK |
+| `re-pa` | además (y más) | `re` (y) + `pa` (más) | OK |
+| `re-no` | tampoco / ni (y no) | `re` (y) + `no` (negación) | OK |
+| `pado-le` | temprano (cerca del comienzo) | `pado` (comienzo) + `le` (cerca) | OK |
+| `pu-le` | pronto (futuro cercano) | `pu` (posterior) + `le` (cerca) | OK |
+| `ka-reka` | preguntar (comunicación de pregunta) | `ka` (pregunta) + `reka` (comunicación) | OK |
+| `karo-pema` | explicar (dar entendimiento) | `karo` (entender) + `pema` (dar) | OK |
+| `tare-rena` | creer (pensar que es verdad) | `tare` (realidad) + `rena` (pensar) | OK |
+| `mena-no` | olvidar (sin memoria) | `mena` (memoria) + `no` (negación) | OK |
+| `pode-dare` | intentar (hacer lo posible) | `pode` (posibilidad) + `dare` (hacer) | OK |
+| `gune-kera` | lograr (obtener el fin) | `gune` (fin) + `kera` (obtener) | OK |
+| `luma-kera` | encontrar (obtener con la vista) | `luma` (percepción) + `kera` (obtener) | OK |
+| `pase-no` | perder (dejar de tener) | `pase` (posesión) + `no` (negación) | OK |
+| `delo-to` | llevar (tomar hacia) | `delo` (tomar) + `to` (hacia) | OK |
+| `delo-de` | traer (tomar desde) | `delo` (tomar) + `de` (desde) | OK |
+| `gu-duma` | bajar (moverse abajo) | `gu` (abajo) + `duma` (movimiento) | OK |
+| `kalu-sape` | correr (pierna rápida) | `kalu` (pierna) + `sape` (velocidad) | OK |
+| `lena-pa` | preferir (más agrado) | `lena` (agrado) + `pa` (más) | OK |
+| `lare-daro` | estudiar (trabajo del saber) | `lare` (saber) + `daro` (trabajo) | OK |
+| `kuna-duma` | volar (moverse en el cielo) | `kuna` (cielo) + `duma` (movimiento) | OK |
+| `lafe-pa` | bueno (más calidad) | `lafe` (calidad) + `pa` (más) | OK |
+| `lafe-po` | malo (menos calidad) | `lafe` (calidad) + `po` (menos) | OK |
+| `loke-lena` | bonito / hermoso (agrado del ojo) | `loke` (ojo) + `lena` (agrado) | OK |
+| `loke-lena-po` | feo (poco agrado del ojo) | `loke` (ojo) + `lena` (agrado) + `po` (menos) | OK |
+| `go-gore-po` | bajo de estatura (poca altura) | `go` (arriba) + `gore` (tamaño) + `po` (menos) | OK |
+| `paku-pa` | importante (más atención) | `paku` (atención) + `pa` (más) | OK |
+| `mase-pa` | rico (más recursos) | `mase` (recurso) + `pa` (más) | OK |
+| `mase-po` | pobre (menos recursos) | `mase` (recurso) + `po` (menos) | OK |
+| `faro-nuse` | cansado (fuerza vacía) | `faro` (fuerza) + `nuse` (vacío) | OK |
+| `daro-mude` | ocupado (lleno de trabajo) | `daro` (trabajo) + `mude` (lleno) | OK |
+| `gune-pose` | último (posición final) | `gune` (fin) + `pose` (posición) | OK |
+| `lore-pa` | amor (afecto grande) | `lore` (afecto) + `pa` (más) | OK |
+| `lore-nara` | querido/a (persona querida) | `lore` (afecto) + `nara` (persona) | OK |
+| `lore-lu` | extrañar (afecto lejano) | `lore` (afecto) + `lu` (lejos) | OK |
+| `mena-kema` | recuerdo (objeto de la memoria) | `mena` (memoria) + `kema` (objeto) | OK |
+| `tame-doke` | noticia (información nueva) | `tame` (nuevo) + `doke` (información) | OK |
+| `gade-beka` | firma (escritura de identidad) | `gade` (identidad) + `beka` (escritura) | OK |
+| `pema-nara` | remitente (persona que envía) | `pema` (dar) + `nara` (persona) | OK |
+| `gura-nara` | destinatario (persona que recibe) | `gura` (recibir) + `nara` (persona) | OK |
+| `rena-pase` | opinión (pensamiento propio) | `rena` (pensar) + `pase` (posesión) | OK |
+| `rena-se` | acuerdo / estar de acuerdo (pensar igual) | `rena` (pensar) + `se` (igualdad) | OK |
+| `du-reka` | conversación / diálogo (comunicación de dos) | `du` (2) + `reka` (comunicación) | OK |
+| `reka-loka` | frase / oración (línea de comunicación) | `reka` (comunicación) + `loka` (línea) | OK |
+| `lodu-tabe` | página (superficie de lectura) | `lodu` (lectura) + `tabe` (superficie de apoyo) | OK |
+| `lodu-palo` | capítulo (parte de la lectura) | `lodu` (lectura) + `palo` (parte) | OK |
+| `lodu-nara` | lector/a (persona que lee) | `lodu` (lectura) + `nara` (persona) | OK |
+| `reka-nara` | narrador/a (persona que cuenta) | `reka` (comunicación) + `nara` (persona) | OK |
+| `choma-nara` | protagonista (persona central) | `choma` (centro) + `nara` (persona) | OK |
+| `bosa-nara` | villano/a (persona que rompe) | `bosa` (rotura) + `nara` (persona) | OK |
+| `reka-tera-pa` | novela (relato largo) | `reka` (comunicación) + `tera` (tiempo) + `pa` (más) | OK |
+| `sone-loka` | verso (línea de sonido) | `sone` (sonido) + `loka` (línea) | OK |
+| `sone-se` | rima (sonido igual) | `sone` (sonido) + `se` (igualdad) | OK |
+| `loka-seta` | estrofa (conjunto de líneas) | `loka` (línea) + `seta` (conjunto) | OK |
+| `tera-kore` | escena (tiempo y lugar) | `tera` (tiempo) + `kore` (lugar) | OK |
+| `soma-choma` | tema (idea central) | `soma` (idea) + `choma` (centro) | OK |
+| `se-sena` | metáfora (signo parecido) | `se` (igualdad) + `sena` (signo) | OK |
+| `fokoro-nara` | mago/a (persona de magia) | `fokoro` (magia) + `nara` (persona) | OK |
+| `fokoro-bufu` | bruja (mujer de magia) | `fokoro` (magia) + `bufu` (mujer) | OK |
+| `fokoro-reka` | hechizo (palabra mágica) | `fokoro` (magia) + `reka` (comunicación) | OK |
+| `ruma-pore` | dragón (animal de fuego) | `ruma` (animal) + `pore` (fuego) | OK |
+| `bade-kuma` | castillo / palacio (casa de la autoridad) | `bade` (autoridad) + `kuma` (hogar) | OK |
+| `bade-mopu` | rey (hombre de la autoridad) | `bade` (autoridad) + `mopu` (hombre) | OK |
+| `bade-bufu` | reina (mujer de la autoridad) | `bade` (autoridad) + `bufu` (mujer) | OK |
+| `bade-naku` | príncipe / princesa (hijo/a de la autoridad) | `bade` (autoridad) + `naku` (descendiente) | OK |
+| `bade-gora` | reino (mundo de la autoridad) | `bade` (autoridad) + `gora` (mundo) | OK |
+| `bade-selo` | corona (círculo de la autoridad) | `bade` (autoridad) + `selo` (círculo) | OK |
+| `bade-sede` | trono (asiento de la autoridad) | `bade` (autoridad) + `sede` (asiento) | OK |
+| `fadu-tabe` | escudo (superficie de seguridad) | `fadu` (seguridad) + `tabe` (superficie de apoyo) | OK |
+| `nara-gore` | gigante (persona grande) | `nara` (persona) + `gore` (tamaño) | OK |
+| `bado-seta` | tesoro (conjunto de valor) | `bado` (valor) + `seta` (conjunto) | OK |
+| `pubu-saku` | aventura (viaje con riesgo) | `pubu` (viaje) + `saku` (alerta) | OK |
+| `reka-kose` | secreto (comunicación cerrada) | `reka` (comunicación) + `kose` (cerrar) | OK |
+| `luma-salo-no` | invisible (no se ve) | `luma` (percepción) + `salo` (luz) + `no` (negación) | OK |
+| `faro-tada` | batalla / pelea (contacto de fuerza) | `faro` (fuerza) + `tada` (contacto) | OK |
+| `naro-rela` | reunión (unión del grupo) | `naro` (grupo humano) + `rela` (unión) | OK |
+| `pu-soma` | plan (idea del futuro) | `pu` (posterior) + `soma` (idea) | OK |
+| `daro-soma` | proyecto (idea de trabajo) | `daro` (trabajo) + `soma` (idea) | OK |
+| `daro-doke` | informe (dar información) | `daro` (trabajo) + `doke` (información) | OK |
+| `tera-foma` | horario (regla del tiempo) | `tera` (tiempo) + `foma` (regla) | OK |
+| `daro-gade` | profesión / oficio (identidad del trabajo) | `daro` (trabajo) + `gade` (identidad) | OK |
+| `foma-galo` | abogado/a (ayuda de la ley) | `foma` (regla) + `galo` (ayuda) | OK |
+| `rude-nara` | mecánico/a (persona que repara) | `rude` (reparación) + `nara` (persona) | OK |
+| `tapamu-nara` | carpintero/a (persona de la madera) | `tapamu` (madera) + `nara` (persona) | OK |
+| `doke-galo` | secretario/a (ayuda de la información) | `doke` (información) + `galo` (ayuda) | OK |
+| `daro-reme` | colega (amistad del trabajo) | `daro` (trabajo) + `reme` (amistad) | OK |
+| `daro-naro` | equipo de trabajo (grupo de trabajo) | `daro` (trabajo) + `naro` (grupo humano) | OK |
+| `gune-tera` | plazo (tiempo del fin) | `gune` (fin) + `tera` (tiempo) | OK |
+| `gune-nume` | meta / objetivo (deseo final) | `gune` (fin) + `nume` (deseo) | OK |
+| `bumosa-gune` | solución (fin del problema) | `bumosa` (problema) + `gune` (fin) | OK |
+| `sado-galo` | enfermero/a (ayuda de la salud) | `sado` (salud) + `galo` (ayuda) | OK |
+| `malo-tera` | descanso (tiempo de calma) | `malo` (calma) + `tera` (tiempo) | OK |
+| `sado-pema` | curar / cura (dar salud) | `sado` (salud) + `pema` (dar) | OK |
+| `lafe-banu` | nota / calificación (número de calidad) | `lafe` (calidad) + `banu` (número) | OK |
+| `saro-bade` | presidente/a (autoridad de la comunidad) | `saro` (comunidad) + `bade` (autoridad) | OK |
+| `kose-kuma` | cárcel (casa cerrada) | `kose` (cerrar) + `kuma` (hogar) | OK |
+| `saro-sena` | bandera (signo de la comunidad) | `saro` (comunidad) + `sena` (signo) | OK |
+| `kuna-soma` | religión (idea del cielo) | `kuna` (cielo) + `soma` (idea) | OK |
+| `fusu-doke` | periódico (información del día) | `fusu` (día) + `doke` (información) | OK |

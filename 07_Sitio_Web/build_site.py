@@ -366,7 +366,7 @@ def md(text, convert=True):
 # ---------------------------------------------------------------- plantilla
 NAV = [("index.html", "Inicio", "pado"),
        ("Aprender", [("curso.html", "Curso por niveles", "tase-kelo"), ("escritura.html", "Escritura", "beka"), ("pronunciacion.html", "Pronunciación", "sone"),
-                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor", "telo-reka"), ("calculadora.html", "Calculadora de números", "banu-meka"), ("teclado.html", "Teclado Owee", "maku-tabe"), ("nombres.html", "Nombres propios", "sena-nara")], "tase"),
+                     ("gramatica.html", "Gramática", "foma"), ("diccionario.html", "Diccionario", "reka-doke"), ("traductor.html", "Traductor", "telo-reka"), ("calculadora.html", "Calculadora de números", "banu-meka"), ("teclado.html", "Teclado Owee", "maku-tabe"), ("nombres.html", "Nombres propios", "sena-nara"), ("crear.html", "Crear palabras", "reka-palo dare")], "tase"),
        ("Leer", [("literatura.html", "Literatura y canciones", "lodu-lena")], "lodu"),
        ("Ciencias", [("matematicas.html", "Matemáticas", "lare-banu"), ("fisica.html", "Física", "lare-fasa"), ("quimica.html", "Química", "lare-gume-rela"), ("astronomia.html", "Astronomía y astrología", "lare-sade-mune"),
                      ("informatica.html", "Informática", "lare-meka")], "lare"),
@@ -1110,9 +1110,10 @@ def build_nombres():
     filas = [l.split("\t") for l in (ROOT / "02_Diccionario/datos/nombres_propios.tsv").read_text(encoding="utf8").splitlines()[1:]]
     por = {}
     for o, ow, t in filas: por.setdefault(t, []).append((o, ow))
-    tit = {"país": "Países", "continente": "Continentes", "ciudad": "Ciudades de Bolivia", "lugar": "Lugares", "persona": "Nombres de persona"}
+    tit = {"país": "Países", "continente": "Continentes", "ciudad": "Ciudades de Bolivia", "lugar": "Lugares", "persona": "Nombres de persona", "elemento": "Elementos químicos (siempre con su símbolo)"}
+    por["elemento"] = [(f"{o} ({t.split('(')[1].rstrip(')')})", ow) for o, ow, t in filas if t.startswith("elemento químico")]
     sec = ""
-    for t in ("país", "continente", "ciudad", "lugar", "persona"):
+    for t in ("país", "continente", "ciudad", "lugar", "persona", "elemento"):
         if t not in por: continue
         f = "".join(f'<tr><td>{esc(o)}</td><td>{verso_html(ow)}</td></tr>' for o, ow in por[t])
         sec += f'<h2>{tit[t]}</h2><div class="tw"><table><thead><tr><th>En español</th><th>En Owee</th></tr></thead><tbody>{f}</tbody></table></div>'
@@ -1121,6 +1122,62 @@ def build_nombres():
             "El acento va en la primera sílaba y el nombre se escribe con <strong>inicial mayúscula</strong> (en Owee Script lleva delante la marca de nombre, la runa ᚠ), así nunca se confunde con una palabra común. Pulsa ▶ para escuchar.</p>"
             + sec + "<p><small>Generados con <code>02_Diccionario/datos/adaptar_nombre.py</code>: prueba cualquier nombre con <code>python3 adaptar_nombre.py Rosa Miguel</code>.</small></p>")
     page("nombres.html", "Nombres propios", body, "nombres.html")
+
+def build_crear():
+    """Crear palabras: el usuario prueba una palabra nueva con las reglas del idioma y obtiene la propuesta lista para enviar."""
+    shutil.copy2(Path(__file__).resolve().parent / "crear.js", OUT / "assets/crear.js")
+    body = """<h1>Crear palabras</h1>
+<p>Owee crece con quienes lo usan. Si en tu entorno (tu oficio, tu región, tu familia) hace falta una palabra, puedes <strong>crearla y comprobarla aquí</strong>: la página aplica las mismas reglas que el diccionario oficial.</p>
+<div class="grid">
+<div class="card"><h3>1. Primero, ¿ya existe?</h3><p>Busca la idea en español. Muchas veces ya hay una palabra o se puede <strong>unir dos raíces</strong>: <code>nelo-kopa</code> = planta + contenedor = maceta.</p></div>
+<div class="card"><h3>2. Mejor un compuesto</h3><p>Concepto principal + lo que lo precisa, con guion. Máximo 3 elementos; para lo de cada día, 2 (3 a 5 sílabas).</p></div>
+<div class="card"><h3>3. Raíz nueva solo si hace falta</h3><p>De 3 sílabas (las de 2 ya están ocupadas), sin <code>i</code>, sin parecerse a otra raíz ni copiar una palabra de otra lengua.</p></div>
+</div>
+<h2>Buscar raíces por significado</h2>
+<div class="controls"><input type="search" id="q" placeholder="por ejemplo: agua, planta, máquina…" aria-label="Buscar por significado"></div>
+<div id="res-q" class="dl"></div>
+<h2>Probar mi palabra</h2>
+<div class="formu">
+<label>Palabra en romano <input type="search" id="forma" placeholder="por ejemplo: suna-kopa-gore" autocomplete="off"></label>
+<label>Significado en español <input type="search" id="sig" placeholder="por ejemplo: tanque de agua" autocomplete="off"></label>
+<label>Significado en inglés (opcional) <input type="search" id="ing" placeholder="water tank" autocomplete="off"></label>
+<label>Área (opcional) <input type="search" id="area" placeholder="hogar, oficio, región…" autocomplete="off"></label>
+</div>
+<div class="fdd"><span class="o" id="glifo" data-o=""></span><small id="info"></small></div>
+<div id="veredicto"></div>
+<h2>¿Necesitas una raíz nueva?</h2>
+<p>Estas raíces de 3 sílabas están libres y cumplen las reglas. Comprueba en voz alta que no suenen como una palabra de tu idioma. <button class="btn" id="otras">Otras</button></p>
+<div id="sug" class="dl"></div>
+<h2>Enviar la propuesta</h2>
+<p>Las propuestas pasan por <strong>PROPUESTA → VERIFICADA → APROBADA</strong>. Copia el texto o envíalo como propuesta pública en GitHub (necesitas una cuenta). Todo el diccionario es de dominio público bajo licencia CC BY-SA 4.0.</p>
+<pre id="prop">—</pre>
+<p><button class="btn" id="copiar">Copiar</button> <a class="btn" id="enviar" href="#" target="_blank" rel="noopener">Proponer en GitHub</a></p>
+<style>.btn{font:inherit;padding:7px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--accent);cursor:pointer;text-decoration:none;display:inline-block}
+.formu{display:grid;gap:10px;max-width:640px;margin:14px 0}.formu label{display:flex;flex-direction:column;gap:4px;color:var(--ink2);font-size:.9rem}.formu label input{font:inherit;padding:8px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink)}
+.v-err{color:#b3261e}.v-av{color:var(--warn)}.v-ok{color:var(--ok)}#veredicto li{margin:4px 0}</style>
+<script src="assets/lexico.js"></script><script src="assets/crear.js"></script>
+<script>(function(){
+var L=window.OWEE_LEX||{},C=window.OweeCrear,$=function(i){return document.getElementById(i)};
+function esc(t){return String(t).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function fila(w){return '<a href="diccionario.html#'+encodeURIComponent(w)+'"><b>'+esc(w)+'</b><span>'+esc(L[w][0])+'</span></a>'}
+$('q').addEventListener('input',function(){var r=C.buscar(this.value,L,12);$('res-q').innerHTML=r.map(fila).join('')||(this.value.length>1?'<p>Nada con ese significado: puede ser una palabra nueva.</p>':'')});
+function prueba(){var f=$('forma').value.trim().toLowerCase(),m=$('sig').value.trim(),r=C.analizar(f,m,L);
+ var g=$('glifo');g.dataset.o=f;g.textContent=window.Owee?Owee.toScript(f):f;
+ $('info').textContent=f?(r.tipo+(r.silabas?' · '+r.silabas+' sílabas':'')):'';
+ var li=r.errores.map(function(x){return '<li class="v-err">✗ '+esc(x)+'</li>'}).concat(r.avisos.map(function(x){return '<li class="v-av">⚠ '+esc(x)+'</li>'}),r.bien.map(function(x){return '<li class="v-ok">✓ '+esc(x)+'</li>'}));
+ var ok=f&&m&&!r.errores.length;
+ $('veredicto').innerHTML=(f?'<p><strong>'+(ok?'Cumple las reglas: lista para proponer.':(r.errores.length?'Todavía no cumple las reglas.':'Falta el significado.'))+'</strong></p>':'')+'<ul>'+li.join('')+'</ul>';
+ var txt=ok?('Palabra: '+f+'\\nSignificado: '+m+'\\nInglés: '+($('ing').value||'—')+'\\nÁrea: '+($('area').value||'—')+'\\nTipo: '+r.tipo+', '+r.silabas+' sílabas'+(r.tipo==='compuesto'?'\\nPartes: '+r.partes.map(function(p){return p+' ('+L[p][0]+')'}).join(' + '):'')+'\\nAvisos: '+(r.avisos.join(' | ')||'ninguno')):'—';
+ $('prop').textContent=txt;
+ $('enviar').href=ok?('https://github.com/oweeme/owee/issues/new?labels=propuesta&title='+encodeURIComponent('Propuesta: '+f+' = '+m)+'&body='+encodeURIComponent(txt)):'#';
+ $('enviar').style.opacity=ok?1:.4}
+['forma','sig','ing','area'].forEach(function(i){$(i).addEventListener('input',prueba)});
+$('copiar').onclick=function(){try{navigator.clipboard.writeText($('prop').textContent)}catch(e){}};
+function sug(){$('sug').innerHTML=C.sugerirRaices(L,6).map(function(w){return '<a href="#forma" data-w="'+w+'"><b>'+w+'</b><span class="o" data-o="'+w+'">'+(window.Owee?Owee.toScript(w):w)+'</span></a>'}).join('')}
+$('sug').addEventListener('click',function(e){var a=e.target.closest('[data-w]');if(a){$('forma').value=a.dataset.w;prueba()}});
+$('otras').onclick=sug;window.addEventListener('load',function(){sug();prueba()});
+})();</script>"""
+    page("crear.html", "Crear palabras", body, "crear.html")
 
 def build_estado():
     for doc, fname, titulo in (("Owee_Estado_y_Pendientes.md", "estado.html", "Estado y pendientes"),
@@ -1200,7 +1257,7 @@ def main():
     use = usage_index(poems)
     npdf = build_descargas()
     build_index(dict(n=len(LEX), sci=len(SCI), poems=len(poems), pdfs=npdf))
-    build_escritura(); build_dic(use); build_ciencias(); build_documentos(); build_traductor(); build_calculadora(); build_teclado(); build_nombres()
+    build_escritura(); build_dic(use); build_ciencias(); build_documentos(); build_traductor(); build_calculadora(); build_teclado(); build_nombres(); build_crear()
     if not PUBLICO: build_idioma(); build_estado(); build_plan(); build_integracion(); build_revision()
     build_lit(lit_html, lit_toc); build_lit(lit_html, lit_toc, imprimir=True)
     aud = ROOT / "03_Material_Ensenanza/Pronunciacion/audio"

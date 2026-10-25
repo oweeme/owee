@@ -161,4 +161,29 @@ naro-bosa no, malo-saro nume
 
 **Valida tu texto:** guárdalo en un bloque y ejecuta `python3 03_Material_Ensenanza/Literatura_Poesia/herramientas/validar_owee.py tu_texto.md`. Te dirá si cada palabra existe y si cumple las reglas de sonido.
 
+## Lección 3.8 — Crea tus propias palabras
+
+Owee crece con quienes lo usan. Si en tu oficio, tu región o tu familia falta una palabra, puedes crearla siguiendo **tres pasos**:
+
+1. **¿Ya existe?** Busca la idea en el diccionario. Muchas veces ya hay una palabra o un concepto que la cubre (`beka` es escritura y también escribir).
+2. **Une raíces.** Concepto principal + lo que lo precisa, con guion: `nelo-kopa` = planta + contenedor = maceta; `daro-reme` = trabajo + amistad = colega. Para lo de cada día, **2 elementos** (3 a 5 sílabas); como máximo 3.
+3. **Raíz nueva, solo si hace falta.** De **3 sílabas** (las de 2 ya están ocupadas), sin `i`, que no suene a una letra de otra raíz y que no copie una palabra de otra lengua. Los **nombres propios** sí se adaptan por el sonido: `Pedero`, `Okesekeno` (oxígeno).
+
+<!--vocabulario nelo-kopa daro-reme ruma-pore bade-kuma lore-lu delo-de-->
+
+```owee
+ruma-pore bade-kuma go kuna-duma
+me tu lore-lu
+pu-le me tu delo-de
+```
+
+*El dragón vuela sobre el castillo. Te extraño. Pronto te lo traigo.*
+
+<!--resp-->
+**Ejercicios.** 1) ¿Qué significaría `suna-kopa-gore`? 2) ¿Por qué `tomate` no puede ser una palabra Owee? 3) Construye «casa del perro» con raíces que conozcas.
+**Respuestas.** 1) Recipiente de agua grande: un tanque. 2) Copia una palabra española; además, ya existe `muru`. 3) `botu-kuma` (perro + casa).
+<!--/resp-->
+
+**Pruébalo en la página «Crear palabras»** del sitio: comprueba las reglas al instante, sugiere raíces libres y prepara tu propuesta para enviarla. Cada propuesta pasa por PROPUESTA → VERIFICADA → APROBADA.
+
 **¡Felicidades!** Has completado el curso. Sigue leyendo en **Literatura**, explora el **Diccionario** y la sección de **Ciencias**.

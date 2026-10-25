@@ -64,6 +64,26 @@ AREAS = {
  "Insectos y bichos": "insecto mosca mosquito hormiga abeja mariposa araña cucaracha escarabajo grillo gusano caracol pulga piojo libélula avispa",
  "Día a día": "despertar levantarse ducharse vestirse desayunar almuerzo descansar dormir cepillo de dientes pasta dental jabón champú toalla espejo peinarse "
    "limpiar hora minuto mañana tarde noche fin de semana feriado llave dinero basura lista tarea esperar ayudar llegar empezar terminar",
+ "Cartas y comunicación": "querido carta escribir saludo recuerdo recordar extrañar noticia firma dirección remitente pronto amor cariño respuesta contar desear "
+   "preguntar responder explicar decir opinión idea acuerdo pregunta conversación palabra frase idioma traducir",
+ "Literatura": "libro página capítulo título autor lector personaje narrador historia cuento novela poema verso rima estrofa diálogo escena final principio "
+   "protagonista héroe villano tema metáfora biblioteca cuaderno lápiz bolígrafo",
+ "Fantasía y relatos": "magia mago bruja hechizo dragón castillo rey reina príncipe princesa reino espada escudo monstruo gigante enano hada duende tesoro aventura "
+   "misterio secreto sueño soñar volar invisible batalla guerrero corona trono fantasma leyenda",
+ "Trabajo y profesiones": "oficina jefe empleado empresa reunión proyecto informe horario sueldo entrevista profesión médico enfermero maestro abogado ingeniero "
+   "policía juez soldado carpintero mecánico programador secretario cliente colega equipo plazo meta éxito problema solución plan herramienta máquina",
+ "Salud": "médico enfermero hospital medicina enfermedad dolor fiebre herida gripe alergia sano enfermo cansado descanso cura curar",
+ "Educación": "escuela universidad estudiante maestro clase examen nota tarea libro cuaderno lápiz bolígrafo pregunta respuesta aprender enseñar estudiar",
+ "Sociedad": "país ciudad pueblo gobierno ley presidente voto elección derecho justicia policía juez cárcel ciudadano bandera idioma cultura religión paz guerra "
+   "noticia periódico historia",
+ "Verbos comunes": "decir preguntar responder explicar entender creer pensar saber conocer recordar olvidar intentar lograr ayudar necesitar gustar preferir elegir "
+   "cambiar empezar terminar esperar encontrar perder ganar buscar mostrar llevar traer poner vivir morir nacer sentir ver oír hablar escuchar leer escribir "
+   "aprender enseñar trabajar descansar viajar comprar vender pagar llamar abrir cerrar subir bajar entrar salir correr caminar sentarse dormir comer beber",
+ "Adjetivos comunes": "bueno malo bonito feo grande pequeño nuevo viejo joven alto bajo largo corto fácil difícil importante posible necesario seguro verdadero "
+   "falso correcto rico pobre limpio sucio lleno vacío feliz triste cansado enfermo sano ocupado libre abierto cerrado igual diferente primero último mismo "
+   "caliente frío rápido lento fuerte débil",
+ "Palabras de enlace": "también tampoco muy más menos casi ya todavía siempre nunca pronto tarde temprano aquí allí entonces porque pero aunque si cuando "
+   "después antes además quizás",
 }
 # conceptos de varias palabras: se separan por espacios, así que se declaran aquí
 FRASES = ["base de datos", "cuenta de usuario", "enviar un mensaje", "recibir un mensaje", "correo electrónico", "sitio web", "virus informático", "copia de seguridad",

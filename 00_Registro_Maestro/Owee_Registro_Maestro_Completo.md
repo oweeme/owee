@@ -1731,3 +1731,11 @@ El sitio tiene ahora **228 textos en Owee** (`07_Sitio_Web/ui_owee*.tsv`, valida
 - **Lote 20:** 179 raíces nuevas y 71 compuestos; 100 formas largas sustituidas en el léxico, el curso, la interfaz y las traducciones. Ejemplos: `fusu` día (`te-fusu` hoy, `mu-fusu` semana), `mopu` hombre, `bufu` mujer, `nofo` niño/a (`nofo-mopu` niño, `nofo-bufu` niña), `botu` perro, `pegu` teléfono, `geru` coche, `muru` tomate, `meka-rela` bluetooth, `sura-rela` wifi, `lena-fusu` buenos días.
 - La misma frase ocupa ahora 24 sílabas. Detalle y tabla antes/ahora: `02_Diccionario/datos/lotes_20.md`.
 
+## §107 — Lote 21: conversación, oficios y relatos; elementos químicos (2026-10-25)
+
+- **Objetivo:** poder escribir cartas, libros de ciencias, literatura y fantasía, y conversar en el trabajo. Una medición con 27 áreas (1 143 conceptos de uso diario y profesional) dio un 93 % cubierto; lo que falta se cubre casi siempre con una raíz-concepto (`beka` escribir, `sado` sano).
+- **127 términos aprobados:** 21 raíces nuevas y 106 compuestos de 2 elementos: palabras de enlace (`pa-pa` muy, `fese-po` casi, `te-fese` ya, `balo-ke` aunque, `pu-le` pronto, `sufugo` quizás), verbos (`delo-to` llevar, `delo-de` traer, `mena-no` olvidar, `lore-lu` extrañar), adjetivos (`lafe-pa` bueno, `lafe-po` malo, `loke-lena` bonito), cartas, literatura (`lodu-palo` capítulo, `sone-se` rima), fantasía (`fokoro` magia, `ruma-pore` dragón, `bade-kuma` castillo), trabajo, salud, sociedad y metales.
+- **Ya no caben raíces de 2 sílabas** que respeten la distancia ≥ 2: desde este lote las raíces nuevas son de 3 sílabas (caso excepcional previsto en la norma de practicidad, §106).
+- **Elementos químicos (decisión, opción B):** símbolo internacional + nombre propio adaptado (`Okesekeno` O, `Karabono` C); los metales de uso diario tienen raíz propia (`patofe` oro, `pafade` plata, `menedu` hierro, `nopabu` cobre).
+- Detalle: `02_Diccionario/datos/lotes_21.md`.
+

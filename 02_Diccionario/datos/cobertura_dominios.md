@@ -21,7 +21,17 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | Animales salvajes | 24 | 24 | 0 | 0 |
 | Insectos y bichos | 16 | 16 | 0 | 0 |
 | Día a día | 33 | 27 | 3 | 3 |
-| **Total** | 829 | 563 | 231 | 35 |
+| Cartas y comunicación | 30 | 22 | 0 | 8 |
+| Literatura | 28 | 26 | 0 | 2 |
+| Fantasía y relatos | 32 | 30 | 0 | 2 |
+| Trabajo y profesiones | 34 | 31 | 0 | 3 |
+| Salud | 16 | 15 | 0 | 1 |
+| Educación | 17 | 15 | 0 | 2 |
+| Sociedad | 23 | 22 | 0 | 1 |
+| Verbos comunes | 61 | 49 | 2 | 10 |
+| Adjetivos comunes | 48 | 34 | 0 | 14 |
+| Palabras de enlace | 25 | 24 | 0 | 1 |
+| **Total** | 1143 | 831 | 233 | 79 |
 
 ## Lo que falta (por decidir en el próximo lote)
 
@@ -42,6 +52,16 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 - **Animales salvajes:** —
 - **Insectos y bichos:** —
 - **Día a día:** ducharse, desayunar, peinarse
+- **Cartas y comunicación:** escribir, recordar, cariño, respuesta, contar, desear, decir, traducir
+- **Literatura:** final, principio
+- **Fantasía y relatos:** enano, duende
+- **Trabajo y profesiones:** empleado, sueldo, entrevista
+- **Salud:** sano
+- **Educación:** estudiante, respuesta
+- **Sociedad:** derecho
+- **Verbos comunes:** decir, recordar, necesitar, gustar, elegir, vivir, morir, nacer, leer, escribir
+- **Adjetivos comunes:** posible, necesario, seguro, verdadero, correcto, limpio, sucio, feliz, triste, sano, abierto, cerrado, igual, mismo
+- **Palabras de enlace:** porque
 
 ## Hogar y casa
 
@@ -956,3 +976,367 @@ Cobertura del léxico por áreas de uso diario: hogar, informática (sistema ope
 | llegar | había | duma-gune |
 | empezar | había | pado-fena |
 | terminar | había | gune-dare |
+
+## Cartas y comunicación
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| querido | había | lore-nara |
+| carta | había | kafosa |
+| escribir | falta |  |
+| saludo | había | reme-reka |
+| recuerdo | había | mena-kema |
+| recordar | falta |  |
+| extrañar | había | lore-lu |
+| noticia | había | tame-doke |
+| firma | había | gade-beka |
+| dirección | había | tora, kore-doke |
+| remitente | había | pema-nara |
+| pronto | había | pu-le |
+| amor | había | lore-pa |
+| cariño | falta |  |
+| respuesta | falta |  |
+| contar | falta |  |
+| desear | falta |  |
+| preguntar | había | ka-reka |
+| responder | había | reka-pema |
+| explicar | había | karo-pema |
+| decir | falta |  |
+| opinión | había | rena-pase |
+| idea | había | soma |
+| acuerdo | había | rena-se |
+| pregunta | había | ka |
+| conversación | había | du-reka |
+| palabra | había | reka-palo |
+| frase | había | reka-loka |
+| idioma | había | saro-reka |
+| traducir | falta |  |
+
+## Literatura
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| libro | había | beka-seta |
+| página | había | lodu-tabe |
+| capítulo | había | lodu-palo |
+| título | había | go-sena |
+| autor | había | beka-nara |
+| lector | había | lodu-nara |
+| personaje | había | kafotu |
+| narrador | había | reka-nara |
+| historia | había | mena-tera |
+| cuento | había | reka-tera |
+| novela | había | reka-tera-pa |
+| poema | había | lena-reka-beka |
+| verso | había | sone-loka |
+| rima | había | sone-se |
+| estrofa | había | loka-seta |
+| diálogo | había | du-reka |
+| escena | había | tera-kore |
+| final | falta |  |
+| principio | falta |  |
+| protagonista | había | choma-nara |
+| héroe | había | putubo |
+| villano | había | bosa-nara |
+| tema | había | soma-choma |
+| metáfora | había | se-sena |
+| biblioteca | había | mado-seta |
+| cuaderno | había | beka-seta-po |
+| lápiz | había | beka-feke |
+| bolígrafo | había | beka-feke |
+
+## Fantasía y relatos
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| magia | había | fokoro |
+| mago | había | fokoro-nara |
+| bruja | había | fokoro-bufu |
+| hechizo | había | fokoro-reka |
+| dragón | había | ruma-pore |
+| castillo | había | bade-kuma |
+| rey | había | bade-mopu |
+| reina | había | bade-bufu |
+| príncipe | había | bade-naku |
+| princesa | había | bade-naku |
+| reino | había | bade-gora |
+| espada | había | purufe |
+| escudo | había | fadu-tabe |
+| monstruo | había | bagefe |
+| gigante | había | nara-gore |
+| enano | falta |  |
+| hada | había | gutomu |
+| duende | falta |  |
+| tesoro | había | bado-seta |
+| aventura | había | pubu-saku |
+| misterio | había | lare-no |
+| secreto | había | reka-kose |
+| sueño | había | sule-moke, sule-soma |
+| soñar | había | sule-soma |
+| volar | había | kuna-duma |
+| invisible | había | luma-salo-no |
+| batalla | había | faro-tada |
+| guerrero | había | fagosu |
+| corona | había | bade-selo |
+| trono | había | bade-sede |
+| fantasma | había | namupu |
+| leyenda | había | gotage |
+
+## Trabajo y profesiones
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| oficina | había | daro-kuma |
+| jefe | había | daro-bade |
+| empleado | falta |  |
+| empresa | había | daro-saro |
+| reunión | había | naro-rela |
+| proyecto | había | daro-soma |
+| informe | había | daro-doke |
+| horario | había | tera-foma |
+| sueldo | falta |  |
+| entrevista | falta |  |
+| profesión | había | daro-gade |
+| médico | había | sado-nara |
+| enfermero | había | sado-galo |
+| maestro | había | fela-nara |
+| abogado | había | foma-galo |
+| ingeniero | había | komepu |
+| policía | había | foma-fadu |
+| juez | había | foma-nara |
+| soldado | había | fagosu |
+| carpintero | había | tapamu-nara |
+| mecánico | había | rude-nara |
+| programador | había | mado-nara |
+| secretario | había | doke-galo |
+| cliente | había | meka-gura |
+| colega | había | daro-reme |
+| equipo | había | daro-naro |
+| plazo | había | gune-tera |
+| meta | había | gune-nume |
+| éxito | había | kare-fese |
+| problema | había | bumosa |
+| solución | había | bumosa-gune |
+| plan | había | pu-soma |
+| herramienta | había | feke |
+| máquina | había | meka, meka-mado |
+
+## Salud
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| médico | había | sado-nara |
+| enfermero | había | sado-galo |
+| hospital | había | sado-kuma |
+| medicina | había | sado-feke |
+| enfermedad | había | sado-bosa |
+| dolor | había | bosa-dune |
+| fiebre | había | bora-fure-pa |
+| herida | había | bora-bosa |
+| gripe | había | lusuga |
+| alergia | había | fudapa |
+| sano | falta |  |
+| enfermo | había | sado-no |
+| cansado | había | faro-nuse |
+| descanso | había | malo-tera |
+| cura | había | sado-pema |
+| curar | había | sado-rude, sado-pema |
+
+## Educación
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| escuela | había | tase-kuma |
+| universidad | había | lare-kuma |
+| estudiante | falta |  |
+| maestro | había | fela-nara |
+| clase | había | kema-dore |
+| examen | había | tase-mede |
+| nota | había | lafe-banu |
+| tarea | había | daro-pu |
+| libro | había | beka-seta |
+| cuaderno | había | beka-seta-po |
+| lápiz | había | beka-feke |
+| bolígrafo | había | beka-feke |
+| pregunta | había | ka |
+| respuesta | falta |  |
+| aprender | había | tase |
+| enseñar | había | fela |
+| estudiar | había | lare-daro |
+
+## Sociedad
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| país | había | saro-kore |
+| ciudad | había | kuma-seta |
+| pueblo | había | kuma-seta |
+| gobierno | había | bade-saro |
+| ley | había | foma-bade |
+| presidente | había | saro-bade |
+| voto | había | dese-pema |
+| elección | había | dese-saro |
+| derecho | falta |  |
+| justicia | había | kare-foma |
+| policía | había | foma-fadu |
+| juez | había | foma-nara |
+| cárcel | había | kose-kuma |
+| ciudadano | había | saro-nara |
+| bandera | había | saro-sena |
+| idioma | había | saro-reka |
+| cultura | había | saro-mena |
+| religión | había | kuna-soma |
+| paz | había | malo-saro |
+| guerra | había | naro-bosa |
+| noticia | había | tame-doke |
+| periódico | había | fusu-doke |
+| historia | había | mena-tera |
+
+## Verbos comunes
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| decir | falta |  |
+| preguntar | había | ka-reka |
+| responder | había | reka-pema |
+| explicar | había | karo-pema |
+| entender | había | karo |
+| creer | había | tare-rena |
+| pensar | había | rena |
+| saber | había | lare |
+| conocer | había | lare |
+| recordar | falta |  |
+| olvidar | había | mena-no |
+| intentar | había | pode-dare |
+| lograr | había | gune-kera |
+| ayudar | había | galo |
+| necesitar | falta |  |
+| gustar | falta |  |
+| preferir | había | lena-pa |
+| elegir | falta |  |
+| cambiar | había | telo, gore-telo |
+| empezar | había | pado-fena |
+| terminar | había | gune-dare |
+| esperar | había | pu-dure |
+| encontrar | había | luma-kera |
+| perder | había | pase-no |
+| ganar | había | lurufa |
+| buscar | había | kera-nume |
+| mostrar | había | loke-pema |
+| llevar | había | delo-to |
+| traer | había | delo-de |
+| poner | había | fena |
+| vivir | falta |  |
+| morir | falta |  |
+| nacer | falta |  |
+| sentir | había | dune |
+| ver | había | luma-salo |
+| oír | había | luma-sone |
+| hablar | había | reka-sone |
+| escuchar | había | luma-sone-paku |
+| leer | falta |  |
+| escribir | falta |  |
+| aprender | había | tase |
+| enseñar | había | fela |
+| trabajar | había | daro |
+| descansar | había | faro-gura |
+| viajar | había | pubu |
+| comprar | había | kera-fedo |
+| vender | había | pema-fedo |
+| pagar | había | fedo |
+| llamar | había | shuse |
+| abrir | había | bure |
+| cerrar | había | kose |
+| subir | nuevo | lu-doke-pema |
+| bajar | había | gu-duma |
+| entrar | había | duma-bo |
+| salir | había | duma-ba |
+| correr | había | kalu-sape |
+| caminar | había | kalu-duma |
+| sentarse | había | sede-pose |
+| dormir | había | sule |
+| comer | había | pume |
+| beber | nuevo | nobe-pume |
+
+## Adjetivos comunes
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| bueno | había | lafe-pa |
+| malo | había | lafe-po |
+| bonito | había | loke-lena |
+| feo | había | loke-lena-po |
+| grande | había | gore-pa |
+| pequeño | había | gore-po |
+| nuevo | había | tame |
+| viejo | había | gule |
+| joven | había | nara-tame |
+| alto | había | go-gore |
+| bajo | había | go-gore-po |
+| largo | había | dase-pa |
+| corto | había | dase-po |
+| fácil | había | dema-po |
+| difícil | había | dema-pa |
+| importante | había | paku-pa |
+| posible | falta |  |
+| necesario | falta |  |
+| seguro | falta |  |
+| verdadero | falta |  |
+| falso | había | tare-no |
+| correcto | falta |  |
+| rico | había | mase-pa |
+| pobre | había | mase-po |
+| limpio | falta |  |
+| sucio | falta |  |
+| lleno | había | mude |
+| vacío | había | nuse |
+| feliz | falta |  |
+| triste | falta |  |
+| cansado | había | faro-nuse |
+| enfermo | había | sado-no |
+| sano | falta |  |
+| ocupado | había | daro-mude |
+| libre | había | tulupo |
+| abierto | falta |  |
+| cerrado | falta |  |
+| igual | falta |  |
+| diferente | había | gade-no |
+| primero | había | be-pose |
+| último | había | gune-pose |
+| mismo | falta |  |
+| caliente | había | fure-pa |
+| frío | había | fure-po |
+| rápido | había | sape-pa |
+| lento | había | sape-po |
+| fuerte | había | faro-pa |
+| débil | había | faro-po |
+
+## Palabras de enlace
+
+| Concepto | Estado | Palabra |
+|---|---|---|
+| también | había | re-se |
+| tampoco | había | re-no |
+| muy | había | pa-pa |
+| más | había | pa |
+| menos | había | po |
+| casi | había | fese-po |
+| ya | había | te-fese |
+| todavía | había | te-dure |
+| siempre | había | tera-fese |
+| nunca | había | tera-no |
+| pronto | había | pu-le |
+| tarde | había | fusu-gune |
+| temprano | había | pado-le |
+| aquí | había | kore-le |
+| allí | había | kore-lu |
+| entonces | había | kasu-pu |
+| porque | falta |  |
+| pero | había | balo |
+| aunque | había | balo-ke |
+| si | había | ke |
+| cuando | había | ke-tera |
+| después | había | pu-tera |
+| antes | había | pe-tera |
+| además | había | re-pa |
+| quizás | había | sufugo |

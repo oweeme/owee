@@ -139,6 +139,24 @@ console.log(JSON.stringify(f));"""
     fl = r.stdout.strip() if r.returncode == 0 else r.stderr[-200:]
     ok("Calculadora de numeros Owee: pruebas", r.returncode == 0 and fl == "[]", "" if fl == "[]" else fl[:160])
 
+# 7d2. crear palabras: las reglas del diccionario en el navegador
+if nodo:
+    pc = """
+const fs=require('fs'),w={};eval(fs.readFileSync('07_Sitio_Web/docs/assets/lexico.js','utf8').replace('window.','w.'));
+const C=require('./07_Sitio_Web/crear.js'),L=w.OWEE_LEX,f=[];
+const err=(a,b)=>C.analizar(a,b,L).errores.length;
+if(err('kuma','casa')===0)f.push('existe');
+if(err('finu','fino')===0)f.push('fonologia');
+if(err('sade-kelo-pado-tera','x')===0)f.push('4 elementos');
+if(err('suna-kopa-gore','tanque de agua')!==0)f.push('compuesto valido');
+const s=C.sugerirRaices(L,5);
+s.forEach(x=>{if(err(x,'concepto de prueba'))f.push('sugerida invalida '+x)});
+if(s.length<5)f.push('pocas sugerencias');
+console.log(JSON.stringify(f));"""
+    r = subprocess.run(["node", "-e", pc], cwd=RAIZ, capture_output=True, text=True)
+    fl = r.stdout.strip() if r.returncode == 0 else r.stderr[-200:]
+    ok("Crear palabras: reglas en el navegador", r.returncode == 0 and fl == "[]", "" if fl == "[]" else fl[:160])
+
 # 7e. teclado Keyman: paquete listo y reglas al dia con el mapa de glifos
 import hashlib
 kd = RAIZ / "05_Teclado_IME/keyman-owee"

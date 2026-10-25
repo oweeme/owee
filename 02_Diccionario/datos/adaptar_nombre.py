@@ -117,7 +117,31 @@ Pedro|persona
 Carlos|persona
 María|persona
 Elena|persona
-Ana|persona""".split("\n")
+Ana|persona
+Hidrógeno|elemento químico (H)
+Helio|elemento químico (He)
+Litio|elemento químico (Li)
+Carbono|elemento químico (C)
+Nitrógeno|elemento químico (N)
+Oxígeno|elemento químico (O)
+Flúor|elemento químico (F)
+Neón|elemento químico (Ne)
+Sodio|elemento químico (Na)
+Magnesio|elemento químico (Mg)
+Aluminio|elemento químico (Al)
+Silicio|elemento químico (Si)
+Fósforo|elemento químico (P)
+Azufre|elemento químico (S)
+Cloro|elemento químico (Cl)
+Argón|elemento químico (Ar)
+Potasio|elemento químico (K)
+Calcio|elemento químico (Ca)
+Zinc|elemento químico (Zn)
+Estaño|elemento químico (Sn)
+Yodo|elemento químico (I)
+Mercurio|elemento químico (Hg)
+Plomo|elemento químico (Pb)
+Uranio|elemento químico (U)""".split("\n")
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
