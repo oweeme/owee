@@ -631,8 +631,8 @@ def build_escritura():
     vow = "".join(f'<div>{oweespan(v)}<small>{v}</small></div>' for v in "aeou")
     dig = "".join(f'<div>{oweespan(str(i))}<small>{n} · {i}</small></div>' for i, n in enumerate("cho be du ga fo sa ku mu na she".split()))
     body = f"""<h1>Escritura: Owee Script</h1>
-<p>Cada sílaba es un bloque visual, escrito de izquierda a derecha. La consonante es una forma grande en el centro y la vocal una marca pequeña con <em>forma propia</em>:
-<strong>a</strong> una barra, <strong>e</strong> una viga <em>エ</em>, <strong>o</strong> un anillo y <strong>u</strong> la runa <em>ᚢ</em>; su lado (arriba, izquierda, derecha, abajo) solo refuerza la lectura. Cada consonante tiene su propia silueta, y la <strong>barra al medio</strong> marca la sonora (b, d, g). Dos estilos: <strong>Owee Sans</strong> (recto, para pantalla y pancartas) y <strong>Owee School</strong> (fluido, para escribir a mano).</p>
+<p>Owee se escribe <strong>en línea</strong>, de izquierda a derecha: cada sílaba es la consonante, una forma grande, seguida de la vocal, una marca pequeña a su derecha y en el mismo renglón. Cada vocal tiene su <em>forma propia</em>:
+<strong>a</strong> una barra vertical, <strong>e</strong> una viga <em>エ</em>, <strong>o</strong> un anillo y <strong>u</strong> la runa <em>ᚢ</em>. Cada consonante tiene su propia silueta, y la <strong>barra al medio</strong> marca la sonora (b, d, g). Dos estilos: <strong>Owee Sans</strong> (recto, para pantalla y pancartas) y <strong>Owee School</strong> (fluido, para escribir a mano).</p>
 <div class="controls"><div class="seg" role="group" aria-label="Fuente"><button data-fam="sans" aria-pressed="true">Owee Sans</button><button data-fam="school" aria-pressed="false">Owee School</button></div></div>
 <h2>Vocales</h2><div class="matrix" style="grid-template-columns:repeat(4,1fr)">{vow}</div>
 <p>Origen de cada vocal: <strong>a</strong> la raya del Ogham y del hebreo · <strong>e</strong> la <em>e</em> del katakana (エ) · <strong>o</strong> la omicron griega (círculo) · <strong>u</strong> la runa Uruz (ᚢ).</p>
