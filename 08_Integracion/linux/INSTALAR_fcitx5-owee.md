@@ -4,12 +4,12 @@ Paquetes ya construidos en `08_Integracion/linux/paquetes/` (también en la pág
 
 | Paquete | Qué es |
 |---|---|
-| `fcitx5-owee_1.2-3_amd64.deb` | el teclado: escribes romano (`suna`), espacio confirma y se inserta Owee Script; compuestos con `-` y nombres propios |
-| `fonts-owee_3.4-1_all.deb` | fuentes Owee Sans y Owee School 3.4 (hace falta para ver los glifos) |
+| `fcitx5-owee_1.2-4_amd64.deb` | el teclado: escribes romano (`suna`), espacio confirma y se inserta Owee Script; compuestos con `-` y nombres propios |
+| `fonts-owee_3.4-2_all.deb` | fuentes Owee Sans y Owee School 3.4 (hace falta para ver los glifos) |
 
 ## Instalación (Debian, Ubuntu, Deepin)
 
-    sudo apt install ./fonts-owee_3.4-1_all.deb ./fcitx5-owee_1.2-3_amd64.deb
+    sudo apt install ./fonts-owee_3.4-2_all.deb ./fcitx5-owee_1.2-4_amd64.deb
     fcitx5 -rd            # reinicia Fcitx5
     fcitx5-configtool     # Entrada de texto → añade «Owee» al grupo activo
 

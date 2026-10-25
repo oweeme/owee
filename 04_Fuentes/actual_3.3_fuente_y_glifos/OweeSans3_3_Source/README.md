@@ -36,7 +36,9 @@ inclinación, grosor y espaciado (tabla `STYLES` en `build_font_33.py`).
 Ajustes al principio de `build_font_33.py`: `STROKE`/`MIN_W` (grosor),
 `S` (tamaño), `SIDE` (espacio entre sílabas), `DIGIT_SIDE`/`BAR_GAP` (dígitos).
 
-## Glifos 3.4 (activos)
+## Glifos 3.4 (activos, escritura en línea)
+La vocal va a la derecha de la consonante, en el mismo renglón (`OWEE_V4_LAYOUT=linear`, por defecto).
+
 Desde la 3.4 los glifos salen de `glifos_v4.py`, un sistema geométrico por familias:
 recto en `sans` y con las esquinas redondeadas en `school`. Ver `GUIA_DE_ESTILO_v4.md`
 (qué define a cada glifo y qué puede variar) y `VOCALES_v4.md` (origen de las vocales).
@@ -44,6 +46,7 @@ Los esqueletos de `skeletons.json` ya no se usan para el dibujo; sólo quedan pa
 
     python3 build_font_33.py sans          # o school
     OWEE_GLIFOS=v33 python3 build_font_33.py sans   # regenera los glifos de 3.3 (archivo .v33.ttf)
+    OWEE_V4_LAYOUT=around python3 build_font_33.py sans   # disposición anterior, vocal alrededor
     python3 auditar_glifos_v4.py           # comprueba que ningún glifo sea giro de otro
 
 El PUA y el romano no cambian: U+E000..U+E03B sílabas, U+E03C nexo `‿`,
